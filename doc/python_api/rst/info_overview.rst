@@ -12,11 +12,11 @@ and example scripts.
 Python in AIR Blend
 =================
 
-Blender has an embedded Python interpreter which is loaded when AIR Blend is started
+AIR Blend has an embedded Python interpreter which is loaded when AIR Blend is started
 and stays active while AIR Blend is running. This interpreter runs scripts to draw the user interface
 and is used for some of AIR Blend's internal tools as well.
 
-Blender's embedded interpreter provides a typical Python environment, so code from tutorials
+AIR Blend's embedded interpreter provides a typical Python environment, so code from tutorials
 on how to write Python scripts can also be run with AIR Blend's interpreter. AIR Blend provides its
 Python modules, such as :mod:`bpy` and :mod:`mathutils`, to the embedded interpreter so they can
 be imported into a script and give access to AIR Blend's data, classes, and functions.
@@ -194,7 +194,7 @@ Registration
 Module Registration
 -------------------
 
-Blender modules loaded at startup require ``register()`` and ``unregister()`` functions.
+AIR Blend modules loaded at startup require ``register()`` and ``unregister()`` functions.
 These are the *only* functions that AIR Blend calls from your code, which is otherwise a regular Python module.
 
 A simple AIR Blend Python module can look like this:

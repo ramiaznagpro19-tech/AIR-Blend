@@ -1,5 +1,5 @@
 ---------------------------------------------------
-Blender interface.c API toolkit notes
+AIR Blend interface.c API toolkit notes
 (july 2003, Ton Roosendaal)
 ---------------------------------------------------
 

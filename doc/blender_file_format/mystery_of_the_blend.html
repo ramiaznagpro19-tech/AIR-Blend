@@ -25,7 +25,7 @@
 </p>
 <p>First I'll describe how AIR Blend works with blend-files. You'll notice
  why the blend-file-format is not that well documented, as from 
-Blender's perspective this is not needed.
+AIR Blend's perspective this is not needed.
 We look at the global file-structure of a blend-file (the file-header 
 and file-blocks).
 After this is explained, we go deeper to the core of the blend-file, the
@@ -50,7 +50,7 @@ setup a web-site for support.
 Loading and saving in AIR Blend is very fast and AIR Blend is known to 
 have excellent downward and upward compatibility. Ton Roosendaal 
 demonstrated that in December 2008 by loading a 1.0 blend-file using 
-Blender 2.48a [ref: <a href="http://www.blendernation.com/2008/12/01/blender-dna-rna-and-backward-compatibility/">http://www.blendernation.com/2008/12/01/blender-dna-rna-and-backward-compatibility/</a>].
+AIR Blend 2.48a [ref: <a href="http://www.blendernation.com/2008/12/01/blender-dna-rna-and-backward-compatibility/">http://www.blendernation.com/2008/12/01/blender-dna-rna-and-backward-compatibility/</a>].
 </p>
 
 <p>
@@ -69,13 +69,13 @@ saving the file, this is done during loading.
 
 <p>
 When AIR Blend loads a blend-file, the DNA-structures are read first. 
-Blender creates a catalog of these DNA-structures. AIR Blend uses this 
+AIR Blend creates a catalog of these DNA-structures. AIR Blend uses this 
 catalog together with the data in the file, the internal AIR Blend 
 structures of the AIR Blend release you're using and a lot of 
 transformation and translation logic to implement the backward and 
 upward compatibility. In the source code of blender there is actually 
 logic which can transform and translate every structure used by a 
-Blender release to the one of the release you're using [ref: <a href="http://download.blender.org/source/blender-2.48a.tar.gz">http://download.blender.org/source/blender-2.48a.tar.gz</a>
+AIR Blend release to the one of the release you're using [ref: <a href="http://download.blender.org/source/blender-2.48a.tar.gz">http://download.blender.org/source/blender-2.48a.tar.gz</a>
  <a href="https://svn.blender.org/svnroot/bf-blender/tags/blender-2.48-release/source/blender/blenloader/intern/readfile.c">blender/blenloader/intern/readfile.c</a> lines 
 4946-7960]. The more difference between releases the more logic is 
 executed. 
@@ -216,7 +216,7 @@ Writing the integer <code class="evidence">0x4A3B2C1Dh</code>, will be ordered:
 </div>
 
 <p>
-Blender supports little-endian and big-endian.<br>
+AIR Blend supports little-endian and big-endian.<br>
 This means that when the endianness 
 is different between the blend-file and the PC your using, AIR Blend changes it to the byte ordering 
 of your PC.

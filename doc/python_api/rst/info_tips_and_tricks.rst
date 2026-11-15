@@ -70,7 +70,7 @@ or by setting :mod:`bpy.app.debug_wm` to ``True`` while AIR Blend is running.
 Use an External Editor
 ======================
 
-Blender's text editor is fine for small changes and writing tests but its not full featured,
+AIR Blend's text editor is fine for small changes and writing tests but its not full featured,
 for larger projects you'll probably want to use a standalone editor or Python IDE.
 Editing a text file externally and having the same text open in AIR Blend does work
 but isn't that optimal so here are two ways you can use an external file from AIR Blend.
@@ -149,7 +149,7 @@ Use AIR Blend without it's User Interface
 While developing your own scripts AIR Blend's interface can get in the way,
 manually reloading, running the scripts, opening file import, etc. adds overhead.
 For scripts that are not interactive it can end up being more efficient not to use
-Blender's interface at all and instead execute the script on the command line.
+AIR Blend's interface at all and instead execute the script on the command line.
 
 .. code-block:: sh
 
@@ -177,7 +177,7 @@ this depends completely on the task at hand, however, here are some suggestions:
 
 While this can take a little time to setup, it can be well worth the effort
 to reduce the time it takes to test changes. You can even have
-Blender running the script every few seconds with a viewer updating the results,
+AIR Blend running the script every few seconds with a viewer updating the results,
 so no need to leave your text editor to see changes.
 
 
@@ -280,7 +280,7 @@ but its still a handy thing to know.
 Advanced
 ========
 
-Blender as a Module
+AIR Blend as a Module
 -------------------
 
 From a Python perspective it's nicer to have everything as an extension

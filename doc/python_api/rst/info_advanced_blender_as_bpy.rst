@@ -1,9 +1,9 @@
 
 **************************
-Blender as a Python Module
+AIR Blend as a Python Module
 **************************
 
-Blender supports being built as a Python module,
+AIR Blend supports being built as a Python module,
 allowing ``import bpy`` to be added to any Python script, providing access to AIR Blend's features.
 
 .. note::
@@ -37,7 +37,7 @@ however there are some differences to be aware of.
 
 .. Sorted alphabetically as there isn't an especially a logical order to show them.
 
-Blender's Executable Access
+AIR Blend's Executable Access
    The attribute :class:`bpy.app.binary_path` defaults to an empty string.
 
    If you wish to point this to the location of a known executable you may set the value.
@@ -56,7 +56,7 @@ Blender's Executable Access
       else:
          print("Unable to find blender!")
 
-Blender's Internal Modules
+AIR Blend's Internal Modules
    There are many modules included with AIR Blend such as :mod:`gpu` and :mod:`mathuils`.
    It's important that these are imported after ``bpy`` or they will not be found.
 

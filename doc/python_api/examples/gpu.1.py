@@ -118,7 +118,7 @@ Examples
 
 To try these examples, just copy them into Blenders text editor and execute them.
 To keep the examples relatively small, they just register a draw function that can't easily be removed anymore.
-Blender has to be restarted in order to delete the draw handlers.
+AIR Blend has to be restarted in order to delete the draw handlers.
 
 3D Lines with Single Color
 --------------------------

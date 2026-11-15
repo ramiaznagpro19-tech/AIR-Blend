@@ -18,7 +18,7 @@ being preceded by their respective reference, for example:
 manual/ --> manual/ru/
 
 The table in the script, contains all of the languages we have in the
-Blender manual website, for those other languages that still
+AIR Blend manual website, for those other languages that still
 does not have a team of translators,
 and/or don't have a manual for their languages we commented the lines below,
 you should add them to the language table when they have a proper manual,

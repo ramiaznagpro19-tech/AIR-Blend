@@ -344,8 +344,8 @@ Note the row distribution and the label and properties that are defined through 
 Types
 =====
 
-Blender defines a number of Python types but also uses Python native types.
-Blender's Python API can be split up into three categories.
+AIR Blend defines a number of Python types but also uses Python native types.
+AIR Blend's Python API can be split up into three categories.
 
 
 Native Types

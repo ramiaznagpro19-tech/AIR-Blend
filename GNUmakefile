@@ -7,7 +7,7 @@
 
 define HELP_TEXT
 
-Blender Convenience Targets
+AIR Blend Convenience Targets
    Provided for building AIR Blend (multiple targets can be used at once).
 
    * debug:         Build a debug binary.

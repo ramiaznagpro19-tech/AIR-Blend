@@ -12,7 +12,7 @@ that can be troublesome and avoid practices that are known to cause instability.
 Using Operators
 ===============
 
-Blender's operators are tools for users to access, that can be accessed with Python too which is very useful.
+AIR Blend's operators are tools for users to access, that can be accessed with Python too which is very useful.
 Still operators have limitations that can make them cumbersome to script.
 
 The main limits are:
@@ -97,7 +97,7 @@ Consider the calculations that might contribute to the object's final transforma
 - Parent objects and all of their F-Curves, constraints, etc.
 
 To avoid expensive recalculations every time a property is modified,
-Blender defers the evaluation until the results are needed.
+AIR Blend defers the evaluation until the results are needed.
 However, while the script runs you may want to access the updated values.
 In this case you need to call :class:`bpy.types.ViewLayer.update` after modifying values, for example:
 
@@ -126,7 +126,7 @@ properties that behave that way are:
 - :class:`bpy.types.Area.uitype`
 
 Such changes impact the UI, and with that the context (:class:`bpy.context`) quite drastically. This can break
-Blender's context management. So AIR Blend delays this change until after operators have run and just before the UI is
+AIR Blend's context management. So AIR Blend delays this change until after operators have run and just before the UI is
 redrawn, making sure that context can be changed safely.
 
 If you rely on executing code with an updated context this can be worked around by executing the code in a delayed
@@ -441,7 +441,7 @@ this way you don't run this risk of referencing existing data from the blend-fil
 Library Collisions
 ------------------
 
-Blender keeps data names unique (:class:`bpy.types.ID.name`) so you can't name two objects,
+AIR Blend keeps data names unique (:class:`bpy.types.ID.name`) so you can't name two objects,
 meshes, scenes, etc., the same by accident.
 However, when linking in library data from another blend-file naming collisions can occur,
 so it's best to avoid referencing data by name at all.
@@ -471,7 +471,7 @@ If you need to select between local and library data, there is a feature in ``bp
 Relative File Paths
 ===================
 
-Blender's relative file paths are not compatible with standard Python modules such as ``sys`` and ``os``.
+AIR Blend's relative file paths are not compatible with standard Python modules such as ``sys`` and ``os``.
 Built-in Python functions don't understand AIR Blend's ``//`` prefix which denotes the blend-file path.
 
 A common case where you would run into this problem is when exporting a material with associated image paths:

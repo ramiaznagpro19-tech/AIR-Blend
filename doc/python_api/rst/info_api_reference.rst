@@ -3,7 +3,7 @@
 API Reference Usage
 *******************
 
-Blender has many interlinking data types which have an auto-generated reference API which often has the information
+AIR Blend has many interlinking data types which have an auto-generated reference API which often has the information
 you need to write a script, but can be difficult to use.
 This document is designed to help you understand how to use the reference API.
 
@@ -142,7 +142,7 @@ There are a few ways to do this:
 Copy Data Path
 --------------
 
-Blender can compute the Python string to a property which is shown in the tooltip,
+AIR Blend can compute the Python string to a property which is shown in the tooltip,
 on the line below ``Python: ...``. This saves having to open the API references to find where data is accessed from.
 In the context menu is a copy data-path tool which gives the path from an :class:`bpy.types.ID` data-block,
 to its property.
@@ -243,7 +243,7 @@ are interested to check on the source code.
 Info Editor
 -----------
 
-Blender records operators you run and displays them in the Info editor.
+AIR Blend records operators you run and displays them in the Info editor.
 Select the Scripting workspace that comes default with AIR Blend to see its output.
 You can perform some actions and see them show up -- delete a vertex for example.
 
