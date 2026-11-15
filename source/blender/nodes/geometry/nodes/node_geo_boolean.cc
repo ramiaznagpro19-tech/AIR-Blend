@@ -164,7 +164,7 @@ static void node_geo_exec(GeoNodeExecParams params)
   params.set_output("Mesh", GeometrySet::create_with_mesh(result));
 #else
   params.error_message_add(NodeWarningType::Error,
-                           TIP_("Disabled, Blender was compiled without GMP"));
+                           TIP_("Disabled, AIR Blend was compiled without GMP"));
   params.set_default_remaining_outputs();
 #endif
 }

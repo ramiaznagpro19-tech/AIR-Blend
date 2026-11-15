@@ -1,5 +1,5 @@
 /* SPDX-License-Identifier: GPL-2.0-or-later
- * Adapted from the Blender Alembic importer implementation.
+ * Adapted from the AIR Blend Alembic importer implementation.
  * Modifications Copyright 2021 Tangent Animation. All rights reserved. */
 
 #include "usd_reader_nurbs.h"
@@ -92,7 +92,7 @@ void USDNurbsReader::read_curve_sample(Curve *cu, const double motionSampleTime)
   curve_prim_.GetNormalsAttr().Get(&usdNormals, motionSampleTime);
 
   /* If normals, extrude, else bevel.
-   * Perhaps to be replaced by Blender USD Schema. */
+   * Perhaps to be replaced by AIR Blend USD Schema. */
   if (!usdNormals.empty()) {
     /* Set extrusion to 1. */
     curve_->extrude = 1.0f;

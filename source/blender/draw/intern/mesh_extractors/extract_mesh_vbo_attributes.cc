@@ -290,7 +290,7 @@ static void extract_attr(const MeshRenderData *mr,
 {
   /* TODO(@kevindietrich): float3 is used for scalar attributes as the implicit conversion done by
    * OpenGL to vec4 for a scalar `s` will produce a `vec4(s, 0, 0, 1)`. However, following the
-   * Blender convention, it should be `vec4(s, s, s, 1)`. This could be resolved using a similar
+   * AIR Blend convention, it should be `vec4(s, s, s, 1)`. This could be resolved using a similar
    * texture as for volume attribute, so we can control the conversion ourselves. */
   switch (request.cd_type) {
     case CD_PROP_BOOL:

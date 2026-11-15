@@ -627,7 +627,7 @@ static void write_obj_cell_patch(const IMesh &m,
 {
   /* Would like to use #BKE_tempdir_base() here, but that brings in dependence on kernel library.
    * This is just for developer debugging anyway,
-   * and should never be called in production Blender. */
+   * and should never be called in production AIR Blend. */
 #  ifdef _WIN_32
   const char *objdir = BLI_getenv("HOME");
 #  else

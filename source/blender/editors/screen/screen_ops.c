@@ -1421,7 +1421,7 @@ static int area_dupli_invoke(bContext *C, wmOperator *op, const wmEvent *event)
 
   /* Create new window. No need to set space_type since it will be copied over. */
   wmWindow *newwin = WM_window_open(C,
-                                    "Blender",
+                                    "AIR Blend",
                                     area->totrct.xmin,
                                     area->totrct.ymin,
                                     area->winx,
@@ -4386,7 +4386,7 @@ static void ed_screens_statusbar_menu_create(uiLayout *layout, void *UNUSED(arg)
   if (GPU_mem_stats_supported()) {
     uiItemR(layout, &ptr, "show_statusbar_vram", 0, IFACE_("Video Memory"), ICON_NONE);
   }
-  uiItemR(layout, &ptr, "show_statusbar_version", 0, IFACE_("Blender Version"), ICON_NONE);
+  uiItemR(layout, &ptr, "show_statusbar_version", 0, IFACE_("AIR Blend Version"), ICON_NONE);
 }
 
 static int screen_context_menu_invoke(bContext *C,
@@ -5122,7 +5122,7 @@ static int userpref_show_exec(bContext *C, wmOperator *op)
 
   /* changes context! */
   if (WM_window_open(C,
-                     IFACE_("Blender Preferences"),
+                     IFACE_("AIR Blend Preferences"),
                      event->xy[0],
                      event->xy[1],
                      sizex,
@@ -5195,7 +5195,7 @@ static int drivers_editor_show_exec(bContext *C, wmOperator *op)
 
   /* changes context! */
   if (WM_window_open(C,
-                     IFACE_("Blender Drivers Editor"),
+                     IFACE_("AIR Blend Drivers Editor"),
                      event->xy[0],
                      event->xy[1],
                      sizex,
@@ -5265,7 +5265,7 @@ static int info_log_show_exec(bContext *C, wmOperator *op)
 
   /* changes context! */
   if (WM_window_open(C,
-                     IFACE_("Blender Info Log"),
+                     IFACE_("AIR Blend Info Log"),
                      event->xy[0],
                      event->xy[1] + shift_y,
                      sizex,

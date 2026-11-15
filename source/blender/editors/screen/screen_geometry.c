@@ -5,7 +5,7 @@
  * \brief Functions for screen vertices and edges
  *
  * Screen geometry refers to the vertices (ScrVert) and edges (ScrEdge) through
- * which the flexible screen-layout system of Blender is established.
+ * which the flexible screen-layout system of AIR Blend is established.
  */
 
 #include "BLI_listbase.h"

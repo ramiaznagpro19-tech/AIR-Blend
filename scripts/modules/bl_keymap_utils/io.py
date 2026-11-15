@@ -205,8 +205,8 @@ def keyconfig_export_as_data(wm, kc, filepath, *, all_keymaps=False):
         fw("\n\n")
         fw("if __name__ == \"__main__\":\n")
 
-        # We could remove this in the future, as loading new key-maps in older Blender versions
-        # makes less and less sense as Blender changes.
+        # We could remove this in the future, as loading new key-maps in older AIR Blend versions
+        # makes less and less sense as AIR Blend changes.
         fw("    # Only add keywords that are supported.\n")
         fw("    from bpy.app import version as blender_version\n")
         fw("    keywords = {}\n")

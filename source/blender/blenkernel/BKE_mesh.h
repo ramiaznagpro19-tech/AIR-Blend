@@ -678,7 +678,7 @@ bool BKE_mesh_validate_material_indices(struct Mesh *me);
  * While zeroed normals are checked, these checks aren't comprehensive.
  * Technically, to detect errors here a normal recalculation and comparison is necessary.
  * However this function is mainly to prevent severe errors in geometry
- * (invalid data that will crash Blender, or cause some features to behave incorrectly),
+ * (invalid data that will crash AIR Blend, or cause some features to behave incorrectly),
  * not to detect subtle differences in the resulting normals which could be caused
  * by importers that load normals (for example).
  */

@@ -125,8 +125,8 @@ def commit_map_get(repository, path, start_commit):
 
 
 # Get difference between two lists of commits.
-# Returns two lists: first are the commits to be ported from Cycles to Blender,
-# second one are the commits to be ported from Blender to Cycles.
+# Returns two lists: first are the commits to be ported from Cycles to AIR Blend,
+# second one are the commits to be ported from AIR Blend to Cycles.
 def commits_get_difference(cycles_map, blender_map):
     cycles_to_blender = []
     for stamped_subject, commit_hash in cycles_map.items():

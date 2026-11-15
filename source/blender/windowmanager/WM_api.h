@@ -8,7 +8,7 @@
  * \page wmpage windowmanager
  * \section wmabout About windowmanager
  * \ref wm handles events received from \ref GHOST and manages
- * the screens, areas and input for Blender
+ * the screens, areas and input for AIR Blend
  * \section wmnote NOTE
  * \todo document
  */
@@ -95,15 +95,15 @@ void WM_init_native_pixels(bool do_it);
 void WM_init_input_devices(void);
 
 /**
- * Initialize Blender and load the startup file & preferences
+ * Initialize AIR Blend and load the startup file & preferences
  * (only called once).
  */
 void WM_init(struct bContext *C, int argc, const char **argv);
 /**
- * \param do_python: Free all data associated with Blender's Python integration.
+ * \param do_python: Free all data associated with AIR Blend's Python integration.
  * Also exit the Python interpreter (unless `WITH_PYTHON_MODULE` is enabled).
  * \param do_user_exit_actions: When enabled perform actions associated with a user
- * having been using Blender then exiting. Actions such as writing the auto-save
+ * having been using AIR Blend then exiting. Actions such as writing the auto-save
  * and writing any changes to preferences.
  * Set to false in background mode or when exiting because of failed command line argument parsing.
  * In general automated actions where the user isn't making changes should pass in false too.
@@ -113,8 +113,8 @@ void WM_init(struct bContext *C, int argc, const char **argv);
 void WM_exit_ex(struct bContext *C, bool do_python, bool do_user_exit_actions);
 
 /**
- * \brief Main exit function to close Blender ordinarily.
- * \note Use #wm_exit_schedule_delayed() to close Blender from an operator.
+ * \brief Main exit function to close AIR Blend ordinarily.
+ * \note Use #wm_exit_schedule_delayed() to close AIR Blend from an operator.
  * Might leak memory otherwise.
  *
  * \param exit_code: Passed to #exit, typically #EXIT_SUCCESS or #EXIT_FAILURE should be used.
@@ -1634,7 +1634,7 @@ void WM_job_main_thread_lock_release(struct wmJob *job);
  */
 char *WM_clipboard_text_get(bool selection, bool ensure_utf8, int *r_len);
 /**
- * Convenience function for pasting to areas of Blender which don't support newlines.
+ * Convenience function for pasting to areas of AIR Blend which don't support newlines.
  */
 char *WM_clipboard_text_get_firstline(bool selection, bool ensure_utf8, int *r_len);
 

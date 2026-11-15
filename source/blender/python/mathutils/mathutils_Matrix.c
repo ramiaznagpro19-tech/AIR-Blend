@@ -3329,7 +3329,7 @@ PyDoc_STRVAR(
     matrix_doc,
     ".. class:: Matrix([rows])\n"
     "\n"
-    "   This object gives access to Matrices in Blender, supporting square and rectangular\n"
+    "   This object gives access to Matrices in AIR Blend, supporting square and rectangular\n"
     "   matrices from 2x2 up to 4x4.\n"
     "\n"
     "   :arg rows: Sequence of rows. When omitted, a 4x4 identity matrix is constructed.\n"

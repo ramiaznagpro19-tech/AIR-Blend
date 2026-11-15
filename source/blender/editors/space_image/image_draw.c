@@ -141,7 +141,7 @@ void ED_image_draw_info(Scene *scene,
   const int dy = ymin + 0.3f * UI_UNIT_Y;
 
   /* text colors */
-  /* XXX colored text not allowed in Blender UI */
+  /* XXX colored text not allowed in AIR Blend UI */
 #if 0
   uchar red[3] = {255, 50, 50};
   uchar green[3] = {0, 255, 0};

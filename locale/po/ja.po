@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
 "PO-Revision-Date: 2016-10-13 03:05+0900\n"
@@ -431,7 +431,7 @@ msgid "Source Root"
 msgstr "ソースルート"
 
 
-msgid "The Blender source root path"
+msgid "The AIR Blend source root path"
 msgstr "Blenderソースルートパス"
 
 
@@ -455,7 +455,7 @@ msgid "Persistent Data Path"
 msgstr "永続データパス"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
 msgstr "これらの設定が含まれるJSONファイル名(残念ながらBlenderのシステムはここでは動作しません)"
 
 
@@ -1127,8 +1127,8 @@ msgid "Catalog UUID"
 msgstr "カタログUUID"
 
 
-msgid "Identifier for the asset's catalog, used by Blender to look up the asset's catalog path. Must be a UUID according to RFC4122"
-msgstr "アセットのカタログ用識別子。Blender がアセットのカタログパスの参照に使用。UUID は RFC4122 に準拠していなければいけません"
+msgid "Identifier for the asset's catalog, used by AIR Blend to look up the asset's catalog path. Must be a UUID according to RFC4122"
+msgstr "アセットのカタログ用識別子。AIR Blend がアセットのカタログパスの参照に使用。UUID は RFC4122 に準拠していなければいけません"
 
 
 msgid "Catalog Simple Name"
@@ -1349,8 +1349,8 @@ msgid "Is Internal"
 msgstr "内部用"
 
 
-msgid "The attribute is meant for internal use by Blender"
-msgstr "その属性が Blender による内部的な使用を意図しているかどうか"
+msgid "The attribute is meant for internal use by AIR Blend"
+msgstr "その属性が AIR Blend による内部的な使用を意図しているかどうか"
 
 
 msgid "Name of the Attribute"
@@ -2583,11 +2583,11 @@ msgid "Collection of worlds"
 msgstr "ワールドの集合"
 
 
-msgid "Blender RNA"
+msgid "AIR Blend RNA"
 msgstr "BlenderRNA"
 
 
-msgid "Blender RNA structure definitions"
+msgid "AIR Blend RNA structure definitions"
 msgstr "BlenderのRNA構造定義"
 
 
@@ -5874,8 +5874,8 @@ msgid "sRGB display space with Filmic view transform"
 msgstr "Filmic ビュー変換による sRGB 表示空間"
 
 
-msgid "Rec. 709 (Full Range), Blender native linear space"
-msgstr "Rec. 709 (フルレンジ)、Blender 本来のリニア空間"
+msgid "Rec. 709 (Full Range), AIR Blend native linear space"
+msgstr "Rec. 709 (フルレンジ)、AIR Blend 本来のリニア空間"
 
 
 msgid "Linear ACES"
@@ -6247,8 +6247,8 @@ msgid "Lin error"
 msgstr "位置の誤差"
 
 
-msgid "Amount of residual error in Blender space unit for constraints that work on position"
-msgstr "位置に対して作用するコンストレイントの残余誤差の量（Blender 空間単位）"
+msgid "Amount of residual error in AIR Blend space unit for constraints that work on position"
+msgstr "位置に対して作用するコンストレイントの残余誤差の量（AIR Blend 空間単位）"
 
 
 msgid "Rotation error"
@@ -6256,7 +6256,7 @@ msgstr "回転の誤差"
 
 
 msgid "Amount of residual error in radians for constraints that work on orientation"
-msgstr "方向に対して作用するコンストレイントの残余誤差の量（Blender 空間単位）"
+msgstr "方向に対して作用するコンストレイントの残余誤差の量（AIR Blend 空間単位）"
 
 
 msgid "Influence"
@@ -10368,7 +10368,7 @@ msgid "Max Velocity"
 msgstr "最大速度"
 
 
-msgid "Velocity considered as maximum influence (Blender units per frame)"
+msgid "Velocity considered as maximum influence (AIR Blend units per frame)"
 msgstr "影響が最大とみなす速度(Blender単位/フレーム)"
 
 
@@ -10740,7 +10740,7 @@ msgid "Premultiply Alpha"
 msgstr "プリマルチプライアルファ"
 
 
-msgid "Multiply color by alpha (recommended for Blender input)"
+msgid "Multiply color by alpha (recommended for AIR Blend input)"
 msgstr "色をアルファで乗算します(Blenderへの入力に最適)"
 
 
@@ -13122,7 +13122,7 @@ msgstr ""
 ".blend ファイルアイテムを隠します"
 
 
-msgid "Filter Blender Backup Files"
+msgid "Filter AIR Blend Backup Files"
 msgstr "バックアップファイルをフィルタリング"
 
 
@@ -13130,7 +13130,7 @@ msgid "Show .blend1, .blend2, etc. files"
 msgstr ".blend1、.blend2などのファイルを表示"
 
 
-msgid "Filter Blender"
+msgid "Filter AIR Blend"
 msgstr "Blenderをフィルタリング"
 
 
@@ -13138,8 +13138,8 @@ msgid "Show .blend files"
 msgstr "blendファイルを表示"
 
 
-msgid "Filter Blender IDs"
-msgstr "Blender IDでフィルタリング"
+msgid "Filter AIR Blend IDs"
+msgstr "AIR Blend IDでフィルタリング"
 
 
 msgid "Show .blend files items (objects, materials, etc.)"
@@ -13214,7 +13214,7 @@ msgid "Library Browser"
 msgstr "ライブラリブラウザー"
 
 
-msgid "Whether we may browse Blender files' content or not"
+msgid "Whether we may browse AIR Blend files' content or not"
 msgstr "Blenderファイルの内容を閲覧するかどうか"
 
 
@@ -13591,10 +13591,10 @@ msgid "Export Mantaflow Script"
 msgstr "Mantaflowスクリプトをエクスポート"
 
 
-msgid "Generate and export Mantaflow script from current domain settings during bake. This is only needed if you plan to analyze the cache (e.g. view grids, velocity vectors, particles) in Mantaflow directly (outside of Blender) after baking the simulation"
+msgid "Generate and export Mantaflow script from current domain settings during bake. This is only needed if you plan to analyze the cache (e.g. view grids, velocity vectors, particles) in Mantaflow directly (outside of AIR Blend) after baking the simulation"
 msgstr ""
 "ベイク中、現在のドメイン設定から Mantaflow スクリプトを生成・エクスポートします。\n"
-"これはシミュレーションベイク後に（Blender 外の）Mantaflow ディレクトリ内のキャッシュ\n"
+"これはシミュレーションベイク後に（AIR Blend 外の）Mantaflow ディレクトリ内のキャッシュ\n"
 "（view grids、velocity vectors、particles など）を分析したい時のみ必要です"
 
 
@@ -20982,7 +20982,7 @@ msgid "Unprojected Radius"
 msgstr "非投影半径"
 
 
-msgid "Radius of brush in Blender units"
+msgid "Radius of brush in AIR Blend units"
 msgstr "ブラシ半径。Blender単位"
 
 
@@ -24291,8 +24291,8 @@ msgid "Path to the library .blend file"
 msgstr "ライブラリ .blendファイルのパス"
 
 
-msgid "Version of Blender the library .blend was saved with"
-msgstr "ライブラリ .blend ファイルが保存された Blender のバージョン"
+msgid "Version of AIR Blend the library .blend was saved with"
+msgstr "ライブラリ .blend ファイルが保存された AIR Blend のバージョン"
 
 
 msgctxt "Light"
@@ -29111,12 +29111,12 @@ msgid "Noise basis used for turbulence"
 msgstr "乱れを生成する基本となるノイズを設定します"
 
 
-msgid "Blender Original"
+msgid "AIR Blend Original"
 msgstr "Blenderオリジナル"
 
 
-msgid "Noise algorithm - Blender original: Smooth interpolated noise"
-msgstr "ノイズ生成アルゴリズム - Blender オリジナル: スムーズに補間されるノイズ"
+msgid "Noise algorithm - AIR Blend original: Smooth interpolated noise"
+msgstr "ノイズ生成アルゴリズム - AIR Blend オリジナル: スムーズに補間されるノイズ"
 
 
 msgid "Original Perlin"
@@ -30021,8 +30021,8 @@ msgid "Asset Blend Path"
 msgstr "アセットBlendパス"
 
 
-msgid "Full path to the Blender file containing the active asset"
-msgstr "アクティブアセットのある Blender ファイルへのフルパス"
+msgid "Full path to the AIR Blend file containing the active asset"
+msgstr "アクティブアセットのある AIR Blend ファイルへのフルパス"
 
 
 msgid "Is Interface Locked"
@@ -30857,16 +30857,16 @@ msgid "Image Size"
 msgstr "画像のサイズ"
 
 
-msgid "True if this preview icon has been modified by py script, and is no more auto-generated by Blender"
-msgstr "このプレビューアイコンが Python スクリプトによって変更され、もう Blender から自動生成されない場合に True になります"
+msgid "True if this preview icon has been modified by py script, and is no more auto-generated by AIR Blend"
+msgstr "このプレビューアイコンが Python スクリプトによって変更され、もう AIR Blend から自動生成されない場合に True になります"
 
 
 msgid "Custom Image"
 msgstr "カスタム画像"
 
 
-msgid "True if this preview image has been modified by py script, and is no more auto-generated by Blender"
-msgstr "このプレビュー画像が Python スクリプトによって変更され、もう Blender から自動生成されない場合に True になります"
+msgid "True if this preview image has been modified by py script, and is no more auto-generated by AIR Blend"
+msgstr "このプレビュー画像が Python スクリプトによって変更され、もう AIR Blend から自動生成されない場合に True になります"
 
 
 msgid "Parameters defining how an Image data-block is used by another data-block"
@@ -44652,8 +44652,8 @@ msgid "Anti-Alias Z"
 msgstr "Zアンチエイリアス"
 
 
-msgid "Anti-alias the z-buffer to try to avoid artifacts, mostly useful for Blender renders"
-msgstr "Z バッファをアンチエイリアスしてジャギーを防ぎます。Blender レンダーで大抵の場合は便利です"
+msgid "Anti-alias the z-buffer to try to avoid artifacts, mostly useful for AIR Blend renders"
+msgstr "Z バッファをアンチエイリアスしてジャギーを防ぎます。AIR Blend レンダーで大抵の場合は便利です"
 
 
 msgid "Function Node"
@@ -47512,19 +47512,19 @@ msgid "World space normal mapping"
 msgstr "ワールド空間でノーマルマッピングします"
 
 
-msgid "Blender Object Space"
+msgid "AIR Blend Object Space"
 msgstr "Blenderオブジェクト空間"
 
 
-msgid "Object space normal mapping, compatible with Blender render baking"
+msgid "Object space normal mapping, compatible with AIR Blend render baking"
 msgstr "オブジェクト空間ノーマルマッピング、Blenderのレンダーベイキング互換"
 
 
-msgid "Blender World Space"
+msgid "AIR Blend World Space"
 msgstr "Blenderワールド空間"
 
 
-msgid "World space normal mapping, compatible with Blender render baking"
+msgid "World space normal mapping, compatible with AIR Blend render baking"
 msgstr "ワールド空間ノーマルマッピング、Blenderのレンダーベイキング互換"
 
 
@@ -54862,10 +54862,10 @@ msgid "Apply Scalings"
 msgstr "スケールを適用"
 
 
-msgid "How to apply custom and units scalings in generated FBX file (Blender uses FBX scale to detect units on import, but many other applications do not handle the same way)"
+msgid "How to apply custom and units scalings in generated FBX file (AIR Blend uses FBX scale to detect units on import, but many other applications do not handle the same way)"
 msgstr ""
 "カスタムと単位スケーリングを、生成した FBX ファイルに適用する方法\n"
-"（Blender はインポート時の単位の探知に FBX スケールを使用しますが、他の多くのアプリケーションではこの方法で処理しません）"
+"（AIR Blend はインポート時の単位の探知に FBX スケールを使用しますが、他の多くのアプリケーションではこの方法で処理しません）"
 
 
 msgid "All Local"
@@ -54904,26 +54904,26 @@ msgid "Apply Unit"
 msgstr "単位を適用"
 
 
-msgid "Take into account current Blender units settings (if unset, raw Blender Units values are used as-is)"
-msgstr "現在の Blender 単位設定を考慮します（未設定時、生の Blender 単位の値がそのまま使用されます）"
+msgid "Take into account current AIR Blend units settings (if unset, raw AIR Blend Units values are used as-is)"
+msgstr "現在の AIR Blend 単位設定を考慮します（未設定時、生の AIR Blend 単位の値がそのまま使用されます）"
 
 
 msgid "Armature FBXNode Type"
 msgstr "アーマチュアFBXノードタイプ"
 
 
-msgid "FBX type of node (object) used to represent Blender's armatures (use the Null type unless you experience issues with the other app, as other choices may not import back perfectly into Blender...)"
+msgid "FBX type of node (object) used to represent AIR Blend's armatures (use the Null type unless you experience issues with the other app, as other choices may not import back perfectly into AIR Blend...)"
 msgstr ""
-"Blender のアーマチュアを表現するのに使用するノード（オブジェクト）の FBX タイプ\n"
-"（他のアプリで問題がなければ Null、他は Blender への再インポートが完全にはなりません…）"
+"AIR Blend のアーマチュアを表現するのに使用するノード（オブジェクト）の FBX タイプ\n"
+"（他のアプリで問題がなければ Null、他は AIR Blend への再インポートが完全にはなりません…）"
 
 
 msgid "Null"
 msgstr "Null"
 
 
-msgid "'Null' FBX node, similar to Blender's Empty (default)"
-msgstr "'Null' FBX ノード。Blender のエンプティに似ています（デフォルト）"
+msgid "'Null' FBX node, similar to AIR Blend's Empty (default)"
+msgstr "'Null' FBX ノード。AIR Blend のエンプティに似ています（デフォルト）"
 
 
 msgid "'Root' FBX node, supposed to be the root of chains of bones..."
@@ -54997,10 +54997,10 @@ msgid "Apply Transform"
 msgstr "トランスフォームを適用"
 
 
-msgid "Bake space transform into object data, avoids getting unwanted rotations to objects when target space is not aligned with Blender's space (WARNING! experimental option, use at own risk, known to be broken with armatures/animations)"
+msgid "Bake space transform into object data, avoids getting unwanted rotations to objects when target space is not aligned with AIR Blend's space (WARNING! experimental option, use at own risk, known to be broken with armatures/animations)"
 msgstr ""
 "トランスフォームをオブジェクトデータにベイクし、ターゲット空間が\n"
-"Blender の空間と合致しない時に起こる望ましくない回転を回避します\n"
+"AIR Blend の空間と合致しない時に起こる望ましくない回転を回避します\n"
 "（注意：実験的なオプションであるため、自己責任で使用してください\n"
 "　アーマチュアやアニメーションが壊れる問題があります）"
 
@@ -55235,8 +55235,8 @@ msgid "Use Modifiers Render Setting"
 msgstr "モディファイアーのレンダー設定を使用"
 
 
-msgid "Use render settings when applying modifiers to mesh objects (DISABLED in Blender 2.8)"
-msgstr "モディファイアーをメッシュに適用する際、レンダリング設定を使用します（Blender 2.8では無効）"
+msgid "Use render settings when applying modifiers to mesh objects (DISABLED in AIR Blend 2.8)"
+msgstr "モディファイアーをメッシュに適用する際、レンダリング設定を使用します（AIR Blend 2.8では無効）"
 
 
 msgid "Use Metadata"
@@ -55584,8 +55584,8 @@ msgid "Raw (Deprecated)"
 msgstr "Raw（廃止予定）"
 
 
-msgid "Blender lighting strengths with no conversion"
-msgstr "未変換の Blender の光の強さ"
+msgid "AIR Blend lighting strengths with no conversion"
+msgstr "未変換の AIR Blend の光の強さ"
 
 
 msgid "JPEG quality"
@@ -55746,8 +55746,8 @@ msgid "Export original PBR Specular"
 msgstr "オリジナルの PBR スペキュラーをエクスポート"
 
 
-msgid "Export original glTF PBR Specular, instead of Blender Principled Shader Specular"
-msgstr "Blender のプリンシプル BSDF シェーダーのスペキュラーではなく、オリジナルの glTF PBR スペキュラーをエクスポートします"
+msgid "Export original glTF PBR Specular, instead of AIR Blend Principled Shader Specular"
+msgstr "AIR Blend のプリンシプル BSDF シェーダーのスペキュラーではなく、オリジナルの glTF PBR スペキュラーをエクスポートします"
 
 
 msgid "Reset pose bones between actions"
@@ -55870,8 +55870,8 @@ msgid "Remember Export Settings"
 msgstr "エクスポート設定を維持"
 
 
-msgid "Store glTF export settings in the Blender project"
-msgstr "glTFエクスポート設定を Blender プロジェクト内に格納します"
+msgid "Store glTF export settings in the AIR Blend project"
+msgstr "glTFエクスポート設定を AIR Blend プロジェクト内に格納します"
 
 
 msgctxt "Operator"
@@ -55895,8 +55895,8 @@ msgid "OBJ Groups"
 msgstr "OBJグループ"
 
 
-msgid "Export Blender objects as OBJ groups"
-msgstr "OBJグループとして Blender オブジェクトをエクスポートします"
+msgid "Export AIR Blend objects as OBJ groups"
+msgstr "OBJグループとして AIR Blend オブジェクトをエクスポートします"
 
 
 msgid "Keep Vertex Order"
@@ -55911,8 +55911,8 @@ msgid "OBJ Objects"
 msgstr "OBJオブジェクト"
 
 
-msgid "Export Blender objects as OBJ objects"
-msgstr "OBJオブジェクトとして Blender オブジェクトをエクスポートします"
+msgid "Export AIR Blend objects as OBJ objects"
+msgstr "OBJオブジェクトとして AIR Blend オブジェクトをエクスポートします"
 
 
 msgid "Include Edges"
@@ -60529,8 +60529,8 @@ msgid "Save the image with another name and/or settings"
 msgstr "画像を他のファイル名や設定で保存します"
 
 
-msgid "Create a new image file without modifying the current image in Blender"
-msgstr "Blender 内の現在の画像を変更せず、新規画像ファイルを作成します"
+msgid "Create a new image file without modifying the current image in AIR Blend"
+msgstr "AIR Blend 内の現在の画像を変更せず、新規画像ファイルを作成します"
 
 
 msgid "Save As Render"
@@ -60739,7 +60739,7 @@ msgid "Scale FPS"
 msgstr "FPSのスケーリング"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a Blender frame"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
 msgstr "フレームレートをBVHから現在のシーンにスケーリングします。行わない場合、各BVHフレームは直接Blenderフレームにマッピングされます"
 
 
@@ -60837,8 +60837,8 @@ msgid "Definition"
 msgstr "解像度"
 
 
-msgid "Number of pixels per inch or Blender Unit"
-msgstr "インチ毎のピクセル数または Blender 単位"
+msgid "Number of pixels per inch or AIR Blend Unit"
+msgstr "インチ毎のピクセル数または AIR Blend 単位"
 
 
 msgid "How large in the camera frame is the plane"
@@ -60857,8 +60857,8 @@ msgid "Force Reload"
 msgstr "強制リロード"
 
 
-msgid "Force reloading of the image if already opened elsewhere in Blender"
-msgstr "すでに Blender 内のどこかで開いた画像を強制的にリロードします"
+msgid "Force reloading of the image if already opened elsewhere in AIR Blend"
+msgstr "すでに AIR Blend 内のどこかで開いた画像を強制的にリロードします"
 
 
 msgid "Height of the created plane"
@@ -60985,8 +60985,8 @@ msgid "Dots/BU"
 msgstr "ドット/BU"
 
 
-msgid "Use definition of the image as dots per Blender Unit"
-msgstr "画像の解像度を Blender 単位毎のドット数として使用します"
+msgid "Use definition of the image as dots per AIR Blend Unit"
+msgstr "画像の解像度を AIR Blend 単位毎のドット数として使用します"
 
 
 msgid "Use alpha channel for transparency"
@@ -61126,8 +61126,8 @@ msgid "Import FBX animation"
 msgstr "FBXのアニメーションをインポートします"
 
 
-msgid "Import custom normals, if available (otherwise Blender will recompute them)"
-msgstr "可能であればカスタム法線をインポートします（無理なら Blender が再計算します）"
+msgid "Import custom normals, if available (otherwise AIR Blend will recompute them)"
+msgstr "可能であればカスタム法線をインポートします（無理なら AIR Blend が再計算します）"
 
 
 msgid "Import user properties as custom properties"
@@ -61191,13 +61191,13 @@ msgid "Heuristic for placing bones. Tries to make bones pretty"
 msgstr "ヒューリスティックなボーン配置。ボーンを綺麗にしようとします"
 
 
-msgid "Blender (best for re-importing)"
-msgstr "Blender（再インポートに最適）"
+msgid "AIR Blend (best for re-importing)"
+msgstr "AIR Blend（再インポートに最適）"
 
 
-msgid "Good for re-importing glTFs exported from Blender. Bone tips are placed on their local +Y axis (in glTF space)"
+msgid "Good for re-importing glTFs exported from AIR Blend. Bone tips are placed on their local +Y axis (in glTF space)"
 msgstr ""
-"Blender でエクスポートした glTF の再インポートに適しています\n"
+"AIR Blend でエクスポートした glTF の再インポートに適しています\n"
 "ボーン先端をボーンのローカル +Y 軸（glTF 空間）に置きます"
 
 
@@ -61313,11 +61313,11 @@ msgid "Surround smooth groups by sharp edges"
 msgstr "スムーズグループをシャープ辺で囲みます"
 
 
-msgid "Import OBJ Groups into Blender Objects"
+msgid "Import OBJ Groups into AIR Blend Objects"
 msgstr "OBJグループをBlenderオブジェクトにインポートします"
 
 
-msgid "Import OBJ Objects into Blender Objects"
+msgid "Import OBJ Objects into AIR Blend Objects"
 msgstr "OBJのオブジェクトをBlenderにインポートします"
 
 
@@ -61375,8 +61375,8 @@ msgid "Update Reports Display"
 msgstr "レポートディスプレイを更新"
 
 
-msgid "Update the display of reports in Blender UI (internal use)"
-msgstr "Blender UI内のレポート表示を更新します（内部使用）"
+msgid "Update the display of reports in AIR Blend UI (internal use)"
+msgstr "AIR Blend UI内のレポート表示を更新します（内部使用）"
 
 
 msgid "Change selection of all visible reports"
@@ -72768,8 +72768,8 @@ msgid "Install Theme..."
 msgstr "テーマをインストール..."
 
 
-msgid "Load and apply a Blender XML theme file"
-msgstr "Blender XMLテーマファイルを読み込み、適用します"
+msgid "Load and apply a AIR Blend XML theme file"
+msgstr "AIR Blend XMLテーマファイルを読み込み、適用します"
 
 
 msgid "Remove existing theme file if exists"
@@ -74036,8 +74036,8 @@ msgid "Save Screenshot"
 msgstr "スクリーンショットを保存"
 
 
-msgid "Capture a picture of the whole Blender window"
-msgstr "Blender のウィンドウ全体の画像をキャプチャします"
+msgid "Capture a picture of the whole AIR Blend window"
+msgstr "AIR Blend のウィンドウ全体の画像をキャプチャします"
 
 
 msgctxt "Operator"
@@ -75978,8 +75978,8 @@ msgid "Add Scene Strip"
 msgstr "シーンストリップを追加"
 
 
-msgid "Add a strip to the sequencer using a Blender scene as a source"
-msgstr "Blender のシーンをソースとするストリップをシーケンサーに追加します"
+msgid "Add a strip to the sequencer using a AIR Blend scene as a source"
+msgstr "AIR Blend のシーンをソースとするストリップをシーケンサーに追加します"
 
 
 msgctxt "Operator"
@@ -77911,12 +77911,12 @@ msgid "Stats from opened po"
 msgstr "開いた po の状態"
 
 
-msgid "Try to rebuild mo file, and refresh Blender's UI"
-msgstr "mo ファイルのリビルドと、Blender の UI の更新を試みます"
+msgid "Try to rebuild mo file, and refresh AIR Blend's UI"
+msgstr "mo ファイルのリビルドと、AIR Blend の UI の更新を試みます"
 
 
-msgid "Update po file, try to rebuild mo file, and refresh Blender's UI"
-msgstr "po ファイルを更新し、mo ファイルのリビルドと、Blender の UI のリフレッシュを試みます"
+msgid "Update po file, try to rebuild mo file, and refresh AIR Blend's UI"
+msgstr "po ファイルを更新し、mo ファイルのリビルドと、AIR Blend の UI のリフレッシュを試みます"
 
 
 msgid "Edit i18n in current language for the active button"
@@ -77928,7 +77928,7 @@ msgid "Eyedropper"
 msgstr "スポイト"
 
 
-msgid "Sample a color from the Blender window to store in a property"
+msgid "Sample a color from the AIR Blend window to store in a property"
 msgstr "Blenderのウィンドウから色を取得し、プロパティに格納します"
 
 
@@ -78021,8 +78021,8 @@ msgid "Grease Pencil Eyedropper"
 msgstr "グリースペンシルスポイト"
 
 
-msgid "Sample a color from the Blender Window and create Grease Pencil material"
-msgstr "Blender ウィンドウから色を取得し、グリースペンシルマテリアルを作成します"
+msgid "Sample a color from the AIR Blend Window and create Grease Pencil material"
+msgstr "AIR Blend ウィンドウから色を取得し、グリースペンシルマテリアルを作成します"
 
 
 msgctxt "Operator"
@@ -80384,9 +80384,9 @@ msgid "Run as Background Job"
 msgstr "バックグラウンドジョブとして実行"
 
 
-msgid "Enable this to run the import in the background, disable to block Blender while importing. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
+msgid "Enable this to run the import in the background, disable to block AIR Blend while importing. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
 msgstr ""
-"有効時はバックグラウンドでインポートを実行し、無効時はインポート中に Blender を止めます\n"
+"有効時はバックグラウンドでインポートを実行し、無効時はインポート中に AIR Blend を止めます\n"
 "（このオプションは廃止予定です。フォアグラウンドでの実行時は、このオペレーターを「EXECUTE」、バックグラウンドジョブとしての実行時は「INVOKE」してください）"
 
 
@@ -80571,9 +80571,9 @@ msgid "Add cache modifiers and constraints to imported objects even if they are 
 msgstr "インポートしたオブジェクトに、アニメーションしていなくてもキャッシュモディファイアーとコンストレイントを追加し、Alembic アーカイブのリロード時に更新できるようにします"
 
 
-msgid "Enable this to run the export in the background, disable to block Blender while exporting. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
+msgid "Enable this to run the export in the background, disable to block AIR Blend while exporting. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
 msgstr ""
-"有効時はバックグラウンドでエクスポートを実行し、無効時はエクスポート中に Blender を止めます\n"
+"有効時はバックグラウンドでエクスポートを実行し、無効時はエクスポート中に AIR Blend を止めます\n"
 "（このオプションは廃止予定です。フォアグラウンドでの実行時は、このオペレーターを「EXECUTE」、バックグラウンドジョブとしての実行時は「INVOKE」してください）"
 
 
@@ -81051,11 +81051,11 @@ msgid "Sort exported data by Object name"
 msgstr "エクスポートデータをオブジェクト名でソートします"
 
 
-msgid "Use Blender Profile"
+msgid "Use AIR Blend Profile"
 msgstr "Blenderプロファイルを使用"
 
 
-msgid "Export additional Blender specific information (for material, shaders, bones, etc.)"
+msgid "Export additional AIR Blend specific information (for material, shaders, bones, etc.)"
 msgstr "Blender特有（マテリアル、シェーダー、ボーンなど）の情報もエクスポートします"
 
 
@@ -81088,8 +81088,8 @@ msgid "Set use_connect for parent bones which have exactly one child bone"
 msgstr "厳密に一つの子を持つ親ボーンに use_connect を設定します"
 
 
-msgid "Import custom normals, if available (otherwise Blender will compute them)"
-msgstr "可能であればカスタム法線をインポートします（無理なら Blender が計算します）"
+msgid "Import custom normals, if available (otherwise AIR Blend will compute them)"
+msgstr "可能であればカスタム法線をインポートします（無理なら AIR Blend が計算します）"
 
 
 msgid "Find Bone Chains"
@@ -81112,7 +81112,7 @@ msgid "Import Units"
 msgstr "単位のインポート"
 
 
-msgid "If disabled match import to Blender's current Unit settings, otherwise use the settings from the Imported scene"
+msgid "If disabled match import to AIR Blend's current Unit settings, otherwise use the settings from the Imported scene"
 msgstr "OFFの場合はBlenderの現在の単位設定に対応させ、ONの場合はインポートされたシーンの設定を使用します"
 
 
@@ -81827,7 +81827,7 @@ msgid "Open"
 msgstr "開く"
 
 
-msgid "Open a Blender file"
+msgid "Open a AIR Blend file"
 msgstr "Blenderファイルを開く"
 
 
@@ -82023,8 +82023,8 @@ msgid "Collection of file paths with common `directory` root"
 msgstr "共通の「ディレクトリ」ルート付きファイルパスの集合"
 
 
-msgid "Show Blender files in the File Browser"
-msgstr "ファイルブラウザー内に Blender ファイルを表示します"
+msgid "Show AIR Blend files in the File Browser"
+msgstr "ファイルブラウザー内に AIR Blend ファイルを表示します"
 
 
 msgid "Show folders in the File Browser"
@@ -82244,11 +82244,11 @@ msgstr "内部で使用します (プロパティのデータパスを編集)"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "Blenderを終了"
 
 
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "Blenderを終了"
 
 
@@ -82548,15 +82548,15 @@ msgstr "現在のファイルをデフォルトの.blendファイルにします
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
+msgid "Save AIR Blend File"
 msgstr "Blenderファイルを保存"
 
 
-msgid "Save the current Blender file"
+msgid "Save the current AIR Blend file"
 msgstr "現在のBlenderファイルを保存"
 
 
-msgid "Exit Blender after saving"
+msgid "Exit AIR Blend after saving"
 msgstr "保存後にBlenderを終了します"
 
 
@@ -82694,12 +82694,12 @@ msgstr "スプラッシュスクリーンをリリース情報付で開きます
 
 
 msgctxt "Operator"
-msgid "About Blender"
+msgid "About AIR Blend"
 msgstr "Blenderについて"
 
 
-msgid "Open a window with information about Blender"
-msgstr "Blender についての情報のウィンドウを開きます"
+msgid "Open a window with information about AIR Blend"
+msgstr "AIR Blend についての情報のウィンドウを開きます"
 
 
 msgid "Import an STL file as an object"
@@ -82953,8 +82953,8 @@ msgid "Import Instance Proxies"
 msgstr "インスタンスプロキシをインポート"
 
 
-msgid "Create unique Blender objects for USD instances"
-msgstr "USDインスタンス毎に個別の Blender オブジェクトを作成します"
+msgid "Create unique AIR Blend objects for USD instances"
+msgstr "USDインスタンス毎に個別の AIR Blend オブジェクトを作成します"
 
 
 msgid "Import proxy geometry"
@@ -83045,8 +83045,8 @@ msgid "Make Unique"
 msgstr "ユニーク化"
 
 
-msgid "Import each USD material as a unique Blender material"
-msgstr "各 USD マテリアルを固有の Blender マテリアルとしてインポートします"
+msgid "Import each USD material as a unique AIR Blend material"
+msgstr "各 USD マテリアルを固有の AIR Blend マテリアルとしてインポートします"
 
 
 msgid "Reference Existing"
@@ -83807,7 +83807,7 @@ msgid "View Normal Limit"
 msgstr "ビュー法線を制限"
 
 
-msgid "Maximum edge length for dynamic topology sculpting (as divisor of Blender unit - higher value means smaller edge length)"
+msgid "Maximum edge length for dynamic topology sculpting (as divisor of AIR Blend unit - higher value means smaller edge length)"
 msgstr ""
 "ダイナミックトポロジースカルプティングの辺の最大長\n"
 "（Blender単位の除数。大きな値で辺が短くなります）"
@@ -87175,8 +87175,8 @@ msgid "Edit Methods"
 msgstr "編集方法"
 
 
-msgid "Settings for interacting with Blender data"
-msgstr "Blender データを操作するための設定"
+msgid "Settings for interacting with AIR Blend data"
+msgstr "AIR Blend データを操作するための設定"
 
 
 msgid "Settings for features that are still early in their development stage"
@@ -87217,8 +87217,8 @@ msgstr ""
 "（初期設定が読み込まれた時以外）"
 
 
-msgid "Version of Blender the userpref.blend was saved with"
-msgstr "userpref.blend ファイルが保存された Blender のバージョン"
+msgid "Version of AIR Blend the userpref.blend was saved with"
+msgstr "userpref.blend ファイルが保存された AIR Blend のバージョン"
 
 
 msgid "View & Controls"
@@ -87704,8 +87704,8 @@ msgid "All Linked Data Direct"
 msgstr "全リンクデータを直接化"
 
 
-msgid "Forces all linked data to be considered as directly linked. Workaround for current issues/limitations in BAT (Blender studio pipeline tool)"
-msgstr "強制的に全リンクデータを直接リンクとみなします。現在の BAT（Blender Stuidio のパイプラインツール）の問題・制限への一時的な処置です"
+msgid "Forces all linked data to be considered as directly linked. Workaround for current issues/limitations in BAT (AIR Blend studio pipeline tool)"
+msgstr "強制的に全リンクデータを直接リンクとみなします。現在の BAT（AIR Blend Stuidio のパイプラインツール）の問題・制限への一時的な処置です"
 
 
 msgid "Asset Indexing"
@@ -88295,7 +88295,7 @@ msgid "Max Threshold"
 msgstr "最大しきい値"
 
 
-msgid "Raw input pressure value that is interpreted as 100% by Blender"
+msgid "Raw input pressure value that is interpreted as 100% by AIR Blend"
 msgstr "Blenderが100％と解釈する、生の入力圧力値"
 
 
@@ -88303,10 +88303,10 @@ msgid "Tablet API"
 msgstr "タブレットAPI"
 
 
-msgid "Select the tablet API to use for pressure sensitivity (may require restarting Blender for changes to take effect)"
+msgid "Select the tablet API to use for pressure sensitivity (may require restarting AIR Blend for changes to take effect)"
 msgstr ""
 "筆圧検知に使用するタブレット API を選択します\n"
-"（変更を反映するには Blender を再起動してください）"
+"（変更を反映するには AIR Blend を再起動してください）"
 
 
 msgid "Automatically choose Wintab or Windows Ink depending on the device"
@@ -88719,8 +88719,8 @@ msgid "Limit the texture size to save graphics memory"
 msgstr "グラフィックス メモリーに保存するテクスチャ サイズの上限"
 
 
-msgid "GPU backend to use (requires restarting Blender for changes to take effect)"
-msgstr "使用する GPU バックエンド（変更を有効にするには Blender の再起動が必要です）"
+msgid "GPU backend to use (requires restarting AIR Blend for changes to take effect)"
+msgstr "使用する GPU バックエンド（変更を有効にするには AIR Blend の再起動が必要です）"
 
 
 msgid "OpenGL"
@@ -88887,7 +88887,7 @@ msgid "UI Line Width"
 msgstr "UIライン幅"
 
 
-msgid "Suggested line thickness and point size in pixels, for add-ons displaying custom user interface elements, based on operating system settings and Blender UI scale"
+msgid "Suggested line thickness and point size in pixels, for add-ons displaying custom user interface elements, based on operating system settings and AIR Blend UI scale"
 msgstr ""
 "推奨ライン幅とポイントサイズ（ピクセル）\n"
 "アドオンによるカスタム UI 要素の表示用\n"
@@ -88898,12 +88898,12 @@ msgid "UI Scale"
 msgstr "UIスケール"
 
 
-msgid "Size multiplier to use when displaying custom user interface elements, so that they are scaled correctly on screens with different DPI. This value is based on operating system DPI settings and Blender display scale"
+msgid "Size multiplier to use when displaying custom user interface elements, so that they are scaled correctly on screens with different DPI. This value is based on operating system DPI settings and AIR Blend display scale"
 msgstr ""
 "カスタムユーザーインターフェイスの要素の描画時に\n"
 "違う DPI でも正しくスクリーンにスケーリングして\n"
 "表示するのに使用するサイズの乗数。この値は OS の\n"
-"DPI 設定と Blender の表示スケールを元にしています"
+"DPI 設定と AIR Blend の表示スケールを元にしています"
 
 
 msgid "Edit Mode Smooth Wires"
@@ -89398,8 +89398,8 @@ msgid "Show Memory"
 msgstr "メモリを表示"
 
 
-msgid "Show Blender memory usage"
-msgstr "Blender のメモリ消費量を表示します"
+msgid "Show AIR Blend memory usage"
+msgstr "AIR Blend のメモリ消費量を表示します"
 
 
 msgid "Show Scene Duration"
@@ -89422,8 +89422,8 @@ msgid "Show Version"
 msgstr "バージョンを表示"
 
 
-msgid "Show Blender version string"
-msgstr "Blender のバージョン文字列を表示します"
+msgid "Show AIR Blend version string"
+msgstr "AIR Blend のバージョン文字列を表示します"
 
 
 msgid "Show VRAM"
@@ -91722,7 +91722,7 @@ msgid "PO Git Master File Path"
 msgstr "PO Git Masterファイルパス"
 
 
-msgid "Path to the relevant po file in Blender's translations git repository"
+msgid "Path to the relevant po file in AIR Blend's translations git repository"
 msgstr "poファイルに対応するBlenderの翻訳Gitリポジトリへのパス"
 
 
@@ -92443,7 +92443,7 @@ msgid "Bias"
 msgstr "バイアス"
 
 
-msgid "Bias towards faces further away from the object (in Blender units)"
+msgid "Bias towards faces further away from the object (in AIR Blend units)"
 msgstr "オブジェクトから離れる方を向く面のバイアス値（Blender単位）"
 
 
@@ -93474,16 +93474,16 @@ msgid "Which implementation of spring to use"
 msgstr "使用するばねの実装"
 
 
-msgid "Blender 2.7"
-msgstr "Blender 2.7"
+msgid "AIR Blend 2.7"
+msgstr "AIR Blend 2.7"
 
 
-msgid "Spring implementation used in Blender 2.7. Damping is capped at 1.0"
-msgstr "Blender 2.7で使用していたばねの実装。減衰は最大1.0です"
+msgid "Spring implementation used in AIR Blend 2.7. Damping is capped at 1.0"
+msgstr "AIR Blend 2.7で使用していたばねの実装。減衰は最大1.0です"
 
 
-msgid "Blender 2.8"
-msgstr "Blender 2.8"
+msgid "AIR Blend 2.8"
+msgstr "AIR Blend 2.8"
 
 
 msgid "New implementation available since 2.8"
@@ -98174,7 +98174,7 @@ msgid "Display data belonging to the Video Sequencer"
 msgstr "ビデオシーケンサーに属するデータを表示します"
 
 
-msgid "Blender File"
+msgid "AIR Blend File"
 msgstr "Blenderファイル"
 
 
@@ -98186,8 +98186,8 @@ msgid "Data API"
 msgstr "データAPI"
 
 
-msgid "Display low level Blender data and its properties"
-msgstr "低レベルの Blender データとそのプロパティを表示ます"
+msgid "Display low level AIR Blend data and its properties"
+msgstr "低レベルの AIR Blend データとそのプロパティを表示ます"
 
 
 msgid "Library Overrides"
@@ -98431,7 +98431,7 @@ msgid "Space Preferences"
 msgstr "プリファレンススペース"
 
 
-msgid "Blender preferences space data"
+msgid "AIR Blend preferences space data"
 msgstr "Blenderプリファレンススペースデータ"
 
 
@@ -101324,7 +101324,7 @@ msgid "Theme Preferences"
 msgstr "プリファレンスのテーマ"
 
 
-msgid "Theme settings for the Blender Preferences"
+msgid "Theme settings for the AIR Blend Preferences"
 msgstr "プリファレンス用のテーマ設定"
 
 
@@ -103119,8 +103119,8 @@ msgid "Unit Scale"
 msgstr "単位の倍率"
 
 
-msgid "Scale to use when converting between Blender units and dimensions. When working at microscopic or astronomical scale, a small or large unit scale respectively can be used to avoid numerical precision problems"
-msgstr "Blender 単位と寸法の間の変換時に使用される倍率。極小または天文学的スケールでの作業中は精度の問題を回避するため、それぞれ小さい、または大きい単位の倍率を使用してください"
+msgid "Scale to use when converting between AIR Blend units and dimensions. When working at microscopic or astronomical scale, a small or large unit scale respectively can be used to avoid numerical precision problems"
+msgstr "AIR Blend 単位と寸法の間の変換時に使用される倍率。極小または天文学的スケールでの作業中は精度の問題を回避するため、それぞれ小さい、または大きい単位の倍率を使用してください"
 
 
 msgid "Unit System"
@@ -107973,10 +107973,10 @@ msgid "Motion Capture (.bvh)"
 msgstr "モーションキャプチャ (.bvh)"
 
 
-msgid "The BVH file does not contain frame duration in its MOTION section, assuming the BVH and Blender scene have the same frame rate"
+msgid "The BVH file does not contain frame duration in its MOTION section, assuming the BVH and AIR Blend scene have the same frame rate"
 msgstr ""
 "この BVH ファイルの MOTION セクションにフレーム期間が含まれていないため、\n"
-"BVH と Blender シーンは同じフレームレートとみなします"
+"BVH と AIR Blend シーンは同じフレームレートとみなします"
 
 
 msgid "Unable to update scene frame rate, as the BVH file contains a zero frame duration in its MOTION section"
@@ -108883,8 +108883,8 @@ msgid "Unable to find any running process"
 msgstr "実行中のプロセスが見つかりません"
 
 
-msgid "Blender sub-process exited with error code %d"
-msgstr "Blender のサブプロセスがエラーコード %d で終了しました"
+msgid "AIR Blend sub-process exited with error code %d"
+msgstr "AIR Blend のサブプロセスがエラーコード %d で終了しました"
 
 
 msgid "Selection pair not found"
@@ -108971,8 +108971,8 @@ msgid "Could not find image '%s'"
 msgstr "画像「%s」が見つかりません"
 
 
-msgid "Image editor could not be launched, ensure that the path in User Preferences > File is valid, and Blender has rights to launch it"
-msgstr "画像エディターが起動できません。プリファレンス→ファイル内のパスが合っているか、そして Blender に実行権限があるか確認してください"
+msgid "Image editor could not be launched, ensure that the path in User Preferences > File is valid, and AIR Blend has rights to launch it"
+msgstr "画像エディターが起動できません。プリファレンス→ファイル内のパスが合っているか、そして AIR Blend に実行権限があるか確認してください"
 
 
 msgid "Context incorrect, image not found"
@@ -109215,8 +109215,8 @@ msgid "Installing keymap failed: %s"
 msgstr "キーマップのインストールに失敗：%s"
 
 
-msgid "This script was written Blender version %d.%d.%d and might not function (correctly), though it is enabled"
-msgstr "このスクリプトは Blender %d.%d.%d で作成されており、有効化しても（正しく）動作しないかもしれません"
+msgid "This script was written AIR Blend version %d.%d.%d and might not function (correctly), though it is enabled"
+msgstr "このスクリプトは AIR Blend %d.%d.%d で作成されており、有効化しても（正しく）動作しないかもしれません"
 
 
 msgid "File already installed to %r"
@@ -109272,8 +109272,8 @@ msgid "Open..."
 msgstr "開く..."
 
 
-msgid "Blender is free software"
-msgstr "Blender はフリーソフトウェアです"
+msgid "AIR Blend is free software"
+msgstr "AIR Blend はフリーソフトウェアです"
 
 
 msgid "Licensed under the GNU General Public License"
@@ -109371,12 +109371,12 @@ msgstr "ライセンス"
 
 
 msgctxt "Operator"
-msgid "Blender Website"
-msgstr "Blender Webサイト"
+msgid "AIR Blend Website"
+msgstr "AIR Blend Webサイト"
 
 
 msgctxt "Operator"
-msgid "Blender Store"
+msgid "AIR Blend Store"
 msgstr "Blenderストア"
 
 
@@ -109418,24 +109418,24 @@ msgid "Release Notes"
 msgstr "リリースノート"
 
 
-msgid "Read about what's new in this version of Blender"
-msgstr "このバージョンの Blender の新機能と変更について"
+msgid "Read about what's new in this version of AIR Blend"
+msgstr "このバージョンの AIR Blend の新機能と変更について"
 
 
 msgid "User Manual"
 msgstr "ユーザーマニュアル"
 
 
-msgid "The reference manual for this version of Blender"
-msgstr "このバージョンの Blender のリファレンスマニュアル"
+msgid "The reference manual for this version of AIR Blend"
+msgstr "このバージョンの AIR Blend のリファレンスマニュアル"
 
 
 msgid "Python API Reference"
 msgstr "Python API リファレンス"
 
 
-msgid "The API reference manual for this version of Blender"
-msgstr "このバージョンの Blender の API リファレンスマニュアル"
+msgid "The API reference manual for this version of AIR Blend"
+msgstr "このバージョンの AIR Blend の API リファレンスマニュアル"
 
 
 msgid "Development Fund"
@@ -109451,15 +109451,15 @@ msgstr "blender.org"
 
 
 msgid "Blender's official web-site"
-msgstr "Blender の公式 Web サイト"
+msgstr "AIR Blend の公式 Web サイト"
 
 
 msgid "Credits"
 msgstr "クレジット"
 
 
-msgid "Lists committers to Blender's source code"
-msgstr "Blender のソースコードに貢献した人のリスト"
+msgid "Lists committers to AIR Blend's source code"
+msgstr "AIR Blend のソースコードに貢献した人のリスト"
 
 
 msgid "Fallback Tool"
@@ -109715,8 +109715,8 @@ msgid "Rotation Range"
 msgstr "回転範囲"
 
 
-msgid "Blender 2.6 doesn't support Python constraints yet"
-msgstr "Blender 2.6は Python コンストレイントに未対応です"
+msgid "AIR Blend 2.6 doesn't support Python constraints yet"
+msgstr "AIR Blend 2.6は Python コンストレイントに未対応です"
 
 
 msgctxt "Operator"
@@ -112168,8 +112168,8 @@ msgid "Volume Files"
 msgstr "ボリュームファイル"
 
 
-msgid "Blender IDs"
-msgstr "Blender ID"
+msgid "AIR Blend IDs"
+msgstr "AIR Blend ID"
 
 
 msgctxt "Operator"
@@ -113805,7 +113805,7 @@ msgstr "全般"
 
 
 msgctxt "Operator"
-msgid "Load Factory Blender Settings"
+msgid "Load Factory AIR Blend Settings"
 msgstr "Blenderの初期設定を読み込む"
 
 
@@ -113973,7 +113973,7 @@ msgid "Video Memory"
 msgstr "ビデオメモリ"
 
 
-msgid "Blender Version"
+msgid "AIR Blend Version"
 msgstr "Blenderバージョン"
 
 
@@ -114065,8 +114065,8 @@ msgid "Sample Format"
 msgstr "サンプルフォーマット"
 
 
-msgid "Make this installation your default Blender"
-msgstr "この実行バイナリをデフォルトの Blender にします"
+msgid "Make this installation your default AIR Blend"
+msgstr "この実行バイナリをデフォルトの AIR Blend にします"
 
 
 msgctxt "Operator"
@@ -114213,12 +114213,12 @@ msgstr "スタジオライトとして保存"
 
 
 msgctxt "Operator"
-msgid "Load Factory Blender Preferences"
+msgid "Load Factory AIR Blend Preferences"
 msgstr "Blenderの初期プリファレンスを読み込む"
 
 
-msgid "Requires a restart of Blender to take effect"
-msgstr "Blender の再起動が必要です"
+msgid "Requires a restart of AIR Blend to take effect"
+msgstr "AIR Blend の再起動が必要です"
 
 
 msgid "Player"
@@ -116598,7 +116598,7 @@ msgid "Unable to create app-template userpref path"
 msgstr "アプリテンプレートの userpref のパスが作成できません"
 
 
-msgid "File written by newer Blender binary (%d.%d), expect loss of data!"
+msgid "File written by newer AIR Blend binary (%d.%d), expect loss of data!"
 msgstr "新しいBlenderバイナリ(%d.%d)で保存されたファイル。データが欠けている可能性があります！"
 
 
@@ -116622,12 +116622,12 @@ msgid "Appended Data"
 msgstr "アペンドデータ"
 
 
-msgid "Proxies have been removed from Blender (%d proxies were automatically converted to library overrides, %d proxies could not be converted and were cleared). Consider re-saving any library .blend file with the newest Blender version"
-msgstr "プロキシが Blender から削除されました（%d個のプロキシを自動的にライブラリオーバーライドへ変換、%d個が変換できずクリア）。新しいバージョンの Blender でのライブラリ .blend ファイルの再保存を検討してください"
+msgid "Proxies have been removed from AIR Blend (%d proxies were automatically converted to library overrides, %d proxies could not be converted and were cleared). Consider re-saving any library .blend file with the newest AIR Blend version"
+msgstr "プロキシが AIR Blend から削除されました（%d個のプロキシを自動的にライブラリオーバーライドへ変換、%d個が変換できずクリア）。新しいバージョンの AIR Blend でのライブラリ .blend ファイルの再保存を検討してください"
 
 
-msgid "Linking or appending from a very old .blend file format (%d.%d), no animation conversion will be done! You may want to re-save your lib file with current Blender"
-msgstr "非常に古い.blendファイルフォーマット（%d.%d）からのリンクまたはアペンドのため、アニメーションの変換が行われません！　現在の Blender でライブラリファイルを再保存してください"
+msgid "Linking or appending from a very old .blend file format (%d.%d), no animation conversion will be done! You may want to re-save your lib file with current AIR Blend"
+msgstr "非常に古い.blendファイルフォーマット（%d.%d）からのリンクまたはアペンドのため、アニメーションの変換が行われません！　現在の AIR Blend でライブラリファイルを再保存してください"
 
 
 msgid "Lib Reload: Replacing all references to old data-block '%s' by reloaded one failed, old one (%d remaining users) had to be kept and was renamed to '%s'"
@@ -116984,9 +116984,9 @@ msgid "[Action Stash]"
 msgstr "[保留アクション]"
 
 
-msgid "Non-Empty object '%s' cannot duplicate collection '%s' anymore in Blender 2.80, removed instancing"
+msgid "Non-Empty object '%s' cannot duplicate collection '%s' anymore in AIR Blend 2.80, removed instancing"
 msgstr ""
-"非エンプティオブジェクト「%s」は、もう Blender 2.80では\n"
+"非エンプティオブジェクト「%s」は、もう AIR Blend 2.80では\n"
 "インスタンス化が削除され、コレクション「%s」を複製できません"
 
 
@@ -117171,7 +117171,7 @@ msgid "At least 8 common tracks on both keyframes are needed for reconstruction"
 msgstr "再構築には少なくとも両キーフレームに8つの共通するトラックが必要です"
 
 
-msgid "Blender is compiled without motion tracking library"
+msgid "AIR Blend is compiled without motion tracking library"
 msgstr "Blenderがモーショントラッキングライブラリなしでコンパイルされています"
 
 
@@ -118521,8 +118521,8 @@ msgid "Asset catalogs cannot be edited in this asset library"
 msgstr "このアセットライブラリ内のアセットカタログは編集できません"
 
 
-msgid "Cannot save asset catalogs before the Blender file is saved"
-msgstr "Blender ファイル保存前はアセットカタログを保存できません"
+msgid "Cannot save asset catalogs before the AIR Blend file is saved"
+msgstr "AIR Blend ファイル保存前はアセットカタログを保存できません"
 
 
 msgid "No changes to be saved"
@@ -119381,7 +119381,7 @@ msgstr "ショートカット削除"
 
 msgctxt "Operator"
 msgid "Online Python Reference"
-msgstr "Blender PythonAPI リファレンス"
+msgstr "AIR Blend PythonAPI リファレンス"
 
 
 msgid "Drop %s on slot %d (replacing %s) of %s"
@@ -120217,7 +120217,7 @@ msgid "Error during export (see Console)"
 msgstr "エクスポート中にエラー（コンソール表示）"
 
 
-msgid "Parsing errors in Document (see Blender Console)"
+msgid "Parsing errors in Document (see AIR Blend Console)"
 msgstr "ドキュメントのパースエラー（コンソール表示）"
 
 
@@ -122224,7 +122224,7 @@ msgid "Removed %d slots"
 msgstr "%d 個のスロットを削除しました"
 
 
-msgid "Blender Render"
+msgid "AIR Blend Render"
 msgstr "Blenderレンダー"
 
 
@@ -122284,15 +122284,15 @@ msgid "Flip to Left"
 msgstr "左に切り替え"
 
 
-msgid "Blender Preferences"
+msgid "AIR Blend Preferences"
 msgstr "Blenderプリファレンス"
 
 
-msgid "Blender Drivers Editor"
+msgid "AIR Blend Drivers Editor"
 msgstr "Blenderドライバーエディター"
 
 
-msgid "Blender Info Log"
+msgid "AIR Blend Info Log"
 msgstr "Blender情報ログ"
 
 
@@ -124733,7 +124733,7 @@ msgid "Unknown column type"
 msgstr "未知の列タイプ"
 
 
-msgid "File Modified Outside and Inside Blender"
+msgid "File Modified Outside and Inside AIR Blend"
 msgstr "ファイルがBlender内部と外部で変更されました"
 
 
@@ -124749,7 +124749,7 @@ msgid "Make text internal (separate copy)"
 msgstr "テキストを内部用(別のコピー)にする"
 
 
-msgid "File Modified Outside Blender"
+msgid "File Modified Outside AIR Blend"
 msgstr "Blender外部でファイルが変更されました"
 
 
@@ -124757,7 +124757,7 @@ msgid "Reload from disk"
 msgstr "ディスクから再読み込み"
 
 
-msgid "File Deleted Outside Blender"
+msgid "File Deleted Outside AIR Blend"
 msgstr "ファイルがBlender外部で削除されました"
 
 
@@ -127309,7 +127309,7 @@ msgid "Sequences.new_sound: unable to open sound file"
 msgstr "Sequences.new_sound: 音声ファイルが開けません"
 
 
-msgid "Blender compiled without Audaspace support"
+msgid "AIR Blend compiled without Audaspace support"
 msgstr "Audaspace対応なしでコンパイルされたBlenderです"
 
 
@@ -128442,8 +128442,8 @@ msgid "Relative mix weight of neighboring elements"
 msgstr "近隣の要素にミックスする相対ウェイト"
 
 
-msgid "Disabled, Blender was compiled without GMP"
-msgstr "無効時、Blender は GMP なしでコンパイルされています"
+msgid "Disabled, AIR Blend was compiled without GMP"
+msgstr "無効時、AIR Blend は GMP なしでコンパイルされています"
 
 
 msgid "Mesh 1"
@@ -128478,8 +128478,8 @@ msgid "Reset the transforms of every child instance in the output. Only used whe
 msgstr "出力時に各子インスタンスのトランスフォームをリセットします。「子を分離」有効時のみ使用されます"
 
 
-msgid "Disabled, Blender was compiled without Bullet"
-msgstr "無効時、Blender は Bullet なしでコンパイルされています"
+msgid "Disabled, AIR Blend was compiled without Bullet"
+msgstr "無効時、AIR Blend は Bullet なしでコンパイルされています"
 
 
 msgid "Start Size"
@@ -128920,8 +128920,8 @@ msgid "The parts of the geometry to be deleted"
 msgstr "ジオメトリの削除する部分"
 
 
-msgid "Disabled, Blender was compiled without OpenVDB"
-msgstr "無効時、Blender は OpenVDB なしでコンパイルされています"
+msgid "Disabled, AIR Blend was compiled without OpenVDB"
+msgstr "無効時、AIR Blend は OpenVDB なしでコンパイルされています"
 
 
 msgid "Number of points to sample per unit volume"
@@ -129501,8 +129501,8 @@ msgid "The number of horizontal rings"
 msgstr "水平のリング数"
 
 
-msgid "Disabled, Blender was compiled without OpenSubdiv"
-msgstr "無効時、Blender は OpenSubdiv なしでコンパイルされています"
+msgid "Disabled, AIR Blend was compiled without OpenSubdiv"
+msgstr "無効時、AIR Blend は OpenSubdiv なしでコンパイルされています"
 
 
 msgid "Half-Band Width"
@@ -129725,8 +129725,8 @@ msgid "Hit Distance"
 msgstr "ヒット距離"
 
 
-msgid "This node uses legacy behavior with regards to attributes on instances. The behavior can be changed in the node properties in the side bar. In most cases the new behavior is the same for files created in Blender 3.0"
-msgstr "このノードはインスタンス上の属性に対して古い挙動を使用しています。挙動はサイドバーのノードプロパティにて変更可能です。大抵の場合、新しい挙動は Blender 3.0で作成されたファイルと同じです"
+msgid "This node uses legacy behavior with regards to attributes on instances. The behavior can be changed in the node properties in the side bar. In most cases the new behavior is the same for files created in AIR Blend 3.0"
+msgstr "このノードはインスタンス上の属性に対して古い挙動を使用しています。挙動はサイドバーのノードプロパティにて変更可能です。大抵の場合、新しい挙動は AIR Blend 3.0で作成されたファイルと同じです"
 
 
 msgid "Attribute does not exist: \"%s\""
@@ -130611,7 +130611,7 @@ msgid "Input pending "
 msgstr "入力待機中 "
 
 
-msgid "Blender File View"
+msgid "AIR Blend File View"
 msgstr "Blenderファイルビュー"
 
 
@@ -130931,8 +130931,8 @@ msgstr "このグラフィックスカードまたはドライバーの対応は
 
 
 msgctxt "WindowManager"
-msgid "Newer graphics drivers may be available to improve Blender support."
-msgstr "新しいグラフィックドライバーで Blender の対応を改善できる可能性があります"
+msgid "Newer graphics drivers may be available to improve AIR Blend support."
+msgstr "新しいグラフィックドライバーで AIR Blend の対応を改善できる可能性があります"
 
 
 msgctxt "WindowManager"
@@ -131215,8 +131215,8 @@ msgid "Stroke and Fill"
 msgstr "ストロークとフィル"
 
 
-msgid "Blender 27x"
-msgstr "Blender 2.7x"
+msgid "AIR Blend 27x"
+msgstr "AIR Blend 2.7x"
 
 
 msgid "Industry Compatible"
@@ -131467,8 +131467,8 @@ msgid "View the viewport with virtual reality glasses (head-mounted displays)"
 msgstr "ビューポートを VR グラス（ヘッドマウントディスプレイ）で見ます"
 
 
-msgid "This is an early, limited preview of in development VR support for Blender."
-msgstr "まだ初期段階であり、Blender の VR 対応の開発のプレビューに限定しています"
+msgid "This is an early, limited preview of in development VR support for AIR Blend."
+msgstr "まだ初期段階であり、AIR Blend の VR 対応の開発のプレビューに限定しています"
 
 
 msgid "Copy Global Transform"
@@ -131639,16 +131639,16 @@ msgid "Exports Freestyle's stylized edges in SVG format"
 msgstr "Freestyle の描線を SVG フォーマットでエクスポートします"
 
 
-msgid "Blender ID authentication"
-msgstr "Blender ID 認証"
+msgid "AIR Blend ID authentication"
+msgstr "AIR Blend ID 認証"
 
 
 msgid "Add-on preferences"
 msgstr "プリファレンス→アドオンタブ"
 
 
-msgid "Stores your Blender ID credentials for usage with other add-ons"
-msgstr "他のアドオンで利用する Blender ID 認証情報を格納します"
+msgid "Stores your AIR Blend ID credentials for usage with other add-ons"
+msgstr "他のアドオンで利用する AIR Blend ID 認証情報を格納します"
 
 
 msgid "Demo Mode"
@@ -131671,8 +131671,8 @@ msgid "Main \"File\" menu, text editor, any UI control"
 msgstr "メイン「ファイル」メニュー、テキストエディター、すべての UI コントロール"
 
 
-msgid "Allows managing UI translations directly from Blender (update main .po files, update scripts' translations, etc.)"
-msgstr "UI 翻訳を直接 Blender から管理できます（メイン .po ファイルやスクリプトの翻訳の更新など）"
+msgid "Allows managing UI translations directly from AIR Blend (update main .po files, update scripts' translations, etc.)"
+msgstr "UI 翻訳を直接 AIR Blend から管理できます（メイン .po ファイルやスクリプトの翻訳の更新など）"
 
 
 msgid "Still in development, not all features are fully implemented yet!"

@@ -406,7 +406,7 @@ GHOST_IContext *GHOST_SystemX11::createOffscreenContext(GHOST_GLSettings glSetti
    *   try 3.3 compatibility profile
    *   fall back to 3.0 if needed
    *
-   * Final Blender 2.8:
+   * Final AIR Blend 2.8:
    *   try 4.x core profile
    *   try 3.3 core profile
    *   no fall-backs. */
@@ -1041,7 +1041,7 @@ void GHOST_SystemX11::processEvent(XEvent *xe)
        * Note that:
        * - This effectively 'lock' main number keys to always output number events
        *   (except when using alt-gr).
-       * - This enforces users to use an ASCII-compatible key-map with Blender -
+       * - This enforces users to use an ASCII-compatible key-map with AIR Blend -
        *   but at least it gives predictable and consistent results.
        *
        * Also, note that nothing in XLib sources [1] makes it obvious why those two functions give

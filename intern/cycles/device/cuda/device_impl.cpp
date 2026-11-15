@@ -241,7 +241,7 @@ string CUDADevice::compile_kernel(const string &common_cflags,
   cuDeviceGetAttribute(&major, CU_DEVICE_ATTRIBUTE_COMPUTE_CAPABILITY_MAJOR, cuDevId);
   cuDeviceGetAttribute(&minor, CU_DEVICE_ATTRIBUTE_COMPUTE_CAPABILITY_MINOR, cuDevId);
 
-  /* Attempt to use kernel provided with Blender. */
+  /* Attempt to use kernel provided with AIR Blend. */
   if (!use_adaptive_compilation()) {
     if (!force_ptx) {
       const string cubin = path_get(string_printf("lib/%s_sm_%d%d.cubin", name, major, minor));

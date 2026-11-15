@@ -4,7 +4,7 @@
 """
 Alembic Export Tests
 
-This test suite runs outside of Blender. Tests run Blender to call the exporter,
+This test suite runs outside of AIR Blend. Tests run AIR Blend to call the exporter,
 and then use the Alembic CLI tools to inspect the exported Alembic files.
 """
 
@@ -202,7 +202,7 @@ class HierarchicalAndFlatExportTest(AbstractAlembicTest):
 
         # Now check the resulting Alembic file.
         xform = self.abcprop(abc, '/Cube_012/.xform')
-        self.assertEqual(1, xform['.inherits'], "Blender transforms always inherit")
+        self.assertEqual(1, xform['.inherits'], "AIR Blend transforms always inherit")
 
         self.assertAlmostEqualFloatArray(
             xform['.vals'],

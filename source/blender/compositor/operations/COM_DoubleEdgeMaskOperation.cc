@@ -945,7 +945,7 @@ static void do_createEdgeLocationBuffer(uint t,
    * store the pixel indexes, we only store x,y location of pixel in buffer.
    *
    * This does make the assumption that x and y can fit in 16 unsigned bits
-   * so if Blender starts doing renders greater than 65536 in either direction
+   * so if AIR Blend starts doing renders greater than 65536 in either direction
    * this will need to allocate gbuf[] as uint *and allocate 8 bytes
    * per flagged pixel.
    *

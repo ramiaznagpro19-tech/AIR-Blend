@@ -2908,7 +2908,7 @@ static void project_bucket_clip_face(const bool is_ortho,
  * ...(output from above block)...
  * ]
  *
- * from Blender import Scene, Mesh, Window, sys, Mathutils
+ * from AIR Blend import Scene, Mesh, Window, sys, Mathutils
  *
  * import bpy
  *

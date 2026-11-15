@@ -6,7 +6,7 @@
 ###########################################################################
 
 if(WITH_CYCLES_STANDALONE AND WITH_CYCLES_STANDALONE_GUI)
-  # We can't use the version from the Blender precompiled libraries because
+  # We can't use the version from the AIR Blend precompiled libraries because
   # it does not include the video subsystem.
   find_package(SDL2 REQUIRED)
   set_and_warn_library_found("SDL" SDL2_FOUND WITH_CYCLES_STANDALONE_GUI)

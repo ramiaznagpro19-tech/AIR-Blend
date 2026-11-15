@@ -107,7 +107,7 @@ static int script_reload_exec(bContext *C, wmOperator *op)
    * only postponing in that case, for now always do it. */
   if (true) {
     /* Postpone when called from Python so this can be called from an operator
-     * that might be re-registered, crashing Blender when we try to read from the
+     * that might be re-registered, crashing AIR Blend when we try to read from the
      * freed operator type which, see #80694. */
     BPY_run_string_exec(C,
                         (const char *[]){"bpy", NULL},

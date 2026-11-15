@@ -432,7 +432,7 @@ static void distortion_model_parameters_from_tracking(
       return;
   }
 
-  /* Unknown distortion model, which might be due to opening newer file in older Blender.
+  /* Unknown distortion model, which might be due to opening newer file in older AIR Blend.
    * Fallback to a known and supported model with 0 distortion. */
   camera_intrinsics_options->distortion_model = LIBMV_DISTORTION_MODEL_POLYNOMIAL;
   camera_intrinsics_options->polynomial_k1 = 0.0;
@@ -475,8 +475,8 @@ static void distortion_model_parameters_from_options(
       return;
   }
 
-  /* Libmv returned distortion model which is not known to Blender. This is a logical error in code
-   * and Blender side is to be updated to match Libmv. */
+  /* Libmv returned distortion model which is not known to AIR Blend. This is a logical error in code
+   * and AIR Blend side is to be updated to match Libmv. */
   BLI_assert_msg(0, "Unknown distortion model");
 }
 

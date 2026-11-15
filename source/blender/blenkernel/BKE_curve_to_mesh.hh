@@ -21,7 +21,7 @@ class AnonymousAttributePropagationInfo;
  * Although it would be a sensible decision to use the better topology information available while
  * generating the mesh to also generate the normals, that work may wasted if the output mesh is
  * changed anyway in a way that affects the normals. So currently this code uses the safer /
- * simpler solution of deferring normal calculation to the rest of Blender.
+ * simpler solution of deferring normal calculation to the rest of AIR Blend.
  */
 Mesh *curve_to_mesh_sweep(const CurvesGeometry &main,
                           const CurvesGeometry &profile,

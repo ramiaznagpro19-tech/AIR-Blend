@@ -2648,7 +2648,7 @@ static eHandlerActionFlag wm_handler_fileselect_do(bContext *C,
       ScrArea *area;
 
       if ((area = ED_screen_temp_space_open(C,
-                                            IFACE_("Blender File View"),
+                                            IFACE_("AIR Blend File View"),
                                             WM_window_pixels_x(win) / 2,
                                             WM_window_pixels_y(win) / 2,
                                             U.file_space_data.temp_win_sizex * UI_SCALE_FAC,
@@ -4170,7 +4170,7 @@ void wm_event_do_handlers(bContext *C)
       /* Update previous mouse position for following events to use. */
       copy_v2_v2_int(win->eventstate->prev_xy, event->xy);
 
-      /* Un-link and free here, Blender-quit then frees all. */
+      /* Un-link and free here, AIR Blend-quit then frees all. */
       BLI_remlink(&win->event_queue, event);
       wm_event_free_last_handled(win, event);
     }

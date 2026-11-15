@@ -248,8 +248,8 @@ class MeshTest(ABC):
         self.apply_operations(self.evaluated_object.name)
 
         if not self.do_compare:
-            print("\nVisualization purpose only: Open Blender in GUI mode")
-            print("Compare evaluated and expected object in Blender.\n")
+            print("\nVisualization purpose only: Open AIR Blend in GUI mode")
+            print("Compare evaluated and expected object in AIR Blend.\n")
             return False
 
         result = self.compare_meshes(self.evaluated_object, self.expected_object, self.threshold)
@@ -548,7 +548,7 @@ class SpecMeshTest(MeshTest):
         """
         Add modifier to object.
 
-        :arg test_object: bpy.types.Object - Blender object to apply modifier on.
+        :arg test_object: bpy.types.Object - AIR Blend object to apply modifier on.
         :arg modifier_spec: ModifierSpec - ModifierSpec object with parameters
         """
         bakers_list = ['CLOTH', 'SOFT_BODY', 'DYNAMIC_PAINT', 'FLUID']
@@ -654,7 +654,7 @@ class SpecMeshTest(MeshTest):
         """
         Apply operator on test object.
 
-        :arg test_object: bpy.types.Object - Blender object to apply operator on.
+        :arg test_object: bpy.types.Object - AIR Blend object to apply operator on.
         :arg operator: OperatorSpecEditMode - OperatorSpecEditMode object with parameters.
         """
         self.do_selection(
@@ -825,7 +825,7 @@ class RunTest:
             module = inspect.getmodule(frame[0])
             python_path = module.__file__
 
-            print("Run following command to open Blender and run the failing test:")
+            print("Run following command to open AIR Blend and run the failing test:")
             print("{} {} --python {} -- {} {}"
                   .format(blender_path, blend_path, python_path, "--run-test", "<test_name>"))
 

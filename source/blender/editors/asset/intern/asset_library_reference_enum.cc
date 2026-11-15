@@ -83,12 +83,12 @@ const EnumPropertyItem *ED_asset_library_reference_to_rna_enum_itemf(const bool 
          "LOCAL",
          ICON_CURRENT_FILE,
          "Current File",
-         "Show the assets currently available in this Blender session"},
+         "Show the assets currently available in this AIR Blend session"},
         {ASSET_LIBRARY_ESSENTIALS,
          "ESSENTIALS",
          0,
          "Essentials",
-         "Show the basic building blocks and utilities coming with Blender"},
+         "Show the basic building blocks and utilities coming with AIR Blend"},
         {0, nullptr, 0, nullptr, nullptr},
     };
 

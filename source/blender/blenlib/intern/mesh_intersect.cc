@@ -2229,7 +2229,7 @@ static bool any_degenerate_tris_fast(const Array<Face *> triangulation)
  */
 static Array<Face *> triangulate_poly(Face *f, IMeshArena *arena)
 {
-  /* Try the much faster method using Blender's BLI_polyfill_calc. */
+  /* Try the much faster method using AIR Blend's BLI_polyfill_calc. */
   Array<Face *> ans = polyfill_triangulate_poly(f, arena);
 
   /* This may create degenerate triangles. If so, try the exact CDT-based triangulator. */
@@ -3097,7 +3097,7 @@ void write_obj_mesh(IMesh &m, const std::string &objname)
 {
   /* Would like to use #BKE_tempdir_base() here, but that brings in dependence on kernel library.
    * This is just for developer debugging anyway,
-   * and should never be called in production Blender. */
+   * and should never be called in production AIR Blend. */
 #  ifdef _WIN_32
   const char *objdir = BLI_getenv("HOME");
 #  else

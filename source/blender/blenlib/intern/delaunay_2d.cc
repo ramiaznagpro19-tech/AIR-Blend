@@ -71,7 +71,7 @@ template<> double math_to_double<double>(const double v)
  * which contain integers that keep track of which input verts, edges,
  * and faces, respectively, that the element was derived from.
  *
- * While this could be cleaned up some, it is usable by other routines in Blender
+ * While this could be cleaned up some, it is usable by other routines in AIR Blend
  * that need to keep track of a 2D arrangement, with topology.
  */
 template<typename Arith_t> struct CDTVert;
@@ -477,7 +477,7 @@ template<typename T> void cdt_draw(const std::string &label, const CDTArrangemen
   static bool append = false; /* Will be set to true after first call. */
 
 /* Would like to use #BKE_tempdir_base() here, but that brings in dependence on kernel library.
- * This is just for developer debugging anyway, and should never be called in production Blender.
+ * This is just for developer debugging anyway, and should never be called in production AIR Blend.
  */
 #  ifdef _WIN32
   const char *drawfile = "./cdt_debug_draw.html";

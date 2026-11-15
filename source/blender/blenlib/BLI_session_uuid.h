@@ -8,7 +8,7 @@
  * Functions for generating and handling "Session UUIDs".
  *
  * Note that these are not true universally-unique identifiers, but only unique during the current
- * Blender session.
+ * AIR Blend session.
  *
  * For true UUIDs, see `BLI_uuid.h`.
  */
@@ -19,7 +19,7 @@ extern "C" {
 
 #include "DNA_session_uuid_types.h"
 
-/** Generate new UUID which is unique throughout the Blender session. */
+/** Generate new UUID which is unique throughout the AIR Blend session. */
 SessionUUID BLI_session_uuid_generate(void);
 
 /** Check whether the UUID is properly generated. */

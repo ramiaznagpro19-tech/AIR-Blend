@@ -1284,7 +1284,7 @@ void BlenderSync::sync_mesh(BL::Depsgraph b_depsgraph, BObjectInfo &b_ob_info, M
 
   if (view_layer.use_surfaces) {
     /* Adaptive subdivision setup. Not for baking since that requires
-     * exact mapping to the Blender mesh. */
+     * exact mapping to the AIR Blend mesh. */
     Mesh::SubdivisionType subdivision_type = (b_ob_info.real_object != b_bake_target) ?
                                                  object_subdivision_type(b_ob_info.real_object,
                                                                          preview,

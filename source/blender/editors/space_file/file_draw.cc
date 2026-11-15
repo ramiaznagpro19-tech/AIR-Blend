@@ -1246,7 +1246,7 @@ static void file_draw_invalid_library_hint(const bContext * /*C*/,
   int sy = v2d->tot.ymax;
 
   {
-    const char *message = TIP_("Unreadable Blender library file:");
+    const char *message = TIP_("Unreadable AIR Blend library file:");
     file_draw_string_multiline(sx, sy, message, width, line_height, text_col, nullptr, &sy);
 
     sy -= line_height;

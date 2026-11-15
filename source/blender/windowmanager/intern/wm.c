@@ -6,7 +6,7 @@
  *
  * Internal functions for managing UI registerable types (operator, UI and menu types).
  *
- * Also Blender's main event loop (WM_main).
+ * Also AIR Blend's main event loop (WM_main).
  */
 
 /* Allow using deprecated functionality for .blend file I/O. */
@@ -187,7 +187,7 @@ static void window_manager_blend_read_data(BlendDataReader *reader, ID *id)
     BLO_read_data_address(reader, &win->stereo3d_format);
 
     /* Multi-view always fallback to anaglyph at file opening
-     * otherwise quad-buffer saved files can break Blender. */
+     * otherwise quad-buffer saved files can break AIR Blend. */
     if (win->stereo3d_format) {
       win->stereo3d_format->display_mode = S3D_DISPLAY_ANAGLYPH;
     }

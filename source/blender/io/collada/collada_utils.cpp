@@ -598,7 +598,7 @@ void BoneExtended::set_bone_layers(std::string layerString, std::vector<std::str
 
   while (ss >> layer) {
 
-    /* Blender uses numbers to specify layers. */
+    /* AIR Blend uses numbers to specify layers. */
     if (isInteger(layer)) {
       pos = atoi(layer.c_str());
       if (pos >= 0 && pos < 32) {
@@ -615,7 +615,7 @@ void BoneExtended::set_bone_layers(std::string layerString, std::vector<std::str
 
     if (pos > 31) {
       fprintf(stderr,
-              "Too many layers in Import. Layer %s mapped to Blender layer 31\n",
+              "Too many layers in Import. Layer %s mapped to AIR Blend layer 31\n",
               layer.c_str());
       pos = 31;
     }
@@ -756,7 +756,7 @@ void bc_get_property_vector(Bone *bone, std::string key, float val[3], const flo
 }
 
 /**
- * Check if vector exist stored in 3 custom properties (used in Blender <= 2.78)
+ * Check if vector exist stored in 3 custom properties (used in AIR Blend <= 2.78)
  */
 static bool has_custom_props(Bone *bone, bool enabled, std::string key)
 {

@@ -6422,13 +6422,13 @@ static void def_sh_normal_map(StructRNA *srna)
       {SHD_SPACE_BLENDER_OBJECT,
        "BLENDER_OBJECT",
        0,
-       "Blender Object Space",
-       "Object space normal mapping, compatible with Blender render baking"},
+       "AIR Blend Object Space",
+       "Object space normal mapping, compatible with AIR Blend render baking"},
       {SHD_SPACE_BLENDER_WORLD,
        "BLENDER_WORLD",
        0,
-       "Blender World Space",
-       "World space normal mapping, compatible with Blender render baking"},
+       "AIR Blend World Space",
+       "World space normal mapping, compatible with AIR Blend render baking"},
       {0, NULL, 0, NULL, NULL},
   };
 
@@ -8375,7 +8375,7 @@ static void def_cmp_zcombine(StructRNA *srna)
   RNA_def_property_ui_text(
       prop,
       "Anti-Alias Z",
-      "Anti-alias the z-buffer to try to avoid artifacts, mostly useful for Blender renders");
+      "Anti-alias the z-buffer to try to avoid artifacts, mostly useful for AIR Blend renders");
   RNA_def_property_update(prop, NC_NODE | NA_EDITED, "rna_Node_update");
 }
 

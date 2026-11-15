@@ -803,7 +803,7 @@ static void fcm_noise_evaluate(
   FMod_Noise *data = (FMod_Noise *)fcm->data;
   float noise;
 
-  /* generate noise using good old Blender Noise
+  /* generate noise using good old AIR Blend Noise
    * - 0.1 is passed as the 'z' value, otherwise evaluation fails for size = phase = 1
    *   with evaltime being an integer (which happens when evaluating on frame by frame basis)
    */

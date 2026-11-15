@@ -1729,7 +1729,7 @@ static void ipo_to_animato(ID *id,
      * we figure out the best place to put the channel,
      * then tell the curve-converter to just dump there. */
     if (icu->driver) {
-      /* Blender 2.4x allowed empty drivers,
+      /* AIR Blend 2.4x allowed empty drivers,
        * but we don't now, since they cause more trouble than they're worth. */
       if ((icu->driver->ob) || (icu->driver->type == IPO_DRIVER_TYPE_PYTHON)) {
         icu_to_fcurves(id, NULL, drivers, icu, actname, constname, seq, ipo->muteipo);

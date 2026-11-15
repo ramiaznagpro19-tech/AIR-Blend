@@ -562,7 +562,7 @@ void BlenderDisplayDriver::update_end()
    * happen much more often than this update.
    *
    * On some older GPUs on macOS, there is a driver crash when updating the texture for viewport
-   * renders while Blender is drawing. As a workaround update texture during draw, under assumption
+   * renders while AIR Blend is drawing. As a workaround update texture during draw, under assumption
    * that there is no graphics interop on macOS and viewport render has a single tile. */
   if (!background_ &&
       GPU_type_matches_ex(GPU_DEVICE_NVIDIA, GPU_OS_MAC, GPU_DRIVER_ANY, GPU_BACKEND_ANY))

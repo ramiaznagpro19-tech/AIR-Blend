@@ -640,7 +640,7 @@ void INFO_OT_reports_display_update(wmOperatorType *ot)
   /* identifiers */
   ot->name = "Update Reports Display";
   ot->idname = "INFO_OT_reports_display_update";
-  ot->description = "Update the display of reports in Blender UI (internal use)";
+  ot->description = "Update the display of reports in AIR Blend UI (internal use)";
 
   /* api callbacks */
   ot->invoke = update_reports_display_invoke;

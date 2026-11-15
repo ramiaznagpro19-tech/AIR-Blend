@@ -18,7 +18,7 @@ struct Material;
 namespace blender::io::obj {
 
 /**
- * Make a Blender Mesh Object from a Geometry of GEOM_MESH type.
+ * Make a AIR Blend Mesh Object from a Geometry of GEOM_MESH type.
  */
 class MeshFromGeometry : NonMovable, NonCopyable {
  private:
@@ -38,7 +38,7 @@ class MeshFromGeometry : NonMovable, NonCopyable {
 
  private:
   /**
-   * OBJ files coming from the wild might have faces that are invalid in Blender
+   * OBJ files coming from the wild might have faces that are invalid in AIR Blend
    * (mostly with duplicate vertex indices, used by some software to indicate
    * polygons with holes). This method tries to fix them up.
    */

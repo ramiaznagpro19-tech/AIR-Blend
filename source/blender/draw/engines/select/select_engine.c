@@ -58,7 +58,7 @@ static void select_engine_framebuffer_setup(void)
   }
 
   /* Make sure the depth texture is attached.
-   * It may disappear when loading another Blender session. */
+   * It may disappear when loading another AIR Blend session. */
   GPU_framebuffer_texture_attach(e_data.framebuffer_select_id, dtxl->depth, 0, 0);
 
   if (e_data.texture_u32 == NULL) {

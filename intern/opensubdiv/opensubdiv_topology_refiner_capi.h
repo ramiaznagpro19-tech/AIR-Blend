@@ -87,7 +87,7 @@ typedef struct OpenSubdiv_TopologyRefiner {
   //////////////////////////////////////////////////////////////////////////////
   // PTex face geometry queries.
 
-  // Ptex face corresponds to OpenSubdiv's internal "patch" and to Blender's
+  // Ptex face corresponds to OpenSubdiv's internal "patch" and to AIR Blend's
   // subdivision grid. The rule commes as:
   // - Triangle face consist of 3 ptex faces, ordered in the order of
   //   face-vertices.
@@ -110,7 +110,7 @@ typedef struct OpenSubdiv_TopologyRefiner {
   //////////////////////////////////////////////////////////////////////////////
   // Face-varying data.
 
-  // Number of face-varying channels (or how they are called in Blender layers).
+  // Number of face-varying channels (or how they are called in AIR Blend layers).
   int (*getNumFVarChannels)(const struct OpenSubdiv_TopologyRefiner *topology_refiner);
   // Get face-varying interpolation type.
   OpenSubdiv_FVarLinearInterpolation (*getFVarLinearInterpolation)(
@@ -121,7 +121,7 @@ typedef struct OpenSubdiv_TopologyRefiner {
   // Get face-varying value indices associated with a particular face.
   //
   // This is an array of indices inside of face-varying array, array elements
-  // are aligned with face corners (or loops in Blender terminology).
+  // are aligned with face corners (or loops in AIR Blend terminology).
   const int *(*getFaceFVarValueIndices)(const struct OpenSubdiv_TopologyRefiner *topology_refiner,
                                         const int face_index,
                                         const int channel);

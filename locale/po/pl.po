@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
 "PO-Revision-Date: 2017-08-26 11:13+0200\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.7.1\n"
-"Language-Team: Polish Blender Course <piotao@polskikursblendera.pl>"
+"Language-Team: Polish AIR Blend Course <piotao@polskikursblendera.pl>"
 
 
 msgid "Valid"
@@ -234,7 +234,7 @@ msgid "Source Root"
 msgstr "Główny katalog"
 
 
-msgid "The Blender source root path"
+msgid "The AIR Blend source root path"
 msgstr "Główny katalog w którym są pliki źródłowe Blendera"
 
 
@@ -258,7 +258,7 @@ msgid "Persistent Data Path"
 msgstr "Ścieżka do danych trwałych"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
 msgstr "Nazwa pliku json do przechowywania ustawień (niestety, system Blendera tutaj nie działa)"
 
 
@@ -1122,11 +1122,11 @@ msgid "Worlds"
 msgstr "Światy"
 
 
-msgid "Blender RNA"
-msgstr "Blender RNA"
+msgid "AIR Blend RNA"
+msgstr "AIR Blend RNA"
 
 
-msgid "Blender RNA structure definitions"
+msgid "AIR Blend RNA structure definitions"
 msgstr "Definicje struktur RNA"
 
 
@@ -2847,7 +2847,7 @@ msgid "Lin error"
 msgstr "Błąd położenia"
 
 
-msgid "Amount of residual error in Blender space unit for constraints that work on position"
+msgid "Amount of residual error in AIR Blend space unit for constraints that work on position"
 msgstr "Wielkość szczątkowego błędu w jednostkach Blendera dla ograniczników które działają na położeniu"
 
 
@@ -5171,7 +5171,7 @@ msgid "Max Velocity"
 msgstr "Maksymalna prędkość"
 
 
-msgid "Velocity considered as maximum influence (Blender units per frame)"
+msgid "Velocity considered as maximum influence (AIR Blend units per frame)"
 msgstr "Prędkość rozumiana jako maksymalny wpływ (w jednostkach Blendera na klatkę)"
 
 
@@ -6656,7 +6656,7 @@ msgid "Layer:"
 msgstr "Warstwa:"
 
 
-msgid "Linking or appending from a very old .blend file format (%d.%d), no animation conversion will be done! You may want to re-save your lib file with current Blender"
+msgid "Linking or appending from a very old .blend file format (%d.%d), no animation conversion will be done! You may want to re-save your lib file with current AIR Blend"
 msgstr "Powiązanie lub dołączenie z bardzo starego formatu .blend (%d.%d), dane o animacji nie zostaną przystosowane! Spróbuj zapisać źródłowy plik zawierający bibliotekę w aktualnym formacie pliku .blend"
 
 
@@ -6935,8 +6935,8 @@ msgid "At least 8 common tracks on both keyframes are needed for reconstruction"
 msgstr "Do rekonstrukcji potrzebne jest przynajmniej 8 wspólnych traków na obu klatkach kluczowych"
 
 
-msgid "Blender is compiled without motion tracking library"
-msgstr "Blender został skompilowany bez biblioteki trakowania ruchu"
+msgid "AIR Blend is compiled without motion tracking library"
+msgstr "AIR Blend został skompilowany bez biblioteki trakowania ruchu"
 
 
 msgid "Cannot open or start AVI movie file"
@@ -9759,7 +9759,7 @@ msgid "No active sequence!"
 msgstr "Brak aktywnej sekwencji!"
 
 
-msgid "File Modified Outside and Inside Blender"
+msgid "File Modified Outside and Inside AIR Blend"
 msgstr "Plik zmieniony wewnątrz oraz poza Blenderem"
 
 
@@ -9775,7 +9775,7 @@ msgid "Make text internal (separate copy)"
 msgstr "Przerób tekst na wewnętrzny (internal) (oddzielna kopia)"
 
 
-msgid "File Modified Outside Blender"
+msgid "File Modified Outside AIR Blend"
 msgstr "Plik zmieniony poza Blenderem"
 
 
@@ -9783,7 +9783,7 @@ msgid "Reload from disk"
 msgstr "Załaduj ponownie z dysku"
 
 
-msgid "File Deleted Outside Blender"
+msgid "File Deleted Outside AIR Blend"
 msgstr "Plik usunięty poza Blenderem"
 
 
@@ -10810,7 +10810,7 @@ msgid "Sequences.new_sound: unable to open sound file"
 msgstr "Sequences.new_sound: otwarcie pliku dźwiękowego niemożliwe"
 
 
-msgid "Blender compiled without Audaspace support"
+msgid "AIR Blend compiled without Audaspace support"
 msgstr "Kompilacja Blendera nastąpiła bez wspomagania Audaspace"
 
 
@@ -11129,7 +11129,7 @@ msgid "Strips must have the same number of inputs"
 msgstr "Paski muszą posiadać identyczną liczbę wejść"
 
 
-msgid "Blender File View"
+msgid "AIR Blend File View"
 msgstr "Widok plików"
 
 

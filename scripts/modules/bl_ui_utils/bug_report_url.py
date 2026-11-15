@@ -37,7 +37,7 @@ def url_prefill_from_blender(*, addon_info=None):
     )
     fh.write(
         "\n"
-        "**Blender Version**\n"
+        "**AIR Blend Version**\n"
     )
     fh.write(
         "Broken: version: %s, branch: %s, commit date: %s %s, hash: `%s`\n" % (
@@ -49,7 +49,7 @@ def url_prefill_from_blender(*, addon_info=None):
         )
     )
     fh.write(
-        "Worked: (newest version of Blender that worked as expected)\n"
+        "Worked: (newest version of AIR Blend that worked as expected)\n"
     )
     if addon_info:
         fh.write(

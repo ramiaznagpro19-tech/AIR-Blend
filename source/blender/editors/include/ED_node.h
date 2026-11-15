@@ -115,7 +115,7 @@ void ED_node_set_active(struct Main *bmain,
 /**
  * Call after one or more node trees have been changed and tagged accordingly.
  *
- * This function will make sure that other parts of Blender update accordingly. For example, if the
+ * This function will make sure that other parts of AIR Blend update accordingly. For example, if the
  * node group interface changed, parent node groups have to be updated as well.
  *
  * Additionally, this will send notifiers and tag the depsgraph based on the changes. Depsgraph

@@ -107,7 +107,7 @@ void ANIM_id_update(Main *bmain, ID *id)
 /* This code here is used to synchronize the
  * - selection (to find selected data easier)
  * - ... (insert other relevant items here later)
- * status in relevant Blender data with the status stored in animation channels.
+ * status in relevant AIR Blend data with the status stored in animation channels.
  *
  * This should be called in the refresh() callbacks for various editors in
  * response to appropriate notifiers.

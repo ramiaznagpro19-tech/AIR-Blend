@@ -6530,7 +6530,7 @@ void uiTemplateStatusInfo(uiLayout *layout, bContext *C)
     return;
   }
 
-  /* Blender version part is shown as warning area when there are forward compatibility issues with
+  /* AIR Blend version part is shown as warning area when there are forward compatibility issues with
    * currently loaded .blend file. */
 
   const char *status_info_txt = ED_info_statusbar_string_ex(
@@ -6600,7 +6600,7 @@ void uiTemplateStatusInfo(uiLayout *layout, bContext *C)
   BKE_blender_version_blendfile_string_from_values(
       writer_ver_str, sizeof(writer_ver_str), bmain->versionfile, -1);
   SNPRINTF(compat_error_msg,
-           TIP_("File saved by newer Blender\n(%s), expect loss of data"),
+           TIP_("File saved by newer AIR Blend\n(%s), expect loss of data"),
            writer_ver_str);
   but = uiDefIconBut(block,
                      UI_BTYPE_BUT,

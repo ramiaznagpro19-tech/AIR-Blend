@@ -47,7 +47,7 @@ if(UNIX)
   if(_software_missing)
     message(
       "\n"
-      "Missing software for building Blender dependencies:\n"
+      "Missing software for building AIR Blend dependencies:\n"
       "  ${_software_missing}\n"
       "\n"
       "On Debian and Ubuntu:\n"

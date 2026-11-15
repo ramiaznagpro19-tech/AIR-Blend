@@ -52,7 +52,7 @@ static void register_blend_extension_failed(HKEY root, const bool background)
     RegCloseKey(root);
   }
   if (!background) {
-    MessageBox(0, "Could not register file extension.", "Blender error", MB_OK | MB_ICONERROR);
+    MessageBox(0, "Could not register file extension.", "AIR Blend error", MB_OK | MB_ICONERROR);
   }
 }
 
@@ -94,7 +94,7 @@ bool BLI_windows_register_blend_extension(const bool background)
   lresult = RegCreateKeyEx(
       root, "blendfile", 0, NULL, REG_OPTION_NON_VOLATILE, KEY_ALL_ACCESS, NULL, &hkey, &dwd);
   if (lresult == ERROR_SUCCESS) {
-    strcpy(buffer, "Blender File");
+    strcpy(buffer, "AIR Blend File");
     lresult = RegSetValueEx(hkey, NULL, 0, REG_SZ, (BYTE *)buffer, strlen(buffer) + 1);
     RegCloseKey(hkey);
   }
@@ -174,7 +174,7 @@ bool BLI_windows_register_blend_extension(const bool background)
              "File extension registered for %s.",
              usr_mode ? "the current user. To register for all users, run as an administrator" :
                         "all users");
-    MessageBox(0, MBox, "Blender", MB_OK | MB_ICONINFORMATION);
+    MessageBox(0, MBox, "AIR Blend", MB_OK | MB_ICONINFORMATION);
   }
   return true;
 }
@@ -255,7 +255,7 @@ void BLI_windows_get_default_root_dir(char root[4])
     if (GetModuleFileName(NULL, str, MAX_PATH + 1)) {
       printf(
           "Error! Could not get the Windows Directory - "
-          "Defaulting to Blender installation Dir!\n");
+          "Defaulting to AIR Blend installation Dir!\n");
       root[0] = str[0];
       root[1] = ':';
       root[2] = '\\';

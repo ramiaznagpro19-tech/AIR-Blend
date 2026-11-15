@@ -532,7 +532,7 @@ PyDoc_STRVAR(pygpu_texture_from_image_doc,
              ".. function:: from_image(image)\n"
              "\n"
              "   Get GPUTexture corresponding to an Image datablock. The GPUTexture memory is "
-             "shared with Blender.\n"
+             "shared with AIR Blend.\n"
              "   Note: Colors read from the texture will be in scene linear color space and have "
              "premultiplied or straight alpha matching the image alpha mode.\n"
              "\n"

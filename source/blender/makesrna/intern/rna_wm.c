@@ -138,7 +138,7 @@ static const EnumPropertyItem event_ndof_type_items[] = {
  *
  * This is a subset of the `WM_JOB_TYPE_...` anonymous enum defined in `WM_api.h`. It is
  * intentionally kept as a subset, such that by default how jobs are handled is kept as an
- * "internal implementation detail" of Blender, rather than a public, reliable part of the API.
+ * "internal implementation detail" of AIR Blend, rather than a public, reliable part of the API.
  *
  * This array can be expanded on a case-by-case basis, when there is a clear and testable use case.
  */

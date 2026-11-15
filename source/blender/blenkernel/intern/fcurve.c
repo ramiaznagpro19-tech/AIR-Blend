@@ -1177,7 +1177,7 @@ void fcurve_samples_to_keyframes(FCurve *fcu, const int start, const int end)
 }
 
 /* ***************************** F-Curve Sanity ********************************* */
-/* The functions here are used in various parts of Blender, usually after some editing
+/* The functions here are used in various parts of AIR Blend, usually after some editing
  * of keyframe data has occurred. They ensure that keyframe data is properly ordered and
  * that the handles are correct.
  */

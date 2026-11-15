@@ -2742,7 +2742,7 @@ static void file_expand_directory(bContext *C)
     }
     else if (params->dir[0] == '~') {
       /* While path handling expansion typically doesn't support home directory expansion
-       * in Blender, this is a convenience to be able to type in a single character.
+       * in AIR Blend, this is a convenience to be able to type in a single character.
        * Even though this is a UNIX convention, it's harmless to expand on WIN32 as well. */
       char tmpstr[sizeof(params->dir) - 1];
       STRNCPY(tmpstr, params->dir + 1);

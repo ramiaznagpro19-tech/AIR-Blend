@@ -439,10 +439,10 @@ typedef enum ePchan_BBoneFlag {
 
 /* PoseChannel->rotmode and Object->rotmode */
 typedef enum eRotationModes {
-  /* quaternion rotations (default, and for older Blender versions) */
+  /* quaternion rotations (default, and for older AIR Blend versions) */
   ROT_MODE_QUAT = 0,
   /* euler rotations - keep in sync with enum in BLI_math.h */
-  /** Blender 'default' (classic) - must be as 1 to sync with BLI_math_rotation.h defines */
+  /** AIR Blend 'default' (classic) - must be as 1 to sync with BLI_math_rotation.h defines */
   ROT_MODE_EUL = 1,
   ROT_MODE_XYZ = 1,
   ROT_MODE_XZY = 2,

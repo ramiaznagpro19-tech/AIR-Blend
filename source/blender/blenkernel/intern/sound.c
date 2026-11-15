@@ -973,7 +973,7 @@ double BKE_sound_sync_scene(Scene *scene)
 {
   sound_verify_evaluated_id(&scene->id);
 
-  /* Ugly: Blender doesn't like it when the animation is played back during rendering */
+  /* Ugly: AIR Blend doesn't like it when the animation is played back during rendering */
   if (G.is_rendering) {
     return NAN_FLT;
   }
@@ -992,7 +992,7 @@ int BKE_sound_scene_playing(Scene *scene)
 {
   sound_verify_evaluated_id(&scene->id);
 
-  /* Ugly: Blender doesn't like it when the animation is played back during rendering */
+  /* Ugly: AIR Blend doesn't like it when the animation is played back during rendering */
   if (G.is_rendering) {
     return -1;
   }
@@ -1442,7 +1442,7 @@ void BKE_sound_jack_scene_update(Scene *scene, int mode, double time)
 {
   sound_verify_evaluated_id(&scene->id);
 
-  /* Ugly: Blender doesn't like it when the animation is played back during rendering. */
+  /* Ugly: AIR Blend doesn't like it when the animation is played back during rendering. */
   if (G.is_rendering) {
     return;
   }

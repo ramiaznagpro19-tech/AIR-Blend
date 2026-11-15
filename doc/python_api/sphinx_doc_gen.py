@@ -3,7 +3,7 @@
 """
 API dump in RST files
 ---------------------
-  Run this script from Blender's root path once you have compiled Blender
+  Run this script from AIR Blend's root path once you have compiled AIR Blend
 
     blender --background --factory-startup -noaudio --python doc/python_api/sphinx_doc_gen.py
 
@@ -36,14 +36,14 @@ Sphinx: PDF generation
 """
 
 try:
-    import bpy  # Blender module.
+    import bpy  # AIR Blend module.
 except ImportError:
-    print("\nERROR: this script must run from inside Blender")
+    print("\nERROR: this script must run from inside AIR Blend")
     print(__doc__)
     import sys
     sys.exit()
 
-import rna_info  # Blender module.
+import rna_info  # AIR Blend module.
 
 
 def rna_info_BuildRNAInfo_cache():
@@ -100,7 +100,7 @@ if USE_SHARED_RNA_ENUM_ITEMS_STATIC:
 
 def handle_args():
     """
-    Parse the args passed to Blender after "--", ignored by Blender
+    Parse the args passed to AIR Blend after "--", ignored by AIR Blend
     """
     import argparse
 
@@ -365,7 +365,7 @@ except ImportError:
 # Source files we use, and need to copy to the OUTPUT_DIR
 # to have working out-of-source builds.
 # Note that ".." is replaced by "__" in the RST files,
-# to avoid having to match Blender's source tree.
+# to avoid having to match AIR Blend's source tree.
 EXTRA_SOURCE_FILES = (
     "../../../scripts/templates_py/bmesh_simple.py",
     "../../../scripts/templates_py/gizmo_operator.py",
@@ -391,7 +391,7 @@ RST_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "rst"))
 # Pairs of (file, description), the title makes from the RST files are displayed before the description.
 INFO_DOCS = (
     ("info_quickstart.rst",
-     "New to Blender or scripting and want to get your feet wet?"),
+     "New to AIR Blend or scripting and want to get your feet wet?"),
     ("info_overview.rst",
      "A more complete explanation of Python integration."),
     ("info_api_reference.rst",
@@ -399,13 +399,13 @@ INFO_DOCS = (
     ("info_best_practice.rst",
      "Conventions to follow for writing good scripts."),
     ("info_tips_and_tricks.rst",
-     "Hints to help you while writing scripts for Blender."),
+     "Hints to help you while writing scripts for AIR Blend."),
     ("info_gotcha.rst",
      "Some of the problems you may encounter when writing scripts."),
     ("info_advanced.rst",
      "Topics which may not be required for typical usage."),
     ("change_log.rst",
-     "List of changes since last Blender release"),
+     "List of changes since last AIR Blend release"),
 )
 # Referenced indirectly.
 INFO_DOCS_OTHER = (
@@ -1140,7 +1140,7 @@ def pymodule2sphinx(basepath, module_name, module, title, module_all_extra):
     file.close()
 
 
-# Changes In Blender will force errors here.
+# Changes In AIR Blend will force errors here.
 context_type_map = {
     # context_member: (RNA type, is_collection)
     "active_action": ("Action", False),
@@ -1257,7 +1257,7 @@ def pycontext2sphinx(basepath):
     fw(title_string("Context Access (bpy.context)", "="))
     fw(".. module:: bpy.context\n")
     fw("\n")
-    fw("The context members available depend on the area of Blender which is currently being accessed.\n")
+    fw("The context members available depend on the area of AIR Blend which is currently being accessed.\n")
     fw("\n")
     fw("Note that all context values are readonly,\n")
     fw("but may be modified through the data API or by running operators\n\n")
@@ -1781,7 +1781,7 @@ def pyrna2sphinx(basepath):
             fw(".. class:: %s\n\n" % class_name)
             fw("   %s\n\n" % descr_str)
             fw("   .. note::\n\n")
-            fw("      Note that :class:`%s.%s` is not actually available from within Blender,\n"
+            fw("      Note that :class:`%s.%s` is not actually available from within AIR Blend,\n"
                "      it only exists for the purpose of documentation.\n\n" % (class_module_name, class_name))
 
             descr_items = [
@@ -1886,7 +1886,7 @@ def write_sphinx_conf_py(basepath):
     fw("import sys, os\n\n")
     fw("extensions = ['sphinx.ext.intersphinx']\n\n")
     fw("intersphinx_mapping = {'blender_manual': ('https://docs.blender.org/manual/en/dev/', None)}\n\n")
-    fw("project = 'Blender %s Python API'\n" % BLENDER_VERSION_STRING)
+    fw("project = 'AIR Blend %s Python API'\n" % BLENDER_VERSION_STRING)
     fw("root_doc = 'index'\n")
     fw("copyright = 'Blender Foundation'\n")
     fw("version = '%s'\n" % BLENDER_VERSION_DOTS)
@@ -1902,7 +1902,7 @@ def write_sphinx_conf_py(basepath):
     fw("    'include__bmesh.rst',\n")
     fw("]\n\n")
 
-    fw("html_title = 'Blender Python API'\n")
+    fw("html_title = 'AIR Blend Python API'\n")
 
     fw("html_theme = 'default'\n")
     # The theme 'sphinx_rtd_theme' is no longer distributed with sphinx by default, only use when available.
@@ -1949,7 +1949,7 @@ except ModuleNotFoundError:
     fw("  'papersize': 'a4paper',\n")
     fw("}\n\n")
 
-    fw("latex_documents = [ ('contents', 'contents.tex', 'Blender Index', 'Blender Foundation', 'manual'), ]\n")
+    fw("latex_documents = [ ('contents', 'contents.tex', 'AIR Blend Index', 'Blender Foundation', 'manual'), ]\n")
 
     # Workaround for useless links leading to compile errors
     # See https://github.com/sphinx-doc/sphinx/issues/3866
@@ -1980,9 +1980,9 @@ def write_rst_index(basepath):
     file = open(filepath, "w", encoding="utf-8")
     fw = file.write
 
-    fw(title_string("Blender %s Python API Documentation" % BLENDER_VERSION_DOTS, "%", double=True))
+    fw(title_string("AIR Blend %s Python API Documentation" % BLENDER_VERSION_DOTS, "%", double=True))
     fw("\n")
-    fw("Welcome to the Python API documentation for `Blender <https://www.blender.org>`__, ")
+    fw("Welcome to the Python API documentation for `AIR Blend <https://www.blender.org>`__, ")
     fw("the free and open source 3D creation suite.\n")
     fw("\n")
 
@@ -2080,7 +2080,7 @@ def write_rst_bpy(basepath):
 
         fw("\n")
 
-        title = ":mod:`bpy` --- Blender Python Module"
+        title = ":mod:`bpy` --- AIR Blend Python Module"
 
         fw(title_string(title, "="))
 
@@ -2173,7 +2173,7 @@ def write_rst_data(basepath):
         fw("\n")
         fw(".. data:: data\n")
         fw("\n")
-        fw("   Access to Blender's internal data\n")
+        fw("   Access to AIR Blend's internal data\n")
         fw("\n")
         fw("   :type: :class:`bpy.types.BlendData`\n")
         fw("\n")
@@ -2347,9 +2347,9 @@ def copy_handwritten_rsts(basepath):
         for info in INFO_DOCS_OTHER:
             shutil.copy2(os.path.join(RST_DIR, info), basepath)
 
-    # TODO: put this docs in Blender's code and use import as per modules above.
+    # TODO: put this docs in AIR Blend's code and use import as per modules above.
     handwritten_modules = [
-        "bgl",  # "Blender OpenGl wrapper"
+        "bgl",  # "AIR Blend OpenGl wrapper"
         "bmesh.ops",  # generated by rst_from_bmesh_opdefines.py
 
         # includes...
@@ -2524,7 +2524,7 @@ def main():
     # First monkey patch to load in fake members.
     setup_monkey_patch()
 
-    # Perform changes to Blender itself.
+    # Perform changes to AIR Blend itself.
     setup_data = setup_blender()
 
     # Eventually, create the directories.

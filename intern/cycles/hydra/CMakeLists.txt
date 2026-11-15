@@ -73,7 +73,7 @@ if(WITH_OPENVDB)
   )
 endif()
 
-# Blender libraries do not include hgiGL, so build without display driver then.
+# AIR Blend libraries do not include hgiGL, so build without display driver then.
 if(EXISTS ${USD_INCLUDE_DIR}/pxr/imaging/hgiGL)
   add_definitions(-DWITH_HYDRA_DISPLAY_DRIVER)
   list(APPEND SRC_HD_CYCLES display_driver.cpp)

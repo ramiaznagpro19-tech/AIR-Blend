@@ -71,7 +71,7 @@ diff -Naur ispc-1.17.0.org/cmake/GenerateBuiltins.cmake ispc-1.17.0/cmake/Genera
  
      if ("${bit}" STREQUAL "32" AND ${arch} STREQUAL "x86")
          set(target_arch "i686")
-+        # Blender: disable 32bit due to build issues on Linux and being unnecessary.
++        # AIR Blend: disable 32bit due to build issues on Linux and being unnecessary.
 +        set(SKIP ON)
      elseif ("${bit}" STREQUAL "64" AND ${arch} STREQUAL "x86")
          set(target_arch "x86_64")

@@ -8,7 +8,7 @@
  * Lowest-level functions for decoding the parts of a saved .blend
  * file, including interpretation of its SDNA block and conversion of
  * contents of other parts according to the differences between that
- * SDNA and the SDNA of the current (running) version of Blender.
+ * SDNA and the SDNA of the current (running) version of AIR Blend.
  */
 
 #include <limits.h>
@@ -93,7 +93,7 @@
  * IMPORTANT:
  *  - Do not use #defines in structs for array lengths, this cannot be read by the dna functions.
  *  - Do not use `uint`, but unsigned int instead, `ushort` and `ulong` are allowed.
- *  - Only use a long in Blender if you want this to be the size of a pointer. so it is
+ *  - Only use a long in AIR Blend if you want this to be the size of a pointer. so it is
  *    32 bits or 64 bits, dependent at the cpu architecture.
  *  - Chars are always unsigned
  *  - Alignment of variables has to be done in such a way, that any system does
@@ -561,7 +561,7 @@ SDNA *DNA_sdna_from_data(const void *data,
 
 /**
  * Using a global is acceptable here,
- * the data is read-only and only changes between Blender versions.
+ * the data is read-only and only changes between AIR Blend versions.
  *
  * So it is safe to create once and reuse.
  */
@@ -851,7 +851,7 @@ static void cast_pointer_64_to_32(const int array_len,
                                   const uint64_t *old_data,
                                   uint32_t *new_data)
 {
-  /* WARNING: 32-bit Blender trying to load file saved by 64-bit Blender,
+  /* WARNING: 32-bit AIR Blend trying to load file saved by 64-bit AIR Blend,
    * pointers may lose uniqueness on truncation! (Hopefully this won't
    * happen unless/until we ever get to multi-gigabyte .blend files...) */
   for (int a = 0; a < array_len; a++) {

@@ -1217,7 +1217,7 @@ typedef enum eID_Index {
    * while they are being owned by many other ID types. This is why they are placed here. */
   INDEX_ID_NT,
 
-  /* File-wrapper types, those usually 'embed' external files in Blender, with no dependencies to
+  /* File-wrapper types, those usually 'embed' external files in AIR Blend, with no dependencies to
    * other ID types. */
   INDEX_ID_VF,
   INDEX_ID_TXT,

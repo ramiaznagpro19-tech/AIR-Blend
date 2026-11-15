@@ -145,7 +145,7 @@ static void update_edge_indices_in_poly_loops(const OffsetIndices<int> polys,
           edge_index = edge_map.lookup(ordered_edge).index;
         }
         else {
-          /* This is an invalid edge; normally this does not happen in Blender,
+          /* This is an invalid edge; normally this does not happen in AIR Blend,
            * but it can be part of an imported mesh with invalid geometry. See
            * #76514. */
           edge_index = 0;

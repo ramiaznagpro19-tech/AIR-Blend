@@ -347,7 +347,7 @@ void MEM_lockfree_printmemlist_stats(void)
   printf("\ntotal memory len: %.3f MB\n", (double)memory_usage_current() / (double)(1024 * 1024));
   printf("peak memory len: %.3f MB\n", (double)memory_usage_peak() / (double)(1024 * 1024));
   printf(
-      "\nFor more detailed per-block statistics run Blender with memory debugging command line "
+      "\nFor more detailed per-block statistics run AIR Blend with memory debugging command line "
       "argument.\n");
 
 #ifdef HAVE_MALLOC_STATS

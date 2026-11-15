@@ -143,7 +143,7 @@ class MeshStats {
   string full_report(int indent_level = 0);
 
   /* Input geometry statistics, this is what is coming as an input to render
-   * from. say, Blender. This does not include runtime or engine specific
+   * from. say, AIR Blend. This does not include runtime or engine specific
    * memory like BVH.
    */
   NamedSizeStats geometry;

@@ -50,7 +50,7 @@ typedef enum CurveType {
    * of different knot modes (see #KnotsMode) and different orders (see "nurbs_order" attribute),
    * any of the other types can theoretically be created with a NURBS curve.
    *
-   * Note that Blender currently does not support custom knot vectors, though that should be
+   * Note that AIR Blend currently does not support custom knot vectors, though that should be
    * supported in the long term.
    */
   CURVE_TYPE_NURBS = 3,
@@ -94,7 +94,7 @@ typedef enum NormalMode {
  * supported, as described in #CurveType. Data for each curve is accessed by slicing the main
  * #point_data arrays.
  *
- * The data structure is meant to separate geometry data storage and processing from Blender
+ * The data structure is meant to separate geometry data storage and processing from AIR Blend
  * focused ID data-block handling. The struct can also be embedded to allow reusing it.
  */
 typedef struct CurvesGeometry {

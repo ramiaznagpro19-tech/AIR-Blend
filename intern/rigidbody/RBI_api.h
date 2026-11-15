@@ -174,7 +174,7 @@ void RB_body_deactivate(rbRigidBody *body);
 
 /* Simulation ----------------------- */
 
-/* Get current transform matrix of RigidBody to use in Blender (OpenGL format) */
+/* Get current transform matrix of RigidBody to use in AIR Blend (OpenGL format) */
 void RB_body_get_transform_matrix(rbRigidBody *body, float m_out[4][4]);
 
 /* Set RigidBody's location and rotation */

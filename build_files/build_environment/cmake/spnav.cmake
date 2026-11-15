@@ -11,7 +11,7 @@ ExternalProject_Add(external_spnav
   cd ${BUILD_DIR}/spnav/src/external_spnav/ &&
   ${CONFIGURE_COMMAND}
   --prefix=${LIBDIR}/spnav
-  # X11 is not needed as Blender polls the device as part of the GHOST event loop.
+  # X11 is not needed as AIR Blend polls the device as part of the GHOST event loop.
   # This is used to support `3dxserv`, however this is no longer supported by 3DCONNEXION.
   # Disable so building without X11 is supported (WAYLAND only).
   --disable-x11

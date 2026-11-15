@@ -1,7 +1,7 @@
 ##----------------------------------------------------------------------##
-# Blender's BLI_mempool
+# AIR Blend's BLI_mempool
 #
-# Blender can be built WITH_MEM_VALGRIND.
+# AIR Blend can be built WITH_MEM_VALGRIND.
 # This causes internal operations to raise false-positives.
 
 {

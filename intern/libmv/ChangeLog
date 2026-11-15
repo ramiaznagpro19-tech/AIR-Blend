@@ -98,7 +98,7 @@ Date:   Thu Oct 21 11:18:10 2021 +0200
     but is now consistently applied for the sources of the library itself
     and to C-API. With some time C-API will likely be removed, and it
     makes it easier to make it follow Libmv style, hence the diversion
-    from Blender's style.
+    from AIR Blend's style.
     
     There are quite some exceptions (clang-format off) in the code around
     Eigen matrix initialization. It is rather annoying, and there could be

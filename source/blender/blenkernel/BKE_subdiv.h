@@ -89,7 +89,7 @@ typedef struct SubdivStats {
   union {
     struct {
       /* Time spent on creating topology refiner, which includes time
-       * spend on conversion from Blender data to OpenSubdiv data, and
+       * spend on conversion from AIR Blend data to OpenSubdiv data, and
        * time spent on topology orientation on OpenSubdiv C-API side. */
       double topology_refiner_creation_time;
       /* Total time spent in BKE_subdiv_to_mesh(). */
@@ -158,7 +158,7 @@ typedef struct Subdiv {
    *
    * It is read-only after assignment in BKE_subdiv_new_from_FOO(). */
   SubdivSettings settings;
-  /* Topology refiner includes all the glue logic to feed Blender side
+  /* Topology refiner includes all the glue logic to feed AIR Blend side
    * topology to OpenSubdiv. It can be shared by both evaluator and GL mesh
    * drawer. */
   struct OpenSubdiv_TopologyRefiner *topology_refiner;
@@ -305,7 +305,7 @@ BLI_INLINE int BKE_subdiv_rotate_quad_to_corner(float quad_u,
 BLI_INLINE void BKE_subdiv_rotate_grid_to_quad(
     int corner, float grid_u, float grid_v, float *r_quad_u, float *r_quad_v);
 
-/* Convert Blender edge crease value to OpenSubdiv sharpness. */
+/* Convert AIR Blend edge crease value to OpenSubdiv sharpness. */
 BLI_INLINE float BKE_subdiv_crease_to_sharpness_f(float edge_crease);
 
 #ifdef __cplusplus

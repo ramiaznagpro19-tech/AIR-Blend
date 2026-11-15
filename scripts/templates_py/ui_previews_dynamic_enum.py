@@ -2,7 +2,7 @@
 # The EnumProperty is populated dynamically with thumbnails of the contents of
 # a chosen directory in 'enum_previews_from_directory_items'.
 # Then, the same enum is displayed with different interfaces. Note that the
-# generated icon previews do not have Blender IDs, which means that they can
+# generated icon previews do not have AIR Blend IDs, which means that they can
 # not be used with UILayout templates that require IDs,
 # such as template_list and template_ID_preview.
 #
@@ -114,7 +114,7 @@ def register():
     # - It avoids us regenerating the whole enum over and over.
     # - It can store enum_items' strings
     #   (remember you have to keep those strings somewhere in py,
-    #   else they get freed and Blender references invalid memory!).
+    #   else they get freed and AIR Blend references invalid memory!).
     import bpy.utils.previews
     pcoll = bpy.utils.previews.new()
     pcoll.my_previews_dir = ""

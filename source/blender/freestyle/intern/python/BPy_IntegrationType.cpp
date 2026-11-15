@@ -97,7 +97,7 @@ static PyObject *Integrator_integrate(PyObject * /*self*/, PyObject *args, PyObj
 
 /*-----------------------Integrator module docstring---------------------------------------*/
 
-PyDoc_STRVAR(module_docstring, "The Blender Freestyle.Integrator submodule\n\n");
+PyDoc_STRVAR(module_docstring, "The AIR Blend Freestyle.Integrator submodule\n\n");
 
 /*-----------------------Integrator module functions definitions---------------------------*/
 

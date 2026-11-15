@@ -2,7 +2,7 @@
 
 /** \file
  * \ingroup freestyle
- * \brief Class to represent a scene render layer in Blender.
+ * \brief Class to represent a scene render layer in AIR Blend.
  */
 
 #include "NodeViewLayer.h"

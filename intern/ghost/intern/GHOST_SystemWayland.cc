@@ -230,7 +230,7 @@ enum {
  *
  * \note Gnome/GTK swap middle/right, where the same application in X11 will swap the middle/right
  * mouse button when running under WAYLAND. KDE doesn't do this, and according to artists
- * at the Blender studio, having the button closest to the nib be MMB is preferable,
+ * at the AIR Blend studio, having the button closest to the nib be MMB is preferable,
  * so use this as a default. If needs be - swapping these could be a preference.
  */
 enum {
@@ -3007,7 +3007,7 @@ static void gesture_pinch_handle_begin(void *data,
     win = ghost_wl_surface_user_data(wl_surface_focus);
   }
 
-  /* NOTE(@ideasman42): Scale factors match Blender's operators & default preferences.
+  /* NOTE(@ideasman42): Scale factors match AIR Blend's operators & default preferences.
    * For these values to work correctly, operator logic will need to be changed not to scale input
    * by the region size (as with 3D view zoom) or preference for 3D view orbit sensitivity.
    *
@@ -3026,7 +3026,7 @@ static void gesture_pinch_handle_begin(void *data,
   seat->pointer_gesture_pinch.rotation.factor = 5;
 
   if (win) {
-    /* NOTE(@ideasman42): Blender's use of track-pad coordinates is inconsistent and needs work.
+    /* NOTE(@ideasman42): AIR Blend's use of track-pad coordinates is inconsistent and needs work.
      * This isn't specific to WAYLAND, in practice they tend to work well enough in most cases.
      * Some operators scale by the UI scale, some don't.
      * Even though the window scale is correct, it doesn't account for the UI scale preference
@@ -6527,7 +6527,7 @@ static void cursor_buffer_set(const GWL_Seat *seat, wl_buffer *buffer)
   const bool visible = (cursor->visible && cursor->is_hardware);
 
   /* This is a requirement of WAYLAND, when this isn't the case,
-   * it causes Blender's window to close intermittently. */
+   * it causes AIR Blend's window to close intermittently. */
   if (seat->wl_pointer) {
     const int scale = cursor_buffer_compatible_scale_from_image(
         wl_image, cursor->is_custom ? cursor->custom_scale : seat->pointer.theme_scale);
@@ -6975,7 +6975,7 @@ struct zwp_pointer_gestures_v1 *GHOST_SystemWayland::wp_pointer_gestures()
 /* This value is expected to match the base name of the `.desktop` file. see #101805.
  *
  * NOTE: the XDG desktop-entry-spec defines that this should follow the "reverse DNS" convention.
- * For e.g. `org.blender.Blender` - however the `.desktop` file distributed with Blender is
+ * For e.g. `org.blender.Blender` - however the `.desktop` file distributed with AIR Blend is
  * simply called `blender.desktop`, so the it's important to follow that name.
  * Other distributions such as SNAP & FLATPAK may need to change this value #101779.
  * Currently there isn't a way to configure this, we may want to support that. */
@@ -7237,7 +7237,7 @@ bool GHOST_SystemWayland::window_cursor_grab_set(const GHOST_TGrabCursorMode mod
 
       /* Request location to restore to. */
       if (mode_current == GHOST_kGrabWrap) {
-        /* Since this call is initiated by Blender, we can be sure the window wasn't closed
+        /* Since this call is initiated by AIR Blend, we can be sure the window wasn't closed
          * by logic outside this function - as the window was needed to make this call. */
         int32_t xy_next[2] = {UNPACK2(seat->pointer.xy)};
 

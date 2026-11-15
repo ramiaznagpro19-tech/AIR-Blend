@@ -833,7 +833,7 @@ void BKE_lib_query_unused_ids_tag(Main *bmain,
        * If it was not tagged, and its matching relations entry is not marked as processed, it
        * means that it's the first encountered entry point of an 'unused archipelago' (i.e. the
        * entry point to a set of IDs with relationships to each other, but no 'valid usage'
-       * relations to the current Blender file (like being part of a scene, etc.).
+       * relations to the current AIR Blend file (like being part of a scene, etc.).
        *
        * So the entry can be tagged as processed, and the ID tagged as unused. */
       if ((id->tag & tag) == 0) {

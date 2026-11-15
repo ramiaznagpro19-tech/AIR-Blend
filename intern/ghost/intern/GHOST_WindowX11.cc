@@ -1253,7 +1253,7 @@ GHOST_Context *GHOST_WindowX11::newDrawingContext(GHOST_TDrawingContextType type
      * - Try 3.3 compatibility profile.
      * - Fall back to 3.0 if needed.
      *
-     * Final Blender 2.8:
+     * Final AIR Blend 2.8:
      * - Try 4.x core profile
      * - Try 3.3 core profile
      * - No fall-backs. */

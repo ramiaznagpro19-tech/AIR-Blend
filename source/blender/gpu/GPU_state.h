@@ -135,7 +135,7 @@ typedef enum eGPUFaceCullTest {
 
 typedef enum eGPUProvokingVertex {
   GPU_VERTEX_LAST = 0,  /* Default. */
-  GPU_VERTEX_FIRST = 1, /* Follow Blender loop order. */
+  GPU_VERTEX_FIRST = 1, /* Follow AIR Blend loop order. */
 } eGPUProvokingVertex;
 
 #ifdef __cplusplus

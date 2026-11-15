@@ -119,7 +119,7 @@ void gpencil_modifier_masking_panel_draw(Panel *panel, bool use_material, bool u
     bool has_material = !RNA_pointer_is_null(&material_ptr);
 
     /* Because the Gpencil modifier material property used to be a string in an earlier version of
-     * Blender, we need to check if the material is valid and display it differently if so. */
+     * AIR Blend, we need to check if the material is valid and display it differently if so. */
     bool valid = false;
     {
       if (!has_material) {

@@ -25,7 +25,7 @@
 
 /* This file defines the "RigidBody interface" for the
  * Bullet Physics Engine. This API is designed to be used
- * from C-code in Blender as part of the Rigid Body simulation
+ * from C-code in AIR Blend as part of the Rigid Body simulation
  * system.
  *
  * It is based on the Bullet C-API, but is heavily modified to
@@ -202,7 +202,7 @@ void RB_dworld_step_simulation(rbDynamicsWorld *world,
 
 /**
  * Exports entire dynamics world to Bullet's "*.bullet" binary format
- * which is similar to Blender's SDNA system.
+ * which is similar to AIR Blend's SDNA system.
  *
  * \param world: Dynamics world to write to file
  * \param filename: Assumed to be a valid filename, with .bullet extension
@@ -571,7 +571,7 @@ void RB_body_deactivate(rbRigidBody *object)
 
 /* Simulation ----------------------- */
 
-/* The transform matrices Blender uses are OpenGL-style matrices,
+/* The transform matrices AIR Blend uses are OpenGL-style matrices,
  * while Bullet uses the Right-Handed coordinate system style instead.
  */
 

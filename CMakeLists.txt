@@ -94,7 +94,7 @@ endif()
 
 
 # -----------------------------------------------------------------------------
-# Load Blender's Local Macros
+# Load AIR Blend's Local Macros
 
 include(build_files/cmake/macros.cmake)
 
@@ -163,7 +163,7 @@ get_blender_version()
 # -----------------------------------------------------------------------------
 # Declare Options
 
-# Blender internal features
+# AIR Blend internal features
 option(WITH_BLENDER "Build blender (disable to build only Cycles stand-alone)." ON)
 mark_as_advanced(WITH_BLENDER)
 
@@ -259,14 +259,14 @@ option(WITH_HARU          "Enable features relying on Libharu (Grease pencil PDF
 option(WITH_GHOST_DEBUG   "Enable debugging output for the GHOST library" OFF)
 mark_as_advanced(WITH_GHOST_DEBUG)
 
-option(WITH_GHOST_SDL    "Enable building Blender against SDL for windowing rather than the native APIs" OFF)
+option(WITH_GHOST_SDL    "Enable building AIR Blend against SDL for windowing rather than the native APIs" OFF)
 mark_as_advanced(WITH_GHOST_SDL)
 
 if(UNIX AND NOT (APPLE OR HAIKU))
-  option(WITH_GHOST_X11 "Enable building Blender against X11 for windowing" ON)
+  option(WITH_GHOST_X11 "Enable building AIR Blend against X11 for windowing" ON)
   mark_as_advanced(WITH_GHOST_X11)
 
-  option(WITH_GHOST_WAYLAND "Enable building Blender against Wayland for windowing" ON)
+  option(WITH_GHOST_WAYLAND "Enable building AIR Blend against Wayland for windowing" ON)
   mark_as_advanced(WITH_GHOST_WAYLAND)
 
   if(WITH_GHOST_WAYLAND)
@@ -280,8 +280,8 @@ if(UNIX AND NOT (APPLE OR HAIKU))
     mark_as_advanced(WITH_GHOST_WAYLAND_DYNLOAD)
 
     set(WITH_GHOST_WAYLAND_APP_ID "" CACHE STRING "\
-The application ID used for Blender (use default when an empty string), \
-this can be used to differentiate Blender instances by version or branch for example."
+The application ID used for AIR Blend (use default when an empty string), \
+this can be used to differentiate AIR Blend instances by version or branch for example."
     )
     mark_as_advanced(WITH_GHOST_WAYLAND_APP_ID)
   endif()
@@ -439,7 +439,7 @@ if(WIN32 OR APPLE)
   option(WITH_INPUT_IME "Enable Input Method Editor (IME) for complex Asian character input" ON)
 endif()
 option(WITH_INPUT_NDOF "Enable NDOF input devices (SpaceNavigator and friends)" ON)
-# On Windows and for the Blender application on macOS, portable install
+# On Windows and for the AIR Blend application on macOS, portable install
 # is the only supported installation type, so there is no option.
 if(UNIX AND (NOT APPLE OR WITH_PYTHON_MODULE))
   option(WITH_INSTALL_PORTABLE "\
@@ -454,7 +454,7 @@ option(WITH_INSTALL_COPYRIGHT    "Copy the official Blender Foundation's copyrig
 mark_as_advanced(WITH_INSTALL_COPYRIGHT)
 
 if((WITH_AUDASPACE AND NOT WITH_SYSTEM_AUDASPACE) OR WITH_MOD_FLUID)
-  option(WITH_PYTHON_NUMPY "Include NumPy in Blender (used by Audaspace and Mantaflow)"  ON)
+  option(WITH_PYTHON_NUMPY "Include NumPy in AIR Blend (used by Audaspace and Mantaflow)"  ON)
 endif()
 
 if(WIN32 OR APPLE)
@@ -606,7 +606,7 @@ if(WIN32)
   option(WITH_TBB_MALLOC_PROXY "Enable the TBB malloc replacement" ON)
 endif()
 
-# This should be turned off when Blender enter beta/rc/release
+# This should be turned off when AIR Blend enter beta/rc/release
 if("${BLENDER_VERSION_CYCLE}" STREQUAL "alpha")
   set(WITH_EXPERIMENTAL_FEATURES ON)
 else()
@@ -1850,7 +1850,7 @@ add_subdirectory(tests)
 
 
 # -----------------------------------------------------------------------------
-# Add Blender Application
+# Add AIR Blend Application
 
 if(WITH_BLENDER)
   add_subdirectory(source/creator)

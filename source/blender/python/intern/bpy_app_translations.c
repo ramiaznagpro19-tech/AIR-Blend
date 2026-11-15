@@ -297,7 +297,7 @@ PyDoc_STRVAR(app_translations_py_messages_register_doc,
              "   Registers an addon's UI translations.\n"
              "\n"
              "   .. note::\n"
-             "      Does nothing when Blender is built without internationalization support.\n"
+             "      Does nothing when AIR Blend is built without internationalization support.\n"
              "\n"
              "   :arg module_name: The name identifying the addon.\n"
              "   :type module_name: string\n"
@@ -354,7 +354,7 @@ PyDoc_STRVAR(app_translations_py_messages_unregister_doc,
              "   Unregisters an addon's UI translations.\n"
              "\n"
              "   .. note::\n"
-             "      Does nothing when Blender is built without internationalization support.\n"
+             "      Does nothing when AIR Blend is built without internationalization support.\n"
              "\n"
              "   :arg module_name: The name identifying the addon.\n"
              "   :type module_name: string\n"
@@ -479,7 +479,7 @@ static PyMemberDef app_translations_members[] = {
 };
 
 PyDoc_STRVAR(app_translations_locale_doc,
-             "The actual locale currently in use (will always return a void string when Blender "
+             "The actual locale currently in use (will always return a void string when AIR Blend "
              "is built without "
              "internationalization support).");
 static PyObject *app_translations_locale_get(PyObject *UNUSED(self), void *UNUSED(userdata))
@@ -489,7 +489,7 @@ static PyObject *app_translations_locale_get(PyObject *UNUSED(self), void *UNUSE
 
 /* NOTE: defining as getter, as (even if quite unlikely), this *may* change during runtime... */
 PyDoc_STRVAR(app_translations_locales_doc,
-             "All locales currently known by Blender (i.e. available as translations).");
+             "All locales currently known by AIR Blend (i.e. available as translations).");
 static PyObject *app_translations_locales_get(PyObject *UNUSED(self), void *UNUSED(userdata))
 {
   PyObject *ret;
@@ -570,12 +570,12 @@ PyDoc_STRVAR(
     "   .. note::\n"
     "      You should really rarely need to use this function in regular addon code, as all "
     "translation should be\n"
-    "      handled by Blender internal code. The only exception are string containing formatting "
+    "      handled by AIR Blend internal code. The only exception are string containing formatting "
     "(like \"File: %r\"),\n"
     "      but you should rather use :func:`pgettext_iface`/:func:`pgettext_tip` in those cases!\n"
     "\n"
     "   .. note::\n"
-    "      Does nothing when Blender is built without internationalization support (hence always "
+    "      Does nothing when AIR Blend is built without internationalization support (hence always "
     "returns ``msgid``).\n"
     "\n"
     "   :arg msgid: The string to translate.\n"
@@ -774,7 +774,7 @@ static void app_translations_free(void *obj)
 }
 
 PyDoc_STRVAR(app_translations_doc,
-             "This object contains some data/methods regarding internationalization in Blender, "
+             "This object contains some data/methods regarding internationalization in AIR Blend, "
              "and allows every py script\n"
              "to feature translations for its own UI messages.\n"
              "\n");

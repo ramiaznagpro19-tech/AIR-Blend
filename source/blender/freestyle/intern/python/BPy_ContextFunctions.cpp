@@ -234,7 +234,7 @@ static PyObject *ContextFunctions_get_selected_fedge(PyObject * /*self*/)
 
 /*-----------------------ContextFunctions module docstring-------------------------------*/
 
-static char module_docstring[] = "The Blender Freestyle.ContextFunctions submodule\n\n";
+static char module_docstring[] = "The AIR Blend Freestyle.ContextFunctions submodule\n\n";
 
 /*-----------------------ContextFunctions module functions definitions-------------------*/
 

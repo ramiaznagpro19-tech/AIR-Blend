@@ -205,7 +205,7 @@ void DocumentImporter::finish()
       }
       float unit_factor = unit_converter.getLinearMeter();
       RNA_property_float_set(&unit_settings, scale, unit_factor);
-      fprintf(stdout, "Collada: Adjusting Blender units to Importset units: %f.\n", unit_factor);
+      fprintf(stdout, "Collada: Adjusting AIR Blend units to Importset units: %f.\n", unit_factor);
     }
 
     /* Write nodes to scene */
@@ -319,7 +319,7 @@ std::string DocumentImporter::get_import_version(const COLLADAFW::FileInfo *asse
     const COLLADAFW::String &value = valuePair->second;
     if (key == AUTORING_TOOL) {
       if (value.compare(0, BLENDER.length(), BLENDER) == 0) {
-        /* Was made with Blender, now get version string */
+        /* Was made with AIR Blend, now get version string */
         std::string v = value.substr(BLENDER.length());
         std::string::size_type n = v.find(" ");
         if (n > 0) {

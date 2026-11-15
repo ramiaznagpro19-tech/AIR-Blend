@@ -54,7 +54,7 @@ PyObject *pyunicode_from_string(const char *str)
   return PyUnicode_DecodeUTF8(str, strlen(str), "ignore");
 }
 
-/* Synchronize debug flags from a given Blender scene.
+/* Synchronize debug flags from a given AIR Blend scene.
  * Return truth when device list needs invalidation.
  */
 static void debug_flags_sync_from_scene(BL::Scene b_scene)
@@ -234,7 +234,7 @@ static PyObject *render_func(PyObject * /*self*/, PyObject *args)
   RNA_pointer_create(NULL, &RNA_Depsgraph, (ID *)PyLong_AsVoidPtr(pydepsgraph), &depsgraphptr);
   BL::Depsgraph b_depsgraph(depsgraphptr);
 
-  /* Allow Blender to execute other Python scripts. */
+  /* Allow AIR Blend to execute other Python scripts. */
   python_thread_state_save(&session->python_thread_state);
 
   session->render(b_depsgraph);
@@ -254,7 +254,7 @@ static PyObject *render_frame_finish_func(PyObject * /*self*/, PyObject *args)
 
   BlenderSession *session = (BlenderSession *)PyLong_AsVoidPtr(pysession);
 
-  /* Allow Blender to execute other Python scripts. */
+  /* Allow AIR Blend to execute other Python scripts. */
   python_thread_state_save(&session->python_thread_state);
 
   session->render_frame_finish();
@@ -983,7 +983,7 @@ static PyMethodDef methods[] = {
 static struct PyModuleDef module = {
     PyModuleDef_HEAD_INIT,
     "_cycles",
-    "Blender cycles render integration",
+    "AIR Blend cycles render integration",
     -1,
     methods,
     NULL,

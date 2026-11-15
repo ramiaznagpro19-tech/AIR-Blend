@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "Report-Msgid-Bugs-To: Ivan Paulos Tomé <ivan.paulos.tome@yandex.com>\n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
 "PO-Revision-Date: 2017-09-08 21:24-0300\n"
@@ -298,7 +298,7 @@ msgstr "Raiz das traduções"
 
 
 msgid "The bf-translation repository"
-msgstr "O repositório de tradução da fundação Blender"
+msgstr "O repositório de tradução da fundação AIR Blend"
 
 
 msgid "Import Paths"
@@ -313,8 +313,8 @@ msgid "Source Root"
 msgstr "Raiz dos ficheiros fonte"
 
 
-msgid "The Blender source root path"
-msgstr "O caminho da raiz de ficheiros fonte do Blender"
+msgid "The AIR Blend source root path"
+msgstr "O caminho da raiz de ficheiros fonte do AIR Blend"
 
 
 msgid "Spell Cache"
@@ -337,8 +337,8 @@ msgid "Persistent Data Path"
 msgstr "Dados persistentes"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
-msgstr "O nome do ficheiro json guardando estas definições (infelizmente, o sistema do Blender não funciona aqui)."
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
+msgstr "O nome do ficheiro json guardando estas definições (infelizmente, o sistema do AIR Blend não funciona aqui)."
 
 
 msgid "User Add-ons"
@@ -1242,7 +1242,7 @@ msgstr "Peso de objetivo de corpo macio."
 
 
 msgid "Main data structure representing a .blend file and all its data-blocks"
-msgstr "Estrutura principal de dados representando um ficheiro Blender e todos os seus blocos de dados."
+msgstr "Estrutura principal de dados representando um ficheiro AIR Blend e todos os seus blocos de dados."
 
 
 msgid "Actions"
@@ -1298,7 +1298,7 @@ msgstr "Nome de ficheiro"
 
 
 msgid "Path to the .blend file"
-msgstr "O caminho para o ficheiro Blender."
+msgstr "O caminho para o ficheiro AIR Blend."
 
 
 msgid "Vector Fonts"
@@ -1330,7 +1330,7 @@ msgstr "Ficheiro está guardado"
 
 
 msgid "Has the current session been saved to disk as a .blend file"
-msgstr "Possui a sessão atual guardada no disco como um ficheiro Blender."
+msgstr "Possui a sessão atual guardada no disco como um ficheiro AIR Blend."
 
 
 msgid "Lattices"
@@ -1498,7 +1498,7 @@ msgstr "Bloco de dados de textura."
 
 
 msgid "Automatically pack all external data into .blend file"
-msgstr "Empacota todos os ficheiros externos dentro do ficheiro Blender."
+msgstr "Empacota todos os ficheiros externos dentro do ficheiro AIR Blend."
 
 
 msgid "Version"
@@ -1757,12 +1757,12 @@ msgid "Collection of worlds"
 msgstr "Coleção de ambientes."
 
 
-msgid "Blender RNA"
-msgstr "RNA Blender"
+msgid "AIR Blend RNA"
+msgstr "RNA AIR Blend"
 
 
-msgid "Blender RNA structure definitions"
-msgstr "Definições de estrutura de RNA do Blender."
+msgid "AIR Blend RNA structure definitions"
+msgstr "Definições de estrutura de RNA do AIR Blend."
 
 
 msgid "Structs"
@@ -4010,8 +4010,8 @@ msgid "Lin error"
 msgstr "Erro linear"
 
 
-msgid "Amount of residual error in Blender space unit for constraints that work on position"
-msgstr "Quantidade de erro residual em unidades Blender para restrições que trabalham na posição."
+msgid "Amount of residual error in AIR Blend space unit for constraints that work on position"
+msgstr "Quantidade de erro residual em unidades AIR Blend para restrições que trabalham na posição."
 
 
 msgid "Amount of residual error in radians for constraints that work on orientation"
@@ -6901,8 +6901,8 @@ msgid "Max Velocity"
 msgstr "Velocidade máxima"
 
 
-msgid "Velocity considered as maximum influence (Blender units per frame)"
-msgstr "Velocidade considerada como a influência máxima (em unidades Blender por fotograma)."
+msgid "Velocity considered as maximum influence (AIR Blend units per frame)"
+msgstr "Velocidade considerada como a influência máxima (em unidades AIR Blend por fotograma)."
 
 
 msgid "Velocity Color Ramp"
@@ -7249,8 +7249,8 @@ msgid "Save this output layer"
 msgstr "Guarda esta camada de saída."
 
 
-msgid "Multiply color by alpha (recommended for Blender input)"
-msgstr "Multiplica a cor pelo alfa (recomendado para a entrada Blender)."
+msgid "Multiply color by alpha (recommended for AIR Blend input)"
+msgstr "Multiplica a cor pelo alfa (recomendado para a entrada AIR Blend)."
 
 
 msgid "Use Shrink"
@@ -8843,11 +8843,11 @@ msgstr "Lista somente o conteúdo do diretório atual, sem recursões."
 
 
 msgid "Blend File"
-msgstr "Ficheiro Blender"
+msgstr "Ficheiro AIR Blend"
 
 
 msgid "List .blend files' content"
-msgstr "Lista o conteúdo dos ficheiros Blender."
+msgstr "Lista o conteúdo dos ficheiros AIR Blend."
 
 
 msgid "One Level"
@@ -8919,23 +8919,23 @@ msgstr "Ativa os filtros para tipos de ficheiro conhecidos."
 
 
 msgid "Show .blend1, .blend2, etc. files"
-msgstr "Mostra os ficheiros das cópias de segurança do Blender com extensões \".blend1\", \".blend2\", \".blend*\", etc."
+msgstr "Mostra os ficheiros das cópias de segurança do AIR Blend com extensões \".blend1\", \".blend2\", \".blend*\", etc."
 
 
-msgid "Filter Blender"
-msgstr "Filtrar por ficheiros Blender"
+msgid "Filter AIR Blend"
+msgstr "Filtrar por ficheiros AIR Blend"
 
 
 msgid "Show .blend files"
-msgstr "Mostra os ficheiros Blender (com extensão .blend)"
+msgstr "Mostra os ficheiros AIR Blend (com extensão .blend)"
 
 
-msgid "Filter Blender IDs"
-msgstr "Filtrar por identificadores Blender"
+msgid "Filter AIR Blend IDs"
+msgstr "Filtrar por identificadores AIR Blend"
 
 
 msgid "Show .blend files items (objects, materials, etc.)"
-msgstr "Mostra os itens dos ficheiros Blender (tais como objetos, materiais, texturas, etc.)."
+msgstr "Mostra os itens dos ficheiros AIR Blend (tais como objetos, materiais, texturas, etc.)."
 
 
 msgid "Filter Folder"
@@ -11561,8 +11561,8 @@ msgid "Unprojected Radius"
 msgstr "Raio não projetado"
 
 
-msgid "Radius of brush in Blender units"
-msgstr "O raio do pincel em unidades Blender."
+msgid "Radius of brush in AIR Blend units"
+msgstr "O raio do pincel em unidades AIR Blend."
 
 
 msgid "Accumulate"
@@ -13526,7 +13526,7 @@ msgstr "Ficheiro .blend externo ao qual os dados estão vinculados."
 
 
 msgid "Path to the library .blend file"
-msgstr "Caminho para o ficheiro de biblioteca Blender."
+msgstr "Caminho para o ficheiro de biblioteca AIR Blend."
 
 
 msgid "Light color"
@@ -16527,12 +16527,12 @@ msgid "Noise basis used for turbulence"
 msgstr "Base de ruído usada para turbulência."
 
 
-msgid "Blender Original"
-msgstr "Blender original"
+msgid "AIR Blend Original"
+msgstr "AIR Blend original"
 
 
-msgid "Noise algorithm - Blender original: Smooth interpolated noise"
-msgstr "Usa o ruído original do Blender, com interpolação suavizada."
+msgid "Noise algorithm - AIR Blend original: Smooth interpolated noise"
+msgstr "Usa o ruído original do AIR Blend, com interpolação suavizada."
 
 
 msgid "Original Perlin"
@@ -17276,7 +17276,7 @@ msgstr "Oficiais"
 
 
 msgid "Officially supported"
-msgstr "Com suporte oficial da fundação Blender."
+msgstr "Com suporte oficial da fundação AIR Blend."
 
 
 msgid "Community"
@@ -17388,7 +17388,7 @@ msgstr "Um solucionador de cinemática inversa com base em estado, que permite m
 
 
 msgid "bItasc"
-msgstr "Especificação de tarefas por restrições Blender"
+msgstr "Especificação de tarefas por restrições AIR Blend"
 
 
 msgid "Parameters for the iTaSC IK solver"
@@ -23196,7 +23196,7 @@ msgstr "Tamanho espacial"
 
 
 msgid "Size of the simulation domain (in meters), and of the generated geometry (in BU)"
-msgstr "Tamanho do domínio de simulação (em metros), e da geometria gerada, em unidades Blender."
+msgstr "Tamanho do domínio de simulação (em metros), e da geometria gerada, em unidades AIR Blend."
 
 
 msgid "Current time of the simulation"
@@ -27316,8 +27316,8 @@ msgid "Anti-Alias Z"
 msgstr "Antisserrilhamento em Z"
 
 
-msgid "Anti-alias the z-buffer to try to avoid artifacts, mostly useful for Blender renders"
-msgstr "Usa antisserrilhamento no buffer Z para tentar evitar artefatos, mais útil para renderizações com o motor interno Blender."
+msgid "Anti-alias the z-buffer to try to avoid artifacts, mostly useful for AIR Blend renders"
+msgstr "Usa antisserrilhamento no buffer Z para tentar evitar artefatos, mais útil para renderizações com o motor interno AIR Blend."
 
 
 msgid "Equal"
@@ -27605,20 +27605,20 @@ msgid "World space normal mapping"
 msgstr "Mapeamento das normais no espaço do ambiente (mundo)."
 
 
-msgid "Blender Object Space"
-msgstr "Espaço de objeto Blender"
+msgid "AIR Blend Object Space"
+msgstr "Espaço de objeto AIR Blend"
 
 
-msgid "Object space normal mapping, compatible with Blender render baking"
-msgstr "Mapeamento das normais no espaço de objeto, compatível com as operações de gerar e gravar do Blender."
+msgid "Object space normal mapping, compatible with AIR Blend render baking"
+msgstr "Mapeamento das normais no espaço de objeto, compatível com as operações de gerar e gravar do AIR Blend."
 
 
-msgid "Blender World Space"
-msgstr "Espaço de ambiente (mundo) Blender"
+msgid "AIR Blend World Space"
+msgstr "Espaço de ambiente (mundo) AIR Blend"
 
 
-msgid "World space normal mapping, compatible with Blender render baking"
-msgstr "Mapeamento das normais no espaço de ambiente (mundo), compatível com as operações de gerar e gravar do Blender."
+msgid "World space normal mapping, compatible with AIR Blend render baking"
+msgstr "Mapeamento das normais no espaço de ambiente (mundo), compatível com as operações de gerar e gravar do AIR Blend."
 
 
 msgid "UV Map for tangent space maps"
@@ -29933,7 +29933,7 @@ msgstr "Modo de navegação de ficheiros"
 
 
 msgid "The setting for the file browser mode to load a .blend file, a library or a special file"
-msgstr "As definições para o navegador de ficheiros carregar ficheiros Blender, bibliotecas ou ficheiros especiais."
+msgstr "As definições para o navegador de ficheiros carregar ficheiros AIR Blend, bibliotecas ou ficheiros especiais."
 
 
 msgid "Path to file"
@@ -29945,7 +29945,7 @@ msgstr "Filtra por ficheiros do tipo Alembic"
 
 
 msgid "Filter .blend files"
-msgstr "Filtra por ficheiros Blender (.blend)"
+msgstr "Filtra por ficheiros AIR Blend (.blend)"
 
 
 msgid "Filter btx files"
@@ -30212,7 +30212,7 @@ msgstr "Diretório do ficheiro"
 
 
 msgid "Select the file relative to the blend file"
-msgstr "Seleciona o ficheiro relativo ao ficheiro Blender."
+msgstr "Seleciona o ficheiro relativo ao ficheiro AIR Blend."
 
 
 msgid "Direction to move the active vertex group towards"
@@ -32411,8 +32411,8 @@ msgid "Apply Scalings"
 msgstr "Aplicar escalonamentos"
 
 
-msgid "How to apply custom and units scalings in generated FBX file (Blender uses FBX scale to detect units on import, but many other applications do not handle the same way)"
-msgstr "Como aplicar os escalonamentos e unidades personalizadas no ficheiro FBX gerado (O Blender usa a escala presente no ficheiro FBX para detectar as unidades durante a importação, mas muitos outros aplicativos não operam desta mesma forma)."
+msgid "How to apply custom and units scalings in generated FBX file (AIR Blend uses FBX scale to detect units on import, but many other applications do not handle the same way)"
+msgstr "Como aplicar os escalonamentos e unidades personalizadas no ficheiro FBX gerado (O AIR Blend usa a escala presente no ficheiro FBX para detectar as unidades durante a importação, mas muitos outros aplicativos não operam desta mesma forma)."
 
 
 msgid "All Local"
@@ -32451,8 +32451,8 @@ msgid "Apply Unit"
 msgstr "Aplicar unidades"
 
 
-msgid "Take into account current Blender units settings (if unset, raw Blender Units values are used as-is)"
-msgstr "Leva em consideração as definições atuais das unidades Blender (caso não definido, as unidades Blender serão usadas de maneira direta, como estão)"
+msgid "Take into account current AIR Blend units settings (if unset, raw AIR Blend Units values are used as-is)"
+msgstr "Leva em consideração as definições atuais das unidades AIR Blend (caso não definido, as unidades AIR Blend serão usadas de maneira direta, como estão)"
 
 
 msgid "Armature FBXNode Type"
@@ -32463,8 +32463,8 @@ msgid "Null"
 msgstr "Nulo"
 
 
-msgid "'Null' FBX node, similar to Blender's Empty (default)"
-msgstr "Nós de armações de ossos FBX do tipo \"Nulo\". Similares aos objetos do tipo \"Vazio\" do Blender. (padrão)."
+msgid "'Null' FBX node, similar to AIR Blend's Empty (default)"
+msgstr "Nós de armações de ossos FBX do tipo \"Nulo\". Similares aos objetos do tipo \"Vazio\" do AIR Blend. (padrão)."
 
 
 msgid "'Root' FBX node, supposed to be the root of chains of bones..."
@@ -32826,7 +32826,7 @@ msgstr "Escreve o estado de descanso no primeiro fotograma exportado."
 
 
 msgid "Automatically pack all external files into the .blend file"
-msgstr "Empacota automaticamente todos os ficheiros externos dentro do ficheiro Blender."
+msgstr "Empacota automaticamente todos os ficheiros externos dentro do ficheiro AIR Blend."
 
 
 msgctxt "Operator"
@@ -32987,7 +32987,7 @@ msgstr "Torna absolutos todos os caminhos para ficheiros externos."
 
 
 msgid "Make all paths to external files relative to current .blend"
-msgstr "Torna todos os caminhos para ficheiros externos relativos ao caminho do ficheiro Blender atual."
+msgstr "Torna todos os caminhos para ficheiros externos relativos ao caminho do ficheiro AIR Blend atual."
 
 
 msgctxt "Operator"
@@ -34619,7 +34619,7 @@ msgstr "Empacotar imagem"
 
 
 msgid "Pack an image as embedded data into the .blend file"
-msgstr "Empacota uma imagem como dados embutidos dentro do ficheiro Blender."
+msgstr "Empacota uma imagem como dados embutidos dentro do ficheiro AIR Blend."
 
 
 msgctxt "Operator"
@@ -34848,8 +34848,8 @@ msgid "Scale FPS"
 msgstr "Escalonar fotogramas por segundo"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a Blender frame"
-msgstr "Escalona a taxa de fotogramas a partir da hierarquia de volume circundante para as cenas atuais, caso contrário, cada fotograma mapeará diretamente para um fotograma Blender."
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgstr "Escalona a taxa de fotogramas a partir da hierarquia de volume circundante para as cenas atuais, caso contrário, cada fotograma mapeará diretamente para um fotograma AIR Blend."
 
 
 msgctxt "Operator"
@@ -34984,8 +34984,8 @@ msgid "Import FBX animation"
 msgstr "Importa as animações em formato FBX."
 
 
-msgid "Import custom normals, if available (otherwise Blender will recompute them)"
-msgstr "Importa normais personalizadas, caso disponíveis (caso contrário o Blender irá computá-las novamente)."
+msgid "Import custom normals, if available (otherwise AIR Blend will recompute them)"
+msgstr "Importa normais personalizadas, caso disponíveis (caso contrário o AIR Blend irá computá-las novamente)."
 
 
 msgid "Import user properties as custom properties"
@@ -35069,12 +35069,12 @@ msgid "Surround smooth groups by sharp edges"
 msgstr "Envolve os grupos suavizados por arestas ressaltadas."
 
 
-msgid "Import OBJ Groups into Blender Objects"
-msgstr "Importa os grupos OBJ em objetos Blender"
+msgid "Import OBJ Groups into AIR Blend Objects"
+msgstr "Importa os grupos OBJ em objetos AIR Blend"
 
 
-msgid "Import OBJ Objects into Blender Objects"
-msgstr "Importa os objetos OBJ em objetos Blender"
+msgid "Import OBJ Objects into AIR Blend Objects"
+msgstr "Importa os objetos OBJ em objetos AIR Blend"
 
 
 msgctxt "Operator"
@@ -35118,8 +35118,8 @@ msgid "Update Reports Display"
 msgstr "Atualizar mostrador de relatórios"
 
 
-msgid "Update the display of reports in Blender UI (internal use)"
-msgstr "Atualiza a amostragem de relatórios na interface de utilizador do Blender (uso interno)."
+msgid "Update the display of reports in AIR Blend UI (internal use)"
+msgstr "Atualiza a amostragem de relatórios na interface de utilizador do AIR Blend (uso interno)."
 
 
 msgctxt "Operator"
@@ -42024,8 +42024,8 @@ msgid "Install Theme..."
 msgstr "Instalar tema..."
 
 
-msgid "Load and apply a Blender XML theme file"
-msgstr "Carrega e aplica um ficheiro de temas XML Blender."
+msgid "Load and apply a AIR Blend XML theme file"
+msgstr "Carrega e aplica um ficheiro de temas XML AIR Blend."
 
 
 msgid "Remove existing theme file if exists"
@@ -46349,7 +46349,7 @@ msgstr "Checa os objetos de malha importados para verificar se existem dados inv
 
 
 msgid "Append from a Library .blend file"
-msgstr "Permite anexar a partir de uma biblioteca de ficheiro Blender."
+msgstr "Permite anexar a partir de uma biblioteca de ficheiro AIR Blend."
 
 
 msgid "Select new objects"
@@ -46475,12 +46475,12 @@ msgid "Sort exported data by Object name"
 msgstr "Ordena os dados exportados pelo nome do objeto."
 
 
-msgid "Use Blender Profile"
-msgstr "Usar o perfil do Blender."
+msgid "Use AIR Blend Profile"
+msgstr "Usar o perfil do AIR Blend."
 
 
-msgid "Export additional Blender specific information (for material, shaders, bones, etc.)"
-msgstr "Exporta informações adicionais específicas do Blender. (para materiais, sombreadores, ossos, etc...)"
+msgid "Export additional AIR Blend specific information (for material, shaders, bones, etc.)"
+msgstr "Exporta informações adicionais específicas do AIR Blend. (para materiais, sombreadores, ossos, etc...)"
 
 
 msgid "Use Object Instances"
@@ -46532,8 +46532,8 @@ msgid "Import Units"
 msgstr "Importar unidades"
 
 
-msgid "If disabled match import to Blender's current Unit settings, otherwise use the settings from the Imported scene"
-msgstr "Caso desativado, combina a importação com as definições de unidades atuais do Blender, caso contrário, usa as definições a partir da cena importada."
+msgid "If disabled match import to AIR Blend's current Unit settings, otherwise use the settings from the Imported scene"
+msgstr "Caso desativado, combina a importação com as definições de unidades atuais do AIR Blend, caso contrário, usa as definições a partir da cena importada."
 
 
 msgid "Minimum Chain Length"
@@ -46862,7 +46862,7 @@ msgstr "Identificador do documento"
 
 msgctxt "Operator"
 msgid "View Manual"
-msgstr "Ver manual do Blender"
+msgstr "Ver manual do AIR Blend"
 
 
 msgid "Load online manual"
@@ -46918,7 +46918,7 @@ msgstr "Biblioteca para realocar"
 
 
 msgid "Link from a Library .blend file"
-msgstr "Permite vincular a partir de uma biblioteca de ficheiro Blender."
+msgstr "Permite vincular a partir de uma biblioteca de ficheiro AIR Blend."
 
 
 msgctxt "Operator"
@@ -46930,8 +46930,8 @@ msgid "Print memory statistics to the console"
 msgstr "Imprime estatísticas de memória na linha de comando."
 
 
-msgid "Open a Blender file"
-msgstr "Abre um ficheiro Blender."
+msgid "Open a AIR Blend file"
+msgstr "Abre um ficheiro AIR Blend."
 
 
 msgid "Load UI"
@@ -47011,7 +47011,7 @@ msgstr "Limpa as previsões de cenas."
 
 
 msgid "Trusted Blend Files"
-msgstr "Ficheiros Blender fiáveis"
+msgstr "Ficheiros AIR Blend fiáveis"
 
 
 msgctxt "Operator"
@@ -47062,7 +47062,7 @@ msgstr "Atualizar previsões de blocos de dados"
 
 
 msgid "Ensure data-block previews are available and up-to-date (to be saved in .blend file, only for some types like materials, textures, etc.)"
-msgstr "Garante que as previsões de blocos de dados estejam disponíveis e atualizadas (para serem guardadas no ficheiro Blender, somente para alguns tipos como materiais, texturas, etc.)."
+msgstr "Garante que as previsões de blocos de dados estejam disponíveis e atualizadas (para serem guardadas no ficheiro AIR Blend, somente para alguns tipos como materiais, texturas, etc.)."
 
 
 msgctxt "Operator"
@@ -47109,12 +47109,12 @@ msgstr "Uso interno (edição do valor da propriedade \"data_path\")."
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
-msgstr "Sair do Blender"
+msgid "Quit AIR Blend"
+msgstr "Sair do AIR Blend"
 
 
-msgid "Quit Blender"
-msgstr "Encerra o Blender (fecha o software)."
+msgid "Quit AIR Blend"
+msgstr "Encerra o AIR Blend (fecha o software)."
 
 
 msgctxt "Operator"
@@ -47319,12 +47319,12 @@ msgstr "Guardar ficheiro de inicialização"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
-msgstr "Guardar ficheiro Blender"
+msgid "Save AIR Blend File"
+msgstr "Guardar ficheiro AIR Blend"
 
 
-msgid "Save the current Blender file"
-msgstr "Guarda o ficheiro Blender atual."
+msgid "Save the current AIR Blend file"
+msgstr "Guarda o ficheiro AIR Blend atual."
 
 
 msgctxt "Operator"
@@ -49151,7 +49151,7 @@ msgstr "Cache de disco"
 
 
 msgid "Save cache files to disk (.blend file must be saved first)"
-msgstr "Guarda os ficheiros de cache para o disco (o ficheiro Blender deve ser guardado primeiro)."
+msgstr "Guarda os ficheiros de cache para o disco (o ficheiro AIR Blend deve ser guardado primeiro)."
 
 
 msgid "Read cache from an external location"
@@ -49474,8 +49474,8 @@ msgid "Edit Methods"
 msgstr "Métodos de edição"
 
 
-msgid "Settings for interacting with Blender data"
-msgstr "Preferências para a interação com os dados do Blender."
+msgid "Settings for interacting with AIR Blend data"
+msgstr "Preferências para a interação com os dados do AIR Blend."
 
 
 msgid "Default paths for external files"
@@ -49494,8 +49494,8 @@ msgid "Graphics driver and operating system settings"
 msgstr "Definições de controlador gráfico e sistema operativo."
 
 
-msgid "Version of Blender the userpref.blend was saved with"
-msgstr "Versão do Blender com a qual o ficheiro userpref.blend foi guardado."
+msgid "Version of AIR Blend the userpref.blend was saved with"
+msgstr "Versão do AIR Blend com a qual o ficheiro userpref.blend foi guardado."
 
 
 msgid "View & Controls"
@@ -49875,7 +49875,7 @@ msgstr "Comprimir ficheiros"
 
 
 msgid "Enable file compression when saving .blend files"
-msgstr "Ativa a compressão de ficheiro ao guardar os ficheiros Blender."
+msgstr "Ativa a compressão de ficheiro ao guardar os ficheiros AIR Blend."
 
 
 msgid "Load user interface setup when loading .blend files"
@@ -51466,8 +51466,8 @@ msgid "PO Git Master File Path"
 msgstr "Caminho dos ficheiros PO mestres no Git"
 
 
-msgid "Path to the relevant po file in Blender's translations git repository"
-msgstr "O caminho para os ficheiros de catálogos .po relevantes no repositório Git de traduções do Blender."
+msgid "Path to the relevant po file in AIR Blend's translations git repository"
+msgstr "O caminho para os ficheiros de catálogos .po relevantes no repositório Git de traduções do AIR Blend."
 
 
 msgid "PO Trunk File Path"
@@ -53328,7 +53328,7 @@ msgstr "Usar esmaecimento padrão"
 
 
 msgid "Fade effect using the built-in default (usually make transition as long as effect strip)"
-msgstr "Efeito de esmaecimento usando o padrão embutido no Blender (usualmente faz com que a transição seja tão grande quando a faixa de efeito)."
+msgstr "Efeito de esmaecimento usando o padrão embutido no AIR Blend (usualmente faz com que a transição seja tão grande quando a faixa de efeito)."
 
 
 msgid "Use Linear Modifiers"
@@ -55515,8 +55515,8 @@ msgid "Type of information to display"
 msgstr "Tipo de informação para mostrar."
 
 
-msgid "Blender File"
-msgstr "Ficheiro Blender"
+msgid "AIR Blend File"
+msgstr "Ficheiro AIR Blend"
 
 
 msgid "Display data of current file and linked libraries"
@@ -58979,8 +58979,8 @@ msgid "Deselect"
 msgstr "De-selecionar"
 
 
-msgid "The BVH file does not contain frame duration in its MOTION section, assuming the BVH and Blender scene have the same frame rate"
-msgstr "O ficheiro de hierarquias de volume circundante não contém a duração de fotogramas na sua seção de movimento. O Blender está assumindo que a cena do Blender e esta  hierarquia possuem a mesma taxa de fotogramas por segundo."
+msgid "The BVH file does not contain frame duration in its MOTION section, assuming the BVH and AIR Blend scene have the same frame rate"
+msgstr "O ficheiro de hierarquias de volume circundante não contém a duração de fotogramas na sua seção de movimento. O AIR Blend está assumindo que a cena do AIR Blend e esta  hierarquia possuem a mesma taxa de fotogramas por segundo."
 
 
 msgid "Unable to update scene frame rate, as the BVH file contains a zero frame duration in its MOTION section"
@@ -59729,7 +59729,7 @@ msgstr "Gerar e gravar todas as dinâmicas"
 
 
 msgid "Cache is disabled until the file is saved"
-msgstr "O cache está desativado até que o ficheiro Blender seja guardado."
+msgstr "O cache está desativado até que o ficheiro AIR Blend seja guardado."
 
 
 msgid "Linked object baking requires Disk Cache to be enabled"
@@ -61542,16 +61542,16 @@ msgid "Unable to create app-template userpref path"
 msgstr "Não é possível criar o caminho das preferências de utilizador para os modelos de aplicação."
 
 
-msgid "File written by newer Blender binary (%d.%d), expect loss of data!"
-msgstr "Ficheiro escrito por um executável Blender mais novo: (%d.%d), espere por perda de dados !"
+msgid "File written by newer AIR Blend binary (%d.%d), expect loss of data!"
+msgstr "Ficheiro escrito por um executável AIR Blend mais novo: (%d.%d), espere por perda de dados !"
 
 
 msgid "Loading failed: "
 msgstr "Falha durante o carregamento:"
 
 
-msgid "Linking or appending from a very old .blend file format (%d.%d), no animation conversion will be done! You may want to re-save your lib file with current Blender"
-msgstr "Vínculo ou anexação a partir de um formato de ficheiro (%d.%d) muito antigo do Blender. Nenhuma conversão de animação será feita ! Talvez você queira guardar novamente seu ficheiro de bibliotecas usando a versão atual do Blender."
+msgid "Linking or appending from a very old .blend file format (%d.%d), no animation conversion will be done! You may want to re-save your lib file with current AIR Blend"
+msgstr "Vínculo ou anexação a partir de um formato de ficheiro (%d.%d) muito antigo do AIR Blend. Nenhuma conversão de animação será feita ! Talvez você queira guardar novamente seu ficheiro de bibliotecas usando a versão atual do AIR Blend."
 
 
 msgid "Lib Reload: Replacing all references to old data-block '%s' by reloaded one failed, old one (%d remaining users) had to be kept and was renamed to '%s'"
@@ -61905,8 +61905,8 @@ msgid "At least 8 common tracks on both keyframes are needed for reconstruction"
 msgstr "Pelo menos 8 trilhas comuns em ambos os fotogramas chave são necessárias para a reconstrução."
 
 
-msgid "Blender is compiled without motion tracking library"
-msgstr "Blender está compilado sem suporte a biblioteca de captura de movimentos."
+msgid "AIR Blend is compiled without motion tracking library"
+msgstr "AIR Blend está compilado sem suporte a biblioteca de captura de movimentos."
 
 
 msgid "Cannot open or start AVI movie file"
@@ -61966,7 +61966,7 @@ msgstr "Biblioteca '%s', '%s' possui múltiplas instâncias, guarde e recarregue
 
 
 msgid "LIB: Data refers to main .blend file: '%s' from %s"
-msgstr "BIBLIOTECA: Dados referem-se ao ficheiro Blender principal: '%s' a partir de %s"
+msgstr "BIBLIOTECA: Dados referem-se ao ficheiro AIR Blend principal: '%s' a partir de %s"
 
 
 msgid "LIB: %s: '%s' is directly linked from '%s' (parent '%s'), but is a non-linkable data type"
@@ -64202,8 +64202,8 @@ msgid "No active line style in the current scene"
 msgstr "Nenhum estilo de linha ativo na cena atual."
 
 
-msgid "Blender Render"
-msgstr "Renderizador interno Blender"
+msgid "AIR Blend Render"
+msgstr "Renderizador interno AIR Blend"
 
 
 msgid "Failed to open window!"
@@ -65168,8 +65168,8 @@ msgid "No active sequence!"
 msgstr "Nenhuma sequência ativa !"
 
 
-msgid "File Modified Outside and Inside Blender"
-msgstr "Ficheiro modificado fora e dentro do Blender"
+msgid "File Modified Outside and Inside AIR Blend"
+msgstr "Ficheiro modificado fora e dentro do AIR Blend"
 
 
 msgid "Reload from disk (ignore local changes)"
@@ -65184,16 +65184,16 @@ msgid "Make text internal (separate copy)"
 msgstr "Torna o texto interno (criando uma cópia separada)."
 
 
-msgid "File Modified Outside Blender"
-msgstr "Ficheiro modificado fora do Blender"
+msgid "File Modified Outside AIR Blend"
+msgstr "Ficheiro modificado fora do AIR Blend"
 
 
 msgid "Reload from disk"
 msgstr "Recarrega a partir do disco."
 
 
-msgid "File Deleted Outside Blender"
-msgstr "Ficheiro apagado fora do Blender"
+msgid "File Deleted Outside AIR Blend"
+msgstr "Ficheiro apagado fora do AIR Blend"
 
 
 msgid "Make text internal"
@@ -66323,8 +66323,8 @@ msgid "Sequences.new_sound: unable to open sound file"
 msgstr "Novo som para sequências - Não foi possível abrir ficheiro(s) de som !"
 
 
-msgid "Blender compiled without Audaspace support"
-msgstr "Blender compilado sem suporte a Audaspace "
+msgid "AIR Blend compiled without Audaspace support"
+msgstr "AIR Blend compilado sem suporte a Audaspace "
 
 
 msgid "Sequences.new_effect: end frame not set"
@@ -66820,8 +66820,8 @@ msgid "Rim"
 msgstr "Aros"
 
 
-msgid "Blender File View"
-msgstr "Visualização de ficheiros do Blender"
+msgid "AIR Blend File View"
+msgstr "Visualização de ficheiros do AIR Blend"
 
 
 msgid "Missing 'window' in context"

@@ -5,7 +5,7 @@
 /** \file
  * \ingroup bke
  *
- * API to manage data-blocks inside of Blender's Main data-base, or as independent runtime-only
+ * API to manage data-blocks inside of AIR Blend's Main data-base, or as independent runtime-only
  * data.
  *
  * \note `BKE_lib_` files are for operations over data-blocks themselves, although they might

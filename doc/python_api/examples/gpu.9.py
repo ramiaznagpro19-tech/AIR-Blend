@@ -4,7 +4,7 @@ Rendering the 3D View into a Texture
 
 The scene has to have a camera for this example to work.
 You could also make this independent of a specific camera,
-but Blender does not expose good functions to create view and projection matrices yet.
+but AIR Blend does not expose good functions to create view and projection matrices yet.
 """
 import bpy
 import gpu

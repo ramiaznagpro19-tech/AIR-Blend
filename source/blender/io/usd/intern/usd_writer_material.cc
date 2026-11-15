@@ -89,7 +89,7 @@ struct InputSpec {
   bool set_default_value;
 };
 
-/* Map Blender socket names to USD Preview Surface InputSpec structs. */
+/* Map AIR Blend socket names to USD Preview Surface InputSpec structs. */
 using InputSpecMap = std::map<std::string, InputSpec>;
 
 /* Static function forward declarations. */
@@ -309,7 +309,7 @@ static InputSpecMap &preview_surface_input_map()
 
 /* Create an input on the given shader with name and type
  * provided by the InputSpec and assign the given value to the
- * input.  Parameters T1 and T2 indicate the Blender and USD
+ * input.  Parameters T1 and T2 indicate the AIR Blend and USD
  * value types, respectively. */
 template<typename T1, typename T2>
 void create_input(pxr::UsdShadeShader &shader, const InputSpec &spec, const void *value)
@@ -440,7 +440,7 @@ static void export_in_memory_texture(Image *ima,
   ImageFormatData imageFormat;
   BKE_image_format_from_imbuf(&imageFormat, imbuf);
 
-  /* This image in its current state only exists in Blender memory.
+  /* This image in its current state only exists in AIR Blend memory.
    * So we have to export it. The export will keep the image state intact,
    * so the exported file will not be associated with the image. */
 

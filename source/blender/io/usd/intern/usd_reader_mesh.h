@@ -1,5 +1,5 @@
 /* SPDX-License-Identifier: GPL-2.0-or-later
- * Adapted from the Blender Alembic importer implementation.
+ * Adapted from the AIR Blend Alembic importer implementation.
  * Modifications Copyright 2021 Tangent Animation and. NVIDIA Corporation. All rights reserved. */
 #pragma once
 
@@ -57,7 +57,7 @@ class USDMeshReader : public USDGeomReader {
  private:
   void process_normals_vertex_varying(Mesh *mesh);
   void process_normals_face_varying(Mesh *mesh);
-  /** Set USD uniform (per-face) normals as Blender loop normals. */
+  /** Set USD uniform (per-face) normals as AIR Blend loop normals. */
   void process_normals_uniform(Mesh *mesh);
   void readFaceSetsSample(Main *bmain, Mesh *mesh, double motionSampleTime);
   void assign_facesets_to_material_indices(double motionSampleTime,

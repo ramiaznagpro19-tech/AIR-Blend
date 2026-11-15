@@ -15,7 +15,7 @@ class PlyReadBuffer;
 
 void splitstr(std::string str, Vector<std::string> &words, const StringRef &deli);
 
-/* Main import function used from within Blender. */
+/* Main import function used from within AIR Blend. */
 void importer_main(bContext *C, const PLYImportParams &import_params, wmOperator *op);
 
 /* Used from tests, where full bContext does not exist. */

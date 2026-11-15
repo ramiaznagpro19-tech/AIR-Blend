@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
 "PO-Revision-Date: 2021-12-05 20:05+0100\n"
@@ -5714,8 +5714,8 @@ msgid "Save Screenshot"
 msgstr "Sla screenshot op"
 
 
-msgid "Capture a picture of the whole Blender window"
-msgstr "Maak een afbeelding van het hele Blender scherm"
+msgid "Capture a picture of the whole AIR Blend window"
+msgstr "Maak een afbeelding van het hele AIR Blend scherm"
 
 
 msgctxt "Operator"
@@ -6213,8 +6213,8 @@ msgid "Object Properties"
 msgstr "Objecteigenschappen"
 
 
-msgid "Open a Blender file"
-msgstr "Open een Blender Bestand"
+msgid "Open a AIR Blend file"
+msgstr "Open een AIR Blend Bestand"
 
 
 msgid "All Types"
@@ -6237,12 +6237,12 @@ msgstr "Verwijder Eigenschap"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
-msgstr "Blender Afsluiten"
+msgid "Quit AIR Blend"
+msgstr "AIR Blend Afsluiten"
 
 
-msgid "Quit Blender"
-msgstr "Blender Afsluiten"
+msgid "Quit AIR Blend"
+msgstr "AIR Blend Afsluiten"
 
 
 msgctxt "Operator"
@@ -6311,12 +6311,12 @@ msgstr "Sla Opstartbestand Op"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
-msgstr "Sla Blender Bestand op"
+msgid "Save AIR Blend File"
+msgstr "Sla AIR Blend Bestand op"
 
 
-msgid "Save the current Blender file"
-msgstr "Sla het huidige Blender bestand op"
+msgid "Save the current AIR Blend file"
+msgstr "Sla het huidige AIR Blend bestand op"
 
 
 msgctxt "Operator"
@@ -6334,8 +6334,8 @@ msgstr "Interface"
 
 
 msgctxt "Operator"
-msgid "About Blender"
-msgstr "Over Blender"
+msgid "About AIR Blend"
+msgstr "Over AIR Blend"
 
 
 msgctxt "Operator"
@@ -8229,8 +8229,8 @@ msgid "Scene Statistics"
 msgstr "Scene Statistieken"
 
 
-msgid "Blender Version"
-msgstr "Blender Versie"
+msgid "AIR Blend Version"
+msgstr "AIR Blend Versie"
 
 
 msgid "Use Custom Colors"
@@ -9251,8 +9251,8 @@ msgid "Gold"
 msgstr "Goud"
 
 
-msgid "Blender Render"
-msgstr "Blender Render"
+msgid "AIR Blend Render"
+msgstr "AIR Blend Render"
 
 
 msgid "Failed to open window!"

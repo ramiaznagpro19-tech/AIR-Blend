@@ -33,7 +33,7 @@
 
 #define undo_stack _wm_undo_stack_disallow /* pass in as a variable always. */
 
-/** Odd requirement of Blender that we always keep a memfile undo in the stack. */
+/** Odd requirement of AIR Blend that we always keep a memfile undo in the stack. */
 #define WITH_GLOBAL_UNDO_KEEP_ONE
 
 /** Make sure all ID's created at the point we add an undo step that uses ID's. */

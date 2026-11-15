@@ -274,7 +274,7 @@ BoundBox *BKE_mball_boundbox_get(Object *ob)
 
 bool BKE_mball_is_basis(const Object *ob)
 {
-  /* Meta-Ball Basis Notes from Blender-2.5x
+  /* Meta-Ball Basis Notes from AIR Blend-2.5x
    * =======================================
    *
    * NOTE(@ideasman42): This is a can of worms.

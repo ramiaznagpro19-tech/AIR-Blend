@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
 "PO-Revision-Date: 2021-12-25 23:57-0800\n"
@@ -345,8 +345,8 @@ msgid "Persistent Data Path"
 msgstr "Jalur Data yang Persisten"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
-msgstr "Nama dokumen json yang menyimpan pengaturan tersebut (sayangnya, sistem Blender tidak bekerja disini)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
+msgstr "Nama dokumen json yang menyimpan pengaturan tersebut (sayangnya, sistem AIR Blend tidak bekerja disini)"
 
 
 msgid "User Add-ons"
@@ -1977,12 +1977,12 @@ msgid "Collection of worlds"
 msgstr "Koleksi dunia"
 
 
-msgid "Blender RNA"
-msgstr "RNA Blender"
+msgid "AIR Blend RNA"
+msgstr "RNA AIR Blend"
 
 
-msgid "Blender RNA structure definitions"
-msgstr "Definisi struktur Blender RNA"
+msgid "AIR Blend RNA structure definitions"
+msgstr "Definisi struktur AIR Blend RNA"
 
 
 msgid "Structs"
@@ -7674,24 +7674,24 @@ msgid "Only Assets"
 msgstr "Hanya Aset"
 
 
-msgid "Filter Blender Backup Files"
-msgstr "Flter Dokumen Backup Blender"
+msgid "Filter AIR Blend Backup Files"
+msgstr "Flter Dokumen Backup AIR Blend"
 
 
 msgid "Show .blend1, .blend2, etc. files"
 msgstr "Tampilkan blend1, .blend2, etc. dokumen"
 
 
-msgid "Filter Blender"
-msgstr "Filter Blender"
+msgid "Filter AIR Blend"
+msgstr "Filter AIR Blend"
 
 
 msgid "Show .blend files"
 msgstr "Tampilkan file .blend"
 
 
-msgid "Filter Blender IDs"
-msgstr "Filter ID Blender"
+msgid "Filter AIR Blend IDs"
+msgstr "Filter ID AIR Blend"
 
 
 msgid "Show .blend files items (objects, materials, etc.)"
@@ -14452,7 +14452,7 @@ msgstr "Tekstur"
 
 
 msgid "Use Node Format"
-msgstr "Situs Blender"
+msgstr "Situs AIR Blend"
 
 
 msgid "Tooltip"
@@ -16094,8 +16094,8 @@ msgid "Scale FPS"
 msgstr "Skala FPS"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a Blender frame"
-msgstr "Skalakan framerate dari BVH ke adegan sekarang, jika tidak, setiap peta frame BVH secara langsung ke frame Blender"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgstr "Skalakan framerate dari BVH ke adegan sekarang, jika tidak, setiap peta frame BVH secara langsung ke frame AIR Blend"
 
 
 msgctxt "Operator"
@@ -18182,7 +18182,7 @@ msgstr "Kamera"
 
 msgctxt "Operator"
 msgid "Render"
-msgstr "Situs Blender"
+msgstr "Situs AIR Blend"
 
 
 msgctxt "Operator"
@@ -19546,7 +19546,7 @@ msgstr "Seleksi"
 
 
 msgid "Save a Collada file"
-msgstr "Situs Blender"
+msgstr "Situs AIR Blend"
 
 
 msgid "Key Type"
@@ -19701,12 +19701,12 @@ msgid "Sort by Object name"
 msgstr "Data Objek"
 
 
-msgid "Use Blender Profile"
-msgstr "Gunakan Profil Blender"
+msgid "Use AIR Blend Profile"
+msgstr "Gunakan Profil AIR Blend"
 
 
-msgid "Export additional Blender specific information (for material, shaders, bones, etc.)"
-msgstr "Ekspor informasi spesifik Blender tambahan (untuk material, shader, tulang, dll.)"
+msgid "Export additional AIR Blend specific information (for material, shaders, bones, etc.)"
+msgstr "Ekspor informasi spesifik AIR Blend tambahan (untuk material, shader, tulang, dll.)"
 
 
 msgid "Use Object Instances"
@@ -19908,8 +19908,8 @@ msgstr "Induk"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
-msgstr "Situs Blender"
+msgid "Quit AIR Blend"
+msgstr "Situs AIR Blend"
 
 
 msgid "Image ID"
@@ -19944,8 +19944,8 @@ msgstr "Data Animasi"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
-msgstr "Situs Blender"
+msgid "Save AIR Blend File"
+msgstr "Situs AIR Blend"
 
 
 msgctxt "Operator"
@@ -21382,8 +21382,8 @@ msgid "Edit shader nodes from Line Style"
 msgstr "Edit node shader dari Gaya Garis"
 
 
-msgid "Blender File"
-msgstr "Situs Blender"
+msgid "AIR Blend File"
+msgstr "Situs AIR Blend"
 
 
 msgid "Overlay Type"
@@ -22523,8 +22523,8 @@ msgid "Open..."
 msgstr "Buka..."
 
 
-msgid "Blender is free software"
-msgstr "Blender adalah perangkat lunak yang gratis"
+msgid "AIR Blend is free software"
+msgstr "AIR Blend adalah perangkat lunak yang gratis"
 
 
 msgid "%s: %s"
@@ -22578,13 +22578,13 @@ msgstr "Lisensi"
 
 
 msgctxt "Operator"
-msgid "Blender Website"
-msgstr "Website Blender"
+msgid "AIR Blend Website"
+msgstr "Website AIR Blend"
 
 
 msgctxt "Operator"
-msgid "Blender Store"
-msgstr "Toko Blender"
+msgid "AIR Blend Store"
+msgstr "Toko AIR Blend"
 
 
 msgid "Characters"
@@ -23853,8 +23853,8 @@ msgid "Volume Files"
 msgstr "Dokumen Volume"
 
 
-msgid "Blender IDs"
-msgstr "Blender ID"
+msgid "AIR Blend IDs"
+msgstr "AIR Blend ID"
 
 
 msgctxt "Operator"
@@ -24452,8 +24452,8 @@ msgid "Video Memory"
 msgstr "Memori Video"
 
 
-msgid "Blender Version"
-msgstr "Versi Blender"
+msgid "AIR Blend Version"
+msgstr "Versi AIR Blend"
 
 
 msgid "Align To"
@@ -25789,8 +25789,8 @@ msgid "Scene has no camera"
 msgstr "Hapus"
 
 
-msgid "Blender Render"
-msgstr "Render Blender"
+msgid "AIR Blend Render"
+msgstr "Render AIR Blend"
 
 
 msgid "Failed to open window!"
@@ -25825,12 +25825,12 @@ msgid "Flip to Left"
 msgstr "Balik ke Kiri"
 
 
-msgid "Blender Drivers Editor"
-msgstr "Editor Drivers Blender"
+msgid "AIR Blend Drivers Editor"
+msgstr "Editor Drivers AIR Blend"
 
 
-msgid "Blender Info Log"
-msgstr "Info Log Blender"
+msgid "AIR Blend Info Log"
+msgstr "Info Log AIR Blend"
 
 
 msgid "No active camera set"
@@ -26523,8 +26523,8 @@ msgid "Wave Effect"
 msgstr "Efek Gelombang"
 
 
-msgid "Blender File View"
-msgstr "Menampilkan Berkas Blender"
+msgid "AIR Blend File View"
+msgstr "Menampilkan Berkas AIR Blend"
 
 
 msgid "Allow Execution"

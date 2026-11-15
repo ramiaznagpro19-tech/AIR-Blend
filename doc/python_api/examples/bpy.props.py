@@ -6,7 +6,7 @@ Custom properties can be added to any subclass of an :class:`ID`,
 :class:`Bone` and :class:`PoseBone`.
 
 These properties can be animated, accessed by the user interface and python
-like Blender's existing properties.
+like AIR Blend's existing properties.
 
 .. warning::
 
@@ -14,7 +14,7 @@ like Blender's existing properties.
    This has to be carefully considered when using accessors or update callbacks.
 
    Typically, these callbacks should not affect any other data that the one owned by their data-block.
-   When accessing external non-Blender data, thread safety mechanisms should be considered.
+   When accessing external non-AIR Blend data, thread safety mechanisms should be considered.
 
 """
 

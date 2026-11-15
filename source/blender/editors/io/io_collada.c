@@ -612,8 +612,8 @@ void WM_OT_collada_export(wmOperatorType *ot)
       ot->srna,
       "use_blender_profile",
       1,
-      "Use Blender Profile",
-      "Export additional Blender specific information (for material, shaders, bones, etc.)");
+      "Use AIR Blend Profile",
+      "Export additional AIR Blend specific information (for material, shaders, bones, etc.)");
 
   RNA_def_boolean(
       ot->srna, "sort_by_name", 0, "Sort by Object name", "Sort exported data by Object name");
@@ -721,7 +721,7 @@ static int wm_collada_import_exec(bContext *C, wmOperator *op)
     return OPERATOR_FINISHED;
   }
 
-  BKE_report(op->reports, RPT_ERROR, "Parsing errors in Document (see Blender Console)");
+  BKE_report(op->reports, RPT_ERROR, "Parsing errors in Document (see AIR Blend Console)");
   return OPERATOR_CANCELLED;
 }
 
@@ -786,14 +786,14 @@ void WM_OT_collada_import(wmOperatorType *ot)
                   "import_units",
                   0,
                   "Import Units",
-                  "If disabled match import to Blender's current Unit settings, "
+                  "If disabled match import to AIR Blend's current Unit settings, "
                   "otherwise use the settings from the Imported scene");
 
   RNA_def_boolean(ot->srna,
                   "custom_normals",
                   1,
                   "Custom Normals",
-                  "Import custom normals, if available (otherwise Blender will compute them)");
+                  "Import custom normals, if available (otherwise AIR Blend will compute them)");
 
   RNA_def_boolean(ot->srna,
                   "fix_orientation",

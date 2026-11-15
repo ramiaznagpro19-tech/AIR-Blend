@@ -85,7 +85,7 @@ def setup():
     bpy.ops.scene.light_cache_bake()
 
 
-# When run from inside Blender, render and exit.
+# When run from inside AIR Blend, render and exit.
 try:
     import bpy
     inside_blender = True

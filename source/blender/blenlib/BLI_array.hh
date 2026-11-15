@@ -432,7 +432,7 @@ class Array {
 };
 
 /**
- * Same as a normal Array, but does not use Blender's guarded allocator. This is useful when
+ * Same as a normal Array, but does not use AIR Blend's guarded allocator. This is useful when
  * allocating memory with static storage duration.
  */
 template<typename T, int64_t InlineBufferCapacity = default_inline_buffer_capacity(sizeof(T))>

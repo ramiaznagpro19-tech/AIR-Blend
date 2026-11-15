@@ -227,7 +227,7 @@ const char *FallbackImpl::configGetDisplayColorSpaceName(OCIO_ConstConfigRcPtr *
 
 void FallbackImpl::configGetDefaultLumaCoefs(OCIO_ConstConfigRcPtr * /*config*/, float *rgb)
 {
-  /* Here we simply use the older Blender assumed primaries of
+  /* Here we simply use the older AIR Blend assumed primaries of
    * ITU-BT.709 / sRGB, or 0.2126729 0.7151522 0.0721750. Brute
    * force stupid, but only plausible option given no color management
    * system in place.

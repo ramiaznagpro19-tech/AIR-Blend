@@ -1164,7 +1164,7 @@ static ComponentAttributeProviders create_attribute_providers_for_mesh()
                                                    AttributeValidator{&int2_index_clamp});
 
   /* Note: This clamping is more of a last resort, since it's quite easy to make an
-   * invalid mesh that will crash Blender by arbitrarily editing this attribute. */
+   * invalid mesh that will crash AIR Blend by arbitrarily editing this attribute. */
   static const auto int_index_clamp = mf::build::SI1_SO<int, int>(
       "Index Validate",
       [](int value) { return std::max(value, 0); },

@@ -31,7 +31,7 @@ bUUID BLI_uuid_generate_random()
     struct timespec ts;
 #ifdef __APPLE__
     /* `timespec_get()` is only available on macOS 10.15+, so until that's the minimum version
-     * supported by Blender, use another function to get the timespec.
+     * supported by AIR Blend, use another function to get the timespec.
      *
      * `clock_gettime()` is only available on POSIX, so not on Windows; Linux uses the newer C++11
      * function `timespec_get()` as well. */

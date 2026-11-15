@@ -315,7 +315,7 @@ void ArmatureImporter::connect_bone_chains(bArmature *armature,
       /*
        * It is possible that the child's head is located on the parents head.
        * When this happens, then moving the parent's tail to the child's head
-       * would result in a zero sized bone and Blender would silently remove the bone.
+       * would result in a zero sized bone and AIR Blend would silently remove the bone.
        * So we move the tail only when the resulting bone has a minimum length:
        */
 
@@ -599,7 +599,7 @@ Object *ArmatureImporter::create_armature_bones(Main *bmain, SkinInfo &skin)
     /* All armatures have been created while creating the Node tree.
      * The Collada exporter currently does not create a
      * strict relationship between geometries and armatures
-     * So when we reimport a Blender collada file, then we have
+     * So when we reimport a AIR Blend collada file, then we have
      * to guess what is meant.
      * XXX This is not safe when we have more than one armatures
      * in the import. */

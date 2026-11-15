@@ -163,7 +163,7 @@ class ObjExporterWriterTest : public testing::Test {
 
 TEST_F(ObjExporterWriterTest, header)
 {
-  /* Because testing doesn't fully initialize Blender, we need the following. */
+  /* Because testing doesn't fully initialize AIR Blend, we need the following. */
   BKE_tempdir_init(nullptr);
   std::string out_file_path = get_temp_obj_filename();
   {
@@ -177,7 +177,7 @@ TEST_F(ObjExporterWriterTest, header)
   }
   const std::string result = read_temp_file_in_string(out_file_path);
   using namespace std::string_literals;
-  ASSERT_EQ(result, "# Blender "s + BKE_blender_version_string() + "\n" + "# www.blender.org\n");
+  ASSERT_EQ(result, "# AIR Blend "s + BKE_blender_version_string() + "\n" + "# www.blender.org\n");
 }
 
 TEST_F(ObjExporterWriterTest, mtllib)
@@ -259,7 +259,7 @@ class obj_exporter_regression_test : public obj_exporter_test {
  public:
   /**
    * Export the given blend file with the given parameters and
-   * test to see if it matches a golden file (ignoring any difference in Blender version number).
+   * test to see if it matches a golden file (ignoring any difference in AIR Blend version number).
    * \param blendfile: input, relative to "tests" directory.
    * \param golden_obj: expected output, relative to "tests" directory.
    * \param params: the parameters to be used for export.
@@ -272,7 +272,7 @@ class obj_exporter_regression_test : public obj_exporter_test {
     if (!load_file_and_depsgraph(blendfile)) {
       return;
     }
-    /* Because testing doesn't fully initialize Blender, we need the following. */
+    /* Because testing doesn't fully initialize AIR Blend, we need the following. */
     BKE_tempdir_init(nullptr);
     std::string tempdir = std::string(BKE_tempdir_base());
     std::string out_file_path = tempdir + BLI_path_basename(golden_obj.c_str());

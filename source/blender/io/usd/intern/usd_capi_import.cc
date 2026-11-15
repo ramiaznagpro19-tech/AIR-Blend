@@ -253,7 +253,7 @@ static void import_startjob(void *customdata, bool *stop, bool *do_update, float
   const float size = float(archive->readers().size());
   size_t i = 0;
 
-  /* Sort readers by name: when creating a lot of objects in Blender,
+  /* Sort readers by name: when creating a lot of objects in AIR Blend,
    * it is much faster if the order is sorted by name. */
   archive->sort_readers();
   *data->do_update = true;
@@ -321,7 +321,7 @@ static void import_endjob(void *customdata)
       }
 
       /* It's possible that cancellation occurred between the creation of
-       * the reader and the creation of the Blender object. */
+       * the reader and the creation of the AIR Blend object. */
       if (Object *ob = reader->object()) {
         BKE_id_free_us(data->bmain, ob);
       }
@@ -622,7 +622,7 @@ void USD_get_transform(struct CacheReader *reader,
   bool is_constant = false;
 
   /* Convert from the local matrix we obtain from USD to world coordinates
-   * for Blender. This conversion is done here rather than by Blender due to
+   * for AIR Blend. This conversion is done here rather than by AIR Blend due to
    * work around the non-standard interpretation of CONSTRAINT_SPACE_LOCAL in
    * BKE_constraint_mat_convertspace(). */
   Object *object = usd_reader->object();

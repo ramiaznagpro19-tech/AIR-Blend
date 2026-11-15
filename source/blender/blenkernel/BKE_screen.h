@@ -48,7 +48,7 @@ struct wmWindowManager;
 
 /* spacetype has everything stored to get an editor working, it gets initialized via
  * #ED_spacetypes_init() in `editors/space_api/spacetypes.c` */
-/* an editor in Blender is a combined ScrArea + SpaceType + SpaceData */
+/* an editor in AIR Blend is a combined ScrArea + SpaceType + SpaceData */
 
 #define BKE_ST_MAXNAME 64
 

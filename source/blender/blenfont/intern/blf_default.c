@@ -4,7 +4,7 @@
 /** \file
  * \ingroup blf
  *
- * Default API, that uses Blender's user preferences for the default size.
+ * Default API, that uses AIR Blend's user preferences for the default size.
  */
 
 #include "DNA_userdef_types.h"

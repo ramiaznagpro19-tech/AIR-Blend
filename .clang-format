@@ -58,7 +58,7 @@ AccessModifierOffset: -1
 # alignment to work properly with different tab width settings.
 ContinuationIndentWidth: 4
 
-# This tries to match Blender's style as much as possible. One
+# This tries to match AIR Blend's style as much as possible. One
 BreakBeforeBraces: Custom
 BraceWrapping: {
     AfterClass: 'false',
@@ -154,7 +154,7 @@ AlwaysBreakBeforeMultilineStrings: true
 # however clang-format seems to ignore this (sigh).
 PenaltyBreakString: 1000000
 
-# There are macros in Blender for custom for loops; tell Clang to treat them
+# There are macros in AIR Blend for custom for loops; tell Clang to treat them
 # like loops rather than an expression, and so put the { on the same line.
 #
 # To find these use multi-line regex search:

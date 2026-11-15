@@ -11,7 +11,7 @@ struct PLYExportParams;
 
 namespace blender::io::ply {
 
-/* Main export function used from within Blender. */
+/* Main export function used from within AIR Blend. */
 void exporter_main(bContext *C, const PLYExportParams &export_params);
 
 }  // namespace blender::io::ply

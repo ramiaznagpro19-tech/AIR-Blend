@@ -28,7 +28,7 @@ class CustomRenderEngine(bpy.types.RenderEngine):
     def __del__(self):
         pass
 
-    # This is the method called by Blender for both final renders (F12) and
+    # This is the method called by AIR Blend for both final renders (F12) and
     # small preview for materials, world and lights.
     def render(self, depsgraph):
         scene = depsgraph.scene
@@ -55,8 +55,8 @@ class CustomRenderEngine(bpy.types.RenderEngine):
 
     # For viewport renders, this method gets called once at the start and
     # whenever the scene or 3D viewport changes. This method is where data
-    # should be read from Blender in the same thread. Typically a render
-    # thread will be started to do the work while keeping Blender responsive.
+    # should be read from AIR Blend in the same thread. Typically a render
+    # thread will be started to do the work while keeping AIR Blend responsive.
     def view_update(self, context, depsgraph):
         region = context.region
         view3d = context.space_data
@@ -89,10 +89,10 @@ class CustomRenderEngine(bpy.types.RenderEngine):
             for instance in depsgraph.object_instances:
                 pass
 
-    # For viewport renders, this method is called whenever Blender redraws
+    # For viewport renders, this method is called whenever AIR Blend redraws
     # the 3D viewport. The renderer is expected to quickly draw the render
     # with OpenGL, and not perform other expensive work.
-    # Blender will draw overlays for selection and editing on top of the
+    # AIR Blend will draw overlays for selection and editing on top of the
     # rendered image automatically.
     def view_draw(self, context, depsgraph):
         region = context.region

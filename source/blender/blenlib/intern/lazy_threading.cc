@@ -7,7 +7,7 @@
 namespace blender::lazy_threading {
 
 /**
- * This uses a "raw" stack and vector so that it can be destructed after Blender checks for memory
+ * This uses a "raw" stack and vector so that it can be destructed after AIR Blend checks for memory
  * leaks. A new list of receivers is created whenever an isolated region is entered to avoid
  * deadlocks.
  */

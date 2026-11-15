@@ -85,7 +85,7 @@ class BlenderSession {
   BL::BlendData b_data;
   BL::RenderSettings b_render;
   BL::Depsgraph b_depsgraph;
-  /* NOTE: Blender's scene might become invalid after call
+  /* NOTE: AIR Blend's scene might become invalid after call
    * #free_blender_memory_if_possible(). */
   BL::Scene b_scene;
   BL::SpaceView3D b_v3d;
@@ -106,12 +106,12 @@ class BlenderSession {
 
   bool use_developer_ui;
 
-  /* Global state which is common for all render sessions created from Blender.
+  /* Global state which is common for all render sessions created from AIR Blend.
    * Usually denotes command line arguments.
    */
   static DeviceTypeMask device_override;
 
-  /* Blender is running from the command line, no windows are shown and some
+  /* AIR Blend is running from the command line, no windows are shown and some
    * extra render optimization is possible (possible to free draw-only data and
    * so on.
    */
@@ -130,7 +130,7 @@ class BlenderSession {
   void builtin_images_load();
 
   /* Is used after each render layer synchronization is done with the goal
-   * of freeing render engine data which is held from Blender side (for
+   * of freeing render engine data which is held from AIR Blend side (for
    * example, dependency graph).
    */
   void free_blender_memory_if_possible();

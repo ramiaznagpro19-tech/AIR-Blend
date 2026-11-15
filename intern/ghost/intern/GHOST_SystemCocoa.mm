@@ -446,19 +446,19 @@ extern "C" int GHOST_HACK_getFirstFile(char buf[FIRSTFILEBUFLG])
 }
 
 // The purpose of this function is to make sure closing "About" window does not
-// leave Blender with no key windows. This is needed due to a custom event loop
+// leave AIR Blend with no key windows. This is needed due to a custom event loop
 // nature of the application: for some reason only using [NSApp run] will ensure
 // correct behavior in this case.
 //
 // This is similar to an issue solved in SDL:
 //   https://bugzilla.libsdl.org/show_bug.cgi?id=1825
 //
-// Our solution is different, since we want Blender to keep track of what is
+// Our solution is different, since we want AIR Blend to keep track of what is
 // the key window during normal operation. In order to do so we exploit the
 // fact that "About" window is never in the orderedWindows array: we only force
 // key window from here if the closing one is not in the orderedWindows. This
 // saves lack of key windows when closing "About", but does not interfere with
-// Blender's window manager when closing Blender's windows.
+// AIR Blend's window manager when closing AIR Blend's windows.
 //
 // NOTE: It also receives notifiers when menus are closed on macOS 14.
 // Presumably it considers menus to be windows.
@@ -578,14 +578,14 @@ GHOST_TSuccess GHOST_SystemCocoa::init()
         NSMenu *appMenu;
 
         // Create the application menu
-        appMenu = [[NSMenu alloc] initWithTitle:@"Blender"];
+        appMenu = [[NSMenu alloc] initWithTitle:@"AIR Blend"];
 
-        [appMenu addItemWithTitle:@"About Blender"
+        [appMenu addItemWithTitle:@"About AIR Blend"
                            action:@selector(orderFrontStandardAboutPanel:)
                     keyEquivalent:@""];
         [appMenu addItem:[NSMenuItem separatorItem]];
 
-        menuItem = [appMenu addItemWithTitle:@"Hide Blender"
+        menuItem = [appMenu addItemWithTitle:@"Hide AIR Blend"
                                       action:@selector(hide:)
                                keyEquivalent:@"h"];
         [menuItem setKeyEquivalentModifierMask:NSEventModifierFlagCommand];
@@ -600,7 +600,7 @@ GHOST_TSuccess GHOST_SystemCocoa::init()
                            action:@selector(unhideAllApplications:)
                     keyEquivalent:@""];
 
-        menuItem = [appMenu addItemWithTitle:@"Quit Blender"
+        menuItem = [appMenu addItemWithTitle:@"Quit AIR Blend"
                                       action:@selector(terminate:)
                                keyEquivalent:@"q"];
         [menuItem setKeyEquivalentModifierMask:NSEventModifierFlagCommand];
@@ -651,7 +651,7 @@ GHOST_TSuccess GHOST_SystemCocoa::init()
         [NSApp setDelegate:appDelegate];
       }
 
-      // AppKit provides automatic window tabbing. Blender is a single-tabbed application
+      // AppKit provides automatic window tabbing. AIR Blend is a single-tabbed application
       // without a macOS tab bar, and should explicitly opt-out of this. This is also
       // controlled by the macOS user default #NSWindowTabbingEnabled.
       NSWindow.allowsAutomaticWindowTabbing = NO;
@@ -1403,7 +1403,7 @@ void GHOST_SystemCocoa::handleQuitRequest()
   if (window && window->getCursorGrabModeIsWarp())
     return;
 
-  // Push the event to Blender so it can open a dialog if needed
+  // Push the event to AIR Blend so it can open a dialog if needed
   pushEvent(new GHOST_Event(getMilliSeconds(), GHOST_kEventQuitRequest, window));
   m_outsideLoopEventProcessed = true;
 }

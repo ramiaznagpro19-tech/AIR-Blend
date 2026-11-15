@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -1791,8 +1791,8 @@ msgid "Sepia"
 msgstr "Sepia"
 
 
-msgid "Blender File"
-msgstr "Blender Fitxategia"
+msgid "AIR Blend File"
+msgstr "AIR Blend Fitxategia"
 
 
 msgid "Sort Alphabetically"
@@ -2348,8 +2348,8 @@ msgid "%s: failed to load '%s'"
 msgstr "%s: errorea '%s' kargatzean "
 
 
-msgid "Blender File View"
-msgstr "Blender Fitxategi Bista"
+msgid "AIR Blend File View"
+msgstr "AIR Blend Fitxategi Bista"
 
 
 msgid "unable to open the file"

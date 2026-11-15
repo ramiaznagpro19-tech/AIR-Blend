@@ -15,14 +15,14 @@ import types
 try:
     import bpy
 except ModuleNotFoundError:
-    print("Could not import bpy, some features are not available when not run from Blender.")
+    print("Could not import bpy, some features are not available when not run from AIR Blend.")
     bpy = None
 
 ###############################################################################
 # MISC
 ###############################################################################
 
-# The languages defined in Blender.
+# The languages defined in AIR Blend.
 LANGUAGES_CATEGORIES = (
     # Min completeness level, UI english label.
     (0.95, "Complete"),
@@ -90,7 +90,7 @@ if bpy is not None:
     assert bpy.app.translations.contexts.default == "*"
 DEFAULT_CONTEXT = "*"
 
-# Name of language file used by Blender to generate translations' menu.
+# Name of language file used by AIR Blend to generate translations' menu.
 LANGUAGES_FILE = "languages"
 
 # The min level of completeness for a po file to be imported from /branches into /trunk, as a percentage.
@@ -155,9 +155,9 @@ PO_HEADER_MSGSTR = (
     "Content-Transfer-Encoding: 8bit\n"
 )
 PO_HEADER_COMMENT_COPYRIGHT = (
-    "# Blender's translation file (po format).\n"
+    "# AIR Blend's translation file (po format).\n"
     "# Copyright (C) {year} The Blender Foundation.\n"
-    "# This file is distributed under the same license as the Blender package.\n"
+    "# This file is distributed under the same license as the AIR Blend package.\n"
     "#\n"
 )
 PO_HEADER_COMMENT = (
@@ -299,7 +299,7 @@ CHECK_PRINTF_FORMAT = (
     r"(?:\*|[0-9]+)?"          # Width
     r"(?:\.(?:\*|[0-9]+))?"    # Precision
     r"(?:[hljztL]|hh|ll)?"     # Length
-    r"[tldiuoxXfFeEgGaAcspn]"  # Specifiers (note we have Blender-specific %t and %l ones too)
+    r"[tldiuoxXfFeEgGaAcspn]"  # Specifiers (note we have AIR Blend-specific %t and %l ones too)
 )
 
 # Should po parser warn when finding a first letter not capitalized?
@@ -466,7 +466,7 @@ WARN_MSGID_END_POINT_ALLOWED = {
     "Circle|Alt .",
     "Float Neg. Exp.",
     "Max Ext.",
-    "Newer graphics drivers may be available to improve Blender support.",
+    "Newer graphics drivers may be available to improve AIR Blend support.",
     "Numpad .",
     "Pad.",
     "    RNA Path: bpy.types.",
@@ -496,7 +496,7 @@ PARSER_MAX_FILE_SIZE = 2 ** 24  # in bytes, i.e. 16 Mb.
 # if you’re under Windows.
 PYTHON3_EXEC = "python3"
 
-# The Blender executable!
+# The AIR Blend executable!
 # This is just an example, you’ll have to edit it in your user_settings.py!
 BLENDER_EXEC = os.path.abspath(os.path.join("foo", "bar", "blender"))
 # check for blender.bin
@@ -515,7 +515,7 @@ FRIBIDI_LIB = "libfribidi.so.0"
 # The name of the (currently empty) file that must be present in a po's directory to enable rtl-preprocess.
 RTL_PREPROCESS_FILE = "is_rtl"
 
-# The Blender source root path.
+# The AIR Blend source root path.
 # This is just an example, you’ll have to override it in your user_settings.py!
 SOURCE_DIR = os.path.abspath(os.path.join("blender"))
 
@@ -543,7 +543,7 @@ REL_GIT_I18N_DIR = os.path.join("locale")
 REL_GIT_I18N_PO_DIR = os.path.join("po")
 
 
-# The Blender source path to check for i18n macros (relative to SOURCE_DIR).
+# The AIR Blend source path to check for i18n macros (relative to SOURCE_DIR).
 REL_POTFILES_SOURCE_DIR = os.path.join("source")
 
 # Where to search for preset names (relative to SOURCE_DIR).
@@ -571,7 +571,7 @@ MO_PATH_TEMPLATE_RELATIVE = os.path.join(MO_PATH_ROOT_RELATIVE, "{}", "LC_MESSAG
 # Mo file name.
 MO_FILE_NAME = DOMAIN + ".mo"
 
-# Where to search for py files that may contain ui strings (relative to one of the 'resource_path' of Blender).
+# Where to search for py files that may contain ui strings (relative to one of the 'resource_path' of AIR Blend).
 CUSTOM_PY_UI_FILES = [
     os.path.join("scripts", "startup", "bl_ui"),
     os.path.join("scripts", "startup", "bl_operators"),

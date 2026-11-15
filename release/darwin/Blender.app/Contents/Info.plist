@@ -14,7 +14,7 @@
 			<key>CFBundleTypeIconFile</key>
 			<string>Blender_Legacy_Document_Icon.icns</string>
 			<key>CFBundleTypeName</key>
-			<string>Blender File</string>
+			<string>AIR Blend File</string>
 			<key>CFBundleTypeOSTypes</key>
 			<array>
 				<string>BLND</string>
@@ -42,7 +42,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Blender</string>
+	<string>AIR Blend</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -65,11 +65,11 @@
 			<key>UTTypeIdentifier</key>
 			<string>org.blenderfoundation.blender.file</string>
 			<key>UTTypeDescription</key>
-			<string>Blender File</string>
+			<string>AIR Blend File</string>
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconName</key>
-				<string>Blender File</string>
+				<string>AIR Blend File</string>
 				<key>UTTypeIconText</key>
 				<string>blend</string>
 			</dict>

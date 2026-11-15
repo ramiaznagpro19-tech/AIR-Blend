@@ -357,7 +357,7 @@ GHOST_ContextD3D *GHOST_SystemWin32::createOffscreenContextD3D()
   GHOST_ContextD3D *context;
 
   HWND wnd = CreateWindowA("STATIC",
-                           "Blender XR",
+                           "AIR Blend XR",
                            WS_OVERLAPPEDWINDOW | WS_CLIPSIBLINGS | WS_CLIPCHILDREN,
                            0,
                            0,
@@ -1865,7 +1865,7 @@ LRESULT WINAPI GHOST_SystemWin32::s_wndProc(HWND hwnd, uint msg, WPARAM wParam, 
           /* Mouse Tracking is now off. TrackMouseEvent restarts in MouseMove. */
           window->m_mousePresent = false;
 
-          /* Auto-focus only occurs within Blender windows, not with _other_ applications. We are
+          /* Auto-focus only occurs within AIR Blend windows, not with _other_ applications. We are
            * notified of change of focus from our console, but it returns null from GetFocus. */
           HWND old_hwnd = ::GetFocus();
           if (old_hwnd && hwnd != old_hwnd) {
@@ -2587,7 +2587,7 @@ GHOST_TSuccess GHOST_SystemWin32::showMessageBox(const char *title,
   config.pszMainIcon = (dialog_options & GHOST_DialogError   ? TD_ERROR_ICON :
                         dialog_options & GHOST_DialogWarning ? TD_WARNING_ICON :
                                                                TD_INFORMATION_ICON);
-  config.pszWindowTitle = L"Blender";
+  config.pszWindowTitle = L"AIR Blend";
   config.pszMainInstruction = title_16;
   config.pszContent = message_16;
   config.pButtons = (link) ? buttons : buttons + 1;

@@ -57,7 +57,7 @@ wmWindow *wm_window_copy_test(bContext *C, wmWindow *win_src, bool duplicate_lay
  */
 void wm_window_free(bContext *C, wmWindowManager *wm, wmWindow *win);
 /**
- * This is event from ghost, or exit-Blender operator.
+ * This is event from ghost, or exit-AIR Blend operator.
  */
 void wm_window_close(bContext *C, wmWindowManager *wm, wmWindow *win);
 
@@ -125,7 +125,7 @@ int wm_window_close_exec(bContext *C, struct wmOperator *op);
 int wm_window_fullscreen_toggle_exec(bContext *C, struct wmOperator *op);
 /**
  * Call the quit confirmation prompt or exit directly if needed. The use can
- * still cancel via the confirmation popup. Also, this may not quit Blender
+ * still cancel via the confirmation popup. Also, this may not quit AIR Blend
  * immediately, but rather schedule the closing.
  *
  * \param win: The window to show the confirmation popup/window in.

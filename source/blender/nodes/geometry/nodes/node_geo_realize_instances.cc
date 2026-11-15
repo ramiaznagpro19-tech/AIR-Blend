@@ -30,7 +30,7 @@ static void node_geo_exec(GeoNodeExecParams params)
         TIP_("This node uses legacy behavior with regards to attributes on "
              "instances. The behavior can be changed in the node properties in "
              "the side bar. In most cases the new behavior is the same for files created in "
-             "Blender 3.0"));
+             "AIR Blend 3.0"));
   }
 
   GeometrySet geometry_set = params.extract_input<GeometrySet>("Geometry");

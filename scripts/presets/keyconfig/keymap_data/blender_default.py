@@ -8,7 +8,7 @@ __all__ = (
 # ------------------------------------------------------------------------------
 # Developer Notes
 #
-# - This script should run without Blender (no references to the `bpy` module for example).
+# - This script should run without AIR Blend (no references to the `bpy` module for example).
 # - All configuration must be passed into the `generate_keymaps` function (via `Params`).
 # - Supporting some combinations of options is becoming increasingly complex,
 #   especially `Params.select_mouse` & `Params.use_fallback_tool`.
@@ -8405,7 +8405,7 @@ def generate_keymaps(params=None):
 # ------------------------------------------------------------------------------
 # Refactoring (Testing Only)
 #
-# Allows running outside of Blender to generate data for diffing
+# Allows running outside of AIR Blend to generate data for diffing
 #
 # To compare:
 #

@@ -2992,7 +2992,7 @@ static int collision_response(ParticleSimulationData *sim,
       interp_v3_v3v3(v0_tan, v0_tan, v1_tan, frict);
     }
     else {
-      /* just basic friction (unphysical due to the friction model used in Blender) */
+      /* just basic friction (unphysical due to the friction model used in AIR Blend) */
       interp_v3_v3v3(v0_tan, v0_tan, vc_tan, frict);
     }
   }

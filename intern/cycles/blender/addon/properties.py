@@ -235,7 +235,7 @@ def enum_preview_denoiser(self, context):
               "(OptiX if available, OpenImageDenoise otherwise)"),
              0)]
     else:
-        items = [('AUTO', "None", "Blender was compiled without a viewport denoiser", 0)]
+        items = [('AUTO', "None", "AIR Blend was compiled without a viewport denoiser", 0)]
 
     items += optix_items
     items += oidn_items
@@ -1616,7 +1616,7 @@ class CyclesPreferences(bpy.types.AddonPreferences):
             devices.extend(cpu_devices)
         return devices
 
-    # Refresh device list. This does not happen automatically on Blender
+    # Refresh device list. This does not happen automatically on AIR Blend
     # startup due to unstable OpenCL implementations that can cause crashes.
     def refresh_devices(self):
         import _cycles

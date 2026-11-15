@@ -47,7 +47,7 @@ if(UNIX AND
    DEFINED OPENEXR_VERSION AND
    OPENEXR_VERSION VERSION_LESS "3.0.0" AND
    EXISTS ${LIBDIR}/imath)
-  message(STATUS "Auto updating CMake configuration for Blender 3.2 libraries")
+  message(STATUS "Auto updating CMake configuration for AIR Blend 3.2 libraries")
 
   unset_cache_variables("^OPENIMAGEIO")
   unset_cache_variables("^OPENEXR")
@@ -80,7 +80,7 @@ if(UNIX AND
   DEFINED TBB_LIBRARY AND
   TBB_LIBRARY MATCHES "libtbb.a$" AND
   EXISTS ${LIBDIR}/usd/include/pxr/base/tf/pyModule.h)
-  message(STATUS "Auto updating CMake configuration for Blender 3.5 libraries")
+  message(STATUS "Auto updating CMake configuration for AIR Blend 3.5 libraries")
   unset_cache_variables("^BLOSC")
   unset_cache_variables("^BOOST")
   unset_cache_variables("^Boost")

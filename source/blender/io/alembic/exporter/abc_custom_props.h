@@ -38,8 +38,8 @@ class CustomPropertiesExporter {
    * abc_schema.getUserProperties(). */
   Alembic::Abc::OCompoundProperty abc_compound_prop_;
 
-  /* Mapping from property name in Blender to property in Alembic.
-   * Here Blender does the same as other software (Maya, Houdini), and writes
+  /* Mapping from property name in AIR Blend to property in Alembic.
+   * Here AIR Blend does the same as other software (Maya, Houdini), and writes
    * scalar properties as single-element arrays. */
   Map<std::string, Alembic::Abc::OArrayProperty> abc_properties_;
 

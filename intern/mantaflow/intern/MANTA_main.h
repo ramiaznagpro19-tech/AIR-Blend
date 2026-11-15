@@ -61,7 +61,7 @@ struct MANTA {
   bool initSndParts(FluidModifierData *fmd = nullptr);
   bool initLiquidSndParts(FluidModifierData *fmd = nullptr);
 
-  /* Pointer transfer: Mantaflow -> Blender. Use flush to reset all pointers to nullptr. */
+  /* Pointer transfer: Mantaflow -> AIR Blend. Use flush to reset all pointers to nullptr. */
   void updatePointers(FluidModifierData *fmd, bool flush = false);
 
   /* Write cache. */

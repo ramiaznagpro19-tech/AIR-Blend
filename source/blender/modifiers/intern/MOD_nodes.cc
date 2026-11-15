@@ -2039,7 +2039,7 @@ static void blendWrite(BlendWriter *writer, const ID * /*id_owner*/, const Modif
     if (!BLO_write_is_undo(writer)) {
       /* Boolean properties are added automatically for boolean node group inputs. Integer
        * properties are automatically converted to boolean sockets where applicable as well.
-       * However, boolean properties will crash old versions of Blender, so convert them to integer
+       * However, boolean properties will crash old versions of AIR Blend, so convert them to integer
        * properties for writing. The actual value is stored in the same variable for both types */
       LISTBASE_FOREACH (IDProperty *, prop, &nmd->settings.properties->data.group) {
         if (prop->type == IDP_BOOLEAN) {

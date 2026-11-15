@@ -89,7 +89,7 @@ struct NodeClipboard {
                 Map<const bNodeSocket *, bNodeSocket *> &socket_map)
   {
     /* No ID reference-counting, this node is virtual,
-     * detached from any actual Blender data currently. */
+     * detached from any actual AIR Blend data currently. */
     bNode *new_node = bke::node_copy_with_mapping(
         nullptr, node, LIB_ID_CREATE_NO_USER_REFCOUNT | LIB_ID_CREATE_NO_MAIN, false, socket_map);
     node_map.add_new(&node, new_node);

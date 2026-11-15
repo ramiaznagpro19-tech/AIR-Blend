@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
 "PO-Revision-Date: 2015-03-03 16:21+0530\n"
@@ -211,7 +211,7 @@ msgid "Additional paths to add to sys.path (';' separated)"
 msgstr "Sys.path करने के लिए जोड़ने के लिए अतिरिक्त पथ (', ' अलग है)"
 
 
-msgid "The Blender source root path"
+msgid "The AIR Blend source root path"
 msgstr "ब्लेंडर स्रोत रूट पथ"
 
 
@@ -231,7 +231,7 @@ msgid "Warn about messages not starting by a capitalized letter (with a few allo
 msgstr "संदेश (कुछ अनुमति प्राप्त अपवाद!) के साथ एक कैपिटल अक्षर से प्रारंभ नहीं करने के बारे में चेतावनी दें"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
 msgstr "एक json उन सेटिंग्स भंडारण संचिका का नाम (दुर्भाग्य से, ब्लेंडर की व्यवस्था यहां काम नहीं करता है)"
 
 
@@ -1465,7 +1465,7 @@ msgid "Show .blend1, .blend2, etc. files"
 msgstr ".blend1, .blend2, आदि संचिकाएँ दिखाएँ"
 
 
-msgid "Filter Blender"
+msgid "Filter AIR Blend"
 msgstr "निस्पादक ब्लेंडर"
 
 
@@ -2543,7 +2543,7 @@ msgid "Wood"
 msgstr "लकड़ी"
 
 
-msgid "Blender Original"
+msgid "AIR Blend Original"
 msgstr "ब्लेंडर मूल"
 
 
@@ -4557,7 +4557,7 @@ msgid "View Documentation"
 msgstr "देखें प्रलेखन"
 
 
-msgid "Open a Blender file"
+msgid "Open a AIR Blend file"
 msgstr "एक ब्लेंडर संचिका खोलें"
 
 
@@ -4570,11 +4570,11 @@ msgstr "संदर्भ"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "ब्लेंडर त्यागें"
 
 
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "ब्लेंडर त्यागें"
 
 
@@ -4636,11 +4636,11 @@ msgstr "प्राथमिक संचिका सहेजें"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
+msgid "Save AIR Blend File"
 msgstr "ब्लेंडर संचिका सहेजें"
 
 
-msgid "Save the current Blender file"
+msgid "Save the current AIR Blend file"
 msgstr "वर्तमान ब्लेंडर संचिका सहेजें"
 
 
@@ -5159,7 +5159,7 @@ msgid "Display warnings"
 msgstr "चेतावनियाँ प्रदर्शित करें"
 
 
-msgid "Blender File"
+msgid "AIR Blend File"
 msgstr "ब्लेंडर संचिका"
 
 
@@ -6786,7 +6786,7 @@ msgid "Scene has no camera"
 msgstr "दृश्य में कोई प्रतिबिंबक नहीं"
 
 
-msgid "Blender Render"
+msgid "AIR Blend Render"
 msgstr "ब्लेंडर  प्रतिपादन"
 
 
@@ -6871,7 +6871,7 @@ msgid "File '%s' could not be loaded"
 msgstr "संचिका '%s'  लोड नहीं किया जा सकता है"
 
 
-msgid "File Modified Outside and Inside Blender"
+msgid "File Modified Outside and Inside AIR Blend"
 msgstr "ब्लेंडर के अंदर और बाहर संचिका संशोधित"
 
 
@@ -6883,7 +6883,7 @@ msgid "Save to disk (ignore outside changes)"
 msgstr "डिस्क पर सहेजें (बाहरी परिवर्तनों पर ध्यान न दें)"
 
 
-msgid "File Modified Outside Blender"
+msgid "File Modified Outside AIR Blend"
 msgstr "ब्लेंडर के बाहर संचिका संशोधित की"
 
 
@@ -6891,7 +6891,7 @@ msgid "Reload from disk"
 msgstr "डिस्क से फिर से लोड करें"
 
 
-msgid "File Deleted Outside Blender"
+msgid "File Deleted Outside AIR Blend"
 msgstr "ब्लेंडर के बाहर संचिका हटाए गए"
 
 
@@ -7074,7 +7074,7 @@ msgid "Rim"
 msgstr "रिम"
 
 
-msgid "Blender File View"
+msgid "AIR Blend File View"
 msgstr "ब्लेंडर संचिका दृश्य"
 
 

@@ -1173,7 +1173,7 @@ static void collection_gobject_hash_ensure_fix(Collection *collection)
  *
  * \note This function is called from #IDTypeInfo::foreach_id callback,
  * and a difference of Object pointers is only expected in case ID remapping is happening.
- * This code is the only are in Blender allowed to (temporarily) leave the #CollectionObject list
+ * This code is the only are in AIR Blend allowed to (temporarily) leave the #CollectionObject list
  * in an inconsistent/invalid state (with NULL object pointers, or duplicates of
  * #CollectionObjects). If such invalid cases are encountered,
  * it will tag the collection objects list as dirty.

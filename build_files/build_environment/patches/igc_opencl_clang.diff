@@ -22,7 +22,7 @@ index 1e972e6..84f9674 100644
 -                  ${TARGET_BRANCH}
 -                  ret)
 +    #
-+    # Blender: We apply these manually in igc.cmake
++    # AIR Blend: We apply these manually in igc.cmake
 +    #
 +    #set(SPIRV_BASE_REVISION llvm_release_140)
 +    #set(TARGET_BRANCH "ocl-open-140")

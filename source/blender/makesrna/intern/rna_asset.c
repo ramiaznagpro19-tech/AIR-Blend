@@ -513,7 +513,7 @@ static void rna_def_asset_data(BlenderRNA *brna)
   RNA_def_property_update(prop, 0, "rna_AssetMetaData_catalog_id_update");
   RNA_def_property_ui_text(prop,
                            "Catalog UUID",
-                           "Identifier for the asset's catalog, used by Blender to look up the "
+                           "Identifier for the asset's catalog, used by AIR Blend to look up the "
                            "asset's catalog path. Must be a UUID according to RFC4122");
 
   prop = RNA_def_property(srna, "catalog_simple_name", PROP_STRING, PROP_NONE);

@@ -237,7 +237,7 @@ uint BLI_filelist_dir_contents(const char *dirname, struct direntry **r_filelist
     *r_filelist = dir_ctx.files;
   }
   else {
-    /* Keep Blender happy. Blender stores this in a variable
+    /* Keep AIR Blend happy. AIR Blend stores this in a variable
      * where 0 has special meaning..... */
     *r_filelist = MEM_mallocN(sizeof(**r_filelist), __func__);
   }

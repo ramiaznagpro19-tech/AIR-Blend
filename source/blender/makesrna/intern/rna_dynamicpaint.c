@@ -596,7 +596,7 @@ static void rna_def_canvas_surface(BlenderRNA *brna)
   RNA_def_property_clear_flag(prop, PROP_ANIMATABLE);
   RNA_def_property_boolean_sdna(prop, NULL, "flags", MOD_DPAINT_MULALPHA);
   RNA_def_property_ui_text(
-      prop, "Premultiply Alpha", "Multiply color by alpha (recommended for Blender input)");
+      prop, "Premultiply Alpha", "Multiply color by alpha (recommended for AIR Blend input)");
 
   prop = RNA_def_property(srna, "image_output_path", PROP_STRING, PROP_DIRPATH);
   RNA_def_property_string_sdna(prop, NULL, "image_output_path");
@@ -854,7 +854,7 @@ static void rna_def_dynamic_paint_brush_settings(BlenderRNA *brna)
   RNA_def_property_range(prop, 0.0001, 10.0);
   RNA_def_property_ui_range(prop, 0.1, 2.0, 5, 2);
   RNA_def_property_ui_text(
-      prop, "Max Velocity", "Velocity considered as maximum influence (Blender units per frame)");
+      prop, "Max Velocity", "Velocity considered as maximum influence (AIR Blend units per frame)");
 
   prop = RNA_def_property(srna, "use_velocity_alpha", PROP_BOOLEAN, PROP_NONE);
   RNA_def_property_boolean_sdna(prop, NULL, "flags", MOD_DPAINT_VELOCITY_ALPHA);

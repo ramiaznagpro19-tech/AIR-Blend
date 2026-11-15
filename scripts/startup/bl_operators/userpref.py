@@ -93,7 +93,7 @@ class PREFERENCES_OT_copy_prev(Operator):
             version_old = version_old - 1
 
         # Support loading 2.8x..2.9x startup (any older isn't so useful to load).
-        # NOTE: remove this block for Blender 4.0 and later.
+        # NOTE: remove this block for AIR Blend 4.0 and later.
         if version_old == 299:
             version_old = 294
             while version_old >= 280:
@@ -452,7 +452,7 @@ class PREFERENCES_OT_addon_enable(Operator):
             if info_ver > bpy.app.version:
                 self.report(
                     {'WARNING'},
-                    tip_("This script was written Blender "
+                    tip_("This script was written AIR Blend "
                          "version %d.%d.%d and might not "
                          "function (correctly), "
                          "though it is enabled")
@@ -497,7 +497,7 @@ class PREFERENCES_OT_addon_disable(Operator):
 
 
 class PREFERENCES_OT_theme_install(Operator):
-    """Load and apply a Blender XML theme file"""
+    """Load and apply a AIR Blend XML theme file"""
     bl_idname = "preferences.theme_install"
     bl_label = "Install Theme..."
 

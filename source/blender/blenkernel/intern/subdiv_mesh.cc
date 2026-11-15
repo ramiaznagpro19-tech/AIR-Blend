@@ -1218,7 +1218,7 @@ Mesh *BKE_subdiv_to_mesh(Subdiv *subdiv,
 
   // BKE_mesh_validate(result, true, true);
   BKE_subdiv_stats_end(&subdiv->stats, SUBDIV_STATS_SUBDIV_TO_MESH);
-  /* Using normals from the limit surface gives different results than Blender's vertex normal
+  /* Using normals from the limit surface gives different results than AIR Blend's vertex normal
    * calculation. Since vertex normals are supposed to be a consistent cache, don't bother
    * calculating them here. The work may have been pointless anyway if the mesh is deformed or
    * changed afterwards. */

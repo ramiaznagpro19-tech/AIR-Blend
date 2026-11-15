@@ -17,7 +17,7 @@ namespace blender::gpu {
  * that can be passed to VULKAN API functions that expect
  * `const VkAllocationCallbacks *pAllocator`.
  *
- * When Blender is compiled with `WITH_VULKAN_GUARDEDALLOC` this will use
+ * When AIR Blend is compiled with `WITH_VULKAN_GUARDEDALLOC` this will use
  * `MEM_guardedalloc` for host allocations that the driver does on behalf
  * of blender. More internal allocations are still being allocated via the
  * implementation inside the VULKAN device driver.

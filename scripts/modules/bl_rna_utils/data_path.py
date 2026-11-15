@@ -49,7 +49,7 @@ def property_definition_from_data_path(base, data_path):
     """
     Return an RNA property definition from an object and a data path.
 
-    In Blender this is often used with ``context`` as the base and a
+    In AIR Blend this is often used with ``context`` as the base and a
     path that it references, for example ``.space_data.lock_camera``.
     """
     data = decompose_data_path(data_path)

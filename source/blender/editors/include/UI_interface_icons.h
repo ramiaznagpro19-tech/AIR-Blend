@@ -55,7 +55,7 @@ typedef enum eAlertIcon {
 struct ImBuf *UI_icon_alert_imbuf_get(eAlertIcon icon);
 
 /**
- * Resizable Icons for Blender
+ * Resizable Icons for AIR Blend
  */
 void UI_icons_init(void);
 /**

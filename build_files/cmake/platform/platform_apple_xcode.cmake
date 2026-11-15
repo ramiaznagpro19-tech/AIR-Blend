@@ -8,7 +8,7 @@ if(NOT CMAKE_OSX_ARCHITECTURES)
   execute_process(COMMAND uname -m OUTPUT_VARIABLE ARCHITECTURE OUTPUT_STRIP_TRAILING_WHITESPACE)
   message(STATUS "Detected native architecture ${ARCHITECTURE}.")
   set(CMAKE_OSX_ARCHITECTURES ${ARCHITECTURE} CACHE STRING
-    "Choose the architecture you want to build Blender for: arm64 or x86_64"
+    "Choose the architecture you want to build AIR Blend for: arm64 or x86_64"
     FORCE)
 endif()
 

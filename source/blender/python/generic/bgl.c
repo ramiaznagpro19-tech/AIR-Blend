@@ -48,7 +48,7 @@ static void report_deprecated_call(const char *function_name)
   }
   char message[256];
   SNPRINTF(message,
-           "'bgl.gl%s' is deprecated and will be removed in Blender 4.0. Report or update your "
+           "'bgl.gl%s' is deprecated and will be removed in AIR Blend 4.0. Report or update your "
            "script to use 'gpu' module.",
            function_name);
   CLOG_WARN(&LOG, "%s", message);
@@ -2654,12 +2654,12 @@ PyObject *BPyInit_bgl(void)
   /* Building as a Python module loads all modules
    * (see code comment around #PyImport_ExtendInittab usage).
    * The result of this is the `bgl` warning would always show when importing `bpy`.
-   * In the case of Blender as a Python module, suppress the warning. */
+   * In the case of AIR Blend as a Python module, suppress the warning. */
 #ifndef WITH_PYTHON_MODULE
   if (GPU_backend_get_type() != GPU_BACKEND_OPENGL) {
     CLOG_WARN(&LOG,
               "'bgl' imported without an OpenGL backend. Please update your add-ons to use the "
-              "'gpu' module. In Blender 4.0 'bgl' will be removed.");
+              "'gpu' module. In AIR Blend 4.0 'bgl' will be removed.");
   }
 #endif
 

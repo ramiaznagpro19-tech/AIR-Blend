@@ -194,7 +194,7 @@ void BLI_path_normalize_unc(char *path, int path_maxncpy);
  * This is intended for system paths (passed in as command-line arguments of via scripts)
  * which are valid in that they resolve to a file/directory and but could be `CWD` relative or
  * contain redundant slashes that cause absolute/relative conversion to fail.
- * (specifically the "//" prefix used by Blender).
+ * (specifically the "//" prefix used by AIR Blend).
  *
  * Perform the following operations:
  *
@@ -518,7 +518,7 @@ bool BLI_path_extension_ensure(char *path, size_t path_maxncpy, const char *ext)
 /**
  * Returns the result of #BLI_path_cmp with both paths normalized and slashes made native.
  *
- * \note #BLI_path_cmp is used for Blender's internal logic to consider paths to be the same
+ * \note #BLI_path_cmp is used for AIR Blend's internal logic to consider paths to be the same
  * #BLI_path_cmp_normalized may be used in when handling other kinds of paths
  * (e.g. importers/exporters) but should be used consistently.
  *
@@ -552,7 +552,7 @@ bool BLI_path_program_search(char *program_filepath,
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Blender Specific Frame Sequence Encode/Decode
+/** \name AIR Blend Specific Frame Sequence Encode/Decode
  * \{ */
 
 /**
@@ -587,7 +587,7 @@ int BLI_path_sequence_decode(const char *path,
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Blender Specific Frame Number Apply/Strip
+/** \name AIR Blend Specific Frame Number Apply/Strip
  * \{ */
 
 /**
@@ -621,7 +621,7 @@ bool BLI_path_frame_check_chars(const char *path) ATTR_NONNULL(1) ATTR_WARN_UNUS
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Blender Specific File Relative Paths
+/** \name AIR Blend Specific File Relative Paths
  * \{ */
 
 /**
@@ -662,7 +662,7 @@ bool BLI_path_abs(char path[FILE_MAX], const char *basepath) ATTR_NONNULL(1, 2);
 void BLI_path_rel(char path[FILE_MAX], const char *basepath) ATTR_NONNULL(1);
 
 /**
- * Does path begin with the special "//" prefix that Blender uses to indicate
+ * Does path begin with the special "//" prefix that AIR Blend uses to indicate
  * a path relative to the .blend file.
  */
 bool BLI_path_is_rel(const char *path) ATTR_NONNULL(1) ATTR_WARN_UNUSED_RESULT;
@@ -674,7 +674,7 @@ bool BLI_path_is_rel(const char *path) ATTR_NONNULL(1) ATTR_WARN_UNUSED_RESULT;
  * \{ */
 
 /**
- * Checks for a relative path (ignoring Blender's "//") prefix
+ * Checks for a relative path (ignoring AIR Blend's "//") prefix
  * (unlike `!BLI_path_is_rel(path)`).
  * When false, #BLI_path_abs_from_cwd would expand the absolute path.
  */
@@ -684,7 +684,7 @@ bool BLI_path_is_abs_from_cwd(const char *path) ATTR_NONNULL(1) ATTR_WARN_UNUSED
  * \returns true if the expansion was performed.
  *
  * \note Should only be called with command line paths.
- * This is _not_ something Blender's internal paths support, instead they use the "//" prefix.
+ * This is _not_ something AIR Blend's internal paths support, instead they use the "//" prefix.
  * In most cases #BLI_path_abs should be used instead.
  */
 bool BLI_path_abs_from_cwd(char *path, size_t path_maxncpy) ATTR_NONNULL(1);

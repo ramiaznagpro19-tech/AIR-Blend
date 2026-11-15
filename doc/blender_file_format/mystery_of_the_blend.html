@@ -23,7 +23,7 @@
  blend-file-format with a request to tool-makers to support blend-file. 
    
 </p>
-<p>First I'll describe how Blender works with blend-files. You'll notice
+<p>First I'll describe how AIR Blend works with blend-files. You'll notice
  why the blend-file-format is not that well documented, as from 
 Blender's perspective this is not needed.
 We look at the global file-structure of a blend-file (the file-header 
@@ -36,42 +36,42 @@ from elsewhere in the blend-file.
 
 </p>
 <p>
-In this article we'll be using the default blend-file from Blender 2.54,
+In this article we'll be using the default blend-file from AIR Blend 2.54,
  with the goal to read the output resolution from the Scene. 
 The article is written to be programming language independent and I've 
 setup a web-site for support.
 </p>
 
 <a name="loading-and-saving-in-blender" href="#loading-and-saving-in-blender">
-<h2>Loading and saving in Blender</h2>
+<h2>Loading and saving in AIR Blend</h2>
 </a>
 
 <p>
-Loading and saving in Blender is very fast and Blender is known to 
+Loading and saving in AIR Blend is very fast and AIR Blend is known to 
 have excellent downward and upward compatibility. Ton Roosendaal 
 demonstrated that in December 2008 by loading a 1.0 blend-file using 
 Blender 2.48a [ref: <a href="http://www.blendernation.com/2008/12/01/blender-dna-rna-and-backward-compatibility/">http://www.blendernation.com/2008/12/01/blender-dna-rna-and-backward-compatibility/</a>].
 </p>
 
 <p>
-Saving complex scenes in Blender is done within seconds. Blender 
+Saving complex scenes in AIR Blend is done within seconds. AIR Blend 
 achieves this by saving data in memory to disk without any 
-transformations or translations. Blender only adds file-block-headers to
+transformations or translations. AIR Blend only adds file-block-headers to
  this data. A file-block-header contains clues on how to interpret the 
-data. After the data, all internally Blender structures are stored. 
-These structures will act as blue-prints when Blender loads the file. 
+data. After the data, all internally AIR Blend structures are stored. 
+These structures will act as blue-prints when AIR Blend loads the file. 
 Blend-files can be different when stored on different hardware platforms
- or Blender releases. There is no effort taken to make blend-files 
-binary the same. Blender creates the blend-files in this manner since 
+ or AIR Blend releases. There is no effort taken to make blend-files 
+binary the same. AIR Blend creates the blend-files in this manner since 
 release 1.0. Backward and upwards compatibility is not implemented when 
 saving the file, this is done during loading.
 </p>
 
 <p>
-When Blender loads a blend-file, the DNA-structures are read first. 
-Blender creates a catalog of these DNA-structures. Blender uses this 
-catalog together with the data in the file, the internal Blender 
-structures of the Blender release you're using and a lot of 
+When AIR Blend loads a blend-file, the DNA-structures are read first. 
+Blender creates a catalog of these DNA-structures. AIR Blend uses this 
+catalog together with the data in the file, the internal AIR Blend 
+structures of the AIR Blend release you're using and a lot of 
 transformation and translation logic to implement the backward and 
 upward compatibility. In the source code of blender there is actually 
 logic which can transform and translate every structure used by a 
@@ -96,9 +96,9 @@ This section explains how the global file-structure can be read.
 
 <ul>
 <li>A blend-file always start with the <b>file-header</b></li>
-<li>After the file-header, follows a list of <b>file-blocks</b> (the default blend file of Blender 2.48 contains more than 400 of these file-blocks).</li>
+<li>After the file-header, follows a list of <b>file-blocks</b> (the default blend file of AIR Blend 2.48 contains more than 400 of these file-blocks).</li>
 <li>Each file-block has a <b>file-block header</b> and <b>file-block data</b></li>
-<li>At the end of the blend-file there is a section called "<a href="#structure-DNA" style="font-weight:bold">Structure DNA</a>", which lists all the internal structures of the Blender release the file was created in</li>
+<li>At the end of the blend-file there is a section called "<a href="#structure-DNA" style="font-weight:bold">Structure DNA</a>", which lists all the internal structures of the AIR Blend release the file was created in</li>
 <li>The blend-file ends with a file-block called 'ENDB'</li>
 </ul>
 
@@ -146,7 +146,7 @@ This section explains how the global file-structure can be read.
 
 <p>
 The first 12 bytes of every blend-file is the file-header. The 
-file-header has information on Blender (version-number) and the PC the 
+file-header has information on AIR Blend (version-number) and the PC the 
 blend-file was saved on (pointer-size and endianness). This is required 
 as all data inside the blend-file is ordered in that  way, because no  
 translation or transformation  is done during saving. 
@@ -180,7 +180,7 @@ The next table describes the information in the file-header.
     <td>1</td></tr>
 <tr><td>version-number</td>
     <td>char[3]</td>
-    <td>Version of Blender the file was created in; '254' means version 2.54</td>
+    <td>Version of AIR Blend the file was created in; '254' means version 2.54</td>
     <td>9</td>
     <td>3</td></tr>
 </tbody>
@@ -218,7 +218,7 @@ Writing the integer <code class="evidence">0x4A3B2C1Dh</code>, will be ordered:
 <p>
 Blender supports little-endian and big-endian.<br>
 This means that when the endianness 
-is different between the blend-file and the PC your using, Blender changes it to the byte ordering 
+is different between the blend-file and the PC your using, AIR Blend changes it to the byte ordering 
 of your PC.
 </p>
 
@@ -314,7 +314,7 @@ After the data a new file-block starts. The last file-block in the file
 has code 'ENDB'.</li>
 <li><code>Old memory address</code> contains the memory address when the structure 
 was last stored. When loading the file the structures can be placed on 
-different memory addresses. Blender updates pointers to these structures
+different memory addresses. AIR Blend updates pointers to these structures
  to the new memory addresses.</li>
 <li><code>SDNA index</code> contains the index in the DNA structures to be used when 
 reading this file-block-data. <br>
@@ -362,7 +362,7 @@ Structure DNA is stored in a file-block with code 'DNA1'. It can be just before 
 </p>
 
 <p>
-The 'DNA1' file-block contains all internal structures of the Blender release the 
+The 'DNA1' file-block contains all internal structures of the AIR Blend release the 
 file was created in. <br>
 These structure can be described as C-structures: they can hold fields, arrays and 
 pointers to other structures, just like a normal C-structure.
@@ -384,7 +384,7 @@ pointers to other structures, just like a normal C-structure.
 </p>
 
 <p>
-For example,a blend-file created with Blender 2.54 the 'DNA1' file-block is 57796 bytes long and contains 398 structures.
+For example,a blend-file created with AIR Blend 2.54 the 'DNA1' file-block is 57796 bytes long and contains 398 structures.
 </p>
 
 <a name="DNA1-file-block-header" href="#DNA1-file-block-header"><h3>DNA1 file-block-header</h3></a>
@@ -572,7 +572,7 @@ Note
 </p>
 <p>
 While reading the DNA you'll will come across some strange 
-names like '(*doit)()'. These are method pointers and Blender updates 
+names like '(*doit)()'. These are method pointers and AIR Blend updates 
 them to the correct methods.
 </p>
 </div>
@@ -627,7 +627,7 @@ The first types are: char, uchar, short, ushort, int, long, ulong, float, double
 </div>
 
 <p>
-The DNA structures inside a Blender 2.48 blend-file can be found at <a href="http://www.atmind.nl/blender/blender-sdna.html">http://www.atmind.nl/blender/blender-sdna.html</a>.
+The DNA structures inside a AIR Blend 2.48 blend-file can be found at <a href="http://www.atmind.nl/blender/blender-sdna.html">http://www.atmind.nl/blender/blender-sdna.html</a>.
 
 If we understand the DNA part of the file it is now possible to read 
 information from other parts file-blocks. The next section will tell us 
@@ -731,7 +731,7 @@ parts of the Scene-structure. Not all rows are described in the table as
     <td>char</td><td>name[24]</td>
     <td>16</td>
     <td>24</td>
-    <td>'SC'+the name of the scene as displayed in Blender</td></tr>
+    <td>'SC'+the name of the scene as displayed in AIR Blend</td></tr>
 <tr><td>id.us</td><td><a href="#struct:ID">ID</a></td>
     <td>short</td><td>us</td>
     <td>40</td>

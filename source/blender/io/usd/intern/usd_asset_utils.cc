@@ -125,7 +125,7 @@ static std::string copy_udim_asset_to_directory(const char *src_path,
   char ret_udim_path[FILE_MAX];
   BLI_path_join(ret_udim_path, sizeof(ret_udim_path), dest_dir_path, src_file_name.c_str());
 
-  /* Blender only recognizes the <UDIM> pattern, not the
+  /* AIR Blend only recognizes the <UDIM> pattern, not the
    * alternative UDIM_PATTERN2, so we make sure the returned
    * path has the former. */
   splitPath = split_udim_pattern(ret_udim_path);

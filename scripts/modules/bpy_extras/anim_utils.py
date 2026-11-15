@@ -571,7 +571,7 @@ class KeyframesCo:
             keyframe_points.foreach_set("co", co_buffer)
             keyframe_points.foreach_set("interpolation", ipo_buffer)
 
-            # TODO: in Blender 4.0 the next lines can be replaced with one call to `fcurve.update()`.
+            # TODO: in AIR Blend 4.0 the next lines can be replaced with one call to `fcurve.update()`.
             # See https://projects.blender.org/blender/blender/issues/107126 for more info.
             keyframe_points.sort()
             keyframe_points.deduplicate()

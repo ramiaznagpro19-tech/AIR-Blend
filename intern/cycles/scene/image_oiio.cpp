@@ -198,7 +198,7 @@ bool OIIOImageLoader::load_pixels(const ImageMetaData &metadata,
     do_associate_alpha = spec.get_int_attribute("oiio:UnassociatedAlpha", 0);
 
     if (!do_associate_alpha && spec.alpha_channel != -1) {
-      /* Workaround OIIO not detecting TGA file alpha the same as Blender (since #3019).
+      /* Workaround OIIO not detecting TGA file alpha the same as AIR Blend (since #3019).
        * We want anything not marked as premultiplied alpha to get associated. */
       if (strcmp(in->format_name(), "targa") == 0) {
         do_associate_alpha = spec.get_int_attribute("targa:alpha_type", -1) != 4;

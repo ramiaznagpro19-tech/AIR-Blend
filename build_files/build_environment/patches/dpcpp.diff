@@ -5,7 +5,7 @@ diff -Naur llvm-sycl-nightly-20220501.orig\opencl/CMakeLists.txt llvm-sycl-night
    )
  endif()
 
-+# Blender code below is determined to use FetchContent_Declare
++# AIR Blend code below is determined to use FetchContent_Declare
 +# temporarily allow it (but feed it our downloaded tarball
 +# in the OpenCL_HEADERS variable
 +set(FETCHCONTENT_FULLY_DISCONNECTED OFF)
@@ -28,7 +28,7 @@ diff -Naur llvm-sycl-nightly-20220208.orig/libdevice/cmake/modules/SYCLLibdevice
  add_custom_target(libsycldevice-spv)
  
 -add_custom_target(libsycldevice DEPENDS
-+# Blender: add ALL here otherwise this target will not build
++# AIR Blend: add ALL here otherwise this target will not build
 +# and cause an error due to missing files during the install phase.
 +add_custom_target(libsycldevice ALL DEPENDS
    libsycldevice-obj

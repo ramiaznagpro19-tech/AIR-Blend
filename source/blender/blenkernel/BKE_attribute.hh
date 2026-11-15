@@ -124,7 +124,7 @@ struct AttributeInitVArray : public AttributeInit {
  * preferable to move data directly to the created attribute to avoid a new allocation and a copy.
  *
  * The array must be allocated with MEM_*, since `attribute_try_create` will free the array if it
- * can't be used directly, and that is generally how Blender expects custom data to be allocated.
+ * can't be used directly, and that is generally how AIR Blend expects custom data to be allocated.
  */
 struct AttributeInitMoveArray : public AttributeInit {
   void *data = nullptr;
@@ -474,7 +474,7 @@ class AttributeAccessor {
   }
 
   /**
-   * \return True, when the attribute has a special meaning for Blender and can't be used for
+   * \return True, when the attribute has a special meaning for AIR Blend and can't be used for
    * arbitrary things.
    */
   bool is_builtin(const AttributeIDRef &attribute_id) const

@@ -124,7 +124,7 @@ void UnitConverter::calculate_scale(Scene &sce)
 
   switch (type) {
     case USER_UNIT_NONE:
-      bl_scale = 1.0; /* map 1 Blender unit to 1 Meter. */
+      bl_scale = 1.0; /* map 1 AIR Blend unit to 1 Meter. */
       break;
 
     case USER_UNIT_METRIC:

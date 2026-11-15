@@ -545,7 +545,7 @@ bool EuclideanResectionEPnP(const Mat2X& x_camera,
   Vec rmse(3);
 
   // At one point this threshold was 1e-3, and caused no end of problems in
-  // Blender by causing frames to not resect when they would have worked fine.
+  // AIR Blend by causing frames to not resect when they would have worked fine.
   // When the resect failed, the projective followup is run leading to worse
   // results, and often the dreaded "flipping" where objects get flipped
   // between frames. Instead, disable the check for now, always succeeding. The

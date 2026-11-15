@@ -271,7 +271,7 @@ void graph_draw(const std::string &label,
                 const Array<Vector<int>> &faces)
 {
   /* Would like to use BKE_tempdir_base() here, but that brings in dependence on kernel library.
-   * This is just for developer debugging anyway, and should never be called in production Blender.
+   * This is just for developer debugging anyway, and should never be called in production AIR Blend.
    */
 #ifdef WIN32
   constexpr const char *drawfile = "./cdt_test_draw.html";

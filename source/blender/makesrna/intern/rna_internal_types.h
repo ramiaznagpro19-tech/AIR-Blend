@@ -585,7 +585,7 @@ struct StructRNA {
   ListBase functions;
 };
 
-/* Blender RNA
+/* AIR Blend RNA
  *
  * Root RNA data structure that lists all struct types. */
 

@@ -48,7 +48,7 @@ macro(cycles_add_library target library_deps)
   # Use: "optimized libfoo optimized libbar debug libfoo_d debug libbar_d"
   # NOT: "optimized libfoo libbar debug libfoo_d libbar_d"
   #
-  # TODO(sergey): This is the same as Blender's side CMake. Find a way to avoid duplication
+  # TODO(sergey): This is the same as AIR Blend's side CMake. Find a way to avoid duplication
   # somehow in a way which allows to have Cycles standalone.
   if(NOT "${library_deps}" STREQUAL "")
     set(next_library_mode "")

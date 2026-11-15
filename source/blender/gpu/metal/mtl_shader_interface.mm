@@ -610,7 +610,7 @@ MTLVertexFormat mtl_datatype_to_vertex_type(eMTLDataType type)
     case MTL_DATATYPE_HALF2x2:
     case MTL_DATATYPE_HALF3x2:
     case MTL_DATATYPE_HALF4x2:
-      BLI_assert_msg(false, "Unsupported raw vertex attribute types in Blender.");
+      BLI_assert_msg(false, "Unsupported raw vertex attribute types in AIR Blend.");
       return MTLVertexFormatInvalid;
 
     case MTL_DATATYPE_SHORT3:
@@ -640,7 +640,7 @@ MTLVertexFormat mtl_datatype_to_vertex_type(eMTLDataType type)
     case MTL_DATATYPE_FLOAT2x2:
     case MTL_DATATYPE_FLOAT3x2:
     case MTL_DATATYPE_FLOAT4x2:
-      BLI_assert_msg(false, "Unsupported raw vertex attribute types in Blender.");
+      BLI_assert_msg(false, "Unsupported raw vertex attribute types in AIR Blend.");
       return MTLVertexFormatInvalid;
 
     case MTL_DATATYPE_INT3:
@@ -665,7 +665,7 @@ MTLVertexFormat mtl_datatype_to_vertex_type(eMTLDataType type)
     case MTL_DATATYPE_FLOAT3x4:
     case MTL_DATATYPE_FLOAT4x3:
     case MTL_DATATYPE_FLOAT4x4:
-      BLI_assert_msg(false, "Unsupported raw vertex attribute types in Blender.");
+      BLI_assert_msg(false, "Unsupported raw vertex attribute types in AIR Blend.");
       return MTLVertexFormatInvalid;
 
     case MTL_DATATYPE_LONG3:

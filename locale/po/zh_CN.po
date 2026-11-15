@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
 "PO-Revision-Date: \n"
@@ -413,8 +413,8 @@ msgid "Source Root"
 msgstr "源文件根目录"
 
 
-msgid "The Blender source root path"
-msgstr "Blender 源文件的根路径"
+msgid "The AIR Blend source root path"
+msgstr "AIR Blend 源文件的根路径"
 
 
 msgid "Spell Cache"
@@ -437,8 +437,8 @@ msgid "Persistent Data Path"
 msgstr "持久数据路径"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
-msgstr "存储这些设置的 json 文件的名称 (但 Blender 的系统对此不支持)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
+msgstr "存储这些设置的 json 文件的名称 (但 AIR Blend 的系统对此不支持)"
 
 
 msgid "User Add-ons"
@@ -1101,7 +1101,7 @@ msgid "Catalog UUID"
 msgstr "目录 UUID"
 
 
-msgid "Identifier for the asset's catalog, used by Blender to look up the asset's catalog path. Must be a UUID according to RFC4122"
+msgid "Identifier for the asset's catalog, used by AIR Blend to look up the asset's catalog path. Must be a UUID according to RFC4122"
 msgstr "资产目录的标识符，用于查找资产的目录路径。必须是符合RFC4122的UUID"
 
 
@@ -1309,7 +1309,7 @@ msgid "Is Internal"
 msgstr "是内部"
 
 
-msgid "The attribute is meant for internal use by Blender"
+msgid "The attribute is meant for internal use by AIR Blend"
 msgstr "该属性供Blender内部使用"
 
 
@@ -2521,12 +2521,12 @@ msgid "Collection of worlds"
 msgstr "世界环境集合"
 
 
-msgid "Blender RNA"
-msgstr "Blender RNA"
+msgid "AIR Blend RNA"
+msgstr "AIR Blend RNA"
 
 
-msgid "Blender RNA structure definitions"
-msgstr "Blender 的 RNA 结构类型定义"
+msgid "AIR Blend RNA structure definitions"
+msgstr "AIR Blend 的 RNA 结构类型定义"
 
 
 msgid "Structs"
@@ -5719,8 +5719,8 @@ msgid "sRGB display space with Filmic view transform"
 msgstr "带有Filmic视图变换的sRGB显示空间"
 
 
-msgid "Rec. 709 (Full Range), Blender native linear space"
-msgstr "Rec. 709 (全范围), Blender 原生线性空间"
+msgid "Rec. 709 (Full Range), AIR Blend native linear space"
+msgstr "Rec. 709 (全范围), AIR Blend 原生线性空间"
 
 
 msgid "Linear ACES"
@@ -6092,7 +6092,7 @@ msgid "Lin error"
 msgstr "连接错误"
 
 
-msgid "Amount of residual error in Blender space unit for constraints that work on position"
+msgid "Amount of residual error in AIR Blend space unit for constraints that work on position"
 msgstr "位置上的一定错误约束数量"
 
 
@@ -10125,7 +10125,7 @@ msgid "Max Velocity"
 msgstr "最大速度"
 
 
-msgid "Velocity considered as maximum influence (Blender units per frame)"
+msgid "Velocity considered as maximum influence (AIR Blend units per frame)"
 msgstr "作为最大影响量的速率 (Blender单位/帧)"
 
 
@@ -10497,8 +10497,8 @@ msgid "Premultiply Alpha"
 msgstr "预乘 Alpha"
 
 
-msgid "Multiply color by alpha (recommended for Blender input)"
-msgstr "叠加颜色的 Alpha 值 (推荐用于 Blender 输入)"
+msgid "Multiply color by alpha (recommended for AIR Blend input)"
+msgstr "叠加颜色的 Alpha 值 (推荐用于 AIR Blend 输入)"
 
 
 msgid "Use Shrink"
@@ -12836,7 +12836,7 @@ msgid "Hide .blend files items that are not data-blocks with asset metadata"
 msgstr "隐藏没有资产元数据的数据块的 .blend 文件项"
 
 
-msgid "Filter Blender Backup Files"
+msgid "Filter AIR Blend Backup Files"
 msgstr "过滤Blender备份文件"
 
 
@@ -12844,16 +12844,16 @@ msgid "Show .blend1, .blend2, etc. files"
 msgstr "显示 .blend1, .blend2, 等备份文件"
 
 
-msgid "Filter Blender"
-msgstr "过滤 Blender 文件"
+msgid "Filter AIR Blend"
+msgstr "过滤 AIR Blend 文件"
 
 
 msgid "Show .blend files"
 msgstr "显示. blend 文件"
 
 
-msgid "Filter Blender IDs"
-msgstr "过滤 Blender ID"
+msgid "Filter AIR Blend IDs"
+msgstr "过滤 AIR Blend ID"
 
 
 msgid "Show .blend files items (objects, materials, etc.)"
@@ -13284,8 +13284,8 @@ msgid "Export Mantaflow Script"
 msgstr "导出Mantaflow脚本"
 
 
-msgid "Generate and export Mantaflow script from current domain settings during bake. This is only needed if you plan to analyze the cache (e.g. view grids, velocity vectors, particles) in Mantaflow directly (outside of Blender) after baking the simulation"
-msgstr "在烘焙期间从当前域设置生成和导出Mantaflow脚本。只有在烘焙模拟后直接(在 Blender 外部)分析流体流中的缓存(比如视图网格、速度矢量、粒子)时，才需要这样做"
+msgid "Generate and export Mantaflow script from current domain settings during bake. This is only needed if you plan to analyze the cache (e.g. view grids, velocity vectors, particles) in Mantaflow directly (outside of AIR Blend) after baking the simulation"
+msgstr "在烘焙期间从当前域设置生成和导出Mantaflow脚本。只有在烘焙模拟后直接(在 AIR Blend 外部)分析流体流中的缓存(比如视图网格、速度矢量、粒子)时，才需要这样做"
 
 
 msgid "Flame Grid"
@@ -20241,7 +20241,7 @@ msgid "Unprojected Radius"
 msgstr "未投影半径"
 
 
-msgid "Radius of brush in Blender units"
+msgid "Radius of brush in AIR Blend units"
 msgstr "笔刷半径(单位为BU)"
 
 
@@ -23452,7 +23452,7 @@ msgid "Path to the library .blend file"
 msgstr ". blend 库文件路径"
 
 
-msgid "Version of Blender the library .blend was saved with"
+msgid "Version of AIR Blend the library .blend was saved with"
 msgstr "保存该.blend文件的Blender程序版本"
 
 
@@ -28127,11 +28127,11 @@ msgid "Noise basis used for turbulence"
 msgstr "用于湍流的噪波基数"
 
 
-msgid "Blender Original"
-msgstr "Blender 原生"
+msgid "AIR Blend Original"
+msgstr "AIR Blend 原生"
 
 
-msgid "Noise algorithm - Blender original: Smooth interpolated noise"
+msgid "Noise algorithm - AIR Blend original: Smooth interpolated noise"
 msgstr "噪波算法 - Blender原始型: 平滑差值噪波"
 
 
@@ -29037,7 +29037,7 @@ msgid "Asset Blend Path"
 msgstr "资产blend路径"
 
 
-msgid "Full path to the Blender file containing the active asset"
+msgid "Full path to the AIR Blend file containing the active asset"
 msgstr "包含活动资产的Blender文件的完整路径"
 
 
@@ -29837,7 +29837,7 @@ msgid "Image Size"
 msgstr "图像尺寸"
 
 
-msgid "True if this preview icon has been modified by py script, and is no more auto-generated by Blender"
+msgid "True if this preview icon has been modified by py script, and is no more auto-generated by AIR Blend"
 msgstr "如果此预览图标已被 py 脚本修改，则为真 ，并且不再由 Blender自动生成"
 
 
@@ -29845,8 +29845,8 @@ msgid "Custom Image"
 msgstr "自定义图像"
 
 
-msgid "True if this preview image has been modified by py script, and is no more auto-generated by Blender"
-msgstr "如果此预览图像已被 py 脚本修改，则为真，并且不再由 Blender 自动生成"
+msgid "True if this preview image has been modified by py script, and is no more auto-generated by AIR Blend"
+msgstr "如果此预览图像已被 py 脚本修改，则为真，并且不再由 AIR Blend 自动生成"
 
 
 msgid "Parameters defining how an Image data-block is used by another data-block"
@@ -43436,7 +43436,7 @@ msgid "Anti-Alias Z"
 msgstr "Z 向抗锯齿"
 
 
-msgid "Anti-alias the z-buffer to try to avoid artifacts, mostly useful for Blender renders"
+msgid "Anti-alias the z-buffer to try to avoid artifacts, mostly useful for AIR Blend renders"
 msgstr "对z向缓存进行抗锯齿来尽量避免错误，对Blender render最有效"
 
 
@@ -46152,20 +46152,20 @@ msgid "World space normal mapping"
 msgstr "世界空间法线映射"
 
 
-msgid "Blender Object Space"
-msgstr "Blender 物体空间"
+msgid "AIR Blend Object Space"
+msgstr "AIR Blend 物体空间"
 
 
-msgid "Object space normal mapping, compatible with Blender render baking"
-msgstr "物体空间法线映射，与 Blender 渲染烘焙兼容"
+msgid "Object space normal mapping, compatible with AIR Blend render baking"
+msgstr "物体空间法线映射，与 AIR Blend 渲染烘焙兼容"
 
 
-msgid "Blender World Space"
-msgstr "Blender 世界坐标"
+msgid "AIR Blend World Space"
+msgstr "AIR Blend 世界坐标"
 
 
-msgid "World space normal mapping, compatible with Blender render baking"
-msgstr "世界空间法线映射, 与 Blender 渲染烘焙兼容"
+msgid "World space normal mapping, compatible with AIR Blend render baking"
+msgstr "世界空间法线映射, 与 AIR Blend 渲染烘焙兼容"
 
 
 msgid "UV Map for tangent space maps"
@@ -53322,8 +53322,8 @@ msgid "Apply Scalings"
 msgstr "应用缩放"
 
 
-msgid "How to apply custom and units scalings in generated FBX file (Blender uses FBX scale to detect units on import, but many other applications do not handle the same way)"
-msgstr "如何在生成的FBX文件(Blender 导出时使用 FBX 比例来检测单位，但是其它程序处理方式不一样) 应用自定义和单位缩放"
+msgid "How to apply custom and units scalings in generated FBX file (AIR Blend uses FBX scale to detect units on import, but many other applications do not handle the same way)"
+msgstr "如何在生成的FBX文件(AIR Blend 导出时使用 FBX 比例来检测单位，但是其它程序处理方式不一样) 应用自定义和单位缩放"
 
 
 msgid "All Local"
@@ -53362,24 +53362,24 @@ msgid "Apply Unit"
 msgstr "应用单位"
 
 
-msgid "Take into account current Blender units settings (if unset, raw Blender Units values are used as-is)"
-msgstr "考虑到当前的 Blender 单位设置 (如果未设置, 则按原样使用原始 Blender单位)"
+msgid "Take into account current AIR Blend units settings (if unset, raw AIR Blend Units values are used as-is)"
+msgstr "考虑到当前的 AIR Blend 单位设置 (如果未设置, 则按原样使用原始 Blender单位)"
 
 
 msgid "Armature FBXNode Type"
 msgstr "骨架FBXNode类型"
 
 
-msgid "FBX type of node (object) used to represent Blender's armatures (use the Null type unless you experience issues with the other app, as other choices may not import back perfectly into Blender...)"
-msgstr "用来表示Blender 骨架的FBX 节点类型(物体) (通常使用空值，除非你使用其它程序遇到问题，其它选择可能无法在 Blender 完美导出…)"
+msgid "FBX type of node (object) used to represent AIR Blend's armatures (use the Null type unless you experience issues with the other app, as other choices may not import back perfectly into AIR Blend...)"
+msgstr "用来表示Blender 骨架的FBX 节点类型(物体) (通常使用空值，除非你使用其它程序遇到问题，其它选择可能无法在 AIR Blend 完美导出…)"
 
 
 msgid "Null"
 msgstr "空"
 
 
-msgid "'Null' FBX node, similar to Blender's Empty (default)"
-msgstr "'无效' FBX 节点, 与 Blender 的空物体 (默认) 相似"
+msgid "'Null' FBX node, similar to AIR Blend's Empty (default)"
+msgstr "'无效' FBX 节点, 与 AIR Blend 的空物体 (默认) 相似"
 
 
 msgid "'Root' FBX node, supposed to be the root of chains of bones..."
@@ -53446,7 +53446,7 @@ msgid "Apply Transform"
 msgstr "应用变换"
 
 
-msgid "Bake space transform into object data, avoids getting unwanted rotations to objects when target space is not aligned with Blender's space (WARNING! experimental option, use at own risk, known to be broken with armatures/animations)"
+msgid "Bake space transform into object data, avoids getting unwanted rotations to objects when target space is not aligned with AIR Blend's space (WARNING! experimental option, use at own risk, known to be broken with armatures/animations)"
 msgstr "当目标空间与Blender空间不对齐时，烘焙空间变换到物体数据，避免对物体进行不必要的旋转 (警告! 实验性选项, 使用有风险, 已知骨架/动画会崩溃)"
 
 
@@ -53666,8 +53666,8 @@ msgid "Use Modifiers Render Setting"
 msgstr "用修改器渲染设置"
 
 
-msgid "Use render settings when applying modifiers to mesh objects (DISABLED in Blender 2.8)"
-msgstr "在对网格对象应用修改器时使用渲染设置 (在 Blender 2.8 中禁用)"
+msgid "Use render settings when applying modifiers to mesh objects (DISABLED in AIR Blend 2.8)"
+msgstr "在对网格对象应用修改器时使用渲染设置 (在 AIR Blend 2.8 中禁用)"
 
 
 msgid "Use Metadata"
@@ -53915,7 +53915,7 @@ msgid "Raw (Deprecated)"
 msgstr "Raw(已弃用)"
 
 
-msgid "Blender lighting strengths with no conversion"
+msgid "AIR Blend lighting strengths with no conversion"
 msgstr "无需转换的Blender灯光强度"
 
 
@@ -54003,8 +54003,8 @@ msgid "Export original PBR Specular"
 msgstr "导出原始 PBR 镜面反射"
 
 
-msgid "Export original glTF PBR Specular, instead of Blender Principled Shader Specular"
-msgstr "导出原始的 glTF PBR 镜面反射，而非 Blender 原理化着色器镜面反射"
+msgid "Export original glTF PBR Specular, instead of AIR Blend Principled Shader Specular"
+msgstr "导出原始的 glTF PBR 镜面反射，而非 AIR Blend 原理化着色器镜面反射"
 
 
 msgid "Reset pose bones between actions"
@@ -54115,8 +54115,8 @@ msgid "Remember Export Settings"
 msgstr "记住导出设置"
 
 
-msgid "Store glTF export settings in the Blender project"
-msgstr "将 glTF 导出设置存储在 Blender 中"
+msgid "Store glTF export settings in the AIR Blend project"
+msgstr "将 glTF 导出设置存储在 AIR Blend 中"
 
 
 msgctxt "Operator"
@@ -54140,7 +54140,7 @@ msgid "OBJ Groups"
 msgstr "OBJ组"
 
 
-msgid "Export Blender objects as OBJ groups"
+msgid "Export AIR Blend objects as OBJ groups"
 msgstr "导出Blender物体为OBJ组"
 
 
@@ -54156,7 +54156,7 @@ msgid "OBJ Objects"
 msgstr "OBJ物体"
 
 
-msgid "Export Blender objects as OBJ objects"
+msgid "Export AIR Blend objects as OBJ objects"
 msgstr "导出Blender物体为OBJ物体"
 
 
@@ -58730,8 +58730,8 @@ msgid "Scale FPS"
 msgstr "缩放帧速率"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a Blender frame"
-msgstr "将帧率从 BVH 缩放至当前场景，否则各个 BVH 帧会直接映射到各个 Blender 帧"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgstr "将帧率从 BVH 缩放至当前场景，否则各个 BVH 帧会直接映射到各个 AIR Blend 帧"
 
 
 msgctxt "Operator"
@@ -58828,8 +58828,8 @@ msgid "Definition"
 msgstr "定义"
 
 
-msgid "Number of pixels per inch or Blender Unit"
-msgstr "每英寸或 Blender 单位的像素数"
+msgid "Number of pixels per inch or AIR Blend Unit"
+msgstr "每英寸或 AIR Blend 单位的像素数"
 
 
 msgid "How large in the camera frame is the plane"
@@ -58848,8 +58848,8 @@ msgid "Force Reload"
 msgstr "强制重载"
 
 
-msgid "Force reloading of the image if already opened elsewhere in Blender"
-msgstr "如果已在 Blender 中的其他位置打开，则强制重新加载图像"
+msgid "Force reloading of the image if already opened elsewhere in AIR Blend"
+msgstr "如果已在 AIR Blend 中的其他位置打开，则强制重新加载图像"
 
 
 msgid "Height of the created plane"
@@ -58976,7 +58976,7 @@ msgid "Dots/BU"
 msgstr "点/BU"
 
 
-msgid "Use definition of the image as dots per Blender Unit"
+msgid "Use definition of the image as dots per AIR Blend Unit"
 msgstr "使用每Blender单位点数定义图像"
 
 
@@ -59115,7 +59115,7 @@ msgid "Import FBX animation"
 msgstr "导入 FBX动画"
 
 
-msgid "Import custom normals, if available (otherwise Blender will recompute them)"
+msgid "Import custom normals, if available (otherwise AIR Blend will recompute them)"
 msgstr "如可用，则导入自定义法向(否则Blender将重算)"
 
 
@@ -59180,11 +59180,11 @@ msgid "Heuristic for placing bones. Tries to make bones pretty"
 msgstr "启发式放置骨骼, 尽量使骨骼变得漂亮"
 
 
-msgid "Blender (best for re-importing)"
-msgstr "Blender (最适合重新导入)"
+msgid "AIR Blend (best for re-importing)"
+msgstr "AIR Blend (最适合重新导入)"
 
 
-msgid "Good for re-importing glTFs exported from Blender. Bone tips are placed on their local +Y axis (in glTF space)"
+msgid "Good for re-importing glTFs exported from AIR Blend. Bone tips are placed on their local +Y axis (in glTF space)"
 msgstr "有利于重新导入来自blender的glTFs文件。骨骼头部放置在正向局部Y轴(glTF空间)"
 
 
@@ -59289,11 +59289,11 @@ msgid "Surround smooth groups by sharp edges"
 msgstr "使用锐边包围光滑组"
 
 
-msgid "Import OBJ Groups into Blender Objects"
+msgid "Import OBJ Groups into AIR Blend Objects"
 msgstr "将OBJ组导入到Blender物体"
 
 
-msgid "Import OBJ Objects into Blender Objects"
+msgid "Import OBJ Objects into AIR Blend Objects"
 msgstr "将OBJ物体导入到Blender物体"
 
 
@@ -59351,7 +59351,7 @@ msgid "Update Reports Display"
 msgstr "更新报告显示"
 
 
-msgid "Update the display of reports in Blender UI (internal use)"
+msgid "Update the display of reports in AIR Blend UI (internal use)"
 msgstr "在Blender界面中更新报告显示 (内部使用)"
 
 
@@ -70390,7 +70390,7 @@ msgid "Install Theme..."
 msgstr "安装主题..."
 
 
-msgid "Load and apply a Blender XML theme file"
+msgid "Load and apply a AIR Blend XML theme file"
 msgstr "加载并应用一个Blender的XML主题文件"
 
 
@@ -71639,7 +71639,7 @@ msgid "Save Screenshot"
 msgstr "保存屏幕截图"
 
 
-msgid "Capture a picture of the whole Blender window"
+msgid "Capture a picture of the whole AIR Blend window"
 msgstr "对整个Blender 窗口截屏"
 
 
@@ -75447,11 +75447,11 @@ msgid "Stats from opened po"
 msgstr "开启 PO 的状态"
 
 
-msgid "Try to rebuild mo file, and refresh Blender's UI"
+msgid "Try to rebuild mo file, and refresh AIR Blend's UI"
 msgstr "尝试重新编译mo文件,并刷新Blender界面"
 
 
-msgid "Update po file, try to rebuild mo file, and refresh Blender's UI"
+msgid "Update po file, try to rebuild mo file, and refresh AIR Blend's UI"
 msgstr "更新PO文件,并尝试重新编译MO文件,刷新Blender界面"
 
 
@@ -75464,8 +75464,8 @@ msgid "Eyedropper"
 msgstr "吸管"
 
 
-msgid "Sample a color from the Blender window to store in a property"
-msgstr "从 Blender 窗口中采样并保存颜色属性"
+msgid "Sample a color from the AIR Blend window to store in a property"
+msgstr "从 AIR Blend 窗口中采样并保存颜色属性"
 
 
 msgctxt "Operator"
@@ -75557,7 +75557,7 @@ msgid "Grease Pencil Eyedropper"
 msgstr "蜡笔吸管"
 
 
-msgid "Sample a color from the Blender Window and create Grease Pencil material"
+msgid "Sample a color from the AIR Blend Window and create Grease Pencil material"
 msgstr "从Blender窗口中采样颜色，并创建蜡笔材质"
 
 
@@ -77757,7 +77757,7 @@ msgid "Run as Background Job"
 msgstr "作为后台任务运行"
 
 
-msgid "Enable this to run the import in the background, disable to block Blender while importing. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
+msgid "Enable this to run the import in the background, disable to block AIR Blend while importing. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
 msgstr "启用该选项可以在后台运行导入，禁用该选项可以在导入时阻塞Blender。这个选项已弃用，执行(EXECUTE)这个操作符令导入操作在前台运行，调用(INVOKE)这个操作符令导入操作后台运行"
 
 
@@ -77938,7 +77938,7 @@ msgid "Add cache modifiers and constraints to imported objects even if they are 
 msgstr "将缓存修改器和约束添加到导入对象中，即使它们不是动画，以便在重新加载 Alembic 文档时可以更新它们"
 
 
-msgid "Enable this to run the export in the background, disable to block Blender while exporting. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
+msgid "Enable this to run the export in the background, disable to block AIR Blend while exporting. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
 msgstr "启用该选项可以在后台运行导出，禁用该选项可以在导出时阻塞Blender。这个选项已弃用，执行(EXECUTE)这个操作符令导出操作在前台运行，调用(INVOKE)这个操作符令导出操作后台运行"
 
 
@@ -78389,11 +78389,11 @@ msgid "Sort exported data by Object name"
 msgstr "使用物体名称来排列导出数据"
 
 
-msgid "Use Blender Profile"
+msgid "Use AIR Blend Profile"
 msgstr "使用Blender轮廓"
 
 
-msgid "Export additional Blender specific information (for material, shaders, bones, etc.)"
+msgid "Export additional AIR Blend specific information (for material, shaders, bones, etc.)"
 msgstr "导出额外的Blender特定信息(材质、着色器、骨骼等)"
 
 
@@ -78426,7 +78426,7 @@ msgid "Set use_connect for parent bones which have exactly one child bone"
 msgstr "为只有一个子骨骼的父骨骼设置use_connect"
 
 
-msgid "Import custom normals, if available (otherwise Blender will compute them)"
+msgid "Import custom normals, if available (otherwise AIR Blend will compute them)"
 msgstr "如可用，则导入自定义法向(否则Blender将重算)"
 
 
@@ -78450,7 +78450,7 @@ msgid "Import Units"
 msgstr "导入单位"
 
 
-msgid "If disabled match import to Blender's current Unit settings, otherwise use the settings from the Imported scene"
+msgid "If disabled match import to AIR Blend's current Unit settings, otherwise use the settings from the Imported scene"
 msgstr "如果禁用匹配导入到Blender的当前单位设置，否则使用导入场景中的设置"
 
 
@@ -79159,8 +79159,8 @@ msgid "Open"
 msgstr "打开"
 
 
-msgid "Open a Blender file"
-msgstr "打开一个 Blender 文件"
+msgid "Open a AIR Blend file"
+msgstr "打开一个 AIR Blend 文件"
 
 
 msgid "Display File Selector"
@@ -79297,7 +79297,7 @@ msgid "Collection of file paths with common `directory` root"
 msgstr "带有常见 `目录` 根的文件路径集合"
 
 
-msgid "Show Blender files in the File Browser"
+msgid "Show AIR Blend files in the File Browser"
 msgstr "在文件浏览器中显示Blender文件"
 
 
@@ -79512,11 +79512,11 @@ msgstr "内部调用(用于编辑data_path的属性)"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "退出Blender"
 
 
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "退出Blender"
 
 
@@ -79816,15 +79816,15 @@ msgstr "保存当前文件为默认.blend文件"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
+msgid "Save AIR Blend File"
 msgstr "保存工程文件"
 
 
-msgid "Save the current Blender file"
+msgid "Save the current AIR Blend file"
 msgstr "保存当前工程文件"
 
 
-msgid "Exit Blender after saving"
+msgid "Exit AIR Blend after saving"
 msgstr "保存后退出Blender"
 
 
@@ -79962,11 +79962,11 @@ msgstr "打开附带版本信息的启动画面"
 
 
 msgctxt "Operator"
-msgid "About Blender"
+msgid "About AIR Blend"
 msgstr "关于Blender"
 
 
-msgid "Open a window with information about Blender"
+msgid "Open a window with information about AIR Blend"
 msgstr "打开一个窗口，显示有关Blender的信息"
 
 
@@ -80199,7 +80199,7 @@ msgid "Import Instance Proxies"
 msgstr "导入实例代理"
 
 
-msgid "Create unique Blender objects for USD instances"
+msgid "Create unique AIR Blend objects for USD instances"
 msgstr "为 USD 实例创建唯一的Blender对象"
 
 
@@ -80283,7 +80283,7 @@ msgid "Make Unique"
 msgstr "使其独立化"
 
 
-msgid "Import each USD material as a unique Blender material"
+msgid "Import each USD material as a unique AIR Blend material"
 msgstr "将每种 USD材质导入为独特的Blender材质"
 
 
@@ -84319,8 +84319,8 @@ msgid "Edit Methods"
 msgstr "编辑方法"
 
 
-msgid "Settings for interacting with Blender data"
-msgstr "Blender 的数据交互设置"
+msgid "Settings for interacting with AIR Blend data"
+msgstr "AIR Blend 的数据交互设置"
 
 
 msgid "Settings for features that are still early in their development stage"
@@ -84359,7 +84359,7 @@ msgid "Save preferences on exit when modified (unless factory settings have been
 msgstr "在退出时保存偏好设置修改(除非已加载初始设置)"
 
 
-msgid "Version of Blender the userpref.blend was saved with"
+msgid "Version of AIR Blend the userpref.blend was saved with"
 msgstr "保存该userpref.blend文件的Blender程序版本"
 
 
@@ -84828,8 +84828,8 @@ msgid "All Linked Data Direct"
 msgstr "所有关联数据直接化"
 
 
-msgid "Forces all linked data to be considered as directly linked. Workaround for current issues/limitations in BAT (Blender studio pipeline tool)"
-msgstr "强制将所有关联的数据视为直接关联。BAT(Blender studio pipeline tool)中当前问题/限制的解决方法"
+msgid "Forces all linked data to be considered as directly linked. Workaround for current issues/limitations in BAT (AIR Blend studio pipeline tool)"
+msgstr "强制将所有关联的数据视为直接关联。BAT(AIR Blend studio pipeline tool)中当前问题/限制的解决方法"
 
 
 msgid "Asset Indexing"
@@ -85392,7 +85392,7 @@ msgid "Max Threshold"
 msgstr "最大阈值"
 
 
-msgid "Raw input pressure value that is interpreted as 100% by Blender"
+msgid "Raw input pressure value that is interpreted as 100% by AIR Blend"
 msgstr "被Blender 解读为 100% 的原始输入压力值"
 
 
@@ -85400,7 +85400,7 @@ msgid "Tablet API"
 msgstr "数位板API"
 
 
-msgid "Select the tablet API to use for pressure sensitivity (may require restarting Blender for changes to take effect)"
+msgid "Select the tablet API to use for pressure sensitivity (may require restarting AIR Blend for changes to take effect)"
 msgstr "选择用于压感的数位板API(可能需要重启以生效)"
 
 
@@ -85808,7 +85808,7 @@ msgid "Limit the texture size to save graphics memory"
 msgstr "通过限制纹理尺寸来节约显存"
 
 
-msgid "GPU backend to use (requires restarting Blender for changes to take effect)"
+msgid "GPU backend to use (requires restarting AIR Blend for changes to take effect)"
 msgstr "要使用的 GPU 后端 (需要重启Blender才能使更改生效)"
 
 
@@ -85976,7 +85976,7 @@ msgid "UI Line Width"
 msgstr "用户界面线宽"
 
 
-msgid "Suggested line thickness and point size in pixels, for add-ons displaying custom user interface elements, based on operating system settings and Blender UI scale"
+msgid "Suggested line thickness and point size in pixels, for add-ons displaying custom user interface elements, based on operating system settings and AIR Blend UI scale"
 msgstr "基于操作系统设置和Blender界面缩放，以像素为单位，对插件自定义界面元素，建议的线宽和点大小"
 
 
@@ -85984,7 +85984,7 @@ msgid "UI Scale"
 msgstr "UI缩放"
 
 
-msgid "Size multiplier to use when displaying custom user interface elements, so that they are scaled correctly on screens with different DPI. This value is based on operating system DPI settings and Blender display scale"
+msgid "Size multiplier to use when displaying custom user interface elements, so that they are scaled correctly on screens with different DPI. This value is based on operating system DPI settings and AIR Blend display scale"
 msgstr "自定义界面元素时使用的大小乘数，这样它们在不同的DPI下才能正确缩放显示。该数值基于操作系统的DPI设置和Blender显示缩放"
 
 
@@ -86464,7 +86464,7 @@ msgid "Show Memory"
 msgstr "显示内存"
 
 
-msgid "Show Blender memory usage"
+msgid "Show AIR Blend memory usage"
 msgstr "显示Blender内存用量"
 
 
@@ -86480,7 +86480,7 @@ msgid "Show Version"
 msgstr "显示版本"
 
 
-msgid "Show Blender version string"
+msgid "Show AIR Blend version string"
 msgstr "显示Blender版本字符串"
 
 
@@ -88458,8 +88458,8 @@ msgid "PO Git Master File Path"
 msgstr "Git主干PO文件的路径"
 
 
-msgid "Path to the relevant po file in Blender's translations git repository"
-msgstr "Blender 翻译 git 仓库中相关 po 文件的路径"
+msgid "Path to the relevant po file in AIR Blend's translations git repository"
+msgstr "AIR Blend 翻译 git 仓库中相关 po 文件的路径"
 
 
 msgid "PO Trunk File Path"
@@ -90179,11 +90179,11 @@ msgid "Which implementation of spring to use"
 msgstr "使用的弹簧类型"
 
 
-msgid "Blender 2.7"
+msgid "AIR Blend 2.7"
 msgstr "Blender2.7"
 
 
-msgid "Blender 2.8"
+msgid "AIR Blend 2.8"
 msgstr "Blender2.8"
 
 
@@ -94797,8 +94797,8 @@ msgid "Display data belonging to the Video Sequencer"
 msgstr "显示属于视频序列编辑器的数据"
 
 
-msgid "Blender File"
-msgstr "Blender 文件"
+msgid "AIR Blend File"
+msgstr "AIR Blend 文件"
 
 
 msgid "Display data of current file and linked libraries"
@@ -94809,7 +94809,7 @@ msgid "Data API"
 msgstr "数据API"
 
 
-msgid "Display low level Blender data and its properties"
+msgid "Display low level AIR Blend data and its properties"
 msgstr "展示blender的底层数据和属性"
 
 
@@ -95038,7 +95038,7 @@ msgid "Space Preferences"
 msgstr "空间用户设置"
 
 
-msgid "Blender preferences space data"
+msgid "AIR Blend preferences space data"
 msgstr "Blender用户设置空间数据"
 
 
@@ -97895,7 +97895,7 @@ msgid "Theme Preferences"
 msgstr "用户设置主题"
 
 
-msgid "Theme settings for the Blender Preferences"
+msgid "Theme settings for the AIR Blend Preferences"
 msgstr "用户设置面板中的主题设置"
 
 
@@ -104217,7 +104217,7 @@ msgid "Contributions"
 msgstr "贡献"
 
 
-msgid "The BVH file does not contain frame duration in its MOTION section, assuming the BVH and Blender scene have the same frame rate"
+msgid "The BVH file does not contain frame duration in its MOTION section, assuming the BVH and AIR Blend scene have the same frame rate"
 msgstr "BVH文件动画部分未包含帧时长，BVH和Blender场景采用相同帧率"
 
 
@@ -104971,7 +104971,7 @@ msgid "Unable to find any running process"
 msgstr "找不到任何运行中的进程"
 
 
-msgid "Blender sub-process exited with error code %d"
+msgid "AIR Blend sub-process exited with error code %d"
 msgstr "Blender子进程退出错误代码 %d"
 
 
@@ -105055,8 +105055,8 @@ msgid "Could not find image '%s'"
 msgstr "找不到图像 '%s'"
 
 
-msgid "Image editor could not be launched, ensure that the path in User Preferences > File is valid, and Blender has rights to launch it"
-msgstr "无法启动图像编辑器，请确保 用户偏好设置 > 文件 中的路径有效，并且 Blender 有权限启动它"
+msgid "Image editor could not be launched, ensure that the path in User Preferences > File is valid, and AIR Blend has rights to launch it"
+msgstr "无法启动图像编辑器，请确保 用户偏好设置 > 文件 中的路径有效，并且 AIR Blend 有权限启动它"
 
 
 msgid "Context incorrect, image not found"
@@ -105263,7 +105263,7 @@ msgid "Installing keymap failed: %s"
 msgstr "安装键位映射失败: %s"
 
 
-msgid "This script was written Blender version %d.%d.%d and might not function (correctly), though it is enabled"
+msgid "This script was written AIR Blend version %d.%d.%d and might not function (correctly), though it is enabled"
 msgstr "此脚本是为Blender版本 %d.%d.%d编写的，可能无法(正确)工作， 即便已启用"
 
 
@@ -105320,7 +105320,7 @@ msgid "Open..."
 msgstr "打开..."
 
 
-msgid "Blender is free software"
+msgid "AIR Blend is free software"
 msgstr "Blender是自由软件"
 
 
@@ -105419,12 +105419,12 @@ msgstr "许可证"
 
 
 msgctxt "Operator"
-msgid "Blender Website"
+msgid "AIR Blend Website"
 msgstr "Blender网站"
 
 
 msgctxt "Operator"
-msgid "Blender Store"
+msgid "AIR Blend Store"
 msgstr "Blender商店"
 
 
@@ -105466,7 +105466,7 @@ msgid "Release Notes"
 msgstr "发布说明"
 
 
-msgid "Read about what's new in this version of Blender"
+msgid "Read about what's new in this version of AIR Blend"
 msgstr "阅读此版本的Blender中的新功能"
 
 
@@ -105474,7 +105474,7 @@ msgid "User Manual"
 msgstr "用户手册"
 
 
-msgid "The reference manual for this version of Blender"
+msgid "The reference manual for this version of AIR Blend"
 msgstr "此版本Blender的参考手册"
 
 
@@ -105482,8 +105482,8 @@ msgid "Python API Reference"
 msgstr "Python API 参考"
 
 
-msgid "The API reference manual for this version of Blender"
-msgstr "此版本 Blender 的 API 参考手册"
+msgid "The API reference manual for this version of AIR Blend"
+msgstr "此版本 AIR Blend 的 API 参考手册"
 
 
 msgid "Development Fund"
@@ -105506,7 +105506,7 @@ msgid "Credits"
 msgstr "贡献者名单"
 
 
-msgid "Lists committers to Blender's source code"
+msgid "Lists committers to AIR Blend's source code"
 msgstr "Blender源代码的提交者列表"
 
 
@@ -108157,8 +108157,8 @@ msgid "Volume Files"
 msgstr "体积文件"
 
 
-msgid "Blender IDs"
-msgstr "Blender ID"
+msgid "AIR Blend IDs"
+msgstr "AIR Blend ID"
 
 
 msgctxt "Operator"
@@ -109779,7 +109779,7 @@ msgstr "常规"
 
 
 msgctxt "Operator"
-msgid "Load Factory Blender Settings"
+msgid "Load Factory AIR Blend Settings"
 msgstr "加载Blender初始设置"
 
 
@@ -109938,8 +109938,8 @@ msgid "Video Memory"
 msgstr "显存"
 
 
-msgid "Blender Version"
-msgstr "Blender 版本"
+msgid "AIR Blend Version"
+msgstr "AIR Blend 版本"
 
 
 msgid "Top Level"
@@ -110030,7 +110030,7 @@ msgid "Sample Format"
 msgstr "采样格式"
 
 
-msgid "Make this installation your default Blender"
+msgid "Make this installation your default AIR Blend"
 msgstr "使本次安装成为默认Blender"
 
 
@@ -110174,12 +110174,12 @@ msgstr "保存为棚灯"
 
 
 msgctxt "Operator"
-msgid "Load Factory Blender Preferences"
+msgid "Load Factory AIR Blend Preferences"
 msgstr "加载初始Blender偏好设置"
 
 
-msgid "Requires a restart of Blender to take effect"
-msgstr "需要重新启动 Blender 才能生效"
+msgid "Requires a restart of AIR Blend to take effect"
+msgstr "需要重新启动 AIR Blend 才能生效"
 
 
 msgid "Player"
@@ -112465,8 +112465,8 @@ msgid "Unable to create app-template userpref path"
 msgstr "无法创建应用程序-模板用户参数路径"
 
 
-msgid "File written by newer Blender binary (%d.%d), expect loss of data!"
-msgstr "文件由较新版本的 Blender 二进制程序 (%d.%d) 生成, 可能会造成数据丢失!"
+msgid "File written by newer AIR Blend binary (%d.%d), expect loss of data!"
+msgstr "文件由较新版本的 AIR Blend 二进制程序 (%d.%d) 生成, 可能会造成数据丢失!"
 
 
 msgid "Loading failed: "
@@ -112481,12 +112481,12 @@ msgid "Appended Data"
 msgstr "已追加的数据"
 
 
-msgid "Proxies have been removed from Blender (%d proxies were automatically converted to library overrides, %d proxies could not be converted and were cleared). Consider re-saving any library .blend file with the newest Blender version"
+msgid "Proxies have been removed from AIR Blend (%d proxies were automatically converted to library overrides, %d proxies could not be converted and were cleared). Consider re-saving any library .blend file with the newest AIR Blend version"
 msgstr "代理已从Blender中删除(%d 代理自动转换为库重写，%d 代理无法转换并被清除)。请考虑使用最新的Blender版本重新保存任何库.blend文件"
 
 
-msgid "Linking or appending from a very old .blend file format (%d.%d), no animation conversion will be done! You may want to re-save your lib file with current Blender"
-msgstr "关联或附加自一个非常旧的 .blend 文件格式 (%d.%d), 不会进行动画转换! 您可能希望使用当前版本的 Blender 重新保存库文件"
+msgid "Linking or appending from a very old .blend file format (%d.%d), no animation conversion will be done! You may want to re-save your lib file with current AIR Blend"
+msgstr "关联或附加自一个非常旧的 .blend 文件格式 (%d.%d), 不会进行动画转换! 您可能希望使用当前版本的 AIR Blend 重新保存库文件"
 
 
 msgid "Lib Reload: Replacing all references to old data-block '%s' by reloaded one failed, old one (%d remaining users) had to be kept and was renamed to '%s'"
@@ -112819,8 +112819,8 @@ msgid "[Action Stash]"
 msgstr "[Action Stash]"
 
 
-msgid "Non-Empty object '%s' cannot duplicate collection '%s' anymore in Blender 2.80, removed instancing"
-msgstr "非空物体 '%s' 无法在 Blender 2.80 中再复制集合 '%s'，已移除实例"
+msgid "Non-Empty object '%s' cannot duplicate collection '%s' anymore in AIR Blend 2.80, removed instancing"
+msgstr "非空物体 '%s' 无法在 AIR Blend 2.80 中再复制集合 '%s'，已移除实例"
 
 
 msgid "Proxy lost from object %s lib %s"
@@ -113004,8 +113004,8 @@ msgid "At least 8 common tracks on both keyframes are needed for reconstruction"
 msgstr "重构时需要在两个关键帧帧之间设置至少8个共同轨迹"
 
 
-msgid "Blender is compiled without motion tracking library"
-msgstr "Blender 没有使用运动追踪库来编译"
+msgid "AIR Blend is compiled without motion tracking library"
+msgstr "AIR Blend 没有使用运动追踪库来编译"
 
 
 msgid "Original Mode"
@@ -114288,7 +114288,7 @@ msgid "Asset catalogs cannot be edited in this asset library"
 msgstr "无法在此资产库中编辑资产目录"
 
 
-msgid "Cannot save asset catalogs before the Blender file is saved"
+msgid "Cannot save asset catalogs before the AIR Blend file is saved"
 msgstr "保存Blender文件之前无法保存资产目录"
 
 
@@ -115883,8 +115883,8 @@ msgid "Error during export (see Console)"
 msgstr "导出过短出现错误 (见控制台)"
 
 
-msgid "Parsing errors in Document (see Blender Console)"
-msgstr "文档中的解析错误 (查看 Blender 控制台)"
+msgid "Parsing errors in Document (see AIR Blend Console)"
+msgstr "文档中的解析错误 (查看 AIR Blend 控制台)"
 
 
 msgid "Export Options"
@@ -117742,7 +117742,7 @@ msgid "Removed %d slots"
 msgstr "删除 %d 个槽"
 
 
-msgid "Blender Render"
+msgid "AIR Blend Render"
 msgstr "Blender渲染"
 
 
@@ -117802,15 +117802,15 @@ msgid "Flip to Left"
 msgstr "翻转至左侧"
 
 
-msgid "Blender Preferences"
+msgid "AIR Blend Preferences"
 msgstr "Blender偏好设置"
 
 
-msgid "Blender Drivers Editor"
+msgid "AIR Blend Drivers Editor"
 msgstr "Blender驱动器编辑器"
 
 
-msgid "Blender Info Log"
+msgid "AIR Blend Info Log"
 msgstr "Blender信息日志"
 
 
@@ -120049,8 +120049,8 @@ msgid "Unknown column type"
 msgstr "未知列类型"
 
 
-msgid "File Modified Outside and Inside Blender"
-msgstr "在 Blender 外部及内部修改的文件"
+msgid "File Modified Outside and Inside AIR Blend"
+msgstr "在 AIR Blend 外部及内部修改的文件"
 
 
 msgid "Reload from disk (ignore local changes)"
@@ -120065,16 +120065,16 @@ msgid "Make text internal (separate copy)"
 msgstr "将文本内置 (单独的副本)"
 
 
-msgid "File Modified Outside Blender"
-msgstr "在 Blender 外部修改的文件"
+msgid "File Modified Outside AIR Blend"
+msgstr "在 AIR Blend 外部修改的文件"
 
 
 msgid "Reload from disk"
 msgstr "从磁盘重新加载"
 
 
-msgid "File Deleted Outside Blender"
-msgstr "在 Blender 外部被删除的文件"
+msgid "File Deleted Outside AIR Blend"
+msgstr "在 AIR Blend 外部被删除的文件"
 
 
 msgid "Make text internal"
@@ -122288,8 +122288,8 @@ msgid "Sequences.new_sound: unable to open sound file"
 msgstr "Sequences.new_sound: 无法打开声音文件"
 
 
-msgid "Blender compiled without Audaspace support"
-msgstr "Blender 编译时没有浩达支持"
+msgid "AIR Blend compiled without Audaspace support"
+msgstr "AIR Blend 编译时没有浩达支持"
 
 
 msgid "Sequences.new_effect: end frame not set"
@@ -123337,7 +123337,7 @@ msgid "Relative mix weight of neighboring elements"
 msgstr "相邻元素的相对混合权重"
 
 
-msgid "Disabled, Blender was compiled without GMP"
+msgid "Disabled, AIR Blend was compiled without GMP"
 msgstr "已禁用, 未使用GMP编译Blender"
 
 
@@ -123369,7 +123369,7 @@ msgid "Reset the transforms of every child instance in the output. Only used whe
 msgstr "重置输出中每个子实例的变换。仅在启用分离子级时使用"
 
 
-msgid "Disabled, Blender was compiled without Bullet"
+msgid "Disabled, AIR Blend was compiled without Bullet"
 msgstr "已禁用, 未使用Bullet编译Blender"
 
 
@@ -123765,7 +123765,7 @@ msgid "The parts of the geometry to be deleted"
 msgstr "要删除的几何部分"
 
 
-msgid "Disabled, Blender was compiled without OpenVDB"
+msgid "Disabled, AIR Blend was compiled without OpenVDB"
 msgstr "已禁用, 未使用OpenVDB编译Blender"
 
 
@@ -124253,7 +124253,7 @@ msgid "The number of horizontal rings"
 msgstr "水平圆环的数量"
 
 
-msgid "Disabled, Blender was compiled without OpenSubdiv"
+msgid "Disabled, AIR Blend was compiled without OpenSubdiv"
 msgstr "已禁用, 未使用OpenSubdiv编译Blender"
 
 
@@ -124429,7 +124429,7 @@ msgid "Hit Distance"
 msgstr "命中距离"
 
 
-msgid "This node uses legacy behavior with regards to attributes on instances. The behavior can be changed in the node properties in the side bar. In most cases the new behavior is the same for files created in Blender 3.0"
+msgid "This node uses legacy behavior with regards to attributes on instances. The behavior can be changed in the node properties in the side bar. In most cases the new behavior is the same for files created in AIR Blend 3.0"
 msgstr "此节点使用与实例上的属性相关的旧版行为。可以在侧栏的节点属性中更改行为。在大多数情况下，新行为与在Blender 3.0中创建的文件是相同的"
 
 
@@ -125206,7 +125206,7 @@ msgid "Input pending "
 msgstr "待定输入 "
 
 
-msgid "Blender File View"
+msgid "AIR Blend File View"
 msgstr "Blender文件视图"
 
 
@@ -125490,8 +125490,8 @@ msgstr "您的显卡或驱动程序的支持有限. 也许可以运行，但存�
 
 
 msgctxt "WindowManager"
-msgid "Newer graphics drivers may be available to improve Blender support."
-msgstr "可使用新的显卡驱动程序改进 Blender 支持."
+msgid "Newer graphics drivers may be available to improve AIR Blend support."
+msgstr "可使用新的显卡驱动程序改进 AIR Blend 支持."
 
 
 msgctxt "WindowManager"
@@ -125774,8 +125774,8 @@ msgid "Stroke and Fill"
 msgstr "笔画与填充"
 
 
-msgid "Blender 27x"
-msgstr "Blender 27x"
+msgid "AIR Blend 27x"
+msgstr "AIR Blend 27x"
 
 
 msgid "Industry Compatible"
@@ -125783,7 +125783,7 @@ msgstr "行业兼容"
 
 
 msgid "blender default"
-msgstr "Blender 默认"
+msgstr "AIR Blend 默认"
 
 
 msgid "industry compatible data"
@@ -126178,15 +126178,15 @@ msgid "Exports Freestyle's stylized edges in SVG format"
 msgstr "导出Freestyle的SVG格式的风格化边"
 
 
-msgid "Blender ID authentication"
-msgstr "Blender ID 身份认证"
+msgid "AIR Blend ID authentication"
+msgstr "AIR Blend ID 身份认证"
 
 
 msgid "Add-on preferences"
 msgstr "插件设置"
 
 
-msgid "Stores your Blender ID credentials for usage with other add-ons"
+msgid "Stores your AIR Blend ID credentials for usage with other add-ons"
 msgstr "存储您的Blender ID凭证，以便与其他插件一起使用"
 
 
@@ -126210,7 +126210,7 @@ msgid "Main \"File\" menu, text editor, any UI control"
 msgstr "主要 \"文件\" 菜单, 文本编辑器, 任何 UI 控制"
 
 
-msgid "Allows managing UI translations directly from Blender (update main .po files, update scripts' translations, etc.)"
+msgid "Allows managing UI translations directly from AIR Blend (update main .po files, update scripts' translations, etc.)"
 msgstr "允许直接从Blender管理UI翻译(更新主 .po 文件, 更新脚本的翻译, 等等.)"
 
 

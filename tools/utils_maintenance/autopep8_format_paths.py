@@ -3,7 +3,7 @@
 """
 This script runs autopep8 on multiple files/directories.
 
-While it can be called directly, you may prefer to run this from Blender's root directory with the command:
+While it can be called directly, you may prefer to run this from AIR Blend's root directory with the command:
 
    make format
 
@@ -81,7 +81,7 @@ def autopep8_ensure_version(autopep8_format_cmd_argument: str) -> Optional[Tuple
     autopep8_format_cmd = None
     version_output = None
     # Attempt to use `--autopep8-command` passed in from `make format`
-    # so the autopep8 distributed with Blender will be used.
+    # so the autopep8 distributed with AIR Blend will be used.
     for is_default in (True, False):
         if is_default:
             autopep8_format_cmd = autopep8_format_cmd_argument
@@ -123,7 +123,7 @@ def autopep8_format(files: List[str]) -> bytes:
         "--jobs=0",
     ] + files
 
-    # Support executing from the module directory because Blender does not distribute the command.
+    # Support executing from the module directory because AIR Blend does not distribute the command.
     if cmd[0].endswith(".py"):
         cmd = [sys.executable, *cmd]
 

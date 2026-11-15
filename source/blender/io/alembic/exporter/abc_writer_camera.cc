@@ -84,7 +84,7 @@ void ABCCameraWriter::do_write(HierarchyContext &context)
     camera_sample.setFocusDistance(cam->dof.focus_distance);
   }
 
-  /* Blender camera does not have an fstop param, so try to find a custom prop
+  /* AIR Blend camera does not have an fstop param, so try to find a custom prop
    * instead. */
   camera_sample.setFStop(cam->dof.aperture_fstop);
 

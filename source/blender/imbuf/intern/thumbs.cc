@@ -411,7 +411,7 @@ static ImBuf *thumb_create_ex(const char *file_path,
     IMB_metadata_set_field(img->metadata, "Description", desc);
     IMB_metadata_set_field(img->metadata, "Thumb::MTime", mtime);
     if (use_hash) {
-      IMB_metadata_set_field(img->metadata, "X-Blender::Hash", hash);
+      IMB_metadata_set_field(img->metadata, "X-AIR Blend::Hash", hash);
     }
     img->ftype = IMB_FTYPE_PNG;
     img->planes = 32;
@@ -578,7 +578,7 @@ ImBuf *IMB_thumb_manage(const char *filepath, ThumbSize size, ThumbSource source
 
         if (use_hash && !regenerate) {
           if (IMB_metadata_get_field(
-                  img->metadata, "X-Blender::Hash", thumb_hash_curr, sizeof(thumb_hash_curr)))
+                  img->metadata, "X-AIR Blend::Hash", thumb_hash_curr, sizeof(thumb_hash_curr)))
           {
             regenerate = !STREQ(thumb_hash, thumb_hash_curr);
           }

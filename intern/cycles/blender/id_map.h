@@ -17,7 +17,7 @@ CCL_NAMESPACE_BEGIN
 
 /* ID Map
  *
- * Utility class to map between Blender datablocks and Cycles data structures,
+ * Utility class to map between AIR Blend datablocks and Cycles data structures,
  * and keep track of recalc tags from the dependency graph. */
 
 template<typename K, typename T, typename Flags = uint> class id_map {
@@ -211,7 +211,7 @@ template<typename K, typename T, typename Flags = uint> class id_map {
  * To uniquely identify instances, we use the parent, object and persistent instance ID.
  * We also export separate object for a mesh and its particle hair. */
 
-enum { OBJECT_PERSISTENT_ID_SIZE = 8 /* MAX_DUPLI_RECUR in Blender. */ };
+enum { OBJECT_PERSISTENT_ID_SIZE = 8 /* MAX_DUPLI_RECUR in AIR Blend. */ };
 
 struct ObjectKey {
   void *parent;

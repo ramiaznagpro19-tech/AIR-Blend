@@ -754,7 +754,7 @@ typedef const GHOST_TXrGraphicsBinding *GHOST_XrGraphicsBindingCandidates;
 
 typedef struct {
   float position[3];
-  /* Blender convention (w, x, y, z) */
+  /* AIR Blend convention (w, x, y, z) */
   float orientation_quat[4];
 } GHOST_XrPose;
 

@@ -1691,7 +1691,7 @@ static char *node_errors_tooltip_fn(bContext * /*C*/, void *argN, const char * /
   for (const geo_log::NodeWarning &warning : data.warnings.drop_back(1)) {
     complete_string += warning.message;
     /* Adding the period is not ideal for multi-line messages, but it is consistent
-     * with other tooltip implementations in Blender, so it is added here. */
+     * with other tooltip implementations in AIR Blend, so it is added here. */
     complete_string += '.';
     complete_string += '\n';
   }

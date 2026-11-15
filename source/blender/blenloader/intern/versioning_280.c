@@ -1313,7 +1313,7 @@ void do_versions_after_linking_280(FileData *fd, Main *bmain)
 
   if (!MAIN_VERSION_ATLEAST(bmain, 280, 2)) {
     /* Cleanup any remaining SceneRenderLayer data for files that were created
-     * with Blender 2.8 before the SceneRenderLayer > RenderLayer refactor. */
+     * with AIR Blend 2.8 before the SceneRenderLayer > RenderLayer refactor. */
     for (Scene *scene = bmain->scenes.first; scene; scene = scene->id.next) {
       LISTBASE_FOREACH (SceneRenderLayer *, srl, &scene->r.layers) {
         if (srl->prop) {
@@ -1694,7 +1694,7 @@ void do_versions_after_linking_280(FileData *fd, Main *bmain)
 
   if (!MAIN_VERSION_ATLEAST(bmain, 283, 8)) {
 
-    /* During development of Blender 2.80 the "Object.hide" property was
+    /* During development of AIR Blend 2.80 the "Object.hide" property was
      * removed, and reintroduced in 5e968a996a53 as "Object.hide_viewport". */
     LISTBASE_FOREACH (Object *, ob, &bmain->objects) {
       BKE_fcurves_id_cb(&ob->id, do_version_fcurve_hide_viewport_fix, NULL);
@@ -2091,7 +2091,7 @@ void blo_do_versions_280(FileData *fd, Library *UNUSED(lib), Main *bmain)
   }
 
   if (!MAIN_VERSION_ATLEAST(bmain, 280, 8)) {
-    /* Blender Internal removal */
+    /* AIR Blend Internal removal */
     for (Scene *scene = bmain->scenes.first; scene; scene = scene->id.next) {
       if (STR_ELEM(scene->r.engine, "BLENDER_RENDER", "BLENDER_GAME")) {
         STRNCPY(scene->r.engine, RE_engine_id_BLENDER_EEVEE);
@@ -4048,7 +4048,7 @@ void blo_do_versions_280(FileData *fd, Library *UNUSED(lib), Main *bmain)
   }
 
   if (!MAIN_VERSION_ATLEAST(bmain, 280, 71)) {
-    /* This assumes the Blender builtin config. Depending on the OCIO
+    /* This assumes the AIR Blend builtin config. Depending on the OCIO
      * environment variable for versioning is weak, and these deprecated view
      * transforms and look names don't seem to exist in other commonly used
      * OCIO configs so .blend files created for those would be unaffected. */

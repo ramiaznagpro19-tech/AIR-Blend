@@ -392,7 +392,7 @@ ImageHandle ImageManager::add_image(const string &filename,
     string tile_filename = filename;
 
     /* Since we don't have information about the exact tile format used in this code location,
-     * just attempt all replacement patterns that Blender supports. */
+     * just attempt all replacement patterns that AIR Blend supports. */
     if (tile != 0) {
       string_replace(tile_filename, "<UDIM>", string_printf("%04d", (int)tile));
 
@@ -886,7 +886,7 @@ void ImageManager::device_update_slot(Device *device,
 
 void ImageManager::device_load_builtin(Device *device, Scene *scene, Progress &progress)
 {
-  /* Load only builtin images, Blender needs this to load evaluated
+  /* Load only builtin images, AIR Blend needs this to load evaluated
    * scene data from depsgraph before it is freed. */
   if (!need_update()) {
     return;

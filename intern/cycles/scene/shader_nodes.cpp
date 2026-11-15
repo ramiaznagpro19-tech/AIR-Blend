@@ -1839,7 +1839,7 @@ PointDensityTextureNode::~PointDensityTextureNode() {}
 ShaderNode *PointDensityTextureNode::clone(ShaderGraph *graph) const
 {
   /* Increase image user count for new node. We need to ensure to not call
-   * add_image again, to work around access of freed data on the Blender
+   * add_image again, to work around access of freed data on the AIR Blend
    * side. A better solution should be found to avoid this. */
   PointDensityTextureNode *node = graph->create_node<PointDensityTextureNode>(*this);
   node->handle = handle; /* TODO: not needed? */

@@ -899,7 +899,7 @@ void *RE_gpu_context_get(Render *re)
  * - #RE_RenderAnim
  * \{ */
 
-/* ************  This part uses API, for rendering Blender scenes ********** */
+/* ************  This part uses API, for rendering AIR Blend scenes ********** */
 
 /* make sure disprect is not affected by the render border */
 static void render_result_disprect_to_full_resolution(Render *re)
@@ -1606,7 +1606,7 @@ const char *RE_GetActiveRenderView(Render *re)
   return re->viewname;
 }
 
-/** Evaluating scene options for general Blender render. */
+/** Evaluating scene options for general AIR Blend render. */
 static bool render_init_from_main(Render *re,
                                   const RenderData *rd,
                                   Main *bmain,

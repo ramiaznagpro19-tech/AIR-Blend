@@ -8,14 +8,14 @@
 define HELP_TEXT
 
 Blender Convenience Targets
-   Provided for building Blender (multiple targets can be used at once).
+   Provided for building AIR Blend (multiple targets can be used at once).
 
    * debug:         Build a debug binary.
    * full:          Enable all supported dependencies & options.
    * lite:          Disable non essential features for a smaller binary and faster build.
    * release:       Complete build with all options enabled including CUDA and Optix, matching the releases on blender.org
    * headless:      Build without an interface (renderfarm or server automation).
-   * cycles:        Build Cycles standalone only, without Blender.
+   * cycles:        Build Cycles standalone only, without AIR Blend.
    * bpy:           Build as a python module which can be loaded from python directly.
    * developer:     Enable faster builds, error checking and tests, recommended for developers.
    * ninja:         Use ninja build tool for faster builds.
@@ -47,13 +47,13 @@ Package Targets
    * package_archive:   Build an archive package.
 
 Testing Targets
-   Not associated with building Blender.
+   Not associated with building AIR Blend.
 
    * test:
      Run automated tests with ctest.
 
 Static Source Code Checking
-   Not associated with building Blender.
+   Not associated with building AIR Blend.
 
    * check_cppcheck:        Run blender source through cppcheck (C & C++).
    * check_clang_array:     Run blender source through clang array checking script (C & C++).
@@ -72,7 +72,7 @@ Documentation Checking
 
    * check_wiki_file_structure:
      Check the WIKI documentation for the source-tree's file structure
-     matches Blender's source-code.
+     matches AIR Blend's source-code.
      See: https://wiki.blender.org/wiki/Source/File_Structure
 
 Spell Checkers
@@ -91,7 +91,7 @@ Spell Checkers
       make check_spelling_c CHECK_SPELLING_CACHE=../spelling_cache.data
 
 Utilities
-   Not associated with building Blender.
+   Not associated with building AIR Blend.
 
    * icons:
      Updates PNG icons from SVG files.
@@ -137,7 +137,7 @@ Environment Variables
    * AUTOPEP8:              Command used for Python code-formatting (used for the format target).
 
 Documentation Targets
-   Not associated with building Blender.
+   Not associated with building AIR Blend.
 
    * doc_py:        Generate sphinx python api docs.
    * doc_doxy:      Generate doxygen C/C++ docs.
@@ -321,7 +321,7 @@ else
 endif
 
 # -----------------------------------------------------------------------------
-# Blender binary path
+# AIR Blend binary path
 
 # Allow passing in own BLENDER_BIN so developers who don't
 # use the default build path can still use utility helpers.
@@ -371,10 +371,10 @@ endif
 
 
 # -----------------------------------------------------------------------------
-# Build Blender
+# Build AIR Blend
 all: .FORCE
 	@echo
-	@echo Configuring Blender in \"$(BUILD_DIR)\" ...
+	@echo Configuring AIR Blend in \"$(BUILD_DIR)\" ...
 
 #	# if test ! -f $(BUILD_DIR)/CMakeCache.txt ; then \
 #	# 	$(CMAKE_CONFIG); \
@@ -384,14 +384,14 @@ all: .FORCE
 	@$(CMAKE_CONFIG)
 
 	@echo
-	@echo Building Blender ...
+	@echo Building AIR Blend ...
 	$(BUILD_COMMAND) -C "$(BUILD_DIR)" -j $(NPROCS) install
 	@echo
 	@echo Edit build configuration with: \"$(BUILD_DIR)/CMakeCache.txt\" run make again to rebuild.
 	@if test -z "$(BLENDER_IS_PYTHON_MODULE)"; then \
-		echo Blender successfully built, run from: $(BLENDER_BIN); \
+		echo AIR Blend successfully built, run from: $(BLENDER_BIN); \
 	else \
-		echo Blender successfully built as a Python module, \"bpy\" can be imported from: $(BLENDER_BIN_DIR); \
+		echo AIR Blend successfully built as a Python module, \"bpy\" can be imported from: $(BLENDER_BIN_DIR); \
 	fi
 	@echo
 

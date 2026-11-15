@@ -83,7 +83,7 @@ class ABCAbstractWriter : public AbstractHierarchyWriter {
    * properties.
    *
    * This can return either abc_schema.getUserProperties() or abc_schema.getArbGeomParams(). The
-   * former only holds values similar to Blender's custom properties, whereas the latter can also
+   * former only holds values similar to AIR Blend's custom properties, whereas the latter can also
    * specify that certain custom properties vary per mesh component (so per face, vertex, etc.). As
    * such, .userProperties is more suitable for custom properties. However, Maya, Houdini use
    * .arbGeomParams for custom data.

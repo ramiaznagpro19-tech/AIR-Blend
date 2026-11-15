@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 """
-Module to manage overriding various parts of Blender.
+Module to manage overriding various parts of AIR Blend.
 
 Intended for use with 'app_templates', though it can be used from anywhere.
 """

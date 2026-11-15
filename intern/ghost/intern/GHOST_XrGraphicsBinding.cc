@@ -500,7 +500,7 @@ class GHOST_XrGraphicsBindingD3D : public GHOST_IXrGraphicsBinding {
   }
 
  private:
-  /** Primary OpenGL context for Blender to use for drawing. */
+  /** Primary OpenGL context for AIR Blend to use for drawing. */
   GHOST_ContextWGL &m_ghost_wgl_ctx;
   /** Secondary DirectX 11 context to share with OpenGL context. */
   GHOST_ContextD3D *m_ghost_d3d_ctx = nullptr;

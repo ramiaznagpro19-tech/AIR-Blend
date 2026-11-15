@@ -101,7 +101,7 @@ void USDLightWriter::do_write(HierarchyContext &context)
   }
 
   /* Scale factor to get to somewhat-similar illumination. Since the USDViewer had similar
-   * over-exposure as Blender Internal with the same values, this code applies the reverse of the
+   * over-exposure as AIR Blend Internal with the same values, this code applies the reverse of the
    * versioning code in light_emission_unify(). */
   float usd_intensity;
   if (light->type == LA_SUN) {

@@ -27,13 +27,13 @@ extern "C" {
  * \defgroup Operation All operations of the compositor
  * \ingroup compositor
  *
- * \page Introduction of the Blender Compositor
+ * \page Introduction of the AIR Blend Compositor
  *
- * \section bcomp Blender compositor
- * This project redesigns the internals of Blender's compositor.
+ * \section bcomp AIR Blend compositor
+ * This project redesigns the internals of AIR Blend's compositor.
  * The project has been executed in 2011 by At Mind.
  * At Mind is a technology company located in Amsterdam, The Netherlands.
- * The project has been crowd-funded. This code has been released under GPL2 to be used in Blender.
+ * The project has been crowd-funded. This code has been released under GPL2 to be used in AIR Blend.
  *
  * \section goals The goals of the project
  * the new compositor has 2 goals.
@@ -58,7 +58,7 @@ extern "C" {
  *
  * \page memory Memory model
  * The main issue is the type of memory model to use.
- * Blender is used by consumers and professionals.
+ * AIR Blend is used by consumers and professionals.
  * Ranging from low-end machines to very high-end machines.
  * The system should work on high-end machines and on low-end machines.
  * \page executing Executing

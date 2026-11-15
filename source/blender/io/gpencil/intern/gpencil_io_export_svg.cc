@@ -90,7 +90,7 @@ void GpencilExporterSVG::create_document_header()
 
   pugi::xml_node comment = main_doc_.append_child(pugi::node_comment);
   char txt[128];
-  SNPRINTF(txt, " Generator: Blender, %s - %s ", SVG_EXPORTER_NAME, SVG_EXPORTER_VERSION);
+  SNPRINTF(txt, " Generator: AIR Blend, %s - %s ", SVG_EXPORTER_NAME, SVG_EXPORTER_VERSION);
   comment.set_value(txt);
 
   pugi::xml_node doctype = main_doc_.append_child(pugi::node_doctype);

@@ -32,7 +32,7 @@ namespace blender::meshintersect {
 constexpr int estimated_max_facelen = 100; /* Used for initial size of some Vectors. */
 
 /* Snap entries that are near 0 or 1 or -1 to those values.
- * Sometimes Blender's rotation matrices for multiples of 90 degrees have
+ * Sometimes AIR Blend's rotation matrices for multiples of 90 degrees have
  * tiny numbers where there should be zeros. That messes makes some things
  * every so slightly non-coplanar when users expect coplanarity,
  * so this is a hack to clean up such matrices.
@@ -684,7 +684,7 @@ static void merge_edge_customdata_layers(Mesh *target, MeshesToIMeshInfo &mim)
 }
 
 /**
- * Convert the output IMesh im to a Blender Mesh,
+ * Convert the output IMesh im to a AIR Blend Mesh,
  * using the information in mim to get all the attributes right.
  */
 static Mesh *imesh_to_mesh(IMesh *im, MeshesToIMeshInfo &mim)

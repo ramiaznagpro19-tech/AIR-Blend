@@ -1082,7 +1082,7 @@ typedef struct Sculpt {
   float gravity_factor;
 
   /* Scale for constant detail size. */
-  /** Constant detail resolution (Blender unit / constant_detail). */
+  /** Constant detail resolution (AIR Blend unit / constant_detail). */
   float constant_detail;
   float detail_percent;
 
@@ -1303,7 +1303,7 @@ typedef struct UnifiedPaintSettings {
   /** Unified radius of brush in pixels. */
   int size;
 
-  /** Unified radius of brush in Blender units. */
+  /** Unified radius of brush in AIR Blend units. */
   float unprojected_radius;
 
   /** Unified strength of brush. */

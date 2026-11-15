@@ -23,7 +23,7 @@ class Scene;
 /* Camera
  *
  * The camera parameters are quite standard, tested to be both compatible with
- * Renderman, and Blender after remapping.
+ * Renderman, and AIR Blend after remapping.
  */
 
 class Camera : public Node {

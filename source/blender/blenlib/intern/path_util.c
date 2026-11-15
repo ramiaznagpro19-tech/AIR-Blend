@@ -581,7 +581,7 @@ bool BLI_path_is_win32_drive_with_slash(const char *path)
  * - Is a UNC path.
  *
  * \note Not to be confused with the opposite of #BLI_path_is_rel which checks for the
- * Blender specific convention of using `//` prefix for blend-file relative paths.
+ * AIR Blend specific convention of using `//` prefix for blend-file relative paths.
  */
 static bool BLI_path_is_abs_win32(const char *path)
 {

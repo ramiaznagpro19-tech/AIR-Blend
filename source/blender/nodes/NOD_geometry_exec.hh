@@ -221,7 +221,7 @@ class GeoNodeExecParams {
 
   /**
    * Add an error message displayed at the top of the node when displaying the node tree,
-   * and potentially elsewhere in Blender.
+   * and potentially elsewhere in AIR Blend.
    */
   void error_message_add(const NodeWarningType type, StringRef message) const;
 

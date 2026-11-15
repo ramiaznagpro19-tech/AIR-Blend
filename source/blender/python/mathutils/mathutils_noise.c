@@ -8,7 +8,7 @@
  */
 
 /************************/
-/* Blender Noise Module */
+/* AIR Blend Noise Module */
 /************************/
 
 #include <Python.h>
@@ -273,7 +273,7 @@ static void vTurb(float x,
 }
 
 /*-------------------------DOC STRINGS ---------------------------*/
-PyDoc_STRVAR(M_Noise_doc, "The Blender noise module");
+PyDoc_STRVAR(M_Noise_doc, "The AIR Blend noise module");
 
 /*------------------------------------------------------------*/
 /* Python Functions */

@@ -381,7 +381,7 @@ static Sequence *rna_Sequences_new_sound(ID *UNUSED(id),
                                          int UNUSED(channel),
                                          int UNUSED(frame_start))
 {
-  BKE_report(reports, RPT_ERROR, "Blender compiled without Audaspace support");
+  BKE_report(reports, RPT_ERROR, "AIR Blend compiled without Audaspace support");
   return NULL;
 }
 #  endif /* WITH_AUDASPACE */

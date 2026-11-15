@@ -1,5 +1,5 @@
 /* Original implementation by Keijiro Takahashi
- * Blender integration by Clément Foucault
+ * AIR Blend integration by Clément Foucault
  *
  * Original License :
  *

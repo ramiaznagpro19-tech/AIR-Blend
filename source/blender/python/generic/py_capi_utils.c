@@ -844,7 +844,7 @@ static void pyc_exception_buffer_handle_system_exit(PyObject *error_type,
    * Arguably accessing a `SystemExit` exception as a buffer should be supported without exiting.
    * (by temporarily enabling inspection for example) however - it's not obvious exactly when this
    * should be enabled and complicates the Python API by introducing different kinds of execution.
-   * Since the rule of thumb is for Blender's embedded Python to match stand-alone Python,
+   * Since the rule of thumb is for AIR Blend's embedded Python to match stand-alone Python,
    * favor exiting when a `SystemExit` is raised.
    * Especially since this exception more likely to be used for background/batch-processing
    * utilities where exiting immediately makes sense, the possibility of this being called

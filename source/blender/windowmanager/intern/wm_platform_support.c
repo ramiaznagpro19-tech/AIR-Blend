@@ -125,7 +125,7 @@ bool WM_platform_support_perform_checks(void)
 
     case GPU_SUPPORT_LEVEL_LIMITED: {
       size_t slen = 0;
-      STR_CONCAT(title, slen, "Blender - ");
+      STR_CONCAT(title, slen, "AIR Blend - ");
       STR_CONCAT(
           title, slen, CTX_IFACE_(BLT_I18NCONTEXT_ID_WINDOWMANAGER, "Limited Platform Support"));
       slen = 0;
@@ -143,7 +143,7 @@ bool WM_platform_support_perform_checks(void)
           message,
           slen,
           CTX_IFACE_(BLT_I18NCONTEXT_ID_WINDOWMANAGER,
-                     "Newer graphics drivers may be available to improve Blender support."));
+                     "Newer graphics drivers may be available to improve AIR Blend support."));
       STR_CONCAT(message, slen, "\n \n");
       STR_CONCAT(message, slen, CTX_IFACE_(BLT_I18NCONTEXT_ID_WINDOWMANAGER, "Graphics card:\n"));
       STR_CONCAT(message, slen, GPU_platform_gpu_name());
@@ -154,7 +154,7 @@ bool WM_platform_support_perform_checks(void)
 
     case GPU_SUPPORT_LEVEL_UNSUPPORTED: {
       size_t slen = 0;
-      STR_CONCAT(title, slen, "Blender - ");
+      STR_CONCAT(title, slen, "AIR Blend - ");
       STR_CONCAT(
           title, slen, CTX_IFACE_(BLT_I18NCONTEXT_ID_WINDOWMANAGER, "Platform Unsupported"));
       slen = 0;
@@ -168,7 +168,7 @@ bool WM_platform_support_perform_checks(void)
           message,
           slen,
           CTX_IFACE_(BLT_I18NCONTEXT_ID_WINDOWMANAGER,
-                     "Newer graphics drivers may be available to improve Blender support."));
+                     "Newer graphics drivers may be available to improve AIR Blend support."));
 
       STR_CONCAT(message, slen, "\n \n");
       STR_CONCAT(message, slen, CTX_IFACE_(BLT_I18NCONTEXT_ID_WINDOWMANAGER, "Graphics card:\n"));

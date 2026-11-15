@@ -517,7 +517,7 @@ void BlenderSync::sync_film(BL::ViewLayer &b_view_layer, BL::SpaceView3D &b_v3d)
     }
   }
 
-  /* Blender viewport does not support proper shadow catcher compositing, so force an approximate
+  /* AIR Blend viewport does not support proper shadow catcher compositing, so force an approximate
    * mode to improve visual feedback. */
   if (b_v3d) {
     film->set_use_approximate_shadow_catcher(true);

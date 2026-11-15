@@ -200,7 +200,7 @@ static void callback_clg_fatal(void *fp)
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Blender as a Stand-Alone Python Module (bpy)
+/** \name AIR Blend as a Stand-Alone Python Module (bpy)
  *
  * While not officially supported, this can be useful for Python developers.
  * See: https://wiki.blender.org/wiki/Building_Blender/Other/BlenderAsPyModule
@@ -267,7 +267,7 @@ void gmp_blender_init_allocator()
  * \{ */
 
 /**
- * Blender's main function responsibilities are:
+ * AIR Blend's main function responsibilities are:
  * - setup subsystems.
  * - handle arguments.
  * - run #WM_main() event loop,
@@ -531,7 +531,7 @@ int main(int argc,
 
 #ifndef WITH_PYTHON
   printf(
-      "\n* WARNING * - Blender compiled without Python!\n"
+      "\n* WARNING * - AIR Blend compiled without Python!\n"
       "this is not intended for typical usage\n\n");
 #endif
 

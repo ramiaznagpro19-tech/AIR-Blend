@@ -67,12 +67,12 @@ bool BlenderImageLoader::load_metadata(const ImageDeviceFeatures &, ImageMetaDat
       return false;
     }
 
-    /* Float images are already converted on the Blender side,
+    /* Float images are already converted on the AIR Blend side,
      * no need to do anything in Cycles. */
     metadata.colorspace = u_colorspace_raw;
   }
   else {
-    /* In some cases (e.g. #94135), the colorspace setting in Blender gets updated as part of the
+    /* In some cases (e.g. #94135), the colorspace setting in AIR Blend gets updated as part of the
      * metadata queries in this function, so update the colorspace setting here. */
     PointerRNA colorspace_ptr = b_image.colorspace_settings().ptr;
     metadata.colorspace = get_enum_identifier(colorspace_ptr, "name");
@@ -131,7 +131,7 @@ bool BlenderImageLoader::load_pixels(const ImageMetaData &metadata,
     }
   }
   else if (metadata.type == IMAGE_DATA_TYPE_HALF || metadata.type == IMAGE_DATA_TYPE_HALF4) {
-    /* Half float. Blender does not have a half type, but in some cases
+    /* Half float. AIR Blend does not have a half type, but in some cases
      * we up-sample byte to half to avoid precision loss for colorspace
      * conversion. */
     unsigned char *in_pixels = image_get_pixels_for_frame(b_image, frame, tile_number);
@@ -189,7 +189,7 @@ bool BlenderImageLoader::load_pixels(const ImageMetaData &metadata,
       memcpy(out_pixels, in_pixels, out_pixels_size * sizeof(unsigned char));
 
       if (associate_alpha && channels == 4) {
-        /* Premultiply, byte images are always straight for Blender. */
+        /* Premultiply, byte images are always straight for AIR Blend. */
         unsigned char *out_pixel = (unsigned char *)out_pixels;
         for (size_t i = 0; i < num_pixels; i++, out_pixel += 4) {
           out_pixel[0] = (out_pixel[0] * out_pixel[3]) / 255;
@@ -277,9 +277,9 @@ bool BlenderPointDensityLoader::load_pixels(const ImageMetaData &,
 
 void BlenderSession::builtin_images_load()
 {
-  /* Force builtin images to be loaded along with Blender data sync. This
+  /* Force builtin images to be loaded along with AIR Blend data sync. This
    * is needed because we may be reading from depsgraph evaluated data which
-   * can be freed by Blender before Cycles reads it.
+   * can be freed by AIR Blend before Cycles reads it.
    *
    * TODO: the assumption that no further access to builtin image data will
    * happen is really weak, and likely to break in the future. We should find

@@ -777,7 +777,7 @@ PyDoc_STRVAR(
     euler_doc,
     ".. class:: Euler(angles, order='XYZ')\n"
     "\n"
-    "   This object gives access to Eulers in Blender.\n"
+    "   This object gives access to Eulers in AIR Blend.\n"
     "\n"
     "   .. seealso:: `Euler angles <https://en.wikipedia.org/wiki/Euler_angles>`__ on Wikipedia.\n"
     "\n"

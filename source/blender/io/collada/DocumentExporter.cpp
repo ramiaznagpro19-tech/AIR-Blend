@@ -234,17 +234,17 @@ int DocumentExporter::exportCurrentScene()
 
   asset.setUnit(unitname, linearmeasure);
   asset.setUpAxisType(COLLADASW::Asset::Z_UP);
-  asset.getContributor().mAuthor = "Blender User";
+  asset.getContributor().mAuthor = "AIR Blend User";
   char version_buf[128];
 #ifdef WITH_BUILDINFO
   SNPRINTF(version_buf,
-           "Blender %s commit date:%s, commit time:%s, hash:%s",
+           "AIR Blend %s commit date:%s, commit time:%s, hash:%s",
            BKE_blender_version_string(),
            build_commit_date,
            build_commit_time,
            build_hash);
 #else
-  SNPRINTF(version_buf, "Blender %s", BKE_blender_version_string());
+  SNPRINTF(version_buf, "AIR Blend %s", BKE_blender_version_string());
 #endif
   asset.getContributor().mAuthoringTool = version_buf;
   asset.add();

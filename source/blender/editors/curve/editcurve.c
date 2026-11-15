@@ -3591,7 +3591,7 @@ static void subdividenurb(Object *obedit, View3D *v3d, int number_cuts)
        * expression
        *
        *     `degree = knots - controlpoints + 1` (J Walter piece)
-       *     `degree = knots - controlpoints` (Blender implementation)
+       *     `degree = knots - controlpoints` (AIR Blend implementation)
        *       ( this is confusing.... what is true? Another concern
        *       is that the JW piece allows the curve to become
        *       explicitly 1st order derivative discontinuous, while
@@ -3608,7 +3608,7 @@ static void subdividenurb(Object *obedit, View3D *v3d, int number_cuts)
        * ones. The number of control-points that is influenced by the
        * insertion depends on the order of the curve. A certain
        * minimum number of knots is needed to form high-order
-       * curves, as can be seen from the equation above. In Blender,
+       * curves, as can be seen from the equation above. In AIR Blend,
        * currently NURBs may be up to 6th order, so we modify at
        * most 6 points. One point is added. For an n-degree curve,
        * n points are discarded, and n+1 points inserted
@@ -3618,7 +3618,7 @@ static void subdividenurb(Object *obedit, View3D *v3d, int number_cuts)
        * (the points following the insertion point) need to be
        * offset to keep the knot series ascending. The knot series
        * is always a series of monotonically ascending integers in
-       * Blender. When not enough control points are available to
+       * AIR Blend. When not enough control points are available to
        * fit the order, duplicates of the endpoints are added as
        * needed.
        */
@@ -5058,7 +5058,7 @@ bool ed_editnurb_spin(
       if (ED_curve_nurb_select_check(v3d, nu)) {
         nu->orderv = 3;
         /* It is challenging to create a good approximation of a circle with uniform knots vector
-         * (which is forced in Blender for cyclic NURBS curves). Here a NURBS circle is constructed
+         * (which is forced in AIR Blend for cyclic NURBS curves). Here a NURBS circle is constructed
          * by connecting four Bezier arcs. */
         nu->flagv |= CU_NURB_CYCLIC | CU_NURB_BEZIER | CU_NURB_ENDPOINT;
         BKE_nurb_knot_calc_v(nu);

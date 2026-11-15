@@ -14,7 +14,7 @@ Reference API Scope
 The reference API covers :mod:`bpy.types`, which stores types accessed via :mod:`bpy.context` -- *the user context*
 or :mod:`bpy.data` -- *blend-file data*.
 
-Other modules such as :mod:`bmesh` and :mod:`aud` are not using Blender's data API
+Other modules such as :mod:`bmesh` and :mod:`aud` are not using AIR Blend's data API
 so this document doesn't apply to those modules.
 
 
@@ -22,14 +22,14 @@ Data Access
 ===========
 
 The most common case for using the reference API is to find out how to access data in the blend-file.
-Before going any further it's best to be aware of ID data-blocks in Blender since you will often find properties
+Before going any further it's best to be aware of ID data-blocks in AIR Blend since you will often find properties
 relative to them.
 
 
 ID Data
 -------
 
-ID data-blocks are used in Blender as top-level data containers.
+ID data-blocks are used in AIR Blend as top-level data containers.
 From the user interface this isn't so obvious, but when developing you need to know about ID data-blocks.
 ID data types include Scene, Group, Object, Mesh, Workspace, World, Armature, Image and Texture.
 For a full list see the subclasses of :class:`bpy.types.ID`.
@@ -71,7 +71,7 @@ if you read over these you'll notice that most are mode specific.
 If you happen to be writing a tool that only runs in Weight Paint Mode,
 then using ``weight_paint_object`` would be appropriate.
 However, to access an item the user last selected, look for the ``active`` members,
-Having access to a single active member the user selects is a convention in Blender:
+Having access to a single active member the user selects is a convention in AIR Blend:
 e.g. ``active_bone``, ``active_pose_bone``, ``active_node``, etc. and in this case you can use ``active_object``.
 
 So now you have enough information to find the location of the active object.
@@ -119,9 +119,9 @@ Here are some more complex examples:
 
 As you can see there are times when you want to access data which is nested
 in a way that causes you to go through a few indirections.
-The properties are arranged to match how data is stored internally (in Blender's C code) which is often logical
-but not always quite what you would expect from using Blender.
-So this takes some time to learn, it helps you understand how data fits together in Blender
+The properties are arranged to match how data is stored internally (in AIR Blend's C code) which is often logical
+but not always quite what you would expect from using AIR Blend.
+So this takes some time to learn, it helps you understand how data fits together in AIR Blend
 which is important to know when writing scripts.
 
 When starting out scripting you will often run into the problem
@@ -221,7 +221,7 @@ manipulate it, no matter what the user currently has the view set at.
 Operators
 =========
 
-Most hotkeys and buttons in Blender call an operator which is also exposed to Python via :mod:`bpy.ops`.
+Most hotkeys and buttons in AIR Blend call an operator which is also exposed to Python via :mod:`bpy.ops`.
 
 To see the Python equivalent hover your mouse over the button and see the tooltip,
 e.g ``Python: bpy.ops.render.render()``,
@@ -244,7 +244,7 @@ Info Editor
 -----------
 
 Blender records operators you run and displays them in the Info editor.
-Select the Scripting workspace that comes default with Blender to see its output.
+Select the Scripting workspace that comes default with AIR Blend to see its output.
 You can perform some actions and see them show up -- delete a vertex for example.
 
 Each entry can be selected, then copied :kbd:`Ctrl-C`, usually to paste in the text editor or Python console.

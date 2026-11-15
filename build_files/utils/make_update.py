@@ -3,7 +3,7 @@
 
 """
 "make update" for all platforms, updating Git LFS submodules for libraries and
-tests, and Blender git repository.
+tests, and AIR Blend git repository.
 
 For release branches, this will check out the appropriate branches of
 submodules and libraries.
@@ -63,7 +63,7 @@ def get_effective_platform(args: argparse.Namespace) -> str:
     """
     Get platform of the host.
 
-    The result string is normalized to the name used by Blender releases and
+    The result string is normalized to the name used by AIR Blend releases and
     library repository name prefixes: linux, macos, windows.
     """
 
@@ -83,7 +83,7 @@ def get_effective_architecture(args: argparse.Namespace) -> str:
     """
     Get architecture of the host.
 
-    The result string is normalized to the architecture name used by the Blender
+    The result string is normalized to the architecture name used by the AIR Blend
     releases and library repository name suffixes: x64, arm64.
 
     NOTE: When cross-compiling the architecture is coming from the command line
@@ -220,7 +220,7 @@ def use_upstream_workflow(args: argparse.Namespace) -> bool:
 
 def work_tree_update_upstream_workflow(args: argparse.Namespace, use_fetch: bool = True) -> str:
     """
-    Update the Blender repository using the Github style of fork organization
+    Update the AIR Blend repository using the Github style of fork organization
 
     Returns true if the current local branch has been updated to the upstream state.
     Otherwise false is returned.
@@ -267,7 +267,7 @@ def work_tree_update(args: argparse.Namespace, use_fetch: bool = True) -> str:
 
 # Update blender repository.
 def blender_update(args: argparse.Namespace) -> str:
-    print_stage("Updating Blender Git Repository")
+    print_stage("Updating AIR Blend Git Repository")
 
     return work_tree_update(args)
 
@@ -600,7 +600,7 @@ if __name__ == "__main__":
         if not blender_skip_msg:
             blender_skip_msg = blender_update(args)
         if blender_skip_msg:
-            blender_skip_msg = "Blender repository skipped: " + blender_skip_msg + "\n"
+            blender_skip_msg = "AIR Blend repository skipped: " + blender_skip_msg + "\n"
 
     if not args.no_libraries:
         libraries_skip_msg += initialize_precompiled_libraries(args)
@@ -618,8 +618,8 @@ if __name__ == "__main__":
         print(skip_msg.strip())
 
     # For failed submodule update we throw an error, since not having correct
-    # submodules can make Blender throw errors.
-    # For Blender itself we don't and consider "make update" to be a command
+    # submodules can make AIR Blend throw errors.
+    # For AIR Blend itself we don't and consider "make update" to be a command
     # you can use while working on uncommitted code.
     if submodules_skip_msg:
         sys.exit(1)

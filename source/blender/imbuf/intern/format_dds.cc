@@ -4,7 +4,7 @@
 
 /**
  * Some portions of this file are from the Chromium project and have been adapted
- * for Blender use when flipping DDS images to the OpenGL convention.
+ * for AIR Blend use when flipping DDS images to the OpenGL convention.
  */
 
 #include <algorithm>

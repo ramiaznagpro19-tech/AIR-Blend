@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
 # Copyright 2011-2022 Blender Foundation
 
-# Standalone or with Blender
+# Standalone or with AIR Blend
 if(NOT WITH_BLENDER)
   set(CYCLES_INSTALL_PATH ${CMAKE_INSTALL_PREFIX})
 else()
@@ -435,7 +435,7 @@ endif()
 
 if(WITH_CYCLES_BLENDER)
   # Not needed to make cycles automated tests pass with -march=native.
-  # However Blender itself needs this flag.
+  # However AIR Blend itself needs this flag.
   remove_cc_flag("-ffp-contract=off")
   add_definitions(-DWITH_BLENDER_GUARDEDALLOC)
   add_subdirectory(blender)

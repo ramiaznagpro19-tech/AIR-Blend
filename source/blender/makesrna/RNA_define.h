@@ -27,7 +27,7 @@ extern "C" {
 
 #define RNA_MAX_ARRAY_DIMENSION 3
 
-/* Blender RNA */
+/* AIR Blend RNA */
 
 BlenderRNA *RNA_create(void);
 void RNA_define_free(BlenderRNA *brna);

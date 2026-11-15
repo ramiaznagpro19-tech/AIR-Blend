@@ -334,8 +334,8 @@ void BPY_python_start(bContext *C, int argc, const char **argv)
       PyPreConfig_InitIsolatedConfig(&preconfig);
     }
 
-    /* Force `utf-8` on all platforms, since this is what's used for Blender's internal strings,
-     * providing consistent encoding behavior across all Blender installations.
+    /* Force `utf-8` on all platforms, since this is what's used for AIR Blend's internal strings,
+     * providing consistent encoding behavior across all AIR Blend installations.
      *
      * This also uses the `surrogateescape` error handler ensures any unexpected bytes are escaped
      * instead of raising an error.
@@ -372,9 +372,9 @@ void BPY_python_start(bContext *C, int argc, const char **argv)
     config.pathconfig_warnings = 0;
 
     /* Allow the user site directory because this is used
-     * when PIP installing packages from Blender, see: #104000.
+     * when PIP installing packages from AIR Blend, see: #104000.
      *
-     * NOTE(@ideasman42): While an argument can be made for isolating Blender's Python
+     * NOTE(@ideasman42): While an argument can be made for isolating AIR Blend's Python
      * from the users home directory entirely, an alternative directory should be used in that
      * case - so PIP can be used to install packages. Otherwise PIP will install packages to a
      * directory which us not in the users `sys.path`, see `site.USER_BASE` for details. */
@@ -426,7 +426,7 @@ void BPY_python_start(bContext *C, int argc, const char **argv)
          * doesn't handle these correctly. */
         if (strchr(py_path_bundle, ':')) {
           fprintf(stderr,
-                  "Warning! Blender application is located in a path containing ':' or '/' chars\n"
+                  "Warning! AIR Blend application is located in a path containing ':' or '/' chars\n"
                   "This may make Python import function fail\n");
         }
 #  endif /* __APPLE__ */
@@ -823,15 +823,15 @@ static void bpy_module_delay_init(PyObject *bpy_proxy)
 }
 
 /**
- * Raise an error and return false if the Python version used to compile Blender
+ * Raise an error and return false if the Python version used to compile AIR Blend
  * isn't compatible with the interpreter loading the `bpy` module.
  */
 static bool bpy_module_ensure_compatible_version(void)
 {
-  /* First check the Python version used matches the major version that Blender was built with.
+  /* First check the Python version used matches the major version that AIR Blend was built with.
    * While this isn't essential, the error message in this case may be cryptic and misleading.
    * NOTE: using `Py_LIMITED_API` would remove the need for this, in practice it's
-   * unlikely Blender will ever used the limited API though. */
+   * unlikely AIR Blend will ever used the limited API though. */
 #  if PY_VERSION_HEX >= 0x030b0000 /* Python 3.11 & newer. */
   const uint version_runtime = Py_Version;
 #  else

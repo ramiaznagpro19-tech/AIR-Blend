@@ -17,7 +17,7 @@
 #endif
 
 /*-------------------------DOC STRINGS ---------------------------*/
-PyDoc_STRVAR(M_Interpolate_doc, "The Blender interpolate module");
+PyDoc_STRVAR(M_Interpolate_doc, "The AIR Blend interpolate module");
 
 /* ---------------------------------WEIGHT CALCULATION ----------------------- */
 

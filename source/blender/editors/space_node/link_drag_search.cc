@@ -474,7 +474,7 @@ void invoke_node_link_drag_add_menu(bContext &C,
                                     const float2 &cursor)
 {
   LinkDragSearchStorage *storage = new LinkDragSearchStorage{node, socket, cursor};
-  /* Use the "_ex" variant with `can_refresh` false to avoid a double free when closing Blender. */
+  /* Use the "_ex" variant with `can_refresh` false to avoid a double free when closing AIR Blend. */
   UI_popup_block_invoke_ex(&C, create_search_popup_block, storage, nullptr, false);
 }
 

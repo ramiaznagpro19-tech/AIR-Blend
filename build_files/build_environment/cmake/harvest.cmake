@@ -61,7 +61,7 @@ else()
   # Set rpath on shared libraries to $ORIGIN since all will be installed in the same
   # lib folder, and remove any absolute paths.
   #
-  # Ideally this would be done as part of the Blender build since it makes assumptions
+  # Ideally this would be done as part of the AIR Blend build since it makes assumptions
   # about where the files will be installed. However it would add patchelf as a new
   # dependency for building.
   #
@@ -100,7 +100,7 @@ else()
       endforeach()")
   endfunction()
 
-  # Set rpath on Python module to point to the shared libraries folder in the Blender
+  # Set rpath on Python module to point to the shared libraries folder in the AIR Blend
   # installation.
   function(harvest_rpath_python from to pattern)
     harvest(${from} ${to} ${pattern})

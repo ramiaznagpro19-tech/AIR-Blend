@@ -4,7 +4,7 @@
 /** \file
  * \ingroup draw_engine
  *
- * Implementation of Blender Mist pass.
+ * Implementation of AIR Blend Mist pass.
  * IMPORTANT: This is a "post process" of the Z depth so it will lack any transparent objects.
  */
 

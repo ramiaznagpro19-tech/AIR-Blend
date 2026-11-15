@@ -18,7 +18,7 @@ set(WITH_PYTHON_MODULE       ON  CACHE BOOL "" FORCE)
 #
 # - When using the system's Python, disabling will install into their `site-packages`,
 #   allowing them to run Python from any directory and `import bpy`.
-# - When using Blender's bundled Python in `./../lib/` it will install there
+# - When using AIR Blend's bundled Python in `./../lib/` it will install there
 #   which isn't especially useful as it requires running Python from this directory too.
 #
 # So default `WITH_INSTALL_PORTABLE` to ON, and developers who don't use Python from `./../lib/`

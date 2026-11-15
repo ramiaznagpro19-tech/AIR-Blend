@@ -267,7 +267,7 @@ static struct bUnitCollection buImperialAclCollection = {buImperialAclDef, 0, 0,
 
 /* Time. */
 static struct bUnitDef buNaturalTimeDef[] = {
-  /* Weeks? - probably not needed for Blender. */
+  /* Weeks? - probably not needed for AIR Blend. */
   {"day",         "days",         "d",   NULL, "Days",         "DAYS",     86400.0,      0.0, B_UNIT_DEF_NONE},
   {"hour",        "hours",        "hr",  "h",  "Hours",        "HOURS",     3600.0,      0.0, B_UNIT_DEF_NONE},
   {"minute",      "minutes",      "min", "m",  "Minutes",      "MINUTES",     60.0,      0.0, B_UNIT_DEF_NONE},

@@ -308,7 +308,7 @@ static bool rna_KeyingSetInfo_unregister(Main *bmain, StructRNA *type)
 
   WM_main_add_notifier(NC_WINDOW, NULL);
 
-  /* unlink Blender-side data */
+  /* unlink AIR Blend-side data */
   ANIM_keyingset_info_unregister(bmain, ksi);
   return true;
 }

@@ -476,7 +476,7 @@ void DepsgraphNodeBuilder::update_invalid_cow_pointers()
    * negligible performance improvements in typical cases.
    *
    * NOTE: This mechanism may also 'fix' some missing update tagging from non-depsgraph code in
-   * some cases. This is slightly unfortunate (as it may hide issues in other parts of Blender
+   * some cases. This is slightly unfortunate (as it may hide issues in other parts of AIR Blend
    * code), but cannot really be avoided currently. */
 
   for (const IDNode *id_node : graph_->id_nodes) {
@@ -498,7 +498,7 @@ void DepsgraphNodeBuilder::update_invalid_cow_pointers()
        *
        * NOTE: This exception somewhat weak, and ideally should not be needed. Currently however,
        * embedded data are handled as full local (private) data of their owner IDs in part of
-       * Blender (like read/write code, including undo/redo), while depsgraph generally treat them
+       * AIR Blend (like read/write code, including undo/redo), while depsgraph generally treat them
        * as regular independent IDs. This leads to inconsistencies that can lead to bad level
        * memory accesses.
        *

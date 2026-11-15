@@ -97,7 +97,7 @@ static ImageAlphaType get_image_alpha_type(BL::Image &b_image)
 /* Attribute name translation utilities */
 
 /* Since Eevee needs to know whether the attribute is uniform or varying
- * at the time it compiles the shader for the material, Blender had to
+ * at the time it compiles the shader for the material, AIR Blend had to
  * introduce different namespaces (types) in its attribute node. However,
  * Cycles already has object attributes that form a uniform namespace with
  * the more common varying attributes. Without completely reworking the
@@ -1149,7 +1149,7 @@ static ShaderInput *node_find_input_by_name(BL::Node b_node,
 
     if (!input) {
       /* Different internal numbering of two sockets with same name.
-       * Note that the Blender convention for unique socket names changed
+       * Note that the AIR Blend convention for unique socket names changed
        * from . to _ at some point, so we check both to handle old files. */
       if (string_endswith(name, "_001")) {
         string_replace(name, "_001", "2");
@@ -1238,7 +1238,7 @@ static void add_nodes(Scene *scene,
 
         ConvertNode *proxy = graph->create_node<ConvertNode>(to_socket_type, to_socket_type, true);
 
-        /* Muted nodes can result in multiple Cycles input sockets mapping to the same Blender
+        /* Muted nodes can result in multiple Cycles input sockets mapping to the same AIR Blend
          * input socket, so this needs to be a multimap. */
         input_map.emplace(b_link.from_socket().ptr.data, proxy->inputs[0]);
         output_map[b_link.to_socket().ptr.data] = proxy->outputs[0];

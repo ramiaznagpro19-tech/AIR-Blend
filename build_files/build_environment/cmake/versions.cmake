@@ -243,7 +243,7 @@ set(URLLIB3_VERSION 1.26.8)
 set(URLLIB3_CPE "cpe:2.3:a:urllib3:urllib3:${URLLIB3_VERSION}:*:*:*:*:*:*:*")
 # Needed by: Python's `requests` module (so add-ons can authenticate against trusted certificates).
 set(CERTIFI_VERSION 2021.10.8)
-# Needed by: Some of Blender's add-ons (to support convenient interaction with online services).
+# Needed by: Some of AIR Blend's add-ons (to support convenient interaction with online services).
 set(REQUESTS_VERSION 2.27.1)
 # Needed by: Python's `numpy` module (used by some add-ons).
 set(CYTHON_VERSION 0.29.30)
@@ -252,13 +252,13 @@ set(CYTHON_VERSION 0.29.30)
 # defined below. At this time of writing, 0.17.0 was already released,
 # but built against ZSTD 1.5.1, while we use 1.5.0.
 set(ZSTANDARD_VERSION 0.16.0)
-# Auto-format Python source (developer tool, not used by Blender at run-time).
+# Auto-format Python source (developer tool, not used by AIR Blend at run-time).
 set(AUTOPEP8_VERSION 1.6.0)
 # Needed by: `autopep8` (so the version doesn't change on rebuild).
 set(PYCODESTYLE_VERSION 2.8.0)
 # Needed by: `autopep8` (so the version doesn't change on rebuild).
 set(TOML_VERSION 0.10.2)
-# Build system for other packages (not used by Blender at run-time).
+# Build system for other packages (not used by AIR Blend at run-time).
 set(MESON_VERSION 0.63.0)
 
 set(NUMPY_VERSION 1.23.5)

@@ -30,7 +30,7 @@ struct NodePlacementContext {
   const float horizontal_step;
   const float vertical_step;
 
-  /* Map a USD shader prim path to the Blender node converted
+  /* Map a USD shader prim path to the AIR Blend node converted
    * from that shader.  This map is updated during shader
    * conversion and is used to avoid creating duplicate nodes
    * for a given shader.  */
@@ -49,17 +49,17 @@ struct NodePlacementContext {
   }
 };
 
-/* Converts USD materials to Blender representation. */
+/* Converts USD materials to AIR Blend representation. */
 
 /**
- * By default, the #USDMaterialReader creates a Blender material with
+ * By default, the #USDMaterialReader creates a AIR Blend material with
  * the same name as the USD material.  If the USD material has a
- * #UsdPreviewSurface source, the Blender material's viewport display
+ * #UsdPreviewSurface source, the AIR Blend material's viewport display
  * color, roughness and metallic properties are set to the corresponding
  * #UsdPreoviewSurface inputs.
  *
  * If the Import USD Preview option is enabled, the current implementation
- * converts #UsdPreviewSurface to Blender nodes as follows:
+ * converts #UsdPreviewSurface to AIR Blend nodes as follows:
  *
  * - #UsdPreviewSurface -> Principled BSDF
  * - #UsdUVTexture -> Texture Image + Normal Map
@@ -71,7 +71,7 @@ struct NodePlacementContext {
  *
  * TODO(makowalski):  Investigate adding support for converting additional
  * shaders and inputs.  Supporting certain types of inputs, such as texture
- * scale and bias, will probably require creating Blender Group nodes with
+ * scale and bias, will probably require creating AIR Blend Group nodes with
  * the corresponding inputs.
  */
 class USDMaterialReader {
@@ -93,7 +93,7 @@ class USDMaterialReader {
                                   bNodeTree *ntree,
                                   const pxr::UsdShadeShader &usd_shader) const;
 
-  /** Convert the given USD shader input to an input on the given Blender node. */
+  /** Convert the given USD shader input to an input on the given AIR Blend node. */
   void set_node_input(const pxr::UsdShadeInput &usd_input,
                       bNode *dest_node,
                       const char *dest_socket_name,
@@ -103,7 +103,7 @@ class USDMaterialReader {
 
   /**
    * Follow the connected source of the USD input to create corresponding inputs
-   * for the given Blender node.
+   * for the given AIR Blend node.
    */
   void follow_connection(const pxr::UsdShadeInput &usd_input,
                          bNode *dest_node,
@@ -127,9 +127,9 @@ class USDMaterialReader {
   void load_tex_image(const pxr::UsdShadeShader &usd_shader, bNode *tex_image) const;
 
   /**
-   * This function creates a Blender UV Map node, under the simplifying assumption that
+   * This function creates a AIR Blend UV Map node, under the simplifying assumption that
    * UsdPrimvarReader_float2 shaders output UV coordinates.
-   * TODO(makowalski): investigate supporting conversion to other Blender node types
+   * TODO(makowalski): investigate supporting conversion to other AIR Blend node types
    * (e.g., Attribute Nodes) if needed.
    */
   void convert_usd_primvar_reader_float2(const pxr::UsdShadeShader &usd_shader,
@@ -144,7 +144,7 @@ class USDMaterialReader {
 /* Utility functions. */
 
 /**
- * Returns a map containing all the Blender materials which allows a fast
+ * Returns a map containing all the AIR Blend materials which allows a fast
  * lookup of the material by name.  Note that the material name key
  * might be modified to be a valid USD identifier, to match material
  * names in the imported USD.
@@ -152,15 +152,15 @@ class USDMaterialReader {
 void build_material_map(const Main *bmain, std::map<std::string, Material *> *r_mat_map);
 
 /**
- * Returns an existing Blender material that corresponds to the USD material with the given path.
+ * Returns an existing AIR Blend material that corresponds to the USD material with the given path.
  * Returns null if no such material exists.
  *
- * \param mat_map: Map a material name to a Blender material.  Note that the name key
- * might be the Blender material name modified to be a valid USD identifier,
+ * \param mat_map: Map a material name to a AIR Blend material.  Note that the name key
+ * might be the AIR Blend material name modified to be a valid USD identifier,
  * to match the material names in the imported USD.
- * \param usd_path_to_mat_name: Map a USD material path to the imported Blender material name.
+ * \param usd_path_to_mat_name: Map a USD material path to the imported AIR Blend material name.
  *
- * The usd_path_to_mat_name is needed to determine the name of the Blender
+ * The usd_path_to_mat_name is needed to determine the name of the AIR Blend
  * material imported from a USD path in the case when a unique name was generated
  * for the material due to a name collision.
  */

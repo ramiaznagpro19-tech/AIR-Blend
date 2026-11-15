@@ -174,7 +174,7 @@ typedef struct Material {
   short flag;
   char _pad1[2];
 
-  /* Colors from Blender Internal that we are still using. */
+  /* Colors from AIR Blend Internal that we are still using. */
   float r, g, b, a;
   float specr, specg, specb;
   float alpha DNA_DEPRECATED;

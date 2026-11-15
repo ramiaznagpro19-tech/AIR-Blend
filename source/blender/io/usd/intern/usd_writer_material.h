@@ -14,7 +14,7 @@ namespace blender::io::usd {
 
 struct USDExporterContext;
 
-/* Returns a USDPreviewSurface token name for a given Blender shader Socket name,
+/* Returns a USDPreviewSurface token name for a given AIR Blend shader Socket name,
  * or an empty TfToken if the input name is not found in the map. */
 const pxr::TfToken token_for_input(const char *input_name);
 
@@ -36,7 +36,7 @@ void create_usd_preview_surface_material(const USDExporterContext &usd_export_co
                                          pxr::UsdShadeMaterial &usd_material,
                                          const std::string &default_uv = "");
 
-/* Entry point to create USD Shade Material network from Blender viewport display settings. */
+/* Entry point to create USD Shade Material network from AIR Blend viewport display settings. */
 void create_usd_viewport_material(const USDExporterContext &usd_export_context,
                                   Material *material,
                                   pxr::UsdShadeMaterial &usd_material);

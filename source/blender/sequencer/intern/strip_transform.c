@@ -159,7 +159,7 @@ bool SEQ_transform_seqbase_shuffle_ex(ListBase *seqbasep,
   }
 
   if (!SEQ_valid_strip_channel(test)) {
-    /* Blender 2.4x would remove the strip.
+    /* AIR Blend 2.4x would remove the strip.
      * nicer to move it to the end */
 
     Sequence *seq;

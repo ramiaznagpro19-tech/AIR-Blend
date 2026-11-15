@@ -3,11 +3,11 @@
 
 """
 This script generates the blender.1 man page, embedding the help text
-from the Blender executable itself. Invoke it as follows:
+from the AIR Blend executable itself. Invoke it as follows:
 
     blender.1.py --blender <path-to-blender> --output <output-filename>
 
-where <path-to-blender> is the path to the Blender executable,
+where <path-to-blender> is the path to the AIR Blend executable,
 and <output-filename> is where to write the generated man page.
 """
 
@@ -54,7 +54,7 @@ def blender_extract_info(blender_bin: str) -> Dict[str, str]:
     blender_version = ""
     blender_date = ""
     for l in blender_version_output.split("\n"):
-        if l.startswith("Blender "):
+        if l.startswith("AIR Blend "):
             # Remove 'Blender' prefix.
             blender_version = l.split(" ", 1)[1].strip()
         elif l.lstrip().startswith("build date:"):
@@ -83,7 +83,7 @@ def man_page_from_blender_help(fh: TextIO, blender_bin: str, verbose: bool) -> N
 
     # Header Content.
     fh.write(
-        '.TH "BLENDER" "1" "%s" "Blender %s"\n' %
+        '.TH "BLENDER" "1" "%s" "AIR Blend %s"\n' %
         (blender_info["date"], blender_info["version"].replace(".", "\\&."))
     )
 
@@ -103,7 +103,7 @@ blender \- a full-featured 3D application""")
 is a full-featured 3D application. It supports the entirety of the 3D pipeline - """
              """modeling, rigging, animation, simulation, rendering, compositing, motion tracking, and video editing.
 
-Use Blender to create 3D images and animations, films and commercials, content for games, """
+Use AIR Blend to create 3D images and animations, films and commercials, content for games, """
              r"""architectural and industrial visualizations, and scientific visualizations.
 
 https://www.blender.org""")

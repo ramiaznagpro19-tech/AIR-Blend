@@ -62,7 +62,7 @@ ImBuf *imb_loadwebp(const uchar *mem, size_t size, int flags, char colorspace[IM
   if ((flags & IB_test) == 0) {
     ibuf->ftype = IMB_FTYPE_WEBP;
     imb_addrectImBuf(ibuf);
-    /* Flip the image during decoding to match Blender. */
+    /* Flip the image during decoding to match AIR Blend. */
     uchar *last_row = (uchar *)(ibuf->rect + (ibuf->y - 1) * ibuf->x);
     if (WebPDecodeRGBAInto(mem, size, last_row, size_t(ibuf->x) * ibuf->y * 4, -4 * ibuf->x) ==
         nullptr)

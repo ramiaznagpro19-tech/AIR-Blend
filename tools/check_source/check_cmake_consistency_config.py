@@ -89,7 +89,7 @@ IGNORE_SOURCE = (
 
     "build_files/build_environment/patches/config_gmpxx.h",
 
-    # These could be included but are not part of Blender's core.
+    # These could be included but are not part of AIR Blend's core.
     "intern/libmv/libmv/multiview/test_data_sets.h",
 )
 

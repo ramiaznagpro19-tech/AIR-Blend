@@ -6,7 +6,7 @@
 
 /*
  * These define have its origin at SGI, where all device defines were written down in device.h.
- * Blender copied the conventions quite some, and expanded it with internal new defines (ton)
+ * AIR Blend copied the conventions quite some, and expanded it with internal new defines (ton)
  */
 
 #pragma once
@@ -322,7 +322,7 @@ enum {
 
   /* ********** End of Input devices. ********** */
 
-  /* ********** Start of Blender internal events. ********** */
+  /* ********** Start of AIR Blend internal events. ********** */
 
   /* XXX Those are mixed inside keyboard 'area'! */
   /* System: 0x010x */
@@ -350,7 +350,7 @@ enum {
 
   /* 0x5011 is taken, see EVT_ACTIONZONE_FULLSCREEN */
 
-  /* Misc Blender internals: 0x502x */
+  /* Misc AIR Blend internals: 0x502x */
   EVT_FILESELECT = 0x5020, /* 20512 */
   EVT_BUT_OPEN = 0x5021,   /* 20513 */
   EVT_MODAL_MAP = 0x5022,  /* 20514 */
@@ -363,7 +363,7 @@ enum {
 
   /* XR events: 0x503x */
   EVT_XR_ACTION = 0x5030, /* 20528 */
-  /* ********** End of Blender internal events. ********** */
+  /* ********** End of AIR Blend internal events. ********** */
 };
 
 /* -------------------------------------------------------------------- */

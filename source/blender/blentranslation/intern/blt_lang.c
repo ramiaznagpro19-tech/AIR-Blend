@@ -276,7 +276,7 @@ const char *BLT_lang_get(void)
     }
     return locale;
   }
-  return "en_US"; /* Kind of default locale in Blender when no translation enabled. */
+  return "en_US"; /* Kind of default locale in AIR Blend when no translation enabled. */
 #else
   return "";
 #endif

@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
 "PO-Revision-Date: 2023-01-28 11:09+0800\n"
@@ -367,8 +367,8 @@ msgid "Source Root"
 msgstr "來源基根"
 
 
-msgid "The Blender source root path"
-msgstr "Blender 來源根路徑"
+msgid "The AIR Blend source root path"
+msgstr "AIR Blend 來源根路徑"
 
 
 msgid "Spell Cache"
@@ -391,8 +391,8 @@ msgid "Persistent Data Path"
 msgstr "永恆資料路徑"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
-msgstr "一份儲存這些設定的 json 檔案名稱 (不幸地，Blender 的系統目前無法於此處運作)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
+msgstr "一份儲存這些設定的 json 檔案名稱 (不幸地，AIR Blend 的系統目前無法於此處運作)"
 
 
 msgid "User Add-ons"
@@ -1995,12 +1995,12 @@ msgid "Collection of worlds"
 msgstr "世界的選集"
 
 
-msgid "Blender RNA"
-msgstr "Blender RNA"
+msgid "AIR Blend RNA"
+msgstr "AIR Blend RNA"
 
 
-msgid "Blender RNA structure definitions"
-msgstr "Blender RNA 結構定義"
+msgid "AIR Blend RNA structure definitions"
+msgstr "AIR Blend RNA 結構定義"
 
 
 msgid "Structs"
@@ -4391,8 +4391,8 @@ msgid "Input Color Space"
 msgstr "輸入色彩空間"
 
 
-msgid "Rec. 709 (Full Range), Blender native linear space"
-msgstr "Rec. 709 (全範圍)，Blender 原生線性空間"
+msgid "Rec. 709 (Full Range), AIR Blend native linear space"
+msgstr "Rec. 709 (全範圍)，AIR Blend 原生線性空間"
 
 
 msgid "Do not perform any color transform on load, treat colors as in scene linear space already"
@@ -4692,8 +4692,8 @@ msgid "Lin error"
 msgstr "連結錯誤"
 
 
-msgid "Amount of residual error in Blender space unit for constraints that work on position"
-msgstr "Blender 空間單位中約束作用於位置的殘餘錯誤量"
+msgid "Amount of residual error in AIR Blend space unit for constraints that work on position"
+msgstr "AIR Blend 空間單位中約束作用於位置的殘餘錯誤量"
 
 
 msgid "Amount of residual error in radians for constraints that work on orientation"
@@ -7487,8 +7487,8 @@ msgid "Max Velocity"
 msgstr "最大速度"
 
 
-msgid "Velocity considered as maximum influence (Blender units per frame)"
-msgstr "速度被視為最大影響 (每幀的 Blender 單位)"
+msgid "Velocity considered as maximum influence (AIR Blend units per frame)"
+msgstr "速度被視為最大影響 (每幀的 AIR Blend 單位)"
 
 
 msgid "Velocity Color Ramp"
@@ -7843,8 +7843,8 @@ msgid "Save this output layer"
 msgstr "儲存此輸出分層"
 
 
-msgid "Multiply color by alpha (recommended for Blender input)"
-msgstr "色彩乘以 alpha (建議 Blender 輸入使用)"
+msgid "Multiply color by alpha (recommended for AIR Blend input)"
+msgstr "色彩乘以 alpha (建議 AIR Blend 輸入使用)"
 
 
 msgid "Use Shrink"
@@ -9417,8 +9417,8 @@ msgid "Show .blend1, .blend2, etc. files"
 msgstr "顯示 .blend1、.blend2 等檔案"
 
 
-msgid "Filter Blender"
-msgstr "過濾 Blender"
+msgid "Filter AIR Blend"
+msgstr "過濾 AIR Blend"
 
 
 msgid "Show .blend files"
@@ -11836,8 +11836,8 @@ msgid "Unprojected Radius"
 msgstr "未投射的半徑"
 
 
-msgid "Radius of brush in Blender units"
-msgstr "筆刷的半徑，單位為 Blender 單位"
+msgid "Radius of brush in AIR Blend units"
+msgstr "筆刷的半徑，單位為 AIR Blend 單位"
 
 
 msgid "Accumulate"
@@ -16563,11 +16563,11 @@ msgid "Noise basis used for turbulence"
 msgstr "用於擾動的噪訊基礎"
 
 
-msgid "Blender Original"
-msgstr "Blender 原始"
+msgid "AIR Blend Original"
+msgstr "AIR Blend 原始"
 
 
-msgid "Noise algorithm - Blender original: Smooth interpolated noise"
+msgid "Noise algorithm - AIR Blend original: Smooth interpolated noise"
 msgstr "噪訊演算法 - Bledner 原始：平滑插補噪訊"
 
 
@@ -25296,20 +25296,20 @@ msgid "World space normal mapping"
 msgstr "世界空間法向映射"
 
 
-msgid "Blender Object Space"
-msgstr "Blender 物體空間"
+msgid "AIR Blend Object Space"
+msgstr "AIR Blend 物體空間"
 
 
-msgid "Object space normal mapping, compatible with Blender render baking"
-msgstr "物體空間法向映射，與 Blender 算繪烘焙相容"
+msgid "Object space normal mapping, compatible with AIR Blend render baking"
+msgstr "物體空間法向映射，與 AIR Blend 算繪烘焙相容"
 
 
-msgid "Blender World Space"
-msgstr "Blender 世界空間"
+msgid "AIR Blend World Space"
+msgstr "AIR Blend 世界空間"
 
 
-msgid "World space normal mapping, compatible with Blender render baking"
-msgstr "世界空間法向映射，與 Blender 算繪烘焙相容"
+msgid "World space normal mapping, compatible with AIR Blend render baking"
+msgstr "世界空間法向映射，與 AIR Blend 算繪烘焙相容"
 
 
 msgid "UV Map for tangent space maps"
@@ -31619,8 +31619,8 @@ msgid "Scale FPS"
 msgstr "縮放 FPS"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a Blender frame"
-msgstr "將幀率從 BVH 縮放成目前場景，否則每個 BVH 框幀會直接映射成 Blender 框幀"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgstr "將幀率從 BVH 縮放成目前場景，否則每個 BVH 框幀會直接映射成 AIR Blend 框幀"
 
 
 msgctxt "Operator"
@@ -31732,11 +31732,11 @@ msgid "Surround smooth groups by sharp edges"
 msgstr "以銳利邊線環繞平滑群組"
 
 
-msgid "Import OBJ Groups into Blender Objects"
-msgstr "匯入 OBJ 群組至 Blender 物體中"
+msgid "Import OBJ Groups into AIR Blend Objects"
+msgstr "匯入 OBJ 群組至 AIR Blend 物體中"
 
 
-msgid "Import OBJ Objects into Blender Objects"
+msgid "Import OBJ Objects into AIR Blend Objects"
 msgstr "匯入 OBJ 物體至 Bledner 物體中"
 
 
@@ -31781,8 +31781,8 @@ msgid "Update Reports Display"
 msgstr "更新報告顯示"
 
 
-msgid "Update the display of reports in Blender UI (internal use)"
-msgstr "更新 Blender UI 中 (內部使用) 報告的顯示"
+msgid "Update the display of reports in AIR Blend UI (internal use)"
+msgstr "更新 AIR Blend UI 中 (內部使用) 報告的顯示"
 
 
 msgctxt "Operator"
@@ -37989,8 +37989,8 @@ msgid "Install Theme..."
 msgstr "安裝主題..."
 
 
-msgid "Load and apply a Blender XML theme file"
-msgstr "載入並套用 Blender XML 主題檔案"
+msgid "Load and apply a AIR Blend XML theme file"
+msgstr "載入並套用 AIR Blend XML 主題檔案"
 
 
 msgid "Remove existing theme file if exists"
@@ -42273,8 +42273,8 @@ msgid "Sort exported data by Object name"
 msgstr "依物體名稱排序匯出的資料"
 
 
-msgid "Use Blender Profile"
-msgstr "使用 Blender 設定檔"
+msgid "Use AIR Blend Profile"
+msgstr "使用 AIR Blend 設定檔"
 
 
 msgid "Use Object Instances"
@@ -42302,8 +42302,8 @@ msgid "Import Units"
 msgstr "匯入單位"
 
 
-msgid "If disabled match import to Blender's current Unit settings, otherwise use the settings from the Imported scene"
-msgstr "若停用則讓匯入內容符合 Blender 目前的單位設定，否則使用匯入場景的設定"
+msgid "If disabled match import to AIR Blend's current Unit settings, otherwise use the settings from the Imported scene"
+msgstr "若停用則讓匯入內容符合 AIR Blend 目前的單位設定，否則使用匯入場景的設定"
 
 
 msgctxt "Operator"
@@ -42641,8 +42641,8 @@ msgid "Print memory statistics to the console"
 msgstr "將記憶體統計資料列印至主控臺"
 
 
-msgid "Open a Blender file"
-msgstr "開啟一個 Blender 檔案"
+msgid "Open a AIR Blend file"
+msgstr "開啟一個 AIR Blend 檔案"
 
 
 msgid "Load UI"
@@ -42771,12 +42771,12 @@ msgstr "內部使用 (編輯 data_path 屬性)"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
-msgstr "退出 Blender"
+msgid "Quit AIR Blend"
+msgstr "退出 AIR Blend"
 
 
-msgid "Quit Blender"
-msgstr "退出 Blender"
+msgid "Quit AIR Blend"
+msgstr "退出 AIR Blend"
 
 
 msgctxt "Operator"
@@ -42979,12 +42979,12 @@ msgstr "儲存初始啟動檔案"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
+msgid "Save AIR Blend File"
 msgstr "儲存 Bldender 檔案"
 
 
-msgid "Save the current Blender file"
-msgstr "儲存目前的 Blender 檔案"
+msgid "Save the current AIR Blend file"
+msgstr "儲存目前的 AIR Blend 檔案"
 
 
 msgctxt "Operator"
@@ -43041,8 +43041,8 @@ msgstr "開啟包含發行資訊的啟動畫面"
 
 
 msgctxt "Operator"
-msgid "About Blender"
-msgstr "關於 Blender"
+msgid "About AIR Blend"
+msgstr "關於 AIR Blend"
 
 
 msgctxt "Operator"
@@ -45063,8 +45063,8 @@ msgid "Edit Methods"
 msgstr "編輯方法"
 
 
-msgid "Settings for interacting with Blender data"
-msgstr "Blender 資料的互動設定"
+msgid "Settings for interacting with AIR Blend data"
+msgstr "AIR Blend 資料的互動設定"
 
 
 msgid "Default paths for external files"
@@ -50035,8 +50035,8 @@ msgid "Type of information to display"
 msgstr "要顯示的資訊類型"
 
 
-msgid "Blender File"
-msgstr "Blender 檔案"
+msgid "AIR Blend File"
+msgstr "AIR Blend 檔案"
 
 
 msgid "Display data of current file and linked libraries"
@@ -50087,8 +50087,8 @@ msgid "Space Preferences"
 msgstr "空間偏好設定"
 
 
-msgid "Blender preferences space data"
-msgstr "Blender 偏好設定空間資料"
+msgid "AIR Blend preferences space data"
+msgstr "AIR Blend 偏好設定空間資料"
 
 
 msgid "Search term for filtering in the UI"
@@ -51675,8 +51675,8 @@ msgid "Theme Preferences"
 msgstr "主題偏好設定"
 
 
-msgid "Theme settings for the Blender Preferences"
-msgstr "Blender 偏好設定中的主題設定"
+msgid "Theme settings for the AIR Blend Preferences"
+msgstr "AIR Blend 偏好設定中的主題設定"
 
 
 msgid "Theme Properties"
@@ -53692,13 +53692,13 @@ msgstr "%s：%s"
 
 
 msgctxt "Operator"
-msgid "Blender Website"
-msgstr "Blender 網站"
+msgid "AIR Blend Website"
+msgstr "AIR Blend 網站"
 
 
 msgctxt "Operator"
-msgid "Blender Store"
-msgstr "Blender 商店"
+msgid "AIR Blend Store"
+msgstr "AIR Blend 商店"
 
 
 msgid "Operator not found: bpy.ops.%s"
@@ -56147,8 +56147,8 @@ msgid "Unable to create app-template userpref path"
 msgstr "無法建立 app-template 使用者偏好路徑"
 
 
-msgid "File written by newer Blender binary (%d.%d), expect loss of data!"
-msgstr "檔案是由較新的 Blender 二元檔 (%d.%d) 寫入，預期會遺失資料！"
+msgid "File written by newer AIR Blend binary (%d.%d), expect loss of data!"
+msgstr "檔案是由較新的 AIR Blend 二元檔 (%d.%d) 寫入，預期會遺失資料！"
 
 
 msgid "Loading failed: "
@@ -56405,8 +56405,8 @@ msgid "Plane Track"
 msgstr "平面軌道"
 
 
-msgid "Blender is compiled without motion tracking library"
-msgstr "Blender 編譯時未開啟動態追蹤函式庫"
+msgid "AIR Blend is compiled without motion tracking library"
+msgstr "AIR Blend 編譯時未開啟動態追蹤函式庫"
 
 
 msgid "Cannot open or start AVI movie file"
@@ -58222,8 +58222,8 @@ msgid "The object the data pointer refers to is not a valid modifier"
 msgstr "資料指標參照的物體並非有效的修改器"
 
 
-msgid "Blender Render"
-msgstr "Blender 算繪"
+msgid "AIR Blend Render"
+msgstr "AIR Blend 算繪"
 
 
 msgid "Maximize Area"
@@ -58238,8 +58238,8 @@ msgid "Flip to Top"
 msgstr "翻轉至頂部"
 
 
-msgid "Blender Preferences"
-msgstr "Blender 偏好設定"
+msgid "AIR Blend Preferences"
+msgstr "AIR Blend 偏好設定"
 
 
 msgid "Can only scale region size from an action zone"
@@ -58972,8 +58972,8 @@ msgid "No active sequence!"
 msgstr "無作用中序段！"
 
 
-msgid "File Modified Outside and Inside Blender"
-msgstr "檔案已在 Blender 之外與之內修改"
+msgid "File Modified Outside and Inside AIR Blend"
+msgstr "檔案已在 AIR Blend 之外與之內修改"
 
 
 msgid "Reload from disk (ignore local changes)"
@@ -58988,16 +58988,16 @@ msgid "Make text internal (separate copy)"
 msgstr "文字轉為內部 (分離副本)"
 
 
-msgid "File Modified Outside Blender"
-msgstr "檔案已在 Blender 之外修改"
+msgid "File Modified Outside AIR Blend"
+msgstr "檔案已在 AIR Blend 之外修改"
 
 
 msgid "Reload from disk"
 msgstr "從磁碟重新載入"
 
 
-msgid "File Deleted Outside Blender"
-msgstr "檔案已在 Blender 外刪除"
+msgid "File Deleted Outside AIR Blend"
+msgstr "檔案已在 AIR Blend 外刪除"
 
 
 msgid "Make text internal"
@@ -60043,8 +60043,8 @@ msgid "Sequences.new_sound: unable to open sound file"
 msgstr "Sequences.new_sound：無法開啟音效檔"
 
 
-msgid "Blender compiled without Audaspace support"
-msgstr "Blender 編譯時未開啟 Audaspace 支援"
+msgid "AIR Blend compiled without Audaspace support"
+msgstr "AIR Blend 編譯時未開啟 Audaspace 支援"
 
 
 msgid "Sequences.new_effect: end frame not set"
@@ -60727,8 +60727,8 @@ msgid "Input pending "
 msgstr "等候輸入 "
 
 
-msgid "Blender File View"
-msgstr "Blender 檔案檢視"
+msgid "AIR Blend File View"
+msgstr "AIR Blend 檔案檢視"
 
 
 msgid "Missing 'window' in context"
@@ -60955,8 +60955,8 @@ msgstr "您的圖形顯示卡或驅動程式支援有限。可能有辦法運作
 
 
 msgctxt "WindowManager"
-msgid "Newer graphics drivers may be available to improve Blender support."
-msgstr "或許更新版的圖形顯示卡驅動程式能改善 Blender 的支援。"
+msgid "Newer graphics drivers may be available to improve AIR Blend support."
+msgstr "或許更新版的圖形顯示卡驅動程式能改善 AIR Blend 的支援。"
 
 
 msgctxt "WindowManager"

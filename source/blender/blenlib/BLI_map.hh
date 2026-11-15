@@ -10,7 +10,7 @@
  * `std::unordered_map`. All core operations (add, lookup, remove and contains) can be done in O(1)
  * amortized expected time.
  *
- * Your default choice for a hash map in Blender should be `blender::Map`.
+ * Your default choice for a hash map in AIR Blend should be `blender::Map`.
  *
  * blender::Map is implemented using open addressing in a slot array with a power-of-two size.
  * Every slot is in one of three states: empty, occupied or removed. If a slot is occupied, it
@@ -1271,7 +1271,7 @@ class Map {
 };
 
 /**
- * Same as a normal Map, but does not use Blender's guarded allocator. This is useful when
+ * Same as a normal Map, but does not use AIR Blend's guarded allocator. This is useful when
  * allocating memory with static storage duration.
  */
 template<typename Key,

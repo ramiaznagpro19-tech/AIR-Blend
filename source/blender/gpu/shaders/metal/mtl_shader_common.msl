@@ -20,7 +20,7 @@ constant int MTL_uniform_buffer_base_index [[function_constant(0)]];
  * Unused if function constant not set. */
 constant float MTL_global_pointsize [[function_constant(1)]];
 
-/* Attribute conversions flags (Up to 16 attributes supported in Blender). */
+/* Attribute conversions flags (Up to 16 attributes supported in AIR Blend). */
 constant int MTL_AttributeConvert0 [[function_constant(2)]];
 constant int MTL_AttributeConvert1 [[function_constant(3)]];
 constant int MTL_AttributeConvert2 [[function_constant(4)]];

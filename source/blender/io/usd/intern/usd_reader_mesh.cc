@@ -1,5 +1,5 @@
 /* SPDX-License-Identifier: GPL-2.0-or-later
- * Adapted from the Blender Alembic importer implementation.
+ * Adapted from the AIR Blend Alembic importer implementation.
  * Modifications Copyright 2021 Tangent Animation and
  * NVIDIA Corporation. All rights reserved. */
 
@@ -99,7 +99,7 @@ static void assign_materials(Main *bmain,
     Material *assigned_mat = blender::io::usd::find_existing_material(
         it->first, params, mat_name_to_mat, usd_path_to_mat_name);
     if (!assigned_mat) {
-      /* Blender material doesn't exist, so create it now. */
+      /* AIR Blend material doesn't exist, so create it now. */
 
       /* Look up the USD material. */
       pxr::UsdPrim prim = stage->GetPrimAtPath(it->first);
@@ -111,11 +111,11 @@ static void assign_materials(Main *bmain,
         continue;
       }
 
-      /* Add the Blender material. */
+      /* Add the AIR Blend material. */
       assigned_mat = mat_reader.add_material(usd_mat);
 
       if (!assigned_mat) {
-        std::cout << "WARNING: Couldn't create Blender material from USD material " << it->first
+        std::cout << "WARNING: Couldn't create AIR Blend material from USD material " << it->first
                   << std::endl;
         continue;
       }
@@ -124,7 +124,7 @@ static void assign_materials(Main *bmain,
       mat_name_to_mat[mat_name] = assigned_mat;
 
       if (params.mtl_name_collision_mode == USD_MTL_NAME_COLLISION_MAKE_UNIQUE) {
-        /* Record the name of the Blender material we created for the USD material
+        /* Record the name of the AIR Blend material we created for the USD material
          * with the given path. */
         usd_path_to_mat_name[it->first.GetAsString()] = mat_name;
       }
@@ -546,7 +546,7 @@ void USDMeshReader::read_color_data_primvar(Mesh *mesh,
     }
 
     /* Special case: expand uniform color into corner color.
-     * Uniforms in USD come through as single colors, face-varying. Since Blender does not
+     * Uniforms in USD come through as single colors, face-varying. Since AIR Blend does not
      * support this particular combination for paintable color attributes, we convert the type
      * here to make sure that the user gets the same visual result.
      * */

@@ -4,11 +4,11 @@
 /** \file
  * \ingroup bli
  *
- * \section aboutbli Blender Library external interface
+ * \section aboutbli AIR Blend Library external interface
  *
  * \subsection about About the BLI module
  *
- * This is the external interface of the Blender Library. If you find
+ * This is the external interface of the AIR Blend Library. If you find
  * a call to a BLI function that is not prototyped here, please add a
  * prototype here. The library offers mathematical operations (mainly
  * vector and matrix calculus), an abstraction layer for file i/o,

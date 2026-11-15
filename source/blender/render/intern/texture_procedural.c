@@ -906,7 +906,7 @@ static int multitex(Tex *tex,
   texres->talpha = false; /* is set when image texture returns alpha (considered premul) */
 
   if (use_nodes && tex->use_nodes && tex->nodetree) {
-    const float cfra = 1.0f; /* This was only set for Blender Internal render before. */
+    const float cfra = 1.0f; /* This was only set for AIR Blend Internal render before. */
     retval = ntreeTexExecTree(tex->nodetree,
                               texres,
                               texvec,
@@ -961,7 +961,7 @@ static int multitex(Tex *tex,
       case TEX_MUSGRAVE:
         /* newnoise: musgrave types */
 
-        /* NOTE(@ton): added this, for Blender convention reason.
+        /* NOTE(@ton): added this, for AIR Blend convention reason.
          * NOTE(@artificer): added the use of tmpvec to avoid scaling texvec. */
         copy_v3_v3(tmpvec, texvec);
         mul_v3_fl(tmpvec, 1.0f / tex->noisesize);
@@ -982,7 +982,7 @@ static int multitex(Tex *tex,
         break;
       /* newnoise: voronoi type */
       case TEX_VORONOI:
-        /* NOTE(@ton): added this, for Blender convention reason.
+        /* NOTE(@ton): added this, for AIR Blend convention reason.
          * NOTE(@artificer): added the use of tmpvec to avoid scaling texvec. */
         copy_v3_v3(tmpvec, texvec);
         mul_v3_fl(tmpvec, 1.0f / tex->noisesize);
@@ -990,7 +990,7 @@ static int multitex(Tex *tex,
         retval = voronoiTex(tex, tmpvec, texres);
         break;
       case TEX_DISTNOISE:
-        /* NOTE(@ton): added this, for Blender convention reason.
+        /* NOTE(@ton): added this, for AIR Blend convention reason.
          * NOTE(@artificer): added the use of tmpvec to avoid scaling texvec. */
         copy_v3_v3(tmpvec, texvec);
         mul_v3_fl(tmpvec, 1.0f / tex->noisesize);

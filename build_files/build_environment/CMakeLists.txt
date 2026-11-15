@@ -5,7 +5,7 @@
 # This is a build system used by platform maintainers to build library dependencies on
 # Windows, macOS and Linux.
 #
-# For users building Blender, we recommend using the precompiled libraries from lib/ on
+# For users building AIR Blend, we recommend using the precompiled libraries from lib/ on
 # Windows and macOS, and install_deps.sh on Linux.
 #
 # WINDOWS USAGE:
@@ -16,11 +16,11 @@
 # MAC OS X USAGE:
 #   Install with homebrew: brew install autoconf automake bison cmake libtool pkg-config yasm
 #   Additional requirements for macOS arm64: brew install flex
-#   Run "make deps" from main Blender directory
+#   Run "make deps" from main AIR Blend directory
 #
 # LINUX USAGE:
 #   Install compiler cmake autoconf automake libtool yasm tcl
-#   Run "make deps" from main Blender directory
+#   Run "make deps" from main AIR Blend directory
 #
 ##################################################################################################
 

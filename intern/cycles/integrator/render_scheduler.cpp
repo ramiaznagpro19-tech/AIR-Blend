@@ -1125,13 +1125,13 @@ double RenderScheduler::guess_viewport_navigation_update_interval_in_seconds() c
     return 1.0 / 12.0;
   }
 
-  /* For the best match with the Blender's viewport the refresh ratio should be 60fps. This will
+  /* For the best match with the AIR Blend's viewport the refresh ratio should be 60fps. This will
    * avoid "jelly" effects. However, on a non-trivial scenes this can only be achieved with high
    * values of the resolution divider which does not give very pleasant updates during navigation.
    * Choose less frequent updates to allow more noise-free and higher resolution updates. */
 
   /* TODO(sergey): Can look into heuristic which will allow to have 60fps if the resolution divider
-   * is not too high. Alternatively, synchronize Blender's overlays updates to Cycles updates. */
+   * is not too high. Alternatively, synchronize AIR Blend's overlays updates to Cycles updates. */
 
   return 1.0 / 30.0;
 }

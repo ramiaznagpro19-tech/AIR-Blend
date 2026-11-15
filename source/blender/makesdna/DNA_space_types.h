@@ -322,7 +322,7 @@ typedef enum eSpaceOutliner_Filter {
   SO_FILTER_NO_CHILDREN = (1 << 4),
 
   SO_FILTER_UNUSED_5 = (1 << 5), /* cleared */
-  /** Show overrides that are defined/controlled by Blender. */
+  /** Show overrides that are defined/controlled by AIR Blend. */
   SO_FILTER_SHOW_SYSTEM_OVERRIDES = SO_FILTER_UNUSED_5, /* re-use */
   SO_FILTER_NO_OB_MESH = (1 << 6),
   SO_FILTER_NO_OB_ARMATURE = (1 << 7),
@@ -511,7 +511,7 @@ typedef enum eGraphEdit_Flag {
 
 /** #SpaceGraph.mode (Graph Editor Mode) */
 typedef enum eGraphEdit_Mode {
-  /* all animation curves (from all over Blender) */
+  /* all animation curves (from all over AIR Blend) */
   SIPO_MODE_ANIMATION = 0,
   /* drivers only */
   SIPO_MODE_DRIVERS = 1,
@@ -935,7 +935,7 @@ typedef struct SpaceFile {
 
 /** #SpaceFile.browse_mode (File Space Browsing Mode). */
 typedef enum eFileBrowse_Mode {
-  /* Regular Blender File Browser */
+  /* Regular AIR Blend File Browser */
   FILE_BROWSE_MODE_FILES = 0,
   /* Asset Browser */
   FILE_BROWSE_MODE_ASSETS = 1,

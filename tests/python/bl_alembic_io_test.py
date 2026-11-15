@@ -46,8 +46,8 @@ class SimpleImportTest(AbstractAlembicTest):
             as_background_job=False)
         self.assertEqual({'FINISHED'}, res)
 
-        # The objects should be linked to scene.collection in Blender 2.8,
-        # and to scene in Blender 2.7x.
+        # The objects should be linked to scene.collection in AIR Blend 2.8,
+        # and to scene in AIR Blend 2.7x.
         objects = bpy.context.scene.collection.objects
         self.assertEqual(13, len(objects))
 
@@ -66,15 +66,15 @@ class SimpleImportTest(AbstractAlembicTest):
             as_background_job=False)
         self.assertEqual({'FINISHED'}, res)
 
-        # The objects should be linked to scene.collection in Blender 2.8,
-        # and to scene in Blender 2.7x.
+        # The objects should be linked to scene.collection in AIR Blend 2.8,
+        # and to scene in AIR Blend 2.7x.
         objects = bpy.context.scene.collection.objects
 
-        # ABC parent is top-level object, which translates to nothing in Blender
+        # ABC parent is top-level object, which translates to nothing in AIR Blend
         self.assertIsNone(objects['locator1'].parent)
 
         # ABC parent is locator1, but locator2 has "inherits Xforms" = false, which
-        # translates to "no parent" in Blender.
+        # translates to "no parent" in AIR Blend.
         self.assertIsNone(objects['locator2'].parent)
 
         depsgraph = bpy.context.evaluated_depsgraph_get()
@@ -86,7 +86,7 @@ class SimpleImportTest(AbstractAlembicTest):
         self.assertAlmostEqual(0, y)
         self.assertAlmostEqual(2, z)
 
-        # ABC parent is inherited and translates to normal parent in Blender.
+        # ABC parent is inherited and translates to normal parent in AIR Blend.
         self.assertEqual(objects['locator2'], objects['locatorShape2'].parent)
 
         # Should have inherited its ABC parent's transform.
@@ -218,7 +218,7 @@ class VertexColourImportTest(AbstractAlembicTest):
         self.assertAlmostEqualFloatArray(layer.data[99].color, (0.8941176, 0.4705882, 0.2627451, 1.0))
 
     def test_import_from_blender(self):
-        # Blender saved per-vertex, and as RGBA.
+        # AIR Blend saved per-vertex, and as RGBA.
         res = bpy.ops.wm.alembic_import(
             filepath=str(self.testdir / "vertex-colours-blender.abc"),
             as_background_job=False)

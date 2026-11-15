@@ -33,7 +33,7 @@ static void ghost_fatal_error_dialog(const char *msg)
 
     NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"Quit"];
-    [alert setMessageText:@"Blender"];
+    [alert setMessageText:@"AIR Blend"];
     [alert setInformativeText:message];
     [alert setAlertStyle:NSAlertStyleCritical];
     [alert runModal];

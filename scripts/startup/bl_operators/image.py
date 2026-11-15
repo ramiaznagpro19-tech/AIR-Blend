@@ -66,7 +66,7 @@ class EditExternally(Operator):
             traceback.print_exc()
             self.report({'ERROR'},
                         "Image editor could not be launched, ensure that "
-                        "the path in User Preferences > File is valid, and Blender has rights to launch it")
+                        "the path in User Preferences > File is valid, and AIR Blend has rights to launch it")
 
             return {'CANCELLED'}
 

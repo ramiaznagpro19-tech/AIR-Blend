@@ -15,7 +15,7 @@
  *
  * \note
  *
- * Changes made for Blender.
+ * Changes made for AIR Blend.
  *
  * - loop the array to clip last verts first (less array resizing)
  *

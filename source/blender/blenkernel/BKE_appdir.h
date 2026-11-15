@@ -100,7 +100,7 @@ const char *BKE_appdir_resource_path_id(int folder_id, bool check_is_dir);
 
 /**
  * Check if this is an install with user files kept together
- * with the Blender executable and its installation files.
+ * with the AIR Blend executable and its installation files.
  */
 bool BKE_appdir_app_is_portable_install(void);
 /**

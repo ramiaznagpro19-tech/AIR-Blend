@@ -1,5 +1,5 @@
 /* SPDX-License-Identifier: GPL-2.0-or-later
- * Adapted from the Blender Alembic importer implementation.
+ * Adapted from the AIR Blend Alembic importer implementation.
  * Modifications Copyright 2021 Tangent Animation. All rights reserved. */
 #pragma once
 
@@ -38,19 +38,19 @@ struct ImportSettings {
 
   CacheFile *cache_file;
 
-  /* Map a USD material prim path to a Blender material name.
+  /* Map a USD material prim path to a AIR Blend material name.
    * This map is updated by readers during stage traversal.
    * This field is mutable because it is used to keep track
    * of what the importer is doing. This is necessary even
    * when all the other import settings are to remain const. */
   mutable std::map<std::string, std::string> usd_path_to_mat_name;
-  /* Map a material name to Blender material.
+  /* Map a material name to AIR Blend material.
    * This map is updated by readers during stage traversal,
    * and is mutable similar to the map above. */
   mutable std::map<std::string, Material *> mat_name_to_mat;
 
   /* We use the stage metersPerUnit to convert camera properties from USD scene units to the
-   * correct millimeter scale that Blender uses for camera parameters. */
+   * correct millimeter scale that AIR Blend uses for camera parameters. */
   double stage_meters_per_unit;
 
   ImportSettings()

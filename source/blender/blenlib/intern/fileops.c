@@ -1039,7 +1039,7 @@ static int delete_soft(const char *file, const char **error_message)
 
     if (!WIFEXITED(wstatus)) {
       *error_message =
-          "Blender may not support moving files or directories to trash on your system.";
+          "AIR Blend may not support moving files or directories to trash on your system.";
       return -1;
     }
     if (WIFEXITED(wstatus) && WEXITSTATUS(wstatus)) {

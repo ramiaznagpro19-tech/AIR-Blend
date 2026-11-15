@@ -18,7 +18,7 @@
 static PyTypeObject BlenderAppOCIOType;
 
 static PyStructSequence_Field app_ocio_info_fields[] = {
-    {"supported", "Boolean, True when Blender is built with OpenColorIO support"},
+    {"supported", "Boolean, True when AIR Blend is built with OpenColorIO support"},
     {"version", "The OpenColorIO version as a tuple of 3 numbers"},
     {"version_string", "The OpenColorIO version formatted as a string"},
     {NULL},

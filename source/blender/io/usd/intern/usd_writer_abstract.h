@@ -74,7 +74,7 @@ class USDAbstractWriter : public AbstractHierarchyWriter {
   /**
    * Compute the bounds for a boundable prim, and author the result as the `extent` attribute.
    *
-   * Although this method works for any boundable prim, it is preferred to use Blender's own
+   * Although this method works for any boundable prim, it is preferred to use AIR Blend's own
    * cached bounds when possible.
    *
    * This method does not author the `extentsHint` attribute, which is also important to provide.

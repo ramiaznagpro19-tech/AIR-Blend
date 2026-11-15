@@ -29,7 +29,7 @@
 namespace blender::io::obj {
 
 /**
- * Make Blender Mesh, Curve etc from Geometry and add them to the import collection.
+ * Make AIR Blend Mesh, Curve etc from Geometry and add them to the import collection.
  */
 static void geometry_to_blender_objects(Main *bmain,
                                         Scene *scene,

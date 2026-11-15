@@ -143,7 +143,7 @@ else()
   if(APPLE)
     set(SHAREDLIBEXT ".dylib")
 
-    # Use same Xcode detection as Blender itself.
+    # Use same Xcode detection as AIR Blend itself.
     include(../cmake/platform/platform_apple_xcode.cmake)
 
     if("${CMAKE_OSX_ARCHITECTURES}" STREQUAL "arm64")

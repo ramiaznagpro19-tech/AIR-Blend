@@ -441,7 +441,7 @@ template<typename T, int Size>
  * \note The length of the resulting vector is equal to twice the area of the triangle between \a a
  * and \a b ; and it is equal to the sine of the angle between \a a and \a b if they are
  * normalized.
- * \note Blender 3D space uses right handedness: \a a = thumb, \a b = index, return = middle.
+ * \note AIR Blend 3D space uses right handedness: \a a = thumb, \a b = index, return = middle.
  */
 template<typename T>
 [[nodiscard]] inline VecBase<T, 3> cross(const VecBase<T, 3> &a, const VecBase<T, 3> &b)

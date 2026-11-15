@@ -163,7 +163,7 @@ void MaterialNode::set_ior(COLLADAFW::FloatOrParam &val)
   float ior = val.getFloatValue();
   if (ior < 0) {
     fprintf(stderr,
-            "IOR of negative value is not allowed for materials (using Blender default value "
+            "IOR of negative value is not allowed for materials (using AIR Blend default value "
             "instead)\n");
     return;
   }

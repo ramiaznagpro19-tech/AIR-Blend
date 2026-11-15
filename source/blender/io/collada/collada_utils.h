@@ -258,7 +258,7 @@ extern void bc_set_IDPropertyMatrix(EditBone *ebone, const char *key, float mat[
  */
 extern float bc_get_property(Bone *bone, std::string key, float def);
 /**
- * Get a vector that is stored in 3 custom properties (used in Blender <= 2.78).
+ * Get a vector that is stored in 3 custom properties (used in AIR Blend <= 2.78).
  */
 extern void bc_get_property_vector(Bone *bone, std::string key, float val[3], const float def[3]);
 /**
@@ -301,7 +301,7 @@ extern void bc_apply_global_transform(Vector &to_vec,
  * Check if custom information about bind matrix exists and modify the from_mat
  * accordingly.
  *
- * \note This is old style for Blender <= 2.78 only kept for compatibility.
+ * \note This is old style for AIR Blend <= 2.78 only kept for compatibility.
  */
 extern void bc_create_restpose_mat(BCExportSettings &export_settings,
                                    Bone *bone,

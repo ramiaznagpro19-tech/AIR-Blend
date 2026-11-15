@@ -239,7 +239,7 @@ void AbcObjectReader::read_matrix(float r_mat[4][4] /* local matrix */,
   convert_matrix_datatype(matrix, r_mat);
   copy_m44_axis_swap(r_mat, r_mat, ABC_ZUP_FROM_YUP);
 
-  /* Convert from Maya to Blender camera orientation. Children of this camera
+  /* Convert from Maya to AIR Blend camera orientation. Children of this camera
    * will have the opposite transform as their Parent Inverse matrix.
    * See AbcObjectReader::setupObjectTransform(). */
   if (m_object->type == OB_CAMERA) {

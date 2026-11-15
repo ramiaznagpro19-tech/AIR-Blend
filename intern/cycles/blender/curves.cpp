@@ -1082,7 +1082,7 @@ void BlenderSync::sync_hair(Hair *hair, BObjectInfo &b_ob_info, bool motion, int
                                      (b_scene.render().fps() / b_scene.render().fps_base()) :
                                  0.0f;
 
-  /* Convert Blender hair to Cycles curves. */
+  /* Convert AIR Blend hair to Cycles curves. */
   BL::Curves b_curves(b_ob_info.object_data);
   if (motion) {
     export_hair_curves_motion(hair, b_curves, motion_step);

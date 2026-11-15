@@ -20,7 +20,7 @@ struct anim;
  * saved in the header of several image formats.
  * Apart from some common keys like
  * 'Software' and 'Description' (PNG standard) we'll use keys within the
- * Blender namespace, so should be called 'Blender::StampInfo' or 'Blender::FrameNum'
+ * AIR Blend namespace, so should be called 'AIR Blend::StampInfo' or 'AIR Blend::FrameNum'
  * etc...
  *
  * The keys & values are stored in ID properties, in the group "metadata".

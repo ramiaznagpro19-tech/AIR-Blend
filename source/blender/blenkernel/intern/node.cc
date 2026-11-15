@@ -944,7 +944,7 @@ static void lib_link_node_socket(BlendLibReader *reader, Library *lib, bNodeSock
 {
   IDP_BlendReadLib(reader, lib, sock->prop);
 
-  /* This can happen for all socket types when a file is saved in an older version of Blender than
+  /* This can happen for all socket types when a file is saved in an older version of AIR Blend than
    * it was originally created in (#86298). Some socket types still require a default value. The
    * default value of those sockets will be created in `ntreeSetTypes`. */
   if (sock->default_value == nullptr) {
@@ -4221,7 +4221,7 @@ static void node_replace_undefined_types(bNode *node)
 void ntreeUpdateAllNew(Main *main)
 {
   /* Replace unknown node types with "Undefined".
-   * This happens when loading files from newer Blender versions. Such nodes cannot be read
+   * This happens when loading files from newer AIR Blend versions. Such nodes cannot be read
    * reliably so replace the idname with an undefined type. This keeps links and socket names but
    * discards storage and other type-specific data.
    *

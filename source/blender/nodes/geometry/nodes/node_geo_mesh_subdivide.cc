@@ -68,7 +68,7 @@ static void node_geo_exec(GeoNodeExecParams params)
   });
 #else
   params.error_message_add(NodeWarningType::Error,
-                           TIP_("Disabled, Blender was compiled without OpenSubdiv"));
+                           TIP_("Disabled, AIR Blend was compiled without OpenSubdiv"));
 #endif
   params.set_output("Mesh", std::move(geometry_set));
 }

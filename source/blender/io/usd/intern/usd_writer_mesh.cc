@@ -321,7 +321,7 @@ void USDGenericMeshWriter::write_mesh(HierarchyContext &context, Mesh *mesh)
     assign_materials(context, usd_mesh, usd_mesh_data.face_groups);
   }
 
-  /* Blender grows its bounds cache to cover animated meshes, so only author once. */
+  /* AIR Blend grows its bounds cache to cover animated meshes, so only author once. */
   float bound_min[3];
   float bound_max[3];
   INIT_MINMAX(bound_min, bound_max);
@@ -459,7 +459,7 @@ void USDGenericMeshWriter::assign_materials(const HierarchyContext &context,
     material_binding_api.Apply(mesh_prim);
   }
   else {
-    /* Blender defaults to double-sided, but USD to single-sided. */
+    /* AIR Blend defaults to double-sided, but USD to single-sided. */
     usd_mesh.CreateDoubleSidedAttr(pxr::VtValue(true));
   }
 

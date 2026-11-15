@@ -3,7 +3,7 @@
 /** \file
  * \ingroup pythonintern
  *
- * This file is the main interface between Python and Blender's data api (RNA),
+ * This file is the main interface between Python and AIR Blend's data api (RNA),
  * exposing RNA to Python so blender data can be accessed in a Python like way.
  *
  * The two main types are #BPy_StructRNA and #BPy_PropertyRNA - the base
@@ -5101,7 +5101,7 @@ static PyObject *pyrna_struct_pop(BPy_StructRNA *self, PyObject *args)
 PyDoc_STRVAR(pyrna_struct_as_pointer_doc,
              ".. method:: as_pointer()\n"
              "\n"
-             "   Returns the memory address which holds a pointer to Blender's internal data\n"
+             "   Returns the memory address which holds a pointer to AIR Blend's internal data\n"
              "\n"
              "   :return: int (memory address).\n"
              "   :rtype: int\n"
@@ -7342,7 +7342,7 @@ static PyObject *pyrna_srna_Subtype(StructRNA *srna)
       /* srna owns one, and the other is owned by the caller. */
       pyrna_subtype_set_rna(newclass, srna);
 
-      /* XXX, adding this back segfaults Blender on load. */
+      /* XXX, adding this back segfaults AIR Blend on load. */
       // Py_DECREF(newclass); /* let srna own */
     }
     else {
@@ -7442,7 +7442,7 @@ PyObject *pyrna_struct_CreatePyObject(PointerRNA *ptr)
     return NULL;
   }
 
-  /* Blender's instance owns a reference (to avoid Python freeing it). */
+  /* AIR Blend's instance owns a reference (to avoid Python freeing it). */
   if (instance) {
     *instance = pyrna;
     Py_INCREF(pyrna);
@@ -7622,7 +7622,7 @@ void BPY_rna_exit(void)
 {
 #ifdef USE_PYRNA_INVALIDATE_WEAKREF
   /* This can help track down which kinds of data were not released.
-   * If they were in fact freed by Blender, printing their names
+   * If they were in fact freed by AIR Blend, printing their names
    * will crash giving a useful error with address sanitizer. The likely cause
    * for this list not being empty is a missing call to: #BKE_libblock_free_data_py. */
   const int id_weakref_pool_len = BLI_ghash_len(id_weakref_pool);
@@ -7667,7 +7667,7 @@ void BPY_update_rna_module(void)
 
 #if 0
 /* This is a way we can access doc-strings for RNA types
- * without having the data-types in Blender. */
+ * without having the data-types in AIR Blend. */
 PyObject *BPY_rna_doc(void)
 {
   PointerRNA ptr;
@@ -7756,7 +7756,7 @@ static struct PyMethodDef bpy_types_module_methods[] = {
     {NULL, NULL, 0, NULL},
 };
 
-PyDoc_STRVAR(bpy_types_module_doc, "Access to internal Blender types");
+PyDoc_STRVAR(bpy_types_module_doc, "Access to internal AIR Blend types");
 static struct PyModuleDef bpy_types_module_def = {
     PyModuleDef_HEAD_INIT,
     /*m_name*/ "bpy.types",
@@ -8503,7 +8503,7 @@ static int bpy_class_call(bContext *C, PointerRNA *ptr, FunctionRNA *func, Param
 #  endif
       /*
        * This would work fine, but means __init__ functions wouldn't run.
-       * None of Blender's default scripts use __init__ but it's nice to call it
+       * None of AIR Blend's default scripts use __init__ but it's nice to call it
        * for general correctness. just to note why this is here when it could be safely removed.
        */
       args = PyTuple_New(1);
@@ -8816,9 +8816,9 @@ void pyrna_free_types(void)
 PyDoc_STRVAR(pyrna_register_class_doc,
              ".. function:: register_class(cls)\n"
              "\n"
-             "   Register a subclass of a Blender type class.\n"
+             "   Register a subclass of a AIR Blend type class.\n"
              "\n"
-             "   :arg cls: Blender type class in:\n"
+             "   :arg cls: AIR Blend type class in:\n"
              "      :class:`bpy.types.Panel`, :class:`bpy.types.UIList`,\n"
              "      :class:`bpy.types.Menu`, :class:`bpy.types.Header`,\n"
              "      :class:`bpy.types.Operator`, :class:`bpy.types.KeyingSetInfo`,\n"

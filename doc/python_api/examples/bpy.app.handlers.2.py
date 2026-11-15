@@ -5,7 +5,7 @@ Note on Altering Data
 Altering data from handlers should be done carefully. While rendering the
 ``frame_change_pre`` and ``frame_change_post`` handlers are called from one
 thread and the viewport updates from a different thread. If the handler changes
-data that is accessed by the viewport, this can cause a crash of Blender. In
+data that is accessed by the viewport, this can cause a crash of AIR Blend. In
 such cases, lock the interface (Render → Lock Interface or
 :data:`bpy.types.RenderSettings.use_lock_interface`) before starting a render.
 

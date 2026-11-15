@@ -179,7 +179,7 @@ class GHOST_SharedOpenGLResource {
     }
 
     if (m_is_initialized) {
-#if 0 /* TODO: Causes an access violation since Blender 3.4 (a296b8f694d1). */
+#if 0 /* TODO: Causes an access violation since AIR Blend 3.4 (a296b8f694d1). */
         if (m_shared.render_target
 #  if 1
           /* TODO: #wglDXUnregisterObjectNV() causes an access violation on AMD when the shared

@@ -2,7 +2,7 @@
 
 """
 This module has a similar scope to os.path, containing utility
-functions for dealing with paths in Blender.
+functions for dealing with paths in AIR Blend.
 """
 
 __all__ = (

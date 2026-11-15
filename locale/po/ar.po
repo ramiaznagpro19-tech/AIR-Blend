@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
 "PO-Revision-Date: 2016-04-23 22:41+0300\n"
@@ -243,7 +243,7 @@ msgid "Source Root"
 msgstr "ﻲﻌﻴﺑﺮﺘﻟﺍ ﺭﺬﺠﻟﺍ"
 
 
-msgid "The Blender source root path"
+msgid "The AIR Blend source root path"
 msgstr "ﺭﺪﻨﻠﺑ ﺭﺪﺼﻤﻟ ﺭﺬﺠﻟﺍ ﺭﺎﺴﻣ"
 
 
@@ -267,7 +267,7 @@ msgid "Persistent Data Path"
 msgstr "ﺮﻤﺘﺴﻣ"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
 msgstr "(ﺎﻨﻫ ﻞﻤﻌﻳ ﻻ﻿ ﺭﺪﻨﻠﺑ ﻡﺎﻈﻧ ,ﻆﺤﻟﺍ ءﺆﺴﻟ) ﺕﺍﺩﺍﺪﻋﻹ﻿ﺍ ﻩﺬﻬﻟ ﻥﺰّﺨﻤﻟﺍ ﺖﺑﺮﻜﺳ ﺎﻓﺎﺠﻟﺍ ﻒﻠﻣ ﻢﺳﺍ"
 
 
@@ -1199,11 +1199,11 @@ msgid "Worlds"
 msgstr "ﻢﻟﺍﻮﻌﻟﺍ"
 
 
-msgid "Blender RNA"
+msgid "AIR Blend RNA"
 msgstr "ﺍ.ﻥ.ﺭ ﺭﺪﻨﻠﺑ"
 
 
-msgid "Blender RNA structure definitions"
+msgid "AIR Blend RNA structure definitions"
 msgstr "ﺍ.ﻥ.ﺭ ﺭﺪﻨﻠﺒﻟ ﺔﻴﻨﺒﻟﺍ ﺕﺎﻔﻳﺮﻌﺗ"
 
 
@@ -3148,7 +3148,7 @@ msgid "Lin error"
 msgstr "ﻲﻠﺧﺍﺩ ﺄﻄﺧ"
 
 
-msgid "Amount of residual error in Blender space unit for constraints that work on position"
+msgid "Amount of residual error in AIR Blend space unit for constraints that work on position"
 msgstr "ﺭﺪﻨﻠﺑ ﺱﺎﻴﻗ ﺪﺣﻮﺑ ﻊﻗﻮﻤﻟﺍ ﻰﻠﻋ ﺔﻠﻣﺎﻌﻟﺍ ﺩﻮﻴﻘﻠﻟ ﻲﻘﺒﺘﻤﻟﺍ ﺄﻄﺨﻟﺍ ﺔﻴﻤﻛ"
 
 
@@ -5680,7 +5680,7 @@ msgid "Max Velocity"
 msgstr "ﺔﻋﺮﺳ ﻰﻠﻋﺍ"
 
 
-msgid "Velocity considered as maximum influence (Blender units per frame)"
+msgid "Velocity considered as maximum influence (AIR Blend units per frame)"
 msgstr "(ﺭﺎﻃﻹ﻿ﺍ ﻲﻓ ﺭﺪﻨﻠﺑ ﺕﺍﺪﺣﻭ) ﻱﻮﺼﻗ ﺮﻴﺛﺄﺘﻛ ﺓﺮﺒﺘﻌﻤﻟﺍ ﺔﻋﺮﺴﻟﺍ"
 
 
@@ -6028,7 +6028,7 @@ msgid "Save this output layer"
 msgstr "ﻩﺬﻫ ﺝﺍﺮﺧﻹ﻿ﺍ ﺔﻘﺒﻃ ﻆﻔﺣﺇ"
 
 
-msgid "Multiply color by alpha (recommended for Blender input)"
+msgid "Multiply color by alpha (recommended for AIR Blend input)"
 msgstr "(ﺭﺪﻨﻠﺒﻟﺍ ﺕﻼ﻿ﺧﺪﻤﻟ ﺎﻬﺑ ﻰﺻﻮﻣ) ﺎﻔﻟﺃ ﻲﻓ ﻥﻮﻠﻟ ﺔﻴﻠﺒﻗ-ﺔﻔﻋﺎﻀﻣ"
 
 
@@ -7557,7 +7557,7 @@ msgid "Show .blend1, .blend2, etc. files"
 msgstr "blend. ﺕﺎﻔﻠﻣ ﺮﻬﻇﺃ"
 
 
-msgid "Filter Blender"
+msgid "Filter AIR Blend"
 msgstr "ﺭﺪﻨﻠﺑ ﺔﻴﻔﺼﺗ"
 
 
@@ -7565,7 +7565,7 @@ msgid "Show .blend files"
 msgstr "blend. ﺕﺎﻔﻠﻣ ﺮﻬﻇﺃ"
 
 
-msgid "Filter Blender IDs"
+msgid "Filter AIR Blend IDs"
 msgstr "ﺭﺪﻨﻠﺑ ﺕﺎﻓﺮﻌﻣ ﻒّﺻ"
 
 
@@ -9607,7 +9607,7 @@ msgid "Unprojected Radius"
 msgstr "ﺭﻮﺼﻣ ﺮﻴﻏ ﺮﻄﻗ"
 
 
-msgid "Radius of brush in Blender units"
+msgid "Radius of brush in AIR Blend units"
 msgstr "ﺭﺪﻨﻠﺑ ﺕﺍﺪﺣﻮﺑ ﺓﺎﺷﺮﻔﻟﺍ ﺮﻄﻗ"
 
 
@@ -14277,11 +14277,11 @@ msgid "Noise basis used for turbulence"
 msgstr "ﺏﺍﺮﻄﺿﻻ﻿ﺍ ﻲﻓ ﻡﺪﺨﺘﺴﻤﻟﺍ ﺏﺎﺒﻀﻟﺍ ﺱﺎﺳﺍ"
 
 
-msgid "Blender Original"
+msgid "AIR Blend Original"
 msgstr "ﺭﺪﻨﻠﺑ ﻲﻠﺻﺃ"
 
 
-msgid "Noise algorithm - Blender original: Smooth interpolated noise"
+msgid "Noise algorithm - AIR Blend original: Smooth interpolated noise"
 msgstr "ﺲﻠﺳ ﺪﻟﻮﻣ ﺞﻴﺠﺿ :ﺭﺪﻨﻠﺑ ﻲﻠﺻﺃ - ﺞﻴﺠﺿ ﺔﻴﻣﺯﺭﺍﻮﺧ"
 
 
@@ -20801,7 +20801,7 @@ msgid "World space normal mapping"
 msgstr "ءﺎﻀﻔﻟﺍ ﻢﻟﺎﻋ ﺕﻻ﻿ﻮﺤﺗ ﺔﻓﻮﻔﺼﻣ"
 
 
-msgid "Blender Object Space"
+msgid "AIR Blend Object Space"
 msgstr "ﺭﺪﻨﻠﺑ ﻦﺋﺎﻛ ءﺎﻀﻓ"
 
 
@@ -29907,7 +29907,7 @@ msgstr "(ﺕﺎﻧﺎﻴﺑ ﺭﺎﺴﻣ ﺔﻤﺳ ﻝﺪﻋ) ﻲﻠﺧﺍﺩ �
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "ﺭﺪﻨﻠﺑ ﻖﻠﻏﺍ"
 
 
@@ -29990,7 +29990,7 @@ msgstr "ﻲﺋﺍﺪﺒﻟﺍ ﺭﺎﻃﻻ﻿ﺍ ﻊﺿ"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
+msgid "Save AIR Blend File"
 msgstr "ﺭﺪﻨﻠﺒﻟﺍ ﻒﻠﻣ ﻆﻔﺣﺍ"
 
 
@@ -31551,7 +31551,7 @@ msgid "Edit Methods"
 msgstr "ﺮﻳﺮﺤﺘﻟﺍ ﻕﺮﻃ"
 
 
-msgid "Settings for interacting with Blender data"
+msgid "Settings for interacting with AIR Blend data"
 msgstr "ﺭﺪﻨﻠﺑ ﺕﺎﻧﺎﻴﺑ ﻊﻣ ﻞﻋﺎﻔﺘﻠﻟ ﺕﺍﺩﺍﺪﻋﺇ"
 
 
@@ -34635,7 +34635,7 @@ msgid "Re-render and composite changed layers on 3D edits"
 msgstr "ﺔﻴﺛﻼ﻿ﺜﻟﺍ ﺕﺍﺮﻳﺮﺤﺘﻟﺍ ﺪﻨﻋ ﺓﺮﻴﻐﺘﻤﻟﺍ ﺕﺎﻘﺒﻄﻟﺍ ﺐﻴﻛﺮﺗ ﻭ ﺮﻴﻴﺼﺗ ﺪﻋﺃ"
 
 
-msgid "Blender File"
+msgid "AIR Blend File"
 msgstr "ﺭﺪﻨﻠﺑ ﻒﻠﻣ ﺮﻬﻇﺃ"
 
 
@@ -39592,7 +39592,7 @@ msgid "Scene has no camera"
 msgstr "ﺔﻟﺎﻌﻔﻟﺍ ﺍﺮﻴﻤﻜﻟﺍ ﺮﺘﺧﺍ"
 
 
-msgid "Blender Render"
+msgid "AIR Blend Render"
 msgstr "ﺭﺪﻨﻠﺑ ﺮﻴّﺼﻣ"
 
 
@@ -40579,7 +40579,7 @@ msgid "Rim"
 msgstr "ﺔﻓﺎﺣ"
 
 
-msgid "Blender File View"
+msgid "AIR Blend File View"
 msgstr "ﺭﺪﻨﻠﺑ ﻒﻠﻣ ﺮﻬﻇﺃ"
 
 

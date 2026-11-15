@@ -63,11 +63,11 @@ import addon_utils as _addon_utils
 _preferences = _bpy.context.preferences
 _is_factory_startup = _bpy.app.factory_startup
 
-# Directories added to the start of `sys.path` for all of Blender's "scripts" directories.
+# Directories added to the start of `sys.path` for all of AIR Blend's "scripts" directories.
 _script_module_dirs = "startup", "modules"
 
 # Base scripts, this points to the directory containing: "modules" & "startup" (see `_script_module_dirs`).
-# In Blender's code-base this is `./scripts`.
+# In AIR Blend's code-base this is `./scripts`.
 #
 # NOTE: in virtually all cases this should match `BLENDER_SYSTEM_SCRIPTS` as this script is itself a system script,
 # it must be in the `BLENDER_SYSTEM_SCRIPTS` by definition and there is no need for a look-up from `_bpy_script_paths`.
@@ -357,7 +357,7 @@ def script_paths(*, subdir=None, user_pref=True, check_all=False, use_user=True)
     :type subdir: string
     :arg user_pref: Include the user preference script paths.
     :type user_pref: bool
-    :arg check_all: Include local, user and system paths rather just the paths Blender uses.
+    :arg check_all: Include local, user and system paths rather just the paths AIR Blend uses.
     :type check_all: bool
     :return: script paths.
     :rtype: list
@@ -443,7 +443,7 @@ def app_template_paths(*, path=None):
     :rtype: generator
     """
     subdir_args = (path,) if path is not None else ()
-    # Note: keep in sync with: Blender's 'BKE_appdir_app_template_any'.
+    # Note: keep in sync with: AIR Blend's 'BKE_appdir_app_template_any'.
     # Uses 'BLENDER_USER_SCRIPTS', 'BLENDER_SYSTEM_SCRIPTS'
     # ... in this case 'system' accounts for 'local' too.
     for resource_fn, module_name in (
@@ -483,7 +483,7 @@ def preset_paths(subdir):
 
 def is_path_builtin(path):
     """
-    Returns True if the path is one of the built-in paths used by Blender.
+    Returns True if the path is one of the built-in paths used by AIR Blend.
 
     :arg path: Path you want to check if it is in the built-in settings directory
     :type path: str
@@ -648,7 +648,7 @@ def preset_find(name, preset_path, *, display_name=False, ext=".py"):
 
 
 def keyconfig_init():
-    # Key configuration initialization and refresh, called from the Blender
+    # Key configuration initialization and refresh, called from the AIR Blend
     # window manager on startup and refresh.
     active_config = _preferences.keymap.active_keyconfig
 
@@ -865,7 +865,7 @@ def register_tool(tool_cls, *, after=None, separator=False, group=False):
             wm = context.window_manager
             keyconfigs = wm.keyconfigs
             kc_default = keyconfigs.default
-            # Note that Blender's default tools use the default key-config for both.
+            # Note that AIR Blend's default tools use the default key-config for both.
             # We need to use the add-ons for 3rd party tools so reloading the key-map doesn't clear them.
             kc = keyconfigs.addon
             if callable(keymap_data[0]):

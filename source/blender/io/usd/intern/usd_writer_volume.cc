@@ -94,7 +94,7 @@ std::optional<std::string> USDVolumeWriter::resolve_vdb_file(const Volume *volum
   std::optional<std::string> vdb_file_path;
   if (volume->filepath[0] == '\0') {
     /* Entering this section should mean that Volume object contains OpenVDB data that is not
-     * obtained from external .vdb file but rather generated inside of Blender (i.e. by 'Mesh to
+     * obtained from external .vdb file but rather generated inside of AIR Blend (i.e. by 'Mesh to
      * Volume' modifier). Try to save this data to a .vdb file. */
 
     vdb_file_path = construct_vdb_file_path(volume);
@@ -172,7 +172,7 @@ std::optional<std::string> USDVolumeWriter::construct_vdb_relative_file_path(
     return std::nullopt;
   }
 
-  /* Following code was written with an assumption that Blender's relative paths start with
+  /* Following code was written with an assumption that AIR Blend's relative paths start with
    * // characters as well as have OS dependent slashes. Inside of USD files those relative
    * paths should start with either ./ or ../ characters and have always forward slashes (/)
    * separating directories. This is the convention used in USD documentation (and it seems

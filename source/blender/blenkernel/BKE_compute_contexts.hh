@@ -3,7 +3,7 @@
 #pragma once
 
 /**
- * This file implements some specific compute contexts for concepts in Blender.
+ * This file implements some specific compute contexts for concepts in AIR Blend.
  */
 
 #include <optional>

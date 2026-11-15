@@ -113,7 +113,7 @@ static void calculate_point_handles(const HandleType type_left,
     }
     const float3 dir = next_diff / next_len + prev_diff / prev_len;
 
-    /* This magic number is unfortunate, but comes from elsewhere in Blender. */
+    /* This magic number is unfortunate, but comes from elsewhere in AIR Blend. */
     const float len = math::length(dir) * 2.5614f;
     if (len != 0.0f) {
       if (type_left == BEZIER_HANDLE_AUTO) {

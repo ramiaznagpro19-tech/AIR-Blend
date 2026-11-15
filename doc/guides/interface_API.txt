@@ -40,7 +40,7 @@ Contents
 
 ----------------1. General notes
 
-- The API is built with Blender in mind, with some buttons acting on lists of Blender data.
+- The API is built with AIR Blend in mind, with some buttons acting on lists of AIR Blend data.
   It was not meant to be available as a separate SDK, nor to be used for other applications.
   
 - It works with only OpenGL calls, for the full 100%. This means that it has some quirks
@@ -60,11 +60,11 @@ Contents
 - During the past period of NaN (beginning of 2002) someone tried to make a more 'high' level
   API for it, with less low level defines and structure info needed in calling code. I am not 
   really sure if this was done well... or even finished. In the bottom of interface.c you can
-  see the 'new' API which is now used in Blender code. It used to be so much more simple!
+  see the 'new' API which is now used in AIR Blend code. It used to be so much more simple!
   Nevertheless, I will use that convention in this doc.
 
 - Unfinished stuff: the code was scheduled to be expanded with 'floating blocks' which can
-  serve as permanent little button-fields in Blender windows. Think for example of having
+  serve as permanent little button-fields in AIR Blend windows. Think for example of having
   an (optional) extra field in the 3d window displaying object loc/rot/size.
   After that, the existing button windows can be reorganized in such blocks as well, allowing
   a user to configure the genereal buttons layout (make vertical for example).
@@ -89,7 +89,7 @@ blender/source/blender/src/toolbox.c (extra GUI elements built on top of this AP
 --------------2. Windows & Blocks 
 
 All GUI elements are collected in uiBlocks, which in turn are linked together in a list that's 
-part of a Blender Area-window.
+part of a AIR Blend Area-window.
 
 	uiBlock *block = uiNewBlock(&curarea->uiblocks, "stuff", UI_EMBOSSX, UI_HELV, curarea->win);
 
@@ -107,7 +107,7 @@ loop.
 
 Important to know is that for this toolkit there's no difference in "creating blocks" or 
 "drawing blocks". In fact, for each window redraw all blocks are created again. Constructing 
-button interfaces in Blender always happens in the main drawing function itself.
+button interfaces in AIR Blend always happens in the main drawing function itself.
 
 Memory allocation is handled as follows:
 - if in this window a uiBlock with the same name existed, it is freed
@@ -164,7 +164,7 @@ uiBlock *uiNewBlock(ListBase *lb, char *name, short dt, short font, short win)
 	short win		blender area-window id
 
 drawtype:
-	UI_EMBOSSX		0	/* Rounded embossed button (standard in Blender) */
+	UI_EMBOSSX		0	/* Rounded embossed button (standard in AIR Blend) */
 	UI_EMBOSSW		1	/* Simpler embossed button */
 	UI_EMBOSSN		2	/* Button with no border */
 	UI_EMBOSSF		3	/* Square embossed button (file select) */
@@ -174,7 +174,7 @@ drawtype:
 font:
 	UI_HELV			0	/* normal font */
 	UI_HELVB		1	/* bold font */
-With the new truetype option in Blender, this is used for all font families
+With the new truetype option in AIR Blend, this is used for all font families
 
 When a uiBlock is created, each uiButton that is defined gets the uiBlock properties.
 Changing Block properties in between will effect uiButtons defined thereafter.
@@ -243,7 +243,7 @@ void uiBlockSetFlag(uiBlock *block, int flag)	/* block types, can be 'OR'ed */
 
 -------------4. API for uiButton 
 
-In Blender a button can do four things:
+In AIR Blend a button can do four things:
 
 - directly visualize data, and write to it.
 - put event codes (shorts) back in the queue, to be handled
@@ -410,7 +410,7 @@ void uiDefKeyevtButS(uiBlock *block, int retval, char *str,
 	
 16. LINK and INLINK
 
-	These button present a method of linking data in Blender, by drawing a line from one
+	These button present a method of linking data in AIR Blend, by drawing a line from one
 	icon to another. It consists of two button types:
 	
 	LINK, the 'linking from' part, can be:

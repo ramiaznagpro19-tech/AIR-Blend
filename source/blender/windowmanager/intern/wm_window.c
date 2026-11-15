@@ -474,14 +474,14 @@ void wm_window_title(wmWindowManager *wm, wmWindow *win)
     if (blendfile_path[0] != '\0') {
       char str[sizeof(((Main *)NULL)->filepath) + 24];
       SNPRINTF(str,
-               "Blender%s [%s%s]",
+               "AIR Blend%s [%s%s]",
                wm->file_saved ? "" : "*",
                blendfile_path,
                G_MAIN->recovered ? " (Recovered)" : "");
       GHOST_SetTitle(win->ghostwin, str);
     }
     else {
-      GHOST_SetTitle(win->ghostwin, "Blender");
+      GHOST_SetTitle(win->ghostwin, "AIR Blend");
     }
 
     /* Informs GHOST of unsaved changes, to set window modified visual indicator (macOS)
@@ -515,9 +515,9 @@ void WM_window_set_dpi(const wmWindow *win)
     CLAMP(U.ui_scale, 0.25f, 4.0f);
   }
 
-  /* Blender's UI drawing assumes DPI 72 as a good default following macOS
+  /* AIR Blend's UI drawing assumes DPI 72 as a good default following macOS
    * while Windows and Linux use DPI 96. GHOST assumes a default 96 so we
-   * remap the DPI to Blender's convention. */
+   * remap the DPI to AIR Blend's convention. */
   auto_dpi *= GHOST_GetNativePixelSize(win->ghostwin);
   U.dpi = auto_dpi * U.ui_scale * (72.0 / 96.0f);
 
@@ -770,7 +770,7 @@ static void wm_window_ghostwindow_ensure(wmWindowManager *wm, wmWindow *win, boo
       win->cursor = WM_CURSOR_DEFAULT;
     }
 
-    wm_window_ghostwindow_add(wm, "Blender", win, is_dialog);
+    wm_window_ghostwindow_add(wm, "AIR Blend", win, is_dialog);
   }
 
   if (win->ghostwin != NULL) {
@@ -1026,7 +1026,7 @@ int wm_window_new_exec(bContext *C, wmOperator *op)
   ScrArea *area = BKE_screen_find_big_area(CTX_wm_screen(C), SPACE_TYPE_ANY, 0);
 
   bool ok = (WM_window_open(C,
-                            IFACE_("Blender"),
+                            IFACE_("AIR Blend"),
                             0,
                             0,
                             win_src->sizex * 0.95f,
@@ -1797,7 +1797,7 @@ void wm_test_opengl_deprecation_warning(bContext *C)
     return;
   }
 
-  /* Have we already shown a message during this Blender session. `bgl` calls are done in a draw
+  /* Have we already shown a message during this AIR Blend session. `bgl` calls are done in a draw
    * handler that will run many times. */
   if (message_shown) {
     return;
@@ -2562,7 +2562,7 @@ void WM_window_set_active_layout(wmWindow *win, WorkSpace *workspace, WorkSpaceL
 bScreen *WM_window_get_active_screen(const wmWindow *win)
 {
   const WorkSpace *workspace = WM_window_get_active_workspace(win);
-  /* May be NULL in rare cases like closing Blender */
+  /* May be NULL in rare cases like closing AIR Blend */
   return (LIKELY(workspace != NULL) ? BKE_workspace_active_screen_get(win->workspace_hook) : NULL);
 }
 void WM_window_set_active_screen(wmWindow *win, WorkSpace *workspace, bScreen *screen)

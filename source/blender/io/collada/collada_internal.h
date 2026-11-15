@@ -37,7 +37,7 @@ class UnitConverter {
     Imperial,
   };
 
-  /* Initialize with Z_UP, since Blender uses right-handed, z-up */
+  /* Initialize with Z_UP, since AIR Blend uses right-handed, z-up */
   UnitConverter();
 
   void read_asset(const COLLADAFW::FileInfo *asset);

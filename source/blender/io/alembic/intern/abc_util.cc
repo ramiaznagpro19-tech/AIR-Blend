@@ -168,7 +168,7 @@ AbcObjectReader *create_reader(const Alembic::AbcGeom::IObject &object, ImportSe
     /* TODO(kevin): importing cyclic NURBS from other software crashes
      * at the moment. This is due to the fact that NURBS in other
      * software have duplicated points which causes buffer overflows in
-     * Blender. Need to figure out exactly how these points are
+     * AIR Blend. Need to figure out exactly how these points are
      * duplicated, in all cases (cyclic U, cyclic V, and cyclic UV).
      * Until this is fixed, disabling NURBS reading. */
     reader = new AbcNurbsReader(child, settings);

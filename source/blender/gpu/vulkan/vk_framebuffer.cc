@@ -84,7 +84,7 @@ VkViewport VKFrameBuffer::vk_viewport_get() const
   viewport.maxDepth = 1.0f;
 
   /*
-   * Vulkan has origin to the top left, Blender bottom left. We counteract this by using a negative
+   * Vulkan has origin to the top left, AIR Blend bottom left. We counteract this by using a negative
    * viewport when flip_viewport_ is set. This flips the viewport making any draw/blit use the
    * correct orientation.
    */

@@ -1,4 +1,4 @@
-# OpenColorIO configuration file for Blender
+# OpenColorIO configuration file for AIR Blend
 #
 # Based on aces, nuke-default and spi configurations from OpenColorIO-Config
 #
@@ -42,7 +42,7 @@ roles:
   # For interop between configs, and to determine XYZ for rendering
   aces_interchange: Linear ACES
 
-  # Specified by OCIO, not used in Blender
+  # Specified by OCIO, not used in AIR Blend
   color_timing: Filmic Log
   compositing_log: Filmic Log
   default: Linear
@@ -74,7 +74,7 @@ colorspaces:
     equalitygroup:
     bitdepth: 32f
     description: |
-      Rec. 709 (Full Range), Blender native linear space
+      Rec. 709 (Full Range), AIR Blend native linear space
     isdata: false
 
   - !<ColorSpace>

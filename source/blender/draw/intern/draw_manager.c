@@ -3382,7 +3382,7 @@ void DRW_draw_state_init_gtests(eGPUShaderConfig sh_cfg)
  * NOTE: Will only perform context modification when on main thread. This way these functions can
  * be used in an engine without check on whether it is a draw manager which manages OpenGL context
  * on the current thread. The downside of this is that if the engine performs OpenGL creation from
- * a non-main thread, that thread is supposed to not have OpenGL context ever bound by Blender.
+ * a non-main thread, that thread is supposed to not have OpenGL context ever bound by AIR Blend.
  *
  * \{ */
 

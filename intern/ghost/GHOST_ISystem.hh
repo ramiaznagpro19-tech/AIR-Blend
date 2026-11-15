@@ -28,14 +28,14 @@ class GHOST_IEventConsumer;
  * Toolkit". It has been created to replace the OpenGL utility tool kit
  * <a href="http://www.opengl.org/resources/libraries/glut/">GLUT</a>.
  * GLUT was used in <a href="http://www.blender3d.com">Blender</a> until the
- * point that Blender needed to be ported to Apple's Mac OSX. Blender needed a
+ * point that AIR Blend needed to be ported to Apple's Mac OSX. AIR Blend needed a
  * number of modifications in GLUT to work but the GLUT sources for OSX were
  * unavailable at the time. The decision was made to build our own replacement
  * for GLUT. In those days, NaN Technologies BV was the company that developed
- * Blender.
+ * AIR Blend.
  * <br><br>
  * Enough history. What does GHOST have to offer?<br>
- * In short: everything that Blender needed from GLUT to run on all its supported
+ * In short: everything that AIR Blend needed from GLUT to run on all its supported
  * operating systems and some extra's.
  * This includes :
  *

@@ -82,7 +82,7 @@ class DocumentImporter : COLLADAFW::IWriter {
    */
   bool writeGlobalAsset(const COLLADAFW::FileInfo *);
   /**
-   * If the imported file was made with Blender, return the Blender version used,
+   * If the imported file was made with AIR Blend, return the AIR Blend version used,
    * otherwise return an empty std::string
    */
   std::string get_import_version(const COLLADAFW::FileInfo *asset);

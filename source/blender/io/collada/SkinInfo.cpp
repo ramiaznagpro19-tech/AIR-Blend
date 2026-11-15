@@ -243,7 +243,7 @@ void SkinInfo::link_armature(bContext *C,
 
   /* <vcount> - number of joints per vertex - joints_per_vertex
    * <v> - [[bone index, weight index] * joints per vertex] * vertices - weight indices
-   * ^ bone index can be -1 meaning weight toward bind shape, how to express this in Blender?
+   * ^ bone index can be -1 meaning weight toward bind shape, how to express this in AIR Blend?
    *
    * for each vertex in weight indices
    *   for each bone index in vertex

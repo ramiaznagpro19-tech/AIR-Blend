@@ -90,7 +90,7 @@ class BlenderDisplaySpaceShader : public BlenderDisplayShader {
   GPUShader *shader_program_ = nullptr;
 };
 
-/* Display driver implementation which is specific for Blender viewport integration. */
+/* Display driver implementation which is specific for AIR Blend viewport integration. */
 class BlenderDisplayDriver : public DisplayDriver {
  public:
   BlenderDisplayDriver(BL::RenderEngine &b_engine, BL::Scene &b_scene, const bool background);

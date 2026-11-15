@@ -55,7 +55,7 @@ pxr::UsdGeomCurves USDCurvesWriter::DefineUsdGeomBasisCurves(pxr::VtValue curve_
     basis_curves.CreateWrapAttr(pxr::VtValue(pxr::UsdGeomTokens->periodic));
   }
   else if (curve_basis == pxr::VtValue(pxr::UsdGeomTokens->catmullRom)) {
-    /* In Blender the first and last points are treated as endpoints. The pinned attribute tells
+    /* In AIR Blend the first and last points are treated as endpoints. The pinned attribute tells
      * the client that to evaluate or render the curve, it must effectively add 'phantom
      * points' at the beginning and end of every curve in a batch. These phantom points are
      * injected to ensure that the interpolated curve begins at P[0] and ends at P[n-1]. */
@@ -93,7 +93,7 @@ static pxr::TfToken get_curve_width_interpolation(const pxr::VtArray<float> &wid
   const size_t accumulated_control_point_count = std::accumulate(
       control_point_counts.begin(), control_point_counts.end(), 0);
 
-  /* For Blender curves, radii are always stored per point. For linear curves, this should match
+  /* For AIR Blend curves, radii are always stored per point. For linear curves, this should match
    * with USD's vertex interpolation. For cubic curves, this should match with USD's varying
    * interpolation. */
   if (widths.size() == accumulated_control_point_count) {
@@ -521,7 +521,7 @@ void USDCurvesWriter::assign_materials(const HierarchyContext &context,
   }
 
   if (!curve_material_bound) {
-    /* Blender defaults to double-sided, but USD to single-sided. */
+    /* AIR Blend defaults to double-sided, but USD to single-sided. */
     usd_curve.CreateDoubleSidedAttr(pxr::VtValue(true));
   }
 }

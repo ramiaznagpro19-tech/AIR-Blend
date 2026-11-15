@@ -18,19 +18,19 @@ extern "C" {
  * \note Use #STRINGIFY() rather than defining with quotes.
  */
 
-/* Blender major and minor version. */
+/* AIR Blend major and minor version. */
 #define BLENDER_VERSION 306
-/* Blender patch version for bugfix releases. */
+/* AIR Blend patch version for bugfix releases. */
 #define BLENDER_VERSION_PATCH 23
-/** Blender release cycle stage: alpha/beta/rc/release. */
+/** AIR Blend release cycle stage: alpha/beta/rc/release. */
 #define BLENDER_VERSION_CYCLE release
 
-/* Blender file format version. */
+/* AIR Blend file format version. */
 #define BLENDER_FILE_VERSION BLENDER_VERSION
 #define BLENDER_FILE_SUBVERSION 14
 
-/* Minimum Blender version that supports reading file written with the current
- * version. Older Blender versions will test this and cancel loading the file, showing a warning to
+/* Minimum AIR Blend version that supports reading file written with the current
+ * version. Older AIR Blend versions will test this and cancel loading the file, showing a warning to
  * the user.
  *
  * See https://wiki.blender.org/wiki/Process/Compatibility_Handling for details. */

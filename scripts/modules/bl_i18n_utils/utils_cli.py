@@ -122,7 +122,7 @@ def main():
 
     sub_parser = sub_parsers.add_parser(
         'language_menu',
-        help="Generate the text file used by Blender to create its language menu.",
+        help="Generate the text file used by AIR Blend to create its language menu.",
     )
     sub_parser.set_defaults(func=language_menu)
 

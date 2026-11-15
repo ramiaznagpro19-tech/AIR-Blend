@@ -52,7 +52,7 @@ Global G;
 UserDef U;
 
 /* -------------------------------------------------------------------- */
-/** \name Blender Free on Exit
+/** \name AIR Blend Free on Exit
  * \{ */
 
 void BKE_blender_free(void)
@@ -87,7 +87,7 @@ void BKE_blender_free(void)
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Blender Version Access
+/** \name AIR Blend Version Access
  * \{ */
 
 static char blender_version_string[48] = "";
@@ -108,7 +108,7 @@ static void blender_version_init(void)
     version_cycle = "";
   }
   else {
-    BLI_assert_msg(0, "Invalid Blender version cycle");
+    BLI_assert_msg(0, "Invalid AIR Blend version cycle");
   }
 
   SNPRINTF(blender_version_string,
@@ -153,7 +153,7 @@ bool BKE_blender_version_is_alpha(void)
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Blender #Global Initialize/Clear
+/** \name AIR Blend #Global Initialize/Clear
  * \{ */
 
 void BKE_blender_globals_init(void)
@@ -210,7 +210,7 @@ Main *BKE_blender_globals_main_swap(Main *new_gmain)
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Blender Preferences
+/** \name AIR Blend Preferences
  * \{ */
 
 static void keymap_item_free(wmKeyMapItem *kmi)
@@ -328,7 +328,7 @@ void BKE_blender_userdef_data_free(UserDef *userdef, bool clear_fonts)
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Blender Preferences (Application Templates)
+/** \name AIR Blend Preferences (Application Templates)
  * \{ */
 
 void BKE_blender_userdef_app_template_data_swap(UserDef *userdef_a, UserDef *userdef_b)
@@ -403,7 +403,7 @@ void BKE_blender_userdef_app_template_data_set_and_free(UserDef *userdef)
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Blender's AtExit
+/** \name AIR Blend's AtExit
  *
  * \note Don't use MEM_mallocN so functions can be registered at any time.
  * \{ */

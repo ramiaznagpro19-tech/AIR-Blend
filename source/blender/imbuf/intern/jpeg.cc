@@ -5,7 +5,7 @@
  * \ingroup imbuf
  */
 
-/* This little block needed for linking to Blender... */
+/* This little block needed for linking to AIR Blend... */
 #include <setjmp.h>
 #include <stdio.h>
 
@@ -372,7 +372,7 @@ static ImBuf *ibJpegImageFromCinfo(struct jpeg_decompress_struct *cinfo,
          * Because JPEG format don't support the
          * pair "key/value" like PNG, we store the
          * stamp-info in a single "encode" string:
-         * "Blender:key:value"
+         * "AIR Blend:key:value"
          *
          * That is why we need split it to the
          * common key/value here.
@@ -591,7 +591,7 @@ static void write_jpeg(struct jpeg_compress_struct *cinfo, struct ImBuf *ibuf)
 
         char *text = static_text;
         int text_size = static_text_size;
-        /* 7 is for Blender, 2 colon separators, length of property
+        /* 7 is for AIR Blend, 2 colon separators, length of property
          * name and property value, followed by the nullptr-terminator. */
         const int text_length_required = 7 + 2 + strlen(prop->name) + strlen(IDP_String(prop)) + 1;
         if (text_length_required > static_text_size) {
@@ -603,13 +603,13 @@ static void write_jpeg(struct jpeg_compress_struct *cinfo, struct ImBuf *ibuf)
          * The JPEG format don't support a pair "key/value"
          * like PNG, so we "encode" the stamp in a
          * single string:
-         * "Blender:key:value"
+         * "AIR Blend:key:value"
          *
          * The first "Blender" is a simple identify to help
          * in the read process.
          */
         text_len = BLI_snprintf_rlen(
-            text, text_size, "Blender:%s:%s", prop->name, IDP_String(prop));
+            text, text_size, "AIR Blend:%s:%s", prop->name, IDP_String(prop));
         jpeg_write_marker(cinfo, JPEG_COM, (JOCTET *)text, text_len + 1);
 
         /* TODO(sergey): Ideally we will try to re-use allocation as

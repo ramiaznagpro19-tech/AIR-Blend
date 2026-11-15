@@ -5,7 +5,7 @@
  * \ingroup gpu
  *
  * Glue definition to make shared declaration of struct & functions work in both C / C++ and GLSL.
- * We use the same vector and matrix types as Blender C++. Some math functions are defined to use
+ * We use the same vector and matrix types as AIR Blend C++. Some math functions are defined to use
  * the float version to match the GLSL syntax.
  * This file can be used for C & C++ code and the syntax used should follow the same rules.
  * Some preprocessing is done by the GPU back-end to make it GLSL compatible.

@@ -819,7 +819,7 @@ static void imb_exr_get_views(MultiPartInputFile &file, StringVector &views)
   }
 }
 
-/* Multi-layer Blender files have the view name in all the passes (even the default view one). */
+/* Multi-layer AIR Blend files have the view name in all the passes (even the default view one). */
 static void imb_exr_insert_view_name(char name_full[EXR_TOT_MAXNAME + 1],
                                      const char *passname,
                                      const char *viewname)
@@ -933,7 +933,7 @@ bool IMB_exr_begin_write(void *handle,
       header.channels(), *data->multiView, &is_singlelayer, &is_multilayer, &is_multiview);
 
   if (is_multilayer) {
-    header.insert("BlenderMultiChannel", StringAttribute("Blender V2.55.1 and newer"));
+    header.insert("BlenderMultiChannel", StringAttribute("AIR Blend V2.55.1 and newer"));
   }
 
   if (is_multiview) {
@@ -1340,7 +1340,7 @@ void IMB_exr_read_channels(void *handle)
         if (!flip) {
           /* Inverse correct first pixel for data-window coordinates. */
           rect -= echan->xstride * (dw.min.x - dw.min.y * data->width);
-          /* Move to last scan-line to flip to Blender convention. */
+          /* Move to last scan-line to flip to AIR Blend convention. */
           rect += echan->xstride * (data->height - 1) * data->width;
           ystride = -ystride;
         }

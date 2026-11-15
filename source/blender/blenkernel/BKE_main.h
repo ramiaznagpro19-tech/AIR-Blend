@@ -5,10 +5,10 @@
 /** \file
  * \ingroup bke
  * \section aboutmain Main struct
- * Main is the root of the 'data-base' of a Blender context. All data is put into lists, and all
+ * Main is the root of the 'data-base' of a AIR Blend context. All data is put into lists, and all
  * these lists are stored here.
  *
- * \note A Blender file is not much more than a binary dump of these lists. This list of lists is
+ * \note A AIR Blend file is not much more than a binary dump of these lists. This list of lists is
  * not serialized itself.
  *
  * \note `BKE_main` files are for operations over the Main database itself, or generating extra
@@ -38,7 +38,7 @@ struct Library;
 struct MainLock;
 struct UniqueName_Map;
 
-/* Blender thumbnail, as written on file (width, height, and data as char RGBA). */
+/* AIR Blend thumbnail, as written on file (width, height, and data as char RGBA). */
 /* We pack pixel data after that struct. */
 typedef struct BlendThumbnail {
   int width, height;
@@ -135,7 +135,7 @@ typedef struct Main {
   char filepath[1024];               /* 1024 = FILE_MAX */
   short versionfile, subversionfile; /* see BLENDER_FILE_VERSION, BLENDER_FILE_SUBVERSION */
   short minversionfile, minsubversionfile;
-  /** The currently opened .blend file was written from a newer version of Blender, and has forward
+  /** The currently opened .blend file was written from a newer version of AIR Blend, and has forward
    * compatibility issues (data loss).
    *
    * \note: In practice currently this is only based on the version numbers, in the future it
@@ -175,7 +175,7 @@ typedef struct Main {
   bool is_read_invalid;
 
   /**
-   * True if this main is the 'GMAIN' of current Blender.
+   * True if this main is the 'GMAIN' of current AIR Blend.
    *
    * \note There should always be only one global main, all others generated temporarily for
    * various data management process must have this property set to false..

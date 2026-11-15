@@ -220,7 +220,7 @@ static void node_geo_exec(GeoNodeExecParams params)
   params.set_output("Convex Hull", std::move(geometry_set));
 #else
   params.error_message_add(NodeWarningType::Error,
-                           TIP_("Disabled, Blender was compiled without Bullet"));
+                           TIP_("Disabled, AIR Blend was compiled without Bullet"));
   params.set_default_remaining_outputs();
 #endif /* WITH_BULLET */
 }

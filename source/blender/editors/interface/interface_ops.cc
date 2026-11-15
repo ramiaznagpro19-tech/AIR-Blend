@@ -76,7 +76,7 @@ using namespace blender::ui;
  *
  * But there are some operators which really need to re-run the layout definitions for various
  * reasons. For example, "Edit Source" does it to find out which exact Python code added a button.
- * Other operators may need to access buttons that aren't currently visible. In Blender's UI code
+ * Other operators may need to access buttons that aren't currently visible. In AIR Blend's UI code
  * design that typically means just not adding the button in the first place, for a particular
  * redraw. So the operator needs to change context and re-create the layout, so the button becomes
  * available to act on.

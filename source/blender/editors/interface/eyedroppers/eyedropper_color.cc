@@ -541,7 +541,7 @@ void UI_OT_eyedropper_color(wmOperatorType *ot)
   /* identifiers */
   ot->name = "Eyedropper";
   ot->idname = "UI_OT_eyedropper_color";
-  ot->description = "Sample a color from the Blender window to store in a property";
+  ot->description = "Sample a color from the AIR Blend window to store in a property";
 
   /* api callbacks */
   ot->invoke = eyedropper_invoke;

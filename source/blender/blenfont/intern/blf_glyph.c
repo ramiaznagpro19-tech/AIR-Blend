@@ -254,7 +254,7 @@ static GlyphBLF *blf_glyph_cache_add_glyph(
   const int buffer_size = (int)(glyph->bitmap.width * glyph->bitmap.rows);
   if (buffer_size != 0) {
     if (font->flags & BLF_MONOCHROME) {
-      /* Font buffer uses only 0 or 1 values, Blender expects full 0..255 range. */
+      /* Font buffer uses only 0 or 1 values, AIR Blend expects full 0..255 range. */
       for (int i = 0; i < buffer_size; i++) {
         glyph->bitmap.buffer[i] = glyph->bitmap.buffer[i] ? 255 : 0;
       }
@@ -772,7 +772,7 @@ static bool blf_glyph_render_bitmap(FontBLF *font, FT_GlyphSlot glyph)
     /* Accumulate errors for later, fine if not interested beyond "ok vs any error" */
     FT_Bitmap_New(&tempbitmap);
 
-    /* Does Blender use Pitch 1 always? It works so far */
+    /* Does AIR Blend use Pitch 1 always? It works so far */
     err += FT_Bitmap_Convert(font->ft_lib, &glyph->bitmap, &tempbitmap, 1);
     err += FT_Bitmap_Copy(font->ft_lib, &tempbitmap, &glyph->bitmap);
     err += FT_Bitmap_Done(font->ft_lib, &tempbitmap);

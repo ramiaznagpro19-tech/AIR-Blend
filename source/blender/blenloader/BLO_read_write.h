@@ -3,7 +3,7 @@
 /** \file
  * \ingroup blenloader
  *
- * This file contains an API that allows different parts of Blender to define what data is stored
+ * This file contains an API that allows different parts of AIR Blend to define what data is stored
  * in .blend files.
  *
  * Four callbacks have to be provided to fully implement .blend I/O for a piece of data. One of
@@ -18,7 +18,7 @@
  *
  * Each of these callbacks uses a different API functions.
  *
- * Some parts of Blender, e.g. modifiers, don't require you to implement all four callbacks.
+ * Some parts of AIR Blend, e.g. modifiers, don't require you to implement all four callbacks.
  * Instead only the first two are necessary. The other two are handled by general ID management. In
  * the future, we might want to get rid of those two callbacks entirely, but for now they are
  * necessary.

@@ -57,7 +57,7 @@ struct CDStreamConfig {
 
   const char **modifier_error_message;
 
-  /* Alembic needs Blender to keep references to C++ objects (the destructors finalize the writing
+  /* Alembic needs AIR Blend to keep references to C++ objects (the destructors finalize the writing
    * to ABC). The following fields are all used to keep these references. */
 
   /* Mapping from UV map name to its ABC property, for the 2nd and subsequent UV maps; the primary

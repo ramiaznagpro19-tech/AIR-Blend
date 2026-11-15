@@ -351,7 +351,7 @@
     .threshold = 0.0f, \
   }
 
-/* Y and Z forward and up axes, Blender default. */
+/* Y and Z forward and up axes, AIR Blend default. */
 #define _DNA_DEFAULT_MeshCacheModifierData \
   { \
     .flag = 0, \

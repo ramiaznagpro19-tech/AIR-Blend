@@ -53,7 +53,7 @@ class Package:
         # with stable enough API that the version does not matter (to some extent, it is expected to work with
         # any recent distro version at least).
         "is_group",
-        # Whether Blender can build without this package or not.
+        # Whether AIR Blend can build without this package or not.
         # Note: In case of group packages, all sub-packages inherit from the value of the root group package.
         "is_mandatory",
         # Exact version currently used for pre-built libraries and buildbot builds.
@@ -92,7 +92,7 @@ class Package:
         self.distro_package_names = distro_package_names
 
 
-# Absolute minimal required tools to build Blender.
+# Absolute minimal required tools to build AIR Blend.
 BUILD_MANDATORY_SUBPACKAGES = (
     Package(name="Build Essentials", is_group=True,
             sub_packages=(
@@ -164,7 +164,7 @@ BUILD_MANDATORY_SUBPACKAGES = (
 )
 
 
-# Fairly common additional tools useful to build Blender.
+# Fairly common additional tools useful to build AIR Blend.
 BUILD_OPTIONAL_SUBPACKAGES = (
     Package(name="Ninja Builder",
             distro_package_names={DISTRO_ID_DEBIAN: "ninja-build",
@@ -293,7 +293,7 @@ DEPS_CRITICAL_SUBPACKAGES = (
 )
 
 
-# Basic mandatory set of common libraries to build Blender, which are also available as pre-conmpiled libraries.
+# Basic mandatory set of common libraries to build AIR Blend, which are also available as pre-conmpiled libraries.
 DEPS_MANDATORY_SUBPACKAGES = (
     Package(name="JPEG Library",
             distro_package_names={DISTRO_ID_DEBIAN: "libjpeg-dev",
@@ -389,7 +389,7 @@ DEPS_MANDATORY_SUBPACKAGES = (
 )
 
 
-# Basic optional set of common libraries to build Blender, which are also available as pre-conmpiled libraries.
+# Basic optional set of common libraries to build AIR Blend, which are also available as pre-conmpiled libraries.
 DEPS_OPTIONAL_SUBPACKAGES = (
     Package(name="OpenJPG Library",
             distro_package_names={DISTRO_ID_DEBIAN: "libopenjp2-7-dev",
@@ -515,7 +515,7 @@ DEPS_OPTIONAL_SUBPACKAGES = (
 )
 
 
-# Python packages that should be available for Blender pyscripts.
+# Python packages that should be available for AIR Blend pyscripts.
 # Suse uses names like `python310-Cython` for its python module packages...
 def suse_pypackages_name_gen(name):
     def _gen(package, parent_packages):
@@ -689,7 +689,7 @@ BOOST_SUBPACKAGES = (
 )
 
 
-# Packages required to build Blender, which are not included in the precompiled libraries.
+# Packages required to build AIR Blend, which are not included in the precompiled libraries.
 PACKAGES_BASICS_BUILD = (
     Package(name="Basics Mandatory Build", is_group=True, is_mandatory=True, sub_packages=BUILD_MANDATORY_SUBPACKAGES),
     Package(name="Basics Optional Build", is_group=True, is_mandatory=False, sub_packages=BUILD_OPTIONAL_SUBPACKAGES),
@@ -697,7 +697,7 @@ PACKAGES_BASICS_BUILD = (
 )
 
 
-# All packages, required or 'nice to have', to build Blender.
+# All packages, required or 'nice to have', to build AIR Blend.
 # Also covers (as best as possible) the dependencies provided by the precompiled libraries.
 PACKAGES_ALL = (
     Package(name="Basics Mandatory Build", is_group=True, is_mandatory=True, sub_packages=BUILD_MANDATORY_SUBPACKAGES),
@@ -1250,7 +1250,7 @@ class PackageInstaller:
                 if package.is_mandatory:
                     self.settings.logger.warning(
                         f"Mandatory package {info_name} is not defined for {distro_id} distribution, "
-                        "Blender will likely not build at all without it.\n")
+                        "AIR Blend will likely not build at all without it.\n")
                 else:
                     self.settings.logger.info(f"Package {info_name} is not defined for {distro_id} distribution.\n")
                 continue
@@ -1698,17 +1698,17 @@ def argparse_create():
 
     # When --help or no args are given, print this help
     usage_text = (
-        "Attempt to install dependencies to build Blender from current linux distribution's packages only.\n"
+        "Attempt to install dependencies to build AIR Blend from current linux distribution's packages only.\n"
         "\n"
-        "By default, only installs critical tools and dependencies to build Blender, excluding any library provided\n"
+        "By default, only installs critical tools and dependencies to build AIR Blend, excluding any library provided\n"
         "by the precompiled SVN repository.\n"
         "`make update` should then be ran after this script to download all precompiled libraries.\n"
         "\n"
         "When ran with the `--all` option, this tool will try to install all mandatory and optional dependencies\n"
         "from the distribution packages.\n"
         "\n"
-        "NOTE: Many distributions do not provide packages for all libraries used by Blender, or have no\n"
-        "version-compatible packages. In some cases, mandatory dependencies cannot be satisfied, and Blender\n"
+        "NOTE: Many distributions do not provide packages for all libraries used by AIR Blend, or have no\n"
+        "version-compatible packages. In some cases, mandatory dependencies cannot be satisfied, and AIR Blend\n"
         "won't be able to build at all.\n"
         "\n"
         "NOTE: To build with system package libraries instead of the precompiled ones when both are available,\n"
@@ -1724,7 +1724,7 @@ def argparse_create():
         "--show-deps",
         dest="show_deps",
         action='store_true',
-        help="Show main dependencies of Blender (including officially supported versions) and exit.",
+        help="Show main dependencies of AIR Blend (including officially supported versions) and exit.",
     )
     parser.add_argument(
         "--no-sudo",

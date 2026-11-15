@@ -32,13 +32,13 @@
 static PyTypeObject BlenderAppSDLType;
 
 static PyStructSequence_Field app_sdl_info_fields[] = {
-    {"supported", ("Boolean, True when Blender is built with SDL support")},
+    {"supported", ("Boolean, True when AIR Blend is built with SDL support")},
     {"version", ("The SDL version as a tuple of 3 numbers")},
     {"version_string", ("The SDL version formatted as a string")},
     {"available",
      ("Boolean, True when SDL is available. This is False when "
       "either *supported* is False, or *dynload* is True and "
-      "Blender cannot find the correct library.")},
+      "AIR Blend cannot find the correct library.")},
     {NULL},
 };
 

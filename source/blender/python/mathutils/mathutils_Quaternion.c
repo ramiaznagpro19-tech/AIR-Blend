@@ -1670,7 +1670,7 @@ static struct PyMethodDef Quaternion_methods[] = {
 PyDoc_STRVAR(quaternion_doc,
              ".. class:: Quaternion([seq, [angle]])\n"
              "\n"
-             "   This object gives access to Quaternions in Blender.\n"
+             "   This object gives access to Quaternions in AIR Blend.\n"
              "\n"
              "   :arg seq: size 3 or 4\n"
              "   :type seq: :class:`Vector`\n"

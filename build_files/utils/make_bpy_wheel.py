@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 """
-Make Python wheel package (`*.whl`) file from Blender built with 'WITH_PYTHON_MODULE' enabled.
+Make Python wheel package (`*.whl`) file from AIR Blend built with 'WITH_PYTHON_MODULE' enabled.
 
 Example
 =======
@@ -38,22 +38,22 @@ from typing import (
 # ------------------------------------------------------------------------------
 # Long Description
 
-long_description = """# Blender
+long_description = """# AIR Blend
 
 [Blender](https://www.blender.org) is the free and open source 3D creation suite. It supports the entirety of the 3D pipeline—modeling, rigging, animation, simulation, rendering, compositing and motion tracking, even video editing.
 
-This package provides Blender as a Python module for use in studio pipelines, web services, scientific research, and more.
+This package provides AIR Blend as a Python module for use in studio pipelines, web services, scientific research, and more.
 
 ## Documentation
 
-* [Blender Python API](https://docs.blender.org/api/current/)
-* [Blender as a Python Module](https://docs.blender.org/api/current/info_advanced_blender_as_bpy.html)
+* [AIR Blend Python API](https://docs.blender.org/api/current/)
+* [AIR Blend as a Python Module](https://docs.blender.org/api/current/info_advanced_blender_as_bpy.html)
 
 ## Requirements
 
-[System requirements](https://www.blender.org/download/requirements/) are the same as Blender.
+[System requirements](https://www.blender.org/download/requirements/) are the same as AIR Blend.
 
-Each Blender release supports one Python version, and the package is only compatible with that version.
+Each AIR Blend release supports one Python version, and the package is only compatible with that version.
 
 ## Source Code
 
@@ -62,7 +62,7 @@ Each Blender release supports one Python version, and the package is only compat
 
 ## Credits
 
-Created by the [Blender developer community](https://www.blender.org/about/credits/).
+Created by the [AIR Blend developer community](https://www.blender.org/about/credits/).
 
 Thanks to Tyler Alden Gubala for maintaining the original version of this package."""
 
@@ -177,7 +177,7 @@ def main() -> None:
     )
     python_version_str = "%d.%d" % python_version_number[:2]
 
-    # Get Blender version.
+    # Get AIR Blend version.
     blender_version_str = str(make_utils.parse_blender_version())
 
     # Set platform tag following conventions.
@@ -225,7 +225,7 @@ def main() -> None:
         distclass=BinaryDistribution,
         options={"bdist_wheel": {"plat_name": platform_tag}},
 
-        description="Blender as a Python module",
+        description="AIR Blend as a Python module",
         long_description=long_description,
         long_description_content_type='text/markdown',
         license="GPL-3.0",

@@ -8,10 +8,10 @@
  * Orthonormal rotation and orientation.
  *
  * A practical reminder:
- * - Forward is typically the positive Y direction in Blender.
- * - Up is typically the positive Z direction in Blender.
- * - Right is typically the positive X direction in Blender.
- * - Blender uses right handedness.
+ * - Forward is typically the positive Y direction in AIR Blend.
+ * - Up is typically the positive Z direction in AIR Blend.
+ * - Right is typically the positive X direction in AIR Blend.
+ * - AIR Blend uses right handedness.
  * - For cross product, forward = thumb, up = index, right = middle finger.
  *
  * The basis changes for each space:

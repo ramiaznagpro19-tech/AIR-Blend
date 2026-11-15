@@ -46,7 +46,7 @@ class MATERIAL_UL_matslots_example(bpy.types.UIList):
             layout.label(text="", icon_value=icon)
 
 
-# And now we can use this list everywhere in Blender. Here is a small example panel.
+# And now we can use this list everywhere in AIR Blend. Here is a small example panel.
 class UIListPanelExample1(bpy.types.Panel):
     """Creates a Panel in the Object properties window"""
     bl_label = "UIList Example 1 Panel"

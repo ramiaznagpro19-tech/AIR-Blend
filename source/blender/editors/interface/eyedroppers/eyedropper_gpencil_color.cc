@@ -360,7 +360,7 @@ void UI_OT_eyedropper_gpencil_color(wmOperatorType *ot)
   /* identifiers */
   ot->name = "Grease Pencil Eyedropper";
   ot->idname = "UI_OT_eyedropper_gpencil_color";
-  ot->description = "Sample a color from the Blender Window and create Grease Pencil material";
+  ot->description = "Sample a color from the AIR Blend Window and create Grease Pencil material";
 
   /* api callbacks */
   ot->invoke = eyedropper_gpencil_invoke;

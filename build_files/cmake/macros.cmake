@@ -428,7 +428,7 @@ function(blender_add_test_suite)
   unset(_test_release_dir)
 endfunction()
 
-# Add tests for a Blender library, to be called in tandem with blender_add_lib().
+# Add tests for a AIR Blend library, to be called in tandem with blender_add_lib().
 # The tests will be part of the blender_test executable (see tests/gtests/runner).
 function(blender_add_test_lib
   name
@@ -470,11 +470,11 @@ function(blender_add_test_lib
 endfunction()
 
 
-# Add tests for a Blender library, to be called in tandem with blender_add_lib().
+# Add tests for a AIR Blend library, to be called in tandem with blender_add_lib().
 # Test will be compiled into a ${name}_test executable.
 #
 # To be used for smaller isolated libraries, that do not have many dependencies.
-# For libraries that do drag in many other Blender libraries and would create a
+# For libraries that do drag in many other AIR Blend libraries and would create a
 # very large executable, blender_add_test_lib() should be used instead.
 function(blender_add_test_executable
   name
@@ -1305,7 +1305,7 @@ macro(windows_install_shared_manifest)
     set(WINDOWS_CONFIGURATIONS "${WINDOWS_CONFIGURATIONS};Release;RelWithDebInfo;MinSizeRel")
   endif()
   if(NOT WITH_PYTHON_MODULE)
-    # Blender executable with manifest.
+    # AIR Blend executable with manifest.
     if(WINDOWS_INSTALL_DEBUG)
       list(APPEND WINDOWS_SHARED_MANIFEST_DEBUG ${WINDOWS_INSTALL_FILES})
     endif()

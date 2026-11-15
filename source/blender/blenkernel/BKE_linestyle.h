@@ -5,7 +5,7 @@
 
 /** \file
  * \ingroup bke
- * \brief Blender kernel freestyle line style functionality.
+ * \brief AIR Blend kernel freestyle line style functionality.
  */
 
 #include "DNA_linestyle_types.h"

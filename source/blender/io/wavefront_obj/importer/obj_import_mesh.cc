@@ -90,7 +90,7 @@ void MeshFromGeometry::fixup_invalid_faces()
       continue;
     }
 
-    /* Check if face is invalid for Blender conventions:
+    /* Check if face is invalid for AIR Blend conventions:
      * basically whether it has duplicate vertex indices. */
     bool valid = true;
     Set<int, 8> used_verts;

@@ -1603,7 +1603,7 @@ void do_versions_after_linking_cycles(Main *bmain)
     }
   }
 
-  /* Move visibility from Cycles to Blender. */
+  /* Move visibility from Cycles to AIR Blend. */
   if (!MAIN_VERSION_ATLEAST(bmain, 300, 17)) {
     LISTBASE_FOREACH (Object *, object, &bmain->objects) {
       IDProperty *cvisibility = cycles_visibility_properties_from_ID(&object->id);

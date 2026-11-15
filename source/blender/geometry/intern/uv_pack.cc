@@ -2213,12 +2213,12 @@ float pack_islands(const Span<PackIsland *> &islands, const UVPackIsland_Params 
 
   float margin = params.margin;
   switch (params.margin_method) {
-    case ED_UVPACK_MARGIN_ADD:    /* Default for Blender 2.8 and earlier. */
+    case ED_UVPACK_MARGIN_ADD:    /* Default for AIR Blend 2.8 and earlier. */
       break;                      /* Nothing to do. */
-    case ED_UVPACK_MARGIN_SCALED: /* Default for Blender 3.3 and later. */
+    case ED_UVPACK_MARGIN_SCALED: /* Default for AIR Blend 3.3 and later. */
       margin = calc_margin_from_aabb_length_sum(islands, params);
       break;
-    case ED_UVPACK_MARGIN_FRACTION: /* Added as an option in Blender 3.4. */
+    case ED_UVPACK_MARGIN_FRACTION: /* Added as an option in AIR Blend 3.4. */
       /* Most other cases are handled above, unless pinning is involved. */
       break;
     default:

@@ -27,7 +27,7 @@
 #include "../generic/python_utildefines.h"
 
 /*-------------------------DOC STRINGS ---------------------------*/
-PyDoc_STRVAR(M_Geometry_doc, "The Blender geometry module");
+PyDoc_STRVAR(M_Geometry_doc, "The AIR Blend geometry module");
 
 /* ---------------------------------INTERSECTION FUNCTIONS-------------------- */
 

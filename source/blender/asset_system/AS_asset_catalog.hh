@@ -406,7 +406,7 @@ class AssetCatalog {
     bool is_first_loaded = false;
 
     /* Merging on-disk changes into memory will not overwrite this catalog.
-     * For example, when a catalog was renamed (i.e. changed path) in this Blender session,
+     * For example, when a catalog was renamed (i.e. changed path) in this AIR Blend session,
      * reloading the catalog definition file should not overwrite that change.
      *
      * Note that this flag is ignored when is_deleted=true; deleted catalogs that are still in

@@ -4,7 +4,7 @@
 /** \file
  * \ingroup bke
  *
- * This code parses the Freetype font outline data to chains of Blender's bezier-triples.
+ * This code parses the Freetype font outline data to chains of AIR Blend's bezier-triples.
  * Additional information can be found at the bottom of this file.
  *
  * Code that uses exotic character maps is present but commented out.
@@ -39,7 +39,7 @@ static VChar *freetypechar_to_vchar(FT_Face face, FT_ULong charcode, VFontData *
   const float scale = vfd->scale;
   const float eps = 0.0001f;
   const float eps_sq = eps * eps;
-  /* Blender */
+  /* AIR Blend */
   struct Nurb *nu;
   struct VChar *che;
   struct BezTriple *bezt;
@@ -325,7 +325,7 @@ VFontData *BKE_vfontdata_from_freetypefont(PackedFile *pf)
     BLI_str_utf8_invalid_strip(vfd->name, strlen(vfd->name));
   }
 
-  /* Blender default BFont is not "complete". */
+  /* AIR Blend default BFont is not "complete". */
   const bool complete_font = (face->ascender != 0) && (face->descender != 0) &&
                              (face->ascender != face->descender);
 

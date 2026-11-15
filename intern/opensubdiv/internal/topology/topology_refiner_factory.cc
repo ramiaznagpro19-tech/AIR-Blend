@@ -376,7 +376,7 @@ TopologyRefinerImpl *TopologyRefinerImpl::createFromConverter(
     return nullptr;
   }
 
-  // Create Blender-side object holding all necessary data for the topology refiner.
+  // Create AIR Blend-side object holding all necessary data for the topology refiner.
   TopologyRefinerImpl *topology_refiner_impl = new TopologyRefinerImpl();
   topology_refiner_impl->topology_refiner = topology_refiner;
   topology_refiner_impl->settings = settings;

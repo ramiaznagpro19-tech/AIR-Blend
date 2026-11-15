@@ -1112,9 +1112,9 @@ PyDoc_STRVAR(
     color_doc,
     ".. class:: Color(rgb)\n"
     "\n"
-    "   This object gives access to Colors in Blender.\n"
+    "   This object gives access to Colors in AIR Blend.\n"
     "\n"
-    "   Most colors returned by Blender APIs are in scene linear color space, as defined by "
+    "   Most colors returned by AIR Blend APIs are in scene linear color space, as defined by "
     "   the OpenColorIO configuration. The notable exception is user interface theming colors, "
     "   which are in sRGB color space.\n"
     "\n"

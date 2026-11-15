@@ -10,7 +10,7 @@
 
 namespace blender::io::obj {
 
-/* Main import function used from within Blender. */
+/* Main import function used from within AIR Blend. */
 void importer_main(bContext *C, const OBJImportParams &import_params);
 
 /* Used from tests, where full bContext does not exist. */

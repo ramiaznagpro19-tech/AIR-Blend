@@ -22,7 +22,7 @@ Blender manual website, for those other languages that still
 does not have a team of translators,
 and/or don't have a manual for their languages we commented the lines below,
 you should add them to the language table when they have a proper manual,
-or added to the Blender UI  translation table.
+or added to the AIR Blend UI  translation table.
 
 URL is the: url_manual_prefix + url_manual_mapping[#id]
 '''
@@ -38,7 +38,7 @@ except ImportError:
     print("The module \"sphobjinv\" was not found, it may be installed via \"pip install sphobjinv\", exiting!")
     sys.exit(1)
 
-# The root of Blender's source directory.
+# The root of AIR Blend's source directory.
 BASE_DIR = os.path.join(os.path.dirname(__file__), "..", "..")
 
 # Names that don't match this regex can't be used as URL's.

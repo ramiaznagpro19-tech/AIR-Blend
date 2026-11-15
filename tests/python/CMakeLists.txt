@@ -19,7 +19,7 @@ file(MAKE_DIRECTORY ${TEST_OUT_DIR}/blendfile_io)
 #   message(FATAL_ERROR "CMake test directory not found!")
 # endif()
 
-# Run Blender command with parameters.
+# Run AIR Blend command with parameters.
 function(add_blender_test testname)
   add_test(
     NAME ${testname}
@@ -39,7 +39,7 @@ function(add_blender_test testname)
   endif()
 endfunction()
 
-# Run Python script outside Blender.
+# Run Python script outside AIR Blend.
 function(add_python_test testname testscript)
   if(NOT TEST_PYTHON_EXE)
     message(FATAL_ERROR "No Python configured for running tests, set TEST_PYTHON_EXE.")

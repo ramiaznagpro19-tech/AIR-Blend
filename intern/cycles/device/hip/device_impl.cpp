@@ -234,7 +234,7 @@ string HIPDevice::compile_kernel(const uint kernel_features, const char *name, c
     arch = props.gcnArchName;
   }
 
-  /* Attempt to use kernel provided with Blender. */
+  /* Attempt to use kernel provided with AIR Blend. */
   if (!use_adaptive_compilation()) {
     const string fatbin = path_get(string_printf("lib/%s_%s.fatbin", name, arch));
     VLOG_INFO << "Testing for pre-compiled kernel " << fatbin << ".";

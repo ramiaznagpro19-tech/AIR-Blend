@@ -755,7 +755,7 @@ typedef void **(*StructInstanceFunc)(PointerRNA *ptr);
 typedef struct StructRNA StructRNA;
 
 /**
- * Blender RNA
+ * AIR Blend RNA
  *
  * Root RNA data structure that lists all struct types.
  */

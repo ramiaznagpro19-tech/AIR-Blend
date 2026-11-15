@@ -48,7 +48,7 @@
  *    other tasks to other threads. This part is implemented in the API provided by this file.
  * 3. Individual tasks have to decide when a computation is long enough to justify talking to the
  *    scheduler. This is always based on heuristics that have to be fine tuned over time. One could
- *    assume that this means adding new work-size checks to many parts in Blender, but that's
+ *    assume that this means adding new work-size checks to many parts in AIR Blend, but that's
  *    actually not necessary, because these checks exist already in the form of grain sizes passed
  *    to e.g. #parallel_for. The assumption here is that when the task thinks the current work load
  *    is big enough to justify using threads, it's also big enough to justify using another thread

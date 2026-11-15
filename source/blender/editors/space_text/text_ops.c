@@ -3888,7 +3888,7 @@ static int text_resolve_conflict_invoke(bContext *C, wmOperator *op, const wmEve
       if (text->flags & TXT_ISDIRTY) {
         /* Modified locally and externally, ah. offer more possibilities. */
         pup = UI_popup_menu_begin(
-            C, IFACE_("File Modified Outside and Inside Blender"), ICON_NONE);
+            C, IFACE_("File Modified Outside and Inside AIR Blend"), ICON_NONE);
         layout = UI_popup_menu_layout(pup);
         uiItemEnumO_ptr(layout,
                         op->type,
@@ -3911,7 +3911,7 @@ static int text_resolve_conflict_invoke(bContext *C, wmOperator *op, const wmEve
         UI_popup_menu_end(C, pup);
       }
       else {
-        pup = UI_popup_menu_begin(C, IFACE_("File Modified Outside Blender"), ICON_NONE);
+        pup = UI_popup_menu_begin(C, IFACE_("File Modified Outside AIR Blend"), ICON_NONE);
         layout = UI_popup_menu_layout(pup);
         uiItemEnumO_ptr(
             layout, op->type, IFACE_("Reload from disk"), 0, "resolution", RESOLVE_RELOAD);
@@ -3926,7 +3926,7 @@ static int text_resolve_conflict_invoke(bContext *C, wmOperator *op, const wmEve
       }
       break;
     case 2:
-      pup = UI_popup_menu_begin(C, IFACE_("File Deleted Outside Blender"), ICON_NONE);
+      pup = UI_popup_menu_begin(C, IFACE_("File Deleted Outside AIR Blend"), ICON_NONE);
       layout = UI_popup_menu_layout(pup);
       uiItemEnumO_ptr(
           layout, op->type, IFACE_("Make text internal"), 0, "resolution", RESOLVE_MAKE_INTERNAL);

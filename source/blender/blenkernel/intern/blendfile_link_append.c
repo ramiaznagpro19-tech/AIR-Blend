@@ -1102,9 +1102,9 @@ static void blendfile_link_append_proxies_convert(Main *bmain, ReportList *repor
   {
     BKE_reportf(bf_reports.reports,
                 RPT_WARNING,
-                "Proxies have been removed from Blender (%d proxies were automatically converted "
+                "Proxies have been removed from AIR Blend (%d proxies were automatically converted "
                 "to library overrides, %d proxies could not be converted and were cleared). "
-                "Consider re-saving any library .blend file with the newest Blender version",
+                "Consider re-saving any library .blend file with the newest AIR Blend version",
                 bf_reports.count.proxies_to_lib_overrides_success,
                 bf_reports.count.proxies_to_lib_overrides_failures);
   }
@@ -1400,7 +1400,7 @@ void BKE_blendfile_link(BlendfileLinkAppendContext *lapp_context, ReportList *re
                   RPT_WARNING,
                   "Linking or appending from a very old .blend file format (%d.%d), no animation "
                   "conversion will "
-                  "be done! You may want to re-save your lib file with current Blender",
+                  "be done! You may want to re-save your lib file with current AIR Blend",
                   mainl->versionfile,
                   mainl->subversionfile);
     }

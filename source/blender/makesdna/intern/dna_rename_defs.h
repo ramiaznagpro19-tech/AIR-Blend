@@ -11,7 +11,7 @@
  *   refer to the newer name, not the original.
  *
  * - Changes here only change generated code for `makesdna.c` and `makesrna.c`
- *   without impacting Blender's run-time, besides allowing us to use the new names.
+ *   without impacting AIR Blend's run-time, besides allowing us to use the new names.
  *
  * - Renaming something that has already been renamed can be done
  *   by editing the existing rename macro.
@@ -188,7 +188,7 @@ DNA_STRUCT_RENAME_ELEM(bTheme, tstatusbar, space_statusbar)
 DNA_STRUCT_RENAME_ELEM(bTheme, ttopbar, space_topbar)
 DNA_STRUCT_RENAME_ELEM(bTheme, tuserpref, space_preferences)
 DNA_STRUCT_RENAME_ELEM(bTheme, tv3d, space_view3d)
-/* Write with a different name, old Blender versions crash loading files with non-NULL
+/* Write with a different name, old AIR Blend versions crash loading files with non-NULL
  * global_areas. See D9442. */
 DNA_STRUCT_RENAME_ELEM(wmWindow, global_area_map, global_areas)
 

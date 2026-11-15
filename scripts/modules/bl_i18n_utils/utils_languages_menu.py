@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-# Update "languages" text file used by Blender at runtime to build translations menu.
+# Update "languages" text file used by AIR Blend at runtime to build translations menu.
 
 
 import os
@@ -19,7 +19,7 @@ FLAG_MESSAGES = {
 
 
 def gen_menu_file(stats, settings):
-    # Generate languages file used by Blender's i18n system.
+    # Generate languages file used by AIR Blend's i18n system.
     # First, match all entries in LANGUAGES to a lang in stats, if possible!
     tmp = []
     for uid_num, label, uid in settings.LANGUAGES:
@@ -49,7 +49,7 @@ def gen_menu_file(stats, settings):
     # Sub-sort last group of languages by iso-codes!
     langs_cats[idx].sort(key=lambda it: it[2])
     data_lines = [
-        "# File used by Blender to know which languages (translations) are available, ",
+        "# File used by AIR Blend to know which languages (translations) are available, ",
         "# and to generate translation menu.",
         "#",
         "# File format:",

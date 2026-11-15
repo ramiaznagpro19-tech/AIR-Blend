@@ -1098,7 +1098,7 @@ static FileData *filedata_new(BlendFileReadReport *reports)
   return fd;
 }
 
-/** Check if minversion of the file is older than current Blender, return false if it is not.
+/** Check if minversion of the file is older than current AIR Blend, return false if it is not.
  * Should only be called after #read_file_dna was successfuly executed. */
 static bool is_minversion_older_than_blender(FileData *fd, ReportList *reports)
 {
@@ -1130,10 +1130,10 @@ static bool is_minversion_older_than_blender(FileData *fd, ReportList *reports)
       }
       BKE_reportf(reports,
                   RPT_ERROR,
-                  TIP_("The file was saved by a newer version, open it with Blender %s or later"),
+                  TIP_("The file was saved by a newer version, open it with AIR Blend %s or later"),
                   min_reader_ver_str);
       CLOG_WARN(&LOG,
-                "%s: File saved by a newer version of Blender (%s), Blender %s or later is "
+                "%s: File saved by a newer version of AIR Blend (%s), AIR Blend %s or later is "
                 "needed to open it.",
                 fd->relabase,
                 writer_ver_str,
@@ -2768,7 +2768,7 @@ static void direct_link_library(FileData *fd, Library *lib, Main *main)
         BLI_remlink(&main->libraries, lib);
         MEM_freeN(lib);
 
-        /* Now, since Blender always expect **latest** Main pointer from fd->mainlist
+        /* Now, since AIR Blend always expect **latest** Main pointer from fd->mainlist
          * to be the active library Main pointer,
          * where to add all non-library data-blocks found in file next, we have to switch that
          * 'dupli' found Main to latest position in the list!

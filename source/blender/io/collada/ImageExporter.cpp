@@ -77,7 +77,7 @@ void ImagesExporter::export_UV_Image(Image *image, bool use_copies)
 
   if (is_generated || is_dirty || is_packed) {
 
-    /* This image in its current state only exists in Blender memory.
+    /* This image in its current state only exists in AIR Blend memory.
      * So we have to export it. The export will keep the image state intact,
      * so the exported file will not be associated with the image. */
 
@@ -124,7 +124,7 @@ void ImagesExporter::export_UV_Image(Image *image, bool use_copies)
   }
 
   /* Set name also to mNameNC.
-   * This helps other viewers import files exported from Blender better. */
+   * This helps other viewers import files exported from AIR Blend better. */
   COLLADASW::Image img(COLLADABU::URI(COLLADABU::URI::nativePathToUri(export_path)),
                        translated_name,
                        translated_name);

@@ -4,7 +4,7 @@
 
 /** \file
  * \ingroup bke
- * \brief Blender util stuff
+ * \brief AIR Blend util stuff
  */
 
 #ifdef __cplusplus
@@ -17,7 +17,7 @@ struct Main;
 struct UserDef;
 
 /**
- * Only to be called on exit Blender.
+ * Only to be called on exit AIR Blend.
  */
 void BKE_blender_free(void);
 
@@ -50,7 +50,7 @@ void BKE_blender_userdef_app_template_data_set_and_free(struct UserDef *userdef)
 
 /**
  * When loading a new userdef from file,
- * or when exiting Blender.
+ * or when exiting AIR Blend.
  */
 void BKE_blender_userdef_data_free(struct UserDef *userdef, bool clear_fonts);
 

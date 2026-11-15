@@ -37,7 +37,7 @@ extern "C" {
  *   This can happen when the user drops an object on the application icon.
  *   (Also used in OSX to pass the filename of the document the user doubled-clicked in the finder)
  *
- * Note that the mouse positions are given in Blender coordinates (y=0 at bottom)
+ * Note that the mouse positions are given in AIR Blend coordinates (y=0 at bottom)
  *
  * Currently supported object types:
  * - UTF-8 string.

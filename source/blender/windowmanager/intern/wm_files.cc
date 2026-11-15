@@ -565,7 +565,7 @@ static int wm_read_exotic(const char *filepath)
   /* check for compressed .blend */
   FileReader *compressed_file = nullptr;
   if (BLI_file_magic_is_gzip(header)) {
-    /* In earlier versions of Blender (before 3.0), compressed files used `Gzip` instead of `Zstd`.
+    /* In earlier versions of AIR Blend (before 3.0), compressed files used `Gzip` instead of `Zstd`.
      * While these files will no longer be written, there still needs to be reading support. */
     compressed_file = BLI_filereader_new_gzip(rawfile);
   }
@@ -904,7 +904,7 @@ static void file_read_reports_finalize(BlendFileReadReport *bf_reports)
                                   nullptr);
 
   CLOG_INFO(
-      &LOG, 0, "Blender file read in %.0fm%.2fs", duration_whole_minutes, duration_whole_seconds);
+      &LOG, 0, "AIR Blend file read in %.0fm%.2fs", duration_whole_minutes, duration_whole_seconds);
   CLOG_INFO(&LOG,
             0,
             " * Loading libraries: %.0fm%.2fs",
@@ -969,9 +969,9 @@ static void file_read_reports_finalize(BlendFileReadReport *bf_reports)
   {
     BKE_reportf(bf_reports->reports,
                 RPT_WARNING,
-                "Proxies have been removed from Blender (%d proxies were automatically converted "
+                "Proxies have been removed from AIR Blend (%d proxies were automatically converted "
                 "to library overrides, %d proxies could not be converted and were cleared). "
-                "Consider re-saving any library .blend file with the newest Blender version",
+                "Consider re-saving any library .blend file with the newest AIR Blend version",
                 bf_reports->count.proxies_to_lib_overrides_success,
                 bf_reports->count.proxies_to_lib_overrides_failures);
   }
@@ -1011,7 +1011,7 @@ bool WM_file_read(bContext *C, const char *filepath, ReportList *reports)
   /* NOTE(ton): it should set some error message somewhere. */
   const int retval = wm_read_exotic(filepath);
 
-  /* we didn't succeed, now try to read Blender file */
+  /* we didn't succeed, now try to read AIR Blend file */
   if (retval == BKE_READ_EXOTIC_OK_BLEND) {
     BlendFileReadParams params{};
     params.is_startup = false;
@@ -1164,7 +1164,7 @@ void wm_homefile_read_ex(bContext *C,
   /* Currently this only impacts preferences as it doesn't make much sense to keep the default
    * startup open in the case the app-template doesn't happen to define its own startup.
    * Unlike preferences where we might want to only reset the app-template part of the preferences
-   * so as not to reset the preferences for all other Blender instances, see: #96427. */
+   * so as not to reset the preferences for all other AIR Blend instances, see: #96427. */
   const bool use_factory_settings_app_template_only =
       params_homefile->use_factory_settings_app_template_only;
   const bool use_empty_data = params_homefile->use_empty_data;
@@ -1228,7 +1228,7 @@ void wm_homefile_read_ex(bContext *C,
 
   if (use_userdef || reset_app_template) {
 #ifdef WITH_PYTHON
-    /* This only runs once Blender has already started. */
+    /* This only runs once AIR Blend has already started. */
     if (CTX_py_init_get(C)) {
       /* This is restored by 'wm_file_read_post', disable before loading any preferences
        * so an add-on can read their own preferences when un-registering,
@@ -2975,7 +2975,7 @@ void WM_OT_open_mainfile(wmOperatorType *ot)
 {
   ot->name = "Open";
   ot->idname = "WM_OT_open_mainfile";
-  ot->description = "Open a Blender file";
+  ot->description = "Open a AIR Blend file";
   ot->get_description = wm_open_mainfile_description;
 
   ot->invoke = wm_open_mainfile_invoke;
@@ -3432,9 +3432,9 @@ static int wm_save_mainfile_invoke(bContext *C, wmOperator *op, const wmEvent * 
 
 void WM_OT_save_mainfile(wmOperatorType *ot)
 {
-  ot->name = "Save Blender File";
+  ot->name = "Save AIR Blend File";
   ot->idname = "WM_OT_save_mainfile";
-  ot->description = "Save the current Blender file";
+  ot->description = "Save the current AIR Blend file";
 
   ot->invoke = wm_save_mainfile_invoke;
   ot->exec = wm_save_as_mainfile_exec;
@@ -3456,7 +3456,7 @@ void WM_OT_save_mainfile(wmOperatorType *ot)
                   "Remap Relative",
                   "Remap relative paths when saving to a different directory");
 
-  prop = RNA_def_boolean(ot->srna, "exit", false, "Exit", "Exit Blender after saving");
+  prop = RNA_def_boolean(ot->srna, "exit", false, "Exit", "Exit AIR Blend after saving");
   RNA_def_property_flag(prop, PropertyFlag(PROP_HIDDEN | PROP_SKIP_SAVE));
 }
 
@@ -3742,10 +3742,10 @@ static void file_forwardcompat_detailed_info_show(uiLayout *parent_layout, Main 
   char message_line1[256];
   char message_line2[256];
   SNPRINTF(message_line1,
-           TIP_("This file was saved by a newer version of Blender (%s)"),
+           TIP_("This file was saved by a newer version of AIR Blend (%s)"),
            writer_ver_str);
   SNPRINTF(message_line2,
-           TIP_("Saving it with this Blender (%s) may cause loss of data"),
+           TIP_("Saving it with this AIR Blend (%s) may cause loss of data"),
            current_ver_str);
   uiItemL(layout, message_line1, ICON_NONE);
   uiItemL(layout, message_line2, ICON_NONE);
@@ -3844,7 +3844,7 @@ static uiBlock *block_create_save_file_forwardcompat_dialog(bContext *C,
 
   /* Title. */
   uiItemL_ex(
-      layout, TIP_("Overwrite file with an older Blender version?"), ICON_NONE, true, false);
+      layout, TIP_("Overwrite file with an older AIR Blend version?"), ICON_NONE, true, false);
 
   /* Filename. */
   const char *blendfile_path = BKE_main_blendfile_path(CTX_data_main(C));

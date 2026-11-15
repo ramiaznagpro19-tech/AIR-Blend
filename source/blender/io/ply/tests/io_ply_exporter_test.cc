@@ -151,7 +151,7 @@ TEST_F(ply_export_test, WriteHeaderAscii)
   std::string expected =
       "ply\n"
       "format ascii 1.0\n"
-      "comment Created in Blender version " +
+      "comment Created in AIR Blend version " +
       version +
       "\n"
       "element vertex 8\n"
@@ -189,7 +189,7 @@ TEST_F(ply_export_test, WriteHeaderBinary)
   std::string expected =
       "ply\n"
       "format binary_little_endian 1.0\n"
-      "comment Created in Blender version " +
+      "comment Created in AIR Blend version " +
       version +
       "\n"
       "element vertex 8\n"

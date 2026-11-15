@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
 "PO-Revision-Date: 2022-01-21 16:08+0100\n"
@@ -310,8 +310,8 @@ msgid "Source Root"
 msgstr "Root Sorgente"
 
 
-msgid "The Blender source root path"
-msgstr "Il percorso dei sorgenti di Blender"
+msgid "The AIR Blend source root path"
+msgstr "Il percorso dei sorgenti di AIR Blend"
 
 
 msgid "Warn Msgid Not Capitalized"
@@ -326,8 +326,8 @@ msgid "Persistent Data Path"
 msgstr "Percorso Dati Persistenti"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
-msgstr "Nome del file json per archiviare queste impostazioni (sfortunatamente il sistema di Blender qui non funziona)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
+msgstr "Nome del file json per archiviare queste impostazioni (sfortunatamente il sistema di AIR Blend qui non funziona)"
 
 
 msgid "User Add-ons"
@@ -1762,12 +1762,12 @@ msgid "Collection of worlds"
 msgstr "Raccolta di mondi"
 
 
-msgid "Blender RNA"
-msgstr "RNA Blender"
+msgid "AIR Blend RNA"
+msgstr "RNA AIR Blend"
 
 
-msgid "Blender RNA structure definitions"
-msgstr "Definizioni della struttura RNA di Blender"
+msgid "AIR Blend RNA structure definitions"
+msgstr "Definizioni della struttura RNA di AIR Blend"
 
 
 msgid "Structs"
@@ -3899,8 +3899,8 @@ msgid "Lin error"
 msgstr "Errore lineare"
 
 
-msgid "Amount of residual error in Blender space unit for constraints that work on position"
-msgstr "Quantità di errore residuo in unità spazio Blender per i vincoli che lavorano sulla posizione"
+msgid "Amount of residual error in AIR Blend space unit for constraints that work on position"
+msgstr "Quantità di errore residuo in unità spazio AIR Blend per i vincoli che lavorano sulla posizione"
 
 
 msgid "Rotation error"
@@ -6718,8 +6718,8 @@ msgid "Max Velocity"
 msgstr "Velocità Massima"
 
 
-msgid "Velocity considered as maximum influence (Blender units per frame)"
-msgstr "La velocità viene considerata come influenza massima (unità di Blender per fotogramma)"
+msgid "Velocity considered as maximum influence (AIR Blend units per frame)"
+msgstr "La velocità viene considerata come influenza massima (unità di AIR Blend per fotogramma)"
 
 
 msgid "Velocity Color Ramp"
@@ -7026,8 +7026,8 @@ msgid "Premultiply Alpha"
 msgstr "Premoltiplica Alfa"
 
 
-msgid "Multiply color by alpha (recommended for Blender input)"
-msgstr "Moltiplica colore per alfa (consigliato per input in Blender)"
+msgid "Multiply color by alpha (recommended for AIR Blend input)"
+msgstr "Moltiplica colore per alfa (consigliato per input in AIR Blend)"
 
 
 msgid "Use Shrink"
@@ -8582,16 +8582,16 @@ msgid "Show .blend1, .blend2, etc. files"
 msgstr "Mostra file .blend1, .blend2 ecc."
 
 
-msgid "Filter Blender"
-msgstr "Filtra file Blender"
+msgid "Filter AIR Blend"
+msgstr "Filtra file AIR Blend"
 
 
 msgid "Show .blend files"
 msgstr "Mostra file .blend"
 
 
-msgid "Filter Blender IDs"
-msgstr "Filtra IDs Blender"
+msgid "Filter AIR Blend IDs"
+msgstr "Filtra IDs AIR Blend"
 
 
 msgid "Show .blend files items (objects, materials, etc.)"
@@ -10793,8 +10793,8 @@ msgid "Unprojected Radius"
 msgstr "Raggio Non Proiettato"
 
 
-msgid "Radius of brush in Blender units"
-msgstr "Raggio del pennello in unità Blender"
+msgid "Radius of brush in AIR Blend units"
+msgstr "Raggio del pennello in unità AIR Blend"
 
 
 msgid "Accumulate"
@@ -15180,12 +15180,12 @@ msgid "Noise basis used for turbulence"
 msgstr "Rumore base utilizzato per la turbolenza"
 
 
-msgid "Blender Original"
-msgstr "Blender Originale"
+msgid "AIR Blend Original"
+msgstr "AIR Blend Originale"
 
 
-msgid "Noise algorithm - Blender original: Smooth interpolated noise"
-msgstr "Algoritmo rumore - Blender originale: Interpolazione del rumore morbida"
+msgid "Noise algorithm - AIR Blend original: Smooth interpolated noise"
+msgstr "Algoritmo rumore - AIR Blend originale: Interpolazione del rumore morbida"
 
 
 msgid "Original Perlin"
@@ -24062,12 +24062,12 @@ msgid "World space normal mapping"
 msgstr "Imposta lo spazio mondo della mappatura normale"
 
 
-msgid "Blender Object Space"
-msgstr "Spazio Oggetto Blender"
+msgid "AIR Blend Object Space"
+msgstr "Spazio Oggetto AIR Blend"
 
 
-msgid "Blender World Space"
-msgstr "Spazio Mondo Blender"
+msgid "AIR Blend World Space"
+msgstr "Spazio Mondo AIR Blend"
 
 
 msgid "Light Output"
@@ -30535,12 +30535,12 @@ msgid "Search subdirs for any associated images (Warning, may be slow)"
 msgstr "Ricerca nelle sottodrectory per qualsiasi immagine associata (Attenzione, può essere lento)"
 
 
-msgid "Import OBJ Groups into Blender Objects"
-msgstr "Importa Gruppi OBJ in Oggetti Blender"
+msgid "Import OBJ Groups into AIR Blend Objects"
+msgstr "Importa Gruppi OBJ in Oggetti AIR Blend"
 
 
-msgid "Import OBJ Objects into Blender Objects"
-msgstr "Importa Oggetti OBJ in Oggetti Blender"
+msgid "Import OBJ Objects into AIR Blend Objects"
+msgstr "Importa Oggetti OBJ in Oggetti AIR Blend"
 
 
 msgctxt "Operator"
@@ -37023,8 +37023,8 @@ msgid "Install Theme..."
 msgstr "Installa Tema..."
 
 
-msgid "Load and apply a Blender XML theme file"
-msgstr "Carica e applica un file tema XML di Blender"
+msgid "Load and apply a AIR Blend XML theme file"
+msgstr "Carica e applica un file tema XML di AIR Blend"
 
 
 msgid "Remove existing theme file if exists"
@@ -41000,8 +41000,8 @@ msgid "Sort by Object name"
 msgstr "Ordina per nome Oggetto"
 
 
-msgid "Use Blender Profile"
-msgstr "Usa Profilo Blender"
+msgid "Use AIR Blend Profile"
+msgstr "Usa Profilo AIR Blend"
 
 
 msgid "Use Object Instances"
@@ -41280,8 +41280,8 @@ msgid "Print memory statistics to the console"
 msgstr "Stampa la statistica della memoria nella console"
 
 
-msgid "Open a Blender file"
-msgstr "Apre un file Blender"
+msgid "Open a AIR Blend file"
+msgstr "Apre un file AIR Blend"
 
 
 msgid "Load UI"
@@ -41406,12 +41406,12 @@ msgstr "Uso interno (modifica una proprietà data_path)"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
-msgstr "Esci da Blender"
+msgid "Quit AIR Blend"
+msgstr "Esci da AIR Blend"
 
 
-msgid "Quit Blender"
-msgstr "Esce da Blender"
+msgid "Quit AIR Blend"
+msgstr "Esce da AIR Blend"
 
 
 msgctxt "Operator"
@@ -41601,12 +41601,12 @@ msgstr "Salva questo come File di Avvio"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
-msgstr "Salva File Blender"
+msgid "Save AIR Blend File"
+msgstr "Salva File AIR Blend"
 
 
-msgid "Save the current Blender file"
-msgstr "Salva il file Blender attuale"
+msgid "Save the current AIR Blend file"
+msgstr "Salva il file AIR Blend attuale"
 
 
 msgctxt "Operator"
@@ -43861,8 +43861,8 @@ msgid "Edit Methods"
 msgstr "Metodi di Modifica"
 
 
-msgid "Settings for interacting with Blender data"
-msgstr "Impostazioni per l'interazione con i dati Blender"
+msgid "Settings for interacting with AIR Blend data"
+msgstr "Impostazioni per l'interazione con i dati AIR Blend"
 
 
 msgid "Default paths for external files"
@@ -43881,8 +43881,8 @@ msgid "Graphics driver and operating system settings"
 msgstr "Impostazioni per driver grafici e sistemi operativi"
 
 
-msgid "Version of Blender the userpref.blend was saved with"
-msgstr "Versione di Blender con cui il file userpref.blend è stato salvato"
+msgid "Version of AIR Blend the userpref.blend was saved with"
+msgstr "Versione di AIR Blend con cui il file userpref.blend è stato salvato"
 
 
 msgid "View & Controls"
@@ -48690,8 +48690,8 @@ msgid "Type of information to display"
 msgstr "Tipo di informazione da mostrare"
 
 
-msgid "Blender File"
-msgstr "File Blender"
+msgid "AIR Blend File"
+msgstr "File AIR Blend"
 
 
 msgid "Display data of current file and linked libraries"
@@ -50110,8 +50110,8 @@ msgid "Theme Preferences"
 msgstr "Tema Preferenze"
 
 
-msgid "Theme settings for the Blender Preferences"
-msgstr "Impostazioni del tema per le Preferenze di Blender"
+msgid "Theme settings for the AIR Blend Preferences"
+msgstr "Impostazioni del tema per le Preferenze di AIR Blend"
 
 
 msgid "Theme Properties"
@@ -55162,16 +55162,16 @@ msgid ", cannot have single-frame paths"
 msgstr ", impossibile avere percorsi mono-frame"
 
 
-msgid "File written by newer Blender binary (%d.%d), expect loss of data!"
-msgstr "File scritto nel nuovo formato binario Blender (%d.%d), possibile perdita di dati!"
+msgid "File written by newer AIR Blend binary (%d.%d), expect loss of data!"
+msgstr "File scritto nel nuovo formato binario AIR Blend (%d.%d), possibile perdita di dati!"
 
 
 msgid "Loading failed: "
 msgstr "Fallito caricamento: "
 
 
-msgid "Linking or appending from a very old .blend file format (%d.%d), no animation conversion will be done! You may want to re-save your lib file with current Blender"
-msgstr "Collegano o incorporando un file in formato .blend molto vecchio (%d.%d), non sarà fatta alcuna conversione delle animazioni. Potresti salvare il tuo file libreria con la versione di Blender attuale"
+msgid "Linking or appending from a very old .blend file format (%d.%d), no animation conversion will be done! You may want to re-save your lib file with current AIR Blend"
+msgstr "Collegano o incorporando un file in formato .blend molto vecchio (%d.%d), non sarà fatta alcuna conversione delle animazioni. Potresti salvare il tuo file libreria con la versione di AIR Blend attuale"
 
 
 msgid "Path '%s' not found"
@@ -57314,8 +57314,8 @@ msgid "Unable to remove material slot in edit mode"
 msgstr "Impossibile rimuovere slot materiale in Modalità Modifica"
 
 
-msgid "Blender Render"
-msgstr "Render Blender"
+msgid "AIR Blend Render"
+msgstr "Render AIR Blend"
 
 
 msgid "Failed to open window!"
@@ -57350,8 +57350,8 @@ msgid "Flip to Top"
 msgstr "Sposta sopra la vista"
 
 
-msgid "Blender Preferences"
-msgstr "Preferenze Blender"
+msgid "AIR Blend Preferences"
+msgstr "Preferenze AIR Blend"
 
 
 msgid "Unable to close area"
@@ -57989,8 +57989,8 @@ msgid "No active sequence!"
 msgstr "Nessuna sequenza attiva!"
 
 
-msgid "File Modified Outside and Inside Blender"
-msgstr "File Modificato Fuori e Dentro Blender"
+msgid "File Modified Outside and Inside AIR Blend"
+msgstr "File Modificato Fuori e Dentro AIR Blend"
 
 
 msgid "Reload from disk (ignore local changes)"
@@ -58005,16 +58005,16 @@ msgid "Make text internal (separate copy)"
 msgstr "Rendi testo interno (copia separata)"
 
 
-msgid "File Modified Outside Blender"
-msgstr "File Modificato Fuori da Blender"
+msgid "File Modified Outside AIR Blend"
+msgstr "File Modificato Fuori da AIR Blend"
 
 
 msgid "Reload from disk"
 msgstr "Ricarica dal disco"
 
 
-msgid "File Deleted Outside Blender"
-msgstr "File Cancellato Fuori da Blender"
+msgid "File Deleted Outside AIR Blend"
+msgstr "File Cancellato Fuori da AIR Blend"
 
 
 msgid "Make text internal"
@@ -59637,8 +59637,8 @@ msgid "Rim"
 msgstr "Orlo"
 
 
-msgid "Blender File View"
-msgstr "Visualizza File di Blender"
+msgid "AIR Blend File View"
+msgstr "Visualizza File di AIR Blend"
 
 
 msgid "Trusted Source [Untrusted Path]"

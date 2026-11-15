@@ -27,7 +27,7 @@ typedef struct ShaderInput {
   uint32_t name_offset;
   uint32_t name_hash;
   /**
-   * Location is openGl legacy and its legacy usages should be phased out in Blender 3.7.
+   * Location is openGl legacy and its legacy usages should be phased out in AIR Blend 3.7.
    *
    * Vulkan backend use location to encode the descriptor set binding. This binding is different
    * than the binding stored in the binding attribute. In Vulkan the binding inside a descriptor

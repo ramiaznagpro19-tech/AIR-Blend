@@ -426,7 +426,7 @@ endif()
 string(APPEND CMAKE_CXX_FLAGS " -ftemplate-depth=1024")
 
 # Avoid conflicts with Luxrender, and other plug-ins that may use the same
-# libraries as Blender with a different version or build options.
+# libraries as AIR Blend with a different version or build options.
 set(PLATFORM_SYMBOLS_MAP ${CMAKE_SOURCE_DIR}/source/creator/symbols_apple.map)
 string(APPEND PLATFORM_LINKFLAGS
   " -Wl,-unexported_symbols_list,'${PLATFORM_SYMBOLS_MAP}'"
@@ -491,7 +491,7 @@ if(WITH_COMPILER_ASAN)
 endif()
 
 if(PLATFORM_BUNDLED_LIBRARIES)
-  # For the installed Python module and installed Blender executable, we set the
+  # For the installed Python module and installed AIR Blend executable, we set the
   # rpath to the location where install step will copy the shared libraries.
   set(CMAKE_SKIP_INSTALL_RPATH FALSE)
   if(WITH_PYTHON_MODULE)

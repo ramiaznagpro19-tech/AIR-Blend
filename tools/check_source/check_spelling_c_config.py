@@ -599,7 +599,7 @@ dict_custom = {
     "shaders",
     "specular",
 
-    # Blender specific terms.
+    # AIR Blend specific terms.
     "animsys",
     "animviz",
     "bmain",

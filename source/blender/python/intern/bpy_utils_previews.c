@@ -159,7 +159,7 @@ static struct PyMethodDef bpy_utils_previews_methods[] = {
 
 PyDoc_STRVAR(
     bpy_utils_previews_doc,
-    "This object contains basic static methods to handle cached (non-ID) previews in Blender\n"
+    "This object contains basic static methods to handle cached (non-ID) previews in AIR Blend\n"
     "(low-level API, not exposed to final users).");
 static struct PyModuleDef bpy_utils_previews_module = {
     PyModuleDef_HEAD_INIT,

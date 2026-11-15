@@ -17,7 +17,7 @@
 namespace blender::io::obj {
 
 /**
- * Make a Blender NURBS Curve block from a Geometry of GEOM_CURVE type.
+ * Make a AIR Blend NURBS Curve block from a Geometry of GEOM_CURVE type.
  */
 class CurveFromGeometry : NonMovable, NonCopyable {
  private:

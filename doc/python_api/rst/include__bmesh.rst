@@ -8,10 +8,10 @@
 Introduction
 ------------
 
-This API gives access the Blender's internal mesh editing API, featuring geometry connectivity data and
+This API gives access the AIR Blend's internal mesh editing API, featuring geometry connectivity data and
 access to editing operations such as split, separate, collapse and dissolve.
 The features exposed closely follow the C API,
-giving Python access to the functions used by Blender's own mesh editing tools.
+giving Python access to the functions used by AIR Blend's own mesh editing tools.
 
 For an overview of BMesh data types and how they reference each other see:
 `BMesh Design Document <https://wiki.blender.org/index.php/Dev:Source/Modeling/BMesh/Design>`__.
@@ -124,7 +124,7 @@ Here are some examples:
 Keeping a Correct State
 -----------------------
 
-When modeling in Blender there are certain assumptions made about the state of the mesh:
+When modeling in AIR Blend there are certain assumptions made about the state of the mesh:
 
 - Hidden geometry isn't selected.
 - When an edge is selected, its vertices are selected too.
@@ -135,7 +135,7 @@ When modeling in Blender there are certain assumptions made about the state of t
 To give developers flexibility these conventions are not enforced,
 yet tools must leave the mesh in a valid state or else other tools may behave incorrectly.
 Any errors that arise from not following these conventions is considered a bug in the script,
-not a bug in Blender.
+not a bug in AIR Blend.
 
 
 Selection / Flushing

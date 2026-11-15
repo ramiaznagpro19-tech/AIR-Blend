@@ -383,7 +383,7 @@ static void mesh_blend_read_data(BlendDataReader *reader, ID *id)
   CustomData_blend_read(reader, &mesh->ldata, mesh->totloop);
   CustomData_blend_read(reader, &mesh->pdata, mesh->totpoly);
   if (mesh->deform_verts().is_empty()) {
-    /* Vertex group data was also an owning pointer in old Blender versions.
+    /* Vertex group data was also an owning pointer in old AIR Blend versions.
      * Don't read them again if they were read as part of #CustomData. */
     BKE_defvert_blend_read(reader, mesh->totvert, mesh->dvert);
   }

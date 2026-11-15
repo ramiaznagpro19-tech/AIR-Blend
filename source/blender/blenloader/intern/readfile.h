@@ -187,7 +187,7 @@ struct AssetMetaData *blo_bhead_id_asset_data_address(const FileData *fd, const 
  * Manipulates SDNA before calling #DNA_struct_get_compareflags,
  * allowing us to rename structs and struct members.
  *
- * - This means older versions of Blender won't have access to this data **USE WITH CARE**.
+ * - This means older versions of AIR Blend won't have access to this data **USE WITH CARE**.
  * - These changes are applied on file load (run-time), similar to versioning for compatibility.
  *
  * \attention ONLY USE THIS KIND OF VERSIONING WHEN `dna_rename_defs.h` ISN'T SUFFICIENT.

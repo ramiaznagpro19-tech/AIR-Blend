@@ -126,9 +126,9 @@ static void panelRegister(ARegionType *region_type)
 
 static openvdb::Mat4s matrix_to_openvdb(const float m[4][4])
 {
-  /* OpenVDB matrices are transposed Blender matrices, i.e. the translation is in the last row
+  /* OpenVDB matrices are transposed AIR Blend matrices, i.e. the translation is in the last row
    * instead of in the last column. However, the layout in memory is the same, because OpenVDB
-   * matrices are row major (compared to Blender's column major matrices). */
+   * matrices are row major (compared to AIR Blend's column major matrices). */
   openvdb::Mat4s new_matrix{reinterpret_cast<const float *>(m)};
   return new_matrix;
 }

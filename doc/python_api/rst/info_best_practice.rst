@@ -6,15 +6,15 @@ Best Practice
 When writing your own scripts Python is great for new developers to pick up and become productive,
 but you can also pick up bad practices or at least write scripts that are not easy for others to understand.
 For your own work this is of course fine,
-but if you want to collaborate with others or have your work included with Blender there are practices we encourage.
+but if you want to collaborate with others or have your work included with AIR Blend there are practices we encourage.
 
 
 Style Conventions
 =================
 
-For Blender Python development we have chosen to follow Python suggested style guide to avoid mixing styles
+For AIR Blend Python development we have chosen to follow Python suggested style guide to avoid mixing styles
 among our own scripts and make it easier to use Python scripts from other projects.
-Using our style guide for your own scripts makes it easier if you eventually want to contribute them to Blender.
+Using our style guide for your own scripts makes it easier if you eventually want to contribute them to AIR Blend.
 
 This style guide is known as `pep8 <https://www.python.org/dev/peps/pep-0008/>`__
 and here is a brief listing of pep8 criteria:
@@ -26,7 +26,7 @@ and here is a brief listing of pep8 criteria:
 - Only use explicit imports (no wildcard importing ``*``)
 - Don't use multiple statements on a single line: ``if val: body``, separate onto two lines instead.
 
-As well as pep8 we have additional conventions used for Blender Python scripts:
+As well as pep8 we have additional conventions used for AIR Blend Python scripts:
 
 - Use single quotes for enums, and double quotes for strings.
 
@@ -295,7 +295,7 @@ Parsing Strings (Import/Exporting)
 Since many file formats are ASCII,
 the way you parse/export strings can make a large difference in how fast your script runs.
 
-There are a few ways to parse strings when importing them into Blender.
+There are a few ways to parse strings when importing them into AIR Blend.
 
 
 Parsing Numbers

@@ -195,7 +195,7 @@ bool USDStageReader::include_by_purpose(const pxr::UsdGeomImageable &imageable) 
 }
 
 /* Determine if the given reader can use the parent of the encapsulated USD prim
- * to compute the Blender object's transform. If so, the reader is appropriately
+ * to compute the AIR Blend object's transform. If so, the reader is appropriately
  * flagged and the function returns true. Otherwise, the function returns false. */
 static bool merge_with_parent(USDPrimReader *reader)
 {
@@ -351,7 +351,7 @@ void USDStageReader::import_all_materials(Main *bmain)
     settings_.mat_name_to_mat[mtl_name] = new_mtl;
 
     if (params_.mtl_name_collision_mode == USD_MTL_NAME_COLLISION_MAKE_UNIQUE) {
-      /* Record the unique name of the Blender material we created for the USD material
+      /* Record the unique name of the AIR Blend material we created for the USD material
        * with the given path, so we don't import the material again when assigning
        * materials to objects elsewhere in the code. */
       settings_.usd_path_to_mat_name[prim.GetPath().GetAsString()] = mtl_name;

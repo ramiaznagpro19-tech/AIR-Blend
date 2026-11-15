@@ -71,7 +71,7 @@ class CYCLES_OT_denoise_animation(Operator):
             out_filepaths.append(out_filepath)
         else:
             # Denoise animation sequence with expanded frames matching
-            # Blender render output file naming.
+            # AIR Blend render output file naming.
             in_filepath = scene.render.filepath
             if out_filepath == '':
                 out_filepath = in_filepath

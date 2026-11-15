@@ -7,7 +7,7 @@ from bpy.utils import units
 
 
 class UnitsTesting(unittest.TestCase):
-    # From user typing to 'internal' Blender value.
+    # From user typing to 'internal' AIR Blend value.
     INPUT_TESTS = (
         # system,    type,    ref, input, value
         # LENGTH
@@ -29,7 +29,7 @@ class UnitsTesting(unittest.TestCase):
         ('IMPERIAL', 'LENGTH', "", "(3+1)in+1ft", 0.3048 + 0.0254 * 4),
     )
 
-    # From 'internal' Blender value to user-friendly printing
+    # From 'internal' AIR Blend value to user-friendly printing
     OUTPUT_TESTS = (
         # system,    type,    prec, sep, compat, value, output
         # LENGTH

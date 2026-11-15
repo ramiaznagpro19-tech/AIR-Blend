@@ -3740,13 +3740,13 @@ static void rna_def_space_outliner(BlenderRNA *brna)
       {SO_LIBRARIES,
        "LIBRARIES",
        ICON_FILE_BLEND,
-       "Blender File",
+       "AIR Blend File",
        "Display data of current file and linked libraries"},
       {SO_DATA_API,
        "DATA_API",
        ICON_RNA,
        "Data API",
-       "Display low level Blender data and its properties"},
+       "Display low level AIR Blend data and its properties"},
       {SO_OVERRIDES_LIBRARY,
        "LIBRARY_OVERRIDES",
        ICON_LIBRARY_DATA_OVERRIDE,
@@ -6803,7 +6803,7 @@ static void rna_def_fileselect_params(BlenderRNA *brna)
 
   prop = RNA_def_property(srna, "use_library_browsing", PROP_BOOLEAN, PROP_NONE);
   RNA_def_property_ui_text(
-      prop, "Library Browser", "Whether we may browse Blender files' content or not");
+      prop, "Library Browser", "Whether we may browse AIR Blend files' content or not");
   RNA_def_property_clear_flag(prop, PROP_EDITABLE);
   RNA_def_property_boolean_funcs(prop, "rna_FileSelectParams_use_lib_get", NULL);
 
@@ -6862,14 +6862,14 @@ static void rna_def_fileselect_params(BlenderRNA *brna)
 
   prop = RNA_def_property(srna, "use_filter_blender", PROP_BOOLEAN, PROP_NONE);
   RNA_def_property_boolean_sdna(prop, NULL, "filter", FILE_TYPE_BLENDER);
-  RNA_def_property_ui_text(prop, "Filter Blender", "Show .blend files");
+  RNA_def_property_ui_text(prop, "Filter AIR Blend", "Show .blend files");
   RNA_def_property_ui_icon(prop, ICON_FILE_BLEND, 0);
   RNA_def_property_update(prop, NC_SPACE | ND_SPACE_FILE_PARAMS, NULL);
 
   prop = RNA_def_property(srna, "use_filter_backup", PROP_BOOLEAN, PROP_NONE);
   RNA_def_property_boolean_sdna(prop, NULL, "filter", FILE_TYPE_BLENDER_BACKUP);
   RNA_def_property_ui_text(
-      prop, "Filter Blender Backup Files", "Show .blend1, .blend2, etc. files");
+      prop, "Filter AIR Blend Backup Files", "Show .blend1, .blend2, etc. files");
   RNA_def_property_ui_icon(prop, ICON_FILE_BACKUP, 0);
   RNA_def_property_update(prop, NC_SPACE | ND_SPACE_FILE_PARAMS, NULL);
 
@@ -6918,7 +6918,7 @@ static void rna_def_fileselect_params(BlenderRNA *brna)
   prop = RNA_def_property(srna, "use_filter_blendid", PROP_BOOLEAN, PROP_NONE);
   RNA_def_property_boolean_sdna(prop, NULL, "filter", FILE_TYPE_BLENDERLIB);
   RNA_def_property_ui_text(
-      prop, "Filter Blender IDs", "Show .blend files items (objects, materials, etc.)");
+      prop, "Filter AIR Blend IDs", "Show .blend files items (objects, materials, etc.)");
   RNA_def_property_ui_icon(prop, ICON_BLENDER, 0);
   RNA_def_property_update(prop, NC_SPACE | ND_SPACE_FILE_PARAMS, NULL);
 
@@ -7286,7 +7286,7 @@ static void rna_def_space_userpref(BlenderRNA *brna)
 
   srna = RNA_def_struct(brna, "SpacePreferences", "Space");
   RNA_def_struct_sdna(srna, "SpaceUserPref");
-  RNA_def_struct_ui_text(srna, "Space Preferences", "Blender preferences space data");
+  RNA_def_struct_ui_text(srna, "Space Preferences", "AIR Blend preferences space data");
 
   prop = RNA_def_property(srna, "filter_type", PROP_ENUM, PROP_NONE);
   RNA_def_property_enum_sdna(prop, NULL, "filter_type");

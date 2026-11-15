@@ -7,7 +7,7 @@
 namespace blender::io::usd {
 
 /* Calls the function to load the USD plugins from the
- * USD data directory under the Blender bin directory
+ * USD data directory under the AIR Blend bin directory
  * that was supplied as the --test-release-dir flag to `ctest`.
  * Thus function must be called before instantiating a USD
  * stage to avoid errors.  The returned string is the path to

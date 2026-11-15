@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "(b'0000000000000000000000000000000000000000')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
@@ -2660,8 +2660,8 @@ msgid "Memory Statistics"
 msgstr "Эс статистикасы"
 
 
-msgid "Open a Blender file"
-msgstr "Blender файлын ачуу"
+msgid "Open a AIR Blend file"
+msgstr "AIR Blend файлын ачуу"
 
 
 msgid "Trusted Source"
@@ -2669,11 +2669,11 @@ msgstr "Ишеничтүү булак"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "Blender'ден чыгуу"
 
 
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "Blender'ден чыгуу"
 
 

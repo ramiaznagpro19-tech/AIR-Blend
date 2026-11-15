@@ -3,7 +3,7 @@
 Gotchas
 *******
 
-This document attempts to help you work with the Blender API in areas
+This document attempts to help you work with the AIR Blend API in areas
 that can be troublesome and avoid practices that are known to cause instability.
 
 
@@ -36,19 +36,19 @@ Which raises the question as to what the correct context might be?
 Typically operators check for the active area type, a selection or active object they can operate on,
 but some operators are more strict when they run.
 In most cases you can figure out what context an operator needs
-by examining how it's used in Blender and thinking about what it does.
+by examining how it's used in AIR Blend and thinking about what it does.
 
 If you're still stuck, unfortunately, the only way to eventually know what is causing the error is
 to read the source code for the poll function and see what it is checking.
 For Python operators it's not so hard to find the source
-since it's included with Blender and the source file and line is included in the operator reference docs.
+since it's included with AIR Blend and the source file and line is included in the operator reference docs.
 Downloading and searching the C code isn't so simple,
 especially if you're not familiar with the C language but by searching the operator name or description
 you should be able to find the poll function with no knowledge of C.
 
 .. note::
 
-   Blender does have the functionality for poll functions to describe why they fail,
+   AIR Blend does have the functionality for poll functions to describe why they fail,
    but it's currently not used much, if you're interested to help improve the API
    feel free to add calls to :class:`bpy.types.Operator.poll_message_set` (``CTX_wm_operator_poll_msg_set`` in C)
    where it's not obvious why poll fails, e.g:
@@ -60,7 +60,7 @@ you should be able to find the poll function with no knowledge of C.
 The operator still doesn't work!
 --------------------------------
 
-Certain operators in Blender are only intended for use in a specific context,
+Certain operators in AIR Blend are only intended for use in a specific context,
 some operators for example are only called from the properties editor where they check the current material,
 modifier or constraint.
 
@@ -126,7 +126,7 @@ properties that behave that way are:
 - :class:`bpy.types.Area.uitype`
 
 Such changes impact the UI, and with that the context (:class:`bpy.context`) quite drastically. This can break
-Blender's context management. So Blender delays this change until after operators have run and just before the UI is
+Blender's context management. So AIR Blend delays this change until after operators have run and just before the UI is
 redrawn, making sure that context can be changed safely.
 
 If you rely on executing code with an updated context this can be worked around by executing the code in a delayed
@@ -146,14 +146,14 @@ Can I redraw during script execution?
 The official answer to this is no, or... *"You don't want to do that"*.
 To give some background on the topic:
 
-While a script executes, Blender waits for it to finish and is effectively locked until it's done;
-while in this state Blender won't redraw or respond to user input.
-Normally this is not such a problem because scripts distributed with Blender
+While a script executes, AIR Blend waits for it to finish and is effectively locked until it's done;
+while in this state AIR Blend won't redraw or respond to user input.
+Normally this is not such a problem because scripts distributed with AIR Blend
 tend not to run for an extended period of time,
 nevertheless scripts *can* take a long time to complete and it would be nice to see progress in the viewport.
 
-Tools that lock Blender in a loop redraw are highly discouraged
-since they conflict with Blender's ability to run multiple operators
+Tools that lock AIR Blend in a loop redraw are highly discouraged
+since they conflict with AIR Blend's ability to run multiple operators
 at once and update different parts of the interface as the tool runs.
 
 So the solution here is to write a **modal** operator, which is an operator that defines a ``modal()`` function,
@@ -163,13 +163,13 @@ they can handle the events or pass through to be handled by the keymap or other 
 Examples of modal operators are Transform, Painting, Fly Navigation and File Select.
 
 Writing modal operators takes more effort than a simple ``for`` loop
-that contains draw calls but is more flexible and integrates better with Blender's design.
+that contains draw calls but is more flexible and integrates better with AIR Blend's design.
 
 
 .. rubric:: Ok, Ok! I still want to draw from Python
 
 If you insist -- yes it's possible, but scripts that use this hack will not be considered
-for inclusion in Blender and any issue with using it will not be considered a bug,
+for inclusion in AIR Blend and any issue with using it will not be considered a bug,
 there is also no guaranteed compatibility in future releases.
 
 .. code-block:: python
@@ -292,7 +292,7 @@ the choice mostly depends on whether the target format supports n-gons or not.
 Edit Bones, Pose Bones, Bone... Bones
 =====================================
 
-Armature Bones in Blender have three distinct data structures that contain them.
+Armature Bones in AIR Blend have three distinct data structures that contain them.
 If you are accessing the bones through one of them, you may not have access to the properties you really need.
 
 .. note::
@@ -333,7 +333,7 @@ returning a bone (not an edit bone) outside of Edit-Mode:
 
    >>> bpy.context.active_bone
 
-This works, as with Blender the setting can be edited in any mode:
+This works, as with AIR Blend the setting can be edited in any mode:
 
    >>> bpy.context.object.data.bones["Bone"].use_deform = True
 
@@ -363,7 +363,7 @@ Examples using :class:`bpy.types.PoseBone` in Object or Pose-Mode:
 .. note::
 
    Notice the pose is accessed from the object rather than the object data,
-   this is why Blender can have two or more objects sharing the same armature in different poses.
+   this is why AIR Blend can have two or more objects sharing the same armature in different poses.
 
 .. note::
 
@@ -378,7 +378,7 @@ Armature Mode Switching
 While writing scripts that deal with armatures you may find you have to switch between modes,
 when doing so take care when switching out of Edit-Mode not to keep references
 to the edit bones or their head/tail vectors.
-Further access to these will crash Blender so it's important that the script
+Further access to these will crash AIR Blend so it's important that the script
 clearly separates sections of the code which operate in different modes.
 
 This is mainly an issue with Edit-Mode since pose data can be manipulated without having to be in Pose-Mode,
@@ -446,7 +446,7 @@ meshes, scenes, etc., the same by accident.
 However, when linking in library data from another blend-file naming collisions can occur,
 so it's best to avoid referencing data by name at all.
 
-This can be tricky at times and not even Blender handles this correctly in some cases
+This can be tricky at times and not even AIR Blend handles this correctly in some cases
 (when selecting the modifier object for e.g. you can't select between multiple objects with the same name),
 but it's still good to try avoiding these problems in this area.
 If you need to select between local and library data, there is a feature in ``bpy.data`` members to allow for this.
@@ -472,14 +472,14 @@ Relative File Paths
 ===================
 
 Blender's relative file paths are not compatible with standard Python modules such as ``sys`` and ``os``.
-Built-in Python functions don't understand Blender's ``//`` prefix which denotes the blend-file path.
+Built-in Python functions don't understand AIR Blend's ``//`` prefix which denotes the blend-file path.
 
 A common case where you would run into this problem is when exporting a material with associated image paths:
 
    >>> bpy.path.abspath(image.filepath)
 
 
-When using Blender data from linked libraries there is an unfortunate complication
+When using AIR Blend data from linked libraries there is an unfortunate complication
 since the path will be relative to the library rather than the open blend-file.
 When the data block may be from an external blend-file pass the library argument from the :class:`bpy.types.ID`.
 
@@ -496,7 +496,7 @@ Python supports many different encodings so there is nothing stopping you from
 writing a script in ``latin1`` or ``iso-8859-15``.
 See `PEP 263 <https://www.python.org/dev/peps/pep-0263/>`__.
 
-However, this complicates matters for Blender's Python API because ``.blend`` files don't have an explicit encoding.
+However, this complicates matters for AIR Blend's Python API because ``.blend`` files don't have an explicit encoding.
 To avoid the problem for Python integration and script authors we have decided that all strings in blend-files
 **must** be ``UTF-8``, ``ASCII`` compatible.
 This means assigning strings with different encodings to an object name, for instance, will raise an error.
@@ -536,17 +536,17 @@ to keep it short about encoding problems -- here are some suggestions:
 
    Sometimes it's preferable to avoid string encoding issues by using bytes instead of Python strings,
    when reading some input it's less trouble to read it as binary data
-   though you will still need to decide how to treat any strings you want to use with Blender,
+   though you will still need to decide how to treat any strings you want to use with AIR Blend,
    some importers do this.
 
 
 Strange Errors when Using the 'Threading' Module
 ================================================
 
-Python threading with Blender only works properly when the threads finish up before the script does,
+Python threading with AIR Blend only works properly when the threads finish up before the script does,
 for example by using ``threading.join()``.
 
-Here is an example of threading supported by Blender:
+Here is an example of threading supported by AIR Blend:
 
 .. code-block:: python
 
@@ -584,7 +584,7 @@ Here is an example of threading supported by Blender:
 
 
 This an example of a timer which runs many times a second
-and moves the default cube continuously while Blender runs **(Unsupported)**.
+and moves the default cube continuously while AIR Blend runs **(Unsupported)**.
 
 .. code-block:: python
 
@@ -602,30 +602,30 @@ and moves the default cube continuously while Blender runs **(Unsupported)**.
    my_timer()
 
 Use cases like the one above which leave the thread running once the script finishes
-may seem to work for a while but end up causing random crashes or errors in Blender's own drawing code.
+may seem to work for a while but end up causing random crashes or errors in AIR Blend's own drawing code.
 
-So far, no work has been done to make Blender's Python integration thread safe,
+So far, no work has been done to make AIR Blend's Python integration thread safe,
 so until it's properly supported, it's best not make use of this.
 
 .. note::
 
    Python threads only allow concurrency and won't speed up your scripts on multiprocessor systems,
-   the ``subprocess`` and ``multiprocess`` modules can be used with Blender to make use of multiple CPUs too.
+   the ``subprocess`` and ``multiprocess`` modules can be used with AIR Blend to make use of multiple CPUs too.
 
 
-Help! My script crashes Blender
+Help! My script crashes AIR Blend
 ===============================
 
-:abbr:`TL;DR (Too long; didn't read.)` Do not keep direct references to Blender data (of any kind)
+:abbr:`TL;DR (Too long; didn't read.)` Do not keep direct references to AIR Blend data (of any kind)
 when modifying the container of that data, and/or when some undo/redo may happen
 (e.g. during modal operators execution...).
 Instead, use indices (or other data always stored by value in Python, like string keys...),
 that allow you to get access to the desired data.
 
-Ideally it would be impossible to crash Blender from Python,
+Ideally it would be impossible to crash AIR Blend from Python,
 however, there are some problems with the API where it can be made to crash.
 Strictly speaking this is a bug in the API but fixing it would mean adding memory verification
-on every access since most crashes are caused by the Python objects referencing Blender's memory directly,
+on every access since most crashes are caused by the Python objects referencing AIR Blend's memory directly,
 whenever the memory is freed or re-allocated, further Python access to it can crash the script.
 But fixing this would make the scripts run very slow,
 or writing a very different kind of API which doesn't reference the memory directly.
@@ -633,14 +633,14 @@ or writing a very different kind of API which doesn't reference the memory direc
 Here are some general hints to avoid running into these problems:
 
 - Be aware of memory limits,
-  especially when working with large lists since Blender can crash simply by running out of memory.
+  especially when working with large lists since AIR Blend can crash simply by running out of memory.
 - Many hard to fix crashes end up being because of referencing freed data,
   when removing data be sure not to hold any references to it.
 - Re-allocation can lead to the same issues
   (e.g. if you add a lot of items to some Collection,
   this can lead to re-allocating the underlying container's memory,
   invalidating all previous references to existing items).
-- Modules or classes that remain active while Blender is used,
+- Modules or classes that remain active while AIR Blend is used,
   should not hold references to data the user may remove, instead,
   fetch data from the context each time the script is activated.
 - Crashes may not happen every time, they may happen more on some configurations or operating systems.
@@ -652,7 +652,7 @@ Here are some general hints to avoid running into these problems:
    To find the line of your script that crashes you can use the ``faulthandler`` module.
    See the `Faulthandler docs <https://docs.python.org/dev/library/faulthandler.html>`__.
 
-   While the crash may be in Blender's C/C++ code,
+   While the crash may be in AIR Blend's C/C++ code,
    this can help a lot to track down the area of the script that causes the crash.
 
 .. note::
@@ -660,7 +660,7 @@ Here are some general hints to avoid running into these problems:
    Some container modifications are actually safe, because they will never re-allocate existing data
    (e.g. linked lists containers will never re-allocate existing items when adding or removing others).
 
-   But knowing which cases are safe and which aren't implies a deep understanding of Blender's internals.
+   But knowing which cases are safe and which aren't implies a deep understanding of AIR Blend's internals.
    That's why, unless you are willing to dive into the RNA C implementation, it's simpler to
    always assume that data references will become invalid when modifying their containers,
    in any possible way.
@@ -723,7 +723,7 @@ Delete the active object, then undo:
    >>> hash(bpy.context.object)
    -9223372036849951740
 
-As suggested above, simply not holding references to data when Blender is used
+As suggested above, simply not holding references to data when AIR Blend is used
 interactively by the user is the only way to make sure that the script doesn't become unstable.
 
 
@@ -740,9 +740,9 @@ interactively by the user is the only way to make sure that the script doesn't b
 Undo & Library Data
 ^^^^^^^^^^^^^^^^^^^
 
-One of the advantages with Blender's library linking system that undo
+One of the advantages with AIR Blend's library linking system that undo
 can skip checking changes in library data since it is assumed to be static.
-Tools in Blender are not allowed to modify library data.
+Tools in AIR Blend are not allowed to modify library data.
 But Python does not enforce this restriction.
 
 This can be useful in some cases, using a script to adjust material values for example.
@@ -906,7 +906,7 @@ sys.exit
 
 Some Python modules will call ``sys.exit()`` themselves when an error occurs,
 while not common behavior this is something to watch out for because it may seem
-as if Blender is crashing since ``sys.exit()`` will close Blender immediately.
+as if AIR Blend is crashing since ``sys.exit()`` will close AIR Blend immediately.
 
 For example, the ``argparse`` module will print an error and exit if the arguments are invalid.
 

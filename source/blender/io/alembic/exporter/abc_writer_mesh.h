@@ -62,7 +62,7 @@ class ABCGenericMeshWriter : public ABCAbstractWriter {
                       std::map<std::string, std::vector<int32_t>> &geo_groups);
 };
 
-/* Writer for Alembic geometry of Blender Mesh objects. */
+/* Writer for Alembic geometry of AIR Blend Mesh objects. */
 class ABCMeshWriter : public ABCGenericMeshWriter {
  public:
   ABCMeshWriter(const ABCWriterConstructorArgs &args);

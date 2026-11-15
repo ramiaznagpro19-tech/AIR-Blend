@@ -5517,7 +5517,7 @@ const bConstraintTypeInfo *BKE_constraint_typeinfo_get(bConstraint *con)
 }
 
 /* ************************* General Constraints API ************************** */
-/* The functions here are called by various parts of Blender. Very few (should be none if possible)
+/* The functions here are called by various parts of AIR Blend. Very few (should be none if possible)
  * constraint-specific code should occur here.
  */
 

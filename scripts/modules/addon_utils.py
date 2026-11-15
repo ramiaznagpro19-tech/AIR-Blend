@@ -30,7 +30,7 @@ def _initialize():
 
 
 def paths():
-    # RELEASE SCRIPTS: official scripts distributed in Blender releases
+    # RELEASE SCRIPTS: official scripts distributed in AIR Blend releases
     addon_paths = _bpy.utils.script_paths(subdir="addons")
 
     # CONTRIB SCRIPTS: good for testing but not official scripts yet
@@ -448,7 +448,7 @@ def reset_all(*, reload_scripts=False):
     # initializes addons_fake_modules
     modules_refresh()
 
-    # RELEASE SCRIPTS: official scripts distributed in Blender releases
+    # RELEASE SCRIPTS: official scripts distributed in AIR Blend releases
     paths_list = paths()
 
     for path in paths_list:

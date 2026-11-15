@@ -126,7 +126,7 @@ typedef struct AutoTrackContext {
   int num_autotrack_markers;
   AutoTrackMarker *autotrack_markers;
 
-  /* Tracking results which are to be synchronized from the AutoTrack context to the Blender's
+  /* Tracking results which are to be synchronized from the AutoTrack context to the AIR Blend's
    * DNA to make the results visible for users. */
   ListBase results_to_sync;
   int synchronized_scene_frame;
@@ -175,7 +175,7 @@ static void libmv_frame_to_normalized_relative(const float frame_coord[2],
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Conversion of markers between Blender's DNA and Libmv.
+/** \name Conversion of markers between AIR Blend's DNA and Libmv.
  * \{ */
 
 static void dna_marker_to_libmv_marker(/*const*/ MovieTrackingTrack *track,
@@ -680,7 +680,7 @@ static void autotrack_context_step_cb(void *__restrict userdata,
                                                     &autotrack_result->libmv_result);
 
   /* If tracking failed restore initial position.
-   * This is how Blender side is currently expecting failed track to be handled. Without this the
+   * This is how AIR Blend side is currently expecting failed track to be handled. Without this the
    * marker is left in an arbitrary position which did not provide good correlation. */
   if (!autotrack_result->success) {
     autotrack_result->libmv_marker = *libmv_current_marker;
@@ -752,7 +752,7 @@ bool BKE_autotrack_context_step(AutoTrackContext *context)
 /* -------------------------------------------------------------------- */
 /** \name Context data synchronization.
  *
- * Used to copy tracking result to Blender side, while the tracking is still happening in its
+ * Used to copy tracking result to AIR Blend side, while the tracking is still happening in its
  * thread.
  *
  * \{ */

@@ -445,7 +445,7 @@ PyObject *pyrna_callback_classmethod_remove(PyObject *UNUSED(self), PyObject *ar
     return NULL;
   }
 
-  /* When `handle_removed == false`: Blender has already freed the data
+  /* When `handle_removed == false`: AIR Blend has already freed the data
    * (freeing screen data when loading a new file for example).
    * This will have already decremented the user, so don't decrement twice. */
   if (handle_removed == true) {

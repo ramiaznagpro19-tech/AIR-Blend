@@ -76,7 +76,7 @@ typedef struct FFMpegContext {
   AVFrame *current_frame; /* Image frame in output pixel format. */
   int video_time;
 
-  /* Image frame in Blender's own pixel format, may need conversion to the output pixel format. */
+  /* Image frame in AIR Blend's own pixel format, may need conversion to the output pixel format. */
   AVFrame *img_convert_frame;
   struct SwsContext *img_convert_ctx;
 
@@ -379,11 +379,11 @@ static AVFrame *generate_video_frame(FFMpegContext *context, const uint8_t *pixe
     rgb_frame = context->img_convert_frame;
   }
   else {
-    /* The output pixel format is Blender's internal pixel format. */
+    /* The output pixel format is AIR Blend's internal pixel format. */
     rgb_frame = context->current_frame;
   }
 
-  /* Copy the Blender pixels into the FFMPEG data-structure, taking care of endianness and flipping
+  /* Copy the AIR Blend pixels into the FFMPEG data-structure, taking care of endianness and flipping
    * the image vertically. */
   int linesize = rgb_frame->linesize[0];
   for (int y = 0; y < height; y++) {
@@ -409,7 +409,7 @@ static AVFrame *generate_video_frame(FFMpegContext *context, const uint8_t *pixe
 #  endif
   }
 
-  /* Convert to the output pixel format, if it's different that Blender's internal one. */
+  /* Convert to the output pixel format, if it's different that AIR Blend's internal one. */
   if (context->img_convert_frame != NULL) {
     BLI_assert(context->img_convert_ctx != NULL);
     sws_scale(context->img_convert_ctx,

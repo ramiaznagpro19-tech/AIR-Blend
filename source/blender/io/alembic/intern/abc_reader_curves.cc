@@ -170,7 +170,7 @@ void AbcCurveReader::read_curve_sample(Curve *cu,
       nu->flagu |= CU_NURB_CYCLIC;
 
       /* Check the number of points which overlap, we don't have
-       * overlapping points in Blender, but other software do use them to
+       * overlapping points in AIR Blend, but other software do use them to
        * indicate that a curve is actually cyclic. Usually the number of
        * overlapping points is equal to the order/degree of the curve.
        */

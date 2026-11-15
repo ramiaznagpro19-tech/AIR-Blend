@@ -11,7 +11,7 @@ OpenGL Wrapper (bgl)
    Use the graphics API independent :mod:`gpu` module instead.
 
 This module wraps OpenGL constants and functions, making them available from
-within Blender Python.
+within AIR Blend Python.
 
 The complete list can be retrieved from the module itself, by listing its
 contents: dir(bgl).  A simple search on the web can point to more

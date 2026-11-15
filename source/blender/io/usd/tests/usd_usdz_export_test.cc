@@ -87,7 +87,7 @@ TEST_F(UsdUsdzExportTest, usdz_export)
 
   /* File sanity check. */
   ASSERT_EQ(BLI_listbase_count(&bfile->main->objects), 4)
-      << "Blender scene should have 4 objects.";
+      << "AIR Blend scene should have 4 objects.";
 
   char original_cwd_buff[FILE_MAX];
   char *original_cwd = BLI_current_working_dir(original_cwd_buff, sizeof(original_cwd_buff));

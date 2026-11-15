@@ -229,7 +229,7 @@ static void find_iobject(const IObject &object, IObject &ret, const std::string 
  *         this IObject claims its parent as part of the same object
  *         (for example an IPolyMesh object would claim its parent, as the mesh
  *         is interpreted as the object's data, and the parent IXform as its
- *         Blender object). The pointer is the AbcObjectReader that represents
+ *         AIR Blend object). The pointer is the AbcObjectReader that represents
  *         the IObject parameter.
  *
  * NOTE: this function is similar to gather_object_paths above, need to keep
@@ -249,7 +249,7 @@ static std::pair<bool, AbcObjectReader *> visit_object(
 
   /* The interpretation of data by the children determine the role of this
    * object. This is especially important for Xform objects, as they can be
-   * either part of a Blender object or a Blender object (Empty) themselves.
+   * either part of a AIR Blend object or a AIR Blend object (Empty) themselves.
    */
   size_t children_claiming_this_object = 0;
   size_t num_children = object.getNumChildren();
@@ -293,12 +293,12 @@ static std::pair<bool, AbcObjectReader *> visit_object(
   else if (IXform::matches(md)) {
     bool create_empty;
 
-    /* An xform can either be a Blender Object (if it contains a mesh, for
+    /* An xform can either be a AIR Blend Object (if it contains a mesh, for
      * example), but it can also be an Empty. Its correct translation to
-     * Blender's data model depends on its children. */
+     * AIR Blend's data model depends on its children. */
 
     /* Check whether or not this object is a Maya locator, which is
-     * similar to empties used as parent object in Blender. */
+     * similar to empties used as parent object in AIR Blend. */
     if (has_property(object.getProperties(), "locator")) {
       create_empty = true;
     }
@@ -323,7 +323,7 @@ static std::pair<bool, AbcObjectReader *> visit_object(
     /* TODO(kevin): importing cyclic NURBS from other software crashes
      * at the moment. This is due to the fact that NURBS in other
      * software have duplicated points which causes buffer overflows in
-     * Blender. Need to figure out exactly how these points are
+     * AIR Blend. Need to figure out exactly how these points are
      * duplicated, in all cases (cyclic U, cyclic V, and cyclic UV).
      * Until this is fixed, disabling NURBS reading. */
     reader = new AbcNurbsReader(object, settings);
@@ -593,7 +593,7 @@ static void import_endjob(void *user_data)
       Object *ob = reader->object();
 
       /* It's possible that cancellation occurred between the creation of
-       * the reader and the creation of the Blender object. */
+       * the reader and the creation of the AIR Blend object. */
       if (ob == nullptr) {
         continue;
       }
@@ -634,7 +634,7 @@ static void import_endjob(void *user_data)
     DEG_relations_tag_update(data->bmain);
 
     if (data->is_background_job) {
-      /* Blender already returned from the import operator, so we need to store our own extra undo
+      /* AIR Blend already returned from the import operator, so we need to store our own extra undo
        * step. */
       ED_undo_push(data->C, "Alembic Import Finished");
     }
@@ -744,7 +744,7 @@ void ABC_get_transform(CacheReader *reader, float r_mat_world[4][4], double time
   bool is_constant = false;
 
   /* Convert from the local matrix we obtain from Alembic to world coordinates
-   * for Blender. This conversion is done here rather than by Blender due to
+   * for AIR Blend. This conversion is done here rather than by AIR Blend due to
    * work around the non-standard interpretation of CONSTRAINT_SPACE_LOCAL in
    * BKE_constraint_mat_convertspace(). */
   Object *object = abc_reader->object();

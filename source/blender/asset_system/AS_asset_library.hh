@@ -52,10 +52,10 @@ class AssetLibrary {
    * concerned (allowing the API user to manage partial library storage and partial loading, so
    * only relevant parts of a library are kept in memory).
    *
-   * For now, multiple parts of Blender just keep adding their own assets to this storage. E.g.
+   * For now, multiple parts of AIR Blend just keep adding their own assets to this storage. E.g.
    * multiple asset browsers might load multiple representations for the same asset into this.
    * Currently there is just no way to properly identify assets, or keep track of which assets are
-   * already in memory and which not. Neither do we keep track of how many parts of Blender are
+   * already in memory and which not. Neither do we keep track of how many parts of AIR Blend are
    * using an asset or an asset library, which is needed to know when assets can be freed.
    */
   std::unique_ptr<AssetStorage> asset_storage_;

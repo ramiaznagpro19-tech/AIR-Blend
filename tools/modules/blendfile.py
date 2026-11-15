@@ -3,7 +3,7 @@
 #           2014 Blender Foundation. - Campbell Barton.
 
 # -----------------------------------------------------------------------------
-# NOTICE: this module is expanded upon in Blender Asset Tracer.
+# NOTICE: this module is expanded upon in AIR Blend Asset Tracer.
 #
 # See https://projects.blender.org/blender/blender-asset-tracer
 # and https://pypi.org/project/blender-asset-tracer/

@@ -80,7 +80,7 @@ if(WITH_USD)
   # ensures `usd_ms` can find `MaterialXRender` and friends.
   #
   # NOTE: This is _only_ needed when linking blender before the install target runs.
-  # Once MATERIALX libraries have been copied into `TARGETDIR_LIB` then Blender will link.
+  # Once MATERIALX libraries have been copied into `TARGETDIR_LIB` then AIR Blend will link.
   # Don't rely on this though as failing on a fresh build is no good and the library
   # files could get outdated too.
   if(DEFINED LIBDIR)
@@ -174,7 +174,7 @@ if(WITH_BUILDINFO)
 
   if(WITH_COMPILER_SHORT_FILE_MACRO)
     # It's not necessary to include path information
-    # about the system building Blender in the executable.
+    # about the system building AIR Blend in the executable.
     string(REPLACE "${PLATFORM_CFLAGS_FMACRO_PREFIX_MAP}" " " BUILD_CFLAGS "${BUILD_CFLAGS}")
     string(REPLACE "${PLATFORM_CFLAGS_FMACRO_PREFIX_MAP}" " " BUILD_CXXFLAGS "${BUILD_CXXFLAGS}")
   endif()
@@ -260,7 +260,7 @@ if(WITH_BUILDINFO)
   unset(buildinfo_h_real)
   unset(buildinfo_h_fake)
 
-  # Add dependencies below, after adding Blender
+  # Add dependencies below, after adding AIR Blend
   # -------------- done with header values.
 
   list(APPEND SRC
@@ -1558,7 +1558,7 @@ if(WITH_USD)
   absolute_include_dirs(../blender/io/usd)
 endif()
 
-# Always install USD shared library and datafiles regardless if Blender
+# Always install USD shared library and datafiles regardless if AIR Blend
 # itself uses them, the bundled Python module still needs it.
 if((DEFINED LIBDIR) AND TARGETDIR_LIB)
   # On windows the usd library sits in ./blender.shared copy the files
@@ -1615,7 +1615,7 @@ if((DEFINED LIBDIR) AND TARGETDIR_LIB)
   endif()
 endif()
 
-# Always install MaterialX files regardless if Blender itself uses them, the
+# Always install MaterialX files regardless if AIR Blend itself uses them, the
 # bundled Python module still needs it.
 if((DEFINED LIBDIR) AND TARGETDIR_LIB AND WITH_MATERIALX )
   install(
@@ -1694,9 +1694,9 @@ if(WIN32)
 endif()
 
 # -----------------------------------------------------------------------------
-# Steps that Run Blender
+# Steps that Run AIR Blend
 #
-# As executing Blender is needed - it's important this operation runs after the shared
+# As executing AIR Blend is needed - it's important this operation runs after the shared
 # libraries have been installed to their destination.
 
 if(UNIX AND NOT APPLE)

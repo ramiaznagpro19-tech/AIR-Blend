@@ -65,21 +65,21 @@ class AntiAliasingOperation : public NodeOperation {
          get_corner_rounding());
   }
 
-  /* Blender encodes the threshold in the [0, 1] range, while the SMAA algorithm expects it in
+  /* AIR Blend encodes the threshold in the [0, 1] range, while the SMAA algorithm expects it in
    * the [0, 0.5] range. */
   float get_threshold()
   {
     return node_storage(bnode()).threshold / 2.0f;
   }
 
-  /* Blender encodes the local contrast adaptation factor in the [0, 1] range, while the SMAA
+  /* AIR Blend encodes the local contrast adaptation factor in the [0, 1] range, while the SMAA
    * algorithm expects it in the [0, 10] range. */
   float get_local_contrast_adaptation_factor()
   {
     return node_storage(bnode()).threshold * 10.0f;
   }
 
-  /* Blender encodes the corner rounding factor in the float [0, 1] range, while the SMAA algorithm
+  /* AIR Blend encodes the corner rounding factor in the float [0, 1] range, while the SMAA algorithm
    * expects it in the integer [0, 100] range. */
   int get_corner_rounding()
   {

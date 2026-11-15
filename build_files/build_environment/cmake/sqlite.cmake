@@ -35,7 +35,7 @@ if(UNIX)
     --enable-fts5
     # While building `tcl` is harmless, it causes problems when the install step
     # tries to copy the files into the system path.
-    # Since this isn't required by Python or Blender this can be disabled.
+    # Since this isn't required by Python or AIR Blend this can be disabled.
     # Note that Debian (for example), splits this off into a separate package,
     # so it's safe to turn off.
     --disable-tcl

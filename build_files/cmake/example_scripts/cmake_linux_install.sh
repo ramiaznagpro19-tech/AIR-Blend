@@ -34,8 +34,8 @@ ln -s ~/blender-git/build-cmake/bin/blender ~/blender-git/blender/blender.bin
 # useful info
 echo ""
 echo "* Useful Commands *"
-echo "   Run Blender: ~/blender-git/blender/blender.bin"
-echo "   Update Blender: git pull --rebase; git submodule foreach git pull --rebase origin main"
-echo "   Reconfigure Blender: cd ~/blender-git/build-cmake ; cmake ."
-echo "   Build Blender: cd ~/blender-git/build-cmake ; make"
+echo "   Run AIR Blend: ~/blender-git/blender/blender.bin"
+echo "   Update AIR Blend: git pull --rebase; git submodule foreach git pull --rebase origin main"
+echo "   Reconfigure AIR Blend: cd ~/blender-git/build-cmake ; cmake ."
+echo "   Build AIR Blend: cd ~/blender-git/build-cmake ; make"
 echo ""

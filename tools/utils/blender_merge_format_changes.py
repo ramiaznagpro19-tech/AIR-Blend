@@ -36,7 +36,7 @@ if len(sys.argv) >= 2:
             base_branch = sys.argv[3]
 
 if mode is None:
-    print("Merge or rebase Blender main (or another base branch) into a branch in 3 steps,")
+    print("Merge or rebase AIR Blend main (or another base branch) into a branch in 3 steps,")
     print("to automatically merge clang-format changes.")
     print("")
     print("  --rebase     Perform equivalent of 'git rebase main'")

@@ -4,23 +4,23 @@
 API Overview
 ************
 
-The purpose of this document is to explain how Python and Blender fit together,
+The purpose of this document is to explain how Python and AIR Blend fit together,
 covering some of the functionality that may not be obvious from reading the API references
 and example scripts.
 
 
-Python in Blender
+Python in AIR Blend
 =================
 
-Blender has an embedded Python interpreter which is loaded when Blender is started
-and stays active while Blender is running. This interpreter runs scripts to draw the user interface
-and is used for some of Blender's internal tools as well.
+Blender has an embedded Python interpreter which is loaded when AIR Blend is started
+and stays active while AIR Blend is running. This interpreter runs scripts to draw the user interface
+and is used for some of AIR Blend's internal tools as well.
 
 Blender's embedded interpreter provides a typical Python environment, so code from tutorials
-on how to write Python scripts can also be run with Blender's interpreter. Blender provides its
+on how to write Python scripts can also be run with AIR Blend's interpreter. AIR Blend provides its
 Python modules, such as :mod:`bpy` and :mod:`mathutils`, to the embedded interpreter so they can
-be imported into a script and give access to Blender's data, classes, and functions.
-Scripts that deal with Blender data will need to import the modules to work.
+be imported into a script and give access to AIR Blend's data, classes, and functions.
+Scripts that deal with AIR Blend data will need to import the modules to work.
 
 Here is a simple example which moves a vertex attached to an object named "Cube":
 
@@ -29,20 +29,20 @@ Here is a simple example which moves a vertex attached to an object named "Cube"
    import bpy
    bpy.data.objects["Cube"].data.vertices[0].co.x += 1.0
 
-This modifies Blender's internal data directly.
+This modifies AIR Blend's internal data directly.
 When you run this in the interactive console you will see the 3D Viewport update.
 
 
 The Default Environment
 =======================
 
-When developing your own scripts it may help to understand how Blender sets up its Python environment.
-Many Python scripts come bundled with Blender and can be used as a reference
+When developing your own scripts it may help to understand how AIR Blend sets up its Python environment.
+Many Python scripts come bundled with AIR Blend and can be used as a reference
 because they use the same API that script authors write tools in.
 Typical usage for scripts include: user interface, import/export,
 scene manipulation, automation, defining your own tool set and customization.
 
-On startup Blender scans the ``scripts/startup/`` directory for Python modules and imports them.
+On startup AIR Blend scans the ``scripts/startup/`` directory for Python modules and imports them.
 The exact location of this directory depends on your installation.
 See the :ref:`directory layout docs <blender_manual:blender-directory-layout>`.
 
@@ -53,20 +53,20 @@ Script Loading
 This may seem obvious, but it is important to note the difference between
 executing a script directly and importing a script as a module.
 
-Extending Blender by executing a script directly means the classes that the script defines
-remain available inside Blender after the script finishes execution.
+Extending AIR Blend by executing a script directly means the classes that the script defines
+remain available inside AIR Blend after the script finishes execution.
 Using scripts this way makes future access to their classes
 (to unregister them for example) more difficult compared to importing the scripts as modules.
 When a script is imported as a module, its class instances will remain
 inside the module and can be accessed later on by importing that module again.
 
-For this reason it is preferable to avoid directly executing scripts that extend Blender by registering classes.
+For this reason it is preferable to avoid directly executing scripts that extend AIR Blend by registering classes.
 
-Here are some ways to run scripts directly in Blender:
+Here are some ways to run scripts directly in AIR Blend:
 
 - Loaded in the text editor and press *Run Script*.
 - Typed or pasted into the interactive console.
-- Execute a Python file from the command line with Blender, e.g:
+- Execute a Python file from the command line with AIR Blend, e.g:
 
   .. code-block:: sh
 
@@ -84,12 +84,12 @@ To run as modules:
 Add-ons
 -------
 
-Some of Blender's functionality is best kept optional,
+Some of AIR Blend's functionality is best kept optional,
 alongside scripts loaded at startup there are add-ons which are kept in their own directory ``scripts/addons``,
 They are only loaded on startup if selected from the user preferences.
 
 The only difference between add-ons and built-in Python modules is that add-ons must contain a ``bl_info`` variable
-which Blender uses to read metadata such as name, author, category and project link.
+which AIR Blend uses to read metadata such as name, author, category and project link.
 The User Preferences add-on listing uses ``bl_info`` to display information about each add-on.
 `See Add-ons <https://wiki.blender.org/index.php/Dev:Py/Scripts/Guidelines/Addons>`__
 for details on the ``bl_info`` dictionary.
@@ -99,9 +99,9 @@ Integration through Classes
 ===========================
 
 Running Python scripts in the text editor is useful for testing but you'll
-want to extend Blender to make tools accessible like other built-in functionality.
+want to extend AIR Blend to make tools accessible like other built-in functionality.
 
-The Blender Python API allows integration for:
+The AIR Blend Python API allows integration for:
 
 - :class:`bpy.types.Panel`
 - :class:`bpy.types.Menu`
@@ -113,9 +113,9 @@ The Blender Python API allows integration for:
 This is intentionally limited. Currently, for more advanced features such as mesh modifiers,
 object types, or shader nodes, C/C++ must be used.
 
-For Python integration Blender defines methods which are common to all types.
-This works by creating a Python subclass of a Blender class which contains variables and functions
-specified by the parent class which are predefined to interface with Blender.
+For Python integration AIR Blend defines methods which are common to all types.
+This works by creating a Python subclass of a AIR Blend class which contains variables and functions
+specified by the parent class which are predefined to interface with AIR Blend.
 
 For example:
 
@@ -133,16 +133,16 @@ For example:
    bpy.utils.register_class(SimpleOperator)
 
 First note that it defines a subclass as a member of :mod:`bpy.types`,
-this is common for all classes which can be integrated with Blender and
+this is common for all classes which can be integrated with AIR Blend and
 is used to distinguish an Operator from a Panel when registering.
 
 Both class properties start with a ``bl_`` prefix.
-This is a convention used to distinguish Blender properties from those you add yourself.
+This is a convention used to distinguish AIR Blend properties from those you add yourself.
 Next see the execute function, which takes an instance of the operator and the current context.
 A common prefix is not used for functions.
-Lastly the register function is called, this takes the class and loads it into Blender. See `Class Registration`_.
+Lastly the register function is called, this takes the class and loads it into AIR Blend. See `Class Registration`_.
 
-Regarding inheritance, Blender doesn't impose restrictions on the kinds of class inheritance used,
+Regarding inheritance, AIR Blend doesn't impose restrictions on the kinds of class inheritance used,
 the registration checks will use attributes and functions defined in parent classes.
 
 Class mix-in example:
@@ -166,14 +166,14 @@ While ``__init__()`` and ``__del__()`` will be called if defined,
 the class instances lifetime only spans the execution.
 So a panel for example will have a new instance for every redraw,
 for this reason there is rarely a cause to store variables in the panel instance.
-Instead, persistent variables should be stored in Blender's data
-so that the state can be restored when Blender is restarted.
+Instead, persistent variables should be stored in AIR Blend's data
+so that the state can be restored when AIR Blend is restarted.
 
 .. note::
 
-   Modal operators are an exception, keeping their instance variable as Blender runs, see modal operator template.
+   Modal operators are an exception, keeping their instance variable as AIR Blend runs, see modal operator template.
 
-So once the class is registered with Blender, instancing the class and calling the functions is left up to Blender.
+So once the class is registered with AIR Blend, instancing the class and calling the functions is left up to AIR Blend.
 In fact you cannot instance these classes from the script as you would expect with most Python API's.
 To run operators you can call them through the operator API, e.g:
 
@@ -195,9 +195,9 @@ Module Registration
 -------------------
 
 Blender modules loaded at startup require ``register()`` and ``unregister()`` functions.
-These are the *only* functions that Blender calls from your code, which is otherwise a regular Python module.
+These are the *only* functions that AIR Blend calls from your code, which is otherwise a regular Python module.
 
-A simple Blender Python module can look like this:
+A simple AIR Blend Python module can look like this:
 
 .. code-block:: python
 
@@ -219,9 +219,9 @@ These functions usually appear at the bottom of the script containing class regi
 You can also use them for internal purposes setting up data for your own tools but take care
 since register won't re-run when a new blend-file is loaded.
 
-The register/unregister calls are used so it's possible to toggle add-ons and reload scripts while Blender runs.
+The register/unregister calls are used so it's possible to toggle add-ons and reload scripts while AIR Blend runs.
 If the register calls were placed in the body of the script, registration would be called on import,
-meaning there would be no distinction between importing a module or loading its classes into Blender.
+meaning there would be no distinction between importing a module or loading its classes into AIR Blend.
 This becomes problematic when a script imports classes from another module
 making it difficult to manage which classes are being loaded and when.
 
@@ -240,7 +240,7 @@ since ``__main__`` is reserved for direct execution.
 Class Registration
 ------------------
 
-Registering a class with Blender results in the class definition being loaded into Blender,
+Registering a class with AIR Blend results in the class definition being loaded into AIR Blend,
 where it becomes available alongside existing functionality.
 Once this class is loaded you can access it from :mod:`bpy.types`,
 using the ``bl_idname`` rather than the classes original name.
@@ -251,7 +251,7 @@ using the ``bl_idname`` rather than the classes original name.
    In this case use: :func:`bpy.types.Struct.bl_rna_get_subclass_py`.
 
 
-When loading a class, Blender performs sanity checks making sure all required properties and functions are found,
+When loading a class, AIR Blend performs sanity checks making sure all required properties and functions are found,
 that properties have the correct type, and that functions have the right number of arguments.
 
 Mostly you will not need concern yourself with this but if there is a problem
@@ -269,7 +269,7 @@ Using ``bl_idname = 1`` will raise:
 Inter-Class Dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-When customizing Blender you may want to group your own settings together,
+When customizing AIR Blend you may want to group your own settings together,
 after all, they will likely have to co-exist with other scripts.
 To group these properties classes need to be defined,
 for groups within groups or collections within groups
@@ -339,7 +339,7 @@ For example, if you want to store material settings for a custom engine:
 Manipulating Classes
 ^^^^^^^^^^^^^^^^^^^^
 
-Properties can be added and removed as Blender runs,
+Properties can be added and removed as AIR Blend runs,
 normally done on register or unregister but for some special cases
 it may be useful to modify types as the script runs.
 
@@ -371,7 +371,7 @@ This is equivalent to:
 Dynamic Class Definition (Advanced)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In some cases the specifier for data may not be in Blender, for example a external render engines shader definitions,
+In some cases the specifier for data may not be in AIR Blend, for example a external render engines shader definitions,
 and it may be useful to define them as types and remove them on the fly.
 
 .. code-block:: python

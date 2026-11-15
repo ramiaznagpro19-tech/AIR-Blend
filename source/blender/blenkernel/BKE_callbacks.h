@@ -58,7 +58,7 @@ struct PointerRNA;
  *   While cancellation may be caused by any number of reasons, common causes may include:
  *
  *   - Explicit user cancellation.
- *   - Exiting Blender.
+ *   - Exiting AIR Blend.
  *   - Failure to acquire resources (such as disk-full, out of memory ... etc).
  *
  * \note `PRE/POST` handlers may be used along side modal task handlers

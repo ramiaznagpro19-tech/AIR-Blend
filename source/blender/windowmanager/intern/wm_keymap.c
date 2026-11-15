@@ -444,7 +444,7 @@ bool WM_keymap_poll(bContext *C, wmKeyMap *keymap)
   if (UNLIKELY(BLI_listbase_is_empty(&keymap->items))) {
     /* Empty key-maps may be missing more there may be a typo in the name.
      * Warn early to avoid losing time investigating each case.
-     * When developing a customized Blender though you may want empty keymaps. */
+     * When developing a customized AIR Blend though you may want empty keymaps. */
     if (!U.app_template[0] &&
         /* Fallback key-maps may be intentionally empty, don't flood the output. */
         !BLI_str_endswith(keymap->idname, " (fallback)") &&

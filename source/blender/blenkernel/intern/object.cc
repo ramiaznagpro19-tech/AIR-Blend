@@ -877,7 +877,7 @@ static void object_blend_read_lib(BlendLibReader *reader, ID *id)
   BLO_read_id_address(reader, ob->id.lib, &ob->parent);
   BLO_read_id_address(reader, ob->id.lib, &ob->track);
 
-  /* XXX deprecated - old pose library, deprecated in Blender 3.5. */
+  /* XXX deprecated - old pose library, deprecated in AIR Blend 3.5. */
   BLO_read_id_address(reader, ob->id.lib, &ob->poselib);
 
   /* 2.8x drops support for non-empty dupli instances. */
@@ -890,7 +890,7 @@ static void object_blend_read_lib(BlendLibReader *reader, ID *id)
       BLO_reportf_wrap(reports,
                        RPT_INFO,
                        TIP_("Non-Empty object '%s' cannot duplicate collection '%s' "
-                            "anymore in Blender 2.80, removed instancing"),
+                            "anymore in AIR Blend 2.80, removed instancing"),
                        ob->id.name + 2,
                        new_id->name + 2);
     }

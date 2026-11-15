@@ -8,7 +8,7 @@
  * AbstractHierarchyIterator is intended to be subclassed to support concrete file formats.
  *
  * The AbstractHierarchyIterator makes a distinction between the actual object hierarchy and the
- * export hierarchy. The former is the parent/child structure in Blender, which can have multiple
+ * export hierarchy. The former is the parent/child structure in AIR Blend, which can have multiple
  * parent-like objects. For example, a duplicated object can have both a duplicator and a parent,
  * both determining the final transform. The export hierarchy is the hierarchy as written to the
  * file, and every object has only one export-parent.
@@ -57,14 +57,14 @@ struct HierarchyContext {
    * have weak_export=true, this object (and by recursive reasoning all its descendants) will be
    * excluded from the export.
    *
-   * The export hierarchy is kept as close to the hierarchy in Blender as possible. As such, an
+   * The export hierarchy is kept as close to the hierarchy in AIR Blend as possible. As such, an
    * object that serves as a parent for another object, but which should NOT be exported itself, is
    * exported only as transform (i.e. as empty). This happens with objects that are invisible when
    * exporting with "Visible Only" enabled, for example. */
   bool weak_export;
 
   /* When true, this object should check its parents for animation data when determining whether
-   * it's animated. This is necessary when a parent object in Blender is not part of the export. */
+   * it's animated. This is necessary when a parent object in AIR Blend is not part of the export. */
   bool animation_check_include_parent;
 
   /*********** Determined during writer creation: ***************/
@@ -81,7 +81,7 @@ struct HierarchyContext {
    * parent object. For object data, this is the export path of that object's transform.
    *
    * From the exported file's point of view, this is the path to the parent in that file. The term
-   * "parent" is not used here to avoid confusion with Blender's meaning of the word (which always
+   * "parent" is not used here to avoid confusion with AIR Blend's meaning of the word (which always
    * refers to a different object). */
   std::string higher_up_export_path;
 

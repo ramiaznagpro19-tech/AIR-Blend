@@ -933,7 +933,7 @@ static void engine_render_view_layer(Render *re,
        *
        * Only do it for background renders to avoid possible extra global locking during the
        * context initialization. For the non-background renders the GPU context is already
-       * initialized for the Blender interface and no workaround is needed.
+       * initialized for the AIR Blend interface and no workaround is needed.
        *
        * Technically it is enough to only call WM_init_gpu() here, but it expects to only be called
        * once, and from here it is not possible to know whether GPU sub-system is initialized or
@@ -978,7 +978,7 @@ static void engine_render_view_layer(Render *re,
 
   /* Optionally composite grease pencil over render result.
    * Only do it if the passes are allocated (and the engine will not override the grease pencil
-   * when reading its result from EXR file and writing to the Blender side. */
+   * when reading its result from EXR file and writing to the AIR Blend side. */
   if (engine->has_grease_pencil && use_grease_pencil && re->result->passes_allocated) {
     /* NOTE: External engine might have been requested to free its
      * dependency graph, which is only allowed if there is no grease
@@ -1133,7 +1133,7 @@ bool RE_engine_render(Render *re, bool do_all)
 
       /* If render passes are not allocated the render engine deferred final pixels write for
        * later. Need to defer the grease pencil for until after the engine has written the
-       * render result to Blender. */
+       * render result to AIR Blend. */
       delay_grease_pencil = engine->has_grease_pencil && !re->result->passes_allocated;
 
       if (RE_engine_test_break(engine)) {

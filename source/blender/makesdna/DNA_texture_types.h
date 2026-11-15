@@ -315,7 +315,7 @@ typedef struct ColorMapping {
 #define TEX_DERIVATIVEMAP (1 << 14)
 
 /* texfilter */
-#define TXF_BOX 0 /* Blender's old texture filtering method. */
+#define TXF_BOX 0 /* AIR Blend's old texture filtering method. */
 #define TXF_EWA 1
 #define TXF_FELINE 2
 #define TXF_AREA 3

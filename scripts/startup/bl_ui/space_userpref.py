@@ -113,7 +113,7 @@ class USERPREF_MT_save_load(Menu):
         app_template = prefs.app_template
         if app_template:
             display_name = bpy.path.display_name(iface_(app_template))
-            layout.operator("wm.read_factory_userpref", text="Load Factory Blender Preferences")
+            layout.operator("wm.read_factory_userpref", text="Load Factory AIR Blend Preferences")
             props = layout.operator("wm.read_factory_userpref",
                                     text=iface_("Load Factory %s Preferences") % display_name,
                                     translate=False)
@@ -297,7 +297,7 @@ class USERPREF_PT_interface_statusbar(InterfacePanel, CenterAlignMixIn, Panel):
         col.prop(view, "show_statusbar_scene_duration", text="Scene Duration")
         col.prop(view, "show_statusbar_memory", text="System Memory")
         col.prop(view, "show_statusbar_vram", text="Video Memory")
-        col.prop(view, "show_statusbar_version", text="Blender Version")
+        col.prop(view, "show_statusbar_version", text="AIR Blend Version")
 
 
 class USERPREF_PT_interface_menus(InterfacePanel, Panel):
@@ -625,7 +625,7 @@ class USERPREF_PT_system_gpu_backend(SystemPanel, CenterAlignMixIn, Panel):
         col.prop(system, "gpu_backend")
 
         if system.gpu_backend != gpu.platform.backend_type_get():
-            layout.label(text="Requires a restart of Blender to take effect", icon='INFO')
+            layout.label(text="Requires a restart of AIR Blend to take effect", icon='INFO')
 
 
 class USERPREF_PT_system_os_settings(SystemPanel, CenterAlignMixIn, Panel):
@@ -638,7 +638,7 @@ class USERPREF_PT_system_os_settings(SystemPanel, CenterAlignMixIn, Panel):
         return sys.platform[:3] == "win"
 
     def draw_centered(self, _context, layout):
-        layout.label(text="Make this installation your default Blender")
+        layout.label(text="Make this installation your default AIR Blend")
         split = layout.split(factor=0.4)
         split.alignment = 'RIGHT'
         split.label(text="")

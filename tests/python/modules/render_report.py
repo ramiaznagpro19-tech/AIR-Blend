@@ -426,7 +426,7 @@ class Report:
         return not failed
 
     def _run_tests(self, filepaths, blender, arguments_cb, batch):
-        # Run multiple tests in a single Blender process since startup can be
+        # Run multiple tests in a single AIR Blend process since startup can be
         # a significant factor. In case of crashes, re-run the remaining tests.
         verbose = os.environ.get("BLENDER_VERBOSE") is not None
 
@@ -482,7 +482,7 @@ class Report:
                     # In case of crash, stop after missing files and re-render remaining
                     if not os.path.exists(output_filepath):
                         errors.append("CRASH")
-                        print_message("Crash running Blender")
+                        print_message("Crash running AIR Blend")
                         print_message(testname, 'FAILURE', 'FAILED')
                         break
 

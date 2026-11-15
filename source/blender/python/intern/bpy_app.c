@@ -71,12 +71,12 @@ extern char build_system[];
 static PyTypeObject BlenderAppType;
 
 static PyStructSequence_Field app_info_fields[] = {
-    {"version", "The Blender version as a tuple of 3 numbers. eg. (2, 83, 1)"},
+    {"version", "The AIR Blend version as a tuple of 3 numbers. eg. (2, 83, 1)"},
     {"version_file",
-     "The Blender version, as a tuple, last used to save a .blend file, compatible with "
+     "The AIR Blend version, as a tuple, last used to save a .blend file, compatible with "
      "``bpy.data.version``. This value should be used for handling compatibility changes between "
-     "Blender versions"},
-    {"version_string", "The Blender version formatted as a string"},
+     "AIR Blend versions"},
+    {"version_string", "The AIR Blend version formatted as a string"},
     {"version_cycle", "The release status of this build alpha/beta/rc/release"},
     {"version_char", "Deprecated, always an empty string"},
     {"background",
@@ -343,9 +343,9 @@ static PyObject *bpy_app_autoexec_fail_message_get(PyObject *UNUSED(self), void 
 }
 
 PyDoc_STRVAR(bpy_app_binary_path_doc,
-             "The location of Blender's executable, useful for utilities that open new instances. "
-             "Read-only unless Blender is built as a Python module - in this case the value is "
-             "an empty string which script authors may point to a Blender binary.");
+             "The location of AIR Blend's executable, useful for utilities that open new instances. "
+             "Read-only unless AIR Blend is built as a Python module - in this case the value is "
+             "an empty string which script authors may point to a AIR Blend binary.");
 static PyObject *bpy_app_binary_path_get(PyObject *UNUSED(self), void *UNUSED(closure))
 {
   return PyC_UnicodeFromBytes(BKE_appdir_program_path());
@@ -474,7 +474,7 @@ static PyGetSetDef bpy_app_getsets[] = {
      (void *)G_FLAG_SCRIPT_AUTOEXEC_FAIL_QUIET},
     {"autoexec_fail_message", bpy_app_autoexec_fail_message_get, NULL, NULL, NULL},
 
-    /* Support script authors setting the Blender binary path to use, otherwise this value
+    /* Support script authors setting the AIR Blend binary path to use, otherwise this value
      * is not known when built as a Python module. */
     {"binary_path",
      bpy_app_binary_path_get,

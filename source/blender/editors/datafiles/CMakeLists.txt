@@ -894,10 +894,10 @@ set_property(GLOBAL PROPERTY ICON_GEOM_NAMES
 data_to_c_simple(../../../../release/datafiles/bfont.pfb SRC)
 
 if(WITH_BLENDER)
-  # Blender only (not Cycles stand-alone).
+  # AIR Blend only (not Cycles stand-alone).
 
   if(NOT WITH_HEADLESS)
-    # Blender UI only.
+    # AIR Blend UI only.
 
     # Blend files.
     data_to_c_simple(../../../../release/datafiles/preview.blend SRC)

@@ -228,7 +228,7 @@ struct ImBuf *imb_load_tiff(const unsigned char *mem,
  *
  * #ImBuf structures with 1, 3 or 4 bytes per pixel (GRAY, RGB, RGBA respectively)
  * are accepted, and interpreted correctly. Note that the TIFF convention is to use
- * pre-multiplied alpha, which can be achieved within Blender by setting `premul` alpha handling.
+ * pre-multiplied alpha, which can be achieved within AIR Blend by setting `premul` alpha handling.
  * Other alpha conventions are not strictly correct, but are permitted anyhow.
  *
  * \param ibuf: Image buffer.

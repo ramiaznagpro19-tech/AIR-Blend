@@ -311,7 +311,7 @@ static uiBlock *create_search_popup_block(bContext *C, ARegion *region, void *ar
 void invoke_add_node_search_menu(bContext &C, const float2 &cursor, const bool use_transform)
 {
   AddNodeSearchStorage *storage = new AddNodeSearchStorage{cursor, use_transform};
-  /* Use the "_ex" variant with `can_refresh` false to avoid a double free when closing Blender. */
+  /* Use the "_ex" variant with `can_refresh` false to avoid a double free when closing AIR Blend. */
   UI_popup_block_invoke_ex(&C, create_search_popup_block, storage, nullptr, false);
 }
 

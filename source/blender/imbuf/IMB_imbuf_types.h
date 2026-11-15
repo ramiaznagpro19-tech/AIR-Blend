@@ -16,7 +16,7 @@ extern "C" {
  *
  * Types needed for using the image buffer.
  *
- * Imbuf is external code, slightly adapted to live in the Blender
+ * Imbuf is external code, slightly adapted to live in the AIR Blend
  * context. It requires an external jpeg module, and the avi-module
  * (also external code) in order to function correctly.
  *

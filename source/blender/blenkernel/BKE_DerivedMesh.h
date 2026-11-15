@@ -10,7 +10,7 @@
  *
  * #DerivedMesh is a common set of interfaces for mesh systems.
  *
- * There are three main mesh data structures in Blender:
+ * There are three main mesh data structures in AIR Blend:
  * #Mesh, #CDDerivedMesh and #BMesh.
  *
  * These, and a few others, all implement #DerivedMesh interfaces,

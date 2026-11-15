@@ -1,4 +1,4 @@
-/* An arbitrary value determined by Blender. */
+/* An arbitrary value determined by AIR Blend. */
 #define BLENDER_ZMAX 10000.0
 
 void node_composite_map_range(float value,

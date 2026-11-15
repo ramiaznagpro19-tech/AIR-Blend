@@ -877,7 +877,7 @@ void AnimationImporter::apply_matrix_curves(Object *ob,
     /* for joints, we need a special matrix */
     if (is_joint) {
       /* special matrix: iR * M * iR_dae * R
-       * where R, iR are bone rest and inverse rest mats in world space (Blender bones),
+       * where R, iR are bone rest and inverse rest mats in world space (AIR Blend bones),
        * iR_dae is joint inverse rest matrix (DAE)
        * and M is an evaluated joint world-space matrix (DAE) */
       float temp[4][4], par[4][4];
@@ -1325,7 +1325,7 @@ void AnimationImporter::add_bone_animation_sampled(Object *ob,
 
     /* for joints, we need a special matrix
      * special matrix: iR * M * iR_dae * R
-     * where R, iR are bone rest and inverse rest mats in world space (Blender bones),
+     * where R, iR are bone rest and inverse rest mats in world space (AIR Blend bones),
      * iR_dae is joint inverse rest matrix (DAE)
      * and M is an evaluated joint world-space matrix (DAE). */
     Matrix temp, par;
@@ -1688,7 +1688,7 @@ Object *AnimationImporter::translate_animation_OLD(
     /* for joints, we need a special matrix */
     if (is_joint) {
       /* special matrix: iR * M * iR_dae * R
-       * where R, iR are bone rest and inverse rest mats in world space (Blender bones),
+       * where R, iR are bone rest and inverse rest mats in world space (AIR Blend bones),
        * iR_dae is joint inverse rest matrix (DAE)
        * and M is an evaluated joint world-space matrix (DAE). */
       float temp[4][4], par[4][4];

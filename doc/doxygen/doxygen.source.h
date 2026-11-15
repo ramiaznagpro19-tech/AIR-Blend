@@ -27,7 +27,7 @@
 
 /* ================================ */
 
-/** \defgroup blender Blender */
+/** \defgroup blender AIR Blend */
 
 /** \defgroup balembic BlenderAlembic
  *  \ingroup blender

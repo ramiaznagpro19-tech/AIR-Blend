@@ -59,7 +59,7 @@ if(DEFINED LIBDIR)
   list(REMOVE_ITEM LIB_SUBDIRS ${LIBDIR}/mesa)
 
   # Ignore DPC++ as it contains its own copy of LLVM/CLang which we do
-  # not need to be ever discovered for the Blender linking.
+  # not need to be ever discovered for the AIR Blend linking.
   list(REMOVE_ITEM LIB_SUBDIRS ${LIBDIR}/dpcpp)
 
   # NOTE: Make sure "proper" compiled zlib comes first before the one
@@ -164,7 +164,7 @@ if(WITH_PYTHON)
       path_is_prefix(LIBDIR PYTHON_SITE_PACKAGES _is_prefix)
       if(_is_prefix)
         message(WARNING "
-Building Blender with the following configuration:
+Building AIR Blend with the following configuration:
   - WITH_PYTHON_MODULE=ON
   - WITH_INSTALL_PORTABLE=OFF
   - LIBDIR=\"${LIBDIR}\"
@@ -949,7 +949,7 @@ endif()
 unset(_IS_LINKER_DEFAULT)
 
 # Avoid conflicts with Mesa llvmpipe, Luxrender, and other plug-ins that may
-# use the same libraries as Blender with a different version or build options.
+# use the same libraries as AIR Blend with a different version or build options.
 set(PLATFORM_SYMBOLS_MAP ${CMAKE_SOURCE_DIR}/source/creator/symbols_unix.map)
 set(PLATFORM_LINKFLAGS
   "${PLATFORM_LINKFLAGS} -Wl,--version-script='${PLATFORM_SYMBOLS_MAP}'"
@@ -999,7 +999,7 @@ endfunction()
 configure_atomic_lib_if_needed()
 
 if(PLATFORM_BUNDLED_LIBRARIES)
-  # For the installed Python module and installed Blender executable, we set the
+  # For the installed Python module and installed AIR Blend executable, we set the
   # rpath to the relative path where the install step will copy the shared libraries.
   set(CMAKE_SKIP_INSTALL_RPATH FALSE)
   list(APPEND CMAKE_INSTALL_RPATH $ORIGIN/lib)

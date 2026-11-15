@@ -2,8 +2,8 @@
 Use a Timer to react to events in another thread
 ------------------------------------------------
 
-You should never modify Blender data at arbitrary points in time in separate threads.
-However you can use a queue to collect all the actions that should be executed when Blender is in the right state again.
+You should never modify AIR Blend data at arbitrary points in time in separate threads.
+However you can use a queue to collect all the actions that should be executed when AIR Blend is in the right state again.
 Pythons `queue.Queue` can be used here, because it implements the required locking semantics.
 """
 import bpy

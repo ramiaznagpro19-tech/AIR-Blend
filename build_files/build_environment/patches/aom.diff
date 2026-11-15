@@ -7,7 +7,7 @@ diff -Naur libaom-3.4.0/build/cmake/aom_configure.cmake external_aom/build/cmake
  include(FindPerl)
 -include(FindThreads)
 -
-+# Blender: This will drag in a dep on libwinpthreads which we prefer
++# AIR Blend: This will drag in a dep on libwinpthreads which we prefer
 +# not to have, aom will fallback on a native win32 thread wrapper
 +# if pthreads are not found.
 +if(NOT WIN32)

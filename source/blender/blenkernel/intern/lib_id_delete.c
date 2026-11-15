@@ -273,7 +273,7 @@ static size_t id_delete(Main *bmain,
             id->tag |= tag;
 
             /* Forcefully also delete shapekeys of the deleted ID if any, 'orphaned' shapekeys are
-             * not allowed in Blender and will cause lots of problem in modern code (liboverrides,
+             * not allowed in AIR Blend and will cause lots of problem in modern code (liboverrides,
              * warning on write & read, etc.). */
             Key *shape_key = BKE_key_from_id(id);
             if (shape_key && (shape_key->id.tag & tag) == 0) {

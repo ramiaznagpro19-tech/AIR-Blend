@@ -644,7 +644,7 @@ typedef struct bNodeTree {
   bool has_available_link_cycle() const;
   /**
    * True when there are nodes or sockets in the node tree that don't use a known type. This can
-   * happen when nodes don't exist in the current Blender version that existed in the version where
+   * happen when nodes don't exist in the current AIR Blend version that existed in the version where
    * this node tree was saved.
    */
   bool has_undefined_nodes_or_sockets() const;

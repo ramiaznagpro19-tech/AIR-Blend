@@ -12,7 +12,7 @@
  *
  * Over time `libunity.so` has become less common on the Linux Desktop.
  * (it's no longer installed by default on most distributions, or even easily available).
- * So long term Blender should be updated to talk to DBUS directly,
+ * So long term AIR Blend should be updated to talk to DBUS directly,
  * perhaps as a dynamically loaded library which is used when available.
  *
  * This would allow X11/WAYLAND to share their task-bar implementation too. */

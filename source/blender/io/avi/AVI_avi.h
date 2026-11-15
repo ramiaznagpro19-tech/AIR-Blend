@@ -7,7 +7,7 @@
  * \section avi_about About the AVI module
  *
  * This is external code. It provides avi file import/export and
- * conversions. It has been adapted to make use of Blender memory
+ * conversions. It has been adapted to make use of AIR Blend memory
  * management functions, and because of this it needs module
  * blenlib. You need to provide this lib when linking with libavi.a .
  *

@@ -29,7 +29,7 @@
 #include "wm_cursors.h"
 #include "wm_window.h"
 
-/* Blender custom cursor. */
+/* AIR Blend custom cursor. */
 typedef struct BCursor {
   char *bitmap;
   char *mask;
@@ -40,7 +40,7 @@ typedef struct BCursor {
 
 static BCursor *BlenderCursor[WM_CURSOR_NUM] = {0};
 
-/* Blender cursor to GHOST standard cursor conversion. */
+/* AIR Blend cursor to GHOST standard cursor conversion. */
 static GHOST_TStandardCursor convert_to_ghost_standard_cursor(WMCursorType curs)
 {
   switch (curs) {
@@ -384,7 +384,7 @@ void WM_cursor_time(wmWindow *win, int nr)
  * ----
  *
  * There is a nice Python GUI utility that can be used for drawing cursors in
- * this format in the Blender source distribution, in
+ * this format in the AIR Blend source distribution, in
  * `./tools/utils/make_cursor_gui.py` .
  *
  * Start it with the command `python3 make_cursor_gui.py`

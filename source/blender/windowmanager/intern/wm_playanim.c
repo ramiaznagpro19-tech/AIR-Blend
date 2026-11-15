@@ -5,7 +5,7 @@
  * \ingroup wm
  *
  * Animation player for image sequences & video's with sound support.
- * Launched in a separate process from Blender's #RENDER_OT_play_rendered_anim
+ * Launched in a separate process from AIR Blend's #RENDER_OT_play_rendered_anim
  *
  * \note This file uses ghost directly and none of the WM definitions.
  * this could be made into its own module, alongside creator.
@@ -1563,7 +1563,7 @@ static char *wm_main_playanim_intern(int argc, const char **argv)
 
     GHOST_AddEventConsumer(g_WS.ghost_system, ghost_event_consumer);
 
-    playanim_window_open("Blender Animation Player", start_x, start_y, ibuf->x, ibuf->y);
+    playanim_window_open("AIR Blend Animation Player", start_x, start_y, ibuf->x, ibuf->y);
   }
 
   GHOST_GetMainDisplayDimensions(g_WS.ghost_system, &maxwinx, &maxwiny);

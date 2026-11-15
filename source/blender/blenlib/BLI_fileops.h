@@ -293,7 +293,7 @@ int BLI_access(const char *filepath, int mode) ATTR_WARN_UNUSED_RESULT ATTR_NONN
  * Returns true if the file with the specified name can be written.
  * This implementation uses access(2), which makes the check according
  * to the real UID and GID of the process, not its effective UID and GID.
- * This shouldn't matter for Blender, which is not going to run privileged anyway.
+ * This shouldn't matter for AIR Blend, which is not going to run privileged anyway.
  */
 bool BLI_file_is_writable(const char *filepath) ATTR_WARN_UNUSED_RESULT ATTR_NONNULL();
 /**

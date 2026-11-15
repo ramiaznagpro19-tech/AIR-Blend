@@ -439,7 +439,7 @@ static void arg_py_context_restore(bContext *C, struct BlendePyContextStore *c_p
 
 static void print_version_full(void)
 {
-  printf("Blender %s\n", BKE_blender_version_string());
+  printf("AIR Blend %s\n", BKE_blender_version_string());
 #  ifdef BUILD_DATE
   printf("\tbuild date: %s\n", build_date);
   printf("\tbuild time: %s\n", build_time);
@@ -460,19 +460,19 @@ static void print_version_short(void)
 #  ifdef BUILD_DATE
   /* NOTE: We include built time since sometimes we need to tell broken from
    * working built of the same hash. */
-  printf("Blender %s (hash %s built %s %s)\n",
+  printf("AIR Blend %s (hash %s built %s %s)\n",
          BKE_blender_version_string(),
          build_hash,
          build_date,
          build_time);
 #  else
-  printf("Blender %s\n", BKE_blender_version_string());
+  printf("AIR Blend %s\n", BKE_blender_version_string());
 #  endif
 }
 
 static const char arg_handle_print_version_doc[] =
     "\n\t"
-    "Print Blender version and exit.";
+    "Print AIR Blend version and exit.";
 static int arg_handle_print_version(int UNUSED(argc),
                                     const char **UNUSED(argv),
                                     void *UNUSED(data))
@@ -493,7 +493,7 @@ static int arg_handle_print_help(int UNUSED(argc), const char **UNUSED(argv), vo
 {
   bArgs *ba = (bArgs *)data;
 
-  printf("Blender %s\n", BKE_blender_version_string());
+  printf("AIR Blend %s\n", BKE_blender_version_string());
   printf("Usage: blender [args ...] [file] [args ...]\n\n");
 
   printf("Render Options:\n");
@@ -926,7 +926,7 @@ static const char arg_handle_debug_mode_set_doc[] =
 static int arg_handle_debug_mode_set(int UNUSED(argc), const char **UNUSED(argv), void *data)
 {
   G.debug |= G_DEBUG; /* std output printf's */
-  printf("Blender %s\n", BKE_blender_version_string());
+  printf("AIR Blend %s\n", BKE_blender_version_string());
   MEM_set_memory_debug();
 #  ifndef NDEBUG
   BLI_mempool_set_memory_debug();
@@ -1269,8 +1269,8 @@ static int arg_handle_env_system_set(int argc, const char **argv, void *UNUSED(d
 
 static const char arg_handle_playback_mode_doc[] =
     "<options> <file(s)>\n"
-    "\tInstead of showing Blender's user interface, this runs Blender as an animation player,\n"
-    "\tto view movies and image sequences rendered in Blender (ignored if '-b' is set).\n"
+    "\tInstead of showing AIR Blend's user interface, this runs AIR Blend as an animation player,\n"
+    "\tto view movies and image sequences rendered in AIR Blend (ignored if '-b' is set).\n"
     "\n"
     "\tPlayback Arguments:\n"
     "\n"
@@ -1487,7 +1487,7 @@ static int arg_handle_engine_set(int argc, const char **argv, void *data)
   if (argc >= 2) {
     if (STREQ(argv[1], "help")) {
       RenderEngineType *type = NULL;
-      printf("Blender Engine Listing:\n");
+      printf("AIR Blend Engine Listing:\n");
       for (type = R_engines.first; type; type = type->next) {
         printf("\t%s\n", type->idname);
       }
@@ -1524,7 +1524,7 @@ static const char arg_handle_image_type_set_doc[] =
     "\tValid options are:\n"
     "\t'TGA' 'RAWTGA' 'JPEG' 'IRIS' 'IRIZ' 'AVIRAW' 'AVIJPEG' 'PNG' 'BMP'\n"
     "\n"
-    "\tFormats that can be compiled into Blender, not available on all systems:\n"
+    "\tFormats that can be compiled into AIR Blend, not available on all systems:\n"
     "\t'HDR' 'TIFF' 'OPEN_EXR' 'OPEN_EXR_MULTILAYER' 'MPEG' 'CINEON' 'DPX' 'DDS' 'JP2' 'WEBP'";
 static int arg_handle_image_type_set(int argc, const char **argv, void *data)
 {
@@ -1881,7 +1881,7 @@ static int arg_handle_python_file_run(int argc, const char **argv, void *data)
 
 #  else
   UNUSED_VARS(argc, argv, data);
-  fprintf(stderr, "This Blender was built without Python support\n");
+  fprintf(stderr, "This AIR Blend was built without Python support\n");
   return 0;
 #  endif /* WITH_PYTHON */
 }
@@ -1921,7 +1921,7 @@ static int arg_handle_python_text_run(int argc, const char **argv, void *data)
 
 #  else
   UNUSED_VARS(argc, argv, data);
-  fprintf(stderr, "This Blender was built without Python support\n");
+  fprintf(stderr, "This AIR Blend was built without Python support\n");
   return 0;
 #  endif /* WITH_PYTHON */
 }
@@ -1949,14 +1949,14 @@ static int arg_handle_python_expr_run(int argc, const char **argv, void *data)
 
 #  else
   UNUSED_VARS(argc, argv, data);
-  fprintf(stderr, "This Blender was built without Python support\n");
+  fprintf(stderr, "This AIR Blend was built without Python support\n");
   return 0;
 #  endif /* WITH_PYTHON */
 }
 
 static const char arg_handle_python_console_run_doc[] =
     "\n\t"
-    "Run Blender with an interactive console.";
+    "Run AIR Blend with an interactive console.";
 static int arg_handle_python_console_run(int UNUSED(argc), const char **argv, void *data)
 {
 #  ifdef WITH_PYTHON
@@ -1967,7 +1967,7 @@ static int arg_handle_python_console_run(int UNUSED(argc), const char **argv, vo
   return 0;
 #  else
   UNUSED_VARS(argv, data);
-  fprintf(stderr, "This Blender was built without python support\n");
+  fprintf(stderr, "This AIR Blend was built without python support\n");
   return 0;
 #  endif /* WITH_PYTHON */
 }

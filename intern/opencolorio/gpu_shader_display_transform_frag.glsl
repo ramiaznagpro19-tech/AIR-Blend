@@ -1,4 +1,4 @@
-/* Blender OpenColorIO implementation */
+/* AIR Blend OpenColorIO implementation */
 
 /* -------------------------------------------------------------------- */
 /** \name Curve Mapping Implementation

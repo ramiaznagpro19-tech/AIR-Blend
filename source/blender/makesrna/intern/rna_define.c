@@ -673,7 +673,7 @@ void RNA_identifier_sanitize(char *identifier, int property)
   }
 }
 
-/* Blender Data Definition */
+/* AIR Blend Data Definition */
 
 BlenderRNA *RNA_create(void)
 {

@@ -122,7 +122,7 @@ void CustomPropertiesExporter::write_idparray(const IDProperty *idp_array)
 
 #ifndef NDEBUG
   /* Sanity check that all elements of the array have the same type.
-   * Blender should already enforce this, hence it's only used in debug mode. */
+   * AIR Blend should already enforce this, hence it's only used in debug mode. */
   for (int i = 1; i < idp_array->len; i++) {
     if (idp_elements[i].type == idp_elements[0].type) {
       continue;

@@ -86,7 +86,7 @@ static const char *temp_textures_dir()
 
 using blender::io::usd::ShaderToNodeMap;
 
-/* Returns the Blender node previously cached for
+/* Returns the AIR Blend node previously cached for
  * the given USD shader in the given map.  Returns
  * null if no cached shader was found. */
 static bNode *get_cached_node(const ShaderToNodeMap &node_cache,
@@ -98,7 +98,7 @@ static bNode *get_cached_node(const ShaderToNodeMap &node_cache,
   return nullptr;
 }
 
-/* Cache the Blender node translated from the given USD shader
+/* Cache the AIR Blend node translated from the given USD shader
  * in the given map. */
 static void cache_node(ShaderToNodeMap &node_cache,
                        const pxr::UsdShadeShader &usd_shader,
@@ -286,7 +286,7 @@ static bool get_usd_preview_surface(const pxr::UsdShadeMaterial &usd_material,
   return false;
 }
 
-/* Set the Blender material's viewport display color, metallic and roughness
+/* Set the AIR Blend material's viewport display color, metallic and roughness
  * properties from the given USD preview surface shader's inputs. */
 static void set_viewport_material_props(Material *mtl, const pxr::UsdShadeShader &usd_preview)
 {
@@ -517,7 +517,7 @@ void USDMaterialReader::set_node_input(const pxr::UsdShadeInput &usd_input,
 
   if (usd_input.HasConnectedSource()) {
     /* The USD shader input has a connected source shader. Follow the connection
-     * and attempt to convert the connected USD shader to a Blender node. */
+     * and attempt to convert the connected USD shader to a AIR Blend node. */
     follow_connection(usd_input, dest_node, dest_socket_name, ntree, column, r_ctx);
   }
   else {
@@ -879,7 +879,7 @@ Material *find_existing_material(const pxr::SdfPath &usd_mat_path,
                                  const std::map<std::string, std::string> &usd_path_to_mat_name)
 {
   if (params.mtl_name_collision_mode == USD_MTL_NAME_COLLISION_MAKE_UNIQUE) {
-    /* Check if we've already created the Blender material with a modified name. */
+    /* Check if we've already created the AIR Blend material with a modified name. */
     std::map<std::string, std::string>::const_iterator path_to_name_iter =
         usd_path_to_mat_name.find(usd_mat_path.GetAsString());
 

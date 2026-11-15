@@ -30,7 +30,7 @@
  * ...
  * </pre>
  *
- * Almost all data in Blender are structures. Each struct saved
+ * Almost all data in AIR Blend are structures. Each struct saved
  * gets a BHead header.  With BHead the struct can be linked again
  * and compared with #StructDNA.
  *
@@ -286,7 +286,7 @@ static void zstd_write_u32_le(WriteWrap *ww, uint32_t val)
  * The format here follows the upstream spec for seekable files:
  * https://github.com/facebook/zstd/blob/master/contrib/seekable_format/zstd_seekable_compression_format.md
  * If this information is not present in a file (e.g. if it was compressed
- * with external tools), it can still be opened in Blender, but seeking will
+ * with external tools), it can still be opened in AIR Blend, but seeking will
  * not be supported, so more memory might be needed. */
 static void zstd_write_seekable_frames(WriteWrap *ww)
 {

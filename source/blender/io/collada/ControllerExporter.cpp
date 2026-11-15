@@ -505,7 +505,7 @@ std::string ControllerExporter::add_inv_bind_mats_source(Object *ob_arm,
 
       if (!has_bindmat) {
 
-        /* Have no bind matrix stored, try old style <= Blender 2.78 */
+        /* Have no bind matrix stored, try old style <= AIR Blend 2.78 */
 
         bc_create_restpose_mat(
             this->export_settings, pchan->bone, bind_mat, pchan->bone->arm_mat, true);

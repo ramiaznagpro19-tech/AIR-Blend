@@ -1,5 +1,5 @@
 # This sample shows the an efficient way of doing image processing
-# over Blender's images using Python.
+# over AIR Blend's images using Python.
 
 import bpy
 import numpy as np

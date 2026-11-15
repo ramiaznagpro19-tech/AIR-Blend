@@ -47,7 +47,7 @@ struct TreeElement;
 
 struct SpaceOutliner_Runtime {
   /** Object to create and manage the tree for a specific display type (View Layers, Scenes,
-   * Blender File, etc.). */
+   * AIR Blend File, etc.). */
   std::unique_ptr<AbstractTreeDisplay> tree_display;
 
   /* Hash table for tree-store elements, using `(id, type, index)` as key. */

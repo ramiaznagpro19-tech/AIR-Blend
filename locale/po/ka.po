@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -401,7 +401,7 @@ msgid "Source Root"
 msgstr "კოდის ძირეული საქაღალდე"
 
 
-msgid "The Blender source root path"
+msgid "The AIR Blend source root path"
 msgstr "ბლენდერის კოდის ძირეული საქაღალდის მისამართი"
 
 
@@ -425,7 +425,7 @@ msgid "Persistent Data Path"
 msgstr "მუდმივი მონაცემების მისამართი"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
 msgstr "სახელი იმ json ფაილისა, რომელშიც ის პარამეტრები ინახება (სამწუხაროდ, ბლენდერის სისტემა აქ არ მუშაობს)"
 
 
@@ -1089,7 +1089,7 @@ msgid "Catalog UUID"
 msgstr "კატალოგის UUID"
 
 
-msgid "Identifier for the asset's catalog, used by Blender to look up the asset's catalog path. Must be a UUID according to RFC4122"
+msgid "Identifier for the asset's catalog, used by AIR Blend to look up the asset's catalog path. Must be a UUID according to RFC4122"
 msgstr "აქტივების კატალოგის იდენტიფიკატორი, რომელსაც ბლენდერი იყენებს აქტივის კატალოგის მისამართის მოსაძებნად. UUID აუცილებლად უნდა იყოს RFC4122-ის მიხედვით"
 
 
@@ -1281,7 +1281,7 @@ msgid "Is Internal"
 msgstr "შიდაა"
 
 
-msgid "The attribute is meant for internal use by Blender"
+msgid "The attribute is meant for internal use by AIR Blend"
 msgstr "ატრიბუტი განკუთვნილია ბლენდერის მიერ შიდა მომხმარებისთვის"
 
 
@@ -2493,12 +2493,12 @@ msgid "Collection of worlds"
 msgstr "სამყაროთა კოლექცია"
 
 
-msgid "Blender RNA"
-msgstr "Blender RNA"
+msgid "AIR Blend RNA"
+msgstr "AIR Blend RNA"
 
 
-msgid "Blender RNA structure definitions"
-msgstr "Blender RNA-ის სტრუქტურის განსაზღვრებები"
+msgid "AIR Blend RNA structure definitions"
+msgstr "AIR Blend RNA-ის სტრუქტურის განსაზღვრებები"
 
 
 msgid "Structs"
@@ -5675,7 +5675,7 @@ msgid "sRGB display space with Filmic view transform"
 msgstr "sRGB ამსახველი სივრცე ფილმური ხედის ტრანსფორმირებით"
 
 
-msgid "Rec. 709 (Full Range), Blender native linear space"
+msgid "Rec. 709 (Full Range), AIR Blend native linear space"
 msgstr "Rec. 709 (სრული დიაპაზონი), ბლენდერის მკვიდრი წრფივი სივრცე"
 
 
@@ -6048,7 +6048,7 @@ msgid "Lin error"
 msgstr "Lin-ის შეცდომა"
 
 
-msgid "Amount of residual error in Blender space unit for constraints that work on position"
+msgid "Amount of residual error in AIR Blend space unit for constraints that work on position"
 msgstr "რეზიდუალური შეცდომის ოდენობა ბლენდერის სივრცით ერთეულში ბორკილებისთვის, რომლებიც ადგილმდებარეობაზე მუშაობენ"
 
 
@@ -10044,7 +10044,7 @@ msgid "Max Velocity"
 msgstr "მაქს. სისწრაფე"
 
 
-msgid "Velocity considered as maximum influence (Blender units per frame)"
+msgid "Velocity considered as maximum influence (AIR Blend units per frame)"
 msgstr "სისწრაფე, რომელიც მაქსიმალურ ზეგავლენად ითვლება (ბლენდერის ერთეულები თითო კადრზე)"
 
 
@@ -10416,7 +10416,7 @@ msgid "Premultiply Alpha"
 msgstr "ალფას წინასწარი გამრავლება"
 
 
-msgid "Multiply color by alpha (recommended for Blender input)"
+msgid "Multiply color by alpha (recommended for AIR Blend input)"
 msgstr "გაამრავლე ფერი ალფაზე (რეკომენდირებულია ბლენდერის შემომავალი ფაილებისთვის)"
 
 
@@ -12751,7 +12751,7 @@ msgid "Hide .blend files items that are not data-blocks with asset metadata"
 msgstr "დამალე .blend ფაილების ელემენტები, რომლებიც არ არის აქტივის მეტამონაცემებიანი მონაცემთა ბლოკები"
 
 
-msgid "Filter Blender Backup Files"
+msgid "Filter AIR Blend Backup Files"
 msgstr "გაფილტრე ბლენდერის სათადარიგო ფაილები"
 
 
@@ -12759,7 +12759,7 @@ msgid "Show .blend1, .blend2, etc. files"
 msgstr "აჩვენე .blend1, .blend2 და ა.შ. ფაილები"
 
 
-msgid "Filter Blender"
+msgid "Filter AIR Blend"
 msgstr "ბლენდერის გაფილტრვა"
 
 
@@ -12767,7 +12767,7 @@ msgid "Show .blend files"
 msgstr "აჩვენე blend ფაილები"
 
 
-msgid "Filter Blender IDs"
+msgid "Filter AIR Blend IDs"
 msgstr "ბლენდერის ID-ების გაფილტრვა"
 
 
@@ -13187,7 +13187,7 @@ msgid "Export Mantaflow Script"
 msgstr "Mantaflow სკრიპტის ექსპორტი"
 
 
-msgid "Generate and export Mantaflow script from current domain settings during bake. This is only needed if you plan to analyze the cache (e.g. view grids, velocity vectors, particles) in Mantaflow directly (outside of Blender) after baking the simulation"
+msgid "Generate and export Mantaflow script from current domain settings during bake. This is only needed if you plan to analyze the cache (e.g. view grids, velocity vectors, particles) in Mantaflow directly (outside of AIR Blend) after baking the simulation"
 msgstr "წარმოქმენი და დააექსპორტე Mantaflow სკრიპტი მიმდინარე სამოქმედო არეალის პარამეტრებიდან ცხობის დროს. ეს მხოლოდ მაშინაა საჭირო, თუ ქეშის ანალიზს გეგმავ (მაგ.: ცხრილების, სისწრაფის ვექტორების, ნაწილაკების ნახვა) უშუალოდ Mantaflow-ში (ბლენდერის გარეთ) სიმულაციის გამოცხობის შემდეგ"
 
 
@@ -20036,7 +20036,7 @@ msgid "Unprojected Radius"
 msgstr "არაპროექცირებული რადიუსი"
 
 
-msgid "Radius of brush in Blender units"
+msgid "Radius of brush in AIR Blend units"
 msgstr "ფუნჯის რადიუსი ბლენდერის ერთეულებში"
 
 
@@ -23216,7 +23216,7 @@ msgid "Path to the library .blend file"
 msgstr "ბიბლიოთეკის .blend ფაილის მისამართი"
 
 
-msgid "Version of Blender the library .blend was saved with"
+msgid "Version of AIR Blend the library .blend was saved with"
 msgstr "ბლენდერის ვერსია, რომლითაც .blend ბიბლიოთეკა იქნა შენახული"
 
 
@@ -27527,7 +27527,7 @@ msgid "Noise Basis"
 msgstr "ხმაურის საფუძველი"
 
 
-msgid "Blender Original"
+msgid "AIR Blend Original"
 msgstr "ბლენდერის ორიგინალი"
 
 
@@ -37503,7 +37503,7 @@ msgid "Save Screenshot"
 msgstr "ეკრანის ანაბეჭდის შენახვა"
 
 
-msgid "Capture a picture of the whole Blender window"
+msgid "Capture a picture of the whole AIR Blend window"
 msgstr "ბლენდერის მთლიანი ფანჯრის სურათის გადაღება"
 
 
@@ -38137,11 +38137,11 @@ msgid "Eyedropper"
 msgstr "პიპეტი"
 
 
-msgid "Sample a color from the Blender window to store in a property"
+msgid "Sample a color from the AIR Blend window to store in a property"
 msgstr "აიღე ფერის ნიმუში ბლენდერის ფანჯრიდან და შეინახე თვისებაში"
 
 
-msgid "Sample a color from the Blender Window and create Grease Pencil material"
+msgid "Sample a color from the AIR Blend Window and create Grease Pencil material"
 msgstr "აიღე ბლენდერის ფანჯრიდან ფერის ნიმუში და შექმენი ცვილის ფანქრის მასალა"
 
 
@@ -38856,7 +38856,7 @@ msgid "Open"
 msgstr "გახსენი"
 
 
-msgid "Open a Blender file"
+msgid "Open a AIR Blend file"
 msgstr "გახსენი ბლენდერის ფაილი"
 
 
@@ -39029,11 +39029,11 @@ msgstr "შიდა მოხმარება (დაარედაქტი
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "ბლენდერის დახურვა"
 
 
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "ბლენდერის დახურვა"
 
 
@@ -39185,15 +39185,15 @@ msgstr "გადააქციე მიმდინარე ფაილი 
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
+msgid "Save AIR Blend File"
 msgstr "შეინახე ბლენდერის ფაილი"
 
 
-msgid "Save the current Blender file"
+msgid "Save the current AIR Blend file"
 msgstr "შეინახე ბლენდერის მიმდინარე ფაილი"
 
 
-msgid "Exit Blender after saving"
+msgid "Exit AIR Blend after saving"
 msgstr "გამოდი ბლენდერიდან შენახვის შემდეგ"
 
 
@@ -39228,11 +39228,11 @@ msgstr "გამოშვების შესახებ ინფორმ�
 
 
 msgctxt "Operator"
-msgid "About Blender"
+msgid "About AIR Blend"
 msgstr "ბლენდერის შესახებ"
 
 
-msgid "Open a window with information about Blender"
+msgid "Open a window with information about AIR Blend"
 msgstr "ბლენდერის შესახებ ინფორმაციის მქონე ფანჯრის გახსნა"
 
 
@@ -43147,12 +43147,12 @@ msgstr "ლიცენზია"
 
 
 msgctxt "Operator"
-msgid "Blender Website"
+msgid "AIR Blend Website"
 msgstr "ბლენდერის ვებსაიტი"
 
 
 msgctxt "Operator"
-msgid "Blender Store"
+msgid "AIR Blend Store"
 msgstr "ბლენდერის მაღაზია"
 
 
@@ -44396,7 +44396,7 @@ msgid "Video Memory"
 msgstr "ვიდეო მეხსიერება"
 
 
-msgid "Blender Version"
+msgid "AIR Blend Version"
 msgstr "ბლენდერის ვერსია"
 
 
@@ -47012,7 +47012,7 @@ msgid "Show Tool Settings"
 msgstr "ხელსაწყოს პარამეტრების ჩვენება"
 
 
-msgid "Blender Preferences"
+msgid "AIR Blend Preferences"
 msgstr "ბლენდერის პარამეტრები"
 
 
@@ -47329,7 +47329,7 @@ msgid "Top Width"
 msgstr "ზედა სიგანე"
 
 
-msgid "Disabled, Blender was compiled without OpenVDB"
+msgid "Disabled, AIR Blend was compiled without OpenVDB"
 msgstr "გამორთულია, ბლენდერი კომპილირებული იყო OpenVDB-ს გარეშე"
 
 
@@ -47637,7 +47637,7 @@ msgid "Input pending "
 msgstr "შენატანი მოლოდინში "
 
 
-msgid "Blender File View"
+msgid "AIR Blend File View"
 msgstr "ბლენდერის ფაილის ხედი"
 
 
@@ -47805,7 +47805,7 @@ msgstr "თქვენს გრაფიკულ ბარათს, ან �
 
 
 msgctxt "WindowManager"
-msgid "Newer graphics drivers may be available to improve Blender support."
+msgid "Newer graphics drivers may be available to improve AIR Blend support."
 msgstr "შესაძლოა, უფრო ახალი გრაფიკული დრაივერები იყოს ხელმისაწვდომი ბლენდერის მხარდაჭერის გასაუმჯობესებლად."
 
 
@@ -48200,7 +48200,7 @@ msgid "Add-on preferences"
 msgstr "დანამატის პარამეტრები"
 
 
-msgid "Stores your Blender ID credentials for usage with other add-ons"
+msgid "Stores your AIR Blend ID credentials for usage with other add-ons"
 msgstr "ინახავს შენს ბლენდერის აიდის საავტორიზაციო მონაცემებს სხვა დანამატებთან გამოსაყენებლად"
 
 
@@ -48224,7 +48224,7 @@ msgid "Main \"File\" menu, text editor, any UI control"
 msgstr "მთავარი \"ფაილი\" მენიუ, ტექსტური რედაქტორი, ნებისმიერი სახის UI კონტროლი"
 
 
-msgid "Allows managing UI translations directly from Blender (update main .po files, update scripts' translations, etc.)"
+msgid "Allows managing UI translations directly from AIR Blend (update main .po files, update scripts' translations, etc.)"
 msgstr "UI თარგმანის პირდაპირ ბლენდერიდან თარგმნის საშუალებას იძლევა (განაახლებს .po ფაილებს, სკრიპტების თარგმანებს და სხვ.)"
 
 

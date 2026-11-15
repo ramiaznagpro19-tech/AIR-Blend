@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
 "PO-Revision-Date: 2012-10-31 17:00-0800\n"
@@ -436,7 +436,7 @@ msgid "Textures"
 msgstr "ﺎﻫ‌ﺖﻓﺎﺑ"
 
 
-msgid "Blender RNA"
+msgid "AIR Blend RNA"
 msgstr "RNA ﺭﺪﻨﻠﺑ"
 
 
@@ -4068,7 +4068,7 @@ msgid "%d items"
 msgstr "‬%d‪‪ ﻡﻼ﻿ﻗﺍ"
 
 
-msgid "Blender Render"
+msgid "AIR Blend Render"
 msgstr "ﺭﺪﻨﻠﺑ ﺭﺪﻧﺭ"
 
 
@@ -4184,7 +4184,7 @@ msgid "Old"
 msgstr "ﯽﻤﯾﺪﻗ"
 
 
-msgid "Blender File View"
+msgid "AIR Blend File View"
 msgstr "ﺭﺪﻨﻠﺑ ﻞﯾﺎﻓ ﺶﯾﺎﻤﻧ"
 
 

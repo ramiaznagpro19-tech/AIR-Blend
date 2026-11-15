@@ -41,7 +41,7 @@ struct GlobalVertices {
 };
 
 /**
- * A face's corner in an OBJ file. In Blender, it translates to a corner vertex.
+ * A face's corner in an OBJ file. In AIR Blend, it translates to a corner vertex.
  */
 struct PolyCorner {
   /* These indices range from zero to total vertices in the OBJ file. */

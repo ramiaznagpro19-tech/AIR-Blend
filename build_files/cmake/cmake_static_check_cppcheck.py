@@ -32,7 +32,7 @@ CHECKER_EXCLUDE_SOURCE_FILES = set(os.path.join(*f.split("/")) for f in (
 
 CHECKER_ARGS = [
     # Speed up execution.
-    # As Blender has many defines, the total number of configurations is large making execution unreasonably slow.
+    # As AIR Blend has many defines, the total number of configurations is large making execution unreasonably slow.
     # This could be increased but do so with care.
     "--max-configs=1",
 

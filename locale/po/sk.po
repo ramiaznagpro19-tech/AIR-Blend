@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
 "PO-Revision-Date: 2023-06-16 09:03+0200\n"
@@ -428,7 +428,7 @@ msgid "Source Root"
 msgstr "Kmeňové zdroje"
 
 
-msgid "The Blender source root path"
+msgid "The AIR Blend source root path"
 msgstr "Cesta kmeňových zdrojov Blendera"
 
 
@@ -452,7 +452,7 @@ msgid "Persistent Data Path"
 msgstr "Cesta trvalých údajov"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
 msgstr "Názov json súboru na uloženie týchto nastavení (bohužiaľ, systém Blenderu tu nefunguje)"
 
 
@@ -1116,8 +1116,8 @@ msgid "Catalog UUID"
 msgstr "Katalóg UUID"
 
 
-msgid "Identifier for the asset's catalog, used by Blender to look up the asset's catalog path. Must be a UUID according to RFC4122"
-msgstr "Identifikátor katalógu aktíva, ktorý Blender používa na vyhľadanie katalógovej cesty aktíva. Musí to byť UUID podľa RFC4122"
+msgid "Identifier for the asset's catalog, used by AIR Blend to look up the asset's catalog path. Must be a UUID according to RFC4122"
+msgstr "Identifikátor katalógu aktíva, ktorý AIR Blend používa na vyhľadanie katalógovej cesty aktíva. Musí to byť UUID podľa RFC4122"
 
 
 msgid "Catalog Simple Name"
@@ -1336,7 +1336,7 @@ msgid "Is Internal"
 msgstr "Je interný"
 
 
-msgid "The attribute is meant for internal use by Blender"
+msgid "The attribute is meant for internal use by AIR Blend"
 msgstr "Tento atribút je určený na interné použitie v Blenderi"
 
 
@@ -2233,7 +2233,7 @@ msgstr "Verzia"
 
 
 msgid "File format version the .blend file was saved with"
-msgstr "Verzia programu Blender uložená do .blend súboru"
+msgstr "Verzia programu AIR Blend uložená do .blend súboru"
 
 
 msgid "Volumes"
@@ -2564,11 +2564,11 @@ msgid "Collection of worlds"
 msgstr "Kolekcia svetov"
 
 
-msgid "Blender RNA"
-msgstr "Blender RNA"
+msgid "AIR Blend RNA"
+msgstr "AIR Blend RNA"
 
 
-msgid "Blender RNA structure definitions"
+msgid "AIR Blend RNA structure definitions"
 msgstr "Definície štruktúry RNA Blendera"
 
 
@@ -5816,7 +5816,7 @@ msgid "sRGB display space with Filmic view transform"
 msgstr "Zobrazovací priestor sRGB s transformáciou zobrazenia Filmový"
 
 
-msgid "Rec. 709 (Full Range), Blender native linear space"
+msgid "Rec. 709 (Full Range), AIR Blend native linear space"
 msgstr "REC. 709 (plný rozsah), natívny lineárny priestor Blendera"
 
 
@@ -6189,7 +6189,7 @@ msgid "Lin error"
 msgstr "Chyba riadka"
 
 
-msgid "Amount of residual error in Blender space unit for constraints that work on position"
+msgid "Amount of residual error in AIR Blend space unit for constraints that work on position"
 msgstr "Množstvo zostatkovej chyby v jednotke priestoru Blendera pre vynútenie pracujúceho na pozícii"
 
 
@@ -10250,7 +10250,7 @@ msgid "Max Velocity"
 msgstr "Maximálna rýchlosť"
 
 
-msgid "Velocity considered as maximum influence (Blender units per frame)"
+msgid "Velocity considered as maximum influence (AIR Blend units per frame)"
 msgstr "Rýchlosť považovaná ako maximálny vplyv (jednotky Blendera na snímku)"
 
 
@@ -10622,7 +10622,7 @@ msgid "Premultiply Alpha"
 msgstr "Prednásobiť alfa"
 
 
-msgid "Multiply color by alpha (recommended for Blender input)"
+msgid "Multiply color by alpha (recommended for AIR Blend input)"
 msgstr "Vynásobí farbu alfa (odporúča sa pre vstup Blendera)"
 
 
@@ -12989,7 +12989,7 @@ msgid "Hide .blend files items that are not data-blocks with asset metadata"
 msgstr "Skryje .blend súbory, ktoré nie sú blokmi údajov, s meta údajmi aktív"
 
 
-msgid "Filter Blender Backup Files"
+msgid "Filter AIR Blend Backup Files"
 msgstr "Filtrovať záložné súbory Blendera"
 
 
@@ -12997,15 +12997,15 @@ msgid "Show .blend1, .blend2, etc. files"
 msgstr "Zobrazí súbory .blend1, .blend2 a podobné"
 
 
-msgid "Filter Blender"
-msgstr "Filtrovať Blender"
+msgid "Filter AIR Blend"
+msgstr "Filtrovať AIR Blend"
 
 
 msgid "Show .blend files"
 msgstr "Zobrazí .blend súbory"
 
 
-msgid "Filter Blender IDs"
+msgid "Filter AIR Blend IDs"
 msgstr "Filtrovať ID Blendera"
 
 
@@ -13081,7 +13081,7 @@ msgid "Library Browser"
 msgstr "Prehliadač knižníc"
 
 
-msgid "Whether we may browse Blender files' content or not"
+msgid "Whether we may browse AIR Blend files' content or not"
 msgstr "Určuje možnosť prehliadania obsahu súborov Blendera"
 
 
@@ -13441,8 +13441,8 @@ msgid "Export Mantaflow Script"
 msgstr "Exportovať skript Mantaflow"
 
 
-msgid "Generate and export Mantaflow script from current domain settings during bake. This is only needed if you plan to analyze the cache (e.g. view grids, velocity vectors, particles) in Mantaflow directly (outside of Blender) after baking the simulation"
-msgstr "Vygeneruje a exportuje skript Mantaflow z aktuálneho nastavenia oblasti vplyvu počas zapečenia. Toto je potrebné iba v prípade, že plánujete analyzovať zásobník (napr. Mriežky, vektory rýchlosti, častice) v skripte Mantaflow priamo (mimo Blender) po zapečení simulácie"
+msgid "Generate and export Mantaflow script from current domain settings during bake. This is only needed if you plan to analyze the cache (e.g. view grids, velocity vectors, particles) in Mantaflow directly (outside of AIR Blend) after baking the simulation"
+msgstr "Vygeneruje a exportuje skript Mantaflow z aktuálneho nastavenia oblasti vplyvu počas zapečenia. Toto je potrebné iba v prípade, že plánujete analyzovať zásobník (napr. Mriežky, vektory rýchlosti, častice) v skripte Mantaflow priamo (mimo AIR Blend) po zapečení simulácie"
 
 
 msgid "Flame Grid"
@@ -20533,7 +20533,7 @@ msgid "Unprojected Radius"
 msgstr "Neplánovaný polomer"
 
 
-msgid "Radius of brush in Blender units"
+msgid "Radius of brush in AIR Blend units"
 msgstr "Polomer štetca v jednotkách Blendera"
 
 
@@ -23808,7 +23808,7 @@ msgid "Path to the library .blend file"
 msgstr "Cesta ku knižnici .blend súboru"
 
 
-msgid "Version of Blender the library .blend was saved with"
+msgid "Version of AIR Blend the library .blend was saved with"
 msgstr "Verzia knižnice Blendera bola uložená do .blend súboru"
 
 
@@ -28581,12 +28581,12 @@ msgid "Noise basis used for turbulence"
 msgstr "Nastaví základný šum používaný pre turbulencie"
 
 
-msgid "Blender Original"
-msgstr "Blender originál"
+msgid "AIR Blend Original"
+msgstr "AIR Blend originál"
 
 
-msgid "Noise algorithm - Blender original: Smooth interpolated noise"
-msgstr "Algoritmus šumu - Blender originál: Vyhladený interpólovaný šum"
+msgid "Noise algorithm - AIR Blend original: Smooth interpolated noise"
+msgstr "Algoritmus šumu - AIR Blend originál: Vyhladený interpólovaný šum"
 
 
 msgid "Original Perlin"
@@ -29491,7 +29491,7 @@ msgid "Asset Blend Path"
 msgstr "Cesta prelínania aktív"
 
 
-msgid "Full path to the Blender file containing the active asset"
+msgid "Full path to the AIR Blend file containing the active asset"
 msgstr "Úplná cesta k súboru Blenderu obsahujúci aktívne aktívum"
 
 
@@ -30311,7 +30311,7 @@ msgid "Image Size"
 msgstr "Veľkosť obrázka"
 
 
-msgid "True if this preview icon has been modified by py script, and is no more auto-generated by Blender"
+msgid "True if this preview icon has been modified by py script, and is no more auto-generated by AIR Blend"
 msgstr "Pravdivé, ak tento náhľad ikony bola upravený Python skriptom a nie je viac automaticky generovaný Blenderom"
 
 
@@ -30319,7 +30319,7 @@ msgid "Custom Image"
 msgstr "Vlastný obrázok"
 
 
-msgid "True if this preview image has been modified by py script, and is no more auto-generated by Blender"
+msgid "True if this preview image has been modified by py script, and is no more auto-generated by AIR Blend"
 msgstr "Pravdivé, ak tento náhľad obrázku bol upravený Python skriptom a nie je viac automaticky generovaný Blenderom"
 
 
@@ -44042,8 +44042,8 @@ msgid "Anti-Alias Z"
 msgstr "Antialiasing Z"
 
 
-msgid "Anti-alias the z-buffer to try to avoid artifacts, mostly useful for Blender renders"
-msgstr "Antialiasing (vyhladzovanie hrán) Z zásobníka, aby sa pokúsilo vyhnúť artefaktom, väčšinou užitočné pre Blender prekreslenia"
+msgid "Anti-alias the z-buffer to try to avoid artifacts, mostly useful for AIR Blend renders"
+msgstr "Antialiasing (vyhladzovanie hrán) Z zásobníka, aby sa pokúsilo vyhnúť artefaktom, väčšinou užitočné pre AIR Blend prekreslenia"
 
 
 msgid "Function Node"
@@ -46878,19 +46878,19 @@ msgid "World space normal mapping"
 msgstr "Priestor sveta mapovania normálov"
 
 
-msgid "Blender Object Space"
+msgid "AIR Blend Object Space"
 msgstr "Priestor objektu Blendera"
 
 
-msgid "Object space normal mapping, compatible with Blender render baking"
+msgid "Object space normal mapping, compatible with AIR Blend render baking"
 msgstr "Priestor objektu mapovania normálov, kompatibilné so zapečením Blendera"
 
 
-msgid "Blender World Space"
+msgid "AIR Blend World Space"
 msgstr "Priestor oblasti Blendera"
 
 
-msgid "World space normal mapping, compatible with Blender render baking"
+msgid "World space normal mapping, compatible with AIR Blend render baking"
 msgstr "Priestor oblasti mapovania normálov, kompatibilný so zapečením Blendera"
 
 
@@ -54184,8 +54184,8 @@ msgid "Apply Scalings"
 msgstr "Použiť mierky"
 
 
-msgid "How to apply custom and units scalings in generated FBX file (Blender uses FBX scale to detect units on import, but many other applications do not handle the same way)"
-msgstr "Ako aplikovať vlastné a jednotky zmeny veľkosti generované FBX súborom (Blender používa FBX mierku pre detekciu jednotiek na import, ale mnoho ďalších aplikácií nezvláda rovnakým spôsobom)"
+msgid "How to apply custom and units scalings in generated FBX file (AIR Blend uses FBX scale to detect units on import, but many other applications do not handle the same way)"
+msgstr "Ako aplikovať vlastné a jednotky zmeny veľkosti generované FBX súborom (AIR Blend používa FBX mierku pre detekciu jednotiek na import, ale mnoho ďalších aplikácií nezvláda rovnakým spôsobom)"
 
 
 msgid "All Local"
@@ -54224,23 +54224,23 @@ msgid "Apply Unit"
 msgstr "Použiť jednotky"
 
 
-msgid "Take into account current Blender units settings (if unset, raw Blender Units values are used as-is)"
-msgstr "Zoberie do úvahy aktuálne nastavenia Blender jednotiek (ak je nenastavené, hrubé hodnoty Blender jednotiek sú používané ako sú)"
+msgid "Take into account current AIR Blend units settings (if unset, raw AIR Blend Units values are used as-is)"
+msgstr "Zoberie do úvahy aktuálne nastavenia AIR Blend jednotiek (ak je nenastavené, hrubé hodnoty AIR Blend jednotiek sú používané ako sú)"
 
 
 msgid "Armature FBXNode Type"
 msgstr "Typ armatúry uzla FBX"
 
 
-msgid "FBX type of node (object) used to represent Blender's armatures (use the Null type unless you experience issues with the other app, as other choices may not import back perfectly into Blender...)"
-msgstr "Typ uzla FBX (objekt), ktorý sa používa na reprezentáciu Blender armatúry (použije raz NULL, ak sa vyskytnú problémy s inými aplikáciami, ďalšie voľby sa v Blenderi nemusia dokonale importovať späť)"
+msgid "FBX type of node (object) used to represent AIR Blend's armatures (use the Null type unless you experience issues with the other app, as other choices may not import back perfectly into AIR Blend...)"
+msgstr "Typ uzla FBX (objekt), ktorý sa používa na reprezentáciu AIR Blend armatúry (použije raz NULL, ak sa vyskytnú problémy s inými aplikáciami, ďalšie voľby sa v Blenderi nemusia dokonale importovať späť)"
 
 
 msgid "Null"
 msgstr "Nula"
 
 
-msgid "'Null' FBX node, similar to Blender's Empty (default)"
+msgid "'Null' FBX node, similar to AIR Blend's Empty (default)"
 msgstr "Nulový uzol FBX, je podobný prázdnemu Blenderu (predvolené)"
 
 
@@ -54308,7 +54308,7 @@ msgid "Apply Transform"
 msgstr "Použiť transformáciu"
 
 
-msgid "Bake space transform into object data, avoids getting unwanted rotations to objects when target space is not aligned with Blender's space (WARNING! experimental option, use at own risk, known to be broken with armatures/animations)"
+msgid "Bake space transform into object data, avoids getting unwanted rotations to objects when target space is not aligned with AIR Blend's space (WARNING! experimental option, use at own risk, known to be broken with armatures/animations)"
 msgstr "Zapečie priestor na údaje o objektoch, vyhne sa nežiaducim rotáciám objektov, keď cieľový priestor nie je zarovnaný s priestorom Blenderu (VÝSTRAHA! experimentálna možnosť, použitie na vlastné riziko, o ktorom je známe, že je rozbitý armatúrami / animáciami)"
 
 
@@ -54536,7 +54536,7 @@ msgid "Use Modifiers Render Setting"
 msgstr "Použiť nastavenie prekreslenia modifikátorov"
 
 
-msgid "Use render settings when applying modifiers to mesh objects (DISABLED in Blender 2.8)"
+msgid "Use render settings when applying modifiers to mesh objects (DISABLED in AIR Blend 2.8)"
 msgstr "Použije nastavenia prekreslenia pri použití modifikátorov na povrchové siete objektu (vypnuté v Blenderi 2.8)"
 
 
@@ -54857,7 +54857,7 @@ msgid "Raw (Deprecated)"
 msgstr "Surové (zastarané)"
 
 
-msgid "Blender lighting strengths with no conversion"
+msgid "AIR Blend lighting strengths with no conversion"
 msgstr "Osvetlenie Blendera bez konverzie"
 
 
@@ -55005,7 +55005,7 @@ msgid "Export original PBR Specular"
 msgstr "Export pôvodného PBR odrazu"
 
 
-msgid "Export original glTF PBR Specular, instead of Blender Principled Shader Specular"
+msgid "Export original glTF PBR Specular, instead of AIR Blend Principled Shader Specular"
 msgstr "Exportuje pôvodný glTF PBR odraz namiesto odrazu principiálneho tieňovača Blenderu"
 
 
@@ -55125,8 +55125,8 @@ msgid "Remember Export Settings"
 msgstr "Zapamätať si nastavenia exportu"
 
 
-msgid "Store glTF export settings in the Blender project"
-msgstr "Uložiť exportné nastavenia glTF v projekte Blender"
+msgid "Store glTF export settings in the AIR Blend project"
+msgstr "Uložiť exportné nastavenia glTF v projekte AIR Blend"
 
 
 msgctxt "Operator"
@@ -55150,8 +55150,8 @@ msgid "OBJ Groups"
 msgstr "Skupiny OBJ"
 
 
-msgid "Export Blender objects as OBJ groups"
-msgstr "Exportujte objekty aplikácie Blender ako skupiny OBJ"
+msgid "Export AIR Blend objects as OBJ groups"
+msgstr "Exportujte objekty aplikácie AIR Blend ako skupiny OBJ"
 
 
 msgid "Keep Vertex Order"
@@ -55166,8 +55166,8 @@ msgid "OBJ Objects"
 msgstr "Objekty OBJ"
 
 
-msgid "Export Blender objects as OBJ objects"
-msgstr "Exportujte objekty aplikácie Blender ako OBJ objekty"
+msgid "Export AIR Blend objects as OBJ objects"
+msgstr "Exportujte objekty aplikácie AIR Blend ako OBJ objekty"
 
 
 msgid "Include Edges"
@@ -59767,7 +59767,7 @@ msgid "Save the image with another name and/or settings"
 msgstr "Uloží obrázok pod iným názvom a/alebo nastaveniami"
 
 
-msgid "Create a new image file without modifying the current image in Blender"
+msgid "Create a new image file without modifying the current image in AIR Blend"
 msgstr "Vytvorí nový súbor obrázka bez úpravy aktuálneho obrázka v Blenderi"
 
 
@@ -59975,7 +59975,7 @@ msgid "Scale FPS"
 msgstr "Mierka snímok/s"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a Blender frame"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
 msgstr "Mierka snímok/s z BVH pre aktuálne scény, inak každú BVH snímku mapuje priamo do snímok Blendera"
 
 
@@ -60073,7 +60073,7 @@ msgid "Definition"
 msgstr "Definícia"
 
 
-msgid "Number of pixels per inch or Blender Unit"
+msgid "Number of pixels per inch or AIR Blend Unit"
 msgstr "Počet pixelov na palec alebo jednotka Blendera"
 
 
@@ -60093,7 +60093,7 @@ msgid "Force Reload"
 msgstr "Obmedziť znovu načítanie"
 
 
-msgid "Force reloading of the image if already opened elsewhere in Blender"
+msgid "Force reloading of the image if already opened elsewhere in AIR Blend"
 msgstr "Obmedzí opätovné načítanie obrázku, ak je už otvorený inde v Blenderi"
 
 
@@ -60221,7 +60221,7 @@ msgid "Dots/BU"
 msgstr "Body/JB"
 
 
-msgid "Use definition of the image as dots per Blender Unit"
+msgid "Use definition of the image as dots per AIR Blend Unit"
 msgstr "Použije definíciu obrázka ako body na jednotku Blendera"
 
 
@@ -60360,8 +60360,8 @@ msgid "Import FBX animation"
 msgstr "Importuje FBX animáciu"
 
 
-msgid "Import custom normals, if available (otherwise Blender will recompute them)"
-msgstr "Importuje vlastné normály, ak sú k dispozícii (inak Blender ich bude prepočítavať)"
+msgid "Import custom normals, if available (otherwise AIR Blend will recompute them)"
+msgstr "Importuje vlastné normály, ak sú k dispozícii (inak AIR Blend ich bude prepočítavať)"
 
 
 msgid "Import user properties as custom properties"
@@ -60425,11 +60425,11 @@ msgid "Heuristic for placing bones. Tries to make bones pretty"
 msgstr "Heuristika na rozmiestnenie kostí. Snaží sa urobiť pekné kosti"
 
 
-msgid "Blender (best for re-importing)"
-msgstr "Blender (najlepší pre opätovný import)"
+msgid "AIR Blend (best for re-importing)"
+msgstr "AIR Blend (najlepší pre opätovný import)"
 
 
-msgid "Good for re-importing glTFs exported from Blender. Bone tips are placed on their local +Y axis (in glTF space)"
+msgid "Good for re-importing glTFs exported from AIR Blend. Bone tips are placed on their local +Y axis (in glTF space)"
 msgstr "Dobré pre opätovný import glTF exportovaných z Blenderu. Hroty kostí sú umiestnené na ich lokálnej osi + Y (v priestore glTF)"
 
 
@@ -60534,11 +60534,11 @@ msgid "Surround smooth groups by sharp edges"
 msgstr "Obklopí vyhladené skupiny ostrými okrajmi"
 
 
-msgid "Import OBJ Groups into Blender Objects"
+msgid "Import OBJ Groups into AIR Blend Objects"
 msgstr "Importuje skupiny OBJ do objektov Blendera"
 
 
-msgid "Import OBJ Objects into Blender Objects"
+msgid "Import OBJ Objects into AIR Blend Objects"
 msgstr "Importuje objekty OBJ do objektov Blendera"
 
 
@@ -60596,8 +60596,8 @@ msgid "Update Reports Display"
 msgstr "Obnoviť zobrazenie zostáv"
 
 
-msgid "Update the display of reports in Blender UI (internal use)"
-msgstr "Aktualizuje zobrazenia zostáv v rozhraní Blender (interné použitie)"
+msgid "Update the display of reports in AIR Blend UI (internal use)"
+msgstr "Aktualizuje zobrazenia zostáv v rozhraní AIR Blend (interné použitie)"
 
 
 msgid "Change selection of all visible reports"
@@ -71930,8 +71930,8 @@ msgid "Install Theme..."
 msgstr "Nainštalovať tému..."
 
 
-msgid "Load and apply a Blender XML theme file"
-msgstr "Načíta a použije súbor motívu XML Blender"
+msgid "Load and apply a AIR Blend XML theme file"
+msgstr "Načíta a použije súbor motívu XML AIR Blend"
 
 
 msgid "Remove existing theme file if exists"
@@ -73191,7 +73191,7 @@ msgid "Save Screenshot"
 msgstr "Uložiť snímku obrazovky"
 
 
-msgid "Capture a picture of the whole Blender window"
+msgid "Capture a picture of the whole AIR Blend window"
 msgstr "Zachytí obrázok celého okna Blenderu"
 
 
@@ -75112,7 +75112,7 @@ msgid "Add Scene Strip"
 msgstr "Pridať pás scény"
 
 
-msgid "Add a strip to the sequencer using a Blender scene as a source"
+msgid "Add a strip to the sequencer using a AIR Blend scene as a source"
 msgstr "Pridá pás do radiča sekvencií použitím scény Blendera ako zdroj"
 
 
@@ -77040,11 +77040,11 @@ msgid "Stats from opened po"
 msgstr "Štatistiky otvoreného .po súboru"
 
 
-msgid "Try to rebuild mo file, and refresh Blender's UI"
+msgid "Try to rebuild mo file, and refresh AIR Blend's UI"
 msgstr "Pokúsi sa obnoviť .mo súbor a obnoviť užívateľské rozhranie Blendera"
 
 
-msgid "Update po file, try to rebuild mo file, and refresh Blender's UI"
+msgid "Update po file, try to rebuild mo file, and refresh AIR Blend's UI"
 msgstr "Aktualizuje .po súbor, pokúsi sa obnoviť .mo súbor a obnoviť užívateľské rozhranie Blendera"
 
 
@@ -77057,7 +77057,7 @@ msgid "Eyedropper"
 msgstr "Kvapkadlo"
 
 
-msgid "Sample a color from the Blender window to store in a property"
+msgid "Sample a color from the AIR Blend window to store in a property"
 msgstr "Vzorka farby z okna Blendera na uloženie v objekte"
 
 
@@ -77150,7 +77150,7 @@ msgid "Grease Pencil Eyedropper"
 msgstr "Kvapkadlo pastelky"
 
 
-msgid "Sample a color from the Blender Window and create Grease Pencil material"
+msgid "Sample a color from the AIR Blend Window and create Grease Pencil material"
 msgstr "Zosníma farbu z okna Blendera a vytvorí materiál pastelky"
 
 
@@ -77237,7 +77237,7 @@ msgstr "Upraviť aktualizáciu prekladu .mo"
 
 
 msgid "Try to \"compile\" given po file into relevant blender.mo file"
-msgstr "Pokúsi sa \"skompilovať\" daný po súbor do príslušného Blender .mo súboru"
+msgstr "Pokúsi sa \"skompilovať\" daný po súbor do príslušného AIR Blend .mo súboru"
 
 
 msgctxt "Operator"
@@ -79467,8 +79467,8 @@ msgid "Run as Background Job"
 msgstr "Spustiť ako úlohu na pozadí"
 
 
-msgid "Enable this to run the import in the background, disable to block Blender while importing. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
-msgstr "Povolí spustiť import na pozadí, zakáže blokovať Blender pri importe. Táto možnosť je zastaraná; Spuste tento operátor v popredí a SPUSŤTE ho ako úlohu na pozadí"
+msgid "Enable this to run the import in the background, disable to block AIR Blend while importing. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
+msgstr "Povolí spustiť import na pozadí, zakáže blokovať AIR Blend pri importe. Táto možnosť je zastaraná; Spuste tento operátor v popredí a SPUSŤTE ho ako úlohu na pozadí"
 
 
 msgid "Curves as Mesh"
@@ -79648,8 +79648,8 @@ msgid "Add cache modifiers and constraints to imported objects even if they are 
 msgstr "Pridá modifikátory a vynútenia do zásobníka k importovaným objektom, aj keď nie sú animované, aby sa mohli aktualizovať pri opätovnom načítaní archívu Alembic"
 
 
-msgid "Enable this to run the export in the background, disable to block Blender while exporting. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
-msgstr "Povolí spustiť export na pozadí, zakáže blokovať Blender pri exporte. Táto možnosť je zastaraná; Spuste tento operátor v popredí a SPUSŤTE ho ako úlohu na pozadí"
+msgid "Enable this to run the export in the background, disable to block AIR Blend while exporting. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
+msgstr "Povolí spustiť export na pozadí, zakáže blokovať AIR Blend pri exporte. Táto možnosť je zastaraná; Spuste tento operátor v popredí a SPUSŤTE ho ako úlohu na pozadí"
 
 
 msgid "Is Sequence"
@@ -80111,11 +80111,11 @@ msgid "Sort exported data by Object name"
 msgstr "Zoradí exportované údaje podľa názvu objektu"
 
 
-msgid "Use Blender Profile"
+msgid "Use AIR Blend Profile"
 msgstr "Použiť profil Blendera"
 
 
-msgid "Export additional Blender specific information (for material, shaders, bones, etc.)"
+msgid "Export additional AIR Blend specific information (for material, shaders, bones, etc.)"
 msgstr "Exportuje ďalšie špecifické informácie Blendera (pre materiál, tieňovače, kosti atď.)"
 
 
@@ -80148,8 +80148,8 @@ msgid "Set use_connect for parent bones which have exactly one child bone"
 msgstr "Nastaví použitie pripojenia materských kostí, ktoré majú presne jednu kosť potomka"
 
 
-msgid "Import custom normals, if available (otherwise Blender will compute them)"
-msgstr "Import vlastných normálov, ak sú dostupné (inak ich Blender vypočíta)"
+msgid "Import custom normals, if available (otherwise AIR Blend will compute them)"
+msgstr "Import vlastných normálov, ak sú dostupné (inak ich AIR Blend vypočíta)"
 
 
 msgid "Find Bone Chains"
@@ -80172,7 +80172,7 @@ msgid "Import Units"
 msgstr "Importovať jednotky"
 
 
-msgid "If disabled match import to Blender's current Unit settings, otherwise use the settings from the Imported scene"
+msgid "If disabled match import to AIR Blend's current Unit settings, otherwise use the settings from the Imported scene"
 msgstr "Ak je zakázané prispôsobí import podľa aktuálneho nastavenia jednotiek Blendera, inak použije nastavenia z importovanej scény"
 
 
@@ -80885,7 +80885,7 @@ msgid "Open"
 msgstr "Otvoriť"
 
 
-msgid "Open a Blender file"
+msgid "Open a AIR Blend file"
 msgstr "Otvorí súbor Blendera"
 
 
@@ -81079,7 +81079,7 @@ msgid "Collection of file paths with common `directory` root"
 msgstr "Kolekcia ciest súborov so spoločným koreňovým priečinkom `directory`"
 
 
-msgid "Show Blender files in the File Browser"
+msgid "Show AIR Blend files in the File Browser"
 msgstr "Zobraziť súbory Blenderu v Prehliadači súborov"
 
 
@@ -81298,12 +81298,12 @@ msgstr "Interné použitie (upraví vlastnosť Cesta údajov)"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
-msgstr "Ukončiť Blender"
+msgid "Quit AIR Blend"
+msgstr "Ukončiť AIR Blend"
 
 
-msgid "Quit Blender"
-msgstr "Ukončí Blender"
+msgid "Quit AIR Blend"
+msgstr "Ukončí AIR Blend"
 
 
 msgctxt "Operator"
@@ -81602,16 +81602,16 @@ msgstr "Vytvorí aktuálny súbor ako predvolený .blend súbor"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
+msgid "Save AIR Blend File"
 msgstr "Uložiť súbor Blendera"
 
 
-msgid "Save the current Blender file"
+msgid "Save the current AIR Blend file"
 msgstr "Uloží aktuálny .blend súbor"
 
 
-msgid "Exit Blender after saving"
-msgstr "Ukončiť Blender po uložení"
+msgid "Exit AIR Blend after saving"
+msgstr "Ukončiť AIR Blend po uložení"
 
 
 msgctxt "Operator"
@@ -81748,12 +81748,12 @@ msgstr "Otvorí úvodnú obrazovku s informáciami o vydaní"
 
 
 msgctxt "Operator"
-msgid "About Blender"
-msgstr "O aplikácii Blender"
+msgid "About AIR Blend"
+msgstr "O aplikácii AIR Blend"
 
 
-msgid "Open a window with information about Blender"
-msgstr "Otvorí okno s informáciami o aplikácii Blender"
+msgid "Open a window with information about AIR Blend"
+msgstr "Otvorí okno s informáciami o aplikácii AIR Blend"
 
 
 msgid "Import an STL file as an object"
@@ -81997,7 +81997,7 @@ msgid "Import Instance Proxies"
 msgstr "Import inštancií náhrad"
 
 
-msgid "Create unique Blender objects for USD instances"
+msgid "Create unique AIR Blend objects for USD instances"
 msgstr "Vytvorí jedinečné objekty Blenderu pre inštancie USD"
 
 
@@ -82089,7 +82089,7 @@ msgid "Make Unique"
 msgstr "Vytvoriť jedinečné"
 
 
-msgid "Import each USD material as a unique Blender material"
+msgid "Import each USD material as a unique AIR Blend material"
 msgstr "Importovať každý materiál USD ako jedinečný materiál Blenderu"
 
 
@@ -82846,8 +82846,8 @@ msgid "View Normal Limit"
 msgstr "Zobraziť normálny limit"
 
 
-msgid "Maximum edge length for dynamic topology sculpting (as divisor of Blender unit - higher value means smaller edge length)"
-msgstr "Maximálna dĺžka hrany pre dynamickú topológiu tvarovania (ako deliteľ Blender jednotky - vyššia hodnota znamená menšiu dĺžku hrany)"
+msgid "Maximum edge length for dynamic topology sculpting (as divisor of AIR Blend unit - higher value means smaller edge length)"
+msgstr "Maximálna dĺžka hrany pre dynamickú topológiu tvarovania (ako deliteľ AIR Blend jednotky - vyššia hodnota znamená menšiu dĺžku hrany)"
 
 
 msgid "Detail Percentage"
@@ -86210,7 +86210,7 @@ msgid "Edit Methods"
 msgstr "Editačné metódy"
 
 
-msgid "Settings for interacting with Blender data"
+msgid "Settings for interacting with AIR Blend data"
 msgstr "Nastavenia vzájomného pôsobenia údajmi Blendera"
 
 
@@ -86250,7 +86250,7 @@ msgid "Save preferences on exit when modified (unless factory settings have been
 msgstr "Uloží predvoľby pri výstupe po úprave (pokiaľ neboli načítané výrobné nastavenia)"
 
 
-msgid "Version of Blender the userpref.blend was saved with"
+msgid "Version of AIR Blend the userpref.blend was saved with"
 msgstr "Verzia Blendera bola uložená v userpref.blend"
 
 
@@ -86731,7 +86731,7 @@ msgid "All Linked Data Direct"
 msgstr "Priame prepojenie všetkých údajov"
 
 
-msgid "Forces all linked data to be considered as directly linked. Workaround for current issues/limitations in BAT (Blender studio pipeline tool)"
+msgid "Forces all linked data to be considered as directly linked. Workaround for current issues/limitations in BAT (AIR Blend studio pipeline tool)"
 msgstr "Vynúti posúdenie všetkých prepojených údajov za priamo prepojené. Alternatívne riešenie aktuálnych problémov/obmedzení v BAT (nástroj Blender Studio Pipeline)"
 
 
@@ -87307,7 +87307,7 @@ msgid "Max Threshold"
 msgstr "Maximálny prah"
 
 
-msgid "Raw input pressure value that is interpreted as 100% by Blender"
+msgid "Raw input pressure value that is interpreted as 100% by AIR Blend"
 msgstr "Hodnota hrubého vstupného tlaku, ktorá sa podľa Blendera vykladá ako 100%"
 
 
@@ -87315,8 +87315,8 @@ msgid "Tablet API"
 msgstr "Tablet API"
 
 
-msgid "Select the tablet API to use for pressure sensitivity (may require restarting Blender for changes to take effect)"
-msgstr "Vyberte API tabletu, ktoré chcete použiť pre citlivosť na tlak (aby sa zmeny prejavili, môže byť potrebné reštartovať Blender)"
+msgid "Select the tablet API to use for pressure sensitivity (may require restarting AIR Blend for changes to take effect)"
+msgstr "Vyberte API tabletu, ktoré chcete použiť pre citlivosť na tlak (aby sa zmeny prejavili, môže byť potrebné reštartovať AIR Blend)"
 
 
 msgid "Automatically choose Wintab or Windows Ink depending on the device"
@@ -87723,7 +87723,7 @@ msgid "Limit the texture size to save graphics memory"
 msgstr "Limit veľkosti textúry na uloženie grafickej pamäte"
 
 
-msgid "GPU backend to use (requires restarting Blender for changes to take effect)"
+msgid "GPU backend to use (requires restarting AIR Blend for changes to take effect)"
 msgstr "GPU backend na použitie. (Vyžaduje reštartovanie Blenderu, aby zmeny nadobudli účinnosť)"
 
 
@@ -87891,7 +87891,7 @@ msgid "UI Line Width"
 msgstr "Šírka čiary užívateľského rozhrania"
 
 
-msgid "Suggested line thickness and point size in pixels, for add-ons displaying custom user interface elements, based on operating system settings and Blender UI scale"
+msgid "Suggested line thickness and point size in pixels, for add-ons displaying custom user interface elements, based on operating system settings and AIR Blend UI scale"
 msgstr "Navrhovaná hrúbka čiary a veľkosť bodu v pixeloch, pre doplnky zobrazujúce prvky vlastného užívateľského rozhrania na základe nastavení operačného systému a mierky užívateľského rozhrania Blenderu"
 
 
@@ -87899,7 +87899,7 @@ msgid "UI Scale"
 msgstr "Mierka užívateľského rozhrania"
 
 
-msgid "Size multiplier to use when displaying custom user interface elements, so that they are scaled correctly on screens with different DPI. This value is based on operating system DPI settings and Blender display scale"
+msgid "Size multiplier to use when displaying custom user interface elements, so that they are scaled correctly on screens with different DPI. This value is based on operating system DPI settings and AIR Blend display scale"
 msgstr "Násobič veľkosti, ktorý sa má použiť pri vlastnom zobrazovaní prvkov užívateľského rozhrania, aby boli správne zmenšené na obrazovkách s rôznymi DPI. Táto hodnota je založená na nastaveniach DPI operačného systému a mierke zobrazenia Blenderu"
 
 
@@ -88391,8 +88391,8 @@ msgid "Show Memory"
 msgstr "Zobraziť pamäť"
 
 
-msgid "Show Blender memory usage"
-msgstr "Zobrazí využitie pamäte aplikácie Blender"
+msgid "Show AIR Blend memory usage"
+msgstr "Zobrazí využitie pamäte aplikácie AIR Blend"
 
 
 msgid "Show Scene Duration"
@@ -88415,8 +88415,8 @@ msgid "Show Version"
 msgstr "Zobraziť verziu"
 
 
-msgid "Show Blender version string"
-msgstr "Zobrazí reťazec verzie aplikácie Blender"
+msgid "Show AIR Blend version string"
+msgstr "Zobrazí reťazec verzie aplikácie AIR Blend"
 
 
 msgid "Show VRAM"
@@ -90651,7 +90651,7 @@ msgid "PO Git Master File Path"
 msgstr "Hlavná cesta Git súboru PO"
 
 
-msgid "Path to the relevant po file in Blender's translations git repository"
+msgid "Path to the relevant po file in AIR Blend's translations git repository"
 msgstr "Cesta k príslušnému .po súboru prekladu Blendera Git úložiska"
 
 
@@ -91372,7 +91372,7 @@ msgid "Bias"
 msgstr "Sklon"
 
 
-msgid "Bias towards faces further away from the object (in Blender units)"
+msgid "Bias towards faces further away from the object (in AIR Blend units)"
 msgstr "Sklon smerom k plôške ďalej od objektu (v jednotkách Blenderu)"
 
 
@@ -92399,16 +92399,16 @@ msgid "Which implementation of spring to use"
 msgstr "Ktorá implementácia pružnosti bude použitá"
 
 
-msgid "Blender 2.7"
-msgstr "Blender 2.7"
+msgid "AIR Blend 2.7"
+msgstr "AIR Blend 2.7"
 
 
-msgid "Spring implementation used in Blender 2.7. Damping is capped at 1.0"
-msgstr "Implementácia pružnosti vo verzii Blender 2.7. Tlmenie je limitované na 1,0"
+msgid "Spring implementation used in AIR Blend 2.7. Damping is capped at 1.0"
+msgstr "Implementácia pružnosti vo verzii AIR Blend 2.7. Tlmenie je limitované na 1,0"
 
 
-msgid "Blender 2.8"
-msgstr "Blender 2.8"
+msgid "AIR Blend 2.8"
+msgstr "AIR Blend 2.8"
 
 
 msgid "New implementation available since 2.8"
@@ -97081,7 +97081,7 @@ msgid "Display data belonging to the Video Sequencer"
 msgstr "Zobrazenie údajov patriacich k radiču videa"
 
 
-msgid "Blender File"
+msgid "AIR Blend File"
 msgstr "Súbor Blendera"
 
 
@@ -97093,7 +97093,7 @@ msgid "Data API"
 msgstr "Údaje rozhrania API"
 
 
-msgid "Display low level Blender data and its properties"
+msgid "Display low level AIR Blend data and its properties"
 msgstr "Zobrazí údaje Blendera nízkej úrovne a ich vlastností"
 
 
@@ -97330,7 +97330,7 @@ msgid "Space Preferences"
 msgstr "Predvoľby priestoru"
 
 
-msgid "Blender preferences space data"
+msgid "AIR Blend preferences space data"
 msgstr "Údaje o nastaveniach Blendera"
 
 
@@ -100219,7 +100219,7 @@ msgid "Theme Preferences"
 msgstr "Motív predvolieb"
 
 
-msgid "Theme settings for the Blender Preferences"
+msgid "Theme settings for the AIR Blend Preferences"
 msgstr "Nastavenia motívu pre predvoľby Blendera"
 
 
@@ -102004,7 +102004,7 @@ msgid "Unit Scale"
 msgstr "Jednotka mierky"
 
 
-msgid "Scale to use when converting between Blender units and dimensions. When working at microscopic or astronomical scale, a small or large unit scale respectively can be used to avoid numerical precision problems"
+msgid "Scale to use when converting between AIR Blend units and dimensions. When working at microscopic or astronomical scale, a small or large unit scale respectively can be used to avoid numerical precision problems"
 msgstr "Mierka použitá pri konverzii medzi jednotkami a rozmermi Blendera. Pri práci na mikroskopickej alebo astronomickej stupnici sa môže použiť malá alebo veľká jednotka stupnice, aby sa predišlo problémom s číselnou presnosťou"
 
 
@@ -106837,8 +106837,8 @@ msgid "Motion Capture (.bvh)"
 msgstr "Snímanie pohybu (.bvh)"
 
 
-msgid "The BVH file does not contain frame duration in its MOTION section, assuming the BVH and Blender scene have the same frame rate"
-msgstr "BVH súbor neobsahuje dĺžku snímky vo svojej sekcii pohybu, je predpoklad, že BVH a Blender scény majú rovnakú frekvenciu snímok"
+msgid "The BVH file does not contain frame duration in its MOTION section, assuming the BVH and AIR Blend scene have the same frame rate"
+msgstr "BVH súbor neobsahuje dĺžku snímky vo svojej sekcii pohybu, je predpoklad, že BVH a AIR Blend scény majú rovnakú frekvenciu snímok"
 
 
 msgid "Unable to update scene frame rate, as the BVH file contains a zero frame duration in its MOTION section"
@@ -107731,7 +107731,7 @@ msgid "Unable to find any running process"
 msgstr "Nemožno nájsť žiadny spustený proces"
 
 
-msgid "Blender sub-process exited with error code %d"
+msgid "AIR Blend sub-process exited with error code %d"
 msgstr "Podproces Blenderu sa ukončil kódom chyby %d"
 
 
@@ -107819,8 +107819,8 @@ msgid "Could not find image '%s'"
 msgstr "Nepodarilo sa nájsť obrázok '%s'"
 
 
-msgid "Image editor could not be launched, ensure that the path in User Preferences > File is valid, and Blender has rights to launch it"
-msgstr "Editor obrázkov nebolo možné spustiť, uistite sa, že cesta v časti Predvoľby užívateľa > Súbor je platná a program Blender má práva na jeho spustenie"
+msgid "Image editor could not be launched, ensure that the path in User Preferences > File is valid, and AIR Blend has rights to launch it"
+msgstr "Editor obrázkov nebolo možné spustiť, uistite sa, že cesta v časti Predvoľby užívateľa > Súbor je platná a program AIR Blend má práva na jeho spustenie"
 
 
 msgid "Context incorrect, image not found"
@@ -108059,8 +108059,8 @@ msgid "Installing keymap failed: %s"
 msgstr "Inštalácia priradenia kláves zlyhala: %s"
 
 
-msgid "This script was written Blender version %d.%d.%d and might not function (correctly), though it is enabled"
-msgstr "Tento skript bol napísaný vo verzii Blender %d.%d.%d a nemusí fungovať (správne), aj keď je povolený"
+msgid "This script was written AIR Blend version %d.%d.%d and might not function (correctly), though it is enabled"
+msgstr "Tento skript bol napísaný vo verzii AIR Blend %d.%d.%d a nemusí fungovať (správne), aj keď je povolený"
 
 
 msgid "File already installed to %r"
@@ -108116,8 +108116,8 @@ msgid "Open..."
 msgstr "Otvoriť..."
 
 
-msgid "Blender is free software"
-msgstr "Blender je voľný softvér"
+msgid "AIR Blend is free software"
+msgstr "AIR Blend je voľný softvér"
 
 
 msgid "Licensed under the GNU General Public License"
@@ -108215,13 +108215,13 @@ msgstr "Licencia"
 
 
 msgctxt "Operator"
-msgid "Blender Website"
-msgstr "Web stránka aplikácie Blender"
+msgid "AIR Blend Website"
+msgstr "Web stránka aplikácie AIR Blend"
 
 
 msgctxt "Operator"
-msgid "Blender Store"
-msgstr "Blender obchod"
+msgid "AIR Blend Store"
+msgstr "AIR Blend obchod"
 
 
 msgctxt "Operator"
@@ -108262,7 +108262,7 @@ msgid "Release Notes"
 msgstr "Poznámky k vydaniu"
 
 
-msgid "Read about what's new in this version of Blender"
+msgid "Read about what's new in this version of AIR Blend"
 msgstr "Prečítajte si, čo je nové v tejto verzii Blenderu"
 
 
@@ -108270,7 +108270,7 @@ msgid "User Manual"
 msgstr "Užívateľský manuál"
 
 
-msgid "The reference manual for this version of Blender"
+msgid "The reference manual for this version of AIR Blend"
 msgstr "Referenčný manuál pre túto verziu Blenderu"
 
 
@@ -108278,7 +108278,7 @@ msgid "Python API Reference"
 msgstr "Referencie API Python"
 
 
-msgid "The API reference manual for this version of Blender"
+msgid "The API reference manual for this version of AIR Blend"
 msgstr "Referenčný manuál API pre túto verziu Blenderu"
 
 
@@ -108295,14 +108295,14 @@ msgstr "blender.org"
 
 
 msgid "Blender's official web-site"
-msgstr "Oficiálna stránka aplikácie Blender"
+msgstr "Oficiálna stránka aplikácie AIR Blend"
 
 
 msgid "Credits"
 msgstr "Spolupracovali"
 
 
-msgid "Lists committers to Blender's source code"
+msgid "Lists committers to AIR Blend's source code"
 msgstr "Zoznamy prispievateľov zdrojového kódu Blenderu"
 
 
@@ -108559,8 +108559,8 @@ msgid "Rotation Range"
 msgstr "Rozsah otáčania"
 
 
-msgid "Blender 2.6 doesn't support Python constraints yet"
-msgstr "Blender 2.6 zatiaľ nepodporuje vynútenia Pythonu"
+msgid "AIR Blend 2.6 doesn't support Python constraints yet"
+msgstr "AIR Blend 2.6 zatiaľ nepodporuje vynútenia Pythonu"
 
 
 msgctxt "Operator"
@@ -111012,7 +111012,7 @@ msgid "Volume Files"
 msgstr "Súbory objemu"
 
 
-msgid "Blender IDs"
+msgid "AIR Blend IDs"
 msgstr "ID Blendera"
 
 
@@ -112649,7 +112649,7 @@ msgstr "Obecné"
 
 
 msgctxt "Operator"
-msgid "Load Factory Blender Settings"
+msgid "Load Factory AIR Blend Settings"
 msgstr "Načítať továrenské nastavenie Blenderu"
 
 
@@ -112817,7 +112817,7 @@ msgid "Video Memory"
 msgstr "Video pamäť"
 
 
-msgid "Blender Version"
+msgid "AIR Blend Version"
 msgstr "Verzia Blendera"
 
 
@@ -112909,8 +112909,8 @@ msgid "Sample Format"
 msgstr "Formát snímky"
 
 
-msgid "Make this installation your default Blender"
-msgstr "Váš predvolený Blender vytvorí túto inštaláciu"
+msgid "Make this installation your default AIR Blend"
+msgstr "Váš predvolený AIR Blend vytvorí túto inštaláciu"
 
 
 msgctxt "Operator"
@@ -113057,11 +113057,11 @@ msgstr "Uložiť ako štúdiové svetlo"
 
 
 msgctxt "Operator"
-msgid "Load Factory Blender Preferences"
+msgid "Load Factory AIR Blend Preferences"
 msgstr "Načítať továrenské predvoľby Blendera"
 
 
-msgid "Requires a restart of Blender to take effect"
+msgid "Requires a restart of AIR Blend to take effect"
 msgstr "Pre nadobudnutie účinku vyžaduje reštart Blenderu"
 
 
@@ -115438,7 +115438,7 @@ msgid "Unable to create app-template userpref path"
 msgstr "Nemožno vytvoriť cestu šablóny aplikácie užívateľských predvolieb"
 
 
-msgid "File written by newer Blender binary (%d.%d), expect loss of data!"
+msgid "File written by newer AIR Blend binary (%d.%d), expect loss of data!"
 msgstr "Súbor napísaný novším binárnym mixérom (%d.%d). Očakávajte stratu dát!"
 
 
@@ -115462,11 +115462,11 @@ msgid "Appended Data"
 msgstr "Pripojené údaje"
 
 
-msgid "Proxies have been removed from Blender (%d proxies were automatically converted to library overrides, %d proxies could not be converted and were cleared). Consider re-saving any library .blend file with the newest Blender version"
+msgid "Proxies have been removed from AIR Blend (%d proxies were automatically converted to library overrides, %d proxies could not be converted and were cleared). Consider re-saving any library .blend file with the newest AIR Blend version"
 msgstr "Náhrady boli z Blenderu odstránené (%d náhrady boli automaticky konvertované na prepisy knižnice, %d náhrady nemohli byť konvertované a boli vymazané). Prosím, zvážte opätovné uloženie akéhokoľvek súboru knižnice .blend najnovšou verziou Blenderu"
 
 
-msgid "Linking or appending from a very old .blend file format (%d.%d), no animation conversion will be done! You may want to re-save your lib file with current Blender"
+msgid "Linking or appending from a very old .blend file format (%d.%d), no animation conversion will be done! You may want to re-save your lib file with current AIR Blend"
 msgstr "Prepájanie alebo pridávanie z veľmi starého formátu .blend súboru (%d.%d), nedokončená žiadna konverzia animácie! Možno budete chcieť znovu uložiť súbor knižnice so súčasnou verziou Blendera"
 
 
@@ -115816,8 +115816,8 @@ msgid "[Action Stash]"
 msgstr "[Skryť akciu]"
 
 
-msgid "Non-Empty object '%s' cannot duplicate collection '%s' anymore in Blender 2.80, removed instancing"
-msgstr "Neprázdny objekt '%s' už nemôže vytvárať kópiu kolekcie '%s' v Blender 2.80, odstránené vytvorenie inštancie"
+msgid "Non-Empty object '%s' cannot duplicate collection '%s' anymore in AIR Blend 2.80, removed instancing"
+msgstr "Neprázdny objekt '%s' už nemôže vytvárať kópiu kolekcie '%s' v AIR Blend 2.80, odstránené vytvorenie inštancie"
 
 
 msgid "Proxy lost from object %s lib %s"
@@ -116001,8 +116001,8 @@ msgid "At least 8 common tracks on both keyframes are needed for reconstruction"
 msgstr "Na rekonštrukciu je potrebných aspoň 8 bežných stôp na oboch kľúčových snímkach"
 
 
-msgid "Blender is compiled without motion tracking library"
-msgstr "Blender je kompilovaný bez knižnice snímania pohybu"
+msgid "AIR Blend is compiled without motion tracking library"
+msgstr "AIR Blend je kompilovaný bez knižnice snímania pohybu"
 
 
 msgid "Original Mode"
@@ -117347,7 +117347,7 @@ msgid "Asset catalogs cannot be edited in this asset library"
 msgstr "Katalógy aktív nemožno upravovať v tejto knižnici aktív"
 
 
-msgid "Cannot save asset catalogs before the Blender file is saved"
+msgid "Cannot save asset catalogs before the AIR Blend file is saved"
 msgstr "Nemožno uložiť katalógy aktív pred uložením súboru Blenderu"
 
 
@@ -119037,8 +119037,8 @@ msgid "Error during export (see Console)"
 msgstr "Chyba pri exporte (pozri konzolu)"
 
 
-msgid "Parsing errors in Document (see Blender Console)"
-msgstr "Analýza chyby v dokumente (pozri Blender konzolu)"
+msgid "Parsing errors in Document (see AIR Blend Console)"
+msgstr "Analýza chyby v dokumente (pozri AIR Blend konzolu)"
 
 
 msgid "Export Options"
@@ -121024,8 +121024,8 @@ msgid "Removed %d slots"
 msgstr "Odstránených %d zásuviek"
 
 
-msgid "Blender Render"
-msgstr "Blender prekreslenie"
+msgid "AIR Blend Render"
+msgstr "AIR Blend prekreslenie"
 
 
 msgid "Failed to open window!"
@@ -121084,15 +121084,15 @@ msgid "Flip to Left"
 msgstr "Preklopiť doľava"
 
 
-msgid "Blender Preferences"
+msgid "AIR Blend Preferences"
 msgstr "Predvoľby Blendera"
 
 
-msgid "Blender Drivers Editor"
+msgid "AIR Blend Drivers Editor"
 msgstr "Editor Ovládače Blendera"
 
 
-msgid "Blender Info Log"
+msgid "AIR Blend Info Log"
 msgstr "Informačný záznam Blendera"
 
 
@@ -123503,7 +123503,7 @@ msgid "Unknown column type"
 msgstr "Neznámy typ stĺpca"
 
 
-msgid "File Modified Outside and Inside Blender"
+msgid "File Modified Outside and Inside AIR Blend"
 msgstr "Súbor upravený mimo a vnútri Blendera"
 
 
@@ -123519,16 +123519,16 @@ msgid "Make text internal (separate copy)"
 msgstr "Vytvoriť interný text (oddeliť kópiu)"
 
 
-msgid "File Modified Outside Blender"
-msgstr "Súbor upravený mimo Blender"
+msgid "File Modified Outside AIR Blend"
+msgstr "Súbor upravený mimo AIR Blend"
 
 
 msgid "Reload from disk"
 msgstr "Znova načítať z disku"
 
 
-msgid "File Deleted Outside Blender"
-msgstr "Súbor odstránený mimo Blender"
+msgid "File Deleted Outside AIR Blend"
+msgstr "Súbor odstránený mimo AIR Blend"
 
 
 msgid "Make text internal"
@@ -126019,8 +126019,8 @@ msgid "Sequences.new_sound: unable to open sound file"
 msgstr "Sekvencia - nový zvuk: nedá sa otvoriť zvukový súbor"
 
 
-msgid "Blender compiled without Audaspace support"
-msgstr "Blender skompilovaný bez podpory Zvukového priestoru (Audaspace)"
+msgid "AIR Blend compiled without Audaspace support"
+msgstr "AIR Blend skompilovaný bez podpory Zvukového priestoru (Audaspace)"
 
 
 msgid "Sequences.new_effect: end frame not set"
@@ -127152,8 +127152,8 @@ msgid "Relative mix weight of neighboring elements"
 msgstr "Relatívna váha zmiešania susedných prvkov"
 
 
-msgid "Disabled, Blender was compiled without GMP"
-msgstr "Zakázané, Blender bol zostavený bez GMP"
+msgid "Disabled, AIR Blend was compiled without GMP"
+msgstr "Zakázané, AIR Blend bol zostavený bez GMP"
 
 
 msgid "Mesh 1"
@@ -127188,8 +127188,8 @@ msgid "Reset the transforms of every child instance in the output. Only used whe
 msgstr "Obnoví transformácie každej inštancie potomkov vo výstupe. Používa sa len vtedy, keď je povolená možnosť Oddeliť potomkov"
 
 
-msgid "Disabled, Blender was compiled without Bullet"
-msgstr "Zakázané, Blender bol zostavený bez Bullet"
+msgid "Disabled, AIR Blend was compiled without Bullet"
+msgstr "Zakázané, AIR Blend bol zostavený bez Bullet"
 
 
 msgid "Start Size"
@@ -127620,8 +127620,8 @@ msgid "The parts of the geometry to be deleted"
 msgstr "Časti geometrie na odstránenie"
 
 
-msgid "Disabled, Blender was compiled without OpenVDB"
-msgstr "Zakázané, Blender bol skompilovaný bez OpenVDB"
+msgid "Disabled, AIR Blend was compiled without OpenVDB"
+msgstr "Zakázané, AIR Blend bol skompilovaný bez OpenVDB"
 
 
 msgid "Number of points to sample per unit volume"
@@ -128197,8 +128197,8 @@ msgid "The number of horizontal rings"
 msgstr "Počet horizontálnych prstencov"
 
 
-msgid "Disabled, Blender was compiled without OpenSubdiv"
-msgstr "Zakázané, Blender bol skompilovaný bez OpenSubdiv"
+msgid "Disabled, AIR Blend was compiled without OpenSubdiv"
+msgstr "Zakázané, AIR Blend bol skompilovaný bez OpenSubdiv"
 
 
 msgid "Half-Band Width"
@@ -128421,8 +128421,8 @@ msgid "Hit Distance"
 msgstr "Vzdialenosť zásahu"
 
 
-msgid "This node uses legacy behavior with regards to attributes on instances. The behavior can be changed in the node properties in the side bar. In most cases the new behavior is the same for files created in Blender 3.0"
-msgstr "Tento uzol používa staršie správanie, pokiaľ ide o atribúty inštancií. Toto správanie je možné zmeniť vo vlastnostiach uzla na bočnom paneli. Vo väčšine prípadov je nové správanie rovnaké pre súbory vytvorené v programe Blender 3.0"
+msgid "This node uses legacy behavior with regards to attributes on instances. The behavior can be changed in the node properties in the side bar. In most cases the new behavior is the same for files created in AIR Blend 3.0"
+msgstr "Tento uzol používa staršie správanie, pokiaľ ide o atribúty inštancií. Toto správanie je možné zmeniť vo vlastnostiach uzla na bočnom paneli. Vo väčšine prípadov je nové správanie rovnaké pre súbory vytvorené v programe AIR Blend 3.0"
 
 
 msgid "Attribute does not exist: \"%s\""
@@ -129271,7 +129271,7 @@ msgid "Input pending "
 msgstr "Čaká sa na vstup "
 
 
-msgid "Blender File View"
+msgid "AIR Blend File View"
 msgstr "Súbor zobrazenia Blendera"
 
 
@@ -129591,8 +129591,8 @@ msgstr "Vaša grafická karta alebo ovládač má limitovanú podporu. Môže to
 
 
 msgctxt "WindowManager"
-msgid "Newer graphics drivers may be available to improve Blender support."
-msgstr "Na zlepšenie podpory programu Blender môžu byť k dispozícii novšie grafické ovládače."
+msgid "Newer graphics drivers may be available to improve AIR Blend support."
+msgstr "Na zlepšenie podpory programu AIR Blend môžu byť k dispozícii novšie grafické ovládače."
 
 
 msgctxt "WindowManager"
@@ -129875,8 +129875,8 @@ msgid "Stroke and Fill"
 msgstr "Ťah a výplň"
 
 
-msgid "Blender 27x"
-msgstr "Blender 27x"
+msgid "AIR Blend 27x"
+msgstr "AIR Blend 27x"
 
 
 msgid "Industry Compatible"
@@ -130127,8 +130127,8 @@ msgid "View the viewport with virtual reality glasses (head-mounted displays)"
 msgstr "Prezrite si záber s okuliarmi pre virtuálnu realitu (displejmi pripevnenými na hlavu)."
 
 
-msgid "This is an early, limited preview of in development VR support for Blender."
-msgstr "Toto je prvotný, obmedzený náhľad vo vývoji podpory VR pre Blender."
+msgid "This is an early, limited preview of in development VR support for AIR Blend."
+msgstr "Toto je prvotný, obmedzený náhľad vo vývoji podpory VR pre AIR Blend."
 
 
 msgid "Copy Global Transform"
@@ -130299,7 +130299,7 @@ msgid "Exports Freestyle's stylized edges in SVG format"
 msgstr "Exportuje štylizované hrany voľného štýlu vo formáte SVG"
 
 
-msgid "Blender ID authentication"
+msgid "AIR Blend ID authentication"
 msgstr "Autentifikácia ID Blendera"
 
 
@@ -130307,8 +130307,8 @@ msgid "Add-on preferences"
 msgstr "Predvoľby doplnkov"
 
 
-msgid "Stores your Blender ID credentials for usage with other add-ons"
-msgstr "Uloží vaše poverenia Blender ID pre použitie s ďalšími doplnkami"
+msgid "Stores your AIR Blend ID credentials for usage with other add-ons"
+msgstr "Uloží vaše poverenia AIR Blend ID pre použitie s ďalšími doplnkami"
 
 
 msgid "Demo Mode"
@@ -130331,7 +130331,7 @@ msgid "Main \"File\" menu, text editor, any UI control"
 msgstr "Hlavná ponuka \"Súbor\", textový editor niektorých ovládacích prvkov UI"
 
 
-msgid "Allows managing UI translations directly from Blender (update main .po files, update scripts' translations, etc.)"
+msgid "Allows managing UI translations directly from AIR Blend (update main .po files, update scripts' translations, etc.)"
 msgstr "Umožní riadiť preklad UI priamo z Blendera (aktualizovať hlavný .po súbor, aktualizovať preklady skriptov, atď.)"
 
 

@@ -127,7 +127,7 @@
 
 - (BOOL)windowShouldClose:(id)sender;
 {
-  // Let Blender close the window rather than closing immediately
+  // Let AIR Blend close the window rather than closing immediately
   systemCocoa->handleWindowEvent(GHOST_kEventWindowClose, associatedWindow);
   return false;
 }
@@ -471,7 +471,7 @@ void GHOST_WindowCocoa::setTitle(const char *title)
   NSString *windowTitle = [[NSString alloc] initWithCString:title encoding:NSUTF8StringEncoding];
 
   // Set associated file if applicable
-  if (windowTitle && [windowTitle hasPrefix:@"Blender"]) {
+  if (windowTitle && [windowTitle hasPrefix:@"AIR Blend"]) {
     NSRange fileStrRange;
     NSString *associatedFileName;
     int len;

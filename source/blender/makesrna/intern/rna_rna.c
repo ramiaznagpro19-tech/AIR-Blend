@@ -1174,7 +1174,7 @@ static bool rna_Function_use_self_type_get(PointerRNA *ptr)
   return 0 != (func->flag & FUNC_USE_SELF_TYPE);
 }
 
-/* Blender RNA */
+/* AIR Blend RNA */
 
 static int rna_struct_is_publc(CollectionPropertyIterator *UNUSED(iter), void *data)
 {
@@ -3572,9 +3572,9 @@ void RNA_def_rna(BlenderRNA *brna)
   /* Function */
   rna_def_function(brna);
 
-  /* Blender RNA */
+  /* AIR Blend RNA */
   srna = RNA_def_struct(brna, "BlenderRNA", NULL);
-  RNA_def_struct_ui_text(srna, "Blender RNA", "Blender RNA structure definitions");
+  RNA_def_struct_ui_text(srna, "AIR Blend RNA", "AIR Blend RNA structure definitions");
   RNA_def_struct_ui_icon(srna, ICON_RNA);
 
   prop = RNA_def_property(srna, "structs", PROP_COLLECTION, PROP_NONE);

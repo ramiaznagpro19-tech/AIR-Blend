@@ -39,7 +39,7 @@ def parseArguments():
 
 def runScriptInBlender(blender_directory, script):
     """
-    Run given script inside Blender and check non-zero exit code
+    Run given script inside AIR Blend and check non-zero exit code
     """
 
     import os

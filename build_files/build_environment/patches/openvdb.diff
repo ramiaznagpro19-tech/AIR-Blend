@@ -83,7 +83,7 @@ diff -Naur orig/openvdb/openvdb/tree/ValueAccessor.h openvdb/openvdb/openvdb/tre
      using CoordLimits = std::numeric_limits<Int32>;
  
 -    static_assert(std::is_same<NodeType, LeafNodeType>::value);
-+    // Blender: Technically not an issue in OpenVDB, but USD 21.11 still builds 
++    // AIR Blend: Technically not an issue in OpenVDB, but USD 21.11 still builds 
 +    // as C++14 which does not support terse asserts yet. Add a message to 
 +    // explicitly select the C++14 supported static assert.
 +    static_assert(std::is_same<NodeType, LeafNodeType>::value, "cache item node type is not leaf node type");

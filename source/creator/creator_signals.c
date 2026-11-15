@@ -76,7 +76,7 @@ static void sig_handle_blender_esc(int sig)
       printf("\nBlender killed\n");
       exit(2);
     }
-    printf("\nSent an internal break event. Press ^C again to kill Blender\n");
+    printf("\nSent an internal break event. Press ^C again to kill AIR Blend\n");
     count++;
   }
 }
@@ -239,7 +239,7 @@ void main_signal_setup_background(void)
   /* for all platforms, even windows has it! */
   BLI_assert(G.background);
 
-  /* Support pressing `Ctrl-C` to close Blender in background-mode.
+  /* Support pressing `Ctrl-C` to close AIR Blend in background-mode.
    * Useful to be able to cancel a render operation. */
   signal(SIGINT, sig_handle_blender_esc);
 }

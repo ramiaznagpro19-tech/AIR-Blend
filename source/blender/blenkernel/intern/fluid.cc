@@ -4394,7 +4394,7 @@ float BKE_fluid_get_velocity_at(Object *ob, float position[3], float velocity[3]
     velocity[1] = BLI_voxel_sample_trilinear(manta_get_velocity_y(fds->fluid), fds->res, pos);
     velocity[2] = BLI_voxel_sample_trilinear(manta_get_velocity_z(fds->fluid), fds->res, pos);
 
-    /* Convert simulation units to Blender units. */
+    /* Convert simulation units to AIR Blend units. */
     mul_v3_fl(velocity, size_mult);
     mul_v3_fl(velocity, time_mult);
 

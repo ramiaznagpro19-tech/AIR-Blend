@@ -63,7 +63,7 @@ const EnumPropertyItem rna_enum_usd_mtl_name_collision_mode_items[] = {
      "MAKE_UNIQUE",
      0,
      "Make Unique",
-     "Import each USD material as a unique Blender material"},
+     "Import each USD material as a unique AIR Blend material"},
     {USD_MTL_NAME_COLLISION_REFERENCE_EXISTING,
      "REFERENCE_EXISTING",
      0,
@@ -628,7 +628,7 @@ void WM_OT_usd_import(struct wmOperatorType *ot)
                   "import_instance_proxies",
                   true,
                   "Import Instance Proxies",
-                  "Create unique Blender objects for USD instances");
+                  "Create unique AIR Blend objects for USD instances");
 
   RNA_def_boolean(ot->srna,
                   "import_visible_only",

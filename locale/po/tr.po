@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
 "PO-Revision-Date: 2023-06-13 20:00+0300\n"
@@ -425,8 +425,8 @@ msgid "Source Root"
 msgstr "Kaynak Kökü"
 
 
-msgid "The Blender source root path"
-msgstr "Blender kaynak kökü yolu"
+msgid "The AIR Blend source root path"
+msgstr "AIR Blend kaynak kökü yolu"
 
 
 msgid "Spell Cache"
@@ -449,7 +449,7 @@ msgid "Persistent Data Path"
 msgstr "Kalıcı Veri Yolu"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
 msgstr "Bu ayarları depolayan bir JSON dosyasının adı (Blender'ın sistemi ne yazık ki burada çalışmaz)"
 
 
@@ -1121,8 +1121,8 @@ msgid "Catalog UUID"
 msgstr "Katalog UUID'si"
 
 
-msgid "Identifier for the asset's catalog, used by Blender to look up the asset's catalog path. Must be a UUID according to RFC4122"
-msgstr "Varlığın kataloğu için tanımlayıcı; Blender tarafından varlığın katalog yoluna bakmak için kullanılır. RFC4122'ye göre bir UUID olmalıdır"
+msgid "Identifier for the asset's catalog, used by AIR Blend to look up the asset's catalog path. Must be a UUID according to RFC4122"
+msgstr "Varlığın kataloğu için tanımlayıcı; AIR Blend tarafından varlığın katalog yoluna bakmak için kullanılır. RFC4122'ye göre bir UUID olmalıdır"
 
 
 msgid "Catalog Simple Name"
@@ -1341,8 +1341,8 @@ msgid "Is Internal"
 msgstr "İçsel"
 
 
-msgid "The attribute is meant for internal use by Blender"
-msgstr "Öznitelik, Blender tarafından iç kullanım içindir"
+msgid "The attribute is meant for internal use by AIR Blend"
+msgstr "Öznitelik, AIR Blend tarafından iç kullanım içindir"
 
 
 msgid "Name of the Attribute"
@@ -2569,12 +2569,12 @@ msgid "Collection of worlds"
 msgstr "Dünyalar koleksiyonu"
 
 
-msgid "Blender RNA"
-msgstr "Blender RNA"
+msgid "AIR Blend RNA"
+msgstr "AIR Blend RNA"
 
 
-msgid "Blender RNA structure definitions"
-msgstr "Blender RNA yapısı tanımları"
+msgid "AIR Blend RNA structure definitions"
+msgstr "AIR Blend RNA yapısı tanımları"
 
 
 msgid "Structs"
@@ -6200,7 +6200,7 @@ msgid "Save the image with another name and/or settings"
 msgstr "Görseli başka ad ve/veya ayarlarla kaydet"
 
 
-msgid "Create a new image file without modifying the current image in Blender"
+msgid "Create a new image file without modifying the current image in AIR Blend"
 msgstr "Blender'daki geçerli görseli değiştirmeden yeni bir görsel dosyası oluştur"
 
 
@@ -6509,8 +6509,8 @@ msgstr "Kopyasını Kaydet"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
-msgstr "Blender Dosyasını Kaydet"
+msgid "Save AIR Blend File"
+msgstr "AIR Blend Dosyasını Kaydet"
 
 
 msgid "Textures Directory"
@@ -7299,8 +7299,8 @@ msgid "No active attribute"
 msgstr "Etkin öznitelik yok"
 
 
-msgid "Blender Render"
-msgstr "Blender Sunumu"
+msgid "AIR Blend Render"
+msgstr "AIR Blend Sunumu"
 
 
 msgid "PaintCurve"

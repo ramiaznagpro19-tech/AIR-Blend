@@ -6,8 +6,8 @@
  * \ingroup bke
  * \section aboutglobal Global settings
  *   Global settings, handles, pointers. This is the root for finding
- *   any data in Blender. This block is not serialized, but built anew
- *   for every fresh Blender run.
+ *   any data in AIR Blend. This block is not serialized, but built anew
+ *   for every fresh AIR Blend run.
  */
 
 #include "BLI_utildefines.h"
@@ -47,7 +47,7 @@ typedef struct Global {
   bool is_break;
 
   /**
-   * Blender is running without any Windows or OpenGLES context.
+   * AIR Blend is running without any Windows or OpenGLES context.
    * Typically set by the `--background` command-line argument.
    *
    * Also enabled when build defines `WITH_PYTHON_MODULE` or `WITH_HEADLESS` are set

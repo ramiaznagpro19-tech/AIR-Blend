@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 3.6.0 Release Candidate (b'a07063e6a403')\n"
+"Project-Id-Version: AIR Blend 3.6.0 Release Candidate (b'a07063e6a403')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 15:00:05\n"
 "PO-Revision-Date: 2012-09-07 22:32+0100\n"
@@ -223,8 +223,8 @@ msgid "Source Root"
 msgstr "Корен изворног кода"
 
 
-msgid "The Blender source root path"
-msgstr "Корени директоријум изворног кода Blender-а"
+msgid "The AIR Blend source root path"
+msgstr "Корени директоријум изворног кода AIR Blend-а"
 
 
 msgid "Persistent Data Path"
@@ -867,11 +867,11 @@ msgid "Worlds"
 msgstr "Светови"
 
 
-msgid "Blender RNA"
+msgid "AIR Blend RNA"
 msgstr "Блендер РНК"
 
 
-msgid "Blender RNA structure definitions"
+msgid "AIR Blend RNA structure definitions"
 msgstr "Дефиниције структуре Блендер РНК"
 
 
@@ -4357,8 +4357,8 @@ msgid "Show .blend1, .blend2, etc. files"
 msgstr "Прикажи .blend датотеке"
 
 
-msgid "Filter Blender"
-msgstr "Филтер Blender"
+msgid "Filter AIR Blend"
+msgstr "Филтер AIR Blend"
 
 
 msgid "Show .blend files"
@@ -5550,8 +5550,8 @@ msgid "Unprojected Radius"
 msgstr "Непројектован полупречник"
 
 
-msgid "Radius of brush in Blender units"
-msgstr "Полупречник четкице у Blender јединицама"
+msgid "Radius of brush in AIR Blend units"
+msgstr "Полупречник четкице у AIR Blend јединицама"
 
 
 msgid "Use Cursor Overlay"
@@ -8056,7 +8056,7 @@ msgid "Noise Basis"
 msgstr "Основа шума"
 
 
-msgid "Blender Original"
+msgid "AIR Blend Original"
 msgstr "Оригинални Блендеров"
 
 
@@ -11855,8 +11855,8 @@ msgid "Object space normal mapping"
 msgstr "Основни директоријум са текстурама"
 
 
-msgid "Blender Object Space"
-msgstr "Простор Blender објекта"
+msgid "AIR Blend Object Space"
+msgstr "Простор AIR Blend објекта"
 
 
 msgid "Cycles"
@@ -15173,7 +15173,7 @@ msgstr "Y почетак"
 
 
 msgid "Save As Render"
-msgstr "Сачувај Blender датотеку"
+msgstr "Сачувај AIR Blend датотеку"
 
 
 msgctxt "Operator"
@@ -20501,12 +20501,12 @@ msgstr "Уклони особину"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
-msgstr "Излаз из Blender-а"
+msgid "Quit AIR Blend"
+msgstr "Излаз из AIR Blend-а"
 
 
-msgid "Quit Blender"
-msgstr "Излаз из Blender-а"
+msgid "Quit AIR Blend"
+msgstr "Излаз из AIR Blend-а"
 
 
 msgctxt "Operator"
@@ -20608,12 +20608,12 @@ msgstr "Сачувај почетну датотеку"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
-msgstr "Сачувај Blender датотеку"
+msgid "Save AIR Blend File"
+msgstr "Сачувај AIR Blend датотеку"
 
 
-msgid "Save the current Blender file"
-msgstr "Уписује тренутну Blender датотеку"
+msgid "Save the current AIR Blend file"
+msgstr "Уписује тренутну AIR Blend датотеку"
 
 
 msgctxt "Operator"
@@ -23465,8 +23465,8 @@ msgid "Re-render and composite changed layers on 3D edits"
 msgstr "Поновно рендеруј и сложи измењене слојеве приликом 3D измена"
 
 
-msgid "Blender File"
-msgstr "Blender датотека"
+msgid "AIR Blend File"
+msgstr "AIR Blend датотека"
 
 
 msgid "Display Filter"
@@ -27232,8 +27232,8 @@ msgid "Scene has no camera"
 msgstr "Сцена не садржи камеру"
 
 
-msgid "Blender Render"
-msgstr "Blender рендеринг"
+msgid "AIR Blend Render"
+msgstr "AIR Blend рендеринг"
 
 
 msgid "Flip to Bottom"
@@ -27973,8 +27973,8 @@ msgid "Rim"
 msgstr "Обод"
 
 
-msgid "Blender File View"
-msgstr "Blender-ов преглед датотека"
+msgid "AIR Blend File View"
+msgstr "AIR Blend-ов преглед датотека"
 
 
 msgid "unable to open the file"

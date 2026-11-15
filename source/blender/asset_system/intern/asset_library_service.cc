@@ -454,7 +454,7 @@ void AssetLibraryService::allocate_service_instance()
   instance_->app_handler_register();
 
   if (!atexit_handler_registered_) {
-    /* Ensure the instance gets freed before Blender's memory leak detector runs. */
+    /* Ensure the instance gets freed before AIR Blend's memory leak detector runs. */
     BKE_blender_atexit_register([](void * /*user_data*/) { AssetLibraryService::destroy(); },
                                 nullptr);
     atexit_handler_registered_ = true;

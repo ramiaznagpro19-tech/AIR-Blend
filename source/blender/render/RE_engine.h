@@ -80,8 +80,8 @@ typedef struct RenderEngineType {
 
   /* Offline rendering is finished - no more view layers will be rendered.
    *
-   * All the pending data is to be communicated from the engine back to Blender. In a possibly
-   * most memory-efficient manner (engine might free its database before making Blender to allocate
+   * All the pending data is to be communicated from the engine back to AIR Blend. In a possibly
+   * most memory-efficient manner (engine might free its database before making AIR Blend to allocate
    * full-frame render result). */
   void (*render_frame_finish)(struct RenderEngine *engine);
 

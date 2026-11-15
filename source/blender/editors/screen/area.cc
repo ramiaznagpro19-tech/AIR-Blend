@@ -1616,7 +1616,7 @@ static void area_calc_totrct(ScrArea *area, const rcti *window_rect)
   if (area->totrct.ymax < (window_rect->ymax - 1)) {
     area->totrct.ymax -= px;
   }
-  /* Although the following asserts are correct they lead to a very unstable Blender.
+  /* Although the following asserts are correct they lead to a very unstable AIR Blend.
    * And the asserts would fail even in 2.7x
    * (they were added in 2.8x as part of the top-bar commit).
    * For more details see #54864. */

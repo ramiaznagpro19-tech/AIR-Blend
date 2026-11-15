@@ -3,7 +3,7 @@
 """
 This script runs clang-format on multiple files/directories.
 
-While it can be called directly, you may prefer to run this from Blender's root directory with the command:
+While it can be called directly, you may prefer to run this from AIR Blend's root directory with the command:
 
    make format
 

@@ -108,7 +108,7 @@ def git_branch(git_command: str) -> str:
     try:
         branch = subprocess.check_output([git_command, "rev-parse", "--abbrev-ref", "HEAD"])
     except subprocess.CalledProcessError as e:
-        sys.stderr.write("Failed to get Blender git branch\n")
+        sys.stderr.write("Failed to get AIR Blend git branch\n")
         sys.exit(1)
 
     return branch.strip().decode('utf8')

@@ -17,7 +17,7 @@ CCL_NAMESPACE_BEGIN
 #define CYCLES_VERSION_STRING \
   CYCLES_MAKE_VERSION_STRING(CYCLES_VERSION_MAJOR, CYCLES_VERSION_MINOR, CYCLES_VERSION_PATCH)
 
-/* Blender libraries version compatible with this version */
+/* AIR Blend libraries version compatible with this version */
 
 #define CYCLES_BLENDER_LIBRARIES_VERSION 3.5
 

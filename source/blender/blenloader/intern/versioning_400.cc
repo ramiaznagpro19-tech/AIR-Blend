@@ -140,7 +140,7 @@ static void versioning_convert_combined_noise_texture_node(bNodeTree *ntree)
       continue;
     }
 
-    /* Delete links to sockets that don't exist in Blender 4.0. */
+    /* Delete links to sockets that don't exist in AIR Blend 4.0. */
     LISTBASE_FOREACH_BACKWARD_MUTABLE (bNodeLink *, link, &ntree->links) {
       if (((link->tonode == node) && STREQ(link->tosock->identifier, "Distortion")) ||
           ((link->fromnode == node) && STREQ(link->fromsock->identifier, "Color")))
