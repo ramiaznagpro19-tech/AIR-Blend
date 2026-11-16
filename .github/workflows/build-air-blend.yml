@@ -1,0 +1,84 @@
+name: Build AIR Blend 3.6
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ blender-v3.6-release ]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 360
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 1
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            build-essential \
+            cmake \
+            git \
+            libx11-dev \
+            libxxf86vm-dev \
+            libxcursor-dev \
+            libxi-dev \
+            libxrandr-dev \
+            libxinerama-dev \
+            libglew-dev \
+            libffi-dev \
+            libssl-dev \
+            libbz2-dev \
+            libsqlite3-dev \
+            libreadline-dev \
+            libncurses5-dev \
+            libncursesw5-dev \
+            xz-utils \
+            tk-dev \
+            libxml2-dev \
+            libxmlsec1-dev \
+            liblzma-dev \
+            python3-dev \
+            python3-pip
+
+      - name: Configure
+        run: |
+          mkdir -p build
+          cd build
+          cmake .. \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DWITH_PYTHON=ON \
+            -DWITH_CYCLES=OFF \
+            -DWITH_OPENCOLORIO=OFF \
+            -DWITH_OPENSUBDIV=OFF \
+            -DWITH_OPENVDB=OFF \
+            -DWITH_ALEMBIC=OFF \
+            -DWITH_USD=OFF \
+            -DWITH_OPENIMAGEDENOISE=OFF \
+            -DWITH_CODEC_FFMPEG=OFF \
+            -DWITH_CODEC_SNDFILE=OFF \
+            -DWITH_JACK=OFF \
+            -DWITH_PULSEAUDIO=OFF \
+            -DWITH_SDL=OFF \
+            -DWITH_OPENAL=OFF \
+            -DWITH_LIBMV=OFF \
+            -DWITH_INTERNATIONAL=OFF \
+            -DWITH_TBB=OFF \
+            -DWITH_XR_OPENXR=OFF
+
+      - name: Build
+        run: |
+          cd build
+          make -j$(nproc) blender
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AIR-Blend-3.6-Linux
+          path: build/bin/
+          retention-days: 7
