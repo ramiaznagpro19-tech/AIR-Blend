@@ -517,7 +517,7 @@ void USDMaterialReader::set_node_input(const pxr::UsdShadeInput &usd_input,
 
   if (usd_input.HasConnectedSource()) {
     /* The USD shader input has a connected source shader. Follow the connection
-     * and attempt to convert the connected USD shader to a AIR Blend node. */
+     * and attempt to convert the connected USD shader to an AIR Blend node. */
     follow_connection(usd_input, dest_node, dest_socket_name, ntree, column, r_ctx);
   }
   else {

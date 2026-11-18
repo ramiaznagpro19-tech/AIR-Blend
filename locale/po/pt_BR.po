@@ -37959,7 +37959,7 @@ msgid "Scale FPS"
 msgstr "Escalonar quadros por segundo"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to an AIR Blend frame"
 msgstr "Escalona a taxa de quadros a partir da hierarquia de volume circundante para as cenas atuais, caso contrário, cada quadro mapeará diretamente para um quadro AIR Blend."
 
 
@@ -46208,7 +46208,7 @@ msgid "Install Theme..."
 msgstr "Instalar tema..."
 
 
-msgid "Load and apply a AIR Blend XML theme file"
+msgid "Load and apply an AIR Blend XML theme file"
 msgstr "Carrega e aplica um arquivo de temas XML AIR Blend."
 
 
@@ -51548,7 +51548,7 @@ msgid "Open"
 msgstr "Abrir"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "Abre um arquivo AIR Blend."
 
 

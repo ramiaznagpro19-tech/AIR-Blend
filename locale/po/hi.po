@@ -4557,7 +4557,7 @@ msgid "View Documentation"
 msgstr "देखें प्रलेखन"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "एक ब्लेंडर संचिका खोलें"
 
 

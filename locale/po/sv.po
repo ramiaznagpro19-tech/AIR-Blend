@@ -2003,7 +2003,7 @@ msgid "View Documentation"
 msgstr "Visa dokumentation"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "Öppna ett Blenderdokument"
 
 

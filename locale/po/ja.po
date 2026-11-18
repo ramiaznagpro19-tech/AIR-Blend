@@ -60739,7 +60739,7 @@ msgid "Scale FPS"
 msgstr "FPSのスケーリング"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to an AIR Blend frame"
 msgstr "フレームレートをBVHから現在のシーンにスケーリングします。行わない場合、各BVHフレームは直接Blenderフレームにマッピングされます"
 
 
@@ -72768,7 +72768,7 @@ msgid "Install Theme..."
 msgstr "テーマをインストール..."
 
 
-msgid "Load and apply a AIR Blend XML theme file"
+msgid "Load and apply an AIR Blend XML theme file"
 msgstr "AIR Blend XMLテーマファイルを読み込み、適用します"
 
 
@@ -75978,7 +75978,7 @@ msgid "Add Scene Strip"
 msgstr "シーンストリップを追加"
 
 
-msgid "Add a strip to the sequencer using a AIR Blend scene as a source"
+msgid "Add a strip to the sequencer using an AIR Blend scene as a source"
 msgstr "AIR Blend のシーンをソースとするストリップをシーケンサーに追加します"
 
 
@@ -81827,7 +81827,7 @@ msgid "Open"
 msgstr "開く"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "Blenderファイルを開く"
 
 

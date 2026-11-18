@@ -5,10 +5,10 @@
 /** \file
  * \ingroup bke
  * \section aboutmain Main struct
- * Main is the root of the 'data-base' of a AIR Blend context. All data is put into lists, and all
+ * Main is the root of the 'data-base' of an AIR Blend context. All data is put into lists, and all
  * these lists are stored here.
  *
- * \note A AIR Blend file is not much more than a binary dump of these lists. This list of lists is
+ * \note An AIR Blend file is not much more than a binary dump of these lists. This list of lists is
  * not serialized itself.
  *
  * \note `BKE_main` files are for operations over the Main database itself, or generating extra

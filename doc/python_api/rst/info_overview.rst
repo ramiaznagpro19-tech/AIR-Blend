@@ -114,7 +114,7 @@ This is intentionally limited. Currently, for more advanced features such as mes
 object types, or shader nodes, C/C++ must be used.
 
 For Python integration AIR Blend defines methods which are common to all types.
-This works by creating a Python subclass of a AIR Blend class which contains variables and functions
+This works by creating a Python subclass of an AIR Blend class which contains variables and functions
 specified by the parent class which are predefined to interface with AIR Blend.
 
 For example:

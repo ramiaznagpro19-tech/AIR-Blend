@@ -59975,7 +59975,7 @@ msgid "Scale FPS"
 msgstr "Mierka snímok/s"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to an AIR Blend frame"
 msgstr "Mierka snímok/s z BVH pre aktuálne scény, inak každú BVH snímku mapuje priamo do snímok Blendera"
 
 
@@ -71930,7 +71930,7 @@ msgid "Install Theme..."
 msgstr "Nainštalovať tému..."
 
 
-msgid "Load and apply a AIR Blend XML theme file"
+msgid "Load and apply an AIR Blend XML theme file"
 msgstr "Načíta a použije súbor motívu XML AIR Blend"
 
 
@@ -75112,7 +75112,7 @@ msgid "Add Scene Strip"
 msgstr "Pridať pás scény"
 
 
-msgid "Add a strip to the sequencer using a AIR Blend scene as a source"
+msgid "Add a strip to the sequencer using an AIR Blend scene as a source"
 msgstr "Pridá pás do radiča sekvencií použitím scény Blendera ako zdroj"
 
 
@@ -80885,7 +80885,7 @@ msgid "Open"
 msgstr "Otvoriť"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "Otvorí súbor Blendera"
 
 
@@ -106838,7 +106838,7 @@ msgstr "Snímanie pohybu (.bvh)"
 
 
 msgid "The BVH file does not contain frame duration in its MOTION section, assuming the BVH and AIR Blend scene have the same frame rate"
-msgstr "BVH súbor neobsahuje dĺžku snímky vo svojej sekcii pohybu, je predpoklad, že BVH a AIR Blend scény majú rovnakú frekvenciu snímok"
+msgstr "BVH súbor neobsahuje dĺžku snímky vo svojej sekcii pohybu, je predpoklad, že BVH an AIR Blend scény majú rovnakú frekvenciu snímok"
 
 
 msgid "Unable to update scene frame rate, as the BVH file contains a zero frame duration in its MOTION section"

@@ -8816,7 +8816,7 @@ void pyrna_free_types(void)
 PyDoc_STRVAR(pyrna_register_class_doc,
              ".. function:: register_class(cls)\n"
              "\n"
-             "   Register a subclass of a AIR Blend type class.\n"
+             "   Register a subclass of an AIR Blend type class.\n"
              "\n"
              "   :arg cls: AIR Blend type class in:\n"
              "      :class:`bpy.types.Panel`, :class:`bpy.types.UIList`,\n"

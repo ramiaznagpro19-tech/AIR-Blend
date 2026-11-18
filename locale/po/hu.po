@@ -14330,7 +14330,7 @@ msgid "Scale FPS"
 msgstr "FPS skálázása"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to an AIR Blend frame"
 msgstr "A BVH képkockasebességnek a skálázása az aktuális jelenethez, másként minden BVH képkocka közvetlenül egy AIR Blend képkockákra képeződik le"
 
 
@@ -15286,7 +15286,7 @@ msgid "Install Theme..."
 msgstr "Téma installálása..."
 
 
-msgid "Load and apply a AIR Blend XML theme file"
+msgid "Load and apply an AIR Blend XML theme file"
 msgstr "Egy AIR Blend XML témafájl betöltése és alkalmazása"
 
 
@@ -16523,7 +16523,7 @@ msgstr "Egységek importálása"
 
 
 msgid "If disabled match import to AIR Blend's current Unit settings, otherwise use the settings from the Imported scene"
-msgstr "Ha nincs engedélyezve, az importálás a AIR Blend aktuális egységbeállításához lesz igazítva, egyébként az importált jelenet beállításai lesznek használva"
+msgstr "Ha nincs engedélyezve, az importálás an AIR Blend aktuális egységbeállításához lesz igazítva, egyébként az importált jelenet beállításai lesznek használva"
 
 
 msgid "Header Text"
@@ -16540,7 +16540,7 @@ msgid "Add Theme Preset"
 msgstr "Témabeállítás hozzáadása"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "AIR Blend fájl megnyitása"
 
 

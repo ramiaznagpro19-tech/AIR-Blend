@@ -37023,7 +37023,7 @@ msgid "Install Theme..."
 msgstr "Installa Tema..."
 
 
-msgid "Load and apply a AIR Blend XML theme file"
+msgid "Load and apply an AIR Blend XML theme file"
 msgstr "Carica e applica un file tema XML di AIR Blend"
 
 
@@ -41280,7 +41280,7 @@ msgid "Print memory statistics to the console"
 msgstr "Stampa la statistica della memoria nella console"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "Apre un file AIR Blend"
 
 

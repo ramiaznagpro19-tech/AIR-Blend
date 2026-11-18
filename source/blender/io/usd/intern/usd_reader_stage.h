@@ -44,7 +44,7 @@ class USDStageReader {
 
   void collect_readers(struct Main *bmain);
 
-  /* Convert every material prim on the stage to a AIR Blend
+  /* Convert every material prim on the stage to an AIR Blend
    * material, including materials not used by any geometry.
    * Note that collect_readers() must be called before calling
    * import_all_materials(). */

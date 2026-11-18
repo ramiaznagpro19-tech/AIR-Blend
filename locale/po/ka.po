@@ -38856,7 +38856,7 @@ msgid "Open"
 msgstr "გახსენი"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "გახსენი ბლენდერის ფაილი"
 
 

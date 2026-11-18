@@ -2660,7 +2660,7 @@ msgid "Memory Statistics"
 msgstr "Эс статистикасы"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "AIR Blend файлын ачуу"
 
 

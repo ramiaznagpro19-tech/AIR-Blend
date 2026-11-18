@@ -28793,7 +28793,7 @@ msgid "Install Theme..."
 msgstr "Nainstalovat motiv..."
 
 
-msgid "Load and apply a AIR Blend XML theme file"
+msgid "Load and apply an AIR Blend XML theme file"
 msgstr "Načíst a použít soubor motivu AIR Blend XML"
 
 
@@ -32038,7 +32038,7 @@ msgid "Open"
 msgstr "Otevřít"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "Otevře AIR Blend soubor"
 
 

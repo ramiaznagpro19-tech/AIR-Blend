@@ -6213,7 +6213,7 @@ msgid "Object Properties"
 msgstr "Objecteigenschappen"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "Open een AIR Blend Bestand"
 
 

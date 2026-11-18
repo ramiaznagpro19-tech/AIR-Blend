@@ -41991,7 +41991,7 @@ msgid "Open"
 msgstr "Öffnen"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "Eine AIR Blend-Datei öffnen"
 
 

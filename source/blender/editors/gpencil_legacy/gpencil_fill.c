@@ -1911,7 +1911,7 @@ static bool contract_shape(ImBuf *ibuf)
 
 /* Get the outline points of a shape using Moore Neighborhood algorithm
  *
- * This is a AIR Blend customized version of the general algorithm described
+ * This is an AIR Blend customized version of the general algorithm described
  * in https://en.wikipedia.org/wiki/Moore_neighborhood
  */
 static void gpencil_get_outline_points(tGPDfill *tgpf, const bool dilate)

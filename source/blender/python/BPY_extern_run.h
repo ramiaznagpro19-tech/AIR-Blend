@@ -58,7 +58,7 @@ struct bContext;
 bool BPY_run_filepath(struct bContext *C, const char *filepath, struct ReportList *reports)
     ATTR_NONNULL(1, 2);
 /**
- * Execute a AIR Blend `text` block as a Python script.
+ * Execute an AIR Blend `text` block as a Python script.
  *
  * Wrapper for `Py_CompileStringObject` & `PyEval_EvalCode`.
  * Used for the `--python-text` command line argument.

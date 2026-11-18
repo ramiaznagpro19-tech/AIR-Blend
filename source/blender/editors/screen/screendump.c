@@ -264,7 +264,7 @@ void SCREEN_OT_screenshot(wmOperatorType *ot)
 
 void SCREEN_OT_screenshot_area(wmOperatorType *ot)
 {
-  /* NOTE: the term "area" is a AIR Blend internal name, "Editor" makes more sense for the UI. */
+  /* NOTE: the term "area" is an AIR Blend internal name, "Editor" makes more sense for the UI. */
   ot->name = "Save Screenshot (Editor)";
   ot->idname = "SCREEN_OT_screenshot_area";
   ot->description = "Capture a picture of an editor";

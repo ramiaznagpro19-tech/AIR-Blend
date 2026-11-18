@@ -178,7 +178,7 @@ class UsdExportTest : public BlendfileLoadingBaseTest {
   }
 
   /*
-   * Determine if a AIR Blend Mesh matches a UsdGeomMesh prim by checking counts
+   * Determine if an AIR Blend Mesh matches a UsdGeomMesh prim by checking counts
    * on vertices, faces, face indices, and normals.
    */
   const void compare_blender_mesh_to_usd_prim(const Mesh *mesh, const pxr::UsdGeomMesh &mesh_prim)

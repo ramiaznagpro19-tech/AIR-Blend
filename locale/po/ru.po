@@ -46921,7 +46921,7 @@ msgid "Scale FPS"
 msgstr "Mасштабировать FPS"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to an AIR Blend frame"
 msgstr "Масштабировать частоту кадров из BVH по текущей сцене, в противном случае кадры BVH будут соответствовать кадрам AIR Blend"
 
 
@@ -56244,7 +56244,7 @@ msgid "Install Theme..."
 msgstr "Установить тему…"
 
 
-msgid "Load and apply a AIR Blend XML theme file"
+msgid "Load and apply an AIR Blend XML theme file"
 msgstr "Загрузить и применить XML-файл темы оформления AIR Blend"
 
 
@@ -62521,7 +62521,7 @@ msgid "Open"
 msgstr "Открыть"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "Открыть файл AIR Blend"
 
 

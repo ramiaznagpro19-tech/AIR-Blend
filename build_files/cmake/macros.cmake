@@ -428,7 +428,7 @@ function(blender_add_test_suite)
   unset(_test_release_dir)
 endfunction()
 
-# Add tests for a AIR Blend library, to be called in tandem with blender_add_lib().
+# Add tests for an AIR Blend library, to be called in tandem with blender_add_lib().
 # The tests will be part of the blender_test executable (see tests/gtests/runner).
 function(blender_add_test_lib
   name
@@ -470,7 +470,7 @@ function(blender_add_test_lib
 endfunction()
 
 
-# Add tests for a AIR Blend library, to be called in tandem with blender_add_lib().
+# Add tests for an AIR Blend library, to be called in tandem with blender_add_lib().
 # Test will be compiled into a ${name}_test executable.
 #
 # To be used for smaller isolated libraries, that do not have many dependencies.

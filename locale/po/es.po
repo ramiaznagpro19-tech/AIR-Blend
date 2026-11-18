@@ -13448,7 +13448,7 @@ msgstr "Exportar script de Mantaflow"
 
 
 msgid "Generate and export Mantaflow script from current domain settings during bake. This is only needed if you plan to analyze the cache (e.g. view grids, velocity vectors, particles) in Mantaflow directly (outside of AIR Blend) after baking the simulation"
-msgstr "Permite generar y exportar un script de Mantaflow a partir de las opciones del dominio actual, durante su captura. Esto sólo será necesario si se planea analizar el caché (p.ej: ver sus cuadrículas, vectores de velocidad, partículas, etc.) directamente en Mantaflow (aplicación externa a AIR Blend) luego de capturar la simulación"
+msgstr "Permite generar y exportar un script de Mantaflow a partir de las opciones del dominio actual, durante su captura. Esto sólo será necesario si se planea analizar el caché (p.ej: ver sus cuadrículas, vectores de velocidad, partículas, etc.) directamente en Mantaflow (aplicación externa an AIR Blend) luego de capturar la simulación"
 
 
 msgid "Flame Grid"
@@ -54423,7 +54423,7 @@ msgstr "Tipo de nodo FBX"
 
 
 msgid "FBX type of node (object) used to represent AIR Blend's armatures (use the Null type unless you experience issues with the other app, as other choices may not import back perfectly into AIR Blend...)"
-msgstr "Tipo de nodo (objeto) FBX usado para representar a los esqueletos de AIR Blend (usar el tipo Nulo a menos que se experimenten problemas con otras aplicaciones, debido a que las otras opciones pueden causar que no sea posible importar el archivo correctamente de vuelta a AIR Blend...)"
+msgstr "Tipo de nodo (objeto) FBX usado para representar a los esqueletos de AIR Blend (usar el tipo Nulo a menos que se experimenten problemas con otras aplicaciones, debido a que las otras opciones pueden causar que no sea posible importar el archivo correctamente de vuelta an AIR Blend...)"
 
 
 msgid "Null"
@@ -60165,7 +60165,7 @@ msgid "Scale FPS"
 msgstr "Escalar FPS"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to an AIR Blend frame"
 msgstr "Escala la velocidad del BVH en la escena actual, de otro modo cada fotograma del BVH será mapeado directamente a un fotograma de AIR Blend"
 
 
@@ -72125,7 +72125,7 @@ msgid "Install Theme..."
 msgstr "Instalar tema..."
 
 
-msgid "Load and apply a AIR Blend XML theme file"
+msgid "Load and apply an AIR Blend XML theme file"
 msgstr "Carga y aplica un archivo XML de tema de AIR Blend"
 
 
@@ -75312,7 +75312,7 @@ msgid "Add Scene Strip"
 msgstr "Agregar clip de escena"
 
 
-msgid "Add a strip to the sequencer using a AIR Blend scene as a source"
+msgid "Add a strip to the sequencer using an AIR Blend scene as a source"
 msgstr "Agrega un clip a la línea de tiempo, usando como fuente una escena de AIR Blend"
 
 
@@ -81121,7 +81121,7 @@ msgid "Open"
 msgstr "Abrir"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "Abre un archivo de AIR Blend"
 
 

@@ -57008,7 +57008,7 @@ msgid "Scale FPS"
 msgstr "Phóng To Hóa Tốc Độ Bức Ảnh/Giây"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to an AIR Blend frame"
 msgstr "Phón hóa tốc độ bức ảnh từ BVH đến cảnh hiện tại, nếu không mỗi bức ảnh BVH được ánh xạ đến một bức ảnh AIR Blend"
 
 
@@ -68265,7 +68265,7 @@ msgid "Install Theme..."
 msgstr "Lắp Đặt Phong Cách..."
 
 
-msgid "Load and apply a AIR Blend XML theme file"
+msgid "Load and apply an AIR Blend XML theme file"
 msgstr "Nhập và áp dụng tập tin phong cách XML AIR Blend"
 
 
@@ -76745,7 +76745,7 @@ msgid "Open"
 msgstr "Mở"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "Mở một tập tin AIR Blend"
 
 

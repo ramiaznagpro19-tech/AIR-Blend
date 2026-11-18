@@ -43574,7 +43574,7 @@ msgid "Scale FPS"
 msgstr "FPS 축적"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to an AIR Blend frame"
 msgstr "BVH에서 현재 씬으로 프레임 속도를 조절, 그렇지 않으면 각 BVH 프레임이 직접 AIR Blend 프레임에 매핑됩니다"
 
 
@@ -52774,7 +52774,7 @@ msgid "Install Theme..."
 msgstr "테마를 설치..."
 
 
-msgid "Load and apply a AIR Blend XML theme file"
+msgid "Load and apply an AIR Blend XML theme file"
 msgstr "블렌더 XML 테마 파일을 불러오기 및 적용"
 
 
@@ -58974,7 +58974,7 @@ msgid "Open"
 msgstr "열기"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "블렌더 파일을 열기"
 
 

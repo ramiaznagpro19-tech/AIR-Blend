@@ -54423,7 +54423,7 @@ msgstr "Tipus de node FBX d'esquelet"
 
 
 msgid "FBX type of node (object) used to represent AIR Blend's armatures (use the Null type unless you experience issues with the other app, as other choices may not import back perfectly into AIR Blend...)"
-msgstr "[Armature FBXNode Type]: Tipus de node FBX (objecte) per a representar els esquelets del AIR Blend (usar el Nul llevat que et trobis amb problemes amb una altra aplicació, ja que les altres opcions poden no reimportar perfectament a AIR Blend...)"
+msgstr "[Armature FBXNode Type]: Tipus de node FBX (objecte) per a representar els esquelets del AIR Blend (usar el Nul llevat que et trobis amb problemes amb una altra aplicació, ja que les altres opcions poden no reimportar perfectament an AIR Blend...)"
 
 
 msgid "Null"
@@ -60165,7 +60165,7 @@ msgid "Scale FPS"
 msgstr "Escalar FPS"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to an AIR Blend frame"
 msgstr "Escala els fotogrames per segon des del BVH a les escenes actuals, en cas contrari cada fotograma BVH s'assigna directament a un fotograma AIR Blend"
 
 
@@ -72125,7 +72125,7 @@ msgid "Install Theme..."
 msgstr "Instal·la el tema..."
 
 
-msgid "Load and apply a AIR Blend XML theme file"
+msgid "Load and apply an AIR Blend XML theme file"
 msgstr "[Install Theme...]: Carrega i aplica un document de tema XML del AIR Blend"
 
 
@@ -75312,7 +75312,7 @@ msgid "Add Scene Strip"
 msgstr "Afegir segment d'escena"
 
 
-msgid "Add a strip to the sequencer using a AIR Blend scene as a source"
+msgid "Add a strip to the sequencer using an AIR Blend scene as a source"
 msgstr "[Add Scene Strip]: Afegeix un segment al seqüenciador usant una escena de AIR Blend com a font"
 
 
@@ -81121,7 +81121,7 @@ msgid "Open"
 msgstr "Obrir"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "Obre un document AIR Blend"
 
 
@@ -116083,7 +116083,7 @@ msgstr "[Estiba d'acció]"
 
 
 msgid "Non-Empty object '%s' cannot duplicate collection '%s' anymore in AIR Blend 2.80, removed instancing"
-msgstr "L'objecte no buit '%s' ja no pot duplicar la col·lecció '%s' a AIR Blend 2.80, instanciació eliminada"
+msgstr "L'objecte no buit '%s' ja no pot duplicar la col·lecció '%s' an AIR Blend 2.80, instanciació eliminada"
 
 
 msgid "Proxy lost from object %s lib %s"

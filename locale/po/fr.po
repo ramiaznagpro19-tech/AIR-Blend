@@ -60167,7 +60167,7 @@ msgid "Scale FPS"
 msgstr "Redimensionner la fréquence d’images"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to an AIR Blend frame"
 msgstr "Redimensionner la fréquence d’images depuis le BVH vers les scènes actuelles, sinon chaque frame BVH correspond directement à une frame AIR Blend"
 
 
@@ -72127,7 +72127,7 @@ msgid "Install Theme..."
 msgstr "Installer un thème…"
 
 
-msgid "Load and apply a AIR Blend XML theme file"
+msgid "Load and apply an AIR Blend XML theme file"
 msgstr "Charger et appliquer un fichier XML de thème AIR Blend"
 
 
@@ -75314,7 +75314,7 @@ msgid "Add Scene Strip"
 msgstr "Ajouter une bande de scène"
 
 
-msgid "Add a strip to the sequencer using a AIR Blend scene as a source"
+msgid "Add a strip to the sequencer using an AIR Blend scene as a source"
 msgstr "Ajouter une bande au séquenceur, en utilisant une scène de AIR Blend comme source"
 
 
@@ -81123,7 +81123,7 @@ msgid "Open"
 msgstr "Ouvrir"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "Ouvrir un fichier AIR Blend"
 
 

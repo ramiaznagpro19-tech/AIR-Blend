@@ -40,7 +40,7 @@ void BKE_blendfile_link_append_context_flag_set(struct BlendfileLinkAppendContex
                                                 bool do_set);
 
 /**
- * Store reference to a AIR Blend's embedded memfile into the context.
+ * Store reference to an AIR Blend's embedded memfile into the context.
  *
  * \note This is required since embedded startup blender file is handled in `ED` module, which
  * cannot be linked in BKE code.

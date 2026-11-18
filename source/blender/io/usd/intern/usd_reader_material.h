@@ -52,7 +52,7 @@ struct NodePlacementContext {
 /* Converts USD materials to AIR Blend representation. */
 
 /**
- * By default, the #USDMaterialReader creates a AIR Blend material with
+ * By default, the #USDMaterialReader creates an AIR Blend material with
  * the same name as the USD material.  If the USD material has a
  * #UsdPreviewSurface source, the AIR Blend material's viewport display
  * color, roughness and metallic properties are set to the corresponding
@@ -127,7 +127,7 @@ class USDMaterialReader {
   void load_tex_image(const pxr::UsdShadeShader &usd_shader, bNode *tex_image) const;
 
   /**
-   * This function creates a AIR Blend UV Map node, under the simplifying assumption that
+   * This function creates an AIR Blend UV Map node, under the simplifying assumption that
    * UsdPrimvarReader_float2 shaders output UV coordinates.
    * TODO(makowalski): investigate supporting conversion to other AIR Blend node types
    * (e.g., Attribute Nodes) if needed.
@@ -155,7 +155,7 @@ void build_material_map(const Main *bmain, std::map<std::string, Material *> *r_
  * Returns an existing AIR Blend material that corresponds to the USD material with the given path.
  * Returns null if no such material exists.
  *
- * \param mat_map: Map a material name to a AIR Blend material.  Note that the name key
+ * \param mat_map: Map a material name to an AIR Blend material.  Note that the name key
  * might be the AIR Blend material name modified to be a valid USD identifier,
  * to match the material names in the imported USD.
  * \param usd_path_to_mat_name: Map a USD material path to the imported AIR Blend material name.

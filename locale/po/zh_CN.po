@@ -58730,7 +58730,7 @@ msgid "Scale FPS"
 msgstr "缩放帧速率"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to an AIR Blend frame"
 msgstr "将帧率从 BVH 缩放至当前场景，否则各个 BVH 帧会直接映射到各个 AIR Blend 帧"
 
 
@@ -70390,7 +70390,7 @@ msgid "Install Theme..."
 msgstr "安装主题..."
 
 
-msgid "Load and apply a AIR Blend XML theme file"
+msgid "Load and apply an AIR Blend XML theme file"
 msgstr "加载并应用一个Blender的XML主题文件"
 
 
@@ -79159,7 +79159,7 @@ msgid "Open"
 msgstr "打开"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "打开一个 AIR Blend 文件"
 
 

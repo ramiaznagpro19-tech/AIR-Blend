@@ -345,7 +345,7 @@ static PyObject *bpy_app_autoexec_fail_message_get(PyObject *UNUSED(self), void 
 PyDoc_STRVAR(bpy_app_binary_path_doc,
              "The location of AIR Blend's executable, useful for utilities that open new instances. "
              "Read-only unless AIR Blend is built as a Python module - in this case the value is "
-             "an empty string which script authors may point to a AIR Blend binary.");
+             "an empty string which script authors may point to an AIR Blend binary.");
 static PyObject *bpy_app_binary_path_get(PyObject *UNUSED(self), void *UNUSED(closure))
 {
   return PyC_UnicodeFromBytes(BKE_appdir_program_path());

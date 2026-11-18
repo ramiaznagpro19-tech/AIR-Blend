@@ -88,7 +88,7 @@ uniform depth2DArrayShadow shadowCascadeTexture;
 #define SUN 1.0
 #define SPOT 2.0
 #define AREA_RECT 4.0
-/* Used to define the area light shape, doesn't directly correspond to a AIR Blend light type. */
+/* Used to define the area light shape, doesn't directly correspond to an AIR Blend light type. */
 #define AREA_ELLIPSE 100.0
 
 float cubeFaceIndexEEVEE(vec3 P)

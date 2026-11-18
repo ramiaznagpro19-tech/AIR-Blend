@@ -38,7 +38,7 @@ struct ImportSettings {
 
   CacheFile *cache_file;
 
-  /* Map a USD material prim path to a AIR Blend material name.
+  /* Map a USD material prim path to an AIR Blend material name.
    * This map is updated by readers during stage traversal.
    * This field is mutable because it is used to keep track
    * of what the importer is doing. This is necessary even

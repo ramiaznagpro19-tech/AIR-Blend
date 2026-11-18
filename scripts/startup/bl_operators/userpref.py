@@ -497,7 +497,7 @@ class PREFERENCES_OT_addon_disable(Operator):
 
 
 class PREFERENCES_OT_theme_install(Operator):
-    """Load and apply a AIR Blend XML theme file"""
+    """Load and apply an AIR Blend XML theme file"""
     bl_idname = "preferences.theme_install"
     bl_label = "Install Theme..."
 

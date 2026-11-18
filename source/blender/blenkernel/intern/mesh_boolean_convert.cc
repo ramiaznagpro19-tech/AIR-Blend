@@ -684,7 +684,7 @@ static void merge_edge_customdata_layers(Mesh *target, MeshesToIMeshInfo &mim)
 }
 
 /**
- * Convert the output IMesh im to a AIR Blend Mesh,
+ * Convert the output IMesh im to an AIR Blend Mesh,
  * using the information in mim to get all the attributes right.
  */
 static Mesh *imesh_to_mesh(IMesh *im, MeshesToIMeshInfo &mim)

@@ -18,7 +18,7 @@ struct Material;
 namespace blender::io::obj {
 
 /**
- * Make a AIR Blend Mesh Object from a Geometry of GEOM_MESH type.
+ * Make an AIR Blend Mesh Object from a Geometry of GEOM_MESH type.
  */
 class MeshFromGeometry : NonMovable, NonCopyable {
  private:

@@ -31619,7 +31619,7 @@ msgid "Scale FPS"
 msgstr "縮放 FPS"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to an AIR Blend frame"
 msgstr "將幀率從 BVH 縮放成目前場景，否則每個 BVH 框幀會直接映射成 AIR Blend 框幀"
 
 
@@ -37989,7 +37989,7 @@ msgid "Install Theme..."
 msgstr "安裝主題..."
 
 
-msgid "Load and apply a AIR Blend XML theme file"
+msgid "Load and apply an AIR Blend XML theme file"
 msgstr "載入並套用 AIR Blend XML 主題檔案"
 
 
@@ -42641,7 +42641,7 @@ msgid "Print memory statistics to the console"
 msgstr "將記憶體統計資料列印至主控臺"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "開啟一個 AIR Blend 檔案"
 
 

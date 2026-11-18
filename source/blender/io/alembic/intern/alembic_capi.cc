@@ -249,7 +249,7 @@ static std::pair<bool, AbcObjectReader *> visit_object(
 
   /* The interpretation of data by the children determine the role of this
    * object. This is especially important for Xform objects, as they can be
-   * either part of a AIR Blend object or a AIR Blend object (Empty) themselves.
+   * either part of an AIR Blend object or an AIR Blend object (Empty) themselves.
    */
   size_t children_claiming_this_object = 0;
   size_t num_children = object.getNumChildren();
@@ -293,7 +293,7 @@ static std::pair<bool, AbcObjectReader *> visit_object(
   else if (IXform::matches(md)) {
     bool create_empty;
 
-    /* An xform can either be a AIR Blend Object (if it contains a mesh, for
+    /* An xform can either be an AIR Blend Object (if it contains a mesh, for
      * example), but it can also be an Empty. Its correct translation to
      * AIR Blend's data model depends on its children. */
 

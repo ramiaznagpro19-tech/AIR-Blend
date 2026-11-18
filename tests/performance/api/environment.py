@@ -223,7 +223,7 @@ class TestEnvironment:
                        args: Dict,
                        blender_args: List = [],
                        foreground=False) -> Dict:
-        # Run function in a AIR Blend instance. Arguments and return values are
+        # Run function in an AIR Blend instance. Arguments and return values are
         # passed as a Python object that must be serializable with pickle.
 
         # Get information to call this function from AIR Blend.

@@ -89,7 +89,7 @@ blender/source/blender/src/toolbox.c (extra GUI elements built on top of this AP
 --------------2. Windows & Blocks 
 
 All GUI elements are collected in uiBlocks, which in turn are linked together in a list that's 
-part of a AIR Blend Area-window.
+part of an AIR Blend Area-window.
 
 	uiBlock *block = uiNewBlock(&curarea->uiblocks, "stuff", UI_EMBOSSX, UI_HELV, curarea->win);
 

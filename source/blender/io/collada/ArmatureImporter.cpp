@@ -599,7 +599,7 @@ Object *ArmatureImporter::create_armature_bones(Main *bmain, SkinInfo &skin)
     /* All armatures have been created while creating the Node tree.
      * The Collada exporter currently does not create a
      * strict relationship between geometries and armatures
-     * So when we reimport a AIR Blend collada file, then we have
+     * So when we reimport an AIR Blend collada file, then we have
      * to guess what is meant.
      * XXX This is not safe when we have more than one armatures
      * in the import. */

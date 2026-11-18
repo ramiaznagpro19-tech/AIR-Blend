@@ -28161,7 +28161,7 @@ msgstr "Acerca de"
 
 
 msgid "Support AIR Blend"
-msgstr "Apoyar a AIR Blend"
+msgstr "Apoyar an AIR Blend"
 
 
 msgid "System"
@@ -42961,7 +42961,7 @@ msgstr "Tipo de nodo FBX"
 
 
 msgid "FBX type of node (object) used to represent AIR Blend's armatures (use Null one unless you experience issues with other app, other choices may no import back perfectly in AIR Blend...)"
-msgstr "El tipo de nodo (objeto) de FBX usado para representar a los esqueletos de AIR Blend (usar Nulo a menos que se experimenten problemas con otras aplicaciones, las otras opciones pueden causar que no sea posible importar el archivo correctamente de vuelta a AIR Blend...)"
+msgstr "El tipo de nodo (objeto) de FBX usado para representar a los esqueletos de AIR Blend (usar Nulo a menos que se experimenten problemas con otras aplicaciones, las otras opciones pueden causar que no sea posible importar el archivo correctamente de vuelta an AIR Blend...)"
 
 
 msgid "Null"
@@ -46834,7 +46834,7 @@ msgid "Scale FPS"
 msgstr "Escalar FPS"
 
 
-msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to a AIR Blend frame"
+msgid "Scale the framerate from the BVH to the current scenes, otherwise each BVH frame maps directly to an AIR Blend frame"
 msgstr "Escala la velocidad del BVH en la escena actual, de otro modo cada fotograma del BVH será mapeado directamente a un fotograma de AIR Blend"
 
 
@@ -57174,7 +57174,7 @@ msgid "Install Theme..."
 msgstr "Instalar tema..."
 
 
-msgid "Load and apply a AIR Blend XML theme file"
+msgid "Load and apply an AIR Blend XML theme file"
 msgstr "Carga y aplica un archivo XML de tema de AIR Blend"
 
 
@@ -63936,7 +63936,7 @@ msgid "Open"
 msgstr "Abrir"
 
 
-msgid "Open a AIR Blend file"
+msgid "Open an AIR Blend file"
 msgstr "Abre un archivo de AIR Blend"
 
 
