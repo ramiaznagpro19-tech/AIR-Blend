@@ -1,7 +1,7 @@
 name: Build AIR Blend Android APK
 
-# Builds the AIR Blend Android APK (arm64-v8a) with the "lite" configuration
-# (non essential features disabled for a smaller app and a faster build),
+# Builds the AIR Blend Android APK (arm64-v8a) with the "release" configuration
+# (the one used by the upstream Android port; "lite" is not tested there and crashed),
 # then publishes it as a workflow artifact and as the "android-latest" release.
 
 on:
@@ -168,11 +168,11 @@ jobs:
 
       - name: Configure and build AIR Blend for Android
         run: |
-          export CCACHE_DIR="$HOME/.cache/ccache" CCACHE_MAXSIZE=4G
+          export CCACHE_DIR="$HOME/.cache/ccache" CCACHE_MAXSIZE=6G
           # Host tools (makesdna, makesrna...) are built for Linux and need GCC 14+.
           # The Android target itself uses the NDK clang from the toolchain file.
           export CC=gcc-14 CXX=g++-14
-          make android lite ninja ccache BUILD_DIR="$BUILD_DIR" ANDROID_NDK_ROOT="$ANDROID_NDK_ROOT"
+          make android release ninja ccache BUILD_DIR="$BUILD_DIR" ANDROID_NDK_ROOT="$ANDROID_NDK_ROOT"
           ccache -s || true
           df -h / /mnt
 
@@ -206,7 +206,7 @@ jobs:
           prerelease: true
           make_latest: false
           body: |
-            APK Android d'AIR Blend (arm64-v8a, Android 10 minimum, Vulkan requis).
+            APK Android d'AIR Blend (arm64-v8a, Android 10 minimum, Vulkan requis), configuration complète.
             Compilé automatiquement depuis la branche air-blend-android (${{ github.sha }}).
           files: out/AIR-Blend-arm64.apk
 
