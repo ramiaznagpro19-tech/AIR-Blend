@@ -653,7 +653,9 @@ add_bundled_libraries(hiprt/lib)
 if(HAIKU)
   list(APPEND PLATFORM_LINKLIBS -lnetwork)
 elseif(ANDROID)
-  # Pass.
+  # Android NDK libraries used directly (logcat output in `creator_android.cc`).
+  # Otherwise only pulled in by optional libraries, which fails to link "lite" builds.
+  list(APPEND PLATFORM_LINKLIBS -llog -landroid)
 else()
   list(APPEND PLATFORM_LINKLIBS -lutil -lc -lm)
 endif()
