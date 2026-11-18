@@ -99,7 +99,7 @@ void GHOST_XrContext::createOpenXRInstance(
 {
   XrInstanceCreateInfo create_info = {XR_TYPE_INSTANCE_CREATE_INFO};
 
-  std::string("Blender").copy(create_info.applicationInfo.applicationName,
+  std::string("AIR Blend").copy(create_info.applicationInfo.applicationName,
                               XR_MAX_APPLICATION_NAME_SIZE);
   create_info.applicationInfo.apiVersion = XR_CURRENT_API_VERSION;
 

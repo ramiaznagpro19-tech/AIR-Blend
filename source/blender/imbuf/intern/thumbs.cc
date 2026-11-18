@@ -406,7 +406,7 @@ static ImBuf *thumb_create_ex(const char *file_path,
     }
     SNPRINTF(desc, "Thumbnail for %s", uri);
     IMB_metadata_ensure(&img->metadata);
-    IMB_metadata_set_field(img->metadata, "Software", "Blender");
+    IMB_metadata_set_field(img->metadata, "Software", "AIR Blend");
     IMB_metadata_set_field(img->metadata, "Thumb::URI", uri);
     IMB_metadata_set_field(img->metadata, "Description", desc);
     IMB_metadata_set_field(img->metadata, "Thumb::MTime", mtime);

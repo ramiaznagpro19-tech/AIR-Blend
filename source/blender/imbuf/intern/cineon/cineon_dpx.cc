@@ -110,7 +110,7 @@ static int imb_save_dpx_cineon(ImBuf *ibuf, const char *filepath, int use_cineon
                             -1,
                             -1,
                             -1,
-                            "Blender");
+                            "AIR Blend");
 
   if (logImage == nullptr) {
     printf("DPX/Cineon: error creating file.\n");

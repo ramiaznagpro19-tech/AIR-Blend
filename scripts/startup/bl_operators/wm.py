@@ -1118,7 +1118,7 @@ class WM_OT_url_open_preset(Operator):
           tip_("The donation program to support maintenance and improvements")),
          "https://fund.blender.org"),
         (('BLENDER', iface_("blender.org"),
-          tip_("Blender's official web-site")),
+          tip_("Official Blender web-site (AIR Blend is based on Blender)")),
          "https://www.blender.org"),
         (('CREDITS', iface_("Credits"),
           tip_("Lists committers to AIR Blend's source code")),

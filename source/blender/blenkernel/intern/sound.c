@@ -414,8 +414,8 @@ void BKE_sound_init(Main *bmain)
     specs.channels = AUD_CHANNELS_STEREO;
   }
 
-  if (!(sound_device = AUD_init(device_name, specs, buffersize, "Blender"))) {
-    sound_device = AUD_init("None", specs, buffersize, "Blender");
+  if (!(sound_device = AUD_init(device_name, specs, buffersize, "AIR Blend"))) {
+    sound_device = AUD_init("None", specs, buffersize, "AIR Blend");
   }
 
   BKE_sound_init_main(bmain);
