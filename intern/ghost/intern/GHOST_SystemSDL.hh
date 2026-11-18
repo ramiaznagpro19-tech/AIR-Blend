@@ -89,6 +89,32 @@ class GHOST_SystemSDL : public GHOST_System {
 
   GHOST_TabletData pen_tablet_data_ = {};
 
+#ifdef __ANDROID__
+  /* AIR Blend: touch-screen input.
+   * - One finger: tap = left click, drag = left drag, long press = right click.
+   * - Two fingers: pinch = zoom, move = pan/orbit (sent as trackpad gestures). */
+  enum class TouchState { Idle, Pending, Drag, Gesture, WaitAllUp };
+  struct TouchFinger {
+    SDL_FingerID id;
+    float x, y; /* Window coordinates. */
+  };
+  TouchState touch_state_ = TouchState::Idle;
+  std::vector<TouchFinger> touch_fingers_;
+  SDL_WindowID touch_window_id_ = 0;
+  float touch_start_x_ = 0.0f, touch_start_y_ = 0.0f;
+  uint64_t touch_start_ms_ = 0;
+  float touch_gesture_cx_ = 0.0f, touch_gesture_cy_ = 0.0f, touch_gesture_dist_ = 0.0f;
+  float touch_accum_x_ = 0.0f, touch_accum_y_ = 0.0f, touch_accum_zoom_ = 0.0f;
+
+  void processTouchEvent(const SDL_Event &sdl_event);
+  void processTouchLongPress();
+  /** Milliseconds until a pending long press fires, -1 when none is pending. */
+  int64_t touchLongPressTimeout() const;
+  void touchPushCursor(GHOST_WindowSDL *window, SDL_Window *sdl_win, float x, float y);
+  void touchPushButton(GHOST_WindowSDL *window, GHOST_TButton button, bool down);
+  void touchGestureReset();
+#endif
+
   /** The vector of windows that need to be updated. */
   std::vector<GHOST_WindowSDL *> dirty_windows_;
 };

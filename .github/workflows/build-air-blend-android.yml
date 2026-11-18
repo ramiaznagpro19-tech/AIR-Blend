@@ -14,7 +14,8 @@ permissions:
 
 concurrency:
   group: air-blend-android
-  cancel-in-progress: true
+  # Queue new builds instead of cancelling a running one (keeps its compiler cache).
+  cancel-in-progress: false
 
 env:
   # Large files (Git LFS) are not stored on GitHub for this fork:
@@ -91,8 +92,8 @@ jobs:
           sudo apt-get install -y -q ninja-build ccache gcc-14 g++-14
           cmake --version | head -1
 
-      - name: Compiler cache
-        uses: actions/cache@v4
+      - name: Restore compiler cache
+        uses: actions/cache/restore@v4
         with:
           path: ~/.cache/ccache
           key: ccache-android-${{ github.sha }}
@@ -107,6 +108,13 @@ jobs:
           make android lite ninja ccache BUILD_DIR="$BUILD_DIR" ANDROID_NDK_ROOT="$ANDROID_NDK_ROOT"
           ccache -s || true
           df -h / /mnt
+
+      - name: Save compiler cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: ~/.cache/ccache
+          key: ccache-android-${{ github.sha }}-${{ github.run_attempt }}
 
       - name: Assemble APK
         run: |

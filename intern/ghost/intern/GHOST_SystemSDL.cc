@@ -24,7 +24,11 @@
 #include "GHOST_EventButton.hh"
 #include "GHOST_EventCursor.hh"
 #include "GHOST_EventKey.hh"
+#include "GHOST_EventTrackpad.hh"
 #include "GHOST_EventWheel.hh"
+
+#include <algorithm>
+#include <cmath>
 
 GHOST_SystemSDL::GHOST_SystemSDL() : GHOST_System()
 {
@@ -607,6 +611,279 @@ void GHOST_SystemSDL::processPenEvent(const SDL_Event &sdl_event)
   }
 }
 
+#ifdef __ANDROID__
+/* -------------------------------------------------------------------- */
+/** \name Touch Input (AIR Blend)
+ * \{ */
+
+/** Hold a finger still this long for a right click (context menu). */
+static constexpr uint64_t TOUCH_LONG_PRESS_MS = 450;
+/** Movement (fraction of the smallest window side) turning a touch into a drag. */
+static constexpr float TOUCH_DRAG_THRESHOLD = 0.015f;
+/** Matches the scale used for macOS trackpad magnification events. */
+static constexpr float TOUCH_MAGNIFY_SCALE = 125.0f;
+
+void GHOST_SystemSDL::touchPushCursor(GHOST_WindowSDL *window,
+                                      SDL_Window *sdl_win,
+                                      float x,
+                                      float y)
+{
+  int x_win, y_win;
+  SDL_GetWindowPosition(sdl_win, &x_win, &y_win);
+  pushEvent(std::make_unique<GHOST_EventCursor>(getMilliSeconds(),
+                                                GHOST_kEventCursorMove,
+                                                window,
+                                                int32_t(x) + x_win,
+                                                int32_t(y) + y_win,
+                                                GHOST_TABLET_DATA_NONE));
+}
+
+void GHOST_SystemSDL::touchPushButton(GHOST_WindowSDL *window, GHOST_TButton button, bool down)
+{
+  pushEvent(std::make_unique<GHOST_EventButton>(getMilliSeconds(),
+                                                down ? GHOST_kEventButtonDown :
+                                                       GHOST_kEventButtonUp,
+                                                window,
+                                                button,
+                                                GHOST_TABLET_DATA_NONE));
+}
+
+void GHOST_SystemSDL::touchGestureReset()
+{
+  if (touch_fingers_.size() < 2) {
+    return;
+  }
+  const TouchFinger &a = touch_fingers_[0];
+  const TouchFinger &b = touch_fingers_[1];
+  touch_gesture_cx_ = (a.x + b.x) * 0.5f;
+  touch_gesture_cy_ = (a.y + b.y) * 0.5f;
+  touch_gesture_dist_ = std::hypot(a.x - b.x, a.y - b.y);
+  touch_accum_x_ = touch_accum_y_ = touch_accum_zoom_ = 0.0f;
+}
+
+int64_t GHOST_SystemSDL::touchLongPressTimeout() const
+{
+  if (touch_state_ != TouchState::Pending) {
+    return -1;
+  }
+  const uint64_t now = getMilliSeconds();
+  const uint64_t fire = touch_start_ms_ + TOUCH_LONG_PRESS_MS;
+  return (now >= fire) ? 0 : int64_t(fire - now);
+}
+
+void GHOST_SystemSDL::processTouchLongPress()
+{
+  SDL_Window *sdl_win = SDL_GetWindowFromID(touch_window_id_);
+  GHOST_WindowSDL *window = findGhostWindow(sdl_win);
+  /* The finger stays down: ignore it until every finger is lifted. */
+  touch_state_ = TouchState::WaitAllUp;
+  if (window == nullptr) {
+    return;
+  }
+  touchPushCursor(window, sdl_win, touch_start_x_, touch_start_y_);
+  touchPushButton(window, GHOST_kButtonMaskRight, true);
+  touchPushButton(window, GHOST_kButtonMaskRight, false);
+}
+
+void GHOST_SystemSDL::processTouchEvent(const SDL_Event &sdl_event)
+{
+  const SDL_TouchFingerEvent &event = sdl_event.tfinger;
+
+  /* Synthetic touches from a mouse or pen are already handled as such. */
+  if (event.touchID == SDL_MOUSE_TOUCHID || event.touchID == SDL_PEN_TOUCHID) {
+    return;
+  }
+
+  SDL_Window *sdl_win = SDL_GetWindowFromID(event.windowID);
+  if (sdl_win == nullptr) {
+    sdl_win = SDL_GetWindowFromID_fallback(touch_window_id_);
+  }
+  GHOST_WindowSDL *window = findGhostWindow(sdl_win);
+  if (window == nullptr) {
+    return;
+  }
+
+  int win_w = 1, win_h = 1;
+  SDL_GetWindowSize(sdl_win, &win_w, &win_h);
+  const float x = event.x * float(win_w);
+  const float y = event.y * float(win_h);
+  const float drag_threshold = TOUCH_DRAG_THRESHOLD * float(std::max(1, std::min(win_w, win_h)));
+
+  auto find_finger = [&]() {
+    return std::find_if(touch_fingers_.begin(),
+                        touch_fingers_.end(),
+                        [&](const TouchFinger &f) { return f.id == event.fingerID; });
+  };
+
+  switch (sdl_event.type) {
+    case SDL_EVENT_FINGER_DOWN: {
+      touch_fingers_.push_back({event.fingerID, x, y});
+      switch (touch_state_) {
+        case TouchState::Idle: {
+          touch_state_ = TouchState::Pending;
+          touch_window_id_ = event.windowID;
+          touch_start_x_ = x;
+          touch_start_y_ = y;
+          touch_start_ms_ = getMilliSeconds();
+          /* Move the cursor right away so buttons under the finger highlight. */
+          touchPushCursor(window, sdl_win, x, y);
+          break;
+        }
+        case TouchState::Drag: {
+          /* A second finger ends the current drag and starts a gesture. */
+          touchPushButton(window, GHOST_kButtonMaskLeft, false);
+          [[fallthrough]];
+        }
+        case TouchState::Pending: {
+          if (touch_fingers_.size() >= 2) {
+            touch_state_ = TouchState::Gesture;
+            touchGestureReset();
+          }
+          break;
+        }
+        case TouchState::Gesture:
+        case TouchState::WaitAllUp:
+          break;
+      }
+      break;
+    }
+
+    case SDL_EVENT_FINGER_MOTION: {
+      auto it = find_finger();
+      if (it == touch_fingers_.end()) {
+        break;
+      }
+      it->x = x;
+      it->y = y;
+
+      switch (touch_state_) {
+        case TouchState::Pending: {
+          if (std::hypot(x - touch_start_x_, y - touch_start_y_) > drag_threshold) {
+            /* Start the drag from where the finger first touched. */
+            touchPushCursor(window, sdl_win, touch_start_x_, touch_start_y_);
+            touchPushButton(window, GHOST_kButtonMaskLeft, true);
+            touchPushCursor(window, sdl_win, x, y);
+            touch_state_ = TouchState::Drag;
+          }
+          break;
+        }
+        case TouchState::Drag: {
+          touchPushCursor(window, sdl_win, x, y);
+          break;
+        }
+        case TouchState::Gesture: {
+          if (touch_fingers_.size() < 2 || it - touch_fingers_.begin() >= 2) {
+            break;
+          }
+          const TouchFinger &a = touch_fingers_[0];
+          const TouchFinger &b = touch_fingers_[1];
+          const float cx = (a.x + b.x) * 0.5f;
+          const float cy = (a.y + b.y) * 0.5f;
+          const float dist = std::hypot(a.x - b.x, a.y - b.y);
+
+          int x_win, y_win;
+          SDL_GetWindowPosition(sdl_win, &x_win, &y_win);
+          const int32_t x_root = int32_t(cx) + x_win;
+          const int32_t y_root = int32_t(cy) + y_win;
+
+          /* Two finger pinch: zoom. */
+          if (touch_gesture_dist_ > 1.0f && dist > 1.0f) {
+            touch_accum_zoom_ += (dist / touch_gesture_dist_ - 1.0f) * TOUCH_MAGNIFY_SCALE;
+            const int32_t zoom = int32_t(touch_accum_zoom_);
+            if (zoom != 0) {
+              touch_accum_zoom_ -= float(zoom);
+              pushEvent(std::make_unique<GHOST_EventTrackpad>(getMilliSeconds(),
+                                                              window,
+                                                              GHOST_kTrackpadEventMagnify,
+                                                              x_root,
+                                                              y_root,
+                                                              zoom,
+                                                              0,
+                                                              false));
+            }
+          }
+
+          /* Two finger move: pan/orbit, following the fingers ("natural" direction). */
+          touch_accum_x_ += cx - touch_gesture_cx_;
+          touch_accum_y_ += cy - touch_gesture_cy_;
+          const int32_t dx = int32_t(touch_accum_x_);
+          const int32_t dy = int32_t(touch_accum_y_);
+          if (dx != 0 || dy != 0) {
+            touch_accum_x_ -= float(dx);
+            touch_accum_y_ -= float(dy);
+            pushEvent(std::make_unique<GHOST_EventTrackpad>(getMilliSeconds(),
+                                                            window,
+                                                            GHOST_kTrackpadEventScroll,
+                                                            x_root,
+                                                            y_root,
+                                                            dx,
+                                                            dy,
+                                                            true));
+          }
+
+          touch_gesture_cx_ = cx;
+          touch_gesture_cy_ = cy;
+          touch_gesture_dist_ = dist;
+          break;
+        }
+        case TouchState::Idle:
+        case TouchState::WaitAllUp:
+          break;
+      }
+      break;
+    }
+
+    case SDL_EVENT_FINGER_UP:
+    case SDL_EVENT_FINGER_CANCELED: {
+      auto it = find_finger();
+      if (it != touch_fingers_.end()) {
+        touch_fingers_.erase(it);
+      }
+      const bool canceled = (sdl_event.type == SDL_EVENT_FINGER_CANCELED);
+
+      switch (touch_state_) {
+        case TouchState::Pending: {
+          if (!canceled) {
+            /* Tap: click where the finger touched. */
+            touchPushCursor(window, sdl_win, touch_start_x_, touch_start_y_);
+            touchPushButton(window, GHOST_kButtonMaskLeft, true);
+            touchPushButton(window, GHOST_kButtonMaskLeft, false);
+          }
+          touch_state_ = TouchState::Idle;
+          break;
+        }
+        case TouchState::Drag: {
+          touchPushCursor(window, sdl_win, x, y);
+          touchPushButton(window, GHOST_kButtonMaskLeft, false);
+          touch_state_ = TouchState::Idle;
+          break;
+        }
+        case TouchState::Gesture: {
+          if (touch_fingers_.size() >= 2) {
+            touchGestureReset();
+          }
+          else {
+            /* Don't turn the remaining finger into a click or drag. */
+            touch_state_ = TouchState::WaitAllUp;
+          }
+          break;
+        }
+        case TouchState::Idle:
+        case TouchState::WaitAllUp:
+          break;
+      }
+
+      if (touch_fingers_.empty()) {
+        touch_state_ = TouchState::Idle;
+      }
+      break;
+    }
+  }
+}
+
+/** \} */
+#endif /* __ANDROID__ */
+
 void GHOST_SystemSDL::processEvent(SDL_Event *sdl_event)
 {
   std::unique_ptr<GHOST_Event> g_event = nullptr;
@@ -676,6 +953,12 @@ void GHOST_SystemSDL::processEvent(SDL_Event *sdl_event)
       if (sdl_sub_evt.which == SDL_PEN_MOUSEID) {
         break;
       }
+#ifdef __ANDROID__
+      /* Touch input is handled from the finger events directly. */
+      if (sdl_sub_evt.which == SDL_TOUCH_MOUSEID) {
+        break;
+      }
+#endif
       const uint64_t event_ms = SDL_NS_TO_MS(sdl_sub_evt.timestamp);
       SDL_Window *sdl_win = SDL_GetWindowFromID_fallback(sdl_sub_evt.windowID);
       GHOST_WindowSDL *window = findGhostWindow(sdl_win);
@@ -746,6 +1029,12 @@ void GHOST_SystemSDL::processEvent(SDL_Event *sdl_event)
       if (sdl_sub_evt.which == SDL_PEN_MOUSEID) {
         break;
       }
+#ifdef __ANDROID__
+      /* Touch input is handled from the finger events directly. */
+      if (sdl_sub_evt.which == SDL_TOUCH_MOUSEID) {
+        break;
+      }
+#endif
       const uint64_t event_ms = SDL_NS_TO_MS(sdl_sub_evt.timestamp);
       GHOST_TButton gbmask = GHOST_kButtonMaskLeft;
       GHOST_TEventType type = sdl_sub_evt.down ? GHOST_kEventButtonDown : GHOST_kEventButtonUp;
@@ -795,6 +1084,15 @@ void GHOST_SystemSDL::processEvent(SDL_Event *sdl_event)
       }
       break;
     }
+#ifdef __ANDROID__
+    case SDL_EVENT_FINGER_DOWN:
+    case SDL_EVENT_FINGER_MOTION:
+    case SDL_EVENT_FINGER_UP:
+    case SDL_EVENT_FINGER_CANCELED: {
+      processTouchEvent(*sdl_event);
+      break;
+    }
+#endif
     case SDL_EVENT_PEN_PROXIMITY_IN:
     case SDL_EVENT_PEN_PROXIMITY_OUT:
     case SDL_EVENT_PEN_DOWN:
@@ -912,6 +1210,16 @@ bool GHOST_SystemSDL::processEvents(bool waitForEvent)
     if (waitForEvent && dirty_windows_.empty() && !SDL_HasEvents(SDL_EVENT_FIRST, SDL_EVENT_LAST))
     {
       uint64_t next = timerMgr->nextFireTime();
+#ifdef __ANDROID__
+      /* Wake up in time to detect a touch long press. */
+      const int64_t touch_timeout = touchLongPressTimeout();
+      if (touch_timeout >= 0) {
+        const uint64_t touch_next = getMilliSeconds() + uint64_t(touch_timeout);
+        if (next == GHOST_kFireTimeNever || touch_next < next) {
+          next = touch_next;
+        }
+      }
+#endif
 
       if (next == GHOST_kFireTimeNever) {
         SDL_WaitEventTimeout(nullptr, -1);
@@ -936,6 +1244,12 @@ bool GHOST_SystemSDL::processEvents(bool waitForEvent)
       processEvent(&sdl_event);
       anyProcessed = true;
     }
+#ifdef __ANDROID__
+    if (touchLongPressTimeout() == 0) {
+      processTouchLongPress();
+      anyProcessed = true;
+    }
+#endif
 
     if (generateWindowExposeEvents()) {
       anyProcessed = true;
@@ -979,6 +1293,15 @@ void GHOST_SystemSDL::addDirtyWindow(GHOST_WindowSDL *bad_wind)
 GHOST_TSuccess GHOST_SystemSDL::getButtons(GHOST_Buttons &buttons) const
 {
   SDL_MouseButtonFlags state = SDL_GetMouseState(nullptr, nullptr);
+#ifdef __ANDROID__
+  if (touch_state_ != TouchState::Idle) {
+    /* SDL's touch mouse emulation presses immediately, only report the emulated drag. */
+    state &= ~SDL_BUTTON_LMASK;
+    if (touch_state_ == TouchState::Drag) {
+      state |= SDL_BUTTON_LMASK;
+    }
+  }
+#endif
   buttons.set(GHOST_kButtonMaskLeft, (state & SDL_BUTTON_LMASK) != 0);
   buttons.set(GHOST_kButtonMaskMiddle, (state & SDL_BUTTON_MMASK) != 0);
   buttons.set(GHOST_kButtonMaskRight, (state & SDL_BUTTON_RMASK) != 0);
