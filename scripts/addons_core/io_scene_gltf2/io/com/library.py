@@ -9,7 +9,7 @@ from pathlib import Path
 
 def dll_path(lib_name, lib_display_name) -> Path | None:
     """
-    Get the library path, either beside the add-on or in Blender's shared library directory.
+    Get the library path, either beside the add-on or in AIR Blend's shared library directory.
     :return: library path, None when the location could not be determined.
     """
     import bpy

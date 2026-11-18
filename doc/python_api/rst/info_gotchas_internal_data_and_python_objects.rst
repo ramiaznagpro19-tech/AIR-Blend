@@ -2,16 +2,16 @@
 Internal Data & Their Python Objects
 ************************************
 
-The Python objects wrapping Blender internal data have some limitations and constraints,
+The Python objects wrapping AIR Blend internal data have some limitations and constraints,
 compared to 'pure Python' data. The most common things to keep in mind are documented here.
 
 
 .. _blender_py_objects_life_time:
 
-Life-Time of Python Objects Wrapping Blender Data
+Life-Time of Python Objects Wrapping AIR Blend Data
 =================================================
 
-Typically, Python objects representing (wrapping) Blender data have a limited life-time.
+Typically, Python objects representing (wrapping) AIR Blend data have a limited life-time.
 They are created on-demand, and deleted as soon as they are not used in Python anymore.
 
 This means that storing python-only data in these objects should not be done for anything that
@@ -23,7 +23,7 @@ And modal operators will keep their instance as long as the operator is running.
 However, this is done for performance purposes and is considered an internal implementation detail.
 Relying on this behavior from Python code side for any purpose is not recommended.
 
-Furthermore, Blender may free its internal data, in which case it will try to invalidate a known
+Furthermore, AIR Blend may free its internal data, in which case it will try to invalidate a known
 Python object wrapping it. But this is not always possible, which can lead to invalid memory access and
 is another good reason to never store these in Python code in any persistent way.
 See also the :ref:`troubleshooting crashes <troubleshooting_crashes>` documentation.
@@ -84,12 +84,12 @@ this way you don't run this risk of referencing existing data from the blend-fil
 Library Collisions
 ------------------
 
-Blender keeps data names unique (:class:`bpy.types.ID.name`) so you can't name two objects,
+AIR Blend keeps data names unique (:class:`bpy.types.ID.name`) so you can't name two objects,
 meshes, scenes, etc., the same by accident.
 However, when linking in library data from another blend-file naming collisions can occur,
 so it's best to avoid referencing data by name at all.
 
-This can be tricky at times and not even Blender handles this correctly in some cases
+This can be tricky at times and not even AIR Blend handles this correctly in some cases
 (when selecting the modifier object for example, you can't select between multiple objects with the same name),
 but it's still good to try avoiding these problems in this area.
 If you need to select between local and library data, there is a feature in ``bpy.data`` members to allow for this.
@@ -131,7 +131,7 @@ Consider the calculations that might contribute to the object's final transforma
 - Parent objects and all of their F-Curves, constraints, etc.
 
 To avoid expensive recalculations every time a property is modified,
-Blender defers the evaluation until the results are needed.
+AIR Blend defers the evaluation until the results are needed.
 However, while the script runs you may want to access the updated values.
 In this case you need to call :class:`bpy.types.ViewLayer.update` after modifying values, for example:
 
@@ -160,7 +160,7 @@ properties that behave that way are:
 - :class:`bpy.types.Area.ui_type`
 
 Such changes impact the UI, and with that the context (:class:`bpy.context`) quite drastically. This can break
-Blender's context management. So Blender delays this change until after operators have run and just before the UI is
+AIR Blend's context management. So AIR Blend delays this change until after operators have run and just before the UI is
 redrawn, making sure that context can be changed safely.
 
 If you rely on executing code with an updated context this can be worked around by executing the code in a delayed
@@ -180,14 +180,14 @@ Can I redraw during script execution?
 The official answer to this is no, or... *"You don't want to do that"*.
 To give some background on the topic:
 
-While a script executes, Blender waits for it to finish and is effectively locked until it's done;
-while in this state Blender won't redraw or respond to user input.
-Normally this is not such a problem because scripts distributed with Blender
+While a script executes, AIR Blend waits for it to finish and is effectively locked until it's done;
+while in this state AIR Blend won't redraw or respond to user input.
+Normally this is not such a problem because scripts distributed with AIR Blend
 tend not to run for an extended period of time,
 nevertheless scripts *can* take a long time to complete and it would be nice to see progress in the viewport.
 
-Tools that lock Blender in a loop redraw are highly discouraged
-since they conflict with Blender's ability to run multiple operators
+Tools that lock AIR Blend in a loop redraw are highly discouraged
+since they conflict with AIR Blend's ability to run multiple operators
 at once and update different parts of the interface as the tool runs.
 
 So the solution here is to write a **modal** operator, which is an operator that defines a ``modal()`` function,
@@ -197,13 +197,13 @@ they can handle the events or pass through to be handled by the keymap or other 
 Examples of modal operators are Transform, Painting, Fly Navigation and File Select.
 
 Writing modal operators takes more effort than a simple ``for`` loop
-that contains draw calls but is more flexible and integrates better with Blender's design.
+that contains draw calls but is more flexible and integrates better with AIR Blend's design.
 
 
 .. rubric:: Ok, Ok! I still want to draw from Python
 
 If you insist -- yes it's possible, but scripts that use this hack will not be considered
-for inclusion in Blender and any issue with using it will not be considered a bug,
+for inclusion in AIR Blend and any issue with using it will not be considered a bug,
 there is also no guaranteed compatibility in future releases.
 
 .. code-block:: python

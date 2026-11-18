@@ -7,11 +7,11 @@
  *
  * \brief Establish and manage Outliner trees for different display modes.
  *
- * Each Outliner display mode (e.g View Layer, Scenes, Blender File) is implemented as a
+ * Each Outliner display mode (e.g View Layer, Scenes, AIR Blend File) is implemented as a
  * tree-display class with the #AbstractTreeDisplay interface.
  *
  * Their main responsibility is building the Outliner tree for a display mode. For that, they
- * implement the #build_tree() function, which based on Blender data (#TreeSourceData), builds a
+ * implement the #build_tree() function, which based on AIR Blend data (#TreeSourceData), builds a
  * custom tree of whatever data it wants to visualize.
  * Further, they can implement display mode dependent queries and general operations using the
  * #AbstractTreeDisplay abstraction as common interface.
@@ -173,7 +173,7 @@ class AbstractTreeDisplay {
       int /*eSpaceOutliner_Mode*/ mode, SpaceOutliner &space_outliner);
 
   /**
-   * Build a tree for this display mode with the Blender context data given in \a source_data and
+   * Build a tree for this display mode with the AIR Blend context data given in \a source_data and
    * the view settings in \a space_outliner.
    */
   virtual ListBaseT<TreeElement> build_tree(const TreeSourceData &source_data) = 0;

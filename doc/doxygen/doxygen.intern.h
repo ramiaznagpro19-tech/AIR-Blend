@@ -4,7 +4,7 @@
 
 /** \defgroup intern Internal libraries
  *  \section internabout Internal libraries
- *  Blender comes with some of its dependencies
+ *  AIR Blend comes with some of its dependencies
  *  directly included in the codebase. Libraries
  *  that are in the \c intern/ folder are maintained
  *  as part of the normal development process.

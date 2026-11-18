@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-# Standalone or with Blender
+# Standalone or with AIR Blend
 if(NOT WITH_BLENDER)
   set(CYCLES_INSTALL_PATH ${CMAKE_INSTALL_PREFIX})
 else()

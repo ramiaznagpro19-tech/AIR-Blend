@@ -111,7 +111,7 @@ class Log:
     def critical(self, message, popup=False):
         self.error_logger.critical(message)
         if popup:
-            # There is no Critical level in Blender, so we use error
+            # There is no Critical level in AIR Blend, so we use error
             self.popup_handler.buffer.append(('ERROR', message))
 
     def profile(self, message, popup=False):  # There is no profile level in logging, so we use info

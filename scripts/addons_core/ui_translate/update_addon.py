@@ -60,7 +60,7 @@ def enum_addons(self, context):
     if not _cached_enum_addons:
         for mod in addon_utils.modules(module_cache=addon_utils.addons_fake_modules):
             mod_info = addon_utils.module_bl_info(mod)
-            # Skip OFFICIAL addons, they are already translated in main i18n system (together with Blender itself).
+            # Skip OFFICIAL addons, they are already translated in main i18n system (together with AIR Blend itself).
             if mod_info["support"] in {'OFFICIAL'}:
                 continue
             src = mod.__file__

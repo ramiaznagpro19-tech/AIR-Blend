@@ -1329,7 +1329,7 @@ static const EnumPropertyItem move_type_items[] = {
 };
 
 /**
- * Implement standard behavior from GUI text editing fields (including Blender's UI)
+ * Implement standard behavior from GUI text editing fields (including AIR Blend's UI)
  * where horizontal motion drops the selection and places the cursor at the selection bounds
  * (based on the motion direction) instead of moving the cursor.
  */
@@ -2147,7 +2147,7 @@ static wmOperatorStatus font_select_word_exec(bContext *C, wmOperator * /*op*/)
   BLI_str_cursor_step_bounds_utf32(ef->textbuf, ef->len, ef->pos, &ef->selstart, &ef->selend);
   ef->pos = ef->selend;
 
-  /* XXX: Text object selection start is 1-based, unlike text processing elsewhere in Blender. */
+  /* XXX: Text object selection start is 1-based, unlike text processing elsewhere in AIR Blend. */
   ef->selstart += 1;
 
   font_select_update_primary_clipboard(obedit);

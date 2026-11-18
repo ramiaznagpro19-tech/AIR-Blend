@@ -221,7 +221,7 @@ static void import_startjob(void *customdata, wmJobWorkerStatus *worker_status)
   if (data->params.import_lights && data->params.create_world_material &&
       !archive->dome_light_readers().is_empty())
   {
-    /* NOTE: Since Blender does not have dome light objects, we need to modify the Scene directly
+    /* NOTE: Since AIR Blend does not have dome light objects, we need to modify the Scene directly
      * in order to setup environment lighting. */
     if (data->scene) {
       USDDomeLightReader *dome_light_reader = archive->dome_light_readers().first();
@@ -236,7 +236,7 @@ static void import_startjob(void *customdata, wmJobWorkerStatus *worker_status)
   worker_status->progress = 0.2f;
   worker_status->do_update = true;
 
-  /* Sort readers by name: when creating a lot of objects in Blender,
+  /* Sort readers by name: when creating a lot of objects in AIR Blend,
    * it is much faster if the order is sorted by name. */
   archive->sort_readers();
 
@@ -300,7 +300,7 @@ static void import_endjob(void *customdata)
   if (data->was_canceled && data->archive) {
     for (const USDPrimReader *reader : data->archive->readers()) {
       /* It's possible that cancellation occurred between the creation of
-       * the reader and the creation of the Blender object. */
+       * the reader and the creation of the AIR Blend object. */
       if (Object *ob = reader->object()) {
         BKE_id_free_us(data->bmain, ob);
       }
@@ -411,7 +411,7 @@ static void import_endjob(void *customdata)
     call_import_hooks(data->archive, data->params.worker_status->reports);
 
     if (data->is_background_job) {
-      /* Blender already returned from the import operator, so we need to store our own extra undo
+      /* AIR Blend already returned from the import operator, so we need to store our own extra undo
        * step. */
       ED_undo_push(data->C, "USD Import Finished");
     }
@@ -645,7 +645,7 @@ void USD_get_transform(CacheReader *reader, float4x4 &r_mat_world, float time, f
   bool is_constant = false;
 
   /* Convert from the local matrix we obtain from USD to world coordinates
-   * for Blender. This conversion is done here rather than by Blender due to
+   * for AIR Blend. This conversion is done here rather than by AIR Blend due to
    * work around the non-standard interpretation of CONSTRAINT_SPACE_LOCAL in
    * BKE_constraint_mat_convertspace(). */
   Object *object = usd_reader->object();

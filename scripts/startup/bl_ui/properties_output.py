@@ -415,7 +415,7 @@ class RENDER_PT_output_pixel_density(RenderOutputButtonsPanel, Panel):
 
         ppm_base, preset_label = args
 
-        # NOTE: `as_float_32` is needed because Blender stores this value as a 32bit float.
+        # NOTE: `as_float_32` is needed because AIR Blend stores this value as a 32bit float.
         # Which won't match Python's 64bit float.
         def as_float_32(f):
             from struct import pack, unpack

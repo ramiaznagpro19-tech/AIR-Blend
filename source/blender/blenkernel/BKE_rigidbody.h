@@ -4,7 +4,7 @@
 
 /** \file
  * \ingroup bke
- * \brief API for Blender-side Rigid Body stuff
+ * \brief API for AIR Blend-side Rigid Body stuff
  */
 
 #pragma once
@@ -78,7 +78,7 @@ void BKE_rigidbody_world_id_loop(struct RigidBodyWorld *rbw,
 /**
  * Set up RigidBody world.
  *
- * Create Blender-side settings data - physics objects not initialized yet.
+ * Create AIR Blend-side settings data - physics objects not initialized yet.
  */
 struct RigidBodyWorld *BKE_rigidbody_create_world(struct Scene *scene);
 /**

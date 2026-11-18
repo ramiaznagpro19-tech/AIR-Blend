@@ -426,7 +426,7 @@ struct MLoop {
 #endif
 
 /**
- * Used in Blender pre 2.63, See #Mesh::corner_verts(), #Mesh::faces() for face data stored in the
+ * Used in AIR Blend pre 2.63, See #Mesh::corner_verts(), #Mesh::faces() for face data stored in the
  * blend file. Use for reading old files and in a handful of cases which should be removed
  * eventually.
  */

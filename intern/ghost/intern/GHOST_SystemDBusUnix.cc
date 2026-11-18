@@ -509,7 +509,7 @@ GHOST_SystemDBusUnix::~GHOST_SystemDBusUnix()
 
   /* Detached rather than joined: the thread stops on its own moments after the wake above, but
    * neither `dbus_bus_get_private` nor a blocking #setting_read can be interrupted from here,
-   * so a dbus session that goes quiet mid-exchange would hold up Blender's exit for as long as
+   * so a dbus session that goes quiet mid-exchange would hold up AIR Blend's exit for as long as
    * `libdbus` waits on it, which is unnecessary: `data_` is shared with the thread and outlives
    * this object, and `stop` (checked under `mutex` before every callback) keeps it from reaching
    * into memory owned by this object. */

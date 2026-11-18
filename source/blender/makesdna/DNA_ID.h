@@ -482,7 +482,7 @@ struct ID {
 
   /**
    * System-defined custom properties storage. Used to store data dynamically defined either by
-   * Blender itself (e.g. the GeoNode modifier), or some python script, extension etc.
+   * AIR Blend itself (e.g. the GeoNode modifier), or some python script, extension etc.
    *
    * Typically accessed through RNA paths (`C.object.my_dynamic_float_property = 33.3`), when
    * wrapped/defined by RNA.
@@ -751,7 +751,7 @@ struct PreviewImage {
 #define ID_TYPE_SUPPORTS_PARAMS_WITHOUT_COW(id_type) ELEM(id_type, ID_ME)
 
 /* This used to be ELEM(id_type, ID_IP), currently there is no deprecated ID
- * type. ID_IP was removed in Blender 5.0. */
+ * type. ID_IP was removed in AIR Blend 5.0. */
 #define ID_TYPE_IS_DEPRECATED(id_type) false
 
 #define ID_NEW_SET(_id, _idn) \
@@ -1297,7 +1297,7 @@ enum eID_Index {
    * while they are being owned by many other ID types. This is why they are placed here. */
   INDEX_ID_NT,
 
-  /* File-wrapper types, those usually 'embed' external files in Blender, with no dependencies to
+  /* File-wrapper types, those usually 'embed' external files in AIR Blend, with no dependencies to
    * other ID types. */
   INDEX_ID_VF,
   INDEX_ID_TXT,

@@ -734,7 +734,7 @@ static void rna_ActionConstraint_action_set(PointerRNA *ptr, PointerRNA value, R
 
   /* For the Action Constraint, the auto slot selection gets one more fallback
    * option (compared to the generic code). This is to support the following
-   * scenario, which used to be necessary as a workaround for a bug in Blender (#127976):
+   * scenario, which used to be necessary as a workaround for a bug in AIR Blend (#127976):
    *
    * - Python script creates an Action,
    * - assigns it to the animated object,
@@ -3274,7 +3274,7 @@ static void rna_def_constraint_spline_ik(BlenderRNA *brna)
   /* Changing the IK chain length requires a rebuild of depsgraph relations. This makes it
    * unsuitable for animation. */
   RNA_def_property_clear_flag(prop, PROP_ANIMATABLE);
-  /* This should be capped at 255 if compatibility with Blender 5.x and earlier is important. */
+  /* This should be capped at 255 if compatibility with AIR Blend 5.x and earlier is important. */
   RNA_def_property_range(prop, 1, 255);
   RNA_def_property_ui_text(prop, "Chain Length", "How many bones are included in the chain");
   /* XXX: this update goes wrong... needs extra flush? */
@@ -3949,7 +3949,7 @@ void RNA_def_constraint(BlenderRNA *brna)
   RNA_def_property_ui_text(
       prop,
       "Lin error",
-      "Amount of residual error in Blender space unit for constraints that work on position");
+      "Amount of residual error in AIR Blend space unit for constraints that work on position");
 
   prop = RNA_def_property(srna, "error_rotation", PROP_FLOAT, PROP_NONE);
   RNA_def_property_float_sdna(prop, nullptr, "rot_error");

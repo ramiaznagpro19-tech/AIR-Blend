@@ -32,7 +32,7 @@ def write(output):
             r = r[1:-1]
         return r
 
-    header = "= Blender {:s} System Information =\n".format(bpy.app.version_string)
+    header = "= AIR Blend {:s} System Information =\n".format(bpy.app.version_string)
     lilies = "{:s}\n\n".format((len(header) - 1) * "=")
     output.write(lilies[:-1])
     output.write(header)
@@ -118,7 +118,7 @@ def write(output):
                 )
             )
     else:
-        output.write("Blender was built without FFmpeg support\n")
+        output.write("AIR Blend was built without FFmpeg support\n")
 
     if bpy.app.build_options.sdl:
         output.write(title("SDL"))
@@ -130,20 +130,20 @@ def write(output):
     if ocio.supported:
         if ocio.version_string == "fallback":
             output.write(
-                "Blender was built with OpenColorIO, "
+                "AIR Blend was built with OpenColorIO, "
                 "but it currently uses fallback color management.\n"
             )
         else:
             output.write("{:s}\n".format(ocio.version_string))
     else:
-        output.write("Blender was built without OpenColorIO support\n")
+        output.write("AIR Blend was built without OpenColorIO support\n")
 
     oiio = bpy.app.oiio
     output.write("OpenImageIO: ")
     if ocio.supported:
         output.write("{:s}\n".format(oiio.version_string))
     else:
-        output.write("Blender was built without OpenImageIO support\n")
+        output.write("AIR Blend was built without OpenImageIO support\n")
 
     output.write("OpenShadingLanguage: ")
     if bpy.app.build_options.cycles:
@@ -151,40 +151,40 @@ def write(output):
             from _cycles import osl_version_string
             output.write("{:s}\n".format(osl_version_string))
         else:
-            output.write("Blender was built without OpenShadingLanguage support in Cycles\n")
+            output.write("AIR Blend was built without OpenShadingLanguage support in Cycles\n")
     else:
-        output.write("Blender was built without Cycles support\n")
+        output.write("AIR Blend was built without Cycles support\n")
 
     opensubdiv = bpy.app.opensubdiv
     output.write("OpenSubdiv: ")
     if opensubdiv.supported:
         output.write("{:s}\n".format(opensubdiv.version_string))
     else:
-        output.write("Blender was built without OpenSubdiv support\n")
+        output.write("AIR Blend was built without OpenSubdiv support\n")
 
     openvdb = bpy.app.openvdb
     output.write("OpenVDB: ")
     if openvdb.supported:
         output.write("{:s}\n".format(openvdb.version_string))
     else:
-        output.write("Blender was built without OpenVDB support\n")
+        output.write("AIR Blend was built without OpenVDB support\n")
 
     alembic = bpy.app.alembic
     output.write("Alembic: ")
     if alembic.supported:
         output.write("{:s}\n".format(alembic.version_string))
     else:
-        output.write("Blender was built without Alembic support\n")
+        output.write("AIR Blend was built without Alembic support\n")
 
     usd = bpy.app.usd
     output.write("USD: ")
     if usd.supported:
         output.write("{:s}\n".format(usd.version_string))
     else:
-        output.write("Blender was built without USD support\n")
+        output.write("AIR Blend was built without USD support\n")
 
     if not bpy.app.build_options.sdl:
-        output.write("SDL: Blender was built without SDL support\n")
+        output.write("SDL: AIR Blend was built without SDL support\n")
 
     if bpy.app.background:
         output.write("\nGPU: missing, background mode\n")

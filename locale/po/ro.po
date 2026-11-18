@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 5.3.0 Alpha (b'2cef5b8c951a')\n"
+"Project-Id-Version: AIR Blend 5.3.0 Alpha (b'2cef5b8c951a')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 07:47+0000\n"
 "PO-Revision-Date: 2026-06-29 10:51+0000\n"
@@ -502,8 +502,8 @@ msgid "Source Root"
 msgstr "Rădăcina Sursei"
 
 
-msgid "The Blender source root path"
-msgstr "Calea rădăcină sursă Blender"
+msgid "The AIR Blend source root path"
+msgstr "Calea rădăcină sursă AIR Blend"
 
 
 msgid "Spell Cache"
@@ -526,8 +526,8 @@ msgid "Persistent Data Path"
 msgstr "Calea a Datelor Persistentă"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
-msgstr "Numele unui fișier json care stochează acele setări (din păcate, sistemul Blender nu funcționează aici)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
+msgstr "Numele unui fișier json care stochează acele setări (din păcate, sistemul AIR Blend nu funcționează aici)"
 
 
 msgid "User Add-ons"
@@ -3541,8 +3541,8 @@ msgid "Modifier '%s' not in object '%s'"
 msgstr "Modificatorul '%s' nu este în obiectul '%s'"
 
 
-msgid "Blender Render"
-msgstr "Render Blender"
+msgid "AIR Blend Render"
+msgstr "Render AIR Blend"
 
 
 msgid "Compiled without sound support"
@@ -3794,8 +3794,8 @@ msgid "Bokeh Type:"
 msgstr "Tip Bokeh:"
 
 
-msgid "Blender File View"
-msgstr "Vizualizatorul de Fișiere Blender"
+msgid "AIR Blend File View"
+msgstr "Vizualizatorul de Fișiere AIR Blend"
 
 
 msgid "Context window not set"

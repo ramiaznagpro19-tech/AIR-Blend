@@ -37,7 +37,7 @@ LibOCIOColorSpace::LibOCIOColorSpace(const int index,
 
   if (interop_id_.is_empty()) {
     /* For older configs and older OpenColorIO versions, check the aliases as fallback.
-     * This is a convention used in the Blender and ACES 2.0 configs. */
+     * This is a convention used in the AIR Blend and ACES 2.0 configs. */
     const int num_aliases = ocio_color_space->getNumAliases();
     for (int i = 0; interop_id_.is_empty() && i < num_aliases; i++) {
       StringRefNull alias = ocio_color_space->getAlias(i);

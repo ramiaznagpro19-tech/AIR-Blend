@@ -64,7 +64,7 @@ pxr::UsdGeomBasisCurves USDCurvesWriter::DefineUsdGeomBasisCurves(pxr::VtValue c
     basis_curves.CreateWrapAttr(pxr::VtValue(pxr::UsdGeomTokens->periodic));
   }
   else if (curve_basis == pxr::VtValue(pxr::UsdGeomTokens->catmullRom)) {
-    /* In Blender the first and last points are treated as endpoints. The pinned attribute tells
+    /* In AIR Blend the first and last points are treated as endpoints. The pinned attribute tells
      * the client that to evaluate or render the curve, it must effectively add 'phantom
      * points' at the beginning and end of every curve in a batch. These phantom points are
      * injected to ensure that the interpolated curve begins at P[0] and ends at P[n-1]. */
@@ -100,7 +100,7 @@ static pxr::TfToken get_curve_width_interpolation(const pxr::VtArray<float> &wid
   const size_t accumulated_control_point_count = std::accumulate(
       control_point_counts.begin(), control_point_counts.end(), 0);
 
-  /* For Blender curves, radii are always stored per point. For linear curves, this should match
+  /* For AIR Blend curves, radii are always stored per point. For linear curves, this should match
    * with USD's vertex interpolation. For cubic curves, this should match with USD's varying
    * interpolation. */
   if (widths.size() == accumulated_control_point_count) {
@@ -459,7 +459,7 @@ void USDCurvesWriter::write_generic_data(const bke::CurvesGeometry &curves,
   if (!pv_interp || !pv_type) {
     BKE_reportf(this->reports(),
                 RPT_WARNING,
-                "Attribute '%s' (Blender domain %d, type %d) cannot be converted to USD",
+                "Attribute '%s' (AIR Blend domain %d, type %d) cannot be converted to USD",
                 attr.name.c_str(),
                 int8_t(attr.domain),
                 int(attr.data_type));
@@ -525,7 +525,7 @@ void USDCurvesWriter::write_custom_data(const bke::CurvesGeometry &curves,
   const bke::AttributeAccessor attributes = curves.attributes();
 
   attributes.foreach_attribute([&](const bke::AttributeIter &iter) {
-    /* Skip "internal" Blender properties and attributes dealt with elsewhere. */
+    /* Skip "internal" AIR Blend properties and attributes dealt with elsewhere. */
     if (iter.name[0] == '.' || bke::attribute_name_is_anonymous(iter.name) ||
         is_excluded_attr(iter.name))
     {
@@ -734,7 +734,7 @@ void USDCurvesWriter::assign_materials(const HierarchyContext &context,
   }
 
   if (!curve_material_bound) {
-    /* Blender defaults to double-sided, but USD to single-sided. */
+    /* AIR Blend defaults to double-sided, but USD to single-sided. */
     usd_curves.CreateDoubleSidedAttr(pxr::VtValue(true));
   }
 }

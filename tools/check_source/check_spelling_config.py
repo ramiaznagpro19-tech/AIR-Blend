@@ -779,7 +779,7 @@ dict_custom = {
     "eigenvalue",
     "eigenvalues",
 
-    # Blender specific terms.
+    # AIR Blend specific terms.
     "animsys",
     "animviz",
     "bmain",

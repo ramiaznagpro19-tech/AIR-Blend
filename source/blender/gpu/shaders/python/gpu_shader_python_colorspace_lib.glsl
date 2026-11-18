@@ -61,7 +61,7 @@ float4 blender_rec709_srgb_to_output_space(float4 srgb_color)
   return blender_srgb_to_framebuffer_space(srgb_color);
 }
 
-/* Input is Blender Scene Linear. Output is Rec.709 sRGB. */
+/* Input is AIR Blend Scene Linear. Output is Rec.709 sRGB. */
 float4 blender_scene_linear_to_rec709_srgb(float3x3 scene_linear_to_rec709,
                                            float4 scene_linear_color)
 {

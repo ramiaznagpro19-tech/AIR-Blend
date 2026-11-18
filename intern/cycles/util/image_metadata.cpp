@@ -146,7 +146,7 @@ void ImageMetaData::finalize(const ImageAlphaType alpha_type)
     }
   }
 
-  /* For Blender tx files, match colorspace used by maketx to generate the file.
+  /* For AIR Blend tx files, match colorspace used by maketx to generate the file.
    * THis is needed because TIFF files can not store arbitrary colorspace metadata. */
   if (!tile_need_conform) {
     colorspace = make_tx_get_file_colorspace(*this);
@@ -264,7 +264,7 @@ void ImageMetaData::detect_tiles(ImageInput &input,
 
   const std::string software = spec.get_string_attribute("Software");
   int tx_file_format_version = INT_MAX;
-  sscanf(software.c_str(), "Blender maketx v%d", &tx_file_format_version);
+  sscanf(software.c_str(), "AIR Blend maketx v%d", &tx_file_format_version);
 
   if (tx_file_format_version != INT_MAX &&
       (tx_file_format_version < 0 || tx_file_format_version > TX_FILE_FORMAT_VERSION))
@@ -444,7 +444,7 @@ bool ImageMetaData::oiio_load_metadata(OIIO::string_view filepath, OIIO::ImageSp
   is_unassociated_alpha = spec.get_int_attribute("oiio:UnassociatedAlpha", 0);
 
   if (!is_unassociated_alpha && spec.alpha_channel != -1) {
-    /* Workaround OIIO not detecting TGA file alpha the same as Blender (since #3019).
+    /* Workaround OIIO not detecting TGA file alpha the same as AIR Blend (since #3019).
      * We want anything not marked as premultiplied alpha to get associated. */
     if (strcmp(in->format_name(), "targa") == 0) {
       is_unassociated_alpha = spec.get_int_attribute("targa:alpha_type", -1) != 4;

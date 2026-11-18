@@ -48,7 +48,7 @@ namespace blender {
  * The underlying method is incremental, but we need to know
  * beforehand a bounding box for all of the constraints.
  * This code can be extended in the future to allow for
- * deletion of constraints, if there is a use in Blender
+ * deletion of constraints, if there is a use in AIR Blend
  * for dynamically maintaining a triangulation.
  */
 
@@ -79,7 +79,7 @@ enum CDT_output_type {
   CDT_CONSTRAINTS,
   /**
    * Like #CDT_CONSTRAINTS, but keep enough edges so that any output faces that came
-   * from input faces can be made as valid #BMesh faces in Blender: that is,
+   * from input faces can be made as valid #BMesh faces in AIR Blend: that is,
    * no vertex appears more than once and no isolated holes in faces.
    */
   CDT_CONSTRAINTS_VALID_BMESH,

@@ -12,7 +12,7 @@ addon_keymaps: List[Tuple[bpy.types.KeyMap, bpy.types.KeyMapItem]] = []
 def register() -> None:
     wm = bpy.context.window_manager
     if wm.keyconfigs.addon is None:
-        # This happens when Blender is running in the background.
+        # This happens when AIR Blend is running in the background.
         return
 
     km = wm.keyconfigs.addon.keymaps.new(name="Asset Browser Main", space_type="FILE_BROWSER")

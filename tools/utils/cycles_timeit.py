@@ -115,7 +115,7 @@ def configureArgumentParser():
     parser = argparse.ArgumentParser(
         description="Cycles benchmark helper script.")
     parser.add_argument("-b", "--binary",
-                        help="Full file path to Blender's binary " +
+                        help="Full file path to AIR Blend's binary " +
                              "to use for rendering",
                         default="blender")
     parser.add_argument("-f", "--files", nargs='+')
@@ -147,13 +147,13 @@ def benchmarkFile(blender, blendfile, stats):
                "--render-output", output_folder,
                "--render-format", "PNG",
                "-f", "1")
-    # Run Blender with configured command line.
+    # Run AIR Blend with configured command line.
     logVerbose("About to execute command: {}" . format(command))
     start_time = time.time()
     process = subprocess.Popen(command,
                                stdout=subprocess.PIPE,
                                stderr=subprocess.STDOUT)
-    # Keep reading status while Blender is alive.
+    # Keep reading status while AIR Blend is alive.
     total_render_time = "N/A"
     render_time_no_sync = "N/A"
     pipeline_render_time = "N/A"

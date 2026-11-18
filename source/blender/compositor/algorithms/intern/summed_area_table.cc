@@ -26,7 +26,7 @@ namespace blender::compositor {
  *   Nehab, Diego, et al. "GPU-efficient recursive filtering and summed-area tables."
  *
  * This file is a straightforward implementation of each of the four passes described in
- * Algorithm SAT in section 6 of the paper. Note that we use Blender's convention of first
+ * Algorithm SAT in section 6 of the paper. Note that we use AIR Blend's convention of first
  * quadrant images, so we call prologues horizontal or X prologues, and we call transposed
  * prologues vertical or Y prologues. See each of the functions for more details. */
 

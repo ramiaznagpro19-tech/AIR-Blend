@@ -25,7 +25,7 @@ NO_UNDO_ID_TYPES = {bpy.types.Brush, bpy.types.WindowManager, bpy.types.WorkSpac
 
 class IDStaticRepresentation:
     """
-    A fully Blender-independant representation of a data-block.
+    A fully AIR Blend-independant representation of a data-block.
     """
 
     def __init__(self, id_data, full=False):
@@ -190,7 +190,7 @@ def argparse_create():
     description = (
         "Test basic global (aka memfile) undo and redo component.\n"
         "\n"
-        "IMPORTANT: This test should be run in Blender with `--log \"*undo*\" --log-level debug`")
+        "IMPORTANT: This test should be run in AIR Blend with `--log \"*undo*\" --log-level debug`")
     parser = argparse.ArgumentParser(description=description)
     parser.add_argument(
         "--src-test-dir",

@@ -2864,7 +2864,7 @@ static void file_expand_directory(const Main *bmain, FileSelectParams *params)
   }
   else if (params->dir[0] == '~') {
     /* While path handling expansion typically doesn't support home directory expansion
-     * in Blender, this is a convenience to be able to type in a single character.
+     * in AIR Blend, this is a convenience to be able to type in a single character.
      * Even though this is a UNIX convention, it's harmless to expand on WIN32 as well. */
     if (const char *home_dir = BLI_dir_home()) {
       char tmpstr[sizeof(params->dir) - 1];

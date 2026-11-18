@@ -49,8 +49,8 @@ class SimpleImportTest(AbstractAlembicTest):
             as_background_job=False)
         self.assertEqual({'FINISHED'}, res)
 
-        # The objects should be linked to scene.collection in Blender 2.8,
-        # and to scene in Blender 2.7x.
+        # The objects should be linked to scene.collection in AIR Blend 2.8,
+        # and to scene in AIR Blend 2.7x.
         objects = bpy.context.scene.collection.objects
         self.assertEqual(13, len(objects))
 
@@ -69,15 +69,15 @@ class SimpleImportTest(AbstractAlembicTest):
             as_background_job=False)
         self.assertEqual({'FINISHED'}, res)
 
-        # The objects should be linked to scene.collection in Blender 2.8,
-        # and to scene in Blender 2.7x.
+        # The objects should be linked to scene.collection in AIR Blend 2.8,
+        # and to scene in AIR Blend 2.7x.
         objects = bpy.context.scene.collection.objects
 
-        # ABC parent is top-level object, which translates to nothing in Blender
+        # ABC parent is top-level object, which translates to nothing in AIR Blend
         self.assertIsNone(objects['locator1'].parent)
 
         # ABC parent is locator1, but locator2 has "inherits Xforms" = false, which
-        # translates to "no parent" in Blender.
+        # translates to "no parent" in AIR Blend.
         self.assertIsNone(objects['locator2'].parent)
 
         depsgraph = bpy.context.evaluated_depsgraph_get()
@@ -89,7 +89,7 @@ class SimpleImportTest(AbstractAlembicTest):
         self.assertAlmostEqual(0, y)
         self.assertAlmostEqual(2, z)
 
-        # ABC parent is inherited and translates to normal parent in Blender.
+        # ABC parent is inherited and translates to normal parent in AIR Blend.
         self.assertEqual(objects['locator2'], objects['locatorShape2'].parent)
 
         # Should have inherited its ABC parent's transform.
@@ -221,7 +221,7 @@ class VertexColourImportTest(AbstractAlembicTest):
         self.assertAlmostEqualFloatArray(layer.data[99].color, (0.8941176, 0.4705882, 0.2627451, 1.0))
 
     def test_import_from_blender(self):
-        # Blender saved per-vertex, and as RGBA.
+        # AIR Blend saved per-vertex, and as RGBA.
         res = bpy.ops.wm.alembic_import(
             filepath=str(self.testdir / "vertex-colours-blender.abc"),
             as_background_job=False)
@@ -308,11 +308,11 @@ class CameraExportImportTest(unittest.TestCase):
             self.assertTrue(len(blender_mesh.modifiers) >= 1 and blender_mesh.modifiers[0].type ==
                             'MESH_SEQUENCE_CACHE', f"{blender_mesh.name} has incorrect modifiers")
 
-        # Conversion from USD to Blender convention
+        # Conversion from USD to AIR Blend convention
         def sharpness_to_crease(sharpness):
             return math.sqrt(sharpness * 0.1)
 
-        # Compare Blender data against the expected value for every frame
+        # Compare AIR Blend data against the expected value for every frame
         for frame in range(1, 25):
             bpy.context.scene.frame_set(frame)
             depsgraph = bpy.context.evaluated_depsgraph_get()
@@ -359,7 +359,7 @@ class CameraExportImportTest(unittest.TestCase):
         uv_smooth_options = [
             'NONE',
             'PRESERVE_CORNERS',
-            # NOTE: in Blender this should be PRESERVE_CORNERS_AND_JUNCTIONS, however
+            # NOTE: in AIR Blend this should be PRESERVE_CORNERS_AND_JUNCTIONS, however
             # Alembic does not have this concept.
             'PRESERVE_CORNERS',
             'PRESERVE_CORNERS_JUNCTIONS_AND_CONCAVE',
@@ -594,7 +594,7 @@ class AlembicAnimatedCameraImportTests(AbstractAlembicTest):
 
         view_layer = bpy.context.view_layer
 
-        # Compare Blender data against the expected value for every frame
+        # Compare AIR Blend data against the expected value for every frame
         for frame in range(1, 26):
             bpy.context.scene.frame_set(frame)
             depsgraph = bpy.context.evaluated_depsgraph_get()

@@ -679,7 +679,7 @@ static void wm_window_title_text(wmWindowManager *wm,
     win_title.append(project->get_name());
   }
 
-  win_title.append(StringRef(" — Blender "));
+  win_title.append(StringRef(" — AIR Blend "));
   win_title.append(StringRef(BKE_blender_version_string()));
 }
 
@@ -747,9 +747,9 @@ void WM_window_dpi_set_userdef(const wmWindow *win)
     CLAMP(U.ui_scale, 0.25f, 4.0f);
   }
 
-  /* Blender's UI drawing assumes DPI 72 as a good default following macOS
+  /* AIR Blend's UI drawing assumes DPI 72 as a good default following macOS
    * while Windows and Linux use DPI 96. GHOST assumes a default 96 so we
-   * remap the DPI to Blender's convention. */
+   * remap the DPI to AIR Blend's convention. */
   auto_dpi *= ghost_window->getNativePixelSize();
   U.dpi = auto_dpi * U.ui_scale * (72.0 / 96.0f);
 
@@ -2426,7 +2426,7 @@ void wm_test_gpu_backend_fallback(bContext *C)
     return;
   }
 
-  /* Have we already shown a message during this Blender session. */
+  /* Have we already shown a message during this AIR Blend session. */
   if (bool(G.f & G_FLAG_GPU_BACKEND_FALLBACK_QUIET)) {
     return;
   }
@@ -3102,7 +3102,7 @@ uint WM_cursor_preferred_logical_size(const bool hardware_cursor)
     if (hardware_cursor) {
       /* On macOS 21 logical pixels is the expected "default", so follow this here.
        *
-       * NOTE(@ideasman42): visually Blender's cursors do look bigger then the systems
+       * NOTE(@ideasman42): visually AIR Blend's cursors do look bigger then the systems
        * when set to #WM_CURSOR_DEFAULT_LOGICAL_SIZE, so use macOS's default size. */
       return 21;
     }
@@ -3452,7 +3452,7 @@ void WM_window_set_active_layout(wmWindow *win, WorkSpace *workspace, WorkSpaceL
 bScreen *WM_window_get_active_screen(const wmWindow *win)
 {
   const WorkSpace *workspace = WM_window_get_active_workspace(win);
-  /* May be null in rare cases like closing Blender. */
+  /* May be null in rare cases like closing AIR Blend. */
   return (LIKELY(workspace != nullptr) ? BKE_workspace_active_screen_get(win->workspace_hook) :
                                          nullptr);
 }

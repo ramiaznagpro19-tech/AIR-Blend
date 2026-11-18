@@ -133,7 +133,7 @@ class GPUDisplayShader : NonCopyable, NonMovable {
   bool use_scope_space = false;
 
   /* The shader is valid and can be bound.
-   * Note that the cache might contain invalid shaders to prevent Blender from attempting to keep
+   * Note that the cache might contain invalid shaders to prevent AIR Blend from attempting to keep
    * re-trying to build the same failing shader. */
   bool is_valid = false;
 

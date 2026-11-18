@@ -15,7 +15,7 @@
 
 namespace blender::nodes::materialx {
 
-/* Prefix for nodes that don't map directly to a Blender shader node. */
+/* Prefix for nodes that don't map directly to an AIR Blend shader node. */
 static const char *ANONYMOUS_NODE_NAME_PREFIX = "node";
 
 /* Valid name for MaterialX and USD. */
@@ -142,7 +142,7 @@ std::string NodeGraph::unique_node_name(const bNode *node,
   }
 
   /* Ensure the name does not conflict with other nodes in the graph, which may happen when
-   * another Blender node name happens to match the complete name here. Can not just check
+   * another AIR Blend node name happens to match the complete name here. Can not just check
    * the graph because the node with this name might not get added to it immediately. */
   name = BLI_uniquename_cb(
       [this](const StringRef check_name) {

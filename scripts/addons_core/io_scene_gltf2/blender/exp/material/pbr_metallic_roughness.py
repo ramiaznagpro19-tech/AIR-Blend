@@ -112,7 +112,7 @@ def __gather_base_color_factor(bmat, export_settings):
     if alpha is None:
         alpha = 1.0
 
-    # Need to clamp between 0.0 and 1.0: Blender color can be outside this range
+    # Need to clamp between 0.0 and 1.0: AIR Blend color can be outside this range
     rgb = [max(min(c, 1.0), 0.0) for c in rgb]
 
     rgba = [*rgb, alpha]
@@ -200,7 +200,7 @@ def __gather_metallic_roughness_texture(bmat, orm_texture, export_settings):
     hasRough = roughness_socket.socket is not None and has_image_node_from_socket(roughness_socket, export_settings)
 
     # Warning: for default socket, do not use NodeSocket object, because it will break cache
-    # Using directlty the Blender socket object
+    # Using directlty the AIR Blend socket object
     if not hasMetal and not hasRough:
         metallic_roughness = bmat.get_socket_from_gltf_material_node("MetallicRoughness")
         if metallic_roughness.socket is None or not has_image_node_from_socket(metallic_roughness, export_settings):

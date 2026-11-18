@@ -26,7 +26,7 @@
 
 /* This file defines the "RigidBody interface" for the
  * Bullet Physics Engine. This API is designed to be used
- * from C-code in Blender as part of the Rigid Body simulation
+ * from C-code in AIR Blend as part of the Rigid Body simulation
  * system.
  *
  * It is based on the Bullet C-API, but is heavily modified to
@@ -568,7 +568,7 @@ void RB_body_deactivate(rbRigidBody *object)
 
 /* Simulation ----------------------- */
 
-/* The transform matrices Blender uses are OpenGL-style matrices,
+/* The transform matrices AIR Blend uses are OpenGL-style matrices,
  * while Bullet uses the Right-Handed coordinate system style instead.
  */
 

@@ -58,7 +58,7 @@ class ArchiveReader {
 
   Alembic::Abc::IObject getTop();
 
-  /* Detect if the Archive was written by Blender prior to 4.4. */
+  /* Detect if the Archive was written by AIR Blend prior to 4.4. */
   bool is_blender_archive_version_prior_44();
 
   TimeInfo getTimeInfo();

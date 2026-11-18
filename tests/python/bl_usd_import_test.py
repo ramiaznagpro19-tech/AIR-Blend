@@ -241,11 +241,11 @@ class USDImportTest(AbstractUSDTest):
             self.assertTrue(len(blender_mesh.modifiers) == 1 and blender_mesh.modifiers[0].type ==
                             'MESH_SEQUENCE_CACHE', f"{blender_mesh.name} has incorrect modifiers")
 
-        # Conversion from USD to Blender convention
+        # Conversion from USD to AIR Blend convention
         def sharpness_to_crease(sharpness):
             return math.sqrt(sharpness * 0.1)
 
-        # Compare Blender and USD data against each other for every frame
+        # Compare AIR Blend and USD data against each other for every frame
         for frame in range(1, 25):
             bpy.context.scene.frame_set(frame)
             depsgraph = bpy.context.evaluated_depsgraph_get()
@@ -1089,7 +1089,7 @@ class USDImportTest(AbstractUSDTest):
 
         # Verify all attributes on the Mesh
         # Note: USD does not support signed 8-bit types so there is
-        #       currently no equivalent to Blender's INT8 data type
+        #       currently no equivalent to AIR Blend's INT8 data type
         mesh = bpy.data.objects["Mesh"].data
 
         self.check_attribute(mesh, "p_bool", 'POINT', 'BOOLEAN', 4)
@@ -1223,7 +1223,7 @@ class USDImportTest(AbstractUSDTest):
             self.assertTrue(len(blender_mesh[i].modifiers) == 1 and blender_mesh[i].modifiers[0].type ==
                             'MESH_SEQUENCE_CACHE', f"{blender_mesh[i].name} has incorrect modifiers")
 
-        # Compare Blender and USD data against each other for every frame
+        # Compare AIR Blend and USD data against each other for every frame
         for frame in range(1, 16):
             bpy.context.scene.frame_set(frame)
             depsgraph = bpy.context.evaluated_depsgraph_get()
@@ -1269,7 +1269,7 @@ class USDImportTest(AbstractUSDTest):
         pointclouds_num = len(blender_pointclouds)
 
         # Workaround: GeometrySet processing loses the data-block name on export. This is why the
-        # .001 etc. names are being used above. Since we need the order of Blender objects to match
+        # .001 etc. names are being used above. Since we need the order of AIR Blend objects to match
         # the order of USD prims, sort by the Y location to make them match in our test setup.
         blender_pointclouds.sort(key=lambda ob: ob.location.y)
 
@@ -1278,7 +1278,7 @@ class USDImportTest(AbstractUSDTest):
             self.assertTrue(len(blender_pointclouds[i].modifiers) == 1 and blender_pointclouds[i].modifiers[0].type ==
                             'MESH_SEQUENCE_CACHE', f"{blender_pointclouds[i].name} has incorrect modifiers")
 
-        # Compare Blender and USD data against each other for every frame
+        # Compare AIR Blend and USD data against each other for every frame
         for frame in range(1, 16):
             bpy.context.scene.frame_set(frame)
             depsgraph = bpy.context.evaluated_depsgraph_get()
@@ -1331,7 +1331,7 @@ class USDImportTest(AbstractUSDTest):
         curves_num = len(blender_curves)
 
         # Workaround: GeometrySet processing loses the data-block name on export. This is why the
-        # .001 etc. names are being used above. Since we need the order of Blender objects to match
+        # .001 etc. names are being used above. Since we need the order of AIR Blend objects to match
         # the order of USD prims, sort by the Y location to make them match in our test setup.
         blender_curves.sort(key=lambda ob: ob.parent.location.y)
 
@@ -1340,7 +1340,7 @@ class USDImportTest(AbstractUSDTest):
             self.assertTrue(len(blender_curves[i].modifiers) == 1 and blender_curves[i].modifiers[0].type ==
                             'MESH_SEQUENCE_CACHE', f"{blender_curves[i].name} has incorrect modifiers")
 
-        # Compare Blender and USD data against each other for every frame
+        # Compare AIR Blend and USD data against each other for every frame
         for frame in range(1, 16):
             bpy.context.scene.frame_set(frame)
             depsgraph = bpy.context.evaluated_depsgraph_get()
@@ -1409,7 +1409,7 @@ class USDImportTest(AbstractUSDTest):
         self.assertTrue(len(blender_pointcloud.modifiers) == 1 and blender_pointcloud.modifiers[0].type ==
                         'MESH_SEQUENCE_CACHE', f"{blender_pointcloud.name} has incorrect modifiers")
 
-        # Compare Blender and USD data against each other for every frame
+        # Compare AIR Blend and USD data against each other for every frame
         for frame in range(1, 7):
             bpy.context.scene.frame_set(frame)
             depsgraph = bpy.context.evaluated_depsgraph_get()
@@ -1508,7 +1508,7 @@ class USDImportTest(AbstractUSDTest):
             evaluation_mode="RENDER")
         self.assertEqual({'FINISHED'}, res, f"Unable to export to {test_path2}")
 
-        # Also write out another file using attribute types not natively writable by Blender
+        # Also write out another file using attribute types not natively writable by AIR Blend
         test_path3 = self.tempdir / "temp_idprops_extended_test.usda"
         stage = Usd.Stage.CreateNew(str(test_path3))
         xform = UsdGeom.Xform.Define(stage, '/empty')

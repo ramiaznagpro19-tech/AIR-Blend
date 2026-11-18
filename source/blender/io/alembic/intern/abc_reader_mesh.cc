@@ -1282,7 +1282,7 @@ void AbcSubDReader::add_subdiv_modifier()
 
     switch (interpolate_boundary) {
       case AbcInterpolateBoundary::NONE:
-        /* Blender has no concept for this. */
+        /* AIR Blend has no concept for this. */
         break;
       case AbcInterpolateBoundary::EDGE_AND_CORNERS:
         subdiv_data->boundary_smooth = SUBSURF_BOUNDARY_SMOOTH_PRESERVE_CORNERS;

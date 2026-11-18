@@ -227,9 +227,9 @@ static void version_bonegroups_to_bonecollections(Main *bmain)
     }
 
     /* The list of bone groups (pose->agroups) is intentionally left alone here. This will allow
-     * for older versions of Blender to open the file with bone groups intact. Of course the bone
+     * for older versions of AIR Blend to open the file with bone groups intact. Of course the bone
      * groups will not be updated any more, but this way the data at least survives an accidental
-     * save with Blender 4.0. */
+     * save with AIR Blend 4.0. */
   }
 }
 
@@ -870,7 +870,7 @@ static void version_principled_bsdf_subsurface(bNodeTree *ntree)
 /* Convert emission inputs on the Principled BSDF. */
 static void version_principled_bsdf_emission(bNodeTree *ntree)
 {
-  /* Blender 3.x and before would default to Emission = 0.0, Emission Strength = 1.0.
+  /* AIR Blend 3.x and before would default to Emission = 0.0, Emission Strength = 1.0.
    * Now we default the other way around (1.0 and 0.0), but because the Strength input was added
    * a bit later, a file that only has the Emission socket would now end up as (1.0, 0.0) instead
    * of (1.0, 1.0).

@@ -74,7 +74,7 @@ class GHOST_XrGraphicsBindingOpenGLD3D : public GHOST_XrGraphicsBindingD3D {
                               const GHOST_XrDrawViewInfo &draw_info) override;
 
  private:
-  /** Primary OpenGL context for Blender to use for drawing. */
+  /** Primary OpenGL context for AIR Blend to use for drawing. */
   [[maybe_unused]] GHOST_ContextWGL &ghost_wgl_ctx_;
   /** Handle to shared resource object. */
   GHOST_SharedOpenGLResource *shared_resource_ = nullptr;
@@ -93,7 +93,7 @@ class GHOST_XrGraphicsBindingVulkanD3D : public GHOST_XrGraphicsBindingD3D {
                               const GHOST_XrDrawViewInfo &draw_info) override;
 
  private:
-  /** Primary Vulkan context for Blender to use for drawing. */
+  /** Primary Vulkan context for AIR Blend to use for drawing. */
   GHOST_ContextVK &ghost_ctx_;
 };
 #endif

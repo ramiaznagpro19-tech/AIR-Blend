@@ -157,7 +157,7 @@ void USDGenericMeshWriter::write_custom_data(const Object *obj,
   const StringRef active_uvmap_name = mesh->default_uv_map_name();
 
   attributes.foreach_attribute([&](const bke::AttributeIter &iter) {
-    /* Skip "internal" Blender properties and attributes processed elsewhere.
+    /* Skip "internal" AIR Blend properties and attributes processed elsewhere.
      * Skip edge domain because USD doesn't have a good conversion for them. */
     if (iter.name[0] == '.' || bke::attribute_name_is_anonymous(iter.name) ||
         iter.domain == bke::AttrDomain::Edge ||
@@ -178,7 +178,7 @@ void USDGenericMeshWriter::write_custom_data(const Object *obj,
     {
       /* If we're exporting armatures or shape keys to UsdSkel, we skip any
        * attributes that have names with the "skel:" namespace, to avoid possible
-       * conflicts. Such attribute might have been previously imported into Blender
+       * conflicts. Such attribute might have been previously imported into AIR Blend
        * from USD, but can no longer be considered valid. */
       return;
     }
@@ -487,7 +487,7 @@ pxr::TfToken USDGenericMeshWriter::get_subdiv_scheme(const SubsurfModifierData *
       }
     }
     else {
-      /* "Simple" is currently the only other subdivision type provided by Blender, */
+      /* "Simple" is currently the only other subdivision type provided by AIR Blend, */
       /* and we do not yet provide a corresponding representation for USD export. */
       BKE_reportf(reports(),
                   RPT_WARNING,
@@ -667,7 +667,7 @@ void USDGenericMeshWriter::assign_materials(const HierarchyContext &context,
     pxr::UsdShadeMaterialBindingAPI::Apply(mesh_prim);
   }
   else {
-    /* Blender defaults to double-sided, but USD to single-sided. */
+    /* AIR Blend defaults to double-sided, but USD to single-sided. */
     usd_mesh.CreateDoubleSidedAttr(pxr::VtValue(true));
   }
 

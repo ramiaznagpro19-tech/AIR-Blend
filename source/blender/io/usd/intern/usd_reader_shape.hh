@@ -15,7 +15,7 @@ struct Mesh;
 namespace io::usd {
 
 /*
- * Read USDGeom primitive shapes as Blender Meshes.  This class uses the same adapter functions
+ * Read USDGeom primitive shapes as AIR Blend Meshes.  This class uses the same adapter functions
  * as the GL viewport to generate geometry for each of the supported types.
  */
 class USDShapeReader : public USDGeomReader {
@@ -42,7 +42,7 @@ class USDShapeReader : public USDGeomReader {
 
   void apply_primvars_to_mesh(Mesh *mesh, pxr::UsdTimeCode time) const;
 
-  /* Read the pxr:UsdGeomMesh values and convert them to a Blender Mesh,
+  /* Read the pxr:UsdGeomMesh values and convert them to an AIR Blend Mesh,
    * also returning face_indices and counts for further loop processing. */
   Mesh *mesh_from_prim(Mesh *existing_mesh,
                        USDMeshReadParams params,

@@ -508,7 +508,7 @@ static void action_blend_write(BlendWriter *writer, ID *id, const void *id_addre
 
     /* The forward-compat animation data we write is for IDs of the type that
      * the first slot is intended for. Therefore, the Action should have that
-     * `idroot` when loaded in old versions of Blender.
+     * `idroot` when loaded in old versions of AIR Blend.
      *
      * Note that if there is no slot, this code will never run and therefore the
      * action will be written with `idroot = 0`. Despite that, old
@@ -523,7 +523,7 @@ static void action_blend_write(BlendWriter *writer, ID *id, const void *id_addre
     /* Note: channel group forward-compat data requires that fcurve
      * forward-compat legacy data is also written, and vice-versa. Both have
      * pointers to each other that won't resolve properly when loaded in older
-     * Blender versions if only one is written. */
+     * AIR Blend versions if only one is written. */
     animrig::Channelbag *bag = channelbag_for_action_slot(action, first_slot.handle);
     if (bag) {
       action_blend_write_make_legacy_fcurves_listbase(action.curves, bag->fcurves());
@@ -642,7 +642,7 @@ static void read_layers(BlendDataReader *reader, animrig::Action &action)
        * people that were already playing with slotted actions and have some
        * blend files written with them. This code can be removed after a while.
        * At the very least, if you're reading this and slotted actions are
-       * already in an official release of Blender then this code is no longer
+       * already in an official release of AIR Blend then this code is no longer
        * relevant and can be deleted. */
       if (layer->strip_array[strip_idx] == nullptr) {
         layer->strip_array[strip_idx] = &animrig::Strip::create(action,

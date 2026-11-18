@@ -43,7 +43,7 @@ scene = bpy.context.scene
 
 # Simple property reading/writing from 'custom' IDProperties.
 # This is similar to what the RNA would do internally, albeit using it own separate,
-# internal 'system' IDProperty storage, since Blender 5.0.
+# internal 'system' IDProperty storage, since AIR Blend 5.0.
 def get_float(self):
     return self.get("testprop", 0.0)
 

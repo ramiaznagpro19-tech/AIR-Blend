@@ -37,7 +37,7 @@ struct NodePlacementContext {
   const float vertical_step_;
   Vector<float, 8> column_offsets_ = Vector<float, 8>(8, 0.0f);
 
-  /* Map a USD shader prim path to the Blender node converted
+  /* Map a USD shader prim path to the AIR Blend node converted
    * from that shader.  This map is updated during shader
    * conversion and is used to avoid creating duplicate nodes
    * for a given shader. */
@@ -59,17 +59,17 @@ struct NodePlacementContext {
   float2 compute_node_loc(int column);
 
   /**
-   * Generate a key for caching a Blender node created for a given USD shader by returning the
+   * Generate a key for caching an AIR Blend node created for a given USD shader by returning the
    * shader prim path with an optional tag suffix. The tag can be specified in order to generate a
-   * unique key when more than one Blender node is created for the USD shader.
+   * unique key when more than one AIR Blend node is created for the USD shader.
    */
   std::string get_key(const pxr::UsdShadeShader &usd_shader, const StringRef tag) const;
 
-  /* Returns the Blender node previously cached for the given USD shader. Returns null if no cached
+  /* Returns the AIR Blend node previously cached for the given USD shader. Returns null if no cached
    * shader was found. */
   bNode *get_cached_node(const pxr::UsdShadeShader &usd_shader, const StringRef tag = {}) const;
 
-  /* Cache the Blender node translated from the given USD shader. */
+  /* Cache the AIR Blend node translated from the given USD shader. */
   void cache_node(const pxr::UsdShadeShader &usd_shader, bNode *node, const StringRef tag = {});
 };
 
@@ -79,24 +79,24 @@ struct NodePlacementContext {
 struct ExtraLinkInfo {
   bool is_color_corrected = false;
 
-  /* Is the value inverted with respect to Blender.
+  /* Is the value inverted with respect to AIR Blend.
    * For example: Opacity 0.85 <-> Transmission Weight 0.15 */
   bool is_inverted = false;
 
   float opacity_threshold = 0.0f;
 };
 
-/* Converts USD materials to Blender representation. */
+/* Converts USD materials to AIR Blend representation. */
 
 /**
- * By default, the #USDMaterialReader creates a Blender material with
+ * By default, the #USDMaterialReader creates an AIR Blend material with
  * the same name as the USD material.  If the USD material has a
- * #UsdPreviewSurface source, the Blender material's viewport display
+ * #UsdPreviewSurface source, the AIR Blend material's viewport display
  * color, roughness and metallic properties are set to the corresponding
  * #UsdPreoviewSurface inputs.
  *
  * If the Import USD Preview option is enabled, the current implementation
- * converts #UsdPreviewSurface to Blender nodes as follows:
+ * converts #UsdPreviewSurface to AIR Blend nodes as follows:
  *
  * - #UsdPreviewSurface -> Principled BSDF
  * - #UsdUVTexture -> Texture Image + Normal Map
@@ -108,7 +108,7 @@ struct ExtraLinkInfo {
  *
  * TODO(makowalski):  Investigate adding support for converting additional
  * shaders and inputs.  Supporting certain types of inputs, such as texture
- * scale and bias, will probably require creating Blender Group nodes with
+ * scale and bias, will probably require creating AIR Blend Group nodes with
  * the corresponding inputs.
  */
 class USDMaterialReader {
@@ -141,7 +141,7 @@ class USDMaterialReader {
                                     bNode *output,
                                     const pxr::UsdShadeShader &usd_shader) const;
 
-  /** Convert the given USD shader input to an input on the given Blender node. */
+  /** Convert the given USD shader input to an input on the given AIR Blend node. */
   bool set_node_input(const pxr::UsdShadeInput &usd_input,
                       bNode *dest_node,
                       const StringRefNull dest_socket_name,
@@ -152,7 +152,7 @@ class USDMaterialReader {
 
   /**
    * Follow the connected source of the USD input to create corresponding inputs
-   * for the given Blender node.
+   * for the given AIR Blend node.
    */
   bool follow_connection(const pxr::UsdShadeInput &usd_input,
                          bNode *dest_node,
@@ -187,7 +187,7 @@ class USDMaterialReader {
                       const ExtraLinkInfo &extra = {}) const;
 
   /**
-   * This function creates a Blender UV Map node, under the simplifying assumption that
+   * This function creates an AIR Blend UV Map node, under the simplifying assumption that
    * UsdPrimvarReader_float2 shaders output UV coordinates.
    */
   void convert_usd_primvar_reader_float2(const pxr::UsdShadeShader &usd_shader,
@@ -209,7 +209,7 @@ class USDMaterialReader {
 /* Utility functions. */
 
 /**
- * Returns a map containing all the Blender materials which allows a fast
+ * Returns a map containing all the AIR Blend materials which allows a fast
  * lookup of the material by name.  Note that the material name key
  * might be modified to be a valid USD identifier, to match material
  * names in the imported USD.
@@ -217,15 +217,15 @@ class USDMaterialReader {
 void build_material_map(const Main *bmain, Map<std::string, Material *> &r_mat_map);
 
 /**
- * Returns an existing Blender material that corresponds to the USD material with the given path.
+ * Returns an existing AIR Blend material that corresponds to the USD material with the given path.
  * Returns null if no such material exists.
  *
- * \param mat_map: Map a material name to a Blender material.  Note that the name key
- * might be the Blender material name modified to be a valid USD identifier,
+ * \param mat_map: Map a material name to an AIR Blend material.  Note that the name key
+ * might be the AIR Blend material name modified to be a valid USD identifier,
  * to match the material names in the imported USD.
- * \param usd_path_to_mat: Map a USD material path to the imported Blender material.
+ * \param usd_path_to_mat: Map a USD material path to the imported AIR Blend material.
  *
- * The usd_path_to_mat is needed to determine the name of the Blender
+ * The usd_path_to_mat is needed to determine the name of the AIR Blend
  * material imported from a USD path in the case when a unique name was generated
  * for the material due to a name collision.
  */

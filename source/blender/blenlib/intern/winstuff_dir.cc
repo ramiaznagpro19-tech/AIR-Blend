@@ -11,7 +11,7 @@
 
 #ifdef WIN32
 
-/* Standalone for inclusion in binaries other than Blender. */
+/* Standalone for inclusion in binaries other than AIR Blend. */
 #  ifdef USE_STANDALONE
 #    define MEM_new_uninitialized(size, str) ((void)str, malloc(size))
 #    define MEM_new_zeroed(size, str) ((void)str, calloc(size, 1))
@@ -44,7 +44,7 @@ struct __dirstream {
 /**
  * \note MinGW (FREE_WINDOWS) has #opendir() and #_wopendir(), and only the
  * latter accepts a path name of #wchar_t type. Rather than messing up with
- * extra #ifdef's here and there, Blender's own implementations of #opendir()
+ * extra #ifdef's here and there, AIR Blend's own implementations of #opendir()
  * and related functions are used to properly support paths with non-ASCII
  * characters. (kjym3)
  */

@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-# Stage the Gradle project and installed Blender build artifacts for APK assembly.
+# Stage the Gradle project and installed AIR Blend build artifacts for APK assembly.
 # Run as a script by the `gradle_stage` target, see platform/platform_android_gradle.cmake.
 #
 # Caller must define:
@@ -77,7 +77,7 @@ message(STATUS "Gradle staging: Base Gradle project staged")
 
 
 # -----------------------------------------------------------------------------
-# Copy/Strip built Blender native shared libraries and STL
+# Copy/Strip built AIR Blend native shared libraries and STL
 
 file(GLOB bundled_libs "${INSTALL_TARGET_DIR}/../lib/*.so")
 set(libs ${bundled_libs} "${INSTALL_TARGET_DIR}/../libblender.so" "${libcxx_shared}")
@@ -103,7 +103,7 @@ message(STATUS "Gradle staging: Native libraries staged")
 
 
 # -----------------------------------------------------------------------------
-# Blender portable version runtime directory, staged as an APK asset
+# AIR Blend portable version runtime directory, staged as an APK asset
 
 # Copy the portable target version directory tree for it to be extracted by BlenderActivity on app startup.
 file(COPY "${INSTALL_TARGET_DIR}" DESTINATION "${assets_dir}/extract/" ${copy_excludes})

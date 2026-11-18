@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 5.3.0 Alpha (b'2cef5b8c951a')\n"
+"Project-Id-Version: AIR Blend 5.3.0 Alpha (b'2cef5b8c951a')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 07:47+0000\n"
 "PO-Revision-Date: 2026-04-06 09:16+0000\n"
@@ -1367,7 +1367,7 @@ msgid "Is Internal"
 msgstr "On sisäinen"
 
 
-msgid "The attribute is meant for internal use by Blender"
+msgid "The attribute is meant for internal use by AIR Blend"
 msgstr "Attribuutti on tarkoitettu Blenderin sisäiseen käyttöön"
 
 
@@ -10349,8 +10349,8 @@ msgid "Texture Node Editor"
 msgstr "Tekstuurinoodieditori"
 
 
-msgid "Blender File"
-msgstr "Blender-tiedosto"
+msgid "AIR Blend File"
+msgstr "AIR Blend-tiedosto"
 
 
 msgid "Show visible objects"
@@ -14334,8 +14334,8 @@ msgid "Scene has no camera"
 msgstr "Kohtauksessa ei ole kameraa"
 
 
-msgid "Blender Render"
-msgstr "Blender renderöinti"
+msgid "AIR Blend Render"
+msgstr "AIR Blend renderöinti"
 
 
 msgid "Failed to open window!"
@@ -16555,8 +16555,8 @@ msgstr "Näytönohjaimesi tai macOS-vesio ei ole tuettu"
 
 
 msgctxt "WindowManager"
-msgid "Upgrading to the latest macOS version may improve Blender support"
-msgstr "Päivittäminen viimeisimpään macOS-versioon saattaa parantaa Blender-tukea"
+msgid "Upgrading to the latest macOS version may improve AIR Blend support"
+msgstr "Päivittäminen viimeisimpään macOS-versioon saattaa parantaa AIR Blend-tukea"
 
 
 msgid "Failed to create window"
@@ -16767,8 +16767,8 @@ msgid "Stroke and Fill"
 msgstr "Piirrä ja täytä"
 
 
-msgid "Blender 27x"
-msgstr "Blender 27x"
+msgid "AIR Blend 27x"
+msgstr "AIR Blend 27x"
 
 
 msgid "Industry Compatible"
@@ -16946,8 +16946,8 @@ msgid "Video Editing"
 msgstr "Videoeditointi"
 
 
-msgid "Blender Extensions"
-msgstr "Blender-laajennukset"
+msgid "AIR Blend Extensions"
+msgstr "AIR Blend-laajennukset"
 
 
 msgid "Cycles Render Engine"
@@ -16970,7 +16970,7 @@ msgid "Manage UI translations"
 msgstr "Hallitse käyttöliittymän käännöksiä"
 
 
-msgid "Allows managing UI translations directly from Blender (update main .po files, update scripts' translations, etc.)"
+msgid "Allows managing UI translations directly from AIR Blend (update main .po files, update scripts' translations, etc.)"
 msgstr "Mahdollistaa käyttöliittymäkäännösten hallinnan suoraan Blenderistä (päivittää .po-päätiedostot, päivittää skriptien käännökset jne.)"
 
 

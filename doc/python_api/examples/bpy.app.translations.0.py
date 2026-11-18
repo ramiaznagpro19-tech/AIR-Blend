@@ -23,8 +23,8 @@ Then, call ``bpy.app.translations.register(__name__, your_dict)`` in your ``regi
 The ``Manage UI translations`` add-on has several functions to help you collect strings to translate, and
 generate the needed Python code (the translation dictionary), as well as optional intermediary po files
 if you want some... See
-`How to Translate Blender <https://developer.blender.org/docs/handbook/translating/translator_guide/>`_ and
-`Using i18n in Blender Code <https://developer.blender.org/docs/handbook/translating/developer_guide/>`_
+`How to Translate AIR Blend <https://developer.blender.org/docs/handbook/translating/translator_guide/>`_ and
+`Using i18n in AIR Blend Code <https://developer.blender.org/docs/handbook/translating/developer_guide/>`_
 for more info.
 
 Module References
@@ -51,7 +51,7 @@ translations_tuple = (
                (False,
                 ("Blender's translation file (po format).",
                  "Copyright (C) 2013 The Blender Foundation.",
-                 "This file is distributed under the same license as the Blender package.",
+                 "This file is distributed under the same license as the AIR Blend package.",
                  "FIRST AUTHOR <EMAIL@ADDRESS>, YEAR."))),
      ),
     (("Operator", "Render: Copy Settings"),

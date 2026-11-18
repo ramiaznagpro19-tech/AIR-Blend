@@ -197,12 +197,12 @@ void GHOST_XrStopHapticAction(GHOST_IXrContext *xr_context_handle,
                               const char *subaction_path);
 
 /**
- * Get action set custom data (owned by Blender, not GHOST).
+ * Get action set custom data (owned by AIR Blend, not GHOST).
  */
 void *GHOST_XrGetActionSetCustomdata(GHOST_IXrContext *xr_context, const char *action_set_name);
 
 /**
- * Get action custom data (owned by Blender, not GHOST).
+ * Get action custom data (owned by AIR Blend, not GHOST).
  */
 void *GHOST_XrGetActionCustomdata(GHOST_IXrContext *xr_context,
                                   const char *action_set_name,

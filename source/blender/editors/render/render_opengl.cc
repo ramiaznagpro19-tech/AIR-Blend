@@ -1213,7 +1213,7 @@ static bool screen_opengl_render_anim_step(const bke::BlenderProject *project,
 
   if (!oglrender->wm_job && oglrender->win) {
     /* When doing blocking animation render without a job from a Python script, show time cursor so
-     * Blender doesn't appear frozen. */
+     * AIR Blend doesn't appear frozen. */
     WM_cursor_time(oglrender->win, scene->r.cfra);
   }
 

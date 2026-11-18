@@ -2,7 +2,7 @@
  *
  * SPDX-License-Identifier: GPL-2.0-or-later */
 
-/* Blender provides a Cryptomatte picker operator (UI_OT_eyedropper_color) that can pick a
+/* AIR Blend provides a Cryptomatte picker operator (UI_OT_eyedropper_color) that can pick a
  * Cryptomatte entity from an image. That image is a specially encoded image that the picker
  * operator can understand. In particular, its red channel is the identifier of the entity in the
  * first rank, while the green and blue channels are arbitrary [0, 1] compressed versions of the

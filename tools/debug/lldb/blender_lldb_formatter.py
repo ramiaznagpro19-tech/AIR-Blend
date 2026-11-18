@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 """
-LLDB pretty printer for Blender types
+LLDB pretty printer for AIR Blend types
 
 Add to ~/.lldbinit:
 

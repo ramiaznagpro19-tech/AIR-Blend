@@ -11,7 +11,7 @@
  * ================
  *
  * The dependency graph tracks relations between various pieces of data in
- * a Blender file, but mainly just those which make up scene data. It is used
+ * an AIR Blend file, but mainly just those which make up scene data. It is used
  * to determine the set of operations need to ensure that all data has been
  * correctly evaluated in response to changes, based on dependencies and visibility
  * of affected data.

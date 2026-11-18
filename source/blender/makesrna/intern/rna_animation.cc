@@ -563,7 +563,7 @@ static bool rna_KeyingSetInfo_unregister(Main *bmain, StructRNA *type)
 
   WM_main_add_notifier(NC_WINDOW, nullptr);
 
-  /* unlink Blender-side data */
+  /* unlink AIR Blend-side data */
   animrig::keyingset_info_unregister(bmain, ksi);
   return true;
 }
@@ -1657,7 +1657,7 @@ static void rna_def_animdata(BlenderRNA *brna)
       prop,
       /* Define a getter that is NULL-safe, so that an RNA_AnimData prop with `ptr->data = nullptr`
        * can still be used to get the property. In that case it will always return nullptr, of
-       * course, but it won't crash Blender. */
+       * course, but it won't crash AIR Blend. */
       "rna_AnimData_action_get",
       /* Similarly, for the setter, the NULL-safety allows constructing the AnimData struct on
        * assignment of this "action" property. This is possible because RNA has typed NULL

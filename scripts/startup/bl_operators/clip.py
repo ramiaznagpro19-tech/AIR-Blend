@@ -608,9 +608,9 @@ class CLIP_OT_setup_tracking_scene(Operator):
         cam.sensor_fit = 'HORIZONTAL'
         cam.lens = tracking.camera.focal_length
 
-        # Convert shift from motion tracking to Blender camera.
+        # Convert shift from motion tracking to AIR Blend camera.
         # Note that the normalization always happens along the X axis. This is
-        # how the camera shift in Blender is denoted.
+        # how the camera shift in AIR Blend is denoted.
         width = clip.size[0]
         height = clip.size[1]
         principal_point_px = tracking.camera.principal_point_pixels

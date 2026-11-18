@@ -48,7 +48,7 @@ class BlenderAnimation():
 
             for mat_idx, mat in enumerate(gltf.data.materials if gltf.data.materials else []):
                 if len(mat.blender_material) == 0:
-                    # The animated material is not used in Blender, so do not animate it
+                    # The animated material is not used in AIR Blend, so do not animate it
                     continue
                 if len(mat.animations) != 0:
                     BlenderPointerAnim.anim(gltf, anim_idx, mat, mat_idx, 'MATERIAL')
@@ -240,7 +240,7 @@ class BlenderAnimation():
 
             for mat in gltf.data.materials if gltf.data.materials else []:
                 if len(mat.blender_material) == 0:
-                    # The animated material is not used in Blender, so do not animate it
+                    # The animated material is not used in AIR Blend, so do not animate it
                     continue
                 restore_animation_on_object(mat.blender_nodetree, animation_name)
                 restore_animation_on_object(mat.blender_mat, animation_name)

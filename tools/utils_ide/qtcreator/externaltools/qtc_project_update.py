@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 """
-This is just a wrapper to run Blender's QtCreator project file generator,
+This is just a wrapper to run AIR Blend's QtCreator project file generator,
 knowing only the CMake build path.
 
  qtc_project_update.py <project_path>

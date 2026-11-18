@@ -218,7 +218,7 @@ struct ApiVersionInfo {
 
 static ReadingResult<ApiVersionInfo> choose_api_version(const AssetLibraryMeta &library_meta)
 {
-  /* API versions this version of Blender can handle, in descending order (most preferred to least
+  /* API versions this version of AIR Blend can handle, in descending order (most preferred to least
    * preferred order). */
   const Vector<std::pair<uint, StringRefNull>> readable_versions = {
       {1, "v1"},
@@ -234,7 +234,7 @@ static ReadingResult<ApiVersionInfo> choose_api_version(const AssetLibraryMeta &
   }
 
   return ReadingResult<ApiVersionInfo>::Failure(
-      N_("remote does not offer an API version supported by this version of Blender"));
+      N_("remote does not offer an API version supported by this version of AIR Blend"));
 }
 
 bool read_remote_listing(const StringRefNull root_dirpath,

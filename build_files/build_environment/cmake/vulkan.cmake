@@ -68,7 +68,7 @@ ExternalProject_Add(external_spirv_headers
 
 if(ANDROID)
   # On Android, the system provides its own Vulkan loader. However since PR !162006 the SPIR-V header
-  # are required by regular Blender builds for shader name injection. Harvest them separately in this sense.
+  # are required by regular AIR Blend builds for shader name injection. Harvest them separately in this sense.
   harvest(external_spirv_headers spirv_headers vulkan "*")
 endif()
 

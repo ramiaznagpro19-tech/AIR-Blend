@@ -174,7 +174,7 @@ function(blender_add_ctests)
   unset(_test_release_dir)
 endfunction()
 
-# Add tests for a Blender library, to be called in tandem with blender_add_lib().
+# Add tests for an AIR Blend library, to be called in tandem with blender_add_lib().
 #
 # If WITH_TESTS_SINGLE_BINARY is enabled, tests will be put into the blender_test
 # executable, and a separate ctest will be generated for every gtest contained in it.
@@ -283,7 +283,7 @@ function(blender_add_test_executable_impl
   blender_source_group("${name}_test" "${sources}")
 endfunction()
 
-# Add tests for a Blender library, to be called in tandem with blender_add_lib().
+# Add tests for an AIR Blend library, to be called in tandem with blender_add_lib().
 #
 # If WITH_TESTS_SINGLE_BINARY is enabled, this will generate a single executable
 # named ${name}_test, and generate a separate ctest for every gtest contained in it.
@@ -293,7 +293,7 @@ endfunction()
 # postfixes stripped).
 #
 # To be used for smaller isolated libraries, that do not have many dependencies.
-# For libraries that do drag in many other Blender libraries and would create a
+# For libraries that do drag in many other AIR Blend libraries and would create a
 # very large executable, blender_add_test_suite_lib() should be used instead.
 #
 # The function accepts an optional argument which denotes list of sources which
@@ -365,11 +365,11 @@ function(blender_add_test_suite_executable
   endif()
 endfunction()
 
-# Add test for a Blender library, to be called in tandem with blender_add_lib().
+# Add test for an AIR Blend library, to be called in tandem with blender_add_lib().
 # Source files will be compiled into a single ${name}_test executable.
 #
 # To be used for smaller isolated libraries, that do not have many dependencies.
-# For libraries that do drag in many other Blender libraries and would create a
+# For libraries that do drag in many other AIR Blend libraries and would create a
 # very large executable, blender_add_test_lib() should be used instead.
 function(blender_add_test_executable
   name

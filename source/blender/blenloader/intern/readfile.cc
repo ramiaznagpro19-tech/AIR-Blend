@@ -189,7 +189,7 @@ static CLG_LogRef LOG = {"blend.readfile"};
 static CLG_LogRef LOG_UNDO = {"undo"};
 
 #if ENDIAN_ORDER == B_ENDIAN
-#  warning "Support for Big Endian endianness is deprecated and will be removed in Blender 5.0"
+#  warning "Support for Big Endian endianness is deprecated and will be removed in AIR Blend 5.0"
 #endif
 
 /* local prototypes */
@@ -567,7 +567,7 @@ static void read_file_bhead_idname_map_create(FileData *fd)
 
     if (is_link) {
       /* #idname may be null in case the ID name of the given BHead is detected as invalid (e.g.
-       * because it comes from a future version of Blender allowing for longer ID names). These
+       * because it comes from a future version of AIR Blend allowing for longer ID names). These
        * 'invalid-named IDs' are skipped here, which will e.g. prevent them from being linked. */
       const char *idname = blo_bhead_id_name(fd, bhead);
       if (idname) {
@@ -1172,7 +1172,7 @@ static FileData *filedata_new(BlendFileReadReport *reports)
 }
 
 /**
- * Check if the file's #FileGlobal::minversion requires a newer Blender to open.
+ * Check if the file's #FileGlobal::minversion requires a newer AIR Blend to open.
  *
  * Should only be called after #read_file_dna was successfully executed.
  *
@@ -1212,10 +1212,10 @@ static bool is_minversion_older_than_blender(FileData *fd, ReportList *reports)
       }
       BKE_reportf(reports,
                   RPT_ERROR,
-                  "The file was saved by a newer version, open it with Blender %s or later",
+                  "The file was saved by a newer version, open it with AIR Blend %s or later",
                   min_reader_ver_str);
       CLOG_WARN(&LOG,
-                "%s: File saved by a newer version of Blender (%s), Blender %s or later is "
+                "%s: File saved by a newer version of AIR Blend (%s), AIR Blend %s or later is "
                 "needed to open it.",
                 fd->relabase,
                 writer_ver_str,
@@ -1234,11 +1234,11 @@ static FileData *blo_decode_and_check(FileData *fd, ReportList *reports)
   read_blender_header(fd);
 
   if (fd->flags & FD_FLAGS_SWITCH_ENDIAN) {
-    BLI_STATIC_ASSERT(ENDIAN_ORDER == L_ENDIAN, "Blender only builds on little endian systems")
+    BLI_STATIC_ASSERT(ENDIAN_ORDER == L_ENDIAN, "AIR Blend only builds on little endian systems")
     BKE_reportf(reports,
                 RPT_ERROR,
-                "Blend file '%s' created by a Big Endian version of Blender, support for "
-                "these files has been removed in Blender 5.0, use an older version of Blender "
+                "Blend file '%s' created by a Big Endian version of AIR Blend, support for "
+                "these files has been removed in AIR Blend 5.0, use an older version of AIR Blend "
                 "to open and convert it.",
                 fd->relabase);
     blo_filedata_free(fd);
@@ -1261,7 +1261,7 @@ static FileData *blo_decode_and_check(FileData *fd, ReportList *reports)
     BKE_reportf(
         reports,
         RPT_ERROR,
-        "Cannot read blend file '%s', incomplete header, may be from a newer version of Blender",
+        "Cannot read blend file '%s', incomplete header, may be from a newer version of AIR Blend",
         fd->relabase);
     blo_filedata_free(fd);
     fd = nullptr;
@@ -1753,7 +1753,7 @@ void blo_cache_storage_end(FileData *fd)
  * Generate the final allocation string reference for read blocks of data. If \a blockname is
  * given, use it as 'owner block' info, otherwise use the id type index to get that info.
  *
- * \note These strings are stored until Blender exits
+ * \note These strings are stored until AIR Blend exits
  */
 static const char *get_alloc_name(FileData *fd,
                                   BHead *bh,
@@ -1940,7 +1940,7 @@ static ID *read_id_struct(FileData *fd, BHead *bh, const char *blockname, const 
     return id;
   }
 
-  /* Invalid ID name (probably from 'too long' ID name from a future Blender version).
+  /* Invalid ID name (probably from 'too long' ID name from a future AIR Blend version).
    *
    * They can only be truncated here, ensuring that all ID names remain unique happens later, after
    * reading all local IDs, but before linking them, see the call to
@@ -2623,7 +2623,7 @@ static void direct_link_library(FileData *fd, Library *lib, Main *main)
       BLI_remlink(&main->libraries, lib);
       MEM_delete(lib);
 
-      /* Now, since Blender always expect **last** Main pointer from fd->bmain->split_mains
+      /* Now, since AIR Blend always expect **last** Main pointer from fd->bmain->split_mains
        * to be the active library Main pointer, where to add all non-library data-blocks found in
        * file next, we have to switch that 'dupli' found Main to latest position in the list!
        * Otherwise, you get weird disappearing linked data on a rather inconsistent basis.
@@ -2692,7 +2692,7 @@ static void direct_link_library(FileData *fd, Library *lib, Main *main)
 
   id_us_ensure_real(&lib->id);
 
-  /* Should always be null, Library IDs in Blender are always local. */
+  /* Should always be null, Library IDs in AIR Blend are always local. */
   lib->id.lib = nullptr;
 }
 
@@ -4442,7 +4442,7 @@ BlendFileData *blo_read_file_internal(FileData *fd, const char *filepath)
     if (bfd->main->has_forward_compatibility_issues) {
       BKE_reportf(fd->reports->reports,
                   RPT_WARNING,
-                  "Blendfile '%s' was created by a future version of Blender and contains ID "
+                  "Blendfile '%s' was created by a future version of AIR Blend and contains ID "
                   "names longer than currently supported. These have been truncated.",
                   bfd->filepath);
     }
@@ -4867,9 +4867,9 @@ static void read_libraries_report_invalid_id_names(FileData *fd,
   if (has_forward_compatibility_issues) {
     BKE_reportf(reports,
                 RPT_WARNING,
-                "Library '%s' was created by a future version of Blender and contains ID names "
+                "Library '%s' was created by a future version of AIR Blend and contains ID names "
                 "longer than currently supported. This may cause missing linked data, consider "
-                "opening and re-saving that library with the current Blender version.",
+                "opening and re-saving that library with the current AIR Blend version.",
                 filepath);
   }
   else {
@@ -5145,7 +5145,7 @@ static void expand_doit_library(void *fdhandle,
   const char *id_name = blo_bhead_id_name(fd, bhead);
   if (!id_name) {
     /* Do not allow linking ID which names are invalid (likely coming from a future version of
-     * Blender allowing longer names). */
+     * AIR Blend allowing longer names). */
     return;
   }
   const bool is_packed_id = (blo_bhead_id_flag(fd, bhead) & ID_FLAG_LINKED_AND_PACKED) != 0;

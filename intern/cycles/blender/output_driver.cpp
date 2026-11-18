@@ -58,7 +58,7 @@ bool BlenderOutputDriver::read_render_tile(const Tile &tile)
 bool BlenderOutputDriver::update_render_tile(const Tile &tile)
 {
   /* Use final write for preview renders, otherwise render result wouldn't be updated
-   * quickly on Blender side. For all other cases we use the display driver. */
+   * quickly on AIR Blend side. For all other cases we use the display driver. */
   if (b_engine_.flag & blender::RE_ENGINE_PREVIEW) {
     write_render_tile(tile);
     return true;

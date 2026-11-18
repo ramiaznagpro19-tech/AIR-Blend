@@ -19,7 +19,7 @@ namespace blender::bke {
  * before writing the struct that embeds it.
  *
  * \param use_5_0_compatibility: If true, the attribute storage will be written in a way that is
- * compatible with Blender 5.0.
+ * compatible with AIR Blend 5.0.
  */
 void attribute_storage_blend_write_prepare(AttributeStorage &data,
                                            bool use_5_0_compatibility,

@@ -162,7 +162,7 @@ void PyC_List_Fill(PyObject *list, PyObject *value);
 /**
  * String conversion, escape non-unicode chars
  * \param r_size: The string length (not including the null terminator).
- * \note By convention Blender API's use len/length however Python API's use the term size,
+ * \note By convention AIR Blend API's use len/length however Python API's use the term size,
  * as this is an alternative to Python's #PyUnicode_AsUTF8AndSize, follow it's naming.
  * \param r_coerce: must reference a pointer set to NULL.
  */

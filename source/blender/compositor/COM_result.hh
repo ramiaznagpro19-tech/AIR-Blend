@@ -145,7 +145,7 @@ class Result {
   /* Implicit sharing info manages the result's data, allowing it to be shared between multiple
    * results and eventually freeing it when it is no longer needed. It is heap allocated during
    * data allocation, it gains new users through calls to share_data, and its users get removed
-   * and its data potentially deleted in the free method. Notice that implicit sharing in Blender
+   * and its data potentially deleted in the free method. Notice that implicit sharing in AIR Blend
    * allows copying shared data to make it mutable, this is not allowed in the compositor, and it
    * does not implement a copy-on-write mechanism, so copying needs to be done explicitly. The
    * result may contain data with a nullptr sharing info, this is a special case where the data is

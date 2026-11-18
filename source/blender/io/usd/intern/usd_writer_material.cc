@@ -115,7 +115,7 @@ struct InputSpec {
   bool set_default_value;
 };
 
-/* Map Blender socket names to USD Preview Surface InputSpec structs. */
+/* Map AIR Blend socket names to USD Preview Surface InputSpec structs. */
 using InputSpecMap = Map<StringRef, InputSpec>;
 
 /* Static function forward declarations. */
@@ -153,7 +153,7 @@ void set_normal_texture_range(pxr::UsdShadeShader &usd_shader, const InputSpec &
 
 /* Create an input on the given shader with name and type
  * provided by the InputSpec and assign the given value to the
- * input.  Parameters T1 and T2 indicate the Blender and USD
+ * input.  Parameters T1 and T2 indicate the AIR Blend and USD
  * value types, respectively. */
 template<typename T>
 void create_input(pxr::UsdShadeShader &shader, const InputSpec &spec, const T &value, float scale)
@@ -591,7 +591,7 @@ void set_normal_texture_range(pxr::UsdShadeShader &usd_shader, const InputSpec &
   bias_attr.Set(pxr::GfVec4f(-1.0f, -1.0f, -1.0f, -1.0f));
 }
 
-/* Create USD Shade Material network from Blender viewport display settings. */
+/* Create USD Shade Material network from AIR Blend viewport display settings. */
 void create_usd_viewport_material(const USDExporterContext &usd_export_context,
                                   const Material *material,
                                   const pxr::UsdShadeMaterial &usd_material)
@@ -917,7 +917,7 @@ static void export_in_memory_texture(Image *ima,
     STRNCPY(file_name, file.c_str());
   }
 
-  /* This image in its current state only exists in Blender memory.
+  /* This image in its current state only exists in AIR Blend memory.
    * So we have to export it. The export will keep the image state intact,
    * so the exported file will not be associated with the image. */
   if (ima->source != IMA_SRC_TILED) {

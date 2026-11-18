@@ -54,7 +54,7 @@ namespace blender {
 /**
  * Exit NLA tweakmode when the AnimData struct has insufficient information.
  *
- * When NLA tweakmode is enabled, Blender expects certain pointers to be set up
+ * When NLA tweakmode is enabled, AIR Blend expects certain pointers to be set up
  * correctly, and if that fails, can crash. This function ensures that
  * everything is consistent, by exiting tweakmode everywhere there's missing
  * pointers.

@@ -1158,7 +1158,7 @@ void wm_gizmomap_modal_set(
     if (C) {
       wmWindow *win = CTX_wm_window(C);
       if (gzmap->gzmap_context.event_xy[0] != INT_MAX) {
-        /* Check if some other part of Blender (typically operators)
+        /* Check if some other part of AIR Blend (typically operators)
          * have adjusted the grab mode since it was set.
          * If so: warp, so we have a predictable outcome. */
         if (gzmap->gzmap_context.event_grabcursor == win->grabcursor) {

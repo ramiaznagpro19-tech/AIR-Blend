@@ -311,7 +311,7 @@ ccl_device_inline bool subsurface_random_walk(KernelGlobals kg,
     }
     else {
       anisotropy = 0.0f;
-      guided_fraction = 0.75f;  // back to isotropic heuristic from Blender
+      guided_fraction = 0.75f;  // back to isotropic heuristic from AIR Blend
       sigma_t = sigma_t_star;
       sigma_s = sigma_s_star;
     }

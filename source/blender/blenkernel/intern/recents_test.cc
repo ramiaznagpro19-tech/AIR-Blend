@@ -187,7 +187,7 @@ TEST_F(RecentsTest, SaveIsNoOpInBackgroundMode)
 
 TEST_F(RecentsTest, SaveStampsBlenderVersion)
 {
-  /* `save()` still stamps the current Blender version onto the in-memory data
+  /* `save()` still stamps the current AIR Blend version onto the in-memory data
    * even in background mode, though the no-op path skips writing it to disk. */
   ASSERT_FALSE(save());
   EXPECT_EQ(Section("").get<int32_t>("blender_version"), BLENDER_VERSION);

@@ -6,7 +6,7 @@
  * \ingroup pythonintern
  *
  * This file implements the #BPyOpFunction type,
- * a Python C-API implementation of a callable Blender operator.
+ * a Python C-API implementation of a callable AIR Blend operator.
  */
 
 #pragma once

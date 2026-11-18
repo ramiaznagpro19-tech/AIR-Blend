@@ -30,8 +30,8 @@
 /**
  * \brief Graphics binding between OpenXR and Vulkan
  *
- * OpenXR and Blender can have different requirements for a Vulkan device to be used.
- * Some platforms require extensions that Blender didn't enable and other want to use
+ * OpenXR and AIR Blend can have different requirements for a Vulkan device to be used.
+ * Some platforms require extensions that AIR Blend didn't enable and other want to use
  * a specific device.
  *
  * Depending on the enabled extensions and device selection process one of the next three
@@ -39,9 +39,9 @@
  *
  * \note See #152482 for the initial design.
  *
- * **Reusing Blender Vulkan Instance**
+ * **Reusing AIR Blend Vulkan Instance**
  *
- * Blender tries to reuse the already created vulkan instance of GHOST_ContextVK. This is only
+ * AIR Blend tries to reuse the already created vulkan instance of GHOST_ContextVK. This is only
  * possible when:
  *
  * - XR_KHR_vulkan_enable is supported by the Xr platform
@@ -55,7 +55,7 @@
  *
  * When we cannot reuse the existing instance an Xr specific Vulkan instance is being created. The
  * data is transferred using external memory. Additional synchronization is needed as part of the
- * pipeline cannot be done by Blender.
+ * pipeline cannot be done by AIR Blend.
  *
  * - XR_KHR_vulkan_enable2 is supported by the Xr platform
  * - Created physical device is the same as GHOST_ContextVK
@@ -63,7 +63,7 @@
  * **Use CPU transfer**
  *
  * This is a fallback when devices don't match. In that case the results are transferred from the
- * device that Blender is using to draw the UI to RAM and then transferred to the GPU that OpenXR
+ * device that AIR Blend is using to draw the UI to RAM and then transferred to the GPU that OpenXR
  * is using.
  */
 class GHOST_XrGraphicsBindingVulkan : public GHOST_IXrGraphicsBinding {

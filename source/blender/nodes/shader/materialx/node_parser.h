@@ -19,7 +19,7 @@ extern CLG_LogRef *LOG_IO_MATERIALX;
 class GroupNodeParser;
 
 /**
- * This is base abstraction class for parsing Blender nodes into MaterialX nodes.
+ * This is base abstraction class for parsing AIR Blend nodes into MaterialX nodes.
  * #NodeParser::compute() should be overridden in child classes.
  */
 class NodeParser {

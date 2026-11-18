@@ -34,7 +34,7 @@ if(ANDROID)
     -DCMAKE_DISABLE_FIND_PACKAGE_OpenGLES=TRUE
 
     # Still build the osdGPU library with the GLSL patch shader sources, without any
-    # GPU API support. Blender uses its own GPU evaluator, but sources these patch
+    # GPU API support. AIR Blend uses its own GPU evaluator, but sources these patch
     # shaders from osdGPU for it.
     -DOSD_PATCH_SHADER_SOURCE_GLSL=ON
 

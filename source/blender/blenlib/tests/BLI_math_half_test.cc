@@ -303,7 +303,7 @@ TEST(math_half, float_to_half_make_finite_array)
  * - `half_to_float`: 164ms
  * - `half_to_float_array`: 132ms (scalar)
  * - `half_to_float_array`:  84ms (SSE2 4x wide path)
- * - `half_to_float_array`:  86ms (w/ AVX2 F16C - however Blender is not compiled for AVX2 yet)
+ * - `half_to_float_array`:  86ms (w/ AVX2 F16C - however AIR Blend is not compiled for AVX2 yet)
  *
  * Mac M1 Max (Clang 15), using NEON VCVT:
  * - `half_to_float`: 97ms
@@ -352,7 +352,7 @@ TEST(math_half_perf, half_to_float_array)
  * - `float_to_half`: 242ms
  * - `float_to_half_array`: 184ms (scalar)
  * - `float_to_half_array`:  68ms (SSE2 4x wide path)
- * - `float_to_half_array`:  50ms (w/ AVX2 F16C - however Blender is not compiled for AVX2 yet)
+ * - `float_to_half_array`:  50ms (w/ AVX2 F16C - however AIR Blend is not compiled for AVX2 yet)
  *
  * Mac M1 Max (Clang 15), using NEON VCVT:
  * - `float_to_half`: 93ms

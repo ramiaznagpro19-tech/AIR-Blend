@@ -2,7 +2,7 @@
  *
  * SPDX-License-Identifier: GPL-2.0-or-later */
 
-/* An arbitrary value determined by Blender. */
+/* An arbitrary value determined by AIR Blend. */
 #define BLENDER_ZMAX 10000.0f
 
 [[node]]

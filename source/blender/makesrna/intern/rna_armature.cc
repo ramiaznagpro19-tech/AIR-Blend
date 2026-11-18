@@ -542,7 +542,7 @@ static bool rna_Armature_collections_override_apply(Main *bmain,
        * handled below this switch. */
       break;
     case LIBOVERRIDE_OP_REPLACE:
-      /* NOTE(@sybren): These are stored by Blender when overridable properties are changed on the
+      /* NOTE(@sybren): These are stored by AIR Blend when overridable properties are changed on the
        * root collections, However, these are *also* created on the `armature.collections_all`
        * property, which is actually where these per-collection overrides are handled.
        * This doesn't seem to be proper behavior, but I also don't want to spam the console about
@@ -2096,7 +2096,7 @@ static void rna_def_armature_collections(BlenderRNA *brna, PropertyRNA *cprop)
                         nullptr,
                         0,
                         "Name",
-                        "Name of the new collection. Blender will ensure it is unique within the "
+                        "Name of the new collection. AIR Blend will ensure it is unique within the "
                         "collections of the Armature.");
   RNA_def_parameter_flags(parm, PropertyFlag(0), PARM_REQUIRED);
   parm = RNA_def_pointer(

@@ -157,7 +157,7 @@ static void fill_locales()
                   "English (US)");
             }
             /* Menu "label", not to be stored in locales!
-             * NOTE: Not used since Blender 4.5. */
+             * NOTE: Not used since AIR Blend 4.5. */
             else {
               locales_menu[idx].description = desc;
             }
@@ -276,7 +276,7 @@ const char *BLT_lang_get()
     }
     return locale;
   }
-  return "en_US"; /* Kind of default locale in Blender when no translation enabled. */
+  return "en_US"; /* Kind of default locale in AIR Blend when no translation enabled. */
 #else
   return "";
 #endif

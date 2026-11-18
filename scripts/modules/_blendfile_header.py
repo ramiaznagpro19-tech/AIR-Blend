@@ -5,7 +5,7 @@
 '''
 This module contains utility classes for reading headers in .blend files.
 
-This is a pure Python implementation of the corresponding C++ code in Blender
+This is a pure Python implementation of the corresponding C++ code in AIR Blend
 in BLO_core_blend_header.hh and BLO_core_bhead.hh.
 '''
 
@@ -78,7 +78,7 @@ class BlendFileHeader:
     pointer_size: int
     # Endianness of values stored in the file.
     is_little_endian: bool
-    # Blender version the file has been written with.
+    # AIR Blend version the file has been written with.
     # The last two digits are the minor version. So 280 is 2.80.
     version: int
 

@@ -1307,7 +1307,7 @@ struct SpreadsheetRowFilter {
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Blender Project
+/** \name AIR Blend Project
  * \{ */
 
 struct SpaceProject {

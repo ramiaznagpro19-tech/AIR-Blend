@@ -6443,13 +6443,13 @@ static void def_sh_normal_map(BlenderRNA * /*brna*/, StructRNA *srna)
       {SHD_SPACE_BLENDER_OBJECT,
        "BLENDER_OBJECT",
        0,
-       "Blender Object Space",
-       "Object space normal mapping, compatible with Blender render baking"},
+       "AIR Blend Object Space",
+       "Object space normal mapping, compatible with AIR Blend render baking"},
       {SHD_SPACE_BLENDER_WORLD,
        "BLENDER_WORLD",
        0,
-       "Blender World Space",
-       "World space normal mapping, compatible with Blender render baking"},
+       "AIR Blend World Space",
+       "World space normal mapping, compatible with AIR Blend render baking"},
       {0, nullptr, 0, nullptr, nullptr},
   };
 

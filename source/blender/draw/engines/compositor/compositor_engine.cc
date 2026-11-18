@@ -269,7 +269,7 @@ class Context : public compositor::Context {
 
   compositor::Result get_pass(const Scene *scene, int view_layer_index, const char *name) override
   {
-    /* Blender aliases the Image pass name to be the Combined pass, so we return the combined pass
+    /* AIR Blend aliases the Image pass name to be the Combined pass, so we return the combined pass
      * in that case. */
     const char *pass_name = StringRef(name) == "Image" ? "Combined" : name;
 

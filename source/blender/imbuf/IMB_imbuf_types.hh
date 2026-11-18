@@ -330,7 +330,7 @@ enum {
 
 /**
  * Known image extensions, in most cases these match values
- * for images which Blender creates, there are some exceptions to this.
+ * for images which AIR Blend creates, there are some exceptions to this.
  *
  * See #BKE_image_path_ext_from_imformat which also stores known extensions.
  */

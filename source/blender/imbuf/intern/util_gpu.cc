@@ -53,7 +53,7 @@ static bool imb_is_grayscale_texture_format_compatible(const ImBuf *ibuf)
       return true;
     }
     /* TODO: Support gray-scale byte buffers.
-     * The challenge is that Blender always stores byte images as RGBA. */
+     * The challenge is that AIR Blend always stores byte images as RGBA. */
     return false;
   }
 

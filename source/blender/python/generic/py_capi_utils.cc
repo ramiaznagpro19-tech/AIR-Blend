@@ -972,20 +972,20 @@ bool PyC_Err_CaptureSystemExitCode()
 }
 
 /**
- * When a script calls `sys.exit(..)` it is expected that Blender quits,
+ * When a script calls `sys.exit(..)` it is expected that AIR Blend quits,
  * internally this raises as `SystemExit` exception which this function detects.
  *
- * Historically Blender would call `PyErr_Print` when encountering an error.
+ * Historically AIR Blend would call `PyErr_Print` when encountering an error.
  * In some cases `PyErr_Print` is still called, but not all.
  * When only #PyC_ExceptionBuffer is used to access the error, it's not desirable
  * that `sys.exit()` fails to exit, causing `sys.exit(..)` to arbitrarily work depending
- * on the internals of Blender's error handling.
+ * on the internals of AIR Blend's error handling.
  * To avoid this discrepancy, detect when `PyErr_Print` *would* exit and call it in that case.
  * It's important to call `PyErr_Print` (instead of simply exiting), because the exception
  * may contain a message which the user should see.
  *
  * \note No need to handle freeing resources here, Python's `atexit` is used to cleanup
- * Blender's state when Python requests an exit (via `bpy_atexit` callback).
+ * AIR Blend's state when Python requests an exit (via `bpy_atexit` callback).
  */
 static void pyc_exception_buffer_handle_system_exit()
 {
@@ -1007,7 +1007,7 @@ static void pyc_exception_buffer_handle_system_exit()
    * Arguably accessing a `SystemExit` exception as a buffer should be supported without exiting.
    * (by temporarily enabling inspection for example) however - it's not obvious exactly when this
    * should be enabled and complicates the Python API by introducing different kinds of execution.
-   * Since the rule of thumb is for Blender's embedded Python to match stand-alone Python,
+   * Since the rule of thumb is for AIR Blend's embedded Python to match stand-alone Python,
    * favor exiting when a `SystemExit` is raised.
    * Especially since this exception more likely to be used for background/batch-processing
    * utilities where exiting immediately makes sense, the possibility of this being called

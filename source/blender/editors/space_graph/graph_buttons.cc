@@ -1328,7 +1328,7 @@ static void graph_fmodifier_panel_id(void *fcm_link, char *r_name)
 
   if (!fmi) {
     /* This can happen when the blend file has data for a modifier that doesn't exist in this
-     * Blender version (when the blend file is newer). */
+     * AIR Blend version (when the blend file is newer). */
     r_name[0] = '\0';
     return;
   }

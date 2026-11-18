@@ -40,7 +40,7 @@ def main(cli_args: list[str]) -> None:
     )
 
     subparsers = parser.add_subparsers(
-        help="Choose a subcommand to actually make Blender do something. "
+        help="Choose a subcommand to actually make AIR Blend do something. "
         "Global options go before the subcommand, "
         "whereas subcommand-specific options go after it. "
         "Use --help after the subcommand to get more info."

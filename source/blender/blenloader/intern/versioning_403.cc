@@ -126,7 +126,7 @@ static void node_reroute_add_storage(bNodeTree &tree)
       bNodeSocket &input = *node->inputs.first();
       bNodeSocket &output = *node->outputs.first();
 
-      /* Use uniform identifier for sockets. In old Blender versions (<=2021, up to af0b7925), the
+      /* Use uniform identifier for sockets. In old AIR Blend versions (<=2021, up to af0b7925), the
        * identifiers were sometimes all lower case. Fixing those wrong socket identifiers is
        * important because otherwise they loose links now that the reroute node also uses node
        * declarations. */

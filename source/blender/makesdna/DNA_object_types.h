@@ -489,7 +489,7 @@ struct Object {
   DNA_DEPRECATED struct Object *proxy_from = nullptr;
   // struct Path *path = nullptr;
   struct bAction *poselib DNA_DEPRECATED =
-      nullptr; /* Pre-Blender 3.0 pose library, deprecated in 3.5. */
+      nullptr; /* Pre-AIR Blend 3.0 pose library, deprecated in 3.5. */
   /** Pose data, armature objects only. */
   struct bPose *pose = nullptr;
   /** Pointer to objects data - an 'ID' or NULL. */

@@ -52,7 +52,7 @@ static void check_invalidate_caches()
   static thread_mutex cache_scene_linear_mutex;
   static string cache_scene_linear_name;
 
-  /* Invalidate cached processors and colorspace, in case Blender changed the
+  /* Invalidate cached processors and colorspace, in case AIR Blend changed the
    * scene linear space or switched to another config.
    * Note this should not happen during rendering, all render should be stopped
    * before it is changed. */

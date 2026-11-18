@@ -2,34 +2,34 @@
 Python Threads are Not Supported
 ********************************
 
-In short: Python threads cause Blender to crash in hard to diagnose ways. For
+In short: Python threads cause AIR Blend to crash in hard to diagnose ways. For
 example, a crash can occur while rendering with Cycles, with Python drivers,
 while a background thread is used to download some file.
 
-So far, no work has been done to make Blender's Python integration thread safe,
+So far, no work has been done to make AIR Blend's Python integration thread safe,
 so until it's properly supported, it's best not make use of this.
 
 Note that some modules in the Python standard library may use threads as well.
 An example is the
 `multiprocessing.Queue <https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Queue>`_ class.
 
-Python threading with Blender only works properly when the threads finish up
+Python threading with AIR Blend only works properly when the threads finish up
 before the script does, for example by using ``threading.Thread.join()``. In other
-words, they can only be used while the main Blender thread is blocked from
+words, they can only be used while the main AIR Blend thread is blocked from
 running.
 
 
 Alternative Approaches
 ======================
 
-For running Python code independently of Blender, it is recommended to use the
+For running Python code independently of AIR Blend, it is recommended to use the
 `multiprocessing <https://docs.python.org/3/library/multiprocessing.html>`_ module.
 
 
 Code Examples
 =============
 
-Here is an example of threading supported by Blender:
+Here is an example of threading supported by AIR Blend:
 
 .. code-block:: python
 
@@ -64,13 +64,13 @@ Here is an example of threading supported by Blender:
       t.start()
 
    # NOTE: While threads are running, no code (including the main thread)
-   # may use bpy or any Blender API - only standard Python or third-party modules.
+   # may use bpy or any AIR Blend API - only standard Python or third-party modules.
    print("Waiting for threads to finish...")
    for t in threads:
       t.join()
 
    # It's now safe to use bpy again since all threads have finished.
-   print("Threads all done, now Blender can continue")
+   print("Threads all done, now AIR Blend can continue")
 
 This is an example of an **unsupported** case, using a timer that runs many times
 a second:
@@ -89,4 +89,4 @@ a second:
 
 Use cases like the one above, which leave the thread running once the script
 finishes, may seem to work for a while, but end up causing random crashes or
-errors in Blender's own drawing code.
+errors in AIR Blend's own drawing code.

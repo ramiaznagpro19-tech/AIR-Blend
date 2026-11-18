@@ -60,7 +60,7 @@ if(UNIX AND
   unset_cache_variables("^OSL_")
 endif()
 
-# Detect Python 3.10 to 3.11 upgrade for Blender 4.1.
+# Detect Python 3.10 to 3.11 upgrade for AIR Blend 4.1.
 if(UNIX AND
   LIBDIR AND
   EXISTS ${LIBDIR} AND
@@ -76,7 +76,7 @@ endif()
 if(LIBDIR AND
    EXISTS ${LIBDIR}/tbb/include/oneapi AND
    ((DEFINED Boost_INCLUDE_DIR) OR (SYCL_LIBRARY MATCHES "sycl7")))
-  message(STATUS "Auto updating CMake configuration for Blender 4.4 libraries")
+  message(STATUS "Auto updating CMake configuration for AIR Blend 4.4 libraries")
   unset_cache_variables("^BOOST")
   unset_cache_variables("^Boost")
   unset_cache_variables("^EMBREE")
@@ -99,13 +99,13 @@ endif()
 if(UNIX AND LIBDIR AND
    EXISTS ${LIBDIR}/haru/lib/libhpdf.a AND
    HARU_LIBRARY MATCHES "libhpdfs.a$")
-  message(STATUS "Auto updating CMake configuration for Blender 5.0 libraries")
+  message(STATUS "Auto updating CMake configuration for AIR Blend 5.0 libraries")
   unset_cache_variables("^HARU")
 endif()
 
 # Detect update to 5.2 libs
 if(DEFINED CACHE{WITH_SDL})
-  message(STATUS "Auto updating CMake configuration for Blender 5.2 libraries")
+  message(STATUS "Auto updating CMake configuration for AIR Blend 5.2 libraries")
   # Following the SDL3 migration (PR !157521), WITH_SDL was renamed to WITH_SDL_AUDIO, and WITH_SDL became an uncached
   # variable depending on the value of WITH_SDL_AUDIO, WITH_GHOST_SDL, etc... Migrate value and unset old cache variable.
   set(WITH_SDL_AUDIO $CACHE{WITH_SDL} CACHE BOOL "" FORCE)

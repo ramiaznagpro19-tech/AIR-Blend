@@ -7,7 +7,7 @@ Copy Global Transform
 
 Simple operators for copying world-space transforms.
 
-It's called "global" to avoid confusion with the Blender World data-block.
+It's called "global" to avoid confusion with the AIR Blend World data-block.
 """
 
 import abc
@@ -141,7 +141,7 @@ class OBJECT_OT_copy_global_transform(Operator):
     bl_description = (
         "Copies the matrix of the currently active object or pose bone to the clipboard. Uses world-space matrices"
     )
-    # This operator cannot be un-done because it manipulates data outside Blender.
+    # This operator cannot be un-done because it manipulates data outside AIR Blend.
     bl_options = {'REGISTER'}
 
     @classmethod
@@ -168,7 +168,7 @@ class OBJECT_OT_copy_relative_transform(Operator):
     bl_label = "Copy Relative Transform"
     bl_description = "Copies the matrix of the currently active object or pose bone to the clipboard. " \
         "Uses matrices relative to a specific object or the active scene camera"
-    # This operator cannot be un-done because it manipulates data outside Blender.
+    # This operator cannot be un-done because it manipulates data outside AIR Blend.
     bl_options = {'REGISTER'}
 
     @classmethod
@@ -292,7 +292,7 @@ class OBJECT_OT_paste_transform(Operator):
 
     @staticmethod
     def parse_print_m4(value: str) -> Optional[Matrix]:
-        """Parse output from Blender's print_m4() function.
+        """Parse output from AIR Blend's print_m4() function.
 
         Expects four lines of space-separated floats.
         """

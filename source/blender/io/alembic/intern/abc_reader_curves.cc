@@ -121,7 +121,7 @@ static int get_curve_overlap(const P3fArraySamplePtr positions,
                              const int num_verts,
                              const int16_t order)
 {
-  /* Check the number of points which overlap, we don't have overlapping points in Blender, but
+  /* Check the number of points which overlap, we don't have overlapping points in AIR Blend, but
    * other software do use them to indicate that a curve is actually cyclic. Usually the number of
    * overlapping points is equal to the order/degree of the curve.
    */
@@ -163,7 +163,7 @@ static CurveType get_curve_type(const Alembic::AbcGeom::BasisType basis)
       return CURVE_TYPE_CATMULL_ROM;
     case Alembic::AbcGeom::kHermiteBasis:
     case Alembic::AbcGeom::kPowerBasis:
-      /* Those types are unknown to Blender, use a default poly type. */
+      /* Those types are unknown to AIR Blend, use a default poly type. */
       return CURVE_TYPE_POLY;
   }
   return CURVE_TYPE_POLY;
@@ -218,7 +218,7 @@ static bool samples_have_same_topology(const SampleType &sample, const SampleTyp
   return true;
 }
 
-/* Preprocessed data to help and simplify converting curve data from Alembic to Blender.
+/* Preprocessed data to help and simplify converting curve data from Alembic to AIR Blend.
  * As some operations may require to look up the Alembic sample multiple times, we just
  * do it once and cache the results in this.
  */
@@ -235,7 +235,7 @@ struct PreprocessedSampleData {
   Vector<int8_t> curves_orders;
 
   /* True if any values of `curves_overlaps` is true. If so, we will need to copy the
-   * `curves_overlaps` to an attribute on the Blender curves. */
+   * `curves_overlaps` to an attribute on the AIR Blend curves. */
   bool do_cyclic = false;
 
   /* Only one curve type for the whole objects. */
@@ -256,7 +256,7 @@ struct PreprocessedSampleData {
 };
 
 /* Compute topological information about the curves. We do this step mainly to properly account
- * for curves overlaps which imply different offsets between Blender and Alembic, but also to
+ * for curves overlaps which imply different offsets between AIR Blend and Alembic, but also to
  * validate the data and cache some values. */
 static std::optional<PreprocessedSampleData> preprocess_sample(
     StringRefNull iobject_name,
@@ -280,7 +280,7 @@ static std::optional<PreprocessedSampleData> preprocess_sample(
   }
 
   /* NOTE: although Alembic can store knots, we do not read them as the functionality is not
-   * exposed by the Blender's Curves API yet. */
+   * exposed by the AIR Blend's Curves API yet. */
   const Int32ArraySamplePtr per_curve_vertices_count = smp.getCurvesNumVertices();
   const P3fArraySamplePtr positions = smp.getPositions();
   const FloatArraySamplePtr weights = smp.getPositionWeights();
@@ -356,7 +356,7 @@ static std::optional<PreprocessedSampleData> preprocess_sample(
       data.curves_orders[i] = curve_order;
     }
 
-    /* Some software writes repeated vertices to indicate periodicity but Blender
+    /* Some software writes repeated vertices to indicate periodicity but AIR Blend
      * should skip these if present. */
     const int overlap = data.do_cyclic ?
                             get_curve_overlap(

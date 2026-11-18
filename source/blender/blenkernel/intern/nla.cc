@@ -1978,7 +1978,7 @@ void BKE_nlastrip_validate_name(AnimData *adt, NlaStrip *strip)
 
   /* If the hash-table has a match for this name, try other names...
    * - In an extreme case, it might not be able to find a name,
-   *   but then everything else in Blender would fail too :).
+   *   but then everything else in AIR Blend would fail too :).
    */
   BLI_uniquename_cb(
       [&](const StringRefNull check_name) { return BLI_ghash_haskey(gh, check_name.c_str()); },

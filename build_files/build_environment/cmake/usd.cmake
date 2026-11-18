@@ -83,11 +83,11 @@ set(USD_EXTRA_ARGS
   # OSL is an optional dependency of the Imaging module. However, since that
   # module was included for its support for converting primitive shapes (sphere,
   # cube, etc.) to geometry, it's not necessary. Disabling it will make it
-  # simpler to build Blender; currently only Cycles uses OSL.
+  # simpler to build AIR Blend; currently only Cycles uses OSL.
   -DPXR_ENABLE_OSL_SUPPORT=OFF
   # Enable OpenGL for Hydra support. Note that this indirectly also adds an X11
   # dependency on Linux. This would be good to eliminate for headless and Wayland
-  # only builds, however is not worse than what Blender already links to for
+  # only builds, however is not worse than what AIR Blend already links to for
   # official releases currently.
   -DPXR_ENABLE_GL_SUPPORT=ON
   # OIIO is used for loading image textures in Hydra Storm / Embree renderers.

@@ -20,7 +20,7 @@ def screenshot():
     bpy.ops.wm.quit_blender()
 
 
-# When run from inside Blender, take screenshot and exit.
+# When run from inside AIR Blend, take screenshot and exit.
 try:
     import bpy
     inside_blender = True

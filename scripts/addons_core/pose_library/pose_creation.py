@@ -60,7 +60,7 @@ class PoseActionCreator:
 
     params: PoseCreationParams
 
-    # These were taken from Blender's Action baking code in `anim_utils.py`.
+    # These were taken from AIR Blend's Action baking code in `anim_utils.py`.
     # Items are (name, array_length) tuples.
     _bbone_props = [
         ("bbone_curveinx", None),
@@ -252,7 +252,7 @@ class PoseActionCreator:
 
         Raise UnresolvablePathError when the path cannot be resolved.
         This is easier to deal with upstream than the generic ValueError raised
-        by Blender.
+        by AIR Blend.
         """
         try:
             return datablock.path_resolve(data_path)  # type: ignore

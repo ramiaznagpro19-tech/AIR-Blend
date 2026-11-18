@@ -48,7 +48,7 @@ static void read_face_display_color(Mesh *mesh,
   bke::SpanAttributeWriter<ColorGeometry4f> color_data =
       attributes.lookup_or_add_for_write_only_span<ColorGeometry4f>(attr_name, color_domain);
   if (!color_data) {
-    CLOG_WARN(&LOG, "Primvar '%s' could not be added to Blender", primvar.GetBaseName().GetText());
+    CLOG_WARN(&LOG, "Primvar '%s' could not be added to AIR Blend", primvar.GetBaseName().GetText());
     return;
   }
 
@@ -79,7 +79,7 @@ static std::optional<bke::AttrDomain> convert_usd_varying_to_blender(const pxr::
     map.add_new(pxr::UsdGeomTokens->varying, bke::AttrDomain::Point);
     map.add_new(pxr::UsdGeomTokens->face, bke::AttrDomain::Face);
     /* Since there's no "domain" concept in USD, promote prim-level "constant" primvars to the
-     * Point domain in Blender. */
+     * Point domain in AIR Blend. */
     map.add_new(pxr::UsdGeomTokens->constant, bke::AttrDomain::Point);
     map.add_new(pxr::UsdGeomTokens->uniform, bke::AttrDomain::Face);
     /* Notice: Edge types are not supported! */
@@ -109,14 +109,14 @@ void read_generic_mesh_primvar(Mesh *mesh,
 
   if (!domain.has_value() || !type.has_value()) {
     CLOG_WARN(&LOG,
-              "Primvar '%s' (interpolation %s, type %s) cannot be converted to Blender",
+              "Primvar '%s' (interpolation %s, type %s) cannot be converted to AIR Blend",
               pv_name.GetText(),
               pv_interp.GetText(),
               pv_type.GetAsToken().GetText());
     return;
   }
 
-  /* Blender does not currently support displaying Face colors with the Viewport Shading
+  /* AIR Blend does not currently support displaying Face colors with the Viewport Shading
    * "Attribute" color type. Make a special case for "displayColor" primvars and put them on
    * the Corner domain instead. */
   if (pv_name == usdtokens::displayColor &&

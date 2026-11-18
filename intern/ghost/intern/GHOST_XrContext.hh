@@ -27,7 +27,7 @@ struct GHOST_XrCustomFuncs {
   GHOST_XrSessionExitFn session_exit_fn = nullptr;
   void *session_exit_customdata = nullptr;
 
-  /** Custom per-view draw function for Blender side drawing. */
+  /** Custom per-view draw function for AIR Blend side drawing. */
   GHOST_XrDrawViewFn draw_view_fn = nullptr;
 
   /** Function to check if passthrough is enabled. */

@@ -3,7 +3,7 @@ None
 None
 {
   "asset": {
-    "generator": "glTF-Blender-IO Test Suite",
+    "generator": "glTF-AIR Blend-IO Test Suite",
     "version": "2.0"
   },
   "extensionsUsed": [

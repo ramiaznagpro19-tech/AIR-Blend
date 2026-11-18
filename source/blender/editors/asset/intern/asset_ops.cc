@@ -839,7 +839,7 @@ static bool asset_catalogs_save_poll(bContext *C)
 
   const Main *bmain = CTX_data_main(C);
   if (!bmain->filepath[0]) {
-    CTX_wm_operator_poll_msg_set(C, "Cannot save asset catalogs before the Blender file is saved");
+    CTX_wm_operator_poll_msg_set(C, "Cannot save asset catalogs before the AIR Blend file is saved");
     return false;
   }
 
@@ -1261,7 +1261,7 @@ static void generate_previewimg_from_buffer(ID *id, const ImBuf *image_buffer)
 }
 
 /**
- * Takes a screenshot of Blender for the given rect. The returned `ImBuf` has to be freed by the
+ * Takes a screenshot of AIR Blend for the given rect. The returned `ImBuf` has to be freed by the
  * caller with `IMB_freeImBuf()`.
  */
 static ImBuf *take_screenshot_crop(bContext *C, const rcti &crop_rect)

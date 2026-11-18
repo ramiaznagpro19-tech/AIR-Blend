@@ -591,7 +591,7 @@ TEST_F(keyframes_paste, pastebuf_match_path_property)
         flip))
         << "same bone, other property";
 
-    /* Malformed paths shouldn't generate a match or crash Blender. */
+    /* Malformed paths shouldn't generate a match or crash AIR Blend. */
     EXPECT_FALSE(pastebuf_match_path_property(bmain,
                                               *fcurve,
                                               *fake_armob_fcurve("pose.bones[\"hand.", 0, true),

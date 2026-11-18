@@ -2,7 +2,7 @@
  *
  * SPDX-License-Identifier: GPL-2.0-or-later */
 
-/* Blender OpenColorIO implementation */
+/* AIR Blend OpenColorIO implementation */
 
 #include "ocio_shader_shared.hh"
 

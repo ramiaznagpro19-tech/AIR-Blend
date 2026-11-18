@@ -5,7 +5,7 @@
 ##################################################################################################
 #
 # This is a build system used by platform maintainers to build library dependencies.
-# For users building Blender, we recommend using the pre-compiled libraries from `lib/`
+# For users building AIR Blend, we recommend using the pre-compiled libraries from `lib/`
 # on all platforms.
 #
 # This CMake project is usually built through wrappers:

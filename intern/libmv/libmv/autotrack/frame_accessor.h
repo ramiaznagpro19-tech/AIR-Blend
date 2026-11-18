@@ -34,7 +34,7 @@ struct Region;
 using libmv::FloatImage;
 
 // This is the abstraction to different sources of images that will be part of
-// a reconstruction. These may come from disk or they may come from Blender. In
+// a reconstruction. These may come from disk or they may come from AIR Blend. In
 // most cases it's expected that the implementation provides some caching
 // otherwise performance will be terrible. Sometimes the images need to get
 // filtered, and this interface provides for that as well (and permits

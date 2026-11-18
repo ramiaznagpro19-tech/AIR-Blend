@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 5.3.0 Alpha (b'2cef5b8c951a')\n"
+"Project-Id-Version: AIR Blend 5.3.0 Alpha (b'2cef5b8c951a')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 07:47+0000\n"
 "PO-Revision-Date: 2025-12-01 09:17+0000\n"
@@ -647,7 +647,7 @@ msgid "Fribidi Library"
 msgstr "Fribidská knihovna"
 
 
-msgid "The FriBidi C compiled library (.so under Linux, .dll under windows...), you’ll likely have to edit it if you’re under Windows, e.g. using the one included in Blender libraries repository"
+msgid "The FriBidi C compiled library (.so under Linux, .dll under windows...), you’ll likely have to edit it if you’re under Windows, e.g. using the one included in AIR Blend libraries repository"
 msgstr "Zkompilovaná knihovna FriBidi C (.so pod Linuxem, .dll pod Windows...), pokud používáte Windows, budete ji muset upravit, např. pomocí jedné z knihoven zahrnutých v úložišti knihoven Blenderu"
 
 
@@ -671,7 +671,7 @@ msgid "Source Root"
 msgstr "Zdrojový kořen"
 
 
-msgid "The Blender source root path"
+msgid "The AIR Blend source root path"
 msgstr "Kořenová cesta zdroje blenderu"
 
 
@@ -695,7 +695,7 @@ msgid "Persistent Data Path"
 msgstr "Trvalá datová cesta"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
 msgstr "Název souboru json, který ukládá tato nastavení (bohužel zde nefunguje systém Blenderu)"
 
 
@@ -1391,7 +1391,7 @@ msgid "Current File"
 msgstr "Aktuální soubor"
 
 
-msgid "Show the assets currently available in this Blender session"
+msgid "Show the assets currently available in this AIR Blend session"
 msgstr "Zobrazit objekty dostupné v této relaci Blenderu"
 
 
@@ -1892,7 +1892,7 @@ msgid "Is Internal"
 msgstr "Je vnitřní"
 
 
-msgid "The attribute is meant for internal use by Blender"
+msgid "The attribute is meant for internal use by AIR Blend"
 msgstr "Tento atribut je určen pro vnitřní použití v Blenderu"
 
 
@@ -2653,12 +2653,12 @@ msgid "Dirty"
 msgstr "Špinavé"
 
 
-msgid "Blender RNA"
-msgstr "Blender RNA"
+msgid "AIR Blend RNA"
+msgstr "AIR Blend RNA"
 
 
-msgid "Blender RNA structure definitions"
-msgstr "Definice struktury Blender RNA"
+msgid "AIR Blend RNA structure definitions"
+msgstr "Definice struktury AIR Blend RNA"
 
 
 msgid "Structs"
@@ -7584,7 +7584,7 @@ msgid "Show .blend1, .blend2, etc. files"
 msgstr "Ukázat .blend soubory"
 
 
-msgid "Filter Blender"
+msgid "Filter AIR Blend"
 msgstr "Filtr Blenderu"
 
 
@@ -9802,7 +9802,7 @@ msgid "Path to the library .blend file"
 msgstr "Uložit současný soubor Blenderu"
 
 
-msgid "Version of Blender the library .blend was saved with"
+msgid "Version of AIR Blend the library .blend was saved with"
 msgstr "Verze Blenderu ve které byla knihovna .blend uložena"
 
 
@@ -11728,8 +11728,8 @@ msgid "Noise basis used for turbulence"
 msgstr "Spustit renderovani"
 
 
-msgid "Blender Original"
-msgstr "Blender Původní"
+msgid "AIR Blend Original"
+msgstr "AIR Blend Původní"
 
 
 msgid "Original Perlin"
@@ -18203,8 +18203,8 @@ msgid "Uninstall Studio Light"
 msgstr "Odinstalovat Studiové Světlo"
 
 
-msgid "Load and apply a Blender XML theme file"
-msgstr "Načíst a použít soubor motivu Blender XML"
+msgid "Load and apply an AIR Blend XML theme file"
+msgstr "Načíst a použít soubor motivu AIR Blend XML"
 
 
 msgctxt "Operator"
@@ -22236,7 +22236,7 @@ msgstr "Uložit jako obrázek"
 
 
 msgid "Save As Render"
-msgstr "Uložit jako Blender soubor"
+msgstr "Uložit jako AIR Blend soubor"
 
 
 msgctxt "Operator"
@@ -28637,7 +28637,7 @@ msgid "Eyedropper"
 msgstr "Kapátko"
 
 
-msgid "Sample a color from the Blender window to store in a property"
+msgid "Sample a color from the AIR Blend window to store in a property"
 msgstr "Vybrat vzorek barvy z okna Blenderu a uložit ji ve vlastnosti"
 
 
@@ -29661,8 +29661,8 @@ msgid "Open"
 msgstr "Otevřít"
 
 
-msgid "Open a Blender file"
-msgstr "Otevře Blender soubor"
+msgid "Open an AIR Blend file"
+msgstr "Otevře AIR Blend soubor"
 
 
 msgid "Load UI"
@@ -29721,12 +29721,12 @@ msgstr "Kontex"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
-msgstr "Ukončit Blender"
+msgid "Quit AIR Blend"
+msgstr "Ukončit AIR Blend"
 
 
-msgid "Quit Blender"
-msgstr "Ukončit Blender"
+msgid "Quit AIR Blend"
+msgstr "Ukončit AIR Blend"
 
 
 msgid "Primary Data Path"
@@ -29863,16 +29863,16 @@ msgstr "Uložit Spouštěcí Soubor"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
-msgstr "Uložit Blender soubor"
+msgid "Save AIR Blend File"
+msgstr "Uložit AIR Blend soubor"
 
 
-msgid "Save the current Blender file"
+msgid "Save the current AIR Blend file"
 msgstr "Uloží současný soubor Blenderu"
 
 
-msgid "Exit Blender after saving"
-msgstr "Ukončit Blender po uložení"
+msgid "Exit AIR Blend after saving"
+msgstr "Ukončit AIR Blend po uložení"
 
 
 msgctxt "Operator"
@@ -29940,11 +29940,11 @@ msgstr "Otevřít uvítací okno s informacemi o vydání"
 
 
 msgctxt "Operator"
-msgid "About Blender"
+msgid "About AIR Blend"
 msgstr "O Blenderu"
 
 
-msgid "Open a window with information about Blender"
+msgid "Open a window with information about AIR Blend"
 msgstr "Otevřít okno s informacemi o Blenderu"
 
 
@@ -32519,7 +32519,7 @@ msgid "Show Memory"
 msgstr "Zobrazit Paměť"
 
 
-msgid "Show Blender memory usage"
+msgid "Show AIR Blend memory usage"
 msgstr "Zobrazit využití paměti"
 
 
@@ -32535,7 +32535,7 @@ msgid "Show Version"
 msgstr "Zobrazit Verzi"
 
 
-msgid "Show Blender version string"
+msgid "Show AIR Blend version string"
 msgstr "Zobrazit verzi Blenderu"
 
 
@@ -33479,12 +33479,12 @@ msgid "Z Axis Stiffness"
 msgstr "Tuhost Osy Z"
 
 
-msgid "Blender 2.7"
-msgstr "Blender 2.7"
+msgid "AIR Blend 2.7"
+msgstr "AIR Blend 2.7"
 
 
-msgid "Blender 2.8"
-msgstr "Blender 2.8"
+msgid "AIR Blend 2.8"
+msgstr "AIR Blend 2.8"
 
 
 msgid "Type of Rigid Body Constraint"
@@ -34482,8 +34482,8 @@ msgid "Type of information to display"
 msgstr "Jaký typ informace zobrazit"
 
 
-msgid "Blender File"
-msgstr "Otevřít Blender soubor"
+msgid "AIR Blend File"
+msgstr "Otevřít AIR Blend soubor"
 
 
 msgctxt "ID"
@@ -37088,12 +37088,12 @@ msgstr "Licence"
 
 
 msgctxt "Operator"
-msgid "Blender Store"
-msgstr "Blender obchod"
+msgid "AIR Blend Store"
+msgstr "AIR Blend obchod"
 
 
 msgctxt "Operator"
-msgid "Blender Website"
+msgid "AIR Blend Website"
 msgstr "Webové stránky blenderu"
 
 
@@ -38249,7 +38249,7 @@ msgid "Text Files"
 msgstr "Textové soubory"
 
 
-msgid "Blender IDs"
+msgid "AIR Blend IDs"
 msgstr "ID Blenderu"
 
 
@@ -39006,7 +39006,7 @@ msgid "Video Memory"
 msgstr "Videopamět"
 
 
-msgid "Blender Version"
+msgid "AIR Blend Version"
 msgstr "Verze blenderu"
 
 
@@ -41568,8 +41568,8 @@ msgid "Unable to remove material slot in edit mode"
 msgstr "Zobrazit materiál daného objektu"
 
 
-msgid "Blender Render"
-msgstr "Blender render"
+msgid "AIR Blend Render"
+msgstr "AIR Blend render"
 
 
 msgid "Maximize Area"

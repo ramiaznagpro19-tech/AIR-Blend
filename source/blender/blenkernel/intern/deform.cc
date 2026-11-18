@@ -347,7 +347,7 @@ void BKE_defvert_normalize_ex(MDeformVert &dvert,
      * with a few people I (Nathan Vegdahl) think in practice this is likely to
      * be the least surprising behavior to users (out of several bad options).
      * In particular, when the user modifies weights with auto-normalize
-     * enabled, they expect Blender to ensure normalized weights whenever
+     * enabled, they expect AIR Blend to ensure normalized weights whenever
      * possible (see issue #141024), and this approach achieves that.
      *
      * However, this approach is very much worth revisiting if it ends up

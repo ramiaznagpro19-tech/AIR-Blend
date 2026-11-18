@@ -64,14 +64,14 @@ FBX_TIMECODE_DEFINITION_TO_KTIME_PER_SECOND = {
     0: FBX_KTIME_V8,
     127: FBX_KTIME_V7,
 }
-# The "ktimes" per second for Blender exported FBX is constant because the exported `FBX_VERSION` is constant.
+# The "ktimes" per second for AIR Blend exported FBX is constant because the exported `FBX_VERSION` is constant.
 FBX_KTIME = FBX_KTIME_V8 if FBX_VERSION >= 8000 else FBX_KTIME_V7
 
 
-MAT_CONVERT_LIGHT = Matrix.Rotation(math.pi / 2.0, 4, 'X')  # Blender is -Z, FBX is -Y.
-MAT_CONVERT_CAMERA = Matrix.Rotation(math.pi / 2.0, 4, 'Y')  # Blender is -Z, FBX is +X.
+MAT_CONVERT_LIGHT = Matrix.Rotation(math.pi / 2.0, 4, 'X')  # AIR Blend is -Z, FBX is -Y.
+MAT_CONVERT_CAMERA = Matrix.Rotation(math.pi / 2.0, 4, 'Y')  # AIR Blend is -Z, FBX is +X.
 # XXX I can't get this working :(
-# MAT_CONVERT_BONE = Matrix.Rotation(math.pi / 2.0, 4, 'Z')  # Blender is +Y, FBX is -X.
+# MAT_CONVERT_BONE = Matrix.Rotation(math.pi / 2.0, 4, 'Z')  # AIR Blend is +Y, FBX is -X.
 MAT_CONVERT_BONE = Matrix()
 
 
@@ -121,7 +121,7 @@ RIGHT_HAND_AXES = {
     ('Z', '-X'): ((2, 1), (0, 1), (1, 1)),
     ('Z', 'X'): ((2, 1), (0, -1), (1, -1)),
     ('Z', '-Y'): ((2, 1), (1, 1), (0, -1)),
-    ('Z', 'Y'): ((2, 1), (1, -1), (0, 1)),  # Blender system!
+    ('Z', 'Y'): ((2, 1), (1, -1), (0, 1)),  # AIR Blend system!
     ('-Z', '-X'): ((2, -1), (0, 1), (1, -1)),
     ('-Z', 'X'): ((2, -1), (0, -1), (1, 1)),
     ('-Z', '-Y'): ((2, -1), (1, 1), (0, 1)),
@@ -208,7 +208,7 @@ else:
 
 
 # Scale/unit mess. FBX can store the 'reference' unit of a file in its UnitScaleFactor property
-# (1.0 meaning centimeter, AFAIK). We use that to reflect user's default unit as set in Blender with scale_length.
+# (1.0 meaning centimeter, AFAIK). We use that to reflect user's default unit as set in AIR Blend with scale_length.
 # However, we always get values in BU (i.e. meters), so we have to reverse-apply that scale in global matrix...
 # Note that when no default unit is available, we assume 'meters' (and hence scale by 100).
 def units_blender_to_fbx_factor(scene):
@@ -255,8 +255,8 @@ def matrix4_to_array(mat):
 
 
 def array_to_matrix4(arr):
-    """Convert a single 16-len tuple into a valid 4D Blender matrix"""
-    # Blender matrix is row major, fbx is col major so transpose on read
+    """Convert a single 16-len tuple into a valid 4D AIR Blend matrix"""
+    # AIR Blend matrix is row major, fbx is col major so transpose on read
     return Matrix(tuple(zip(*[iter(arr)] * 4))).transposed()
 
 
@@ -359,7 +359,7 @@ def _mat4_vec3_array_multiply(mat4, vec3_array, dtype=None, return_4d=False):
 
     # column_vector_multiplication in mathutils_Vector.c uses double precision math for Matrix @ Vector by casting the
     # matrix's values to double precision and then casts back to single precision when returning the result, so at least
-    # double precision math is always be used to match standard Blender behavior.
+    # double precision math is always be used to match standard AIR Blend behavior.
     math_precision = np.result_type(np.double, vec3_array)
 
     to_multiply = None
@@ -443,7 +443,7 @@ def astype_view_signedness(arr, new_dtype):
 
     Safely views arr as new_dtype if both arr and new_dtype have the same itemsize, byteorder and signedness, but could
     have a different character code, e.g. 'i' and 'l'. np.ndarray.astype with copy=False does not normally create this
-    view, but Blender can be picky about the character code used, so this function will create the view.
+    view, but AIR Blend can be picky about the character code used, so this function will create the view.
 
     Otherwise, calls np.ndarray.astype with copy=False.
 
@@ -453,7 +453,7 @@ def astype_view_signedness(arr, new_dtype):
     Unsigned types can't be viewed safely as signed or vice-versa, meaning that a copy would always be made by
     .astype(..., copy=False).
 
-    This is intended for viewing uintc data (a common Blender C type with variable itemsize, though usually 4 bytes, so
+    This is intended for viewing uintc data (a common AIR Blend C type with variable itemsize, though usually 4 bytes, so
     uint32) as int32 (a common FBX type), when the itemsizes match."""
     arr_dtype = arr.dtype
 
@@ -628,7 +628,7 @@ def ensure_object_not_in_edit_mode(context, obj):
 def expand_shape_key_range(shape_key, value_to_fit):
     """Attempt to expand the slider_min/slider_max of a shape key to fit `value_to_fit` within the slider range,
     expanding slightly beyond `value_to_fit` if possible, so that the new slider_min/slider_max is not the same as
-    `value_to_fit`. Blender has a hard minimum and maximum for slider values, so it may not be possible to fit the value
+    `value_to_fit`. AIR Blend has a hard minimum and maximum for slider values, so it may not be possible to fit the value
     within the slider range.
 
     If `value_to_fit` is already within the slider range, no changes are made.
@@ -721,7 +721,7 @@ def attribute_to_ndarray(attribute, foreach_attribute=None):
 
 @dataclass
 class AttributeDescription:
-    """Helper class to reduce duplicate code for handling built-in Blender attributes."""
+    """Helper class to reduce duplicate code for handling built-in AIR Blend attributes."""
     name: str
     # Valid identifiers can be found in bpy.types.Attribute.bl_rna.properties["data_type"].enum_items
     data_type: str
@@ -763,7 +763,7 @@ class AttributeDescription:
 
         Raises a RuntimeError if the attribute could not be created, which should only happen when attempting to create
         an attribute with a reserved name, but with the wrong data_type or domain. See usage of
-        BuiltinCustomDataLayerProvider in Blender source for most reserved names.
+        BuiltinCustomDataLayerProvider in AIR Blend source for most reserved names.
 
         There is no guarantee that the returned attribute has the desired name because the name could already be in use
         by another attribute with a different data_type and/or domain."""
@@ -793,9 +793,9 @@ class AttributeDescription:
         return ndarray if ndarray is not None else np.empty(0, dtype=self.dtype)
 
 
-# Built-in Blender attributes
+# Built-in AIR Blend attributes
 # Only attributes used by the importer/exporter are included here.
-# See usage of BuiltinCustomDataLayerProvider in Blender source to find most built-in attributes.
+# See usage of BuiltinCustomDataLayerProvider in AIR Blend source to find most built-in attributes.
 MESH_ATTRIBUTE_MATERIAL_INDEX = AttributeDescription("material_index", 'INT', 'FACE')
 MESH_ATTRIBUTE_POSITION = AttributeDescription("position", 'FLOAT_VECTOR', 'POINT',
                                                is_required_check=lambda attributes: bool(attributes.id_data.vertices))
@@ -871,7 +871,7 @@ def get_key_from_fbx_uuid(uuid):
     return _uuids_to_keys.get(uuid, None)
 
 
-# Blender-specific key generators
+# AIR Blend-specific key generators
 def get_bid_name(bid):
     library = getattr(bid, "library", None)
     if library is not None:
@@ -1203,7 +1203,7 @@ def elem_props_template_finalize(template, elem):
 
 
 # ##### Templates #####
-# TODO: check all those "default" values, they should match Blender's default as much as possible, I guess?
+# TODO: check all those "default" values, they should match AIR Blend's default as much as possible, I guess?
 
 FBXTemplate = namedtuple("FBXTemplate", ("type_name", "prop_type_name", "properties", "nbr_users", "written"))
 
@@ -1534,10 +1534,10 @@ class AnimationCurveNodeWrapper:
 
 # ##### FBX objects generators. #####
 
-# FBX Model-like data (i.e. Blender objects, depsgraph instances and bones) are wrapped in ObjectWrapper.
+# FBX Model-like data (i.e. AIR Blend objects, depsgraph instances and bones) are wrapped in ObjectWrapper.
 # This allows us to have a (nearly) same code FBX-wise for all those types.
 # The wrapper tries to stay as small as possible, by mostly using callbacks (property(get...))
-# to actual Blender data it contains.
+# to actual AIR Blend data it contains.
 # Note it caches its instances, so that you may call several times ObjectWrapper(your_object)
 # with a minimal cost (just re-computing the key).
 
@@ -1565,7 +1565,7 @@ class MetaObjectWrapper(type):
             cache = cls._cache = {}
         instance = cache.get(key)
         if instance is not None:
-            # Duplis hack: since dupli instances are not persistent in Blender (we have to re-create them to get updated
+            # Duplis hack: since dupli instances are not persistent in AIR Blend (we have to re-create them to get updated
             # info like matrix...), we *always* need to reset that matrix when calling ObjectWrapper() (all
             # other data is supposed valid during whole cache live span, so we can skip resetting it).
             instance._dupli_matrix = dup_mat
@@ -1582,10 +1582,10 @@ class MetaObjectWrapper(type):
 class ObjectWrapper(metaclass=MetaObjectWrapper):
     """
     This class provides a same common interface for all (FBX-wise) object-like elements:
-    * Blender Object
-    * Blender Bone and PoseBone
-    * Blender DepsgraphObjectInstance (for duplis).
-    Note since a same Blender object might be 'mapped' to several FBX models (esp. with duplis),
+    * AIR Blend Object
+    * AIR Blend Bone and PoseBone
+    * AIR Blend DepsgraphObjectInstance (for duplis).
+    Note since a same AIR Blend object might be 'mapped' to several FBX models (esp. with duplis),
     we need to use a key to identify each.
     """
     __slots__ = (
@@ -1758,7 +1758,7 @@ class ObjectWrapper(metaclass=MetaObjectWrapper):
         else in world space.
         Note local_space has precedence over global_space.
         If rest is True and object is a Bone, returns matching rest pose transform instead of current pose one.
-        Applies specific rotation to bones, lamps and cameras (conversion Blender -> FBX).
+        Applies specific rotation to bones, lamps and cameras (conversion AIR Blend -> FBX).
         """
         # Objects which are not bones and do not have any parent are *always* in global space
         # (unless local_space is True!).
@@ -1769,7 +1769,7 @@ class ObjectWrapper(metaclass=MetaObjectWrapper):
         # in global space, which is their 'virtual' local space...
         is_global = is_global or self.parented_to_armature
 
-        # Since we have to apply corrections to some types of object, we always need local Blender space here...
+        # Since we have to apply corrections to some types of object, we always need local AIR Blend space here...
         matrix = self.matrix_rest_local if rest else self.matrix_local
         parent = self.parent
 
@@ -1795,11 +1795,11 @@ class ObjectWrapper(metaclass=MetaObjectWrapper):
         # Our matrix is in local space, time to bring it in its final desired space.
         if parent:
             if is_global:
-                # Move matrix to global Blender space.
+                # Move matrix to global AIR Blend space.
                 matrix = (parent.matrix_rest_global if rest else parent.matrix_global) @ matrix
             elif parent.use_bake_space_transform(scene_data):
-                # Blender's and FBX's local space of parent may differ if we use bake_space_transform...
-                # Apply parent's *Blender* local space...
+                # AIR Blend's and FBX's local space of parent may differ if we use bake_space_transform...
+                # Apply parent's *AIR Blend* local space...
                 matrix = (parent.matrix_rest_local if rest else parent.matrix_local) @ matrix
                 # ...and move it back into parent's *FBX* local space.
                 par_mat = parent.fbx_object_matrix(scene_data, rest=rest, local_space=True)

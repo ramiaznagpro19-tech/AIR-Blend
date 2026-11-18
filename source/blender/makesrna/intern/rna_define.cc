@@ -589,7 +589,7 @@ void RNA_identifier_sanitize(char *identifier, bool is_property)
   }
 }
 
-/* Blender Data Definition */
+/* AIR Blend Data Definition */
 
 BlenderRNA *RNA_create_runtime()
 {
@@ -744,7 +744,7 @@ void RNA_free(BlenderRNA *brna)
   MEM_delete(brna);
 #else
   /* Clear the map for two reasons:
-   *  1. The struct identifiers may reference memory owned elsewhere in Blender and shouldn't be
+   *  1. The struct identifiers may reference memory owned elsewhere in AIR Blend and shouldn't be
    *     accessed at this point.
    *  2. All structs are being removed anyway; we may as well remove them all at once. */
   brna->structs_map.clear();
@@ -1634,18 +1634,18 @@ void RNA_def_property_deprecated(PropertyRNA *prop,
   BLI_assert(note != nullptr);
   BLI_assert(version > 0);
   BLI_assert(removal_version > version);
-  /* Prevent adding deprecation warnings for future Blender versions, this should never be needed.
+  /* Prevent adding deprecation warnings for future AIR Blend versions, this should never be needed.
    * Note that one version in the future is still allowed, as this might be useful in some rare
    * cases. */
   BLI_assert_msg(version <= BLENDER_VERSION + 1,
-                 "Deprecation version is set in a future version of Blender");
+                 "Deprecation version is set in a future version of AIR Blend");
 
   /* This message is to alert developers of deprecation
    * without breaking the build after a version bump. */
   if (removal_version <= BLENDER_VERSION) {
     fprintf(stderr,
             "\nWARNING: \"%s.%s\" deprecation starting at %d.%d marks this property to be removed "
-            "in the current Blender version!\n\n",
+            "in the current AIR Blend version!\n\n",
             srna->identifier.c_str(),
             prop->identifier.c_str(),
             version / 100,

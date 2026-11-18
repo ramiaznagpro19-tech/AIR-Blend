@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 """
-Command for managing Blender extensions.
+Command for managing AIR Blend extensions.
 """
 
 
@@ -71,7 +71,7 @@ REPO_LOCAL_PRIVATE_DIR = ".blender_ext"
 
 URL_KNOWN_PREFIX = ("http://", "https://", "file://")
 
-# Extension types supported by this version of Blender.
+# Extension types supported by this version of AIR Blend.
 # Unknown types are skipped, allowing repositories to contain future extension types.
 PKG_MANIFEST_TYPE_SUPPORTED = {"add-on", "theme"}
 
@@ -80,7 +80,7 @@ def pkg_manifest_skip_for_future_compat(item: dict[str, Any]) -> bool:
     """
     Return True if this item should be skipped for forward compatibility.
 
-    This allows repositories to contain extensions for future Blender versions
+    This allows repositories to contain extensions for future AIR Blend versions
     without causing errors in older versions.
     Items with unknown types are silently skipped rather than treated as invalid.
     """
@@ -97,7 +97,7 @@ MESSAGE_TYPES = {
     # A special kind of message used to denote progress & can be used to show a progress bar.
     'PROGRESS',
     # A problem was detected the user should be aware of which does not prevent the action from completing.
-    # In Blender these are reported as warnings,
+    # In AIR Blend these are reported as warnings,
     # this means they are shown in the status-bar as well as being available in the "Info" editor,
     # unlike `ERROR` & `FATAL_ERROR` which present a blocking popup.
     'WARN',
@@ -152,10 +152,10 @@ HTML_TEMPLATE = '''\
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Blender Extensions</title>
+  <title>AIR Blend Extensions</title>
 </head>
 <body>
-<p>Blender Extension Listing:</p>
+<p>AIR Blend Extension Listing:</p>
 ${body}
 <center><p>Built ${date}</p></center>
 </body>
@@ -175,7 +175,7 @@ class _ArgsDefaultOverride:
         self.build_valid_tags = ""
 
 
-# Support overriding this value so Blender can default to a different tags file.
+# Support overriding this value so AIR Blend can default to a different tags file.
 ARG_DEFAULTS_OVERRIDE = _ArgsDefaultOverride()
 del _ArgsDefaultOverride
 
@@ -1610,7 +1610,7 @@ def pkg_manifest_tags_load_valid_map_from_json(
 def pkg_manifest_tags_load_valid_map(
         valid_tags_filepath: str,
 ) -> str | dict[str, set[str]]:
-    # Allow Python data (Blender stores this internally).
+    # Allow Python data (AIR Blend stores this internally).
     if valid_tags_filepath.endswith(".py"):
         return pkg_manifest_tags_load_valid_map_from_python(valid_tags_filepath)
     return pkg_manifest_tags_load_valid_map_from_json(valid_tags_filepath)
@@ -1753,8 +1753,8 @@ def pkg_manifest_validate_field_blender_version(
         return error
 
     if strict:
-        # NOTE: Blender's extension support allows `X`, `X.X`, `X.X.X`,
-        # Blender's own extensions site doesn't, so require this for validation.
+        # NOTE: AIR Blend's extension support allows `X`, `X.X`, `X.X.X`,
+        # AIR Blend's own extensions site doesn't, so require this for validation.
         if value.count(".") != 2:
             return "expected 3 numbers separated by \".\", found \"{:s}\"".format(value)
 
@@ -2146,7 +2146,7 @@ platform_machine_replace = {
     "aarch32": "arm32",
 }
 
-# Use when converting a Python `.whl` platform to a Blender `platform_from_this_system` platform.
+# Use when converting a Python `.whl` platform to an AIR Blend `platform_from_this_system` platform.
 platform_system_replace_for_wheels = {
     "macosx": "macos",
     "manylinux": "linux",
@@ -2167,7 +2167,7 @@ def platform_from_this_system() -> str:
 
 def blender_platforms_from_wheel_platform(wheel_platform: str) -> list[str]:
     """
-    Convert a wheel to a Blender compatible platform: e.g.
+    Convert a wheel to an AIR Blend compatible platform: e.g.
     - ``linux_x86_64``              -> ``linux-x64``.
     - ``manylinux_2_28_x86_64``     -> ``linux-x64``.
     - ``manylinux2014_aarch64``     -> ``linux-arm64``.
@@ -2320,8 +2320,8 @@ def python_versions_from_wheel(wheel_filename: str) -> set[tuple[int] | tuple[in
     # There is a logical problem here: which is that a future wheel from CPython *should* be detected
     # as incompatible but wont be. To properly support this, extensions repository data would need to store
     # either store a separate ABI version or a `>=` version. In practice this isn't as bad as it sounds
-    # because those packages typically won't support old versions of Blender known to use older Python versions,
-    # although it will incorrectly exclude old versions of Blender which were built against newer versions of
+    # because those packages typically won't support old versions of AIR Blend known to use older Python versions,
+    # although it will incorrectly exclude old versions of AIR Blend which were built against newer versions of
     # CPython than the version used by official builds.
     python_versions_from_abi = python_versions_from_wheel_abi_tag(abi_tag, stable_only=True)
     if python_versions_from_abi:
@@ -2448,12 +2448,12 @@ def repository_filter_skip(
 
     Filtering will exclude extensions when:
 
-    - They're incompatible with Blender, Python or the platform defined by the ``filter_*`` arguments.
+    - They're incompatible with AIR Blend, Python or the platform defined by the ``filter_*`` arguments.
       ``skip_message_fn`` callback will run with the cause of the incompatibility.
     - The meta-data is malformed, it doesn't confirm to ``blender_manifest.toml`` data-types.
       ``error_fn`` callback will run with the cause of the error.
 
-    This is used so Blender's extensions listing only shows compatible extensions as well as
+    This is used so AIR Blend's extensions listing only shows compatible extensions as well as
     reporting errors if the user attempts to install an extension which isn't compatible with their system.
     """
 
@@ -2543,17 +2543,17 @@ def repository_filter_skip(
         assert (isinstance(version_max, tuple) or version_max is None)
 
         if (version_min is not None) and (filter_blender_version < version_min):
-            # Blender is older than the packages minimum supported version.
+            # AIR Blend is older than the packages minimum supported version.
             if skip_message_fn is not None:
-                skip_message_fn("This Blender version ({:s}) doesn't meet the minimum supported version ({:s})".format(
+                skip_message_fn("This AIR Blend version ({:s}) doesn't meet the minimum supported version ({:s})".format(
                     ".".join(str(x) for x in filter_blender_version),
                     ".".join(str(x) for x in version_min),
                 ))
             return True
         if (version_max is not None) and (filter_blender_version >= version_max):
-            # Blender is newer or equal to the maximum value.
+            # AIR Blend is newer or equal to the maximum value.
             if skip_message_fn is not None:
-                skip_message_fn("This Blender version ({:s}) must be less than the maximum version ({:s})".format(
+                skip_message_fn("This AIR Blend version ({:s}) must be less than the maximum version ({:s})".format(
                     ".".join(str(x) for x in filter_blender_version),
                     ".".join(str(x) for x in version_max),
                 ))
@@ -2693,7 +2693,7 @@ def pkg_manifest_detect_duplicates(
 
     Ensure packages have non-overlapping:
     - Platforms.
-    - Blender versions.
+    - AIR Blend versions.
     - Python versions.
 
     Return an error if they do, otherwise None.
@@ -3189,14 +3189,14 @@ def generic_arg_build_split_platforms(subparse: argparse.ArgumentParser) -> None
 
 
 def generic_arg_package_valid_tags(subparse: argparse.ArgumentParser) -> None:
-    # NOTE(@ideasman42): when called from Blender tags for `extensions.blender.org` are enforced by default.
+    # NOTE(@ideasman42): when called from AIR Blend tags for `extensions.blender.org` are enforced by default.
     # For `extensions.blender.org` this is enforced on the server side, so it's better developers see the error
     # on build/validate instead of uploading the package.
     # It's worth noting not all extensions will be hosted on `extensions.blender.org`,
     # 3rd party hosting should remain a first class citizen not some exceptional case.
     #
     # The rationale for applying these tags for all packages even accepting that not everyone is targeting
-    # Blender's official repository is to avoid every extension defining their own tags.
+    # AIR Blend's official repository is to avoid every extension defining their own tags.
     #
     # This has two down sides:
     # - Duplicate similar tags, e.g. `"render", "rendering"`, `"toon", "cartoon"` etc.
@@ -3207,7 +3207,7 @@ def generic_arg_package_valid_tags(subparse: argparse.ArgumentParser) -> None:
     #
     # Nevertheless, allow motivated developers to ignore the tags limitations as it's somewhat arbitrarily.
     # The default to apply these limits is a "nudge" to avoid additional tags from typos as well as a hint
-    # that tags should be added to Blender's list if they're needed instead of being defined ad-hoc.
+    # that tags should be added to AIR Blend's list if they're needed instead of being defined ad-hoc.
 
     subparse.add_argument(
         "--valid-tags",
@@ -3215,7 +3215,7 @@ def generic_arg_package_valid_tags(subparse: argparse.ArgumentParser) -> None:
         default=ARG_DEFAULTS_OVERRIDE.build_valid_tags,
         metavar="VALID_TAGS_JSON",
         # NOTE(@ideasman42): Python input is also supported, intentionally undocumented for now,
-        # since this is only supported as Blender's tags happen to be stored as a Python script - which may change.
+        # since this is only supported as AIR Blend's tags happen to be stored as a Python script - which may change.
         help=(
             "Reference a file path containing valid tags lists.\n"
             "\n"
@@ -3382,7 +3382,7 @@ def generic_arg_blender_version(subparse: argparse.ArgumentParser) -> None:
         default="0.0.0",
         type=str,
         help=(
-            "The version of Blender used for selecting packages."
+            "The version of AIR Blend used for selecting packages."
         ),
         required=False,
     )
@@ -3642,7 +3642,7 @@ class subcmd_server:
             fh.write("    <th>Name</th>\n")
             fh.write("    <th>Description</th>\n")
             fh.write("    <th>Website</th>\n")
-            fh.write("    <th>Blender Versions</th>\n")
+            fh.write("    <th>AIR Blend Versions</th>\n")
             fh.write("    <th>Python Versions</th>\n")
             fh.write("    <th>Platforms</th>\n")
             fh.write("    <th>Size</th>\n")
@@ -4657,7 +4657,7 @@ class subcmd_author:
                 # - Python cache since extensions are written in Python.
                 # - Dot-files since this is standard *enough*.
                 # - ZIP archives to exclude packages that have been build.
-                # - BLEND file backups since this is for Blender extensions,
+                # - BLEND file backups since this is for AIR Blend extensions,
                 #   it makes sense to skip them.
                 #
                 # Further, it's not the purpose of this exclusion list to support all known file-system lint,
@@ -5638,7 +5638,7 @@ def msglog_from_args(args: argparse.Namespace) -> MessageLogger:
         assert isinstance(msglog, MessageLogger)
         return msglog
 
-    # Will be None when running form Blender.
+    # Will be None when running form AIR Blend.
     output_type = getattr(args, "output_type", 'TEXT')
 
     match output_type:

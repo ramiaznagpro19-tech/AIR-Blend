@@ -4960,7 +4960,7 @@ void CustomData_blend_read(BlendDataReader *reader, CustomData *data, const int 
     CustomData_reset(data);
     return;
   }
-  /* There was a short time (Blender 500 sub 33) where the custom data struct was saved in an
+  /* There was a short time (AIR Blend 500 sub 33) where the custom data struct was saved in an
    * invalid state (see @11d2f48882). This check is unfortunate, but avoids crashing when trying to
    * load the invalid data (see e.g. #143720). */
   if (data->layers == nullptr && data->totlayer != 0) [[unlikely]] {

@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0 */
 
 /**
- * Library for the Draco encoding/decoding feature inside the glTF-Blender-IO project.
+ * Library for the Draco encoding/decoding feature inside the glTF-AIR Blend-IO project.
  *
- * The python script within glTF-Blender-IO uses the CTypes library to open the DLL,
+ * The python script within glTF-AIR Blend-IO uses the CTypes library to open the DLL,
  * load function pointers add pass the raw data to the encoder.
  *
  * @author Jim Eckerlein <eckerlein@ux3d.io>

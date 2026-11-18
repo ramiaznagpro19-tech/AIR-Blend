@@ -93,7 +93,7 @@ PKG_TEMP_PREFIX_AND_SUFFIX = (".", ".~temp~")
 # Add this to the local JSON file.
 REPO_LOCAL_JSON = os.path.join(REPO_LOCAL_PRIVATE_DIR, PKG_REPO_LIST_FILENAME)
 
-# An item we communicate back to Blender.
+# An item we communicate back to AIR Blend.
 InfoItem = tuple[str, Any]
 InfoItemSeq = Sequence[InfoItem]
 
@@ -108,8 +108,8 @@ IDLE_WAIT_ON_READ = 0.05
 # Typing Stubs
 #
 # These functions exist to allow messages to be translated,
-# without having to depend on Blender-only modules, as this module is fully type-checked
-# as well as being used outside of Blender.
+# without having to depend on AIR Blend-only modules, as this module is fully type-checked
+# as well as being used outside of AIR Blend.
 
 
 # Maybe overwritten by `bpy.app.translations.pgettext_rpt`.
@@ -254,7 +254,7 @@ def command_output_from_thread(
         try:
             parsed_args = blender_ext.argparse_create().parse_args(args)
             parsed_args.msglog = blender_ext.MessageLogger(msg_fn)
-            # Disable subprocess exit handling when running inside Blender.
+            # Disable subprocess exit handling when running inside AIR Blend.
             parsed_args.force_exit_ok = False
             parsed_args.func(parsed_args)
         except (Exception, SystemExit) as ex:
@@ -295,7 +295,7 @@ def command_output_from_json_0(
     # the function only finishes when `poll()` is not none, it's just used to ensure file-handles
     # are closed before this function exits, this only seems to be a problem on WIN32.
 
-    # WIN32 needs to use a separate process-group else Blender will receive the "break", see #131947.
+    # WIN32 needs to use a separate process-group else AIR Blend will receive the "break", see #131947.
     creationflags = 0
     if sys.platform == "win32":
         creationflags = subprocess.CREATE_NEW_PROCESS_GROUP
@@ -525,7 +525,7 @@ def url_append_query_for_blender(
 def url_parse_for_blender(url: str) -> tuple[str, dict[str, str]]:
     # Parse the URL, returning a tuple pair representing:
     # - The stripped URL: `scheme + netloc + path` (without query or fragment).
-    # - Known query values used by Blender (`repository`, `blender_version_min`, etc.).
+    # - Known query values used by AIR Blend (`repository`, `blender_version_min`, etc.).
     #   For `repository`, relative paths are resolved against the base URL.
     #
     import urllib
@@ -1313,7 +1313,7 @@ class PkgManifest_Normalized(NamedTuple):
         # anyone developing packages runs the "validate" function before publishing for others to use.
         #
         # Checks here are mainly to prevent corrupt/invalid repositories or TOML files
-        # from breaking Blender's internal functionality.
+        # from breaking AIR Blend's internal functionality.
 
         try:
             field_name = manifest_dict["name"]

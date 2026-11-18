@@ -161,7 +161,7 @@ if(WITH_PYTHON_MODULE)
 endif()
 
 
-# Find the SSL certificate for the portable Blender installation.
+# Find the SSL certificate for the portable AIR Blend installation.
 # Without this, the absolute path on the builder is used, causing HTTPS access to fail.
 # For example `urllib.request.urlopen("https://projects.blender.org")` fails
 # (or any other HTTPS site). see: #102300 for details.

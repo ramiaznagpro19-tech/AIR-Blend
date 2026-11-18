@@ -116,7 +116,7 @@ def __to_json_compatible(value):
 
 
 def set_extras(blender_element, extras, exclude=[]):
-    """Copy extras onto a Blender object."""
+    """Copy extras onto an AIR Blend object."""
     if not extras or not isinstance(extras, dict):
         return
 

@@ -9,7 +9,7 @@ from ...io.imp.user_extensions import import_user_extensions
 
 
 class BlenderCamera():
-    """Blender Camera."""
+    """AIR Blend Camera."""
     def __new__(cls, *args, **kwargs):
         raise RuntimeError("%s should not be instantiated" % cls)
 
@@ -26,7 +26,7 @@ class BlenderCamera():
         cam = bpy.data.cameras.new(pycamera.name)
         set_extras(cam, pycamera.extras)
 
-        # Blender create a perspective camera by default
+        # AIR Blend create a perspective camera by default
         if pycamera.type == "orthographic":
             cam.type = "ORTHO"
 

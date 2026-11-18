@@ -55,7 +55,7 @@ template<> struct is_layout_compatible<pxr::GfVec3f, float3> : std::true_type {}
 template<typename T>
 concept IsSmall = sizeof(T) <= 16;
 
-/* Conversion utilities to convert a Blender type to an USD type. */
+/* Conversion utilities to convert an AIR Blend type to an USD type. */
 template<typename From, typename To>
   requires(IsSmall<From>)
 inline To convert_value(const From value)
@@ -104,7 +104,7 @@ template<> inline pxr::GfMatrix4d convert_value(const float4x4 &value)
   pxr::GfMatrix4d result;
   for (int i = 0; i < 4; ++i) {
     for (int j = 0; j < 4; ++j) {
-      /* USD is row-major, Blender is column-major. */
+      /* USD is row-major, AIR Blend is column-major. */
       result[j][i] = value[i][j];
     }
   }
@@ -137,7 +137,7 @@ template<> inline float4x4 convert_value(const pxr::GfMatrix4d &value)
   float4x4 result;
   for (int i = 0; i < 4; ++i) {
     for (int j = 0; j < 4; ++j) {
-      /* USD is row-major, Blender is column-major. */
+      /* USD is row-major, AIR Blend is column-major. */
       result[j][i] = float(value[i][j]);
     }
   }
@@ -195,7 +195,7 @@ void set_attribute(const pxr::UsdAttribute &attr,
   value_writer.SetAttribute(attr, &val, time);
 }
 
-/* Copy a typed Blender attribute array into a typed USD primvar attribute. */
+/* Copy a typed AIR Blend attribute array into a typed USD primvar attribute. */
 template<typename BlenderT, typename USDT>
 void copy_blender_buffer_to_primvar(const VArray<BlenderT> &buffer,
                                     const pxr::UsdTimeCode time,

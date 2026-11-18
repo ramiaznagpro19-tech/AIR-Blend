@@ -274,7 +274,7 @@ string CUDADevice::compile_kernel(const string &common_cflags, const char *name,
       minor = 9;
     }
   }
-  /* Attempt to use kernel provided with Blender. */
+  /* Attempt to use kernel provided with AIR Blend. */
   else if (!use_adaptive_compilation()) {
     /* Binaries within a major version are compatible, so find the closest one. */
     int cubin_minor = minor;
@@ -899,7 +899,7 @@ void CUDADevice::image_alloc(device_image &mem)
     texDesc.addressMode[2] = address_mode;
     texDesc.filterMode = filter_mode;
     /* CUDA's flag CU_TRSF_READ_AS_INTEGER is intentionally not used and it is
-     * significant, see above an explanation about how Blender treat images. */
+     * significant, see above an explanation about how AIR Blend treat images. */
     texDesc.flags = CU_TRSF_NORMALIZED_COORDINATES;
 
     thread_scoped_lock lock(device_mem_map_mutex);

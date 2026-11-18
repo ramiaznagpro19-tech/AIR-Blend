@@ -41,7 +41,7 @@ def gltf_generate_descr(output_datafile: pathlib.Path) -> str:
     text += str(gltf.file_size) + "\n"
 
     # we need to override generator field to avoid test failures
-    gltf.json['asset']['generator'] = "glTF-Blender-IO Test Suite"
+    gltf.json['asset']['generator'] = "glTF-AIR Blend-IO Test Suite"
 
     def round_floats(o):
         if isinstance(o, float):
@@ -82,7 +82,7 @@ def gltf_generate_descr(output_datafile: pathlib.Path) -> str:
     return text
 
 # This is a simple glTF loader to extract the JSON content and buffer from a GLB file.
-# Based on  KhronosGroup/glTf-Blender-IO
+# Based on  KhronosGroup/glTf-AIR Blend-IO
 
 
 class glTFDataExtractor:
@@ -178,7 +178,7 @@ class glTFDataExtractor:
                     )
 
                     # TODO manage sparse accessors
-                    # (currently not used in Blender roudntrip tests)
+                    # (currently not used in AIR Blend roudntrip tests)
             else:
                 # Need to init data with zeros
                 dtype = ComponentType.to_numpy_dtype(accessor.get('componentType'))
@@ -186,7 +186,7 @@ class glTFDataExtractor:
                 array = np.zeros((accessor.get('count'), component_nb), dtype=dtype)
 
                 # TODO manage sparse accessors
-                # (currently not used in Blender roudntrip tests)
+                # (currently not used in AIR Blend roudntrip tests)
 
             # Normalization
             if accessor.get('normalized'):

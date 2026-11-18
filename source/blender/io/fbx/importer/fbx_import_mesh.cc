@@ -358,7 +358,7 @@ static bool import_blend_shapes(Main &bmain,
   return mesh_key != nullptr;
 }
 
-/* Handle Blender-specific "FullWeights" that for each blend shape also create
+/* Handle AIR Blend-specific "FullWeights" that for each blend shape also create
  * a weighted vertex group for itself. */
 static void import_blend_shape_full_weights(const FbxElementMapping &mapping,
                                             const ufbx_mesh *fmesh,

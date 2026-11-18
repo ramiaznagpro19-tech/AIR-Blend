@@ -7,7 +7,7 @@
 /** \file
  * \ingroup bke
  *
- * Resizable Icons for Blender
+ * Resizable Icons for AIR Blend
  *
  * There is some thread safety for this API but it is rather weak. Registering or unregistering
  * icons is thread safe, changing data of icons from multiple threads is not. Practically this

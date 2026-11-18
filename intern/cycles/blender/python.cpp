@@ -57,7 +57,7 @@ PyObject *pyunicode_from_string(const char *str)
   return PyUnicode_DecodeUTF8(str, strlen(str), "ignore");
 }
 
-/* Synchronize debug flags from a given Blender scene.
+/* Synchronize debug flags from a given AIR Blend scene.
  * Return truth when device list needs invalidation.
  */
 void debug_flags_sync_from_scene(blender::Scene &b_scene)
@@ -250,7 +250,7 @@ static PyObject *render_func(PyObject * /*self*/, PyObject *args)
   blender::Depsgraph *b_depsgraph = static_cast<blender::Depsgraph *>(
       PyLong_AsVoidPtr(pydepsgraph));
 
-  /* Allow Blender to execute other Python scripts. */
+  /* Allow AIR Blend to execute other Python scripts. */
   Py_BEGIN_ALLOW_THREADS;
   session->render(*b_depsgraph);
   Py_END_ALLOW_THREADS;
@@ -268,7 +268,7 @@ static PyObject *render_frame_finish_func(PyObject * /*self*/, PyObject *args)
 
   BlenderSession *session = (BlenderSession *)PyLong_AsVoidPtr(pysession);
 
-  /* Allow Blender to execute other Python scripts. */
+  /* Allow AIR Blend to execute other Python scripts. */
   Py_BEGIN_ALLOW_THREADS;
   session->render_frame_finish();
   Py_END_ALLOW_THREADS;
@@ -944,7 +944,7 @@ static PyMethodDef methods[] = {
 static struct PyModuleDef module = {
     /*m_base*/ PyModuleDef_HEAD_INIT,
     /*m_name*/ "_cycles",
-    /*m_doc*/ "Blender cycles render integration",
+    /*m_doc*/ "AIR Blend cycles render integration",
     /*m_size*/ -1,
     /*m_methods*/ methods,
     /*m_slots*/ nullptr,

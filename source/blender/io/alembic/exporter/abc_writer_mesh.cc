@@ -453,7 +453,7 @@ void ABCGenericMeshWriter::write_arb_geo_params(Mesh *mesh,
   }
 
   attributes.foreach_attribute([&](const bke::AttributeIter &iter) {
-    /* Skip "internal" Blender properties and attributes dealt with elsewhere.
+    /* Skip "internal" AIR Blend properties and attributes dealt with elsewhere.
      * Skip edge domain because Alembic doesn't have a good conversion for them. */
     if (iter.name[0] == '.' || bke::attribute_name_is_anonymous(iter.name) ||
         iter.domain == bke::AttrDomain::Edge ||

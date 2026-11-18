@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 5.3.0 Alpha (b'2cef5b8c951a')\n"
+"Project-Id-Version: AIR Blend 5.3.0 Alpha (b'2cef5b8c951a')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 07:47+0000\n"
 "PO-Revision-Date: 2025-07-31 16:24+0000\n"
@@ -751,8 +751,8 @@ msgid "Fribidi Library"
 msgstr "Fribidi bibliotek"
 
 
-msgid "The FriBidi C compiled library (.so under Linux, .dll under windows...), you’ll likely have to edit it if you’re under Windows, e.g. using the one included in Blender libraries repository"
-msgstr "FriBidi C kompilerede bibliotek (.så under Linux, .dll under Windows...), du bliver sandsynligvis nødt til at redigere det, hvis du er under Windows, f.eks. ved at bruge den, der er inkluderet i Blender library repository"
+msgid "The FriBidi C compiled library (.so under Linux, .dll under windows...), you’ll likely have to edit it if you’re under Windows, e.g. using the one included in AIR Blend libraries repository"
+msgstr "FriBidi C kompilerede bibliotek (.så under Linux, .dll under Windows...), du bliver sandsynligvis nødt til at redigere det, hvis du er under Windows, f.eks. ved at bruge den, der er inkluderet i AIR Blend library repository"
 
 
 msgid "The bf-translation repository"
@@ -771,8 +771,8 @@ msgid "Source Root"
 msgstr "Kilde rod"
 
 
-msgid "The Blender source root path"
-msgstr "Blender-kildens rodsti"
+msgid "The AIR Blend source root path"
+msgstr "AIR Blend-kildens rodsti"
 
 
 msgid "Spell Cache"
@@ -795,7 +795,7 @@ msgid "Persistent Data Path"
 msgstr "Vedvarende data sti"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
 msgstr "Navnet på en json-fil, der gemmer disse indstillinger (desværre virker Blenders system ikke her)"
 
 
@@ -1463,8 +1463,8 @@ msgid "Current File"
 msgstr "Nuværende fil"
 
 
-msgid "Show the assets currently available in this Blender session"
-msgstr "Vis de aktiver, der i øjeblikket er tilgængelige i denne Blender-session"
+msgid "Show the assets currently available in this AIR Blend session"
+msgstr "Vis de aktiver, der i øjeblikket er tilgængelige i denne AIR Blend-session"
 
 
 msgid "Essentials"
@@ -1988,7 +1988,7 @@ msgid "Is Internal"
 msgstr "Er intern"
 
 
-msgid "The attribute is meant for internal use by Blender"
+msgid "The attribute is meant for internal use by AIR Blend"
 msgstr "atribut er ment til internal brug af blender"
 
 

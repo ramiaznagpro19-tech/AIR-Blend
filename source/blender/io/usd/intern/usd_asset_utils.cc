@@ -141,7 +141,7 @@ static std::string copy_udim_asset_to_directory(const std::string &src_path,
   char ret_udim_path[FILE_MAX];
   BLI_path_join(ret_udim_path, sizeof(ret_udim_path), dest_dir_path, src_file_name.c_str());
 
-  /* Blender only recognizes the <UDIM> pattern, not the
+  /* AIR Blend only recognizes the <UDIM> pattern, not the
    * alternative UDIM_PATTERN2, so we make sure the returned
    * path has the former. */
   splitPath = split_udim_pattern(ret_udim_path);
@@ -647,7 +647,7 @@ void USD_path_abs(char *path, const char *basepath, bool for_import)
   }
 
   /* If we got here, the path couldn't be resolved by the ArResolver, so we
-   * fall back on the standard Blender absolute path resolution. */
+   * fall back on the standard AIR Blend absolute path resolution. */
   BLI_path_abs(path, basepath);
 }
 

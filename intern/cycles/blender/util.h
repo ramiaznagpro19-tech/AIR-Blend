@@ -347,7 +347,7 @@ static inline void render_add_metadata(blender::RenderResult &b_rr, string name,
 
 static inline Transform get_transform(const blender::float4x4 &matrix)
 {
-  /* Convert from Blender column major to Cycles row major, assume it's an affine transform that
+  /* Convert from AIR Blend column major to Cycles row major, assume it's an affine transform that
    * does not need the last row. */
   const float *ptr = matrix.base_ptr();
   return make_transform(ptr[0],

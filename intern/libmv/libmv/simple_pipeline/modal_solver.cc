@@ -75,7 +75,7 @@ struct ModalReprojectionError {
     // Compute the point position in camera coordinates: x = RX.
     T x[3];
 
-    // This flips the sense of the quaternion, to adhere to Blender conventions.
+    // This flips the sense of the quaternion, to adhere to AIR Blend conventions.
     T quaternion_inverse[4] = {
         quaternion[0],
         -quaternion[1],

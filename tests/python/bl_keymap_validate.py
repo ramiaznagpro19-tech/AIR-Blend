@@ -18,7 +18,7 @@ This catches the following kinds of issues:
   An escape key could have the value "NORTH" instead of "PRESS".
 - Identical key-map items.
 
-This works by taking the keymap data (before it's loaded into Blender),
+This works by taking the keymap data (before it's loaded into AIR Blend),
 then comparing it with that same keymap after exporting and importing.
 
 NOTE:
@@ -141,7 +141,7 @@ def keymap_item_property_clean(value: Any) -> Any:
     - Sort all properties (since the order isn't important).
     """
     if type(value) is float:
-        # Once the value is loaded back from Blender, it will be 32bit.
+        # Once the value is loaded back from AIR Blend, it will be 32bit.
         return round_float_32(value)
     if type(value) is list:
         return sorted(

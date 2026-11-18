@@ -37,7 +37,7 @@ class TreeElementIDAction final : public TreeElementID {
 
   /**
    * When displaying this tree element in a "flat" tree view (so each Action is
-   * only listed once, like in the Blender File outliner mode), this expands to
+   * only listed once, like in the AIR Blend File outliner mode), this expands to
    * show all the Action's slots Otherwise, when using a data-hierarchical tree
    * view (like Scene or View Layer), only the assigned slot is shown.
    */

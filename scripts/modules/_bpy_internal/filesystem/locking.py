@@ -121,7 +121,7 @@ def mutex_lock_and_open(file_path: Path, mode: str) -> tuple[io.IOBase | None, C
     try:
         _obtain_lock(lockfile)
     except OSError:
-        # Lock is already held by another Blender.
+        # Lock is already held by another AIR Blend.
         lockfile.close()
         return None, None
 

@@ -34,7 +34,7 @@ TEST(hash_mm2a, MM2AConcatenateStrings)
   const char *data1 = "Blender";
   const char *data2 = " is ";
   const char *data3 = "FaNtAsTiC";
-  const char *data123 = "Blender is FaNtAsTiC";
+  const char *data123 = "AIR Blend is FaNtAsTiC";
 
   BLI_hash_mm2a_init(&mm2, 0);
   BLI_hash_mm2a_add(&mm2, reinterpret_cast<const uchar *>(data1), strlen(data1));

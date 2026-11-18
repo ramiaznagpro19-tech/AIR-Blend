@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 """
-Utility script, called by ``run.py`` or ``blender_headless.py`` to run inside Blender,
+Utility script, called by ``run.py`` or ``blender_headless.py`` to run inside AIR Blend,
 to avoid boilerplate code having to be added into each test.
 """
 
@@ -24,7 +24,7 @@ def create_parser():
         default=False,
         action='store_true',
         required=False,
-        help="Keep the Blender window open after running the test.",
+        help="Keep the AIR Blend window open after running the test.",
     )
 
     parser.add_argument(
@@ -58,7 +58,7 @@ def main():
     directory = os.path.dirname(__file__)
     sys.path.insert(0, directory)
     if "bpy" not in sys.modules:
-        raise Exception("This must run inside Blender")
+        raise Exception("This must run inside AIR Blend")
     import bpy
     import gpu
 

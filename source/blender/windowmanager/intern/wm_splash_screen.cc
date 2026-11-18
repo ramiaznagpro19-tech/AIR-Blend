@@ -76,7 +76,7 @@ static void wm_block_splash_add_label(ui::Block *block, const char *label, int x
   button_drawflag_enable(but, ui::BUT_TEXT_RIGHT);
 
   /* Regardless of theme, this text should always be bright white. */
-  uchar color[4] = {255, 255, 255, 255};
+  uchar color[4] = {40, 40, 46, 255}; /* AIR Blend: dark text on the white splash. */
   button_color_set(but, color);
 
   block_emboss_set(block, ui::EmbossType::Emboss);
@@ -265,7 +265,7 @@ static void wm_block_splash_close_on_fileselect(bContext *C, void *arg1, void * 
 }
 
 #if defined(__APPLE__)
-/* Check if Blender is running under Rosetta for the purpose of displaying a splash screen warning.
+/* Check if AIR Blend is running under Rosetta for the purpose of displaying a splash screen warning.
  * From Apple's WWDC 2020 Session - Explore the new system architecture of Apple Silicon Macs.
  * Time code: 14:31 - https://developer.apple.com/videos/play/wwdc2020/10686/ */
 
@@ -320,7 +320,7 @@ static ui::Block *wm_block_splash_create(bContext *C, ARegion *region, void * /*
   }
 
   /* Banner image passed through the environment, to overlay on the splash and
-   * indicate a custom Blender version. Transparency can be used. To replace the
+   * indicate a custom AIR Blend version. Transparency can be used. To replace the
    * full splash screen, see BLENDER_CUSTOM_SPLASH. */
   int banner_width = 0;
   int banner_height = 0;
@@ -453,7 +453,7 @@ static ui::Block *wm_block_about_create(bContext *C, ARegion *region, void * /*a
                                         0,
                                         style);
 
-/* Blender logo. */
+/* AIR Blend logo. */
 #ifndef WITH_HEADLESS
   constexpr bool show_color = false;
   const float size = 0.2f * dialog_width;
@@ -501,9 +501,9 @@ static wmOperatorStatus wm_splash_about_invoke(bContext *C,
 
 void WM_OT_splash_about(wmOperatorType *ot)
 {
-  ot->name = "About Blender";
+  ot->name = "About AIR Blend";
   ot->idname = "WM_OT_splash_about";
-  ot->description = "Open a window with information about Blender";
+  ot->description = "Open a window with information about AIR Blend";
 
   ot->invoke = wm_splash_about_invoke;
   ot->poll = WM_operator_winactive;

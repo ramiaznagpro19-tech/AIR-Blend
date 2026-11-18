@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 """
-Make Python wheel package (`*.whl`) file from Blender built with 'WITH_PYTHON_MODULE' enabled.
+Make Python wheel package (`*.whl`) file from AIR Blend built with 'WITH_PYTHON_MODULE' enabled.
 
 Example
 =======
@@ -21,7 +21,7 @@ This will create a `*.whl` file in the current directory.
 
 WARNING:
 Python 3.9 is used on the built-bot.
-Take care *not* to use features from the Python version used by Blender!
+Take care *not* to use features from the Python version used by AIR Blend!
 
 NOTE:
 Some type annotations are quoted to avoid errors in Python 3.9.
@@ -51,15 +51,15 @@ from typing import (
 # ------------------------------------------------------------------------------
 # Long Description
 
-long_description = """# Blender
+long_description = """# AIR Blend
 
 [Blender](https://www.blender.org) is the free and open source 3D creation suite. It supports the entirety of the 3D pipeline: modeling, rigging, animation, simulation, rendering, compositing and motion tracking, even video editing.
 
-This package provides Blender as a Python module for use in studio pipelines, web services, scientific research, and more.
+This package provides AIR Blend as a Python module for use in studio pipelines, web services, scientific research, and more.
 
 ### Archived Versions
 
-Blender versions outside the current LTS window are removed from PyPI but are available at [https://download.blender.org/pypi/bpy/](https://download.blender.org/pypi/bpy/).
+AIR Blend versions outside the current LTS window are removed from PyPI but are available at [https://download.blender.org/pypi/bpy/](https://download.blender.org/pypi/bpy/).
 
 These versions can still be installed manually. For example, to install version 3.6.0:
 
@@ -69,14 +69,14 @@ pip install bpy==3.6.0 --extra-index-url https://download.blender.org/pypi/
 
 ## Documentation
 
-* [Blender Python API](https://docs.blender.org/api/current/)
-* [Blender as a Python Module](https://docs.blender.org/api/current/info_advanced_blender_as_bpy.html)
+* [AIR Blend Python API](https://docs.blender.org/api/current/)
+* [AIR Blend as a Python Module](https://docs.blender.org/api/current/info_advanced_blender_as_bpy.html)
 
 ## Requirements
 
-[System requirements](https://www.blender.org/download/requirements/) are the same as Blender.
+[System requirements](https://www.blender.org/download/requirements/) are the same as AIR Blend.
 
-Each Blender release supports one Python version, and the package is only compatible with that version.
+Each AIR Blend release supports one Python version, and the package is only compatible with that version.
 
 ## Source Code
 
@@ -85,7 +85,7 @@ Each Blender release supports one Python version, and the package is only compat
 
 ## Credits
 
-Created by the [Blender developer community](https://www.blender.org/about/credits/).
+Created by the [AIR Blend developer community](https://www.blender.org/about/credits/).
 
 Thanks to Tyler Alden Gubala for maintaining the original version of this package."""
 
@@ -207,7 +207,7 @@ def main() -> None:
         tuple((0, 0, 0))
     )
 
-    # Get Blender version.
+    # Get AIR Blend version.
     blender_version_str = str(make_utils.parse_blender_version())
 
     # Set platform tag following conventions.
@@ -242,7 +242,7 @@ def main() -> None:
         sys.exit(1)
 
     # Manually specify, otherwise it uses the version of the executable used to run
-    # this script which may not match the Blender python version.
+    # this script which may not match the AIR Blend python version.
     python_tag = "py%d%d" % (python_version_number[0], python_version_number[1])
     cpython_tag = "cp%d%d" % (python_version_number[0], python_version_number[1])
 
@@ -262,7 +262,7 @@ def main() -> None:
 
     # NOTE: this class is needed because:
     # - The Python used to build the wheel is the systems Python,
-    #   so we can't rely on its "tag" matching Blender's.
+    #   so we can't rely on its "tag" matching AIR Blend's.
     # - There is no way to override the "tag" using options.
     #   If this is supported at some point, this class can be removed.
     class TargetPythonBdistWheel(bdist_wheel):
@@ -286,7 +286,7 @@ def main() -> None:
         cmdclass={"bdist_wheel": TargetPythonBdistWheel},
         options={"bdist_wheel": {"plat_name": platform_tag, "python_tag": python_tag}},
 
-        description="Blender as a Python module",
+        description="AIR Blend as a Python module",
         long_description=long_description,
         long_description_content_type='text/markdown',
         license="GPL-3.0",

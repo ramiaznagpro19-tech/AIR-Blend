@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 5.3.0 Alpha (b'2cef5b8c951a')\n"
+"Project-Id-Version: AIR Blend 5.3.0 Alpha (b'2cef5b8c951a')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 07:47+0000\n"
 "PO-Revision-Date: 2026-03-19 19:12+0000\n"
@@ -9527,8 +9527,8 @@ msgid "Restore Key Map(s)"
 msgstr "Billentyű-hozzárendelések visszaállítása"
 
 
-msgid "Load and apply a Blender XML theme file"
-msgstr "Egy Blender XML témafájl betöltése és alkalmazása"
+msgid "Load and apply an AIR Blend XML theme file"
+msgstr "Egy AIR Blend XML témafájl betöltése és alkalmazása"
 
 
 msgctxt "Operator"
@@ -12589,8 +12589,8 @@ msgid "Include all scene frames"
 msgstr "Minden jelenet képkocka bevonása"
 
 
-msgid "Open a Blender file"
-msgstr "Blender fájl megnyitása"
+msgid "Open an AIR Blend file"
+msgstr "AIR Blend fájl megnyitása"
 
 
 msgid "Load UI"
@@ -12620,11 +12620,11 @@ msgstr "PLY importálása"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "Kilépés a Blenderből"
 
 
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "Kilépés a Blenderből"
 
 
@@ -12691,12 +12691,12 @@ msgstr "Indítófájl újratöltése"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
-msgstr "Blender fájl mentése"
+msgid "Save AIR Blend File"
+msgstr "AIR Blend fájl mentése"
 
 
-msgid "Save the current Blender file"
-msgstr "Az aktuális Blender fájl mentése"
+msgid "Save the current AIR Blend file"
+msgstr "Az aktuális AIR Blend fájl mentése"
 
 
 msgctxt "Operator"
@@ -14199,8 +14199,8 @@ msgid "Channels of the image to draw"
 msgstr "A kép rajzolható csatornái"
 
 
-msgid "Blender File"
-msgstr "Blender fájl"
+msgid "AIR Blend File"
+msgstr "AIR Blend fájl"
 
 
 msgid "Show Object Children"
@@ -16543,8 +16543,8 @@ msgid "Scene has no camera"
 msgstr "Nincs kamera a jelenetben"
 
 
-msgid "Blender Render"
-msgstr "Blender Render"
+msgid "AIR Blend Render"
+msgstr "AIR Blend Render"
 
 
 msgid "GPencil Interpolation: "

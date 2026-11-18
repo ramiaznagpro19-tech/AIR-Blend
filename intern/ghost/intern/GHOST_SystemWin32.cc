@@ -378,7 +378,7 @@ GHOST_ContextD3D *GHOST_SystemWin32::createOffscreenContextD3D()
   /* NOTE: the `gpu_settings` could be passed in here, as it is with similar functions. */
   const GHOST_ContextParams context_params_offscreen = GHOST_CONTEXT_PARAMS_NONE;
   HWND wnd = CreateWindowA("STATIC",
-                           "Blender XR",
+                           "AIR Blend XR",
                            WS_OVERLAPPEDWINDOW | WS_CLIPSIBLINGS | WS_CLIPCHILDREN,
                            0,
                            0,
@@ -2020,7 +2020,7 @@ LRESULT WINAPI GHOST_SystemWin32::s_wndProc(HWND hwnd, uint msg, WPARAM wParam, 
           /* Mouse Tracking is now off. TrackMouseEvent restarts in MouseMove. */
           window->mouse_present_ = false;
 
-          /* Auto-focus only occurs within Blender windows, not with _other_ applications. We are
+          /* Auto-focus only occurs within AIR Blend windows, not with _other_ applications. We are
            * notified of change of focus from our console, but it returns null from GetFocus. */
           HWND old_hwnd = ::GetFocus();
           if (old_hwnd && hwnd != old_hwnd) {

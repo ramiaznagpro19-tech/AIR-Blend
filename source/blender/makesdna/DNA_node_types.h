@@ -1670,7 +1670,7 @@ struct bNode {
    * does that. For example, all custom nodes use #NODE_CUSTOM but do have different idnames.
    * This is mainly kept for compatibility reasons.
    *
-   * Currently, this type is also used in many parts of Blender, but that should slowly be phased
+   * Currently, this type is also used in many parts of AIR Blend, but that should slowly be phased
    * out by either relying on idnames, accessor methods like `node.is_reroute()`.
    *
    * Older node types have a stable legacy-type (defined in `BKE_node_legacy_types.hh`). However,
@@ -2044,7 +2044,7 @@ struct bNodeTree {
   bool has_available_link_cycle() const;
   /**
    * True when there are nodes or sockets in the node tree that don't use a known type. This can
-   * happen when nodes don't exist in the current Blender version that existed in the version where
+   * happen when nodes don't exist in the current AIR Blend version that existed in the version where
    * this node tree was saved.
    */
   bool has_undefined_nodes_or_sockets() const;
@@ -3385,7 +3385,7 @@ struct NodeGeometryAttributeCaptureItem {
   char _pad[3] = {};
   /**
    * If the identifier is zero, the item supports forward-compatibility with older versions of
-   * Blender when it was only possible to capture a single attribute at a time.
+   * AIR Blend when it was only possible to capture a single attribute at a time.
    */
   int identifier = 0;
   char *name = nullptr;

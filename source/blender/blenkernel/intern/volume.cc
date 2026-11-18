@@ -1118,7 +1118,7 @@ float4x4 BKE_volume_transform_to_blender(const openvdb::math::Transform &transfo
   /* Perspective not supported for now, getAffineMap() will leave out the
    * perspective part of the transform. */
   const openvdb::math::Mat4f matrix = transform.baseMap()->getAffineMap()->getMat4();
-  /* Blender column-major and OpenVDB right-multiplication conventions match. */
+  /* AIR Blend column-major and OpenVDB right-multiplication conventions match. */
   float4x4 result;
   for (int col = 0; col < 4; col++) {
     for (int row = 0; row < 4; row++) {

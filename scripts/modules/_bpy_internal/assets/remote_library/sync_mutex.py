@@ -24,15 +24,15 @@ _registered_atexit = False
 def mutex_lock(local_library_path: Path) -> bool:
     """Lock the library for syncing.
 
-    Create a file on disk that signals to other Blender instances that this
-    remote asset library is being synced by this Blender.
+    Create a file on disk that signals to other AIR Blend instances that this
+    remote asset library is being synced by this AIR Blend.
 
     This uses approaches from:
         - https://www.pythontutorials.net/blog/make-sure-only-a-single-instance-of-a-program-is-running/
         - https://yakking.branchable.com/posts/procrun-2-pidfiles/
 
     :returns: true if the lock was created successfully, false if some other
-        Blender already locked this library.
+        AIR Blend already locked this library.
     """
     global _registered_atexit
 
@@ -83,7 +83,7 @@ def mutex_lock(local_library_path: Path) -> bool:
     try:
         _obtain_lock(lockfile)
     except OSError:
-        # Lock is already held by another Blender.
+        # Lock is already held by another AIR Blend.
         lockfile.close()
         return False
 

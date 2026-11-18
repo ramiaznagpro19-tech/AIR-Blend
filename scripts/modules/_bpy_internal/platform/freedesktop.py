@@ -6,7 +6,7 @@
 # Currently `xdg-icon-resource` doesn't support SVG's, so we would need to generate PNG's.
 # Or wait until SVG's are supported, see: https://gitlab.freedesktop.org/xdg/xdg-utils/-/merge_requests/41
 #
-# NOTE: Typically this will run from Blender, you may also run this directly from Python
+# NOTE: Typically this will run from AIR Blend, you may also run this directly from Python
 # which can be useful for testing.
 
 __all__ = (
@@ -57,7 +57,7 @@ BLENDER_DIR = ""
 # -----------------------------------------------------------------------------
 # Path Constants
 
-# These files are included along side a portable Blender installation.
+# These files are included along side a portable AIR Blend installation.
 BLENDER_DESKTOP = "blender.desktop"
 # The target binary.
 BLENDER_FILENAME = "blender"
@@ -68,7 +68,7 @@ BLENDER_THUMBNAILER_FILENAME = "blender-thumbnailer"
 # -----------------------------------------------------------------------------
 # Other Constants
 
-# The mime type Blender users.
+# The mime type AIR Blend users.
 BLENDER_MIME = "application/x-blender"
 # Use `/usr/local` because this is not managed by the systems package manager.
 SYSTEM_PREFIX = "/usr/local"
@@ -289,7 +289,7 @@ def handle_mime_association_xml(do_register: bool, all_users: bool) -> str | Non
             return None
         # NOTE: `xdg-mime query default application/x-blender` could be used to check
         # if the XML is installed, however there is some slim chance the XML is installed
-        # but the default doesn't point to Blender, just uninstall as it's harmless.
+        # but the default doesn't point to AIR Blend, just uninstall as it's harmless.
         cmd = (
             XDG_MIME_PROG,
             "uninstall",
@@ -306,7 +306,7 @@ def handle_mime_association_xml(do_register: bool, all_users: bool) -> str | Non
             fh.write("""<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">\n""")
             fh.write("""  <mime-type type="{:s}">\n""".format(BLENDER_MIME))
             # NOTE: not using a trailing full-stop seems to be the convention here.
-            fh.write("""    <comment>Blender scene</comment>\n""")
+            fh.write("""    <comment>AIR Blend scene</comment>\n""")
             fh.write("""    <glob pattern="*.blend"/>\n""")
             # TODO: this doesn't seem to work, GNOME's Nautilus & KDE's Dolphin
             # already have a file-type icon for this so we might consider this low priority.
@@ -471,7 +471,7 @@ def register_impl(do_register: bool, all_users: bool) -> str | None:
         if not __import__("bpy").app.portable:
             return "System Installation, registration is handled by the package manager"
         # While snap builds are portable, the snap system handled file associations.
-        # Blender is also launched via a wrapper, again, we could support this if it were
+        # AIR Blend is also launched via a wrapper, again, we could support this if it were
         # important but we can rely on the snap packaging in this case.
         if os.environ.get("SNAP"):
             return "Snap Package Installation, registration is handled by the package manager"
@@ -480,7 +480,7 @@ def register_impl(do_register: bool, all_users: bool) -> str | None:
         # Only use of `bpy`.
         BLENDER_BIN = os.path.normpath(__import__("bpy").app.binary_path)
 
-        # Running inside Blender, detect the need for privilege escalation (which will run outside of Blender).
+        # Running inside AIR Blend, detect the need for privilege escalation (which will run outside of AIR Blend).
         if all_users:
             if os.geteuid() != 0:
                 # Run this script with escalated privileges.
@@ -563,7 +563,7 @@ def argparse_create() -> argparse.ArgumentParser:
         "blender_bin",
         metavar="BLENDER_BIN",
         type=str,
-        help="The location of Blender's binary",
+        help="The location of AIR Blend's binary",
     )
 
     parser.add_argument(

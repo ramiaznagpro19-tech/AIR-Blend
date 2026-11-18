@@ -16,7 +16,7 @@ struct SPZImportParams;
 
 namespace io::spz {
 
-/* Main import function used from within Blender. */
+/* Main import function used from within AIR Blend. */
 void importer_main(const bContext *C, const SPZImportParams &import_params);
 
 PointCloud *import_point_cloud(const SPZImportParams &import_params);

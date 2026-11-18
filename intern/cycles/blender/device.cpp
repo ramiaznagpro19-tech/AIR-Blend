@@ -104,7 +104,7 @@ DeviceInfo blender_device_info(blender::UserDef &b_preferences,
   /* Default to CPU device. */
   DeviceInfo cpu_device = Device::available_devices(DEVICE_MASK_CPU).front();
 
-  /* Device, which is chosen in the Blender Preferences. Default to CPU device. */
+  /* Device, which is chosen in the AIR Blend Preferences. Default to CPU device. */
   preferences_device = cpu_device;
 
   /* Test if we are using GPU devices. */

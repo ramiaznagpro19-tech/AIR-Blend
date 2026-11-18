@@ -84,7 +84,7 @@ class Octree {
   std::shared_ptr<OctreeNode> get_root() const;
   bool is_built() const;
 
-  /* Draw octree nodes as empty boxes with Blender Python API. */
+  /* Draw octree nodes as empty boxes with AIR Blend Python API. */
   void visualize(std::ofstream &file, const std::string object_name) const;
 
  private:

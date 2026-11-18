@@ -27,7 +27,7 @@ enum eAssetLibraryType : short {
   /** Display assets from the current session (current "Main"). */
   ASSET_LIBRARY_LOCAL = 1,
   ASSET_LIBRARY_ALL = 2,
-  /** Display assets bundled with Blender by default. */
+  /** Display assets bundled with AIR Blend by default. */
   ASSET_LIBRARY_ESSENTIALS = 3,
   /** Additions to the essentials library that are stored online - displayed in the UI as part of
    * the normal essentials library. */

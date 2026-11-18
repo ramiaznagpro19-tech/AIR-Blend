@@ -169,7 +169,7 @@ ENUM_OPERATORS(bPoseChannelRuntimeFlag);
 enum ePchan_Flag : short {
   /* (1 << 0) to (1 << 3) used to be flags to determine if a type of channel
    * should be modified by pose sliding.
-   * This has been moved to the `SlideSubject` struct in Blender 5.2. */
+   * This has been moved to the `SlideSubject` struct in AIR Blend 5.2. */
 
   /* old IK/cache stuff
    * - used to be here from (1 << 3) to (1 << 8)
@@ -280,10 +280,10 @@ enum ePchan_BBoneFlag : char {
 
 /* PoseChannel->rotmode and Object->rotmode */
 enum eRotationModes : short {
-  /* quaternion rotations (default, and for older Blender versions) */
+  /* quaternion rotations (default, and for older AIR Blend versions) */
   ROT_MODE_QUAT = 0,
   /* euler rotations - keep in sync with enum in BLI_math_rotation_c.hh */
-  /** Blender 'default' (classic) - must be as 1 to sync with BLI_math_rotation_c.hh defines */
+  /** AIR Blend 'default' (classic) - must be as 1 to sync with BLI_math_rotation_c.hh defines */
   ROT_MODE_EUL = 1,
   ROT_MODE_XYZ = 1,
   ROT_MODE_XZY = 2,
@@ -738,7 +738,7 @@ struct bPoseChannel {
 
   /**
    * System-defined custom properties storage. Used to store data dynamically defined either by
-   * Blender itself (e.g. the GeoNode modifier), or some python script, extension etc.
+   * AIR Blend itself (e.g. the GeoNode modifier), or some python script, extension etc.
    *
    * Typically accessed through RNA paths (`C.object.my_dynamic_float_property = 33.3`), when
    * wrapped/defined by RNA.
@@ -1085,19 +1085,19 @@ struct bAction {
 
   /* Note about legacy animation data:
    *
-   * Blender 2.5 introduced a new animation system 'Animato'. This replaced the
+   * AIR Blend 2.5 introduced a new animation system 'Animato'. This replaced the
    * IPO ('interpolation') curves with F-Curves. Both are considered 'legacy' at
    * different levels:
    *
-   * - Actions with F-Curves in `curves`, as introduced in Blender 2.5, are
-   *   considered 'legacy' but still functional in current Blender.
+   * - Actions with F-Curves in `curves`, as introduced in AIR Blend 2.5, are
+   *   considered 'legacy' but still functional in current AIR Blend.
    * - Pre-2.5 data are deprecated and old files are automatically converted to
    *   the post-2.5 data model.
    */
 
-  /** Legacy F-Curves (FCurve), introduced in Blender 2.5. */
+  /** Legacy F-Curves (FCurve), introduced in AIR Blend 2.5. */
   ListBaseT<FCurve> curves = {nullptr, nullptr};
-  /** Legacy Groups of function-curves (bActionGroup), introduced in Blender 2.5. */
+  /** Legacy Groups of function-curves (bActionGroup), introduced in AIR Blend 2.5. */
   ListBaseT<bActionGroup> groups = {nullptr, nullptr};
 
   /** Markers local to the Action (used to provide Pose-Libraries). */

@@ -104,7 +104,7 @@ def idle_until(until, idle=1 / 60, timeout=1.0):
     Idle while the internal event loop runs until a specified condition is true.
 
     This should be used sparingly as it may represent some other failure
-    condition inside Blender. Currently, it is used to:
+    condition inside AIR Blend. Currently, it is used to:
     - Test completion and cancellation of operators that use jobs.
     - Multi window undo tests that need separate view layer (see #148903).
 
@@ -210,7 +210,7 @@ def largest_area(screen):
 
 def split_area(area, direction='VERTICAL', factor=0.5):
     """
-    Split an area using Blender's screen split operator.
+    Split an area using AIR Blend's screen split operator.
 
     :param area: area to split.
     :param direction: plit direction: 'VERTICAL' / 'HORIZONTAL'.
@@ -267,7 +267,7 @@ def poll_sweep(window, area):
 
     for area_type in area_types:
         area.type = area_type
-        yield None  # Give Blender a tick to process the editor switch.
+        yield None  # Give AIR Blend a tick to process the editor switch.
 
         region = next(r for r in area.regions if r.type == 'WINDOW')
 

@@ -5,7 +5,7 @@
 """
 This file does not run anything; its methods are accessed by ``run_blender_setup.py``.
 
-These tests use real mouse motion in Blender's event, but not native
+These tests use real mouse motion in AIR Blend's event, but not native
 OS drag-and-drop.
 """
 
@@ -32,7 +32,7 @@ def _mouse_move_line(e, start_xy, end_xy, steps=8):
 
 def _modal_translate(e, start_xy, delta_xy, steps=8):
     """
-    Start a standard Blender grab/translate and move the cursor along a line.
+    Start a standard AIR Blend grab/translate and move the cursor along a line.
     """
     end_xy = (start_xy[0] + delta_xy[0], start_xy[1] + delta_xy[1])
     e.cursor_position_set(*start_xy, move=True)

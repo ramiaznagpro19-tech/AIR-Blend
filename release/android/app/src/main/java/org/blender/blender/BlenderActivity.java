@@ -22,10 +22,10 @@ import java.util.List;
 import org.libsdl.app.SDLActivity;
 
 /**
- * Main Blender Activity, extending SDLActivity.
+ * Main AIR Blend Activity, extending SDLActivity.
  *
- * Takes care of extracting the Blender portable version runtime directory from the APK assets,
- * in addition to some SDL specific overrides to load the main Blender shared library and an
+ * Takes care of extracting the AIR Blend portable version runtime directory from the APK assets,
+ * in addition to some SDL specific overrides to load the main AIR Blend shared library and an
  * argument helper.
  */
 public class BlenderActivity extends SDLActivity {
@@ -33,7 +33,7 @@ public class BlenderActivity extends SDLActivity {
 
     @Override
     protected String[] getLibraries() {
-        /* Add libblender.so (main Blender executable). */
+        /* Add libblender.so (main AIR Blend executable). */
         return new String[] {
             "SDL3",
             "blender",
@@ -45,10 +45,10 @@ public class BlenderActivity extends SDLActivity {
         /* Utility hook to pass command-line start-up arguments via ADB.
          *
          * Usage example:
-         *   adb shell am start -n org.blender.blender/.BlenderActivity --es args '"--debug-gpu --log ghost.*,gpu.* --log-level debug"'
+         *   adb shell am start -n com.airblend.app/org.blender.blender.BlenderActivity --es args '"--debug-gpu --log ghost.*,gpu.* --log-level debug"'
          *
          * TODO: Disable for non-debug builds, as otherwise this could lead to injection (any other app can launch
-         *       the Blender activity with a --python-expr)
+         *       the AIR Blend activity with a --python-expr)
          */
 
         /* NOTE: naively whitespace-split, quoting (as in --python-expr "something space something") is not supported. */
@@ -63,7 +63,7 @@ public class BlenderActivity extends SDLActivity {
         /* Support opening a .blend file from an Android file browser, copying the file from the opening itent (if any)
            to app-private storage to access the file via a normal path, and add the resulting path to the argument list.*/
         try {
-            /* TODO: Handle file intents received while Blender is already running. */
+            /* TODO: Handle file intents received while AIR Blend is already running. */
             String blendFile = copyBlendFileFromIntent(intent);
             if (blendFile != null) {
                 arguments.add(blendFile);
@@ -202,13 +202,13 @@ public class BlenderActivity extends SDLActivity {
             /* User home and temp directories, emulated from Linux and fed via environment variables.
              * For now, give a custom sub-folder for $HOME, without which the user drops into the app
              * files root (getFilesDir()).
-             * TODO: Replace with a proper Blender-side Android implementation. */
+             * TODO: Replace with a proper AIR Blend-side Android implementation. */
             File homeDir = new File(getFilesDir(), "home");
             homeDir.mkdir();
             Os.setenv("HOME", homeDir.getAbsolutePath(), true);
             Os.setenv("TMPDIR", getCacheDir().getAbsolutePath(), true);
         } catch (Exception e) {
-            throw new RuntimeException("Failed to extract Blender runtime files", e);
+            throw new RuntimeException("Failed to extract AIR Blend runtime files", e);
         }
 
         super.onCreate(savedInstanceState);

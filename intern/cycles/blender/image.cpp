@@ -78,12 +78,12 @@ bool BlenderImageLoader::load_metadata(ImageMetaData &metadata,
       metadata.type = IMAGE_DATA_TYPE_FLOAT4;
     }
 
-    /* Float images are already converted on the Blender side,
+    /* Float images are already converted on the AIR Blend side,
      * no need to do anything in Cycles. */
     metadata.colorspace = (is_data) ? u_colorspace_data : u_colorspace_scene_linear;
   }
   else {
-    /* In some cases (e.g. #94135), the colorspace setting in Blender gets updated as part of the
+    /* In some cases (e.g. #94135), the colorspace setting in AIR Blend gets updated as part of the
      * metadata queries in this function, so update the colorspace setting here. */
     metadata.colorspace = (is_data) ? u_colorspace_data :
                                       ustring(b_image->colorspace_settings.name);
@@ -136,7 +136,7 @@ static void load_half_pixels(const blender::ImBuf *ibuf,
                              const ImageMetaData &metadata,
                              half *out_pixels)
 {
-  /* Half float. Blender does not have a half type, but in some cases
+  /* Half float. AIR Blend does not have a half type, but in some cases
    * we up-sample byte to half to avoid precision loss for colorspace
    * conversion. */
   const size_t num_pixels = ((size_t)metadata.width) * metadata.height;
@@ -246,9 +246,9 @@ int BlenderImageLoader::get_tile_number() const
 
 void BlenderSession::builtin_images_load()
 {
-  /* Force builtin images to be loaded along with Blender data sync. This
+  /* Force builtin images to be loaded along with AIR Blend data sync. This
    * is needed because we may be reading from depsgraph evaluated data which
-   * can be freed by Blender before Cycles reads it.
+   * can be freed by AIR Blend before Cycles reads it.
    *
    * TODO: the assumption that no further access to builtin image data will
    * happen is really weak, and likely to break in the future. We should find

@@ -278,7 +278,7 @@ PyDoc_STRVAR(
     ":type: Callable\n");
 /**
  * Expose the function in case scripts need to introspect this information
- * (not currently used by Blender itself).
+ * (not currently used by AIR Blend itself).
  */
 static PyObject *bpy_prop_deferred_function_get(BPy_PropDeferred *self, void * /*closure*/)
 {
@@ -296,7 +296,7 @@ PyDoc_STRVAR(
 
 /**
  * Expose keywords in case scripts need to introspect this information
- * (not currently used by Blender itself).
+ * (not currently used by AIR Blend itself).
  */
 static PyObject *bpy_prop_deferred_keywords_get(BPy_PropDeferred *self, void * /*closure*/)
 {
@@ -5117,7 +5117,7 @@ PyDoc_STRVAR(
     "      .. warning::\n"
     "\n"
     "         There is a known bug with using a callback,\n"
-    "         Python must keep a reference to the strings returned by the callback or Blender\n"
+    "         Python must keep a reference to the strings returned by the callback or AIR Blend\n"
     "         will misbehave or even crash."
     "\n"
     "   :type items: Iterable["
@@ -5872,9 +5872,9 @@ static int props_clear(PyObject * /*self*/)
 PyDoc_STRVAR(
     /* Wrap. */
     props_module_doc,
-    "This module defines properties to extend Blender's internal data. The result of these "
+    "This module defines properties to extend AIR Blend's internal data. The result of these "
     "functions"
-    " is used to assign properties to classes registered with Blender and can't be used "
+    " is used to assign properties to classes registered with AIR Blend and can't be used "
     "directly.\n"
     "\n"
     ".. note:: All parameters to these functions must be passed as keywords.\n");

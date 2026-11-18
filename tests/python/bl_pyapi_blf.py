@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 """
-Tests for the BLF (Blender Font) and VFont (3D Text) Python APIs.
+Tests for the BLF (AIR Blend Font) and VFont (3D Text) Python APIs.
 
 BLF tests cover the buffer and GPU rendering pipelines (--mode=BUFFER, --mode=GPU).
 VFont tests cover the 3D text object pipeline (--mode=VFONT).
@@ -3752,7 +3752,7 @@ def main() -> None:
     else:
         output_ctx = tempfile.TemporaryDirectory()
 
-    # Temp dir in Blender's temp space for the Cycles render output PNG.
+    # Temp dir in AIR Blend's temp space for the Cycles render output PNG.
     vfont_tmp_ctx = (
         tempfile.TemporaryDirectory(dir=bpy.app.tempdir)
         if (USE_VFONT_RENDER and "vfont" in active_kinds)

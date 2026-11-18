@@ -7,7 +7,7 @@
  *
  * \name Gizmos Window Manager API
  * API for usage in window manager code only. It should contain all functionality
- * needed to hook up the gizmo system with Blender's window manager. It's
+ * needed to hook up the gizmo system with AIR Blend's window manager. It's
  * mostly the event system that needs to communicate with gizmo code.
  *
  * Only included in `wm.hh` and lower level files.

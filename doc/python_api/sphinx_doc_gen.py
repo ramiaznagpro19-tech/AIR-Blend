@@ -5,12 +5,12 @@
 """
 API dump in RST files
 ---------------------
-  Run this script from Blender's root path once you have compiled Blender
+  Run this script from AIR Blend's root path once you have compiled AIR Blend
 
     blender --background --factory-startup --python doc/python_api/sphinx_doc_gen.py
 
   This will generate Python files in doc/python_api/sphinx-in/
-  providing ./blender is or links to the Blender executable
+  providing ./blender is or links to the AIR Blend executable
 
   To choose sphinx-in directory:
     blender --background --factory-startup --python doc/python_api/sphinx_doc_gen.py -- --output=../python_api
@@ -62,13 +62,13 @@ from pathlib import Path
 from textwrap import indent
 
 try:
-    import bpy  # type: ignore[import-not-found]  # Blender module.
+    import bpy  # type: ignore[import-not-found]  # AIR Blend module.
 except ImportError:
-    print("\nERROR: this script must run from inside Blender")
+    print("\nERROR: this script must run from inside AIR Blend")
     print(__doc__)
     sys.exit()
 
-import _rna_info as rna_info  # type: ignore[import-not-found]  # Blender module.
+import _rna_info as rna_info  # type: ignore[import-not-found]  # AIR Blend module.
 
 
 # ----------------------------------------------------------------------------
@@ -193,7 +193,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 
 
 class Global(NamedTuple):
-    """Static configuration assembled from command-line arguments and Blender state."""
+    """Static configuration assembled from command-line arguments and AIR Blend state."""
 
     # Command line arguments.
     output_dir: Path
@@ -207,7 +207,7 @@ class Global(NamedTuple):
     pack_reference: bool
     log: bool
 
-    # Derived from `partial` + Blender's available modules.
+    # Derived from `partial` + AIR Blend's available modules.
     exclude_modules: frozenset[str]
     filter_bpy_ops: tuple[str, ...] | None
     filter_bpy_types: tuple[str, ...] | None
@@ -312,8 +312,8 @@ def handle_args(argv: Sequence[str]) -> argparse.Namespace:
     """
     Parse the arguments passed in ``argv``.
 
-    When invoked from Blender, callers should pass the slice of ``sys.argv``
-    after ``"--"`` (Blender ignores everything after ``--`` itself).
+    When invoked from AIR Blend, callers should pass the slice of ``sys.argv``
+    after ``"--"`` (AIR Blend ignores everything after ``--`` itself).
     """
     # When --help is given, print the usage text
     parser = argparse.ArgumentParser(
@@ -444,7 +444,7 @@ BPY_LOGGER.setLevel(logging.DEBUG)
 # Source files we use, and need to copy to the OUTPUT_DIR
 # to have working out-of-source builds.
 # Paths are relative to `RST_DIR`; `..` parents are replaced by `__` in the RST destination,
-# to avoid having to match Blender's source tree.
+# to avoid having to match AIR Blend's source tree.
 EXTRA_SOURCE_FILES = (
     Path("../../../scripts/templates_py/bmesh_simple.py"),
     Path("../../../scripts/templates_py/Gizmo/operator.py"),
@@ -469,7 +469,7 @@ RST_DIR = (SCRIPT_DIR / "rst").resolve()
 # Pairs of (file, description), the title makes from the RST files are displayed before the description.
 INFO_DOCS = (
     (Path("info_quickstart.rst"),
-     "New to Blender or scripting and want to get your feet wet?"),
+     "New to AIR Blend or scripting and want to get your feet wet?"),
     (Path("info_overview.rst"),
      "A more complete explanation of Python integration."),
     (Path("info_api_reference.rst"),
@@ -477,15 +477,15 @@ INFO_DOCS = (
     (Path("info_best_practice.rst"),
      "Conventions to follow for writing good scripts."),
     (Path("info_tips_and_tricks.rst"),
-     "Hints to help you while writing scripts for Blender."),
+     "Hints to help you while writing scripts for AIR Blend."),
     (Path("info_gotcha.rst"),
      "Some of the problems you may encounter when writing scripts."),
     (Path("info_advanced.rst"),
      "Topics which may not be required for typical usage."),
     (Path("change_log.rst"),
-     "List of changes since last Blender release"),
+     "List of changes since last AIR Blend release"),
     (Path("info_contributing.rst"),
-     "Guide for contributing to Blender's Python API documentation."),
+     "Guide for contributing to AIR Blend's Python API documentation."),
 )
 # Referenced indirectly.
 INFO_DOCS_OTHER = (
@@ -586,7 +586,7 @@ MODULE_GROUPING: dict[str, tuple[str | tuple[str, str], ...]] = {
 
 def global_create(argv: Sequence[str]) -> Global:
     """
-    Build a :class:`Global` from CLI arguments and the running Blender, and return it.
+    Build a :class:`Global` from CLI arguments and the running AIR Blend, and return it.
     """
     args = handle_args(argv)
 
@@ -1379,7 +1379,7 @@ def pymodule2sphinx(
         # `<class 'bpy.app.handlers'>` -> `bpy.app.handlers`.
         type_name = str(type(module)).strip("<>").split(" ", 1)[-1][1:-1]
 
-        # The type typically contains the module in the case of PyStruct's (defined by Blender).
+        # The type typically contains the module in the case of PyStruct's (defined by AIR Blend).
         # Assign a temporary module name: `module_name_split`.
         if module_name == type_name:
             assert "." in module_name
@@ -1974,7 +1974,7 @@ def pyclass2sphinx(
     fw("\n\n")
 
 
-# Changes In Blender will force errors here.
+# Changes In AIR Blend will force errors here.
 context_type_map = {
     # Support multiple types for each item, where each list item is a possible type:
     # `context_member: [(RNA type, is_collection), ...]`
@@ -2127,7 +2127,7 @@ def pycontext2sphinx(basepath: Path) -> None:
         fw(title_string("Context Access (bpy.context)", "="))
         fw(".. module:: bpy.context\n")
         fw("\n")
-        fw("The context members available depend on the area of Blender which is currently being accessed.\n")
+        fw("The context members available depend on the area of AIR Blend which is currently being accessed.\n")
         fw("\n")
         fw("Note that all context values are read-only,\n")
         fw("but may be modified through the data API or by running operators.\n")
@@ -2875,9 +2875,9 @@ def write_rst_index(basepath: Path) -> None:
     file = open(filepath, "w", encoding="utf-8")
     fw = file.write
 
-    fw(title_string("Blender {:s} Python API Documentation".format(GLOBAL.blender_version_dots), "%", double=True))
+    fw(title_string("AIR Blend {:s} Python API Documentation".format(GLOBAL.blender_version_dots), "%", double=True))
     fw("\n")
-    fw("Welcome to the Python API documentation for `Blender <https://www.blender.org>`__, ")
+    fw("Welcome to the Python API documentation for `AIR Blend <https://www.blender.org>`__, ")
     fw("the free and open source 3D creation suite.\n")
     fw("\n")
 
@@ -2977,7 +2977,7 @@ def write_rst_bpy(basepath: Path) -> None:
 
         fw("\n")
 
-        title = ":mod:`bpy` --- Blender Python Module"
+        title = ":mod:`bpy` --- AIR Blend Python Module"
 
         fw(title_string(title, "="))
 
@@ -3133,7 +3133,7 @@ def write_rst_data(basepath: Path) -> None:
         fw("\n")
         fw(".. data:: data\n")
         fw("\n")
-        fw("   Access to Blender's internal data\n")
+        fw("   Access to AIR Blend's internal data\n")
         fw("\n")
         fw("   :type: :class:`bpy.types.BlendData`\n")
         fw("\n")
@@ -3359,7 +3359,7 @@ def copy_handwritten_rsts(basepath: Path) -> None:
         for info in INFO_DOCS_OTHER:
             shutil.copy2(RST_DIR / info, basepath)
 
-    # TODO: put this docs in Blender's code and use import as per modules above.
+    # TODO: put this docs in AIR Blend's code and use import as per modules above.
     handwritten_modules = [
         "bmesh.ops",  # Generated by `rst_from_bmesh_opdefines.py`.
 
@@ -3408,7 +3408,7 @@ def copy_sphinx_files(basepath: Path) -> None:
 
 def format_config(basepath: Path) -> None:
     """
-    Updates ``conf.py`` with context information from Blender.
+    Updates ``conf.py`` with context information from AIR Blend.
     """
     from string import Template
 
@@ -3563,7 +3563,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     # First monkey patch to load in fake members.
     setup_monkey_patch()
 
-    # Perform changes to Blender itself.
+    # Perform changes to AIR Blend itself.
     setup_data = setup_blender()
 
     # Eventually, create the directories.

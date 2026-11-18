@@ -1,4 +1,4 @@
-This folder contains files used by ctest testing system in Blender.
+This folder contains files used by ctest testing system in AIR Blend.
 The purpose of this files it to do automated render tests for Cycles,
 Workbench and EEVEE.
 

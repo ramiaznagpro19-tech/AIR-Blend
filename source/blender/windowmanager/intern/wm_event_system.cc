@@ -2883,7 +2883,7 @@ static eHandlerActionFlag wm_handler_fileselect_do(bContext *C,
   switch (val) {
     case EVT_FILESELECT_FULL_OPEN: {
       ScrArea *area = ED_screen_temp_space_open(
-          C, IFACE_("Blender File View"), SPACE_FILE, U.filebrowser_display_type, true);
+          C, IFACE_("AIR Blend File View"), SPACE_FILE, U.filebrowser_display_type, true);
       if (!area) {
         BKE_report(&wm->runtime->reports, RPT_ERROR, "Failed to open file browser!");
         return WM_HANDLER_BREAK;
@@ -4092,7 +4092,7 @@ static void wm_event_handle_xrevent(wmWindowManager *wm,
   BLI_assert(event->customdata);
   wmXrActionData *actiondata = static_cast<wmXrActionData *>(event->customdata);
 
-  /* Check if the XR context scene matches the main Blender context scene to counter-act possible
+  /* Check if the XR context scene matches the main AIR Blend context scene to counter-act possible
    * re-allocation on undo operator execution. */
   const uint xr_ctx_scene_uid = CTX_data_scene(xr_context)->id.session_uid;
   const uint main_ctx_scene_uid = CTX_data_scene(main_context)->id.session_uid;
@@ -4156,7 +4156,7 @@ static void wm_event_handle_xrevent(wmWindowManager *wm,
   }
 
   /* The undo operator may have re-allocated the XR context Scene and Main data pointers.
-   * Prevent dangling pointers in the main Blender context by re-assigning them as needed.
+   * Prevent dangling pointers in the main AIR Blend context by re-assigning them as needed.
    *
    * This is the inverse of the re-anchoring in #WM_xr_session_context_ensure(). */
   CTX_data_main_set(main_context, CTX_data_main(xr_context));
@@ -4474,7 +4474,7 @@ void wm_event_do_handlers(bContext *C)
       /* Update previous mouse position for following events to use. */
       copy_v2_v2_int(win.runtime->eventstate->prev_xy, event->xy);
 
-      /* Un-link and free here, Blender-quit then frees all. */
+      /* Un-link and free here, AIR Blend-quit then frees all. */
       BLI_remlink(&win.runtime->event_queue, event);
       wm_event_free_last_handled(&win, event);
     }

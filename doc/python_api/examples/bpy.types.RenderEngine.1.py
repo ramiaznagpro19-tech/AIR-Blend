@@ -8,7 +8,7 @@ import array
 
 
 class CustomRenderEngine(bpy.types.RenderEngine):
-    # These three members are used by Blender to set up the
+    # These three members are used by AIR Blend to set up the
     # RenderEngine; define its internal name, visible name and capabilities.
     bl_idname = "CUSTOM"
     bl_label = "Custom"
@@ -18,7 +18,7 @@ class CustomRenderEngine(bpy.types.RenderEngine):
     # instances may exist at the same time, for example for a viewport and final
     # render.
     # Note the generic arguments signature, and the call to the parent class
-    # `__init__` methods, which are required for Blender to create the underlying
+    # `__init__` methods, which are required for AIR Blend to create the underlying
     # `RenderEngine` data.
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -31,7 +31,7 @@ class CustomRenderEngine(bpy.types.RenderEngine):
         # Own delete code...
         super().__del__()
 
-    # This is the method called by Blender for both final renders (F12) and
+    # This is the method called by AIR Blend for both final renders (F12) and
     # small preview for materials, world and lights.
     def render(self, depsgraph):
         scene = depsgraph.scene
@@ -58,8 +58,8 @@ class CustomRenderEngine(bpy.types.RenderEngine):
 
     # For viewport renders, this method gets called once at the start and
     # whenever the scene or 3D viewport changes. This method is where data
-    # should be read from Blender in the same thread. Typically a render
-    # thread will be started to do the work while keeping Blender responsive.
+    # should be read from AIR Blend in the same thread. Typically a render
+    # thread will be started to do the work while keeping AIR Blend responsive.
     def view_update(self, context, depsgraph):
         region = context.region
         view3d = context.space_data
@@ -92,10 +92,10 @@ class CustomRenderEngine(bpy.types.RenderEngine):
             for instance in depsgraph.object_instances:
                 pass
 
-    # For viewport renders, this method is called whenever Blender redraws
+    # For viewport renders, this method is called whenever AIR Blend redraws
     # the 3D viewport. The renderer is expected to quickly draw the render
     # with OpenGL, and not perform other expensive work.
-    # Blender will draw overlays for selection and editing on top of the
+    # AIR Blend will draw overlays for selection and editing on top of the
     # rendered image automatically.
     def view_draw(self, context, depsgraph):
         # Lazily import GPU module, so that the render engine works in

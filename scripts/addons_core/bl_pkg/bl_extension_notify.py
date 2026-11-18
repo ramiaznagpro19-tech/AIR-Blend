@@ -50,7 +50,7 @@ def sync_status_count_outdated_extensions(repos_notify):
     # NOTE: while this shouldn't happen frequently, preferences may have changed since the notification started.
     # Some UI interactions can reliably cause this, for example - changing the URL which triggers a notification,
     # then disabling immediately after for example. It can also happen when notifications are enabled on startup
-    # and the user disables a repository quickly after Blender opens.
+    # and the user disables a repository quickly after AIR Blend opens.
     # Whatever the cause, this should not raise an unhandled exception so check
     # directories are still valid before calculating their outdated packages.
     #
@@ -105,20 +105,20 @@ def sync_calc_stale_repo_directories(repos_notify):
 def sync_apply_locked(repos_notify, repos_notify_files, unique_ext):
     """
     Move files with a unique extension to their final location
-    with a locked repository to ensure multiple Blender instances never overwrite
+    with a locked repository to ensure multiple AIR Blend instances never overwrite
     repositories at the same time.
 
     Lock the repositories for the shortest time reasonably possible.
-    If locking fails, this is OK as it's possible another Blender got here first.
+    If locking fails, this is OK as it's possible another AIR Blend got here first.
 
-    Another reason this is needed is exiting Blender will close the sync sub-processes,
+    Another reason this is needed is exiting AIR Blend will close the sync sub-processes,
     this is OK as long as the final location of the repositories JSON isn't being written
-    to the moment Blender and its sub-processes exit.
+    to the moment AIR Blend and its sub-processes exit.
     """
     # TODO: handle the case of cruft being left behind, perhaps detect previous
     # files created with a `unique_ext` (`@{HEX}` extension) and removing them.
     # Although this shouldn't happen on a regular basis. Only when exiting immediately after launching
-    # Blender and even then the user would need to be *lucky*.
+    # AIR Blend and even then the user would need to be *lucky*.
     from . import cookie_from_session
     from . import bl_extension_utils
 
@@ -221,7 +221,7 @@ def sync_status_generator(repos_and_do_online):
             online_user_agent=bl_extension_ops.online_user_agent_from_blender(),
             access_token=repo_item.access_token,
             timeout=network_timeout,
-            # Never sleep while there is no input, as this blocks Blender.
+            # Never sleep while there is no input, as this blocks AIR Blend.
             use_idle=False,
             python_args=bpy.app.python_args,
             # Needed so the user can exit blender without warnings about a broken pipe.
@@ -277,7 +277,7 @@ def sync_status_generator(repos_and_do_online):
     is_debug = bpy.app.debug
     while True:
         command_result = cmd_batch.exec_non_blocking(
-            # TODO: if Blender requested an exit... this should request exit here.
+            # TODO: if AIR Blend requested an exit... this should request exit here.
             request_exit=False,
         )
         # Forward new messages to reports.

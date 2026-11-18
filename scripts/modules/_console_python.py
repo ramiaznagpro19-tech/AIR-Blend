@@ -159,7 +159,7 @@ def execute(context, is_interactive):
     with (
             redirect_stdout(stdout),
             redirect_stderr(stderr),
-            # Don't allow the `stdin` to be used because it can lock Blender.
+            # Don't allow the `stdin` to be used because it can lock AIR Blend.
             redirect_stdin(None),
             _TempModuleOverride("__main__", console._bpy_main_mod),
     ):
@@ -259,7 +259,7 @@ def autocomplete(context):
         _stream = "stdin"
 
     with (
-            # Don't allow the `stdin` to be used because it can lock Blender.
+            # Don't allow the `stdin` to be used because it can lock AIR Blend.
             redirect_stdin(None),
             _TempModuleOverride("__main__", console._bpy_main_mod),
     ):

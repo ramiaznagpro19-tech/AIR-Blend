@@ -240,7 +240,7 @@ static std::string process_source(std::string source, gpu::shader::ShaderCreateI
    * GradingPrimaryTransform. A more general approach is possible, but for now prefer processing
    * speed.
    *
-   * NOTE: The syntax works for all backends Blender supports. */
+   * NOTE: The syntax works for all backends AIR Blend supports. */
   BLI_string_replace(
       source, "if ( gamma != vec3(1., 1., 1.) )", "if (! all(equal(gamma, vec3(1., 1., 1.))) )");
 

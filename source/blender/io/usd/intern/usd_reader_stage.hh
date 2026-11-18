@@ -74,7 +74,7 @@ class USDStageReader {
    */
   void process_armature_modifiers() const;
 
-  /* Convert every material prim on the stage to a Blender
+  /* Convert every material prim on the stage to an AIR Blend
    * material, including materials not used by any geometry.
    * Note that collect_readers() must be called before calling
    * import_all_materials(). */
@@ -180,7 +180,7 @@ class USDStageReader {
 
   /**
    * Returns true if the given reader can use the parent of the encapsulated USD prim
-   * to compute the Blender object's transform. If so, the reader is appropriately
+   * to compute the AIR Blend object's transform. If so, the reader is appropriately
    * flagged and the function returns true. Otherwise, the function returns false.
    */
   bool merge_with_parent(USDPrimReader *reader) const;

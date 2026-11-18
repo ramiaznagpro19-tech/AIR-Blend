@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 5.3.0 Alpha (b'2cef5b8c951a')\n"
+"Project-Id-Version: AIR Blend 5.3.0 Alpha (b'2cef5b8c951a')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 07:47+0000\n"
 "PO-Revision-Date: 2025-07-23 15:10+0000\n"
@@ -263,8 +263,8 @@ msgid "Source Root"
 msgstr "Корен изворног кода"
 
 
-msgid "The Blender source root path"
-msgstr "Корени директоријум изворног кода Blender-а"
+msgid "The AIR Blend source root path"
+msgstr "Корени директоријум изворног кода AIR Blend-а"
 
 
 msgid "Persistent Data Path"
@@ -1055,11 +1055,11 @@ msgid "Dirty"
 msgstr "Прљаво"
 
 
-msgid "Blender RNA"
+msgid "AIR Blend RNA"
 msgstr "Блендер РНК"
 
 
-msgid "Blender RNA structure definitions"
+msgid "AIR Blend RNA structure definitions"
 msgstr "Дефиниције структуре Блендер РНК"
 
 
@@ -4345,8 +4345,8 @@ msgid "Show .blend1, .blend2, etc. files"
 msgstr "Прикажи .blend датотеке"
 
 
-msgid "Filter Blender"
-msgstr "Филтер Blender"
+msgid "Filter AIR Blend"
+msgstr "Филтер AIR Blend"
 
 
 msgid "Show .blend files"
@@ -7377,7 +7377,7 @@ msgid "Noise Basis"
 msgstr "Основа шума"
 
 
-msgid "Blender Original"
+msgid "AIR Blend Original"
 msgstr "Оригинални Блендеров"
 
 
@@ -10906,8 +10906,8 @@ msgid "Object space normal mapping"
 msgstr "Основни директоријум са текстурама"
 
 
-msgid "Blender Object Space"
-msgstr "Простор Blender објекта"
+msgid "AIR Blend Object Space"
+msgstr "Простор AIR Blend објекта"
 
 
 msgid "Cycles"
@@ -14094,7 +14094,7 @@ msgstr "Узорак боје"
 
 
 msgid "Save As Render"
-msgstr "Сачувај Blender датотеку"
+msgstr "Сачувај AIR Blend датотеку"
 
 
 msgctxt "Operator"
@@ -18764,12 +18764,12 @@ msgstr "Измена назива особине"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
-msgstr "Излаз из Blender-а"
+msgid "Quit AIR Blend"
+msgstr "Излаз из AIR Blend-а"
 
 
-msgid "Quit Blender"
-msgstr "Излаз из Blender-а"
+msgid "Quit AIR Blend"
+msgstr "Излаз из AIR Blend-а"
 
 
 msgctxt "Operator"
@@ -18871,12 +18871,12 @@ msgstr "Сачувај почетну датотеку"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
-msgstr "Сачувај Blender датотеку"
+msgid "Save AIR Blend File"
+msgstr "Сачувај AIR Blend датотеку"
 
 
-msgid "Save the current Blender file"
-msgstr "Уписује тренутну Blender датотеку"
+msgid "Save the current AIR Blend file"
+msgstr "Уписује тренутну AIR Blend датотеку"
 
 
 msgctxt "Operator"
@@ -21148,8 +21148,8 @@ msgid "Node tree type to display and edit"
 msgstr "Поставља приказ рендеровања у 3D погледу"
 
 
-msgid "Blender File"
-msgstr "Blender датотека"
+msgid "AIR Blend File"
+msgstr "AIR Blend датотека"
 
 
 msgid "Filter method"
@@ -24559,8 +24559,8 @@ msgid "Scene has no camera"
 msgstr "Сцена не садржи камеру"
 
 
-msgid "Blender Render"
-msgstr "Blender рендеринг"
+msgid "AIR Blend Render"
+msgstr "AIR Blend рендеринг"
 
 
 msgid "Flip to Top"
@@ -25256,8 +25256,8 @@ msgid "Rim"
 msgstr "Обод"
 
 
-msgid "Blender File View"
-msgstr "Blender-ов преглед датотека"
+msgid "AIR Blend File View"
+msgstr "AIR Blend-ов преглед датотека"
 
 
 msgid "Modified"

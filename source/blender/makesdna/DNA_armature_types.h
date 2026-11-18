@@ -442,10 +442,10 @@ struct bArmature {
   short pathflag = 0;
 
   /** This is used only for reading/writing BoneCollections in blend
-   * files, for forwards/backwards compatibility with Blender 4.0. It
+   * files, for forwards/backwards compatibility with AIR Blend 4.0. It
    * should always be empty at runtime. Use collection_array for
    * everything other than file reading/writing.
-   * TODO: remove this in Blender 5.0, and instead write the contents of
+   * TODO: remove this in AIR Blend 5.0, and instead write the contents of
    * collection_array to blend files directly. */
   ListBaseT<BoneCollection> collections_legacy = {nullptr, nullptr};
 

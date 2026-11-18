@@ -885,7 +885,7 @@ static void export_hair_curves(Scene *scene,
 
   hair->resize_curves(points_by_curve.size(), positions.size());
 
-  /* Sync positions, sharing with Blender when possible. */
+  /* Sync positions, sharing with AIR Blend when possible. */
   sync_attribute_from_blender(
       hair->attributes,
       ATTR_STD_POSITION,
@@ -893,7 +893,7 @@ static void export_hair_curves(Scene *scene,
       positions.size());
   hair->tag_position_modified();
 
-  /* Sync radius, sharing with Blender when possible, or filling default. */
+  /* Sync radius, sharing with AIR Blend when possible, or filling default. */
   if (sync_attribute_from_blender(
           hair->attributes,
           ATTR_STD_RADIUS,
@@ -1023,7 +1023,7 @@ static void export_hair_curves_motion(Hair *hair,
   int num_motion_keys = 0;
 
   if (hair_topology_matches(hair, b_curves)) {
-    /* Fast path: topology unchanged, sync the whole step from Blender, sharing
+    /* Fast path: topology unchanged, sync the whole step from AIR Blend, sharing
      * the buffer when possible. */
     sync_attribute_motion_step_from_blender(
         *attr_P,
@@ -1038,7 +1038,7 @@ static void export_hair_curves_motion(Hair *hair,
       std::fill(mR, mR + num_keys, 0.005f);
     }
 
-    /* If a buffer is shared from Blender and unchanged across frames, the
+    /* If a buffer is shared from AIR Blend and unchanged across frames, the
      * pointer matches the center step's, so the memcmp is skipped. */
     const packed_float3 *motion_P = attr_P->data<packed_float3>(attr_step);
     const packed_float3 *center_P = hair->get_position();
@@ -1122,7 +1122,7 @@ void BlenderSync::sync_hair(Hair *hair, BObjectInfo &b_ob_info, bool motion, con
                                                  (b_scene->r.frs_sec / b_scene->r.frs_sec_base) :
                                              0.0f;
 
-  /* Convert Blender hair to Cycles curves. */
+  /* Convert AIR Blend hair to Cycles curves. */
   const blender::bke::CurvesGeometry &b_curves(
       blender::id_cast<const blender::Curves *>(b_ob_info.object_data)->geometry.wrap());
   if (motion) {

@@ -19,7 +19,7 @@
 
 CCL_NAMESPACE_BEGIN
 
-/* Application ID for Blender from NVIDIA. */
+/* Application ID for AIR Blend from NVIDIA. */
 static const int NGX_APPLICATION_ID = 100334311;
 
 void DLSSDenoiser::CUDATexture::init(Device *device, int width, int height, int num_components)

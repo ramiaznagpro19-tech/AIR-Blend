@@ -47,7 +47,7 @@ def _write_html(output_dir):
     </div>
 </body>
 </html>
-    """ . format(title="Blender Test Reports",
+    """ . format(title="AIR Blend Test Reports",
                  combined_reports=combined_reports)
 
     filepath = os.path.join(output_dir, "report.html")

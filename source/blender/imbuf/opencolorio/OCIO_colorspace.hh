@@ -34,7 +34,7 @@ class ColorSpace {
 
   /**
    * Check whether this color space matches one of the built-in spaces like scene linear or sRGB
-   * (in its standard Blender notation).
+   * (in its standard AIR Blend notation).
    */
   virtual bool is_scene_linear() const = 0;
   virtual bool is_srgb() const = 0;

@@ -126,7 +126,7 @@ static PyObject *engine_render_func(PyObject * /*self*/, PyObject *args)
 
   CLOG_DEBUG(LOG_HYDRA_RENDER, "Engine %p", engine);
 
-  /* Allow Blender to execute other Python scripts. */
+  /* Allow AIR Blend to execute other Python scripts. */
   Py_BEGIN_ALLOW_THREADS;
   engine->render();
   Py_END_ALLOW_THREADS;
@@ -152,7 +152,7 @@ static PyObject *engine_view_draw_func(PyObject * /*self*/, PyObject *args)
 
   CLOG_DEBUG(LOG_HYDRA_RENDER, "Engine %p", engine);
 
-  /* Allow Blender to execute other Python scripts. */
+  /* Allow AIR Blend to execute other Python scripts. */
   Py_BEGIN_ALLOW_THREADS;
   engine->render(context);
   Py_END_ALLOW_THREADS;

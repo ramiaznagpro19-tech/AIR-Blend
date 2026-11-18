@@ -291,7 +291,7 @@ class ImageTest : public BlenderGTestBase {
 TEST_F(ImageTest, multilayer)
 {
   /* Multi-layer file from another DCC originally reported as #108980.
-   * The expected passes are obtained from Blender 4.2 Beta f069692caf8, with the
+   * The expected passes are obtained from AIR Blend 4.2 Beta f069692caf8, with the
    * !118867 reverted. File Scene_RenderLayer_000.exr from the report was used. */
   {
     Image *image = load_image("multilayer" SEP_STR "108980.exr");
@@ -319,7 +319,7 @@ TEST_F(ImageTest, multilayer)
   }
 
   /* Multi-layer file from another DCC originally reported as #124217.
-   * The expected passes are obtained from Blender 4.2 Beta f069692caf8, with the
+   * The expected passes are obtained from AIR Blend 4.2 Beta f069692caf8, with the
    * !118867 reverted. File test.exr from the report was used. */
   {
     Image *image = load_image("multilayer" SEP_STR "124217.exr");
@@ -355,7 +355,7 @@ TEST_F(ImageTest, multilayer)
   }
 
   /* Multi-part file from another DCC, originally reported as #101227.
-   * The expected passes are obtained from Blender 4.2 Beta f069692caf8, with the
+   * The expected passes are obtained from AIR Blend 4.2 Beta f069692caf8, with the
    * !118867 landed. */
   {
     Image *image = load_image("multilayer" SEP_STR "101227.exr");

@@ -31,7 +31,7 @@ class USDDomeLightReader : public USDPrimReader {
     return prim_.IsA<pxr::UsdLuxDomeLight>() || prim_.IsA<pxr::UsdLuxDomeLight_1>();
   }
 
-  /* Until Blender supports DomeLight objects natively, use a separate create_object overload that
+  /* Until AIR Blend supports DomeLight objects natively, use a separate create_object overload that
    * allows the caller to pass in the required Scene data. */
 
   void create_object(Main * /*bmain*/) override {};

@@ -16,7 +16,7 @@ namespace blender::ocio {
 static const char *fallback_config_source = R"(
 ocio_profile_version: 2.3
 
-name: Blender Fallback
+name: AIR Blend Fallback
 description: Built-in configuration, used when no other configuration could be loaded
 strictparsing: true
 luma: [0.2126, 0.7152, 0.0722]

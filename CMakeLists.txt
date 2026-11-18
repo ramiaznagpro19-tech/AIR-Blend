@@ -74,7 +74,7 @@ project(Blender)
 enable_testing()
 
 # -----------------------------------------------------------------------------
-# Load Blender's Local Macros
+# Load AIR Blend's Local Macros
 
 include(build_files/cmake/macros.cmake)
 
@@ -169,7 +169,7 @@ if(WIN32)
     # there really is no nice way to get this information consistent without a global define.
     -DBLENDER_WIN_APPID="blender.${BLENDER_VERSION_MAJOR}.${BLENDER_VERSION_MINOR}"
     # This is the name that will be shown in the taskbar and OpenWith windows UI
-    -DBLENDER_WIN_APPID_FRIENDLY_NAME="Blender ${BLENDER_VERSION_MAJOR}.${BLENDER_VERSION_MINOR}"
+    -DBLENDER_WIN_APPID_FRIENDLY_NAME="AIR Blend ${BLENDER_VERSION_MAJOR}.${BLENDER_VERSION_MINOR}"
   )
 endif()
 
@@ -180,8 +180,8 @@ set(CMAKE_OPTIMIZE_DEPENDENCIES ON CACHE INTERNAL "")
 # -----------------------------------------------------------------------------
 # Declare Options
 
-# Blender internal features
-option(WITH_BLENDER "Build Blender (disable to build only Cycles stand-alone)." ON)
+# AIR Blend internal features
+option(WITH_BLENDER "Build AIR Blend (disable to build only Cycles stand-alone)." ON)
 mark_as_advanced(WITH_BLENDER)
 
 if(WIN32)
@@ -224,7 +224,7 @@ Enable internal API error checking to track invalid data to prevent crash on acc
 mark_as_advanced(WITH_PYTHON_SAFETY)
 option(WITH_PYTHON_MODULE "\
 Enable building as a Python module which runs without a user interface, \
-like running regular Blender in background mode (only enable for development), \
+like running regular AIR Blend in background mode (only enable for development), \
 installs to PYTHON_SITE_PACKAGES (or CMAKE_INSTALL_PREFIX if WITH_INSTALL_PORTABLE is enabled)."
   OFF
 )
@@ -344,17 +344,17 @@ if(ANDROID)
   set(WITH_GHOST_SDL ON)
 else()
   option(WITH_GHOST_SDL "\
-Enable building Blender against SDL for windowing rather than the native APIs"
+Enable building AIR Blend against SDL for windowing rather than the native APIs"
     OFF
   )
   mark_as_advanced(WITH_GHOST_SDL)
 endif()
 
 if(UNIX AND NOT (APPLE OR HAIKU OR ANDROID))
-  option(WITH_GHOST_X11 "Enable building Blender against X11 for windowing" ON)
+  option(WITH_GHOST_X11 "Enable building AIR Blend against X11 for windowing" ON)
   mark_as_advanced(WITH_GHOST_X11)
 
-  option(WITH_GHOST_WAYLAND "Enable building Blender against Wayland for windowing" ON)
+  option(WITH_GHOST_WAYLAND "Enable building AIR Blend against Wayland for windowing" ON)
   mark_as_advanced(WITH_GHOST_WAYLAND)
 
   if(WITH_GHOST_WAYLAND)
@@ -380,8 +380,8 @@ Enable runtime dynamic loading of `libdbus` (avoids a link time dependency)"
     mark_as_advanced(WITH_GHOST_WAYLAND_DYNLOAD)
 
     set(WITH_GHOST_WAYLAND_APP_ID "" CACHE STRING "\
-The application ID used for Blender (use default when an empty string), \
-this can be used to differentiate Blender instances by version or branch for example."
+The application ID used for AIR Blend (use default when an empty string), \
+this can be used to differentiate AIR Blend instances by version or branch for example."
     )
     mark_as_advanced(WITH_GHOST_WAYLAND_APP_ID)
   endif()
@@ -408,7 +408,7 @@ mark_as_advanced(WITH_HEADLESS)
 
 option(WITH_QUADRIFLOW "Build with QuadriFlow remesher support" ON)
 
-option(WITH_AUDASPACE "Build with Audaspace (base Blender audio library)" ON)
+option(WITH_AUDASPACE "Build with Audaspace (base AIR Blend audio library)" ON)
 mark_as_advanced(WITH_AUDASPACE)
 
 option(WITH_RUBBERBAND "\
@@ -575,7 +575,7 @@ that point to pre-compiled libraries will be left as-is."
 
   option(WITH_STATIC_LIBS "\
 Try to link with static libraries, as much as possible, \
-to make Blender more portable across distributions"
+to make AIR Blend more portable across distributions"
     OFF
   )
 else()
@@ -597,7 +597,7 @@ else()
   set(WITH_INPUT_NDOF OFF)
 endif()
 
-# On Windows, Android and for the Blender application on macOS, portable install
+# On Windows, Android and for the AIR Blend application on macOS, portable install
 # is the only supported installation type, so there is no option.
 if(UNIX AND (NOT (APPLE OR ANDROID) OR WITH_PYTHON_MODULE))
   option(WITH_INSTALL_PORTABLE "\
@@ -608,7 +608,7 @@ else()
   set(WITH_INSTALL_PORTABLE ON)
 endif()
 
-option(WITH_PYTHON_INSTALL "Copy system Python into the Blender install directory" ON)
+option(WITH_PYTHON_INSTALL "Copy system Python into the AIR Blend install directory" ON)
 
 option(WITH_INSTALL_COPYRIGHT "\
 Copy the official Blender Authors copyright.txt into the Blender install directory"
@@ -617,7 +617,7 @@ Copy the official Blender Authors copyright.txt into the Blender install directo
 mark_as_advanced(WITH_INSTALL_COPYRIGHT)
 
 if((WITH_AUDASPACE AND NOT WITH_SYSTEM_AUDASPACE) OR WITH_MOD_FLUID)
-  option(WITH_PYTHON_NUMPY "Include NumPy in Blender (used by Audaspace and Mantaflow)" ON)
+  option(WITH_PYTHON_NUMPY "Include NumPy in AIR Blend (used by Audaspace and Mantaflow)" ON)
 endif()
 
 if(WIN32 OR APPLE)
@@ -631,11 +631,11 @@ Path to python site-packages or dist-packages containing 'numpy' module"
   mark_as_advanced(PYTHON_NUMPY_INCLUDE_DIRS)
 endif()
 if(WITH_PYTHON_INSTALL)
-  option(WITH_PYTHON_INSTALL_NUMPY "Copy system NumPy into the Blender install directory" ON)
+  option(WITH_PYTHON_INSTALL_NUMPY "Copy system NumPy into the AIR Blend install directory" ON)
 
   if((UNIX AND NOT APPLE) AND NOT CMAKE_CROSSCOMPILING)
     option(WITH_PYTHON_INSTALL_REQUESTS "\
-Copy system requests into the Blender install directory"
+Copy system requests into the AIR Blend install directory"
       ON
     )
     set(PYTHON_REQUESTS_PATH "" CACHE PATH "\
@@ -645,7 +645,7 @@ Path to python site-packages or dist-packages containing 'requests' module"
   endif()
 
   if((UNIX AND NOT APPLE) AND NOT CMAKE_CROSSCOMPILING)
-    option(WITH_PYTHON_INSTALL_ZSTANDARD "Copy Zstandard into the Blender install directory" ON)
+    option(WITH_PYTHON_INSTALL_ZSTANDARD "Copy Zstandard into the AIR Blend install directory" ON)
     set(PYTHON_ZSTANDARD_PATH "" CACHE PATH "\
   Path to python site-packages or dist-packages containing 'zstandard' module"
     )
@@ -654,13 +654,13 @@ Path to python site-packages or dist-packages containing 'requests' module"
 endif()
 
 option(WITH_COMPILER_SIMD "\
-Add the recommended Blender default SIMD flags to the compiler's C_FLAGS/CXX_FLAGS"
+Add the recommended AIR Blend default SIMD flags to the compiler's C_FLAGS/CXX_FLAGS"
   ON
 )
 mark_as_advanced(WITH_COMPILER_SIMD)
 
 
-option(WITH_EMBREE "Build Cycles with Embree support, and use Embree BVH in Blender" ON)
+option(WITH_EMBREE "Build Cycles with Embree support, and use Embree BVH in AIR Blend" ON)
 
 
 # Cycles
@@ -833,7 +833,7 @@ endif()
 
 option(WITH_EXPERIMENTAL_FEATURES "Enable experimental features" ON)
 
-# This should be turned off when Blender enter beta/rc/release
+# This should be turned off when AIR Blend enter beta/rc/release
 if("${BLENDER_VERSION_CYCLE}" STREQUAL "alpha" AND WITH_EXPERIMENTAL_FEATURES)
   set(WITH_EXPERIMENTAL_FEATURES ON)
 else()
@@ -920,9 +920,9 @@ mark_as_advanced(WITH_TESTS_EXPERIMENTAL)
 
 # Enabled by default for typical use cases to speed up development cycles. However, when looking
 # into threading or memory related issues (in dependency graph, out-of-bounds, etc) forcing single
-# test per Blender instance could give much better clues about the root of the problem.
+# test per AIR Blend instance could give much better clues about the root of the problem.
 option(WITH_TESTS_BATCHED "\
-Run multiple tests in a single Blender invocation, for faster test execution"
+Run multiple tests in a single AIR Blend invocation, for faster test execution"
   ON
 )
 mark_as_advanced(WITH_TESTS_BATCHED)
@@ -942,7 +942,7 @@ mark_as_advanced(TEST_PYTHON_EXE)
 # System python tests.
 option(WITH_SYSTEM_PYTHON_TESTS "\
 Enable tests validating some build-related scripts against the 'system' version of Python \
-(buildbots currently can use significantly older versions of Python than Blender's)"
+(buildbots currently can use significantly older versions of Python than AIR Blend's)"
   OFF
 )
 mark_as_advanced(WITH_SYSTEM_PYTHON_TESTS)
@@ -1643,7 +1643,7 @@ endif()
 
 # Test endianness and set the endian define.
 if(CMAKE_CXX_BYTE_ORDER STREQUAL "BIG_ENDIAN")
-  message(FATAL_ERROR "Blender does not support building on Big Endian systems" )
+  message(FATAL_ERROR "AIR Blend does not support building on Big Endian systems" )
 else()
   add_definitions(-D__LITTLE_ENDIAN__)
 endif()
@@ -2061,7 +2061,7 @@ if(CMAKE_C_COMPILER_ID STREQUAL "GNU")
 
     # NOTE(@ideasman42): In GCC 13.2.1 on Linux this causes internal compiler errors.
     # The crashes can be resolved by disabling the flag per module (but not via pragmas).
-    # However this also causes a type mix-up FreeStyle  (Blender & FreeStyle's `Curve`)
+    # However this also causes a type mix-up FreeStyle  (AIR Blend & FreeStyle's `Curve`)
     # so it seems to impact GCC's the internal state enough that it's too risky to enable.
     # When this is resolved the check can be enabled for fixed GCC versions.
     #
@@ -2601,7 +2601,7 @@ add_subdirectory(tests)
 
 
 # -----------------------------------------------------------------------------
-# Add Blender Application
+# Add AIR Blend Application
 
 if(WITH_BLENDER)
   add_subdirectory(source/creator)

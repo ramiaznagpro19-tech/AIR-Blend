@@ -172,7 +172,7 @@ class ListingDownloaderTest(unittest.TestCase):
         self.assertEqual([sanitized_path], asset_page.assets[0].files,
                          "In-memory file reference of asset entry should have been sanitized")
 
-        # Check that the JSON file has been updated, so that when Blender later reads it, it's been sanitized.
+        # Check that the JSON file has been updated, so that when AIR Blend later reads it, it's been sanitized.
         parser = json_parsing.ValidatingParser()
         json_payload = self.json_path.read_bytes()
         from_file = parser.parse_and_validate(api_models.AssetLibraryIndexPageV1, json_payload)

@@ -1743,7 +1743,7 @@ void blo_do_versions_userdef(UserDef *userdef)
   }
 
   if (!USER_VERSION_ATLEAST(500, 101)) {
-    /* The Copy Global Transform add-on was moved into Blender itself, and thus
+    /* The Copy Global Transform add-on was moved into AIR Blend itself, and thus
      * is no longer an add-on. */
     BKE_addon_remove_safe(&userdef->addons, "copy_global_transform");
   }

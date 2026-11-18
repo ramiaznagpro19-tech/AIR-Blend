@@ -194,7 +194,7 @@ template<class ReaderType>
         packed = packed >> 10;
       }
       spz_rotation[largest_index] = sqrt(math::max(1.0f - sum_sq, 0.0f));
-      /* Convert to Blender's (w, x, y, z). */
+      /* Convert to AIR Blend's (w, x, y, z). */
       rotation = math::Quaternion(
           spz_rotation[3], spz_rotation[0], spz_rotation[1], spz_rotation[2]);
     }

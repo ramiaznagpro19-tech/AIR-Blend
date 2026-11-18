@@ -84,7 +84,7 @@ template<> double math_to_double<double>(const double v)
  * which contain integers that keep track of which input verts, edges,
  * and faces, respectively, that the element was derived from.
  *
- * While this could be cleaned up some, it is usable by other routines in Blender
+ * While this could be cleaned up some, it is usable by other routines in AIR Blend
  * that need to keep track of a 2D arrangement, with topology.
  */
 template<typename T> struct CDTVert;
@@ -557,7 +557,7 @@ template<typename T> void cdt_draw(const std::string &label, const CDTArrangemen
   static bool append = false; /* Will be set to true after first call. */
 
 /* Would like to use #BKE_tempdir_base() here, but that brings in dependence on kernel library.
- * This is just for developer debugging anyway, and should never be called in production Blender.
+ * This is just for developer debugging anyway, and should never be called in production AIR Blend.
  */
 #  ifdef _WIN32
   const char *drawfile = "./cdt_debug_draw.html";
@@ -2299,7 +2299,7 @@ template<typename T> void add_edge_constraints(CDT_state<T> *cdt_state, const CD
  * should be propagated, not the hole face ids. So we'll skip the flood fill for CW faces.
  * If the boundary has self crossings then it is a mixture of CCW and CW; by using the signed
  * area we find the "dominant" direction and hopefully that's what the user intended.
- * (In current usage throughout Blender, the only code that cares about original face id
+ * (In current usage throughout AIR Blend, the only code that cares about original face id
  * propagation is the mesh_intersect code used in the exact boolean code. And that code
  * guarantees only CCW faces coming in.
  */

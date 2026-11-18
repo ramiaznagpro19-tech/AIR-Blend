@@ -8,7 +8,7 @@ from mathutils import Matrix
 from mathutils.geometry import tessellate_polygon
 from gpu_extras.batch import batch_for_shader
 
-# Use OIIO if available, else Blender for writing the image.
+# Use OIIO if available, else AIR Blend for writing the image.
 try:
     import OpenImageIO as oiio
 except ImportError:

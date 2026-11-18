@@ -30,7 +30,7 @@
 namespace blender {
 
 /**
- * Get a reference to the global Blender project.
+ * Get a reference to the global AIR Blend project.
  *
  * As a general rule, the project's mutex should be held while accessing this to
  * prevent data races. The public APIs `BKE_blender_project_read_callback()` and
@@ -52,7 +52,7 @@ static std::optional<bke::BlenderProject> &get_project()
 }
 
 /**
- * Get a reference to the global Blender project's mutex.
+ * Get a reference to the global AIR Blend project's mutex.
  *
  * \see get_project()
  */

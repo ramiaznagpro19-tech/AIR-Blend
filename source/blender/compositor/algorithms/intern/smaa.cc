@@ -292,7 +292,7 @@ namespace blender::compositor {
  */
 
 /* ----------------------------------------------------------------------------
- * Blender's Defines */
+ * AIR Blend's Defines */
 
 #define SMAA_CUSTOM_SL
 #define SMAA_AREATEX_SELECT(sample) sample

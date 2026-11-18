@@ -285,7 +285,7 @@ BlendHandle *BLO_blendhandle_from_memory(const void *mem,
                                          int memsize,
                                          BlendFileReadReport *reports);
 
-/** Returns the major and minor version number of Blender used to create the file. */
+/** Returns the major and minor version number of AIR Blend used to create the file. */
 int3 BLO_blendhandle_get_version(const BlendHandle *bh);
 
 /**

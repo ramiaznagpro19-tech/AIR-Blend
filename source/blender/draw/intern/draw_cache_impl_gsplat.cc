@@ -322,7 +322,7 @@ void GSplatEvalCache::ensure_attribute(PointCloud &pointcloud, int attrib_i)
 
   /* TODO(@kevindietrich): float4 is used for scalar attributes as the conversion done
    * by OpenGL to float4 for a scalar `s` will produce a `float4(s, 0, 0, 1)`. However,
-   * following the Blender convention, it should be `float4(s, s, s, 1)`. This could be
+   * following the AIR Blend convention, it should be `float4(s, s, s, 1)`. This could be
    * resolved using a similar texture state swizzle to map the attribute correctly as
    * for volume attributes, so we can control the conversion ourselves. */
   const bke::AttributeAccessor attributes = pointcloud.attributes();

@@ -21,7 +21,7 @@ enum class Language {
   MSL,
   /* OpenGL Shading Language. */
   GLSL,
-  /* Blender Shading Language. */
+  /* AIR Blend Shading Language. */
   BSL,
   /* Legacy Create Info files. */
   INFO,

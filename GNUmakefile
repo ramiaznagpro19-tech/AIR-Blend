@@ -9,15 +9,15 @@
 
 define HELP_TEXT
 
-Blender Convenience Targets
-   Provided for building Blender (multiple targets can be used at once).
+AIR Blend Convenience Targets
+   Provided for building AIR Blend (multiple targets can be used at once).
 
    * debug:         Build a debug binary.
    * full:          Enable all supported dependencies & options.
    * lite:          Disable non essential features for a smaller binary and faster build.
    * release:       Complete build with all options enabled including CUDA and Optix, matching the releases on blender.org
    * headless:      Build without an interface (renderfarm or server automation).
-   * cycles:        Build Cycles standalone only, without Blender.
+   * cycles:        Build Cycles standalone only, without AIR Blend.
    * bpy:           Build as a python module which can be loaded from python directly.
    * developer:     Enable faster builds, error checking and tests, recommended for developers.
    * ninja:         Use ninja build tool for faster builds.
@@ -41,7 +41,7 @@ Other Convenience Targets
 Cross-Compilation Targets
    When cross-compiling the build directory is suffixed with the target architecture.
    For example 'make android x64 release' builds in '../build_android_x64_release'.
-   All targets below apply to both regular `all` Blender builds and `deps` dependency builds.
+   All targets below apply to both regular `all` AIR Blend builds and `deps` dependency builds.
 
    * android:       Build for Android via cross-compilation.
 
@@ -61,13 +61,13 @@ Package Targets
    * package_archive:   Build an archive package.
 
 Testing Targets
-   Not associated with building Blender.
+   Not associated with building AIR Blend.
 
    * test:
      Run automated tests with ctest.
 
 Static Source Code Checking
-   Not associated with building Blender.
+   Not associated with building AIR Blend.
 
    * check_cppcheck:
      Run blender source through cppcheck (C & C++).
@@ -93,7 +93,7 @@ Documentation Checking
 
    * check_docs_file_structure:
      Check the documentation for the source-tree's file structure
-     matches Blender's source-code.
+     matches AIR Blend's source-code.
      See: https://developer.blender.org/docs/features/code_layout/
 
 Spell Checkers
@@ -116,7 +116,7 @@ Spell Checkers
    See the output of './tools/check_source/check_spelling.py --help' for details.
 
 Utilities
-   Not associated with building Blender.
+   Not associated with building AIR Blend.
 
    * icons_geom:
      Updates Geometry icons from BLEND file.
@@ -158,7 +158,7 @@ Environment Variables
    * ANDROID_NDK_ROOT:		NDK root directory for Android builds, auto-detected if not provided.
 
 Documentation Targets
-   Not associated with building Blender.
+   Not associated with building AIR Blend.
 
    * doc_py:
      Generate sphinx Python API docs.
@@ -272,7 +272,7 @@ ifndef BUILD_DIR
 	BUILD_DIR_BASE:=$(shell dirname "$(BLENDER_DIR)")/build_$(TARGET_OS_NCASE)
 
 	# When cross-compiling, several target architectures may be built from the same host for the
-	# same target OS. Suffix the Blender build directory with the target architecture so their
+	# same target OS. Suffix the AIR Blend build directory with the target architecture so their
 	# CMake caches don't collide. Dependency build directories are already architecture specific.
 	ifdef IS_CROSSCOMPILING
 		BUILD_DIR:=$(BUILD_DIR_BASE)_$(TARGET_CPU)
@@ -422,7 +422,7 @@ endif
 
 
 # -----------------------------------------------------------------------------
-# Blender binary path
+# AIR Blend binary path
 #
 
 # Allow passing in own BLENDER_BIN so developers who don't
@@ -480,12 +480,12 @@ CMAKE_CONFIG_TOOL = $(CMAKE_CONFIG_ENV) $(CMAKE_CONFIG_TOOL_NAME)
 
 
 # -----------------------------------------------------------------------------
-# Build Blender
+# Build AIR Blend
 #
 
 all: .FORCE
 	@echo
-	@echo Configuring Blender in \"$(BUILD_DIR)\" ...
+	@echo Configuring AIR Blend in \"$(BUILD_DIR)\" ...
 
 #	# if test ! -f $(BUILD_DIR)/CMakeCache.txt ; then \
 #	# 	$(CMAKE_CONFIG); \
@@ -495,14 +495,14 @@ all: .FORCE
 	@$(CMAKE_CONFIG)
 
 	@echo
-	@echo Building Blender ...
+	@echo Building AIR Blend ...
 	$(BUILD_COMMAND) -C "$(BUILD_DIR)" -j $(NPROCS) install
 	@echo
 	@echo Edit build configuration with: \"$(BUILD_DIR)/CMakeCache.txt\" run make again to rebuild.
 	@if test -z "$(BLENDER_IS_PYTHON_MODULE)"; then \
-		echo Blender successfully built, run from: $(BLENDER_BIN); \
+		echo AIR Blend successfully built, run from: $(BLENDER_BIN); \
 	else \
-		echo Blender successfully built as a Python module, \"bpy\" can be imported from: $(BLENDER_BIN_DIR); \
+		echo AIR Blend successfully built as a Python module, \"bpy\" can be imported from: $(BLENDER_BIN_DIR); \
 	fi
 	@echo
 
@@ -556,7 +556,7 @@ deps: .FORCE
 # -----------------------------------------------------------------------------
 # Cross-compilation targets and info banner
 
-# Ensure the banner is displayed *before* normal Blender (`all`) and `deps` builds.
+# Ensure the banner is displayed *before* normal AIR Blend (`all`) and `deps` builds.
 ifdef IS_CROSSCOMPILING
 all deps: _cross_compile_info
 endif
@@ -567,8 +567,8 @@ _cross_compile_info: .FORCE
 # Platform targets
 android: _cross_compile_info
 
-# Allow simple `make <target_os>` invocations to build Blender, while making sure `make deps <target_os>` doesn't
-# also trigger an additional Blender build. Filter-out cross-compilation specifiers and only build if nothing remains.
+# Allow simple `make <target_os>` invocations to build AIR Blend, while making sure `make deps <target_os>` doesn't
+# also trigger an additional AIR Blend build. Filter-out cross-compilation specifiers and only build if nothing remains.
 ifeq ($(strip $(filter-out android arm64 x64,$(MAKECMDGOALS))),)  # Compare with nothing.
 android: all
 endif

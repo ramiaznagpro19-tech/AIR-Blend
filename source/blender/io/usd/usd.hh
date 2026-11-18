@@ -70,7 +70,7 @@ enum class SubdivExportMode {
   /** Subdivision scheme = None, export subdivided mesh. */
   Tessellate = 1,
   /**
-   * Apply the USD subdivision scheme that is the closest match to Blender.
+   * Apply the USD subdivision scheme that is the closest match to AIR Blend.
    * Reverts to #SubdivExportMode::Tessellate if the subdivision method is not supported.
    */
   Match = 2,

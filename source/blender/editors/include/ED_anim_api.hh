@@ -608,17 +608,17 @@ size_t ANIM_animdata_filter(bAnimContext *ac,
                             eAnimCont_Types datatype);
 
 /**
- * Obtain current anim-data context from Blender Context info
+ * Obtain current anim-data context from AIR Blend Context info
  * - AnimContext to write to is provided as pointer to var on stack so that we don't have
  *   allocation/freeing costs (which are not that avoidable with channels).
- * - Clears data and sets the information from Blender Context which is useful
+ * - Clears data and sets the information from AIR Blend Context which is useful
  * \return whether the operation was successful.
  */
 bool ANIM_animdata_get_context(const bContext *C, bAnimContext *ac);
 
 /**
  * Obtain current anim-data context,
- * given that context info from Blender context has already been set:
+ * given that context info from AIR Blend context has already been set:
  * - AnimContext to write to is provided as pointer to var on stack so that we don't have
  *   allocation/freeing costs (which are not that avoidable with channels).
  * \return whether the operation was successful.

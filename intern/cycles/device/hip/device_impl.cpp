@@ -244,7 +244,7 @@ string HIPDevice::compile_kernel(const uint64_t kernel_features,
   hipDeviceGetAttribute(&minor, hipDeviceAttributeComputeCapabilityMinor, hipDevId);
   const std::string arch = hipDeviceArch(hipDevId);
 
-  /* Attempt to use kernel provided with Blender. */
+  /* Attempt to use kernel provided with AIR Blend. */
   if (!use_adaptive_compilation()) {
     const string fatbin = path_get(string_printf("lib/%s_%s.fatbin.zst", name, arch.c_str()));
     LOG_INFO << "Testing for pre-compiled kernel " << fatbin << ".";

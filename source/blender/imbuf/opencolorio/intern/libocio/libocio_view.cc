@@ -10,7 +10,7 @@ int LibOCIOView::max_nits() const
 {
   /* This is current based on heuristics using the view transform name, as OpenColorIO has no
    * standard way to specify this. Recognizes "- SDR" and "- HDR XXXX nits" as used by the
-   * Blender and ACES configs. */
+   * AIR Blend and ACES configs. */
   const StringRefNull n = name_;
   if (n.endswith(" - SDR")) {
     return 100;

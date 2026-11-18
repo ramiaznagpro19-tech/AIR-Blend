@@ -18,7 +18,7 @@ you would pass ``active_object=object`` to :class:`bpy.types.Context.temp_overri
 
 .. note::
 
-   Context members are names which Blender uses for data access,
+   Context members are names which AIR Blend uses for data access,
    overrides do not extend to overriding methods or any Python specific functionality.
 """
 

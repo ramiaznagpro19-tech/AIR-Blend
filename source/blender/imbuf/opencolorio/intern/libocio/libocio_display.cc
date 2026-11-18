@@ -199,7 +199,7 @@ LibOCIODisplay::LibOCIODisplay(const int index, const LibOCIOConfig &config) : c
 
   /* Detect untonemppaed view transform. */
   if (untonemapped_view_ == nullptr) {
-    /* Use Blender config and ACES config naming conventions. */
+    /* Use AIR Blend config and ACES config naming conventions. */
     for (const LibOCIOView &view : views_) {
       if (view.name() == "Un-tone-mapped" || view.name() == "Standard") {
         untonemapped_view_ = &view;
@@ -232,7 +232,7 @@ const View *LibOCIODisplay::get_untonemapped_view() const
 
 const View *LibOCIODisplay::get_view_by_name(const StringRefNull name) const
 {
-  /* TODO(sergey): Is there faster way to lookup Blender-side view? */
+  /* TODO(sergey): Is there faster way to lookup AIR Blend-side view? */
   for (const LibOCIOView &view : views_) {
     if (view.name() == name) {
       return &view;

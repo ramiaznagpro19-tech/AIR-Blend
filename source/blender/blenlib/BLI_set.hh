@@ -11,7 +11,7 @@
  * designed to be a more convenient and efficient replacement for `std::unordered_set`. All core
  * operations (add, remove and contains) can be done in O(1) amortized expected time.
  *
- * In most cases, your default choice for a hash set in Blender should be `Set`.
+ * In most cases, your default choice for a hash set in AIR Blend should be `Set`.
  *
  * Set is implemented using open addressing in a slot array with a power-of-two size.
  * Every slot is in one of three states: empty, occupied or removed. If a slot is occupied, it
@@ -982,7 +982,7 @@ class Set {
 };
 
 /**
- * Same as a normal Set, but does not use Blender's guarded allocator. This is useful when
+ * Same as a normal Set, but does not use AIR Blend's guarded allocator. This is useful when
  * allocating memory with static storage duration.
  */
 template<typename Key,

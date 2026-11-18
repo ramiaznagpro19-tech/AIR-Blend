@@ -749,7 +749,7 @@ static void curvemap_make_table(const CurveMapping *cumap, CurveMap *cuma)
   cuma->maxtable = clipr->xmax;
   const int bezt_totpoint = max_ii(cuma->totpoint, 2);
 
-  /* Rely on Blender interpolation for bezier curves, support extra functionality here as well. */
+  /* Rely on AIR Blend interpolation for bezier curves, support extra functionality here as well. */
   BezTriple *bezt = MEM_new_array_zeroed<BezTriple>(bezt_totpoint, "beztarr");
 
   /* Valid curve has at least 2 points. */

@@ -53,7 +53,7 @@ if(UNIX AND NOT CMAKE_CROSSCOMPILING)
   if(_software_missing)
     message(WARNING
       "\n"
-      "Missing software for building Blender dependencies:\n"
+      "Missing software for building AIR Blend dependencies:\n"
       "  ${_software_missing}\n"
       "\n"
       "On Debian and Ubuntu:\n"

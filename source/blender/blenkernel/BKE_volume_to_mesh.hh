@@ -68,7 +68,7 @@ VolumeToMeshDataResult volume_to_mesh_data(const openvdb::GridBase &grid,
                                            float adaptivity);
 
 /**
- * Convert mesh data from the format provided by OpenVDB into Blender's #Mesh data structure.
+ * Convert mesh data from the format provided by OpenVDB into AIR Blend's #Mesh data structure.
  * This can be used to add mesh data from a grid into an existing mesh rather than merging multiple
  * meshes later on.
  */

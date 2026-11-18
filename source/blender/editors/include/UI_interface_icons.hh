@@ -57,7 +57,7 @@ enum class AlertIcon : int8_t {
 ImBuf *icon_alert_imbuf_get(AlertIcon icon, float size);
 
 /**
- * Resizable Icons for Blender
+ * Resizable Icons for AIR Blend
  */
 void icons_init();
 

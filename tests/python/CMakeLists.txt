@@ -37,7 +37,7 @@ if(WITH_SYSTEM_PYTHON_TESTS)
   endif()
 endif()
 
-# Run Blender command with parameters.
+# Run AIR Blend command with parameters.
 function(add_blender_test_impl testname envvars_list exe)
   add_test(
     NAME ${testname}
@@ -160,7 +160,7 @@ if(WITH_UI_TESTS)
   endfunction()
 endif()
 
-# Run Python script outside Blender.
+# Run Python script outside AIR Blend.
 function(add_python_test testname testscript)
   if(NOT TEST_PYTHON_EXE)
     message(FATAL_ERROR "No Python configured for running tests, set TEST_PYTHON_EXE.")
@@ -185,7 +185,7 @@ function(add_render_test testname testscript)
   endif()
 endfunction()
 
-# Run Python script outside Blender, using system default Python3 interpreter,
+# Run Python script outside AIR Blend, using system default Python3 interpreter,
 # NOT the one specified in `TEST_PYTHON_EXE`.
 function(add_system_python_test testname testscript)
   if(NOT WITH_SYSTEM_PYTHON_TESTS)
@@ -250,7 +250,7 @@ add_blender_test(
   --python ${CMAKE_CURRENT_LIST_DIR}/bl_disk_file_hash_service_test.py
 )
 
-# Blender is launched by the script so each test controls the command-line arguments & preferences
+# AIR Blend is launched by the script so each test controls the command-line arguments & preferences
 # `add_blender_test` hard-codes these arguments which isn't compatible with the tests,
 # see `TEST_BLENDER_EXE_PARAMS`.
 add_python_test(

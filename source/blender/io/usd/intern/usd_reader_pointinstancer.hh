@@ -14,7 +14,7 @@ struct Collection;
 
 namespace io::usd {
 
-/* Wraps the UsdGeomPointInstancer schema. Creates a Blender point cloud object. */
+/* Wraps the UsdGeomPointInstancer schema. Creates an AIR Blend point cloud object. */
 
 class USDPointInstancerReader : public USDGeomReader {
  private:

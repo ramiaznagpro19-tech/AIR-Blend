@@ -2,8 +2,8 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-# Populate a template file (POT format currently) from Blender RNA/py/C data.
-# XXX: This script is meant to be used from inside Blender!
+# Populate a template file (POT format currently) from AIR Blend RNA/py/C data.
+# XXX: This script is meant to be used from inside AIR Blend!
 #      You should not directly use this script, rather use ui_translate core add-on!
 
 __all__ = (
@@ -17,7 +17,7 @@ import sys
 import glob
 from pathlib import PurePath
 
-# XXX Relative import does not work here when used from Blender...
+# XXX Relative import does not work here when used from AIR Blend...
 from _bl_i18n_utils import settings as settings_i18n, utils
 
 import bpy
@@ -963,7 +963,7 @@ def dump_template_messages(msgs, reports, settings):
 
 
 def dump_ocio_config(msgs, reports, settings):
-    # This assumes the default Blender config is used when we extract messages.
+    # This assumes the default AIR Blend config is used when we extract messages.
     import PyOpenColorIO as OCIO
     config = OCIO.GetCurrentConfig()
     translation_context = bpy.app.translations.contexts.color_management
@@ -1192,7 +1192,7 @@ def dump_extension_metadata(msgs, reports, settings):
 
 ##### Main functions! #####
 def dump_messages(do_messages, do_checks, settings):
-    bl_ver = "Blender " + bpy.app.version_string
+    bl_ver = "AIR Blend " + bpy.app.version_string
     bl_hash = bpy.app.build_hash
     bl_time = time.strptime(f"{bpy.app.build_date.decode()} {bpy.app.build_time.decode()} UTC", "%Y-%m-%d %H:%M:%S %Z")
     pot = utils.I18nMessages.gen_empty_messages(
@@ -1205,7 +1205,7 @@ def dump_messages(do_messages, do_checks, settings):
     # Note this is not needed if we have been started with factory settings, but just in case...
     # XXX This is not working well, spent a whole day trying to understand *why* we still have references of
     #     those removed classes in things like `bpy.types.OperatorProperties.__subclasses__()`
-    #     (could not even reproduce it from regular py console in Blender with UI...).
+    #     (could not even reproduce it from regular py console in AIR Blend with UI...).
     #     For some reasons, cleanup does not happen properly, *and* we have no way to tell which class is valid
     #     and which has been unregistered. So for now, just go for the dirty, easy way: do not disable add-ons. :(
     # ~ utils.enable_addons(support={"COMMUNITY"}, disable=True)
@@ -1246,7 +1246,7 @@ def dump_messages(do_messages, do_checks, settings):
             bpy.context,
     ):
         if label in system_categories:
-            # Only process add-on if it a system one (i.e shipped with Blender). Also,
+            # Only process add-on if it a system one (i.e shipped with AIR Blend). Also,
             # we do want to translate official categories, even if they have no official add-ons,
             # hence the different test than below.
             process_msg(msgs, settings.DEFAULT_CONTEXT, label, "Add-ons' categories", reports, None, settings)
@@ -1368,10 +1368,10 @@ def dump_addon_messages(addon_module_name, do_checks, settings):
 def main():
     import argparse
 
-    # Get rid of Blender args!
+    # Get rid of AIR Blend args!
     argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
 
-    parser = argparse.ArgumentParser(description="Process UI messages from inside Blender.")
+    parser = argparse.ArgumentParser(description="Process UI messages from inside AIR Blend.")
     parser.add_argument('-c', '--no_checks', default=True, action="store_false", help="No checks over UI messages.")
     parser.add_argument('-m', '--no_messages', default=True, action="store_false", help="No export of UI messages.")
     parser.add_argument('-o', '--output', default=None, help="Output POT file path.")

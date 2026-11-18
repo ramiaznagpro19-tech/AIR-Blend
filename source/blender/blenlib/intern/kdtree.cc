@@ -8,7 +8,7 @@
  * \ingroup bli
  *
  * A KD-tree for nearest neighbor search, which started from the nanoflann library and has since
- * been rewritten around Blender's own containers, threading and math. The node layout and the way
+ * been rewritten around AIR Blend's own containers, threading and math. The node layout and the way
  * a search walks it are still recognizably nanoflann's, which is where the copyright above comes
  * from.
  */

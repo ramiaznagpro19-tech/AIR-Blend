@@ -129,7 +129,7 @@ def _setup(dirpath_temp, *, use_autoexec, autoexec_override=None):
     Save a blend-file in a trusted & an excluded directory of ``dirpath_temp``.
 
     :arg autoexec_override: The value of "--enable-autoexec" or "--disable-autoexec"
-       Blender was started with, None when neither was passed.
+       AIR Blend was started with, None when neither was passed.
     """
     import bpy
     import os
@@ -449,7 +449,7 @@ def pref_disabled_drop_blend_file_trusted_source():
 # -----------------------------------------------------------------------------
 # Tests with `--enable-autoexec` Overriding the Preference
 #
-# Blender is started with the argument, see the CMake test definitions.
+# AIR Blend is started with the argument, see the CMake test definitions.
 
 
 def pref_disabled_drop_blend_file_enable_autoexec():
@@ -544,7 +544,7 @@ def pref_enabled_open_file_selector_untrusted_enable_autoexec():
 # -----------------------------------------------------------------------------
 # Tests with `--disable-autoexec` Overriding the Preference
 #
-# Blender is started with the argument, see the CMake test definitions.
+# AIR Blend is started with the argument, see the CMake test definitions.
 
 
 def pref_enabled_drop_blend_file_disable_autoexec():

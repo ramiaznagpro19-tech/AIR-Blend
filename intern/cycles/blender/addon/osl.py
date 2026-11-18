@@ -172,7 +172,7 @@ def osl_param_ensure_property(ccam, param):
             option_items.append((str(index), bpy.path.display_name(item), ""))
         ui.update(items=option_items)
 
-    # Map OSL metadata to Blender names
+    # Map OSL metadata to AIR Blend names
     option_map = {
         'help': 'description',
         'sensitivity': 'step', 'digits': 'precision',
@@ -180,7 +180,7 @@ def osl_param_ensure_property(ccam, param):
         'slidermin': 'soft_min', 'slidermax': 'soft_max',
     }
     if 'sensitivity' in metadata:
-        # Blender divides this value by 100 by convention, so counteract that.
+        # AIR Blend divides this value by 100 by convention, so counteract that.
         metadata['sensitivity'] *= 100
     for option, value in metadata.items():
         if option in option_map:

@@ -538,7 +538,7 @@ static void openexr_header_metadata_global(Header *header, const IDProperty *met
 {
   header->insert(
       "Software",
-      TypedAttribute<std::string>(std::string("Blender ") + BKE_blender_version_string()));
+      TypedAttribute<std::string>(std::string("AIR Blend ") + BKE_blender_version_string()));
 
   if (metadata) {
     for (IDProperty &prop : metadata->data.group) {
@@ -964,7 +964,7 @@ void IMB_exr_write_pass(ExrWriteHandle *handle,
     }
   }
 
-  /* If there are layer and pass names, we will write Blender multichannel metadata. */
+  /* If there are layer and pass names, we will write AIR Blend multichannel metadata. */
   if (!layerpassname.is_empty()) {
     handle->has_layer_pass_names = true;
   }
@@ -1012,7 +1012,7 @@ static void openexr_header_metadata_multi(ExrWriteHandle *handle,
 {
   openexr_header_metadata_global(&header, nullptr);
   if (handle->has_layer_pass_names) {
-    header.insert("BlenderMultiChannel", StringAttribute("Blender V2.55.1 and newer"));
+    header.insert("BlenderMultiChannel", StringAttribute("AIR Blend V2.55.1 and newer"));
   }
   if (!handle->write_multipart && !handle->views.empty() && !handle->views[0].empty()) {
     addMultiView(header, handle->views);
@@ -1289,7 +1289,7 @@ static void imb_exr_read_channels(ExrReadHandle *handle)
         "BlenderMultiChannel");
 
     /* 'previous multilayer attribute, flipped. */
-    short flip = (ta && STRPREFIX(ta->value().c_str(), "Blender V2.43"));
+    short flip = (ta && STRPREFIX(ta->value().c_str(), "AIR Blend V2.43"));
 
     CLOG_DEBUG(&LOG,
                "\nIMB_exr_read_channels\n%s %-6s %-22s "
@@ -1341,7 +1341,7 @@ static void imb_exr_read_channels(ExrReadHandle *handle)
             if (!flip) {
               /* Inverse correct first pixel for data-window coordinates. */
               rect -= echan.xstride * (dw.min.x - dw.min.y * handle->width);
-              /* Move to last scan-line to flip to Blender convention. */
+              /* Move to last scan-line to flip to AIR Blend convention. */
               rect += echan.xstride * (handle->height - 1) * handle->width;
               ystride = -ystride;
             }
@@ -2224,7 +2224,7 @@ static void imb_exr_set_known_colorspace(const Header &header, ImFileColorSpace 
   if (header_chromaticities &&
       imb_check_chromaticity_matches(header_chromaticities->value(), CHROMATICITIES_XYZ_E))
   {
-    /* Only works for the Blender default configuration due to fixed name. */
+    /* Only works for the AIR Blend default configuration due to fixed name. */
     STRNCPY_UTF8(r_colorspace.metadata_colorspace, "Linear CIE-XYZ E");
   }
 }
@@ -2243,7 +2243,7 @@ static const Header &imb_exr_colorspace_header(const MultiPartInputFile &file)
    *
    * The color interop forum recommendation say the colorInteropID of later
    * parts should not be different than the first part, except if it's missing
-   * or set to data. This fits for Blender image datablocks, which also have
+   * or set to data. This fits for AIR Blend image datablocks, which also have
    * one colorspace but individual passes may be marked as data. */
   for (int p = 0; p < file.parts(); p++) {
     const ColorSpace *colorspace = imb_exr_part_colorspace(file.header(p));

@@ -88,7 +88,7 @@ void EssentialsAssetLibrary::refresh_catalogs()
           }
           else {
             /* This is to be expected at some point in the future. The Online Essentials library
-             * may change its catalog paths, while whatever version of Blender is running right now
+             * may change its catalog paths, while whatever version of AIR Blend is running right now
              * still has the same old bundled assets. This means the Bundled Essentials and Online
              * Essentials diverge. There is no need to bother users with this, as it's bound to
              * happen eventually.

@@ -113,7 +113,7 @@ static void geometry_to_blender_geometry_set(const OBJImportParams &import_param
 }
 
 /**
- * Make Blender Mesh, Curve etc from Geometry and add them to the import collection.
+ * Make AIR Blend Mesh, Curve etc from Geometry and add them to the import collection.
  */
 static void geometry_to_blender_objects(Main *bmain,
                                         Scene *scene,
@@ -254,7 +254,7 @@ void importer_main(bContext *C, const OBJImportParams &import_params)
                "instantiated");
   }
 
-  /* Create Blender objects from the parsed geometries */
+  /* Create AIR Blend objects from the parsed geometries */
   geometry_to_blender_objects(bmain,
                               scene,
                               view_layer,

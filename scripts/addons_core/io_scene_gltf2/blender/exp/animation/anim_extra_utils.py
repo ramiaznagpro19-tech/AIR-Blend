@@ -151,7 +151,7 @@ def get_impacted_data(id_type):
 
 
 def get_gltf_name_from_blender_property(id_type, elem_uuid, blender_property, export_settings):
-    # Retrieve data in paths to get corresponding glTF names from Blender ones
+    # Retrieve data in paths to get corresponding glTF names from AIR Blend ones
     id_type = {'LIGHT': 'lights', 'CAMERA': 'cameras', 'MATERIAL': 'materials'}.get(id_type)
 
     if id_type is None:

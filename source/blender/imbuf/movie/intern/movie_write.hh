@@ -70,7 +70,7 @@ struct MovieWriter {
   AVFrame *current_frame = nullptr; /* Image frame in output pixel format. */
   int video_time = 0;
 
-  /* Image frame in Blender's own pixel format, may need conversion to the output pixel format. */
+  /* Image frame in AIR Blend's own pixel format, may need conversion to the output pixel format. */
   AVFrame *img_convert_frame = nullptr;
   SwsContext *img_convert_ctx = nullptr;
 

@@ -286,7 +286,7 @@ static PyObject *ContextFunctions_get_selected_fedge(PyObject * /*self*/)
 PyDoc_STRVAR(
     /* Wrap. */
     module_docstring,
-    "The Blender Freestyle.ContextFunctions submodule\n"
+    "The AIR Blend Freestyle.ContextFunctions submodule\n"
     "\n");
 /*-----------------------ContextFunctions module functions definitions-------------------*/
 

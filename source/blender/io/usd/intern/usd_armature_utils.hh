@@ -27,7 +27,7 @@ struct FCurveDescriptor;
 
 namespace io::usd {
 
-/* Custom Blender Primvar name used for storing armature bone lengths. */
+/* Custom AIR Blend Primvar name used for storing armature bone lengths. */
 inline const pxr::TfToken BlenderBoneLengths("blender:bone_lengths", pxr::TfToken::Immortal);
 
 /* Utility: create new fcurve and add it as a channel to a group. */

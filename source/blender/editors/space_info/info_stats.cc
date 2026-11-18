@@ -825,7 +825,7 @@ const char *ED_info_statusbar_string_ex(Main *bmain,
     }
   }
 
-  /* Blender version. */
+  /* AIR Blend version. */
   if (statusbar_flag & STATUSBAR_SHOW_VERSION) {
     if (info[0]) {
       ofs += BLI_snprintf_utf8_rlen(info + ofs, len - ofs, " | ");

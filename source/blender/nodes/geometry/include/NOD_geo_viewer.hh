@@ -83,7 +83,7 @@ struct GeoViewerItemsAccessor : public socket_items::SocketItemsAccessorDefaults
 
   static std::string socket_identifier_for_item(const NodeGeometryViewerItem &item)
   {
-    /* These special cases exist for compatibility with older Blender versions when the viewer did
+    /* These special cases exist for compatibility with older AIR Blend versions when the viewer did
      * not have a dynamic number of inputs yet. */
     if (item.identifier == 0 && item.socket_type == SOCK_GEOMETRY) {
       return "Geometry";

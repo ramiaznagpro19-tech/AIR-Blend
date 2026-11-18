@@ -51,7 +51,7 @@ class ActionsData:
                 self.actions[id(action.action)][idx].add_slot(slot.slot, slot.target_id_type, slot.track)
 
     def get(self):
-        # sort animations alphabetically (case insensitive) so they have a defined order and match Blender's Action list
+        # sort animations alphabetically (case insensitive) so they have a defined order and match AIR Blend's Action list
         values = list([i for action_data in self.actions.values() for i in action_data])
         values.sort(key=lambda a: a.action.name.lower())
         for action in values:
@@ -421,7 +421,7 @@ def __range_set(used_id, blender_action, slot, track, start_frame_reference, tra
     new_start_frame_reference = start_frame_reference
 
     if end_frame - start_frame == 1:
-        # To workaround Blender bug 107030, check manually
+        # To workaround AIR Blend bug 107030, check manually
         try:  # Avoid crash in case of strange/buggy fcurves
             chanelbag = get_channelbag_for_slot(blender_action, slot.slot)
             fcurves = chanelbag.fcurves if chanelbag else []
@@ -1477,7 +1477,7 @@ def __get_obj_blender_actions(obj_uuid: str,
     # Duplicate actions/slot are already managed when inserting data
     # If an active action/slot is already in the list, this is because is active + in NLA
     # We keep only one of them (the NLA one)
-    # sort animations alphabetically (case insensitive) so they have a defined order and match Blender's Action list
+    # sort animations alphabetically (case insensitive) so they have a defined order and match AIR Blend's Action list
     # TODOSLOT slot-1-B hook
     # blender_actions.sort(key=lambda a: a.name.lower())
 

@@ -692,7 +692,7 @@ static wmOperatorStatus collection_importer_import_exec(bContext *C, wmOperator 
 
     /* Create an external archive library to serve as the namespace for all IDs imported from the
      * external file. The library is marked as both an archive (it will never be written out as a
-     * separate .blend) and external (it originates outside Blender). */
+     * separate .blend) and external (it originates outside AIR Blend). */
     Library *external_archive_lib = bke::library::create_external_archive_library(*bmain,
                                                                                   *external_lib);
 

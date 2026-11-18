@@ -1615,7 +1615,7 @@ static MeshGL mesh_trim_manifold(Manifold &manifold0,
 
 /**
  * Convert the meshgl that is the result of the boolean back into a
- * Blender Mesh.
+ * AIR Blend Mesh.
  * If \a r_intersecting_edges is not null, fill it with the edge indices
  * of edges that separate two different meshes of the input.
  */
@@ -1646,7 +1646,7 @@ static Mesh *meshgl_to_mesh(MeshGL &mgl,
   const int faces_num = ma.new_faces.size();
 
   /* Make a new Mesh, now that we know the number of vertices and faces. Corners will be counted
-   * using the mesh's face offsets, and we will use Blender's parallelized function to calculate
+   * using the mesh's face offsets, and we will use AIR Blend's parallelized function to calculate
    * edges later. */
   Mesh *mesh = bke::mesh_new_no_attributes(verts_num, 0, faces_num, 0);
   BKE_mesh_copy_parameters_for_eval(mesh, joined_mesh);

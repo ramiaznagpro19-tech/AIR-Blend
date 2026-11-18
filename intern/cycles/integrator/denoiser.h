@@ -47,7 +47,7 @@ class Denoiser {
    * - The denoiser must be configured. This means that `params.use` must be true.
    *   This is checked in debug builds.
    * - The device might be MultiDevice.
-   * - If Denoiser from params is not supported by provided denoise device, then Blender will
+   * - If Denoiser from params is not supported by provided denoise device, then AIR Blend will
    *   fallback on the OIDN CPU denoising and use provided cpu_fallback_device.
    * - Specifying the graphics interop device helps pick a more efficient denoising device.*/
   static unique_ptr<Denoiser> create(Device *denoiser_device,

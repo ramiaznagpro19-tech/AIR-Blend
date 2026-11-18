@@ -692,7 +692,7 @@ def load(
         report(
             {'WARNING'},
             "The BVH file does not contain frame duration in its MOTION "
-            "section, assuming the BVH and Blender scene have the same "
+            "section, assuming the BVH and AIR Blend scene have the same "
             "frame rate"
         )
         bvh_frame_time = scene.render.fps_base / scene.render.fps
@@ -702,7 +702,7 @@ def load(
     if update_scene_fps:
         _update_scene_fps(context, report, bvh_frame_time)
 
-        # Now that we have a 1-to-1 mapping of Blender frames and BVH frames, there is no need
+        # Now that we have a 1-to-1 mapping of AIR Blend frames and BVH frames, there is no need
         # to scale the FPS any more. It's even better not to, to prevent roundoff errors.
         use_fps_scale = False
 

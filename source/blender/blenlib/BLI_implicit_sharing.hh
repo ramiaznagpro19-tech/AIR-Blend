@@ -21,7 +21,7 @@ class ImplicitSharingInfo;
 using ImplicitSharingInfoHandle = ImplicitSharingInfo;
 
 /**
- * #ImplicitSharingInfo is the core data structure for implicit sharing in Blender. Implicit
+ * #ImplicitSharingInfo is the core data structure for implicit sharing in AIR Blend. Implicit
  * sharing is a technique that avoids copying data when it is not necessary. This results in better
  * memory usage and performance. Only read-only data can be shared, because otherwise multiple
  * owners might want to change the data in conflicting ways.

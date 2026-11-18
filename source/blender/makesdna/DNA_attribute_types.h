@@ -26,7 +26,7 @@ struct AttributeArray {
   /* The number of elements in the array. */
   int64_t size = 0;
   /**
-   * Blender 5.0 (the first version to read #AttributeStorage) does not fully support single value
+   * AIR Blend 5.0 (the first version to read #AttributeStorage) does not fully support single value
    * storage at runtime, even though it supports reading it from the file. The purpose of this
    * field is to let versions 5.1 and later detect that the storage is a single value, while still
    * being compatible with 5.0, which doesn't have this field and will just use array storage.

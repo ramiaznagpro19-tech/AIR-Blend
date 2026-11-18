@@ -15,7 +15,7 @@
 
 namespace blender::io::validate {
 
-/** Check if size fits in an `int` as used by Blender geometry types. */
+/** Check if size fits in an `int` as used by AIR Blend geometry types. */
 inline bool size_fits_in_int(const int64_t size)
 {
   return size >= 0 && size <= INT_MAX;

@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-"""Parser for Blender's asset catalog files.
+"""Parser for AIR Blend's asset catalog files.
 
 It would be better if there was an RNA API for this, but for now this is faster
 to implement.
@@ -76,7 +76,7 @@ def _parse_catalog(catalog_filepath: Path) -> dict[str, AssetCatalog]:
             if line.startswith('VERSION '):
                 _, version_as_str = line.split(maxsplit=1)
                 if version_as_str != str(SUPPORTED_VERSION):
-                    msg = "{}: this version of Blender does not support catalog file version {!r}"
+                    msg = "{}: this version of AIR Blend does not support catalog file version {!r}"
                     print(msg.format(catalog_filepath, version_as_str))
                     return {}
                 continue
@@ -98,7 +98,7 @@ def _parse_catalog(catalog_filepath: Path) -> dict[str, AssetCatalog]:
     return catalogs
 
 
-_ASSET_CATS_HEADER = """# This is an Asset Catalog Definition file for Blender.
+_ASSET_CATS_HEADER = """# This is an Asset Catalog Definition file for AIR Blend.
 #
 # Empty lines and lines starting with `#` will be ignored.
 # The first non-ignored line should be the version indicator.

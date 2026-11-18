@@ -2,8 +2,8 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-# Populate a template file (POT format currently) from Blender RNA/py/C data.
-# Note: This script is meant to be used from inside Blender!
+# Populate a template file (POT format currently) from AIR Blend RNA/py/C data.
+# Note: This script is meant to be used from inside AIR Blend!
 
 import os
 
@@ -468,11 +468,11 @@ def main():
     import sys
     import argparse
 
-    # Get rid of Blender args!
+    # Get rid of AIR Blend args!
     argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
 
     parser = argparse.ArgumentParser(
-        description="Use Blender to generate previews for currently open Blender file's items.",
+        description="Use AIR Blend to generate previews for currently open AIR Blend file's items.",
     )
     parser.add_argument(
         '--clear',
@@ -508,7 +508,7 @@ def main():
         '--no_data_intern',
         default=True,
         action="store_false",
-        help="Do not generate/clear previews for mat/tex/image/etc. IDs (those handled by core Blender code).",
+        help="Do not generate/clear previews for mat/tex/image/etc. IDs (those handled by core AIR Blend code).",
     )
     args = parser.parse_args(argv)
 

@@ -66,7 +66,7 @@ struct AlembicExportParams {
 
 struct AlembicImportParams {
   /* Multiplier for the cached data scale. Mostly useful if the data is stored in a different unit
-   * as what Blender expects (e.g. centimeters instead of meters). */
+   * as what AIR Blend expects (e.g. centimeters instead of meters). */
   float global_scale;
 
   Vector<std::string> paths;

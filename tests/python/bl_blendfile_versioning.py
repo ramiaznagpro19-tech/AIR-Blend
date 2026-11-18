@@ -124,180 +124,180 @@ class TestBlendFileOpenLinkSaveAllTestFiles(TestHelper):
         # This mapping stores filenames as keys, and expected error message as value.
         self.invalid_paths = {
             # animation/driver-object-eyes.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "driver-object-eyes.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
 
             # modeling/faceselectmode.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "faceselectmode.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # modeling/weight-paint_test.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "weight-paint_test.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
 
             # io_tests/blend_big_endian/1.62/glass.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "glass.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/1.62/room.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "room.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/1.69/s-mesh.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "s-mesh.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/1.70/escher.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "escher.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/1.98/egypt.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "egypt.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.25/FroggyPacked.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "FroggyPacked.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.30/CtrlObject.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "CtrlObject.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.30/demofile.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "demofile.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.30/dolphin.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "dolphin.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.30/mball.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "mball.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.30/motor9.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "motor9.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.30/relative.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "relative.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.31/Raptor.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "Raptor.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.31/allselect.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "allselect.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.31/arealight.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "arealight.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.31/hairball.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "hairball.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.31/luxo.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "luxo.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.31/monkey_cornelius.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "monkey_cornelius.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.31/refract_monkey.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "refract_monkey.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.31/robo.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "robo.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.34/flippedmatrixes.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "flippedmatrixes.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.34/lostride.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "lostride.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.34/tapercurve.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "tapercurve.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.36/pathdist.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "pathdist.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_big_endian/2.76/bird_sintel.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "bird_sintel.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
             # io_tests/blend_parsing/BHead4_big_endian.blend
-            # File generated from a big endian build of Blender.
+            # File generated from a big endian build of AIR Blend.
             "BHead4_big_endian.blend": (
                 (OSError, RuntimeError),
-                "created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0"
+                "created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0"
             ),
 
             # invalid_blendfiles/invalid_sdna_struct_size.blend

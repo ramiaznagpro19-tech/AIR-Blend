@@ -202,8 +202,8 @@ ccl_device_inline float half_to_float(half h)
 #elif defined(__KERNEL_CUDA__) || defined(__KERNEL_HIP__)
   return __half2float(h);
 /* We assume half instructions are always supported when there is ARM Neon,
- * which implies ARMv8.2-A+. There is no official Blender minimum, but is
- * already assumed elsewhere in Blender and not that recent. */
+ * which implies ARMv8.2-A+. There is no official AIR Blend minimum, but is
+ * already assumed elsewhere in AIR Blend and not that recent. */
 #elif defined(__ARM_NEON) || defined(_M_ARM64)
   uint16x4_t v = vdup_n_u16(uint16_t(h));
   return vgetq_lane_f32(vcvt_f32_f16(vreinterpret_f16_u16(v)), 0);

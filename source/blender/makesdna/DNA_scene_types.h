@@ -1107,7 +1107,7 @@ struct UnifiedPaintSettings {
   /** Unified diameter of brush in pixels. */
   int size = 100;
 
-  /** Unified diameter of brush in Blender units. */
+  /** Unified diameter of brush in AIR Blend units. */
   float unprojected_size = 0.58;
 
   /** Unified strength of brush. */
@@ -1523,7 +1523,7 @@ struct Sculpt {
   float gravity_factor = 0;
 
   /* Scale for constant detail size. */
-  /** Constant detail resolution (Blender unit / constant_detail). */
+  /** Constant detail resolution (AIR Blend unit / constant_detail). */
   float constant_detail = 3.0f;
   float detail_percent = 25;
 

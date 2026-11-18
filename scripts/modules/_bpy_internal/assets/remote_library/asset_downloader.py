@@ -258,7 +258,7 @@ class AssetDownloader:
     """How often the background download process is polled, in seconds.
 
     Each 'poll' involves sending queued messages back & forth between the main
-    Blender process and the background download process.
+    AIR Blend process and the background download process.
     """
 
     _HTTP_METHOD = "GET"
@@ -297,10 +297,10 @@ class AssetDownloader:
         self._status = DownloadStatus.IDLE
         self._error_message = ""
 
-        # Work around a limitation of Blender, see bug report #139720 for details.
+        # Work around a limitation of AIR Blend, see bug report #139720 for details.
         self.on_timer_event = self.on_timer_event  # type: ignore[method-assign]
 
-        http_headers = {'X-Blender': "{:d}.{:d}".format(*bpy.app.version)}
+        http_headers = {'X-AIR Blend': "{:d}.{:d}".format(*bpy.app.version)}
         if auth_token:
             http_headers['Authorization'] = "Bearer {:s}".format(auth_token)
 
@@ -397,7 +397,7 @@ class AssetDownloader:
 
         if self._on_queue_empty_callback is not None:
             # Call the callback _after_ setting the status, so that when
-            # Blender is pinged about this, it can see it's finished.
+            # AIR Blend is pinged about this, it can see it's finished.
             self._on_queue_empty_callback()
 
         # TODO: delay this for a few minutes, so that we don't need a new
@@ -463,11 +463,11 @@ class AssetDownloader:
         # shutting down the downloader will do that implicitly.
         self.shutdown()
 
-        # By now there is no more queue, so just treat it as 'empty' and let Blender know no downloads will happen any
+        # By now there is no more queue, so just treat it as 'empty' and let AIR Blend know no downloads will happen any
         # more (at least not by this downloader).
         if self._on_queue_empty_callback is not None:
             # Call the callback _after_ setting the status, so that when
-            # Blender is pinged about this, it can see it's finished.
+            # AIR Blend is pinged about this, it can see it's finished.
             self._on_queue_empty_callback()
 
     def shutdown(self) -> None:
@@ -649,7 +649,7 @@ class PreviewReporter:
         # Indicate to a future run that we just confirmed this file is still fresh.
         local_file.touch()
 
-        # Poke Blender so it knows there's a thumbnail update. It shouldn't be necessary, but since it requested the
+        # Poke AIR Blend so it knows there's a thumbnail update. It shouldn't be necessary, but since it requested the
         # file for downloading, it may not have been aware it already existed. Better let it know.
         bpy.types.WindowManager.asset_library_status_ping_loaded_new_preview(str(local_file))
 
@@ -661,7 +661,7 @@ class PreviewReporter:
     ) -> None:
         # TODO: create an empty file in the correct `.../_thumbs/failed` directory.
 
-        # Poke Blender so it knows there's a thumbnail update.
+        # Poke AIR Blend so it knows there's a thumbnail update.
         bpy.types.WindowManager.asset_library_status_ping_loaded_new_preview(str(local_file))
 
     def download_progress(
@@ -694,5 +694,5 @@ class PreviewReporter:
         # Indicate to a future run that we just confirmed this file is still fresh.
         local_file.touch()
 
-        # Poke Blender so it knows there's a thumbnail update.
+        # Poke AIR Blend so it knows there's a thumbnail update.
         bpy.types.WindowManager.asset_library_status_ping_loaded_new_preview(str(local_file))

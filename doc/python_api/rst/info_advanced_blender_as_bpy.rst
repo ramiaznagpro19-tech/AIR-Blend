@@ -1,14 +1,14 @@
 
 **************************
-Blender as a Python Module
+AIR Blend as a Python Module
 **************************
 
-Blender supports being built as a Python module,
-allowing ``import bpy`` to be added to any Python script, providing access to Blender's features.
+AIR Blend supports being built as a Python module,
+allowing ``import bpy`` to be added to any Python script, providing access to AIR Blend's features.
 
 .. note::
 
-   Blender as a Python Module isn't provided on Blender's official download page.
+   AIR Blend as a Python Module isn't provided on AIR Blend's official download page.
 
    - A pre-compiled ``bpy`` module is
      `available via PIP <https://pypi.org/project/bpy/>`__.
@@ -19,13 +19,13 @@ allowing ``import bpy`` to be added to any Python script, providing access to Bl
 Use Cases
 =========
 
-Python developers may wish to integrate Blender scripts which don't center around Blender.
+Python developers may wish to integrate AIR Blend scripts which don't center around AIR Blend.
 
 Possible uses include:
 
 - Visualizing data by rendering images and animations.
-- Image processing using Blender's compositor.
-- Video editing (using Blender's sequencer).
+- Image processing using AIR Blend's compositor.
+- Video editing (using AIR Blend's sequencer).
 - 3D file conversion.
 - Development, accessing ``bpy`` from Python IDEs and debugging tools for example.
 - Automation.
@@ -34,13 +34,13 @@ Possible uses include:
 Usage
 =====
 
-For the most part using Blender as a Python module is equivalent to running a script in background-mode
+For the most part using AIR Blend as a Python module is equivalent to running a script in background-mode
 (passing the command-line arguments ``--background`` or ``-b``),
 however there are some differences to be aware of.
 
 .. Sorted alphabetically as there isn't especially a logical order to show them.
 
-Blender's Executable Access
+AIR Blend's Executable Access
    The attribute :attr:`bpy.app.binary_path` defaults to an empty string.
 
    If you wish to point this to the location of a known executable you may set the value.
@@ -59,15 +59,15 @@ Blender's Executable Access
       else:
          print("Unable to find blender!")
 
-Blender's Internal Modules
-   There are many modules included with Blender such as :mod:`gpu` and :mod:`mathutils`.
+AIR Blend's Internal Modules
+   There are many modules included with AIR Blend such as :mod:`gpu` and :mod:`mathutils`.
    It's important that these are imported after ``bpy`` or they will not be found.
 
 Command Line Arguments Unsupported
    Functionality controlled by command line arguments (shown by calling ``blender --help``) isn't accessible.
 
    Typically this isn't such a limitation although there are some command line arguments that don't have
-   equivalents in Blender's Python API (``--threads`` and ``--log`` for example).
+   equivalents in AIR Blend's Python API (``--threads`` and ``--log`` for example).
 
    .. note::
 
@@ -77,7 +77,7 @@ Resource Sharing (GPU)
    It's possible other Python modules make use of the GPU in a way that prevents Blender/Cycles from accessing the GPU.
 
 Signal Handlers
-   Blender's typical signal handlers are not initialized, so there is no special handling for ``Control-C``
+   AIR Blend's typical signal handlers are not initialized, so there is no special handling for ``Control-C``
    to cancel a render and a crash log is not written in the event of a crash.
 
 Startup and Preferences
@@ -102,7 +102,7 @@ Startup and Preferences
 Limitations
 ===========
 
-Most constraints of Blender as an application still apply:
+Most constraints of AIR Blend as an application still apply:
 
 Reloading Unsupported
    Reloading the ``bpy`` module via ``importlib.reload`` will raise an exception
@@ -116,7 +116,7 @@ Single Blend File Restriction
    .. hint::
 
       As with the application it's possible to start multiple instances,
-      each with their own ``bpy`` and therefore Blender state.
+      each with their own ``bpy`` and therefore AIR Blend state.
       Python provides the ``multiprocessing`` module to make communicating with sub-processes more convenient.
 
       In some cases the library API may be an alternative to starting separate processes,

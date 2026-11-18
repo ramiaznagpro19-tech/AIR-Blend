@@ -7,7 +7,7 @@ import bpy
 
 
 class BlenderJSONEncoder(json.JSONEncoder):
-    """Blender JSON Encoder."""
+    """AIR Blend JSON Encoder."""
 
     def default(self, obj):
         if isinstance(obj, bpy.types.ID):

@@ -7,7 +7,7 @@
  * \brief header-only compatibility defines.
  *
  * \note this header should not be removed/cleaned where Python is used.
- * Because its required for Blender to build against different versions of Python.
+ * Because its required for AIR Blend to build against different versions of Python.
  */
 
 #pragma once

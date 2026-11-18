@@ -6,10 +6,10 @@
 
 The hashes are cached using a storage back-end (currently the SQLite back-end is
 the only available one). The back-end manages concurrent access, so that
-multiple Blender instances can use the same cache without conflict.
+multiple AIR Blend instances can use the same cache without conflict.
 
 Service instances are obtained via `get_service(storage_path)`. They are cached
-until a new blend file is loaded or Blender exits.
+until a new blend file is loaded or AIR Blend exits.
 """
 
 __all__ = (
@@ -44,7 +44,7 @@ def get_service(storage_path: _Path) -> _DiskFileHashService:
     `{storage_path}_v{schema_version}.sqlite` as storage.
 
     Once a DiskFileHashService is constructed, it is cached for future
-    invocations. These cached services are cleaned up when Blender loads another
+    invocations. These cached services are cleaned up when AIR Blend loads another
     file or when it exits.
 
     NOTE: DiskFileHashService instances should _NOT_ be used by different
@@ -86,7 +86,7 @@ def release_service(storage_path: _Path) -> None:
 
     If your DFHS is only ever used from the main thread, it is not mandatory to
     release it, as that'll automatically happen when a new blend file loads or
-    when Blender exits.
+    when AIR Blend exits.
 
     When there is no known service for the given storage path, this is a no-op.
     """

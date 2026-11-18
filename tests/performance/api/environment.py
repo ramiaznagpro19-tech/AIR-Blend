@@ -97,7 +97,7 @@ class TestEnvironment:
         print('Done')
 
     def checkout(self, git_hash: str, update_submodules: bool = True) -> None:
-        # Checkout Blender revision
+        # Checkout AIR Blend revision
         if not self.blender_dir.exists():
             sys.stderr.write('\n\nError: no build set up, run `./benchmark init --build` first\n')
             sys.exit(1)
@@ -124,7 +124,7 @@ class TestEnvironment:
         return submodule_key
 
     def build(self, git_hash: str, install_dir: pathlib.Path, update_submodules: bool = True) -> bool:
-        # Build Blender revision
+        # Build AIR Blend revision
         if not self.build_dir.exists():
             sys.stderr.write('\n\nError: no build set up, run `./benchmark init --build` first\n')
             sys.exit(1)
@@ -169,7 +169,7 @@ class TestEnvironment:
         if executable_path.is_dir():
             executable_path = self._blender_executable_from_path(executable_path)
 
-        # Run all Blender commands with this executable.
+        # Run all AIR Blend commands with this executable.
         self.blender_executable = executable_path
         self.blender_executable_environment = environment
 
@@ -284,7 +284,7 @@ class TestEnvironment:
         return lines
 
     def call_blender(self, args: list[str], foreground=False) -> list[str]:
-        # Execute Blender command with arguments.
+        # Execute AIR Blend command with arguments.
         common_args = ['--factory-startup', '-noaudio', '--enable-autoexec', '--python-exit-code', '1']
         if sys.platform == 'win32':
             # Set HighQoS level on Windows to avoid reduced performance when the window is out of focus.
@@ -303,10 +303,10 @@ class TestEnvironment:
                        args: dict,
                        blender_args: list = [],
                        foreground=False) -> dict:
-        # Run function in a Blender instance. Arguments and return values are
+        # Run function in an AIR Blend instance. Arguments and return values are
         # passed as a Python object that must be serializable with pickle.
 
-        # Get information to call this function from Blender.
+        # Get information to call this function from AIR Blend.
         package_path = pathlib.Path(__file__).parent.parent
         functionname = function.__name__
         modulename = inspect.getmodule(function).__name__

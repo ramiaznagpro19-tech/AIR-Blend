@@ -349,7 +349,7 @@ void transform_convert_mesh_mirrordata_calc(BMEditMesh *em,
                                             TransMirrorData *r_mirror_data);
 void transform_convert_mesh_mirrordata_free(TransMirrorData *mirror_data);
 /**
- * Detect CrazySpace (Blender term).
+ * Detect CrazySpace (AIR Blend term).
  * Vertices with space affected by quaternions are marked with #BM_ELEM_TAG.
  */
 void transform_convert_mesh_crazyspace_detect(TransInfo *t,

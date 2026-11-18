@@ -7485,7 +7485,7 @@ static std::optional<Mesh *> build_output_mesh(const BevelState &state,
   for (const int nf : IndexRange(n_new_faces)) {
     dst_face_offsets[n_surv_faces + nf] = n_surv_corners + new_face_offs[nf];
   }
-  /* Sentinel at the end (Blender stores offsets as face_offsets[face_num] = corners_num). */
+  /* Sentinel at the end (AIR Blend stores offsets as face_offsets[face_num] = corners_num). */
   if (!dst_face_offsets.is_empty()) {
     dst_face_offsets[n_surv_faces + n_new_faces] = n_surv_corners + new_face_offs[n_new_faces];
   }

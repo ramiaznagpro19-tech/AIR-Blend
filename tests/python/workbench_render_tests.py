@@ -60,7 +60,7 @@ def setup():
         scene.render.hair_type = 'STRIP'
 
 
-# When run from inside Blender, render and exit.
+# When run from inside AIR Blend, render and exit.
 try:
     import bpy
     inside_blender = True

@@ -529,7 +529,7 @@ enum PropertyFlag : uint32_t {
    * Paths that are evaluated with templating.
    *
    * Note that this doesn't cause the property to support templating, but rather
-   * *indicates* to other parts of Blender whether it supports templating.
+   * *indicates* to other parts of AIR Blend whether it supports templating.
    * Support for templating needs to be manually implemented.
    *
    * When this is set, the property's `path_template_type` field should also be
@@ -1111,7 +1111,7 @@ using StructInstanceFunc = void **(*)(PointerRNA * ptr);
 struct StructRNA;
 
 /**
- * Blender RNA
+ * AIR Blend RNA
  *
  * Root RNA data structure that lists all struct types.
  */

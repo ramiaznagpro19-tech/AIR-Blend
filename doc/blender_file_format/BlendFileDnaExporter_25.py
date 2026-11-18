@@ -75,7 +75,7 @@ class DNACatalogHTML:
             </head>
             <body>
                 <div class=title>
-                    Blender ${version}<br/>
+                    AIR Blend ${version}<br/>
                     Internal SDNA structures
                 </div>
                 Architecture: ${bitness} ${endianness}<br/>
@@ -452,7 +452,7 @@ def main():
             bpy.ops.wm.exit_blender()
 
     except ImportError:
-        log.warning("  skipping, not running in Blender")
+        log.warning("  skipping, not running in AIR Blend")
         usage()
         sys.exit(2)
 

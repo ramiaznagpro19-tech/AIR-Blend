@@ -68,7 +68,7 @@ class STLExportTest : public BlendfileLoadingBaseTest {
 
   /**
    * Export the given blend file with the given parameters and
-   * test to see if it matches a golden file (ignoring any difference in Blender version number).
+   * test to see if it matches a golden file (ignoring any difference in AIR Blend version number).
    * \param blendfile: input, relative to "tests" directory.
    * \param golden_stl: expected output, relative to "tests" directory.
    */

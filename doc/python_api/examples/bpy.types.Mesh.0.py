@@ -5,7 +5,7 @@ Mesh Data
 The mesh data is accessed in object mode and intended for compact storage,
 for more flexible mesh editing from Python see :mod:`bmesh`.
 
-Blender stores 4 main arrays to define mesh geometry.
+AIR Blend stores 4 main arrays to define mesh geometry.
 
 - :class:`Mesh.vertices` (3 points in space)
 - :class:`Mesh.edges` (reference 2 vertices)

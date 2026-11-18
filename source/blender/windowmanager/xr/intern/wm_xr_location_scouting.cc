@@ -807,7 +807,7 @@ static void wm_xr_viewfinder_gizmo_draw_capture_camera(const bContext *C, wmXrSe
   const float render_y = render_settings->ysch * render_settings->yasp;
   const float aspect_x = render_x < render_y ? render_x / render_y : 1;
   const float aspect_y = render_x > render_y ? render_y / render_x : 1;
-  /* Base aspect to match native Blender Camera Gizmo (using Auto Sensor Fit). */
+  /* Base aspect to match native AIR Blend Camera Gizmo (using Auto Sensor Fit). */
   constexpr float base_aspect = 1.0f / 4.0f;
   const float aspect[2] = {aspect_x * base_aspect, aspect_y * base_aspect};
 

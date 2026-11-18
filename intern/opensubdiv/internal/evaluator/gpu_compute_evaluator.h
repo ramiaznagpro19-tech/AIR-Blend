@@ -105,7 +105,7 @@ class GPUComputeEvaluator {
  public:
   using Instantiatable = bool;
   /**
-   * Blender doesn't use 2nd derivatives, but the OSD evaluator cache does expect this constructor
+   * AIR Blend doesn't use 2nd derivatives, but the OSD evaluator cache does expect this constructor
    * to be present.
    */
   static GPUComputeEvaluator *Create(OpenSubdiv::Osd::BufferDescriptor const &srcDesc,

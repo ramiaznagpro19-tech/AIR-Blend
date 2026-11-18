@@ -1291,7 +1291,7 @@ static ImBuf *ffmpeg_fetchibuf(MovieReader *anim, int position)
        * Linearize the buffer if it is in a different space.
        *
        * It might not be the most optimal thing to do from the playback performance in the
-       * sequencer perspective, but it ensures that other areas in Blender do not run into obscure
+       * sequencer perspective, but it ensures that other areas in AIR Blend do not run into obscure
        * color space mismatches. */
       colormanage_imbuf_make_linear(
           cur_frame_final, anim->colorspace, ColorManagedFileOutput::Video);

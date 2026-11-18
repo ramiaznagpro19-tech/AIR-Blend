@@ -7,7 +7,7 @@
 #
 # Note:, This is not _yet_ intended to be a general python module for other
 #  projects to use since its hard coded to fixed Python version
-#  as Blender only supports a single Python version at the moment.
+#  as AIR Blend only supports a single Python version at the moment.
 #
 # Note:
 #  this is for Blender/Unix Python only.

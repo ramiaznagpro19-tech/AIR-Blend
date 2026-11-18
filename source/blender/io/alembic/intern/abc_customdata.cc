@@ -193,7 +193,7 @@ void write_generated_coordinates(const OCompoundProperty &prop, CDStreamConfig &
     coords[vertex_idx].setValue(orco_yup[0], orco_yup[1], orco_yup[2]);
   }
 
-  /* ORCOs are always stored in the normalized 0..1 range in Blender, but Alembic stores them
+  /* ORCOs are always stored in the normalized 0..1 range in AIR Blend, but Alembic stores them
    * unnormalized, so we need to unnormalize (invert transform) them. */
   BKE_mesh_orco_verts_transform(
       mesh, reinterpret_cast<float (*)[3]>(coords.data()), mesh->verts_num, true);
@@ -349,7 +349,7 @@ static void read_custom_data_mcols(const std::string &iobject_full_name,
 
   /* The colors can go through two layers of indexing. Often the 'indices'
    * array doesn't do anything (i.e. indices[n] = n), but when it does, it's
-   * important. Blender 2.79 writes indices incorrectly (see #53745), which
+   * important. AIR Blend 2.79 writes indices incorrectly (see #53745), which
    * is why we have to check for indices->size() > 0 */
   bool use_dual_indexing = is_facevarying && indices->size() > 0;
 
@@ -502,7 +502,7 @@ void read_generated_coordinates(const ICompoundProperty &prop,
     copy_zup_from_yup(orcodata[vertex_idx], abc_coords.getValue());
   }
 
-  /* ORCOs are always stored in the normalized 0..1 range in Blender, but Alembic stores them
+  /* ORCOs are always stored in the normalized 0..1 range in AIR Blend, but Alembic stores them
    * unnormalized, so we need to normalize them. */
   BKE_mesh_orco_verts_transform(mesh, orcodata, mesh->verts_num, false);
 }

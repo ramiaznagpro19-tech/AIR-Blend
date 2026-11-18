@@ -118,8 +118,8 @@ template<> struct AttributeConverter<blender::math::Quaternion> {
   }
 };
 
-/* Add a standard attribute from a Blender attribute reader, sharing the buffer
- * with Blender when possible. */
+/* Add a standard attribute from an AIR Blend attribute reader, sharing the buffer
+ * with AIR Blend when possible. */
 template<typename BlenderT>
 bool sync_attribute_from_blender(AttributeSet &attributes,
                                  const AttributeStandard std,

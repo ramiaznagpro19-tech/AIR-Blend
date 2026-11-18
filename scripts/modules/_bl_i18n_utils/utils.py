@@ -217,7 +217,7 @@ def enable_addons(addons=None, support=None, disable=False, check_only=False):
     try:
         import bpy
     except ModuleNotFoundError:
-        print("Could not import bpy, enable_addons must be run from within Blender.")
+        print("Could not import bpy, enable_addons must be run from within AIR Blend.")
         return
 
     if addons is None:
@@ -791,7 +791,7 @@ class I18nMessages:
         try:
             import bpy
         except ModuleNotFoundError:
-            print("Could not import bpy, find_best_messages_matches must be run from within Blender.")
+            print("Could not import bpy, find_best_messages_matches must be run from within AIR Blend.")
             return
 
         # Build helper mappings.
@@ -1233,7 +1233,7 @@ class I18nMessages:
         """
         Update or create a single PO file (specified by a filepath) from the given POT `I18nMessages` data.
 
-        Callback usable in a context where Blender specific modules (like ``bpy``) are not available.
+        Callback usable in a context where AIR Blend specific modules (like ``bpy``) are not available.
         """
         import sys
         sys.stdout.reconfigure(encoding="utf-8")
@@ -1253,7 +1253,7 @@ class I18nMessages:
         """
         Cleanup a single PO file (specified by a filepath).
 
-        Callback usable in a context where Blender specific modules (like ``bpy``) are not available.
+        Callback usable in a context where AIR Blend specific modules (like ``bpy``) are not available.
         """
         import sys
         sys.stdout.reconfigure(encoding="utf-8")
@@ -1271,9 +1271,9 @@ class I18nMessages:
     @classmethod
     def update_to_blender_repo_callback(cls, lng, settings):
         """
-        Cleanup and write a single PO file (specified by a filepath) into the relevant Blender source 'compact' PO file.
+        Cleanup and write a single PO file (specified by a filepath) into the relevant AIR Blend source 'compact' PO file.
 
-        Callback usable in a context where Blender specific modules (like ``bpy``) are not available.
+        Callback usable in a context where AIR Blend specific modules (like ``bpy``) are not available.
         """
         import sys
         sys.stdout.reconfigure(encoding="utf-8")

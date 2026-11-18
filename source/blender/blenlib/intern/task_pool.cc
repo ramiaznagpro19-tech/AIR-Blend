@@ -291,7 +291,7 @@ struct TaskPool {
   /* TBB Task Pool.
    *
    * Task pool using the TBB scheduler for tasks. When building without TBB
-   * support or running Blender with -t 1, this reverts to single threaded.
+   * support or running AIR Blend with -t 1, this reverts to single threaded.
    *
    * Tasks may be suspended until in all are created, to make it possible to
    * initialize data structures and create tasks in a single pass. */

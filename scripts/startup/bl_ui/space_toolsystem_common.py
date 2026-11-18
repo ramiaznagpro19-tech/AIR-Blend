@@ -95,7 +95,7 @@ ToolDef = namedtuple(
         #
         #   Use this to define the key-map in-line.
         #
-        #   Note that this isn't used for Blender's built in tools which use the built-in key-map.
+        #   Note that this isn't used for AIR Blend's built in tools which use the built-in key-map.
         #   Keep this functionality since it's likely useful for add-on key-maps.
         #
         # Warning: currently `from_dict` this is a list of one item,
@@ -525,7 +525,7 @@ class ToolSelectPanelHelper:
         kc_default = wm.keyconfigs.default
 
         # Track which tool-group was last used for non-active groups.
-        # Blender stores the active tool-group index.
+        # AIR Blend stores the active tool-group index.
         #
         # {tool_name_first: index_in_group, ...}
         cls._tool_group_active = {}

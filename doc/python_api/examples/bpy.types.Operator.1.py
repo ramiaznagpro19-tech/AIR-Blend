@@ -1,11 +1,11 @@
 """
 .. _operator_modifying_blender_data_undo:
 
-Modifying Blender Data & Undo
+Modifying AIR Blend Data & Undo
 +++++++++++++++++++++++++++++
 
-Any operator modifying Blender data should enable the ``'UNDO'`` option.
-This will make Blender automatically create an undo step when the operator
+Any operator modifying AIR Blend data should enable the ``'UNDO'`` option.
+This will make AIR Blend automatically create an undo step when the operator
 finishes its ``execute`` (or ``invoke``, see below) functions, and returns
 ``{'FINISHED'}``.
 
@@ -21,7 +21,7 @@ fully undo the changes before returning.
 
 .. note::
 
-   Most examples in this page do not do any edit to Blender data, which is
+   Most examples in this page do not do any edit to AIR Blend data, which is
    why it is safe to keep the default ``bl_options`` value for these operators.
 
 .. note::
@@ -32,7 +32,7 @@ fully undo the changes before returning.
 
    Such manual undo push is possible using the :class:`bpy.ops.ed.undo_push`
    function. Be careful though, this is considered an advanced feature and
-   requires some understanding of the actual undo system in Blender code.
+   requires some understanding of the actual undo system in AIR Blend code.
 
 """
 import bpy
@@ -41,7 +41,7 @@ import bpy
 class DataEditOperator(bpy.types.Operator):
     bl_idname = "object.data_edit"
     bl_label = "Data Editing Operator"
-    # The default value is only 'REGISTER', 'UNDO' is mandatory when Blender data is modified
+    # The default value is only 'REGISTER', 'UNDO' is mandatory when AIR Blend data is modified
     # (and does require 'REGISTER' as well).
     bl_options = {'REGISTER', 'UNDO'}
 
@@ -52,7 +52,7 @@ class DataEditOperator(bpy.types.Operator):
 
 # Only needed if you want to add into a dynamic menu.
 def menu_func(self, context):
-    self.layout.operator(DataEditOperator.bl_idname, text="Blender Data Editing Operator")
+    self.layout.operator(DataEditOperator.bl_idname, text="AIR Blend Data Editing Operator")
 
 
 # Register.

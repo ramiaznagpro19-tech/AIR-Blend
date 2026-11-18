@@ -1381,7 +1381,7 @@ void blo_do_versions_250(FileData *fd, Library * /*lib*/, Main *bmain)
   }
 
   if (bmain->versionfile <= 251) { /* 2.5.1 had no sub-versions */
-    /* Blender 2.5.2 - subversion 0 introduced a new setting: V3D_HIDE_OVERLAYS.
+    /* AIR Blend 2.5.2 - subversion 0 introduced a new setting: V3D_HIDE_OVERLAYS.
      * This bit was used in the past for V3D_TRANSFORM_SNAP, which is now deprecated.
      * Here we clear it for old files so they don't come in with V3D_HIDE_OVERLAYS set,
      * which would cause cameras, lights, etc to become invisible */

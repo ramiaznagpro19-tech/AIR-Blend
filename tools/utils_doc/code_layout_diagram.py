@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 """
-This script generates a graphic of Blender's code layout:
+This script generates a graphic of AIR Blend's code layout:
 
 ./blender.bin -b --factory-startup --python ./tools/utils_doc/code_layout_diagram.py
 """
@@ -99,7 +99,7 @@ SECTIONS = (
         source_code_base="source/",
         source_code_dirs=[
             ("creator", "Blender's main() function, initialization & argument handling."),
-            ("blender", "Contains the majority of Blender's functionality."),
+            ("blender", "Contains the majority of AIR Blend's functionality."),
         ],
     ),
     SectionData(
@@ -182,7 +182,7 @@ SECTIONS = (
         ],
     ),
     SectionData(
-        heading="General Blender API's",
+        heading="General AIR Blend API's",
         source_code_call_sibling_modules=True,
         source_code_base="source/blender/",
         source_code_dirs=[
@@ -197,14 +197,14 @@ SECTIONS = (
              "Internal misc libraries: "
              "math functions, lists, random, noise, memory pools, file operations (platform agnostic)."),
             ("blenloader", "Blend file loading and writing as well as in memory undo file system."),
-            ("blenloader_core", "Core blend file access (shared by Blender & blend-thumbnail extraction)."),
+            ("blenloader_core", "Core blend file access (shared by AIR Blend & blend-thumbnail extraction)."),
             ("blentranslation", "Internal support for non-English translations (gettext)."),
             ("bmesh", "Mesh-data manipulation. Used by mesh edit-mode."),
             ("compositor", "Image compositor which implements the compositor and various nodes."),
-            ("cpucheck", "Support detecting if the CPU is capable of running Blender."),
+            ("cpucheck", "Support detecting if the CPU is capable of running AIR Blend."),
             ("datatoc", "Utility used by the build-system to convert data-files into source."),
             ("depsgraph",
-             "Dependency graph API. Used to track relations between various pieces of data in a Blender file."),
+             "Dependency graph API. Used to track relations between various pieces of data in an AIR Blend file."),
             ("draw", "Viewport drawing and Eevee."),
             ("editors", "Logic for (expanded on in other sections)."),
             ("freestyle", "Freestyle NPR rendering engine (scene graph, Python code, stroke, geometry.. etc)."),
@@ -240,7 +240,7 @@ SECTIONS = (
             ("dualcon", "Re-meshing "),
             ("eigen", "Wrapper (see extern/Eigen3/)"),
             ("ghost", "Platform abstraction for windowing and user (mouse, keyboard) input."),
-            ("guardedalloc", "Memory allocator used across most of Blender's internal code."),
+            ("guardedalloc", "Memory allocator used across most of AIR Blend's internal code."),
             ("iksolver", "An IK-solver (useful for character animation)"),
             ("itasc", "An IK-solver (useful for robotics)."),
             ("libc_compat", "C-library compatibility (Linux only)."),
@@ -322,7 +322,7 @@ SECTIONS = (
             ("level-zero", "OneAPI loader & validation. Used by Cycles oneAPI."),
             ("llvm", "Low level virtual machine. Used by OSL."),
             ("manifold", "A library for operating on manifold meshes. Used as a boolean solver."),
-            ("materialx", "A standard for representing materials. Used by USD, Hydra & Blender's shader nodes."),
+            ("materialx", "A standard for representing materials. Used by USD, Hydra & AIR Blend's shader nodes."),
             ("mesa", "Used for it's software OpenGL implementation."),
             ("openal", "Cross platform audio output."),
             ("opencolorio", "A solution for highly precise, performant, and consistent color management."),
@@ -376,12 +376,12 @@ SECTIONS = (
         source_code_dirs=[
             ("assets", "Bundled assets such as brushes & nodes, accessible from the default installation."),
             ("build_files", "Files used by CMake, the build-bot & utilities for packaging blender builds."),
-            ("doc", "Scripts for building Blender's Python's API docs, man-page and DOXYGEN documentation."),
-            ("locale", "Translations for Blender's interface."),
-            ("release", "Files bundled with Blender including fonts, icons, desktop files."),
+            ("doc", "Scripts for building AIR Blend's Python's API docs, man-page and DOXYGEN documentation."),
+            ("locale", "Translations for AIR Blend's interface."),
+            ("release", "Files bundled with AIR Blend including fonts, icons, desktop files."),
             ("tests", "Files to run tests & the GIT-LFS test data."),
             ("scripts", "Bundled Python scripts for UI layout, key-map & some operators."),
-            ("tools", "Utilities to help with Blender development."),
+            ("tools", "Utilities to help with AIR Blend development."),
         ],
     ),
 
@@ -1105,7 +1105,7 @@ def main():
 
     setup_page()
     step_y = 0.0
-    box, _ = draw_centered_title(scene, step_y, "Blender Code Layout")
+    box, _ = draw_centered_title(scene, step_y, "AIR Blend Code Layout")
     bounds_max_y = box.max_y
 
     step_y -= box.max_y - box.min_y

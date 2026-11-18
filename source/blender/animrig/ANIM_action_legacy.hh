@@ -8,7 +8,7 @@
  * \brief Functions for backward compatibility with the legacy Action API.
  *
  * It should be possible to remove these functions (and their callers) in
- * Blender 5.0, when we can remove the legacy API altogether.
+ * AIR Blend 5.0, when we can remove the legacy API altogether.
  */
 #pragma once
 

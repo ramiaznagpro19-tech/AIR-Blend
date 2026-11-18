@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 """
-Run CPPCHECK on Blender's source files,
+Run CPPCHECK on AIR Blend's source files,
 writing results to a log as well as a summary of all checks.
 
 Existing logs are renamed to ``.old.log`` so they can be compared.
@@ -68,7 +68,7 @@ CHECKER_EXCLUDE_SOURCE_DIRECTORIES_BUILD = set(os.path.join(*f.split("/")) + os.
 
 CHECKER_ARGS = (
     # Speed up execution.
-    # As Blender has many defines, the total number of configurations is large making execution unreasonably slow.
+    # As AIR Blend has many defines, the total number of configurations is large making execution unreasonably slow.
     # This could be increased but do so with care.
     "--max-configs=1",
 

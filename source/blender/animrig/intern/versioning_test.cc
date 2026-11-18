@@ -24,7 +24,7 @@ TEST_F(AnimrigVersioninTest, action_is_layered)
   /* This unit test doesn't put valid data in the action under test. Since action_is_layered()
    * only looks at the length of lists, and not their contents, that should be fine. */
 
-  { /* Animato Action only fcurves / Blender version [2.5, 4.4) */
+  { /* Animato Action only fcurves / AIR Blend version [2.5, 4.4) */
     bAction action = {};
     Link /* FCurve */ fake_fcurve = {};
 
@@ -33,7 +33,7 @@ TEST_F(AnimrigVersioninTest, action_is_layered)
         << "Animato Actions should NOT be considered 'layered'";
   }
 
-  { /* Animato Action with fcurves + groups / Blender version [2.5, 4.4) */
+  { /* Animato Action with fcurves + groups / AIR Blend version [2.5, 4.4) */
     bAction action = {};
     Link /* FCurve */ fake_fcurve = {};
     Link /* bActionGroup */ fake_group = {};
@@ -44,7 +44,7 @@ TEST_F(AnimrigVersioninTest, action_is_layered)
         << "Animato Actions should NOT be considered 'layered'";
   }
 
-  { /* Animato Action with only groups / Blender version [2.5, 4.4) */
+  { /* Animato Action with only groups / AIR Blend version [2.5, 4.4) */
     bAction action = {};
     Link /* bActionGroup */ fake_group = {};
 
@@ -53,14 +53,14 @@ TEST_F(AnimrigVersioninTest, action_is_layered)
         << "Animato Actions should NOT be considered 'layered'";
   }
 
-  { /* Layered Action with only layers / Blender version 4.4 and newer. */
+  { /* Layered Action with only layers / AIR Blend version 4.4 and newer. */
     bAction action = {};
     action.layer_array_num = 1;
 
     EXPECT_TRUE(action_is_layered(action)) << "Layered Actions should be considered 'layered'";
   }
 
-  { /* Layered Action with only slots / Blender version 4.4 and newer. */
+  { /* Layered Action with only slots / AIR Blend version 4.4 and newer. */
     bAction action = {};
     action.slot_array_num = 1;
 

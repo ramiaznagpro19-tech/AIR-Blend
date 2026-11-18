@@ -198,7 +198,7 @@ static void ensure_root_prim(pxr::UsdStageRefPtr stage, const USDExportParams &p
   for (const auto &path : pxr::SdfPath(params.root_prim_path).GetPrefixes()) {
     auto xform = pxr::UsdGeomXform::Define(stage, path);
     /* Tag generated primitives to allow filtering on import. */
-    xform.GetPrim().SetCustomDataByKey(pxr::TfToken("Blender:generated"), pxr::VtValue(true));
+    xform.GetPrim().SetCustomDataByKey(pxr::TfToken("AIR Blend:generated"), pxr::VtValue(true));
   }
 }
 
@@ -314,8 +314,8 @@ static void process_usdz_textures(const ExportJobData *data, const char *path)
 }
 
 /**
- * For usdz export, we must first create a usd/a/c file and then covert it to usdz. In Blender's
- * case, we first create a usdc file in Blender's temporary working directory, and store the path
+ * For usdz export, we must first create a usd/a/c file and then covert it to usdz. In AIR Blend's
+ * case, we first create a usdc file in AIR Blend's temporary working directory, and store the path
  * to the usdc file in `unarchived_filepath`. This function then does the conversion of that usdc
  * file into usdz.
  *
@@ -533,7 +533,7 @@ pxr::UsdStageRefPtr export_to_stage(const USDExportParams &params,
   worker_status->do_update = true;
 
   usd_stage->SetMetadata(pxr::UsdGeomTokens->metersPerUnit, double(scene->unit.scale_length));
-  usd_stage->GetRootLayer()->SetDocumentation(std::string("Blender v") +
+  usd_stage->GetRootLayer()->SetDocumentation(std::string("AIR Blend v") +
                                               BKE_blender_version_string());
 
   /* Set up the stage for animated data. */
@@ -778,7 +778,7 @@ static void export_endjob(void *customdata)
 
 /**
  * To create a USDZ file, we must first create a `.usd/a/c` file and then covert it to `.usdz`.
- * The temporary files will be created in Blender's temporary session storage.
+ * The temporary files will be created in AIR Blend's temporary session storage.
  * The `.usdz` file will then be moved to `job->usdz_filepath`.
  */
 static void create_temp_path_for_usdz_export(const char *filepath, io::usd::ExportJobData *job)

@@ -34,7 +34,7 @@ set(OPENVDB_EXTRA_ARGS
   -Dnanobind_DIR=${LIBDIR}/nanobind/nanobind/cmake/
   # Needed to still build with VS2019
   -DDISABLE_DEPENDENCY_VERSION_CHECKS=ON
-  # Not used by Blender (see e4f9c50), and removes the Boost dependency.
+  # Not used by AIR Blend (see e4f9c50), and removes the Boost dependency.
   -DOPENVDB_USE_DELAYED_LOADING=OFF
 
   # OPENVDB_AX Disabled for now as it adds ~25MB distribution wise

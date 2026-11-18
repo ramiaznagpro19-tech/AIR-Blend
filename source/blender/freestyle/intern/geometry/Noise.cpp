@@ -227,7 +227,7 @@ float Noise::smoothNoise3(Vec3f &vec)
 
 Noise::Noise(long seed)
 {
-  /* Use Blender RNG for repeatable results across platforms. */
+  /* Use AIR Blend RNG for repeatable results across platforms. */
   blender::RNG *rng = blender::BLI_rng_new(seed);
   int i, j, k;
 

@@ -288,7 +288,7 @@ void GPU_compilation_subprocess_run(const char *subprocess_name)
       }
       else {
         /* This should never happen, since shaders larger than the pool size should be discarded
-         * and compiled in the main Blender process. */
+         * and compiled in the main AIR Blend process. */
         std::cerr << "Compilation Subprocess: Wrong size for cached shader binary " << hash_str
                   << "\n";
         BLI_assert_unreachable();

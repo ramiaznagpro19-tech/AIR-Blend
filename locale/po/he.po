@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 5.3.0 Alpha (b'2cef5b8c951a')\n"
+"Project-Id-Version: AIR Blend 5.3.0 Alpha (b'2cef5b8c951a')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 07:47+0000\n"
 "PO-Revision-Date: 2026-01-20 15:20+0000\n"
@@ -3384,8 +3384,8 @@ msgid "Bricks 2"
 msgstr "2 םינבל"
 
 
-msgid "The file is not a valid Blender file."
-msgstr ".יקוח Blender ץבוק וניא ץבוקה"
+msgid "The file is not a valid AIR Blend file."
+msgstr ".יקוח AIR Blend ץבוק וניא ץבוקה"
 
 
 msgctxt "WorkSpace"

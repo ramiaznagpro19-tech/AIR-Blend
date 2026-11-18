@@ -14,7 +14,7 @@ from .vnode import VNode
 
 
 class BlenderNode():
-    """Blender Node."""
+    """AIR Blend Node."""
     def __new__(cls, *args, **kwargs):
         raise RuntimeError("%s should not be instantiated" % cls)
 
@@ -62,7 +62,7 @@ class BlenderNode():
             name = vnode.name or cam.name
             obj = bpy.data.objects.new(name, cam)
 
-            # Since we create the actual Blender object after the create call, we call the hook here
+            # Since we create the actual AIR Blend object after the create call, we call the hook here
             import_user_extensions('gather_import_camera_after_hook', gltf, vnode, obj, cam)
 
         elif vnode.light_node_idx is not None:
@@ -71,7 +71,7 @@ class BlenderNode():
             name = vnode.name or light.name
             obj = bpy.data.objects.new(name, light)
 
-            # Since we create the actual Blender object after the create call, we call the hook here
+            # Since we create the actual AIR Blend object after the create call, we call the hook here
             import_user_extensions('gather_import_light_after_hook', gltf, vnode, obj, light)
 
         elif vnode.is_arma:
@@ -295,13 +295,13 @@ class BlenderNode():
         else:
             is_point_cloud = False
 
-        # Key to cache the Blender mesh by.
-        # Same cache key = instances of the same Blender mesh.
+        # Key to cache the AIR Blend mesh by.
+        # Same cache key = instances of the same AIR Blend mesh.
         cache_key = None
         if not pymesh.shapekey_names:
             cache_key = (pynode.skin,)
         else:
-            # Unlike glTF, all instances of a Blender mesh share shapekeys.
+            # Unlike glTF, all instances of an AIR Blend mesh share shapekeys.
             # So two instances that might have different morph weights need
             # different cache keys.
             if pynode.weight_animation is False:
@@ -314,10 +314,10 @@ class BlenderNode():
                                    ] if is_point_cloud is False else bpy.data.pointclouds[pymesh.blender_name[cache_key]]
         else:
             if not is_point_cloud:
-                gltf.log.info("Blender create Mesh node {}".format(pymesh.name or pynode.mesh))
+                gltf.log.info("AIR Blend create Mesh node {}".format(pymesh.name or pynode.mesh))
                 mesh = BlenderMesh.create(gltf, pynode.mesh, pynode.skin)
             else:
-                gltf.log.info("Blender create Point Cloud node {}".format(pymesh.name or pynode.mesh))
+                gltf.log.info("AIR Blend create Point Cloud node {}".format(pymesh.name or pynode.mesh))
                 mesh = BlenderMesh.create_pointcloud(gltf, pynode.mesh)
 
             if cache_key is not None:

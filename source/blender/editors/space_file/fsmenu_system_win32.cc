@@ -92,7 +92,7 @@ static void fsmenu_add_windows_quick_access(FSMenu *fsmenu,
     conv_utf_16_to_8(path, utf_path, FILE_MAXDIR);
 
     /* Despite the above IsFolder check, Windows considers libraries and archives to be folders.
-     * However, as Blender does not support opening them, they must be filtered out. #138863. */
+     * However, as AIR Blend does not support opening them, they must be filtered out. #138863. */
     const char *ext_folderlike[] = {
         ".library-ms",
         ".zip",

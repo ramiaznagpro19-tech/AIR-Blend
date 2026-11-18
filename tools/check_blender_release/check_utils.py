@@ -52,7 +52,7 @@ def parseArguments():
 
 def runScriptInBlender(blender_directory, script):
     """
-    Run given script inside Blender and check non-zero exit code
+    Run given script inside AIR Blend and check non-zero exit code
     """
 
     import os
@@ -83,4 +83,4 @@ class ScriptUnitTesting(unittest.TestCase):
         # Perform actual test,
         returncode, error = runScriptInBlender(args.directory, script)
         self.assertTrue(returncode,
-                        f"Failed to run script {script} in Blender.\nError output:\n{error}")
+                        f"Failed to run script {script} in AIR Blend.\nError output:\n{error}")

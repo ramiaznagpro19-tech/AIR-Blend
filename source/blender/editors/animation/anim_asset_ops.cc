@@ -187,7 +187,7 @@ static blender::animrig::Action &extract_pose(Main &bmain, const Span<Object *> 
 }
 
 /**
- * Check that the newly created asset is visible SOMEWHERE in Blender. If not already visible,
+ * Check that the newly created asset is visible SOMEWHERE in AIR Blend. If not already visible,
  * open the asset shelf on the current 3D view. The reason for not always doing that is that it
  * might be annoying in case you have 2 3D viewports open, but you want the asset shelf on only one
  * of them, or you work out of the asset browser.

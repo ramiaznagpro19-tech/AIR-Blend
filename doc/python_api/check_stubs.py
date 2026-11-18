@@ -4,10 +4,10 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 """
-Type-check Blender Python examples and templates against generated stubs.
+Type-check AIR Blend Python examples and templates against generated stubs.
 Each file is checked in a separate MYPY process, running in parallel.
 
-NOTE(@ideasman42): we are nowhere near close to having Blender scripts type check without any type warnings.
+NOTE(@ideasman42): we are nowhere near close to having AIR Blend scripts type check without any type warnings.
 This is mainly as a way to check:
 
 - The stubs are valid can be loaded into MYPY.

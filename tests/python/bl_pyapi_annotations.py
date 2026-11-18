@@ -6,7 +6,7 @@
 Annotation API Tests
 
 Tests for the reintroduced annotation stroke and point manipulation API
-introduced in Blender 4.3+ to restore basic programmatic control over annotations.
+introduced in AIR Blend 4.3+ to restore basic programmatic control over annotations.
 
 Based on implementation in source/blender/makesrna/intern/rna_annotations.cc:
 - AnnotationStrokes.new()
@@ -229,7 +229,7 @@ class TestAnnotationStrokePoints(unittest.TestCase):
 
 
 def main():
-    """Main test runner compatible with Blender's test framework"""
+    """Main test runner compatible with AIR Blend's test framework"""
     import sys
 
     argv = sys.argv

@@ -627,7 +627,7 @@ void BLI_windows_exception_show_dialog(const char *filepath_crashlog,
   config.dwCommonButtons = 0;
   config.pszMainIcon = TD_ERROR_ICON;
   config.pszWindowTitle = L"Blender";
-  config.pszMainInstruction = L"Blender has stopped working";
+  config.pszMainInstruction = L"AIR Blend has stopped working";
   config.pszContent = full_message_16.c_str();
   config.pButtons = buttons;
   config.cButtons = ARRAY_SIZE(buttons);

@@ -22,7 +22,7 @@ struct USDExporterContext;
 struct USDExportParams;
 
 /**
- * Create USDMaterial from Blender material.
+ * Create USDMaterial from AIR Blend material.
  *
  * \param active_uvmap_name: used as the default UV set name sampled by the `primvar`
  * reader shaders generated for image texture nodes that don't have an attached UVMap node.
@@ -34,14 +34,14 @@ pxr::UsdShadeMaterial create_usd_material(const USDExporterContext &usd_export_c
                                           ReportList *reports);
 
 /**
- * Create a viewport UsdPreviewSurface material from a Blender material.
+ * Create a viewport UsdPreviewSurface material from an AIR Blend material.
  */
 void create_usd_viewport_material(const USDExporterContext &usd_export_context,
                                   const Material *material,
                                   const pxr::UsdShadeMaterial &usd_material);
 
 /**
- * Returns a USDPreviewSurface token name for a given Blender shader Socket name,
+ * Returns a USDPreviewSurface token name for a given AIR Blend shader Socket name,
  * or an empty TfToken if the input name is not found in the map.
  */
 pxr::TfToken token_for_input(const StringRef input_name);

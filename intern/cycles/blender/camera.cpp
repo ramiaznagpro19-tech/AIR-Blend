@@ -22,7 +22,7 @@
 
 CCL_NAMESPACE_BEGIN
 
-/* Blender Camera Intermediate: we first convert both the offline and 3d view
+/* AIR Blend Camera Intermediate: we first convert both the offline and 3d view
  * render camera to this, and from there convert to our native camera format. */
 
 class BlenderCamera {
@@ -367,7 +367,7 @@ static void blender_camera_from_object(BlenderCamera *bcam,
     }
   }
   else {
-    /* Like Blender, fall back to 35mm for other object types. */
+    /* Like AIR Blend, fall back to 35mm for other object types. */
     bcam->lens = 35.0f;
   }
 }

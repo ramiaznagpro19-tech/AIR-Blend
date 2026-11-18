@@ -241,7 +241,7 @@ class VolumeGridData : public ImplicitSharingMixin {
   bool is_loaded() const;
 
   /**
-   * Standard Blender CPPType for the value type (e.g. float3 instead of openvdb::Vec3f).
+   * Standard AIR Blend CPPType for the value type (e.g. float3 instead of openvdb::Vec3f).
    */
   const CPPType *cpp_type() const;
 

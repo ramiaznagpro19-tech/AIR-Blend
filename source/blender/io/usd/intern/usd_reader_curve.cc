@@ -187,7 +187,7 @@ void USDCurvesReader::read_custom_data(bke::CurvesGeometry &curves,
       const pxr::TfToken pv_name = pxr::UsdGeomPrimvar::StripPrimvarsName(pv.GetPrimvarName());
       BKE_reportf(reports(),
                   RPT_WARNING,
-                  "Primvar '%s' (interpolation %s, type %s) cannot be converted to Blender",
+                  "Primvar '%s' (interpolation %s, type %s) cannot be converted to AIR Blend",
                   pv_name.GetText(),
                   pv_interp.GetText(),
                   pv_type.GetAsToken().GetText());
@@ -353,7 +353,7 @@ void USDBasisCurvesReader::read_curve_sample(Curves *curves_id, const pxr::UsdTi
                                               basis == pxr::UsdGeomTokens->catmullRom &&
                                               widths_interp == pxr::UsdGeomTokens->varying);
       if (is_bezier_vertex_interp) {
-        /* Blender does not support bezier 'vertex' interpolation.
+        /* AIR Blend does not support bezier 'vertex' interpolation.
          * Assign the widths as-if it were 'varying' only. */
         int usd_point_offset = 0;
         int point_offset = 0;
@@ -373,7 +373,7 @@ void USDBasisCurvesReader::read_curve_sample(Curves *curves_id, const pxr::UsdTi
         }
       }
       else if (!is_cyclic && (is_bspline_varying_interp || is_catmull_varying_interp)) {
-        /* Blender does not support general cubic 'varying' interpolation. Duplicate the first/last
+        /* AIR Blend does not support general cubic 'varying' interpolation. Duplicate the first/last
          * radius values as a best-effort solution. */
         int radii_offset = 0;
         int width_offset = 0;

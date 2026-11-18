@@ -96,7 +96,7 @@ void AllAssetLibrary::rebuild_catalogs_from_nested(const bool reload_nested_cata
               }
               else {
                 /* This is bound to happen at some point, for example with the Online Essentials
-                 * catalogs diverging from this Blender version's bundled Essentials catalogs. */
+                 * catalogs diverging from this AIR Blend version's bundled Essentials catalogs. */
                 CLOG_INFO(&LOG,
                           "multiple definitions of catalog %s with differing paths (%s vs. %s), "
                           "ignoring second one",

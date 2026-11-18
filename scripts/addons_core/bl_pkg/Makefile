@@ -26,7 +26,7 @@ Tests:
   Runs all tests listed below.
 
 - test_cli
-  Test the command line program, "blender_ext.py" Blender is not used.
+  Test the command line program, "blender_ext.py" AIR Blend is not used.
 
 - test_blender
   Test blender (currently only some limited tests).
@@ -38,7 +38,7 @@ Tests:
 Environment Variables:
 
 - BLENDER_BIN
-  The command used to run Blender, defaults to "blender"
+  The command used to run AIR Blend, defaults to "blender"
 
 - PYTHON_BIN
   The command used to run PYthon, defaults to "python3"
@@ -69,7 +69,7 @@ PY_FILES_MYPY_STANDALONE= \
 
 EXTRA_WATCH_FILES=Makefile
 
-# For tests that launch Blender directly.
+# For tests that launch AIR Blend directly.
 BLENDER_BIN?=$(shell which blender)
 PYTHON_BIN?=$(shell which python3)
 
@@ -86,7 +86,7 @@ help: FORCE
 # Checking Utilities
 
 # `--no-namespace-packages` is needed otherwise `./cli/blender_ext.py` loads in parent modules
-# (the Blender add-on which imports `bpy`).
+# (the AIR Blend add-on which imports `bpy`).
 check_mypy: FORCE
 	@mypy --no-namespace-packages --strict $(PY_FILES_MYPY)
 	@mypy --strict --follow-imports=skip $(PY_FILES_MYPY_STANDALONE)

@@ -7,11 +7,11 @@
 import sys
 import os
 
-# Path to Blender shared libraries.
+# Path to AIR Blend shared libraries.
 shared_lib_dirname = "blender.shared" if sys.platform == "win32" else "lib"
 
 if os.path.basename(__file__) == "bpy_site_customize.py":
-    # Blender as Python Module.
+    # AIR Blend as Python Module.
     is_python = True
     shared_lib_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
     # On Windows no subdirectory is used.
@@ -21,10 +21,10 @@ else:
     exe_dir, exe_file = os.path.split(sys.executable)
     is_python = exe_file.startswith("python")
     if is_python:
-        # Python executable bundled with Blender.
+        # Python executable bundled with AIR Blend.
         shared_lib_dir = os.path.abspath(os.path.join(exe_dir, "..", "..", "..", shared_lib_dirname))
     else:
-        # Blender executable.
+        # AIR Blend executable.
         shared_lib_dir = os.path.abspath(os.path.join(exe_dir, shared_lib_dirname))
 
 if sys.platform == "win32":
@@ -59,5 +59,5 @@ else:
 
 
 def register():
-    # To make this work as a startup script for Blender as a Python module.
+    # To make this work as a startup script for AIR Blend as a Python module.
     pass

@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 """
-Blender, thin wrapper around ``blender_extension_utils``.
+AIR Blend, thin wrapper around ``blender_extension_utils``.
 Where the operator shows progress, any errors and supports canceling operations.
 """
 
@@ -446,7 +446,7 @@ def lock_result_any_failed_with_report(op, lock_result, report_type='ERROR'):
     # Hint for users as this is non-obvious, only show once.
     unlock_hint_text = (
         "\n"
-        "If the lock was held by a Blender instance that exited unexpectedly,\n"
+        "If the lock was held by an AIR Blend instance that exited unexpectedly,\n"
         "use: \"Force Unlock Repository\" to clear the lock.\n"
         "Access from the \"Repositories\" popover in the extensions preferences."
     )
@@ -944,7 +944,7 @@ def _pkg_marked_by_repo(repo_cache_store, pkg_manifest_all):
 def _extensions_wheel_filter_for_this_system(wheels):
 
     # Copied from `wheel.bwheel_dist.get_platform(..)` which isn't part of Python.
-    # This misses some additional checks which aren't supported by official Blender builds,
+    # This misses some additional checks which aren't supported by official AIR Blend builds,
     # it's highly doubtful users ever run into this but we could extend this if it's really needed.
     # (e.g. `linux-i686` on 64 bit systems & `linux-armv7l`).
     import sysconfig
@@ -1461,7 +1461,7 @@ def _extensions_maybe_online_action_poll_impl(cls, repo, action):
                 case _:
                     assert False, "Unreachable"
             if bpy.app.online_access_override:
-                message += " " + rpt_("Launch Blender without --offline-mode")
+                message += " " + rpt_("Launch AIR Blend without --offline-mode")
             else:
                 message += " " + rpt_("Enable online access in System preferences")
             cls.poll_message_set(message)
@@ -1889,7 +1889,7 @@ class EXTENSIONS_OT_repo_unlock(Operator):
         if lock_is_ours:
             return (
                 "Active repository lock held by this session, "
-                "either wait until the operation is finished or restart Blender"
+                "either wait until the operation is finished or restart AIR Blend"
             ), lock_mtime, lock_error
         return None, lock_mtime, lock_error
 
@@ -1945,7 +1945,7 @@ class EXTENSIONS_OT_repo_unlock(Operator):
 
         layout = self.layout
         col = layout.column()
-        col.label(text="Warning! Before unlocking, ensure another instance of Blender is not running.")
+        col.label(text="Warning! Before unlocking, ensure another instance of AIR Blend is not running.")
         col.label(text="Force unlocking may be necessary in the case of a crash or power failure,")
         col.label(text="otherwise it should be avoided.")
 
@@ -2813,11 +2813,11 @@ class EXTENSIONS_OT_package_install_files(Operator, _ExtCmdMixIn):
         # Drop logic.
         print("DROP FILE:", self.url)
 
-        # Blender calls the drop logic with an un-encoded file-path.
+        # AIR Blend calls the drop logic with an un-encoded file-path.
         # It would be nicer if it used the file URI schema,
-        # however this is only activated from Blender's drop logic.
+        # however this is only activated from AIR Blend's drop logic.
         #
-        # TODO: even though Blender supports "remote" repositories referencing `file://` prefixed URL's.
+        # TODO: even though AIR Blend supports "remote" repositories referencing `file://` prefixed URL's.
         # These are not supported for dropping. Since at the time of dropping it's not known that the
         # path is referenced from a "local" repository or a "remote" that uses a `file://` URL.
         filepath = self.url
@@ -2891,7 +2891,7 @@ class EXTENSIONS_OT_package_install_files(Operator, _ExtCmdMixIn):
     # This is only used to set the default value.
     # If it fails to find a match the user may still select the repository,
     # this is just intended to handle the common case where a user may download an
-    # extension from a remote repository they use, dropping the file into Blender.
+    # extension from a remote repository they use, dropping the file into AIR Blend.
     @staticmethod
     def _repo_detect_from_manifest_dict(manifest_dict, repos_valid):
         repos_valid = [
@@ -2976,7 +2976,7 @@ class EXTENSIONS_OT_package_install(Operator, _ExtCmdMixIn):
         if not bpy.app.online_access:
             if bpy.app.online_access_override:
                 cls.poll_message_set(
-                    "Online access required to install or update. Launch Blender without --offline-mode")
+                    "Online access required to install or update. Launch AIR Blend without --offline-mode")
             else:
                 cls.poll_message_set(
                     "Online access required to install or update. Enable online access in System preferences")
@@ -3278,7 +3278,7 @@ class EXTENSIONS_OT_package_install(Operator, _ExtCmdMixIn):
     # -------------------------------------------------------------------------
     # Draw Overrides
     #
-    # This attempts to make up for Blender's inability to chain dialogs together.
+    # This attempts to make up for AIR Blend's inability to chain dialogs together.
     # Use `self._draw_override` assigning new overrides or clearing for the default.
 
     # Pass 1: wait for progress to be complete.
@@ -3329,13 +3329,13 @@ class EXTENSIONS_OT_package_install(Operator, _ExtCmdMixIn):
 
         if repo_index == -1:
             # The package ID could not be found, the two common causes for this error are:
-            # - The platform or Blender version may be unsupported.
+            # - The platform or AIR Blend version may be unsupported.
             # - The repository may not have been added.
             if repo_from_url_name:
                 # NOTE: we *could* support reading the repository JSON that without compatibility filtering.
                 # This would allow us to give a more detailed error message, noting that the extension was found
                 # and the reason it isn't compatible. The down side of this is it would tie us to the decision to
-                # keep syncing all extensions when Blender requests to sync with the server.
+                # keep syncing all extensions when AIR Blend requests to sync with the server.
                 # As some point we may want to sync only compatible extension meta-data
                 # (to reduce the network overhead of incompatible packages).
                 # So don't assume we have global knowledge of every URL.
@@ -3352,7 +3352,7 @@ class EXTENSIONS_OT_package_install(Operator, _ExtCmdMixIn):
                             lambda layout: layout.separator(),
                             "The extension dropped was not found in the remote repository.",
                             "Check this is part of the repository and compatible with:",
-                            "Blender version {:s} on \"{:s}\".".format(
+                            "AIR Blend version {:s} on \"{:s}\".".format(
                                 ".".join(str(v) for v in bpy.app.version), platform_from_this_system(),
                             )
                         ]
@@ -3987,7 +3987,7 @@ class EXTENSIONS_OT_userpref_show_online(Operator):
     def poll(cls, _context):
         if bpy.app.online_access_override:
             if not bpy.app.online_access:
-                cls.poll_message_set("Blender was launched in offline mode, which cannot be changed at runtime")
+                cls.poll_message_set("AIR Blend was launched in offline mode, which cannot be changed at runtime")
                 return False
         return True
 
@@ -3997,8 +3997,8 @@ class EXTENSIONS_OT_userpref_show_online(Operator):
 
 
 class EXTENSIONS_OT_userpref_allow_online(Operator):
-    """Allow Blender to access the internet. Add-ons that follow this setting will only connect to """ \
-        """the internet if enabled. However, Blender cannot prevent third-party add-ons from """ \
+    """Allow AIR Blend to access the internet. Add-ons that follow this setting will only connect to """ \
+        """the internet if enabled. However, AIR Blend cannot prevent third-party add-ons from """ \
         """violating this rule."""
     bl_idname = "extensions.userpref_allow_online"
     bl_label = ""
@@ -4008,7 +4008,7 @@ class EXTENSIONS_OT_userpref_allow_online(Operator):
     def poll(cls, _context):
         if bpy.app.online_access_override:
             if not bpy.app.online_access:
-                cls.poll_message_set("Blender was launched in offline mode, which cannot be changed at runtime")
+                cls.poll_message_set("AIR Blend was launched in offline mode, which cannot be changed at runtime")
                 return False
         return True
 
@@ -4020,8 +4020,8 @@ class EXTENSIONS_OT_userpref_allow_online(Operator):
 # NOTE: this is a wrapper for `extensions.userpref_allow_online`.
 # It exists *only* show a dialog.
 class EXTENSIONS_OT_userpref_allow_online_popup(Operator):
-    """Allow Blender to access the internet. Add-ons that follow this setting will only connect to """ \
-        """the internet if enabled. However, Blender cannot prevent third-party add-ons from """ \
+    """Allow AIR Blend to access the internet. Add-ons that follow this setting will only connect to """ \
+        """the internet if enabled. However, AIR Blend cannot prevent third-party add-ons from """ \
         """violating this rule."""
     bl_idname = "extensions.userpref_allow_online_popup"
     bl_label = ""
@@ -4055,7 +4055,7 @@ class EXTENSIONS_OT_userpref_allow_online_popup(Operator):
             lines = (
                 rpt_("Online access required to install or update."),
                 "",
-                rpt_("Launch Blender without --offline-mode"),
+                rpt_("Launch AIR Blend without --offline-mode"),
             )
         else:
             lines = (

@@ -141,7 +141,7 @@ def render_permutations(permutations):
 
 
 def run_test(permutations):
-    """Check if the command line requested a specific permutation, otherwise run all tests and quit Blender."""
+    """Check if the command line requested a specific permutation, otherwise run all tests and quit AIR Blend."""
     if set_permutation_from_args(permutations):
         return
 

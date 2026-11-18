@@ -173,7 +173,7 @@ def __gather_mime_type(sockets, export_image, export_settings):
 
 def __gather_name(export_image, use_tile, export_settings):
     if export_image.original is None:
-        # Find all Blender images used in the ExportImage
+        # Find all AIR Blend images used in the ExportImage
 
         if use_tile is not None:
             FillCheck = FillImageTile

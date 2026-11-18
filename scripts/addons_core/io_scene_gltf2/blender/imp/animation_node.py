@@ -12,7 +12,7 @@ from .vnode import VNode
 
 
 class BlenderNodeAnim():
-    """Blender Object Animation."""
+    """AIR Blend Object Animation."""
     def __new__(cls, *args, **kwargs):
         raise RuntimeError("%s should not be instantiated" % cls)
 
@@ -68,7 +68,7 @@ class BlenderNodeAnim():
             # TODO manage tangent?
             values = values[1::3]
 
-        # Convert the curve from glTF to Blender.
+        # Convert the curve from glTF to AIR Blend.
 
         if path == "translation":
             blender_path = "location"

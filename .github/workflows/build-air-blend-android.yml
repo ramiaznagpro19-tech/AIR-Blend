@@ -1,0 +1,140 @@
+name: Build AIR Blend Android APK
+
+# Builds the AIR Blend Android APK (arm64-v8a) with the "lite" configuration
+# (non essential features disabled for a smaller app and a faster build),
+# then publishes it as a workflow artifact and as the "android-latest" release.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ air-blend-android ]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: air-blend-android
+  cancel-in-progress: true
+
+env:
+  # Large files (Git LFS) are not stored on GitHub for this fork:
+  # they are fetched from the upstream Blender server, which hosts the same objects.
+  UPSTREAM_LFS: https://projects.blender.org/blender/blender.git/info/lfs
+  BUILD_DIR: /mnt/air-blend-build
+
+jobs:
+  apk:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 355
+
+    steps:
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/.ghcup /usr/share/swift \
+                      /usr/local/share/powershell /opt/hostedtoolcache/CodeQL \
+                      /usr/local/share/chromium /usr/local/share/boost /opt/microsoft || true
+          sudo docker image prune -a -f > /dev/null 2>&1 || true
+          sudo mkdir -p "$BUILD_DIR" && sudo chown "$USER" "$BUILD_DIR"
+          df -h / /mnt
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          lfs: false
+          submodules: false
+
+      - name: Fetch large files (Git LFS) from upstream
+        run: |
+          git lfs install --local
+          git config lfs.url "$UPSTREAM_LFS"
+          git lfs pull --exclude="tests/**,lib/**"
+          echo "Remaining LFS pointers in release/:"
+          grep -rl "^version https://git-lfs" release/ | head -20 || true
+
+      - name: Fetch precompiled libraries (Android arm64 + Linux host tools)
+        run: |
+          for lib in android_arm64 linux_x64; do
+            path="lib/$lib"
+            sha=$(git ls-tree HEAD "$path" | awk '{print $3}')
+            url=$(git config -f .gitmodules "submodule.$path.url")
+            echo "== $path @ $sha from $url"
+            rm -rf "$path"
+            git init -q "$path"
+            git -C "$path" remote add origin "$url"
+            git -C "$path" lfs install --local
+            git -C "$path" fetch -q --depth 1 origin "$sha"
+            git -C "$path" checkout -q FETCH_HEAD
+            git -C "$path" lfs pull
+            du -sh "$path"
+          done
+          df -h / /mnt
+
+      - name: Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Android SDK and NDK
+        run: |
+          SDKM="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
+          yes | "$SDKM" --licenses > /dev/null || true
+          NDK=$("$SDKM" --list 2>/dev/null | grep -oE "ndk;[0-9]+\.[0-9]+\.[0-9]+ " | sort -V | tail -1 | tr -d ' ')
+          echo "Installing $NDK"
+          "$SDKM" --install "$NDK" "platforms;android-36" "build-tools;36.0.0" > /dev/null
+          echo "ANDROID_NDK_ROOT=$ANDROID_HOME/ndk/${NDK#ndk;}" >> "$GITHUB_ENV"
+
+      - name: Build tools
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q ninja-build ccache
+          cmake --version | head -1
+
+      - name: Compiler cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ccache
+          key: ccache-android-${{ github.sha }}
+          restore-keys: ccache-android-
+
+      - name: Configure and build AIR Blend for Android
+        run: |
+          export CCACHE_DIR="$HOME/.cache/ccache" CCACHE_MAXSIZE=4G
+          make android lite ninja ccache BUILD_DIR="$BUILD_DIR" ANDROID_NDK_ROOT="$ANDROID_NDK_ROOT"
+          ccache -s || true
+          df -h / /mnt
+
+      - name: Assemble APK
+        run: |
+          cmake --build "$BUILD_DIR" --target gradle_assemble
+          APK="$BUILD_DIR/gradle/app/build/outputs/apk/release/app-release.apk"
+          mkdir -p out && cp "$APK" out/AIR-Blend-arm64.apk
+          ls -lh out/
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AIR-Blend-Android
+          path: out/AIR-Blend-arm64.apk
+          retention-days: 30
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: android-latest
+          name: AIR Blend Android (latest build)
+          target_commitish: ${{ github.sha }}
+          prerelease: true
+          make_latest: false
+          body: |
+            APK Android d'AIR Blend (arm64-v8a, Android 10 minimum, Vulkan requis).
+            Compilé automatiquement depuis la branche air-blend-android (${{ github.sha }}).
+          files: out/AIR-Blend-arm64.apk
+
+      - name: Build log on failure
+        if: failure()
+        run: |
+          df -h / /mnt || true
+          tail -n 200 "$BUILD_DIR/CMakeFiles/CMakeError.log" 2>/dev/null || true
+          tail -n 200 "$BUILD_DIR/CMakeFiles/CMakeConfigureLog.yaml" 2>/dev/null || true

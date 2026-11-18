@@ -193,7 +193,7 @@ GHOST_TSuccess GHOST_ISystem::createSystem(bool verbose, [[maybe_unused]] bool b
 
 #ifdef WITH_GHOST_WAYLAND
 #  ifndef WITH_GHOST_X11
-      /* Special case, Blender will eventually drop X11.
+      /* Special case, AIR Blend will eventually drop X11.
        * show a more user friendly warning while this is in the process
        * of being disabled by default. */
 

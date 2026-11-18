@@ -240,7 +240,7 @@ void GLBackend::platform_init()
         if (ver0 < 30 || (ver0 == 30 && ver1 == 0 && ver2 < 3820)) {
           std::cout
               << "=====================================\n"
-              << "Qualcomm drivers older than 30.0.3820.x cannot run Blender 4.0 or later.\n"
+              << "Qualcomm drivers older than 30.0.3820.x cannot run AIR Blend 4.0 or later.\n"
               << "If your device is older than an 8cx Gen3, you must use a 3.x LTS release.\n"
               << "If you have an 8cx Gen3 or newer device, a driver update may be available.\n"
               << "=====================================\n";
@@ -265,7 +265,7 @@ void GLBackend::platform_init()
       if (strstr(renderer, "HD Graphics 405")) {
         support_level = GPU_SUPPORT_LEVEL_LIMITED;
       }
-      /* Latest Intel driver have bugs that won't allow Blender to start.
+      /* Latest Intel driver have bugs that won't allow AIR Blend to start.
        * Users must install different version of the driver.
        * See #113124 for more information. */
       if (strstr(version, "Build 20.19.15.51")) {
@@ -347,7 +347,7 @@ void GLBackend::platform_init()
     GLint number_of_devices = 0;
     glGetIntegerv(GL_NUM_DEVICE_UUIDS_EXT, &number_of_devices);
     /* Multiple devices could be used by the context if certain extensions like multi-cast is used.
-     * But this is not used by Blender, so this should always be 1. */
+     * But this is not used by AIR Blend, so this should always be 1. */
     BLI_assert(number_of_devices == 1);
 
     GLubyte device_uuid[GL_UUID_SIZE_EXT] = {0};
@@ -412,7 +412,7 @@ static void detect_workarounds()
     GCaps.stencil_clasify_buffer_workaround = true;
     GCaps.texture_pool_workaround = true;
     GLContext::debug_layer_workaround = true;
-    /* Turn off Blender features. */
+    /* Turn off AIR Blend features. */
     GCaps.hdr_viewport_support = false;
     /* Turn off OpenGL 4.4 features. */
     GLContext::multi_bind_support = false;

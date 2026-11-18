@@ -15,7 +15,7 @@ class ExtraFileMetadataProvider(http_dl.MetadataProvider):
 
     This is to support the following file sets:
 
-    - `file.json`: Actual JSON file read by Blender. Is assumed to be validated.
+    - `file.json`: Actual JSON file read by AIR Blend. Is assumed to be validated.
     - `file-unsafe.json`: JSON file as downloaded. Must be validated before use.
     - `file-unsafe.json~`: The above file while it's being downloaded. Not yet
       complete JSON.

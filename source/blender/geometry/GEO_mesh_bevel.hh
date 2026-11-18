@@ -61,7 +61,7 @@ struct BevelParameters {
    */
   Array<float2> custom_profile_samples;
   /**
-   * Blender units to offset each end of each edge.
+   * AIR Blend units to offset each end of each edge.
    * A 4d Array of Arrays indexed by mesh edge id.
    * If affect_type is Edges or Faces, these are in order: source end (left, right), destination
    * end (left, right), viewed from the source end looking towards the destination end,

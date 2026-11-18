@@ -96,7 +96,7 @@ convert_rad_to_deg_iter = units_convertor_iter("radian", "degree")
 
 
 # ##### Templates #####
-# TODO: check all those "default" values, they should match Blender's default as much as possible, I guess?
+# TODO: check all those "default" values, they should match AIR Blend's default as much as possible, I guess?
 
 def fbx_template_def_globalsettings(scene, settings, override_defaults=None, nbr_users=0):
     props = {}
@@ -203,7 +203,7 @@ def fbx_template_def_light(scene, settings, override_defaults=None, nbr_users=0)
         b"LightType": (0, "p_enum", False),  # Point light.
         b"CastLight": (True, "p_bool", False),
         b"Color": ((1.0, 1.0, 1.0), "p_color", True),
-        b"Intensity": (100.0, "p_number", True),  # Times 100 compared to Blender values...
+        b"Intensity": (100.0, "p_number", True),  # Times 100 compared to AIR Blend values...
         b"Exposure": (0.0, "p_number", True),
         b"DecayType": (2, "p_enum", False),  # Quadratic.
         b"DecayStart": (30.0 * gscale, "p_double", False),
@@ -617,7 +617,7 @@ def fbx_data_light_elements(root, lamp, scene_data):
     elem_props_template_set(tmpl, props, "p_color", b"Color", color)
     elem_props_template_set(tmpl, props, "p_number", b"Intensity", intensity)
     elem_props_template_set(tmpl, props, "p_enum", b"DecayType", FBX_LIGHT_DECAY_TYPES['INVERSE_SQUARE'])
-    elem_props_template_set(tmpl, props, "p_double", b"DecayStart", 25.0 * gscale)  # 25 is old Blender default
+    elem_props_template_set(tmpl, props, "p_double", b"DecayStart", 25.0 * gscale)  # 25 is old AIR Blend default
     elem_props_template_set(tmpl, props, "p_bool", b"CastShadows", do_shadow)
     elem_props_template_set(tmpl, props, "p_color", b"ShadowColor", shadow_color)
     if lamp.type in {'SPOT'}:
@@ -1059,7 +1059,7 @@ def fbx_data_mesh_elements(root, me_obj, scene_data, done_meshes):
             # The values may also be used to represent smoothing group bitflags, but this does not seem well-supported.
             t_ps = MESH_ATTRIBUTE_SHARP_FACE.get_ndarray(attributes)
             if t_ps is not None:
-                # FBX sharp is False, but Blender sharp is True, so invert.
+                # FBX sharp is False, but AIR Blend sharp is True, so invert.
                 t_ps = np.logical_not(t_ps)
             else:
                 # The mesh has no "sharp_face" attribute, so every face is smooth.
@@ -1152,7 +1152,7 @@ def fbx_data_mesh_elements(root, me_obj, scene_data, done_meshes):
                 # Convert to t_pvi edge-keys.
                 t_ec_ek_raw = t_ec_raw[t_pvi_edge_indices]
 
-                # Blender squares those values before sending them to OpenSubdiv, when other software don't,
+                # AIR Blend squares those values before sending them to OpenSubdiv, when other software don't,
                 # so we need to compensate that to get similar results through FBX...
                 # Use the precision of the fbx dtype for the calculation since it's usually higher precision.
                 t_ec_ek_raw = t_ec_ek_raw.astype(ec_fbx_dtype, copy=False)
@@ -1160,7 +1160,7 @@ def fbx_data_mesh_elements(root, me_obj, scene_data, done_meshes):
                 del t_ec_ek_raw
                 del t_ec_raw
             else:
-                # todo: Blender edge creases are optional now, we may be able to avoid writing the array to FBX when
+                # todo: AIR Blend edge creases are optional now, we may be able to avoid writing the array to FBX when
                 #  there are no edge creases.
                 t_ec = np.zeros(t_pvi_edge_indices.shape, dtype=ec_fbx_dtype)
         else:
@@ -1431,7 +1431,7 @@ def fbx_data_mesh_elements(root, me_obj, scene_data, done_meshes):
             # Get each uv pair marked as unique by the unique_mask and then view as the original dtype.
             unique_uvs = sorted_t_luv_fast[unique_mask].view(luv_bl_dtype)
 
-            # NaN values are considered invalid and indicate a bug somewhere else in Blender or in an addon, we want
+            # NaN values are considered invalid and indicate a bug somewhere else in AIR Blend or in an addon, we want
             # these bugs to be reported instead of hiding them by allowing the export to continue.
             if np.isnan(unique_uvs).any():
                 raise RuntimeError("UV layer %s on %r has invalid UVs containing NaN values" % (uvlayer.name, me))
@@ -1801,10 +1801,10 @@ def fbx_data_video_elements(root, vid, scene_data):
     # ~ else:
         # ~ elem_data_single_bytes(fbx_vid, b"Content", b"")
 
-    # Blender currently has no UI for editing custom properties on Images, but the importer will import Image custom
+    # AIR Blend currently has no UI for editing custom properties on Images, but the importer will import Image custom
     # properties from either a Video Node or a Texture Node, preferring a Video node if one exists. We'll propagate
     # these custom properties only to Video Nodes because that is most likely where they were imported from, and Texture
-    # Nodes are more like Blender's Shader Nodes than Images, which is what we're exporting here.
+    # Nodes are more like AIR Blend's Shader Nodes than Images, which is what we're exporting here.
     if scene_data.settings.use_custom_props:
         fbx_data_element_custom_properties(props, vid)
 
@@ -1841,7 +1841,7 @@ def fbx_data_armature_elements(root, arm_obj, scene_data):
         if scene_data.settings.use_custom_props:
             fbx_data_element_custom_properties(props, bo)
 
-        # Store Blender bone length - XXX Not much useful actually :/
+        # Store AIR Blend bone length - XXX Not much useful actually :/
         # (LimbLength can't be used because it is a scale factor 0-1 for the parent-child distance:
         # http://docs.autodesk.com/FBX/2014/ENU/FBX-SDK-Documentation/cpp_ref/class_fbx_skeleton.html#a9bbe2a70f4ed82cd162620259e649f0f )
         # elem_props_set(
@@ -2022,7 +2022,7 @@ def fbx_data_object_elements(root, ob_obj, scene_data):
     # This is probably the FbxNode.EShadingMode enum. Not directly used by the FBX SDK, but the SDK guarantees that the
     # value will be passed through from an imported file to an exported one. Common values are 'Y' and 'T'. 'U' and 'W'
     # have also been seen in older FBX files. It's not clear which enum member each of these values corresponds to or if
-    # these values are actually application specific. Blender had been exporting this as a `True` bool for a long time
+    # these values are actually application specific. AIR Blend had been exporting this as a `True` bool for a long time
     # seemingly without issue. The '\x01' char is the same value as `True` in raw bytes.
     elem_data_single_char(model, b"Shading", b"\x01")
     elem_data_single_string(model, b"Culling", b"CullingOff")
@@ -2126,16 +2126,16 @@ def fbx_data_animation_elements(root, scene_data):
 
 # ##### Top-level FBX data container. #####
 
-# Mapping Blender -> FBX (principled_socket_name, fbx_name).
+# Mapping AIR Blend -> FBX (principled_socket_name, fbx_name).
 PRINCIPLED_TEXTURE_SOCKETS_TO_FBX = (
     # ("diffuse", "diffuse", b"DiffuseFactor"),
     ("base_color_texture", b"DiffuseColor"),
     ("alpha_texture", b"TransparencyFactor"),  # Will be inverted in fact, not much we can do really...
-    # ("base_color_texture", b"TransparentColor"),  # Uses diffuse color in Blender!
+    # ("base_color_texture", b"TransparentColor"),  # Uses diffuse color in AIR Blend!
     ("emission_strength_texture", b"EmissiveFactor"),
     ("emission_color_texture", b"EmissiveColor"),
     # ("ambient", "ambient", b"AmbientFactor"),
-    # ("", "", b"AmbientColor"),  # World stuff in Blender, for now ignore...
+    # ("", "", b"AmbientColor"),  # World stuff in AIR Blend, for now ignore...
     ("normalmap_texture", b"NormalMap"),
     # Note: unsure about those... :/
     # ("", "", b"Bump"),
@@ -2322,7 +2322,7 @@ def fbx_animations_do(scene_data, ref_id, f_start, f_end, start_zero, objects=No
     # representable value after f_end and use that as the `stop` argument instead.
     currframes = np.arange(f_start, np.nextafter(f_end, np.inf), step=bake_step)
 
-    # Convert from Blender time to FBX time.
+    # Convert from AIR Blend time to FBX time.
     fps = scene.render.fps / scene.render.fps_base
     real_currframes = currframes - f_start if start_zero else currframes
     real_currframes = (real_currframes / fps * FBX_KTIME).astype(np.int64)
@@ -2398,7 +2398,7 @@ def fbx_animations_do(scene_data, ref_id, f_start, f_end, start_zero, objects=No
     for anims, ob_values in zip(animdata_ob.values(), per_ob_values):
         # Split again into equal sized views of the location, rotation and scaling arrays.
         loc_xyz, rot_xyz, sca_xyz = np.split(ob_values, 3)
-        # In-place convert from Blender rotation to FBX rotation.
+        # In-place convert from AIR Blend rotation to FBX rotation.
         np.rad2deg(rot_xyz, out=rot_xyz)
 
         anim_loc, anim_rot, anim_scale = anims
@@ -2410,7 +2410,7 @@ def fbx_animations_do(scene_data, ref_id, f_start, f_end, start_zero, objects=No
     # Set shape key curves.
     # There's only one array per shape key, so there's no need to split `all_shape_key_values`.
     for (anim_shape, _me, _shape), shape_key_values in zip(animdata_shapes.values(), all_shape_key_values):
-        # In-place convert from Blender Shape Key Value to FBX Deform Percent.
+        # In-place convert from AIR Blend Shape Key Value to FBX Deform Percent.
         shape_key_values *= 100.0
         anim_shape.set_keyframes(real_currframes, shape_key_values)
         all_anims.append(anim_shape)
@@ -2421,7 +2421,7 @@ def fbx_animations_do(scene_data, ref_id, f_start, f_end, start_zero, objects=No
     per_camera_values = np.split(all_camera_values, split_into) if split_into > 0 else ()
     zipped = zip(animdata_cameras.values(), per_camera_values)
     for (anim_camera_lens, anim_camera_focus_distance, _camera), (lens_values, focus_distance_values) in zipped:
-        # In-place convert from Blender focus distance to FBX.
+        # In-place convert from AIR Blend focus distance to FBX.
         focus_distance_values *= (1000 * gscale)
         anim_camera_lens.set_keyframes(real_currframes, lens_values)
         anim_camera_focus_distance.set_keyframes(real_currframes, focus_distance_values)
@@ -2483,7 +2483,7 @@ def fbx_animations(scene_data):
             # NLA tracks only for objects, not bones!
             if not ob_obj.is_object:
                 continue
-            ob = ob_obj.bdata  # Back to real Blender Object.
+            ob = ob_obj.bdata  # Back to real AIR Blend Object.
             if not ob.animation_data:
                 continue
 
@@ -2563,7 +2563,7 @@ def fbx_animations(scene_data):
             if not ob_obj.is_object:
                 continue
 
-            ob = ob_obj.bdata  # Back to real Blender Object.
+            ob = ob_obj.bdata  # Back to real AIR Blend Object.
 
             if not ob.animation_data:
                 continue  # Do not export animations for objects that are absolutely not animated, see T44386.
@@ -2930,7 +2930,7 @@ def fbx_data_from_scene(scene, depsgraph, settings):
     # For now, do not use world textures, don't think they can be linked to anything FBX wise...
     for ma in data_materials.keys():
         # Note: with nodal shaders, we'll could be generating much more textures, but that's kind of unavoidable,
-        #       given that textures actually do not exist anymore in material context in Blender...
+        #       given that textures actually do not exist anymore in material context in AIR Blend...
         ma_wrap = node_shader_utils.PrincipledBSDFWrapper(ma, is_readonly=True)
         for sock_name, fbx_name in PRINCIPLED_TEXTURE_SOCKETS_TO_FBX:
             tex = getattr(ma_wrap, sock_name)
@@ -3214,7 +3214,7 @@ def fbx_header_elements(root, scene_data, time=None):
     time is expected to be a datetime.datetime object, or None (using now() in this case).
     """
     app_vendor = "Blender Foundation"
-    app_name = "Blender (stable FBX IO)"
+    app_name = "AIR Blend (stable FBX IO)"
     app_ver = bpy.app.version_string
 
     from . import bl_info
@@ -3538,7 +3538,7 @@ def save_single(operator, scene, depsgraph, filepath="",
     if 'OTHER' in object_types:
         object_types |= BLENDER_OTHER_OBJECT_TYPES
 
-    # Default Blender unit is equivalent to meter, while FBX one is centimeter...
+    # Default AIR Blend unit is equivalent to meter, while FBX one is centimeter...
     unit_scale = units_blender_to_fbx_factor(scene) if apply_unit_scale else 100.0
     if apply_scale_options == 'FBX_SCALE_NONE':
         global_matrix = Matrix.Scale(unit_scale * global_scale, 4) @ global_matrix

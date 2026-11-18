@@ -259,8 +259,8 @@ def actionconfig_export_as_data(session_state, filepath, *, sort=False):
         fw("\n\n")
         fw("if __name__ == \"__main__\":\n")
 
-        # We could remove this in the future, as loading new action-maps in older Blender versions
-        # makes less and less sense as Blender changes.
+        # We could remove this in the future, as loading new action-maps in older AIR Blend versions
+        # makes less and less sense as AIR Blend changes.
         fw("    # Only add keywords that are supported.\n")
         fw("    from bpy.app import version as blender_version\n")
         fw("    keywords = {}\n")

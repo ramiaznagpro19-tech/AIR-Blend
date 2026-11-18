@@ -74,7 +74,7 @@ static bool is_valid_accessibility_priority(const pxr::TfToken &token)
 /**
  * Write the accessibility property on the given prim. Note: although the
  * UsdUIAccessibilityAPI DOES allow time-sampled data for the `label`
- * and `description` properties, Blender does not currently support
+ * and `description` properties, AIR Blend does not currently support
  * keyframes on string custom properties so time-sample authoring will
  * not be done here.
  */

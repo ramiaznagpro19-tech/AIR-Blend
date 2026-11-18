@@ -582,7 +582,7 @@ static void delayed_close_thread_run()
     }
 
     if (!g_state.use_delayed_close) {
-      /* Take into account corner case where you switch from a delayed close device while Blender
+      /* Take into account corner case where you switch from a delayed close device while AIR Blend
        * is running and a delayed close has already been queued up. */
       continue;
     }
@@ -703,7 +703,7 @@ void BKE_sound_init(Main *bmain)
      * These streams are only active when Audaspace is playing back, so we don't need to
      * do anything manually.
      * If we close these devices, it will become very hard and tedious for end users to
-     * control the volume or route audio from Blender.
+     * control the volume or route audio from AIR Blend.
      */
     g_state.use_delayed_close = false;
     aud::DeviceManager::getDevice()->setSyncCallback(sound_sync_callback, bmain);
@@ -1267,7 +1267,7 @@ double BKE_sound_sync_scene(Scene *scene)
 {
   sound_verify_evaluated_id(&scene->id);
 
-  /* Ugly: Blender doesn't like it when the animation is played back during rendering */
+  /* Ugly: AIR Blend doesn't like it when the animation is played back during rendering */
   if (G.is_rendering) {
     return NAN_FLT;
   }
@@ -2084,7 +2084,7 @@ void BKE_sound_jack_scene_update(Scene *scene, int mode, double time)
 {
   sound_verify_evaluated_id(&scene->id);
 
-  /* Ugly: Blender doesn't like it when the animation is played back during rendering. */
+  /* Ugly: AIR Blend doesn't like it when the animation is played back during rendering. */
   if (G.is_rendering) {
     return;
   }

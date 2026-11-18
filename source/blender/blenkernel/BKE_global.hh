@@ -7,8 +7,8 @@
  * \ingroup bke
  * \section aboutglobal Global settings
  *   Global settings, handles, pointers. This is the root for finding
- *   any data in Blender. This block is not serialized, but built anew
- *   for every fresh Blender run.
+ *   any data in AIR Blend. This block is not serialized, but built anew
+ *   for every fresh AIR Blend run.
  */
 
 #include "DNA_listBase.h"
@@ -65,7 +65,7 @@ struct Global {
   bool is_break;
 
   /**
-   * Blender is running without any Windows or OpenGLES context.
+   * AIR Blend is running without any Windows or OpenGLES context.
    * Typically set by the `--background` command-line argument.
    *
    * Also enabled when build defines `WITH_PYTHON_MODULE` or `WITH_HEADLESS` are set
@@ -145,7 +145,7 @@ struct Global {
    * When true, various geometry processing algorithms randomize the order of elements (e.g.
    * vertices or edges) in the output. In many cases, we don't make guarantees about the exact
    * order of elements. So if users depend on the indices with e.g. geometry nodes, their file can
-   * break in a different Blender version. Explicitly turning on randomization can help protect
+   * break in a different AIR Blend version. Explicitly turning on randomization can help protect
    * oneself against such breakages.
    */
   bool randomize_geometry_element_order;
@@ -204,7 +204,7 @@ enum {
   G_FLAG_INTERNET_ALLOW = (1 << 10),
 
   /* NOTE: storing both online/offline override is needed so changing the preference
-   * can be disabled when launching Blender with `--offline-mode`.
+   * can be disabled when launching AIR Blend with `--offline-mode`.
    * This means that users in a controlled environment can launch
    * in offline-mode and the option can't be changed afterwards. */
 

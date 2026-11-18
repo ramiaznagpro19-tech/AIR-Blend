@@ -185,7 +185,7 @@ struct ModifierData {
   uint16_t layout_panel_open_flag = 0;
   char _pad[2] = {};
   /**
-   * Uniquely identifies the modifier within the object. This identifier is stable across Blender
+   * Uniquely identifies the modifier within the object. This identifier is stable across AIR Blend
    * sessions. Modifiers on the original and corresponding evaluated object have matching
    * identifiers. The identifier stays the same if the modifier is renamed or moved in the modifier
    * stack.

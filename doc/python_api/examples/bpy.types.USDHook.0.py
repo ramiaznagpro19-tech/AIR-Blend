@@ -34,7 +34,7 @@ such as shader generation.
 Args:
 
 - ``export_context`` (`USDMaterialExportContext`_): Provides access to the stage and a texture export utility function
-- ``bl_material`` (``bpy.types.Material``): The source Blender material
+- ``bl_material`` (``bpy.types.Material``): The source AIR Blend material
 - ``usd_material`` (``pxr.UsdShade.Material``): The target USD material to be exported
 
 Returns:
@@ -52,7 +52,7 @@ Called after the USD import finalizes.
 Args:
 
 - ``import_context`` (`USDSceneImportContext`_):
-  Provides access to the stage and a map associating USD prim paths and Blender IDs
+  Provides access to the stage and a map associating USD prim paths and AIR Blend IDs
 
 Returns:
 
@@ -79,14 +79,14 @@ or ``MaterialX`` import and invoke the hook's `on_material_import`_ method to co
 on_material_import
 ^^^^^^^^^^^^^^^^^^
 
-Called for each material that is imported, to allow converting the USD material to nodes on the Blender material.
+Called for each material that is imported, to allow converting the USD material to nodes on the AIR Blend material.
 To ensure that this function gets called, the hook must also implement the ``material_import_poll()``
 callback to return ``True`` for the given USD material.
 
 Args:
 
 - ``import_context`` (`USDMaterialImportContext`_): Provides access to the stage and a texture import utility function
-- ``bl_material`` (``bpy.types.Material``): The target Blender material with an empty node tree
+- ``bl_material`` (``bpy.types.Material``): The target AIR Blend material with an empty node tree
 - ``usd_material`` (``pxr.UsdShade.Material``): The source USD material to be imported
 
 Returns:
@@ -107,7 +107,7 @@ Argument for `on_export`_.
 Methods:
 
 - ``get_stage()``: returns the USD stage to be saved
-- ``get_depsgraph()``: returns the Blender scene dependency graph
+- ``get_depsgraph()``: returns the AIR Blend scene dependency graph
 - ``get_prim_map()`` returns a ``dict`` where the key is an exported USD Prim path and the value a ``list``
   of the IDs associated with that prim.
 
@@ -164,7 +164,7 @@ already a local file or if it could not be copied to a local destination.
 Errors
 ------
 
-Exceptions raised by these functions will be reported in Blender with the exception details printed to the console.
+Exceptions raised by these functions will be reported in AIR Blend with the exception details printed to the console.
 
 
 Example Code
@@ -205,7 +205,7 @@ class USDHookExample(bpy.types.USDHook):
 
     @staticmethod
     def on_export(export_context):
-        """ Include the Blender filepath in the root layer custom data.
+        """ Include the AIR Blend filepath in the root layer custom data.
         """
 
         stage = export_context.get_stage()
@@ -239,7 +239,7 @@ class USDHookExample(bpy.types.USDHook):
         # Connect the shader.  MaterialX materials use "mtlx" renderContext
         usd_material.CreateSurfaceOutput("mtlx").ConnectToSource(shader.ConnectableAPI(), "out")
 
-        # Set the color to the Blender material's viewport display color.
+        # Set the color to the AIR Blend material's viewport display color.
         col = bl_material.diffuse_color
         shader.CreateInput("base_color", Sdf.ValueTypeNames.Color3f).Set(Gf.Vec3f(col[0], col[1], col[2]))
 

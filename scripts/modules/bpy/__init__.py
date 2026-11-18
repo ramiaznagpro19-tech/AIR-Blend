@@ -19,7 +19,7 @@ __all__ = (
 )
 
 
-# Internal Blender C-API modules.
+# Internal AIR Blend C-API modules.
 from _bpy import (
     app,
     context,

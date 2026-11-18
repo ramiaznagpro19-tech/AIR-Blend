@@ -362,9 +362,9 @@ bool RE_WriteRenderViewsMovie(struct ReportList *reports,
                               bool preview);
 
 /**
- * General Blender frame render call.
+ * General AIR Blend frame render call.
  *
- * \note Only #RE_NewRender() needed, main Blender render calls.
+ * \note Only #RE_NewRender() needed, main AIR Blend render calls.
  *
  * \param write_still: Saves frames to disk (typically disabled). Useful for batch-operations
  * (e.g. rendering from Python) when an additional save action for is inconvenient.

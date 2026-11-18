@@ -125,14 +125,14 @@ def extract_release_notes(version: str, issue: str):
     description = response.json()["body"]
 
     lines = description.split("\n")
-    start_index = lines.index(f"## Blender {version}")
+    start_index = lines.index(f"## AIR Blend {version}")
     lines = lines[start_index + 1:]
     for line in lines:
         if not line.strip():
             continue
         if line.startswith("| **Report**"):
             continue
-        if line.startswith("## Blender"):
+        if line.startswith("## AIR Blend"):
             break
         if line.find("| -- |") != -1:
             continue

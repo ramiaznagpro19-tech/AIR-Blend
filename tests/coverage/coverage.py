@@ -24,7 +24,7 @@ usage = textwrap.dedent(
 
     Commands:
         report                              Analyse coverage data and generate html report.
-          [--build-directory]                 Blender build directory. This will be scanned for .gcda files.
+          [--build-directory]                 AIR Blend build directory. This will be scanned for .gcda files.
           [--no-browser]                      Don't open the browser in the end.
         reset [--build-directory]           Delete .gcda files.
         help                                Show this help.
@@ -33,7 +33,7 @@ usage = textwrap.dedent(
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Blender test coverage", usage=usage)
+    parser = argparse.ArgumentParser(description="AIR Blend test coverage", usage=usage)
 
     parser.add_argument("command", nargs="?", default="help")
     args = parser.parse_args(sys.argv[1:2])
@@ -60,7 +60,7 @@ def run_report(argv):
 
     build_dir = Path(args.build_directory).absolute()
     if not is_blender_build_directory(build_dir):
-        print("Directory does not seem to be a Blender build directory.")
+        print("Directory does not seem to be an AIR Blend build directory.")
         sys.exit(1)
 
     coverage_dir = build_dir / "coverage"
@@ -82,7 +82,7 @@ def run_reset(argv):
 
     build_dir = Path(args.build_directory).absolute()
     if not is_blender_build_directory(build_dir):
-        print("Directory does not seem to be a Blender build directory.")
+        print("Directory does not seem to be an AIR Blend build directory.")
         sys.exit(1)
 
     print("Remove .gcda files...")

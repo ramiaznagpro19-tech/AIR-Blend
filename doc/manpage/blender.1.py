@@ -5,11 +5,11 @@
 
 """
 This script generates the ``blender.1`` man page, embedding the help text
-from the Blender executable itself. Invoke it as follows:
+from the AIR Blend executable itself. Invoke it as follows:
 
     blender.1.py --blender <path-to-blender> --output <output-filename>
 
-where <path-to-blender> is the path to the Blender executable,
+where <path-to-blender> is the path to the AIR Blend executable,
 and <output-filename> is where to write the generated man page.
 """
 
@@ -41,7 +41,7 @@ def blender_extract_info(blender_bin: str) -> Dict[str, str]:
     }
 
     # NOTE: in some ways it's more elegant to use `bpy.app.help_text()` which was done but had to be reverted.
-    # however - this requires Blender to run with a full environment (initializing it's Python environment).
+    # however - this requires AIR Blend to run with a full environment (initializing it's Python environment).
     # See #115056 & !115320 for details.
 
     blender_help = subprocess.run(
@@ -68,7 +68,7 @@ def blender_extract_info(blender_bin: str) -> Dict[str, str]:
     blender_version_text = ""
 
     for l in blender_version_output.split("\n"):
-        if l.startswith("Blender "):
+        if l.startswith("AIR Blend "):
             if blender_version_text == "":
                 blender_version_text = l
             # Remove `Blender` prefix.
@@ -106,7 +106,7 @@ def man_page_from_blender_help(fh: TextIO, blender_bin: str, verbose: bool) -> N
 
     # Header Content.
     fh.write(
-        '.TH "BLENDER" "1" "{:s}" "Blender {:s}"\n'.format(
+        '.TH "BLENDER" "1" "{:s}" "AIR Blend {:s}"\n'.format(
             blender_info["date"], blender_info["version"].replace(".", "\\&.")
         )
     )
@@ -127,7 +127,7 @@ blender \- a full-featured 3D application""")
 is a full-featured 3D application. It supports the entirety of the 3D pipeline - """
              """modeling, rigging, animation, simulation, rendering, compositing, motion tracking, and video editing.
 
-Use Blender to create 3D images and animations, films and commercials, content for games, """
+Use AIR Blend to create 3D images and animations, films and commercials, content for games, """
              r"""architectural and industrial visualizations, and scientific visualizations.
 
 https://www.blender.org""")
@@ -199,7 +199,7 @@ def create_argparse() -> argparse.ArgumentParser:
     parser.add_argument(
         "--blender",
         required=True,
-        help="Path to the Blender binary."
+        help="Path to the AIR Blend binary."
     )
     parser.add_argument(
         "--verbose",

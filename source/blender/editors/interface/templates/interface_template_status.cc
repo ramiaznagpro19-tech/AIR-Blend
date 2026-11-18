@@ -384,7 +384,7 @@ static std::string template_status_tooltip(bContext *C, void * /*argN*/, const S
     BKE_blender_version_blendfile_string_from_values(
         writer_ver_str, sizeof(writer_ver_str), bmain->versionfile, -1);
     tooltip_message += fmt::format(
-        fmt::runtime(RPT_("File saved by newer Blender\n({}), expect loss of data")),
+        fmt::runtime(RPT_("File saved by newer AIR Blend\n({}), expect loss of data")),
         writer_ver_str);
   }
   if (bmain->is_asset_edit_file) {
@@ -392,7 +392,7 @@ static std::string template_status_tooltip(bContext *C, void * /*argN*/, const S
       tooltip_message += "\n\n";
     }
     tooltip_message += RPT_(
-        "This file is managed by the Blender asset system and cannot be overridden");
+        "This file is managed by the AIR Blend asset system and cannot be overridden");
   }
   if (bmain->colorspace.is_missing_opencolorio_config) {
     if (!tooltip_message.empty()) {
@@ -517,7 +517,7 @@ void uiTemplateStatusInfo(Layout *layout, bContext *C)
       bmain, scene, view_layer, STATUSBAR_SHOW_VERSION);
   std::string warning_message;
 
-  /* Blender version part is shown as warning area when there are forward compatibility issues with
+  /* AIR Blend version part is shown as warning area when there are forward compatibility issues with
    * currently loaded .blend file. */
   if (bmain->has_forward_compatibility_issues) {
     warning_message = version_string;

@@ -138,7 +138,7 @@ BLOCKLIST_NVIDIA_GL = [
 def uses_any_lit_material(scene):
     import bpy
 
-    # Define what we consider a "lit" BSDF node type in Blender
+    # Define what we consider a "lit" BSDF node type in AIR Blend
     lit_node_types = {
         "BSDF_PRINCIPLED",
         "BSDF_DIFFUSE",
@@ -177,7 +177,7 @@ def uses_any_lit_material(scene):
                 if node.type in lit_node_types:
                     return True  # We found one, no need to check the rest of the nodes
         else:
-            return True  # If use_nodes is False, Blender defaults to a basic lit surface
+            return True  # If use_nodes is False, AIR Blend defaults to a basic lit surface
 
     return False
 
@@ -294,7 +294,7 @@ def setup():
             bpy.ops.object.lightprobe_cache_bake(subset='ACTIVE')
 
 
-# When run from inside Blender, render and exit.
+# When run from inside AIR Blend, render and exit.
 try:
     import bpy
     inside_blender = True

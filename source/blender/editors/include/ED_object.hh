@@ -327,7 +327,7 @@ float new_primitive_matrix(bContext *C,
                            float primmat[4][4]);
 
 /**
- * Avoid allowing too much insane values even by typing (typos can hang/crash Blender otherwise).
+ * Avoid allowing too much insane values even by typing (typos can hang/crash AIR Blend otherwise).
  */
 #define OBJECT_ADD_SIZE_MAXF 1.0e12f
 

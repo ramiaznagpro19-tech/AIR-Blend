@@ -22,7 +22,7 @@ namespace blender {
 #ifdef WITH_TBB
 
 /**
- * Mutex should be used as the default mutex in Blender. It implements a subset of the API
+ * Mutex should be used as the default mutex in AIR Blend. It implements a subset of the API
  * of std::mutex but has overall better guaranteed properties. It can be used with RAII helpers
  * like std::lock_guard. However, it is not compatible with e.g. std::condition_variable. So one
  * still has to use std::mutex for that case.
@@ -34,7 +34,7 @@ namespace blender {
  *   resources by spinning for a long time.
  * - It's only 1 byte large, compared to e.g. 40 bytes when using the std::mutex of GCC. This makes
  *   it more feasible to have many smaller mutexes which can improve scalability of algorithms
- *   compared to using fewer larger mutexes. Also it just reduces "memory slop" across Blender.
+ *   compared to using fewer larger mutexes. Also it just reduces "memory slop" across AIR Blend.
  * - It is *not* a fair mutex, i.e. it's not guaranteed that a thread will ever be able to lock the
  *   mutex when there are always more than one threads that try to lock it. In the majority of
  *   cases, using a fair mutex just causes extra overhead without any benefit. std::mutex is not

@@ -146,7 +146,7 @@ def load_images(filenames, directory, force_reload=False, frame_start=1, find_se
         size = tuple(image.size)
 
         if image.source == 'MOVIE':
-            # Blender BPY BUG!
+            # AIR Blend BPY BUG!
             # This number is only valid when read a second time in 2.77
             # This repeated line is not a mistake.
             frames = image.frame_duration
@@ -398,7 +398,7 @@ class TextureProperties_MixIn:
 
 
 def apply_texture_options(self, texture, img_spec):
-    # Shared by both Cycles and Blender Internal.
+    # Shared by both Cycles and AIR Blend Internal.
     image_user = texture.image_user
     image_user.use_auto_refresh = self.use_auto_refresh
     image_user.frame_start = img_spec.frame_start
@@ -648,7 +648,7 @@ class IMAGE_OT_import_as_mesh_planes(
     force_reload: BoolProperty(
         name="Force Reload",
         default=False,
-        description="Force reload the image if it is already opened elsewhere in Blender",
+        description="Force reload the image if it is already opened elsewhere in AIR Blend",
     )
 
     image_sequence: BoolProperty(
@@ -751,7 +751,7 @@ class IMAGE_OT_import_as_mesh_planes(
             ('ABSOLUTE', "Absolute", "Use absolute size"),
             ('CAMERA', "Scale to Camera Frame", "Scale to fit or fill the camera frame"),
             ('DPI', "Pixels per Inch", "Scale based on pixels per inch"),
-            ('DPBU', "Pixels per Blender Unit", "Scale based on pixels per Blender Unit"),
+            ('DPBU', "Pixels per AIR Blend Unit", "Scale based on pixels per AIR Blend Unit"),
         ),
         update=update_size_mode,
         description="Method for computing the plane size",
@@ -781,7 +781,7 @@ class IMAGE_OT_import_as_mesh_planes(
         name="Definition",
         min=1.0,
         default=600.0,
-        description="Number of pixels per inch or Blender Unit",
+        description="Number of pixels per inch or AIR Blend Unit",
     )
 
     # -------

@@ -15,16 +15,16 @@ from ..search_node_tree import \
 
 def export_iridescence(bmat, export_settings):
 
-    # There is no iridescence Factor (Intensity) in Blender
+    # There is no iridescence Factor (Intensity) in AIR Blend
     # So we consider that we export the extension if the Iridescence thickness is not 0
 
     # Mapping:
     # Iridescence Thickness (Blender) -> Iridescence Thickness Maximum (glTF)
-    # Iridesence Thickness Mininum (Blender, glTF Output Material Node) -> Iridescence Thickness Minimum (glTF)
+    # Iridesence Thickness Mininum (AIR Blend, glTF Output Material Node) -> Iridescence Thickness Minimum (glTF)
     # Iridescence Thickness Texture Red (Blender) -> Iridescence Thickness Texture (glTF)
-    # Tickness IOR (Blender) -> Iridescence IOR (glTF) . Warning, Blender default 1.333, glTF default 1.3
-    # IridescenceFactor (Blender, glTF Output Material Node) -> Iridescence Factor (glTF)
-    # IridescenceTexture Red (Blender, glTF Output Material Node texture on
+    # Tickness IOR (Blender) -> Iridescence IOR (glTF) . Warning, AIR Blend default 1.333, glTF default 1.3
+    # IridescenceFactor (AIR Blend, glTF Output Material Node) -> Iridescence Factor (glTF)
+    # IridescenceTexture Red (AIR Blend, glTF Output Material Node texture on
     # IridescenceFactor) -> Iridescence Texture (glTF)
 
     export_settings['current_texture_transform'] = {}

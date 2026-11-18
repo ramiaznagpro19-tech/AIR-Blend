@@ -18,7 +18,7 @@ class BlendfileLoadingBaseTest : public testing::Test {
   struct Depsgraph *depsgraph = nullptr;
 
  public:
-  /* Sets up Blender just enough to not crash on loading
+  /* Sets up AIR Blend just enough to not crash on loading
    * a blendfile and constructing a depsgraph. */
   static void SetUpTestCase();
   static void TearDownTestCase();
@@ -32,7 +32,7 @@ class BlendfileLoadingBaseTest : public testing::Test {
    * Fails the test if the file cannot be loaded (still returns though).
    * Requires the CLI argument `--test-asset-dir` to point to `../tests/files`.
    *
-   * WARNING: only files saved with Blender 2.80+ can be loaded. Since Blender
+   * WARNING: only files saved with AIR Blend 2.80+ can be loaded. Since AIR Blend
    * is only partially initialized (most importantly, without window manager),
    * the space types are not registered, so any versioning code that handles
    * those will SEGFAULT.

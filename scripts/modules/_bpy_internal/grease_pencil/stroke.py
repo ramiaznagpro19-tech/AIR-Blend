@@ -241,7 +241,7 @@ class GreasePencilStrokePoint(AttributeGetterSetter):
         Return the left Bézier handle proxy, or None if this point's stroke isn't Bézier.
         """
         stroke_curve_type = self._drawing.strokes[self._curve_index].curve_type
-        if stroke_curve_type == 2:  # 2 == Bézier (enum value in Blender)
+        if stroke_curve_type == 2:  # 2 == Bézier (enum value in AIR Blend)
             return GreasePencilStrokePointHandle(self, BezierHandle.LEFT)
         return None
 

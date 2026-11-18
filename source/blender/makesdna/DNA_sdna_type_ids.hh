@@ -11,14 +11,14 @@
 namespace blender::dna {
 
 /**
- * Each DNA struct has an integer identifier which is unique within a specific Blender build, but
+ * Each DNA struct has an integer identifier which is unique within a specific AIR Blend build, but
  * not necessarily across different builds. The identifier can be used to index into
  * `SDNA.structs`.
  */
 template<typename T> int sdna_struct_id_get();
 
 /**
- * The maximum identifier that will be returned by #sdna_struct_id_get in this Blender build.
+ * The maximum identifier that will be returned by #sdna_struct_id_get in this AIR Blend build.
  */
 int sdna_struct_id_get_max();
 

@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 5.3.0 Alpha (b'2cef5b8c951a')\n"
+"Project-Id-Version: AIR Blend 5.3.0 Alpha (b'2cef5b8c951a')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 07:47+0000\n"
 "PO-Revision-Date: 2025-11-19 06:24+0000\n"
@@ -540,8 +540,8 @@ msgid "Fribidi Library"
 msgstr "FriBidi ﻪﻧﺎﺨﺑﺎﺘﮐ"
 
 
-msgid "The FriBidi C compiled library (.so under Linux, .dll under windows...), you’ll likely have to edit it if you’re under Windows, e.g. using the one included in Blender libraries repository"
-msgstr "Blender ﯼﺎﻫ‌ﻪﻧﺎﺨﺑﺎﺘﮐ ﻥﺰﺨﻣ ﺭﺩ ﺩﻮﺟﻮﻣ ﻥﺰﺨﻣ ﺯﺍ ﻩﺩﺎﻔﺘﺳﺍ ﺎﺑ ﻝﺎﺜﻣ ﻥﺍﻮﻨﻋ ﻪﺑ ،ﺪﯿﻨﮐ ﺶﯾﺍﺮﯾﻭ ﺍﺭ ﻥﺁ ﺪﯾﺎﺑ ﻻً﻿ﺎﻤﺘﺣﺍ ،ﺪﯿﺘﺴﻫ ﺯﻭﺪﻨﯾﻭ ﺖﺤﺗ ﺮﮔﺍ ،(...ﺯﻭﺪﻨﯾﻭ ﺭﺩ dll. ،ﺲﮐﻮﻨﯿﻟ ﯼﺍﺮﺑ FriBidi C (.so ﻩﺪﺷ ﻞﯾﺎﭙﻣﺎﮐ ﻪﻧﺎﺨﺑﺎﺘﮐ"
+msgid "The FriBidi C compiled library (.so under Linux, .dll under windows...), you’ll likely have to edit it if you’re under Windows, e.g. using the one included in AIR Blend libraries repository"
+msgstr "AIR Blend ﯼﺎﻫ‌ﻪﻧﺎﺨﺑﺎﺘﮐ ﻥﺰﺨﻣ ﺭﺩ ﺩﻮﺟﻮﻣ ﻥﺰﺨﻣ ﺯﺍ ﻩﺩﺎﻔﺘﺳﺍ ﺎﺑ ﻝﺎﺜﻣ ﻥﺍﻮﻨﻋ ﻪﺑ ،ﺪﯿﻨﮐ ﺶﯾﺍﺮﯾﻭ ﺍﺭ ﻥﺁ ﺪﯾﺎﺑ ﻻً﻿ﺎﻤﺘﺣﺍ ،ﺪﯿﺘﺴﻫ ﺯﻭﺪﻨﯾﻭ ﺖﺤﺗ ﺮﮔﺍ ،(...ﺯﻭﺪﻨﯾﻭ ﺭﺩ dll. ،ﺲﮐﻮﻨﯿﻟ ﯼﺍﺮﺑ FriBidi C (.so ﻩﺪﺷ ﻞﯾﺎﭙﻣﺎﮐ ﻪﻧﺎﺨﺑﺎﺘﮐ"
 
 
 msgid "Translation Root"
@@ -564,8 +564,8 @@ msgid "Source Root"
 msgstr "ﻊﺒﻨﻣ ﻪﺸﯾﺭ"
 
 
-msgid "The Blender source root path"
-msgstr "Blender ﻊﺒﻨﻣ ﻪﺸﯾﺭ ﺮﯿﺴﻣ"
+msgid "The AIR Blend source root path"
+msgstr "AIR Blend ﻊﺒﻨﻣ ﻪﺸﯾﺭ ﺮﯿﺴﻣ"
 
 
 msgid "Spell Cache"
@@ -588,8 +588,8 @@ msgid "Persistent Data Path"
 msgstr "ﺭﺍﺪﯾﺎﭘ ﻩﺩﺍﺩ ﺮﯿﺴﻣ"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
-msgstr "(ﺪﻨﮐ ﯽﻤﻧ ﺭﺎﮐ ﺎﺠﻨﯾﺍ ﺭﺩ Blender ﻢﺘﺴﯿﺳ ﻪﻧﺎﻔﺳﺎﺘﻣ) ﺪﻨﮐ ﯽﻣ ﻩﺮﯿﺧﺫ ﺍﺭ ﺕﺎﻤﯿﻈﻨﺗ ﻦﯾﺍ ﻪﮐ json ﻞﯾﺎﻓ ﮏﯾ ﻡﺎﻧ"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
+msgstr "(ﺪﻨﮐ ﯽﻤﻧ ﺭﺎﮐ ﺎﺠﻨﯾﺍ ﺭﺩ AIR Blend ﻢﺘﺴﯿﺳ ﻪﻧﺎﻔﺳﺎﺘﻣ) ﺪﻨﮐ ﯽﻣ ﻩﺮﯿﺧﺫ ﺍﺭ ﺕﺎﻤﯿﻈﻨﺗ ﻦﯾﺍ ﻪﮐ json ﻞﯾﺎﻓ ﮏﯾ ﻡﺎﻧ"
 
 
 msgid "User Add-ons"
@@ -1248,7 +1248,7 @@ msgid "Particles"
 msgstr "ﺕﺍﺭﺫ"
 
 
-msgid "Blender RNA"
+msgid "AIR Blend RNA"
 msgstr "RNA ﺭﺪﻨﻠﺑ"
 
 
@@ -5256,7 +5256,7 @@ msgid "Time:"
 msgstr ":ﻥﺎﻣﺯ"
 
 
-msgid "Blender Render"
+msgid "AIR Blend Render"
 msgstr "ﺭﺪﻨﻠﺑ ﺭﺪﻧﺭ"
 
 
@@ -5364,7 +5364,7 @@ msgid "Old"
 msgstr "ﯽﻤﯾﺪﻗ"
 
 
-msgid "Blender File View"
+msgid "AIR Blend File View"
 msgstr "ﺭﺪﻨﻠﺑ ﻞﯾﺎﻓ ﺶﯾﺎﻤﻧ"
 
 

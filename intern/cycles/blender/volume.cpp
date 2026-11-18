@@ -301,7 +301,7 @@ class BlenderVolumeLoader : public VDBImageLoader {
 
   blender::Volume &b_volume;
 #ifdef WITH_OPENVDB
-  /* Store tree user so that the OPENVDB grid that is shared with Blender is not unloaded. */
+  /* Store tree user so that the OPENVDB grid that is shared with AIR Blend is not unloaded. */
   blender::bke::GVolumeGrid volume_grid;
   blender::bke::VolumeTreeAccessToken tree_access_token;
 #endif

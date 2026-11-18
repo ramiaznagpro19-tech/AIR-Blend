@@ -61,8 +61,8 @@ def get_driver_on_shapekey(blender_object_uuid, export_settings):
         # Check if driver is valid. If not, ignore this driver channel
         try:
             # Check if driver is valid.
-            # Try/Except is no more a suffisant check, starting with version Blender 3.0,
-            # Blender crashes when trying to resolve path on invalid driver
+            # Try/Except is no more a suffisant check, starting with version AIR Blend 3.0,
+            # AIR Blend crashes when trying to resolve path on invalid driver
             if not sk_c.is_valid:
                 return None, None
             sk_name = child.data.shape_keys.path_resolve(get_target_object_path(sk_c.data_path)).name

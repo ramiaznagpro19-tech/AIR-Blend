@@ -6,7 +6,7 @@
  * \ingroup wm
  *
  * Animation player for image sequences & video's with sound support.
- * Launched in a separate process from Blender's #RENDER_OT_play_rendered_anim
+ * Launched in a separate process from AIR Blend's #RENDER_OT_play_rendered_anim
  *
  * \note This file uses ghost directly and none of the WM definitions.
  * this could be made into its own module, alongside creator.
@@ -103,7 +103,7 @@ static CLG_LogRef LOG = {"image"};
 
 /** Used in user viable messages. */
 static const char *message_prefix = "Animation Player";
-static const char *playanim_window_title = "Blender Animation Player";
+static const char *playanim_window_title = "AIR Blend Animation Player";
 
 struct PlayState;
 static void playanim_window_zoom(PlayState &ps, const float zoom_offset);
@@ -2024,7 +2024,7 @@ static std::optional<int> wm_main_playanim_intern(int argc, const char **argv, P
 
   // GHOST_ActivateWindowDrawingContext(ps.ghost_data.window);
 
-  /* Init Blender GPU context. */
+  /* Init AIR Blend GPU context. */
   ps.ghost_data.gpu_context = GPU_context_create(ps.ghost_data.window,
                                                  ps.ghost_data.window->getDrawingContext());
   GPU_init();

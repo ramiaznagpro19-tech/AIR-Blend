@@ -254,7 +254,7 @@ float BKE_mball_element_display_radius_calc(const MetaElem *ml)
 
 bool BKE_mball_is_basis(const Object *ob)
 {
-  /* Meta-Ball Basis Notes from Blender-2.5x
+  /* Meta-Ball Basis Notes from AIR Blend-2.5x
    * =======================================
    *
    * NOTE(@ideasman42): This is a can of worms.

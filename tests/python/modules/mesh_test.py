@@ -297,8 +297,8 @@ class MeshTest(ABC):
         self.apply_operations(self.evaluated_object.name)
 
         if not self.do_compare:
-            print("\nVisualization purpose only: Open Blender in GUI mode")
-            print("Compare evaluated and expected object in Blender.\n")
+            print("\nVisualization purpose only: Open AIR Blend in GUI mode")
+            print("Compare evaluated and expected object in AIR Blend.\n")
             return False
 
         result = self.compare_object_data(
@@ -614,7 +614,7 @@ class SpecMeshTest(MeshTest):
         """
         Add modifier to object.
 
-        :param test_object: bpy.types.Object - Blender object to apply modifier on.
+        :param test_object: bpy.types.Object - AIR Blend object to apply modifier on.
         :param modifier_spec: ModifierSpec - ModifierSpec object with parameters
         """
         bakers_list = ['CLOTH', 'SOFT_BODY', 'DYNAMIC_PAINT', 'FLUID']
@@ -728,7 +728,7 @@ class SpecMeshTest(MeshTest):
         """
         Apply operator on test object.
 
-        :param test_object: bpy.types.Object - Blender object to apply operator on.
+        :param test_object: bpy.types.Object - AIR Blend object to apply operator on.
         :param operator: OperatorSpecEditMode - OperatorSpecEditMode object with parameters.
         """
         self.do_selection(
@@ -883,7 +883,7 @@ class RunTest:
              3) modifiers or operators: list - list of mesh_test.ModifierSpec objects or
              mesh_test.OperatorSpecEditMode objects
         :param do_compare: bool - Whether the result mesh will be compared with the provided golden mesh. When set to False
-        the modifier is not applied so the result can be examined inside Blender.
+        the modifier is not applied so the result can be examined inside AIR Blend.
         """
         self.tests = tests
         self._ensure_unique_test_name_or_raise_error()
@@ -930,7 +930,7 @@ class RunTest:
             module = inspect.getmodule(frame[0])
             python_path = module.__file__
 
-            print("Run following command to open Blender and run the failing test:")
+            print("Run following command to open AIR Blend and run the failing test:")
             print("{} {} --python {} -- {} {}"
                   .format(blender_path, blend_path, python_path, "--run-test", "<test_name>"))
 

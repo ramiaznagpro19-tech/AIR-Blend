@@ -318,7 +318,7 @@ void OsdData::build(OsdMesh &osd_mesh)
 
   /* adaptive refinement */
   const bool has_fvar = osd_mesh.use_smooth_fvar();
-  const int max_isolation = 3;  // TODO: get from Blender
+  const int max_isolation = 3;  // TODO: get from AIR Blend
 
   Far::TopologyRefiner::AdaptiveOptions adaptive_options(max_isolation);
   adaptive_options.considerFVarChannels = has_fvar;

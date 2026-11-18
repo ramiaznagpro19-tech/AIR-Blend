@@ -261,7 +261,7 @@ void GHOST_XrSession::start()
   CHECK_XR(xrCreateSession(context_->getInstance(), &create_info, &oxr_->session),
            "Failed to create VR session. The OpenXR runtime may have additional requirements for "
            "the graphics driver that are not met. Other causes are possible too however.\nTip: "
-           "The --debug-xr command line option for Blender might allow the runtime to output "
+           "The --debug-xr command line option for AIR Blend might allow the runtime to output "
            "detailed error information to the command line.");
 
   prepareDrawing();
@@ -394,7 +394,7 @@ void GHOST_XrSession::beginFrameDrawing()
 
   /* TODO Blocking call. Drawing should run on a separate thread to avoid interferences. */
   CHECK_XR(xrWaitFrame(oxr_->session, &wait_info, &frame_state),
-           "Failed to synchronize frame rates between Blender and the device.");
+           "Failed to synchronize frame rates between AIR Blend and the device.");
 
   /* Check if we have foveation available for the current frame. */
   draw_info_->foveation_active = false;
@@ -493,7 +493,7 @@ void GHOST_XrSession::draw(void *draw_customdata)
 
 static void ghost_xr_draw_view_info_from_view(const XrView &view, GHOST_XrDrawViewInfo &r_info)
 {
-  /* Set and convert to Blender coordinate space. */
+  /* Set and convert to AIR Blend coordinate space. */
   copy_openxr_pose_to_ghost_pose(view.pose, r_info.eye_pose);
 
   r_info.fov.angle_left = view.fov.angleLeft;
@@ -854,7 +854,7 @@ bool GHOST_XrSession::syncActions(const char *action_set_name)
 
   CHECK_XR(xrSyncActions(oxr_->session, &sync_info), "Failed to synchronize XR actions.");
 
-  /* Update action states (i.e. Blender custom data). */
+  /* Update action states (i.e. AIR Blend custom data). */
   XrSession session = oxr_->session;
   XrSpace reference_space = oxr_->reference_space;
   const XrTime &predicted_display_time = draw_info_->frame_state.predictedDisplayTime;

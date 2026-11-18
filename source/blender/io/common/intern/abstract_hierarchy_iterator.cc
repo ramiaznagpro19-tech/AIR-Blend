@@ -452,7 +452,7 @@ void AbstractHierarchyIterator::visit_object(Object *object,
    * by connect_loose_objects(). Having such an "indicator" will make it possible to do an O(log n)
    * check on whether an object is part of the export, rather than having to check all objects in
    * the map. Note that it's not possible to simply search for (object->parent, nullptr), as the
-   * object's parent in Blender may not be the same as its export-parent. */
+   * object's parent in AIR Blend may not be the same as its export-parent. */
   ObjectIdentifier object_key = ObjectIdentifier::for_real_object(object);
   export_graph_.add(object_key, {});
 }
@@ -522,7 +522,7 @@ void AbstractHierarchyIterator::context_update_for_graph_index(
   context->animation_check_include_parent |= ELEM(partype, PARBONE, PARVERT1, PARVERT3, PARSKEL);
 
   if (context->export_parent != context->object->parent) {
-    /* The parent object in Blender is NOT used as the export parent. This means
+    /* The parent object in AIR Blend is NOT used as the export parent. This means
      * that the world transform of this object can be influenced by objects that
      * are not part of its export graph. */
     context->animation_check_include_parent = true;

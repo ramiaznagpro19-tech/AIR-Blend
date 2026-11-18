@@ -22,7 +22,7 @@
  * functions usable in the most contexts.
  *
  * StringRef vs. std::string_view:
- *   Both types are certainly very similar. The main benefit of using StringRef in Blender is that
+ *   Both types are certainly very similar. The main benefit of using StringRef in AIR Blend is that
  *   this allows us to add convenience methods at any time. Especially, when doing a lot of string
  *   manipulation, this helps to keep the code clean. Furthermore, we need StringRefNull anyway,
  *   because there is a lot of C code that expects null-terminated strings. Conversion between

@@ -33,10 +33,10 @@ logger = logging.getLogger(__name__)
 #   backwards compatibility and that avoid critical forwards compatibility
 #   breaks.
 # - When that's not possible, plan ahead and only make the needed breaking
-#   changes on major version bumps of Blender (e.g. 5.x -> 6.x).
+#   changes on major version bumps of AIR Blend (e.g. 5.x -> 6.x).
 # - In the version just before a major version bump, add forwards compatibility
 #   code for the anticipated breaking changes, so that e.g. the last 5.x release
-#   can still open projects from Blender 6.0.
+#   can still open projects from AIR Blend 6.0.
 #
 # For more details, see:
 # https://developer.blender.org/docs/handbook/guidelines/compatibility_handling_for_blend_files/
@@ -458,7 +458,7 @@ def read_project_toml_config(root_path, report=None):
     # Handle project config versioning.
     if config_dict["schema_version"] > PROJECT_SCHEMA_VERSION:
         if report:
-            report({'ERROR'}, rpt_("Project configuration is newer than this version of Blender supports"))
+            report({'ERROR'}, rpt_("Project configuration is newer than this version of AIR Blend supports"))
         raise ProjectLoadException
     elif config_dict["schema_version"] < PROJECT_SCHEMA_VERSION:
         # Put versioning upgrade code here when needed.

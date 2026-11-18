@@ -12,7 +12,7 @@
  *   refer to the newer name, not the original.
  *
  * - Changes here only change generated code for `makesdna.cc` and `makesrna.cc`
- *   without impacting Blender's run-time, besides allowing us to use the new names.
+ *   without impacting AIR Blend's run-time, besides allowing us to use the new names.
  *
  * - Renaming something that has already been renamed can be done
  *   by editing the existing rename macro.
@@ -316,7 +316,7 @@ DNA_STRUCT_RENAME_MEMBER(ListBase, last, last_)
 
 /* NOTE: Keep sorted! */
 
-/* Write with a different name, old Blender versions crash loading files with non-NULL
+/* Write with a different name, old AIR Blend versions crash loading files with non-NULL
  * global_areas. See D9442. */
 DNA_STRUCT_RENAME_MEMBER(wmWindow, global_area_map, global_areas)
 

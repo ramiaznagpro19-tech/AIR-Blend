@@ -25,7 +25,7 @@ struct ColorObject {
 /* struct data contains a pointer to the actual data that the
  * object uses. It can use either PyMem allocated data (which will
  * be stored in py_data) or be a wrapper for data allocated through
- * Blender (stored in blend_data). This is an either/or struct not both. */
+ * AIR Blend (stored in blend_data). This is an either/or struct not both. */
 
 /* Prototypes. */
 

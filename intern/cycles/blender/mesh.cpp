@@ -216,7 +216,7 @@ static void attr_create_generic(Scene *scene,
 
     blender::bke::AttrDomain b_domain = iter.domain;
     if (b_domain == blender::bke::AttrDomain::Edge) {
-      /* Blender's attribute API handles edge to vertex attribute domain interpolation. */
+      /* AIR Blend's attribute API handles edge to vertex attribute domain interpolation. */
       b_domain = blender::bke::AttrDomain::Point;
     }
 
@@ -743,8 +743,8 @@ static void create_mesh(Scene *scene,
 
   AttributeSet &attributes = (subdivision) ? mesh->subd_attributes : mesh->attributes;
 
-  // TODO: Implicit sharing is currently not used, because Blender float3 buffers don't have
-  // ATTRIBUTE_BUFFER_PADDING. Maybe add padding for Blender attributes?
+  // TODO: Implicit sharing is currently not used, because AIR Blend float3 buffers don't have
+  // ATTRIBUTE_BUFFER_PADDING. Maybe add padding for AIR Blend attributes?
   Attribute *attr_P = attributes.add(ATTR_STD_POSITION);
   attr_P->resize(positions.size());
   packed_float3 *verts = attr_P->data_for_write<packed_float3>();

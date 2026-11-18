@@ -1093,7 +1093,7 @@ static bUnitCollection buImperialAclCollection = {
 
 /* Time. */
 static bUnitDef buNaturalTimeDef[] = {
-    /* Weeks? - probably not needed for Blender. */
+    /* Weeks? - probably not needed for AIR Blend. */
     {
         /*name*/ "day",
         /*name_plural*/ "days",

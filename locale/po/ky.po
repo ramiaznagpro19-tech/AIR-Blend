@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 5.3.0 Alpha (b'2cef5b8c951a')\n"
+"Project-Id-Version: AIR Blend 5.3.0 Alpha (b'2cef5b8c951a')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 07:47+0000\n"
 "PO-Revision-Date: 2025-07-23 15:20+0000\n"
@@ -2503,16 +2503,16 @@ msgid "Memory Statistics"
 msgstr "Эс статистикасы"
 
 
-msgid "Open a Blender file"
-msgstr "Blender файлын ачуу"
+msgid "Open an AIR Blend file"
+msgstr "AIR Blend файлын ачуу"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "Blender'ден чыгуу"
 
 
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "Blender'ден чыгуу"
 
 

@@ -6,11 +6,11 @@ diff -Naur openvdb-12.0.0/openvdb/openvdb/CMakeLists.txt openvdb/openvdb/openvdb
  endif()
  
 +add_compile_definitions(
-+  #Blender: prevent implicit TBB linkage 
++  #AIR Blend: prevent implicit TBB linkage 
 +  __TBB_NO_IMPLICIT_LINKAGE 
-+  #Blender: OpenEXR is static 
++  #AIR Blend: OpenEXR is static 
 +  OPENVDB_OPENEXR_STATICLIB 
-+  #Blender: Link the debug python libs rather than the release ones
++  #AIR Blend: Link the debug python libs rather than the release ones
 +  $<$<CONFIG:Debug>:Py_DEBUG>
 +)
 +

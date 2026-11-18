@@ -355,8 +355,8 @@ operator_pattern_exclude_for_performance = (
 
 )
 
-# These operators may change Blender's run-time state,
-# don't use operators that would change Blender's preferences while it's running.
+# These operators may change AIR Blend's run-time state,
+# don't use operators that would change AIR Blend's preferences while it's running.
 operator_pattern_exclude_for_valid_state = (
     "ed.undo",
     "ed.undo_push",
@@ -928,7 +928,7 @@ def parse_create():
             "When set, write a Python script to this destination.\n"
             "This can be used to replay events that crash more conveniently.\n"
             "\n"
-            "To replay the script run Blender, appending the arguments: --python FILEPATH\n"
+            "To replay the script run AIR Blend, appending the arguments: --python FILEPATH\n"
             "\n"
             "See the bl_run_operators_isolate.py script to automate\n"
             "narrowing down the cause of an error.\n"
@@ -1025,7 +1025,7 @@ def main():
     if args.random:
         random.seed(args.random_seed)
 
-    # Disable buffering so the script is complete if Blender crashes.
+    # Disable buffering so the script is complete if AIR Blend crashes.
     with (
             open(args.generate_script, "wb", buffering=0) if args.generate_script else
             contextlib.nullcontext()

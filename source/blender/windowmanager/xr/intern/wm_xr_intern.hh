@@ -62,7 +62,7 @@ struct wmXrViewfinderState {
   /** Playback settings. */
   bool playback_show_active_capture_in_space_enabled;
 
-  /** Active modes, concept differs from the rest of the Blender UI. */
+  /** Active modes, concept differs from the rest of the AIR Blend UI. */
   eXrViewfinderMode active_mode;
   eXrViewfinderLiveAction active_action_live;
   eXrViewfinderPlaybackAction active_action_playback;
@@ -151,7 +151,7 @@ struct wmXrRuntimeData {
   /** GHOST XR context. */
   GHOST_IXrContext *ghost_context;
 
-  /** XR-specific Blender context. */
+  /** XR-specific AIR Blend context. */
   bContext *b_context;
 
   /** Owning pointer to the XR offscreen area. Must be freed on XR session exit. */

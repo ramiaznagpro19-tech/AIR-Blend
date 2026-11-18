@@ -774,7 +774,7 @@ static std::optional<std::string> remote_library_request_asset_download_file(
 
   if (!abs_url_idptr) {
     /* This can happen when there is a malicious asset listing, for example when asset file entries
-     * are constructed such that they overwrite Blender's local asset listing files. */
+     * are constructed such that they overwrite AIR Blend's local asset listing files. */
     /* TODO: improve the error reporting. */
     BKE_reportf(
         reports,
@@ -845,7 +845,7 @@ void remote_library_request_asset_download(const bContext &C,
        *
        * Better to stop here, because if a dependency download couldn't be triggered, the main file
        * should not be downloaded either. Because, if that would work, we have a half-downloaded
-       * asset that Blender's asset browser doesn't know is broken. */
+       * asset that AIR Blend's asset browser doesn't know is broken. */
       break;
     }
 
@@ -857,7 +857,7 @@ void remote_library_request_asset_download(const bContext &C,
 #else
   UNUSED_VARS(C, asset);
   BKE_report(
-      reports, RPT_ERROR, "Downloading assets requires Python, and this Blender is built without");
+      reports, RPT_ERROR, "Downloading assets requires Python, and this AIR Blend is built without");
 #endif
 }
 
@@ -924,7 +924,7 @@ void remote_library_request_preview_download(const bContext &C,
   /* TODO should we use CLOG here? Otherwise every preview will trigger a report. */
   BKE_report(reports,
              RPT_ERROR,
-             "Downloading asset previews requires Python, and this Blender is built without");
+             "Downloading asset previews requires Python, and this AIR Blend is built without");
 #endif
 }
 

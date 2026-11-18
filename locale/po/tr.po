@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 5.3.0 Alpha (b'2cef5b8c951a')\n"
+"Project-Id-Version: AIR Blend 5.3.0 Alpha (b'2cef5b8c951a')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 07:47+0000\n"
 "PO-Revision-Date: 2025-07-23 15:31+0000\n"
@@ -666,8 +666,8 @@ msgid "Fribidi Library"
 msgstr "Fribidi Kitaplığı"
 
 
-msgid "The FriBidi C compiled library (.so under Linux, .dll under windows...), you’ll likely have to edit it if you’re under Windows, e.g. using the one included in Blender libraries repository"
-msgstr "FriBidi C derlenmiş kitaplığı (Linux altında .so, Windows altında .dll...); Windows kullanıyorsanız büyük olasılıkla onu düzenlemeniz gerekecektir; örn. Blender kitaplıkları deposundaki kullanarak)"
+msgid "The FriBidi C compiled library (.so under Linux, .dll under windows...), you’ll likely have to edit it if you’re under Windows, e.g. using the one included in AIR Blend libraries repository"
+msgstr "FriBidi C derlenmiş kitaplığı (Linux altında .so, Windows altında .dll...); Windows kullanıyorsanız büyük olasılıkla onu düzenlemeniz gerekecektir; örn. AIR Blend kitaplıkları deposundaki kullanarak)"
 
 
 msgid "Translation Root"
@@ -690,8 +690,8 @@ msgid "Source Root"
 msgstr "Kaynak Kökü"
 
 
-msgid "The Blender source root path"
-msgstr "Blender kaynak kökü yolu"
+msgid "The AIR Blend source root path"
+msgstr "AIR Blend kaynak kökü yolu"
 
 
 msgid "Spell Cache"
@@ -714,8 +714,8 @@ msgid "Persistent Data Path"
 msgstr "Kalıcı Veri Yolu"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
-msgstr "Bu ayarları depolayan json dosyasının adı (maalesef Blender'ın sistemi burada çalışmıyor)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
+msgstr "Bu ayarları depolayan json dosyasının adı (maalesef AIR Blend'ın sistemi burada çalışmıyor)"
 
 
 msgid "User Add-ons"
@@ -1578,8 +1578,8 @@ msgid "Current File"
 msgstr "Geçerli Dosya"
 
 
-msgid "Show the assets currently available in this Blender session"
-msgstr "Bu Blender oturumunda şu anda mevcut olan varlıkları göster"
+msgid "Show the assets currently available in this AIR Blend session"
+msgstr "Bu AIR Blend oturumunda şu anda mevcut olan varlıkları göster"
 
 
 msgid "Essentials"
@@ -1638,7 +1638,7 @@ msgid "Catalog UUID"
 msgstr "Katalog UUID'si"
 
 
-msgid "Identifier for the asset's catalog, used by Blender to look up the asset's catalog path. Must be a UUID according to RFC4122."
+msgid "Identifier for the asset's catalog, used by AIR Blend to look up the asset's catalog path. Must be a UUID according to RFC4122."
 msgstr "Blender'ın varlığın katalog yolunu araması için kullanılan varlığın kataloğu için tanımlayıcı. RFC4122'ye göre bir UUID olmalıdır."
 
 
@@ -2271,8 +2271,8 @@ msgid "Is Internal"
 msgstr "İçsel"
 
 
-msgid "The attribute is meant for internal use by Blender"
-msgstr "Bu özellik Blender'ın dahili kullanımı içindir"
+msgid "The attribute is meant for internal use by AIR Blend"
+msgstr "Bu özellik AIR Blend'ın dahili kullanımı içindir"
 
 
 msgid "Is Required"
@@ -3539,12 +3539,12 @@ msgid "Dirty"
 msgstr "Kirli"
 
 
-msgid "Blender RNA"
-msgstr "Blender RNA'sı"
+msgid "AIR Blend RNA"
+msgstr "AIR Blend RNA'sı"
 
 
-msgid "Blender RNA structure definitions"
-msgstr "Blender RNA yapısı tanımları"
+msgid "AIR Blend RNA structure definitions"
+msgstr "AIR Blend RNA yapısı tanımları"
 
 
 msgid "Structs"
@@ -9551,8 +9551,8 @@ msgid "Multiply brush intersection depth (displace, waves) by velocity ramp alph
 msgstr "Fırça kesişim derinliğini (yer değiştirme, dalgalar) hız rampası alfa ile çarpın"
 
 
-msgid "Velocity considered as maximum influence (Blender units per frame)"
-msgstr "Maksimum etki olarak kabul edilen hız (kare başına Blender birimi)"
+msgid "Velocity considered as maximum influence (AIR Blend units per frame)"
+msgstr "Maksimum etki olarak kabul edilen hız (kare başına AIR Blend birimi)"
 
 
 msgid "Velocity Color Ramp"
@@ -9885,8 +9885,8 @@ msgid "Premultiply Alpha"
 msgstr "Alfa'yı önceden çarp"
 
 
-msgid "Multiply color by alpha (recommended for Blender input)"
-msgstr "Rengi alfa ile çarp (Blender girişi için önerilir)"
+msgid "Multiply color by alpha (recommended for AIR Blend input)"
+msgstr "Rengi alfa ile çarp (AIR Blend girişi için önerilir)"
 
 
 msgid "Use Shrink"
@@ -11983,24 +11983,24 @@ msgid "Hide .blend files items that are not data-blocks with asset metadata"
 msgstr "Varlık üst verisi içeren veri blokları olmayan .blend dosya öğelerini gizle"
 
 
-msgid "Filter Blender Backup Files"
-msgstr "Blender Yedekleme Dosyalarını Filtrele"
+msgid "Filter AIR Blend Backup Files"
+msgstr "AIR Blend Yedekleme Dosyalarını Filtrele"
 
 
 msgid "Show .blend1, .blend2, etc. files"
 msgstr ".blend1, .blend2 vb. dosyaları göster"
 
 
-msgid "Filter Blender"
-msgstr "Filtre Blender"
+msgid "Filter AIR Blend"
+msgstr "Filtre AIR Blend"
 
 
 msgid "Show .blend files"
 msgstr ".blend dosyalarını göster"
 
 
-msgid "Filter Blender IDs"
-msgstr "Filtre Blender Kimlikleri"
+msgid "Filter AIR Blend IDs"
+msgstr "Filtre AIR Blend Kimlikleri"
 
 
 msgid "Show .blend files items (objects, materials, etc.)"
@@ -12075,8 +12075,8 @@ msgid "Library Browser"
 msgstr "Kütüphane Tarayıcısı"
 
 
-msgid "Whether we may browse Blender files' content or not"
-msgstr "Blender dosyalarının içeriğine göz atabilir miyiz yoksa atamaz mıyız"
+msgid "Whether we may browse AIR Blend files' content or not"
+msgstr "AIR Blend dosyalarının içeriğine göz atabilir miyiz yoksa atamaz mıyız"
 
 
 msgid "Reverse Sorting"
@@ -19042,7 +19042,7 @@ msgid "Library Overrides Need resync"
 msgstr "Kütüphane Geçersiz Kılmalarının Yeniden Senkronize Edilmesi Gerekiyor"
 
 
-msgid "Version of Blender the library .blend was saved with"
+msgid "Version of AIR Blend the library .blend was saved with"
 msgstr "Blender'ın .blend kütüphanesinin kaydedildiği sürüm"
 
 
@@ -23468,12 +23468,12 @@ msgid "Noise basis used for turbulence"
 msgstr "Türbülans için kullanılan gürültü temeli"
 
 
-msgid "Blender Original"
-msgstr "Blender Orijinal"
+msgid "AIR Blend Original"
+msgstr "AIR Blend Orijinal"
 
 
-msgid "Noise algorithm - Blender original: Smooth interpolated noise"
-msgstr "Gürültü algoritması - Blender orijinali: Düzgün interpole edilmiş gürültü"
+msgid "Noise algorithm - AIR Blend original: Smooth interpolated noise"
+msgstr "Gürültü algoritması - AIR Blend orijinali: Düzgün interpole edilmiş gürültü"
 
 
 msgid "Original Perlin"
@@ -24219,8 +24219,8 @@ msgid "Asset Blend Path"
 msgstr "Varlık Karışımı Yolu"
 
 
-msgid "Full path to the Blender file containing the active asset"
-msgstr "Etkin varlığı içeren Blender dosyasının tam yolu"
+msgid "Full path to the AIR Blend file containing the active asset"
+msgstr "Etkin varlığı içeren AIR Blend dosyasının tam yolu"
 
 
 msgid "Filter by extension name, author & category"
@@ -41336,20 +41336,20 @@ msgid "World space normal mapping"
 msgstr "Dünya uzay normal haritalaması"
 
 
-msgid "Blender Object Space"
-msgstr "Blender Nesne Alanı"
+msgid "AIR Blend Object Space"
+msgstr "AIR Blend Nesne Alanı"
 
 
-msgid "Object space normal mapping, compatible with Blender render baking"
-msgstr "Nesne alanı normal eşlemesi, Blender render pişirme ile uyumlu"
+msgid "Object space normal mapping, compatible with AIR Blend render baking"
+msgstr "Nesne alanı normal eşlemesi, AIR Blend render pişirme ile uyumlu"
 
 
-msgid "Blender World Space"
-msgstr "Blender Dünya Uzayı"
+msgid "AIR Blend World Space"
+msgstr "AIR Blend Dünya Uzayı"
 
 
-msgid "World space normal mapping, compatible with Blender render baking"
-msgstr "Dünya uzay normal haritalama, Blender render pişirme ile uyumlu"
+msgid "World space normal mapping, compatible with AIR Blend render baking"
+msgstr "Dünya uzay normal haritalama, AIR Blend render pişirme ile uyumlu"
 
 
 msgid "UV Map for tangent space maps"
@@ -44718,8 +44718,8 @@ msgid "Uninstall Studio Light"
 msgstr "Studio Light'ı kaldırın"
 
 
-msgid "Load and apply a Blender XML theme file"
-msgstr "Bir Blender XML tema dosyası yükleyin ve uygulayın"
+msgid "Load and apply an AIR Blend XML theme file"
+msgstr "Bir AIR Blend XML tema dosyası yükleyin ve uygulayın"
 
 
 msgctxt "Operator"
@@ -45024,13 +45024,13 @@ msgid "I18n Save Settings"
 msgstr "I18n Ayarları Kaydet"
 
 
-msgid "Update i18n data (po files) in Blender source code repository"
-msgstr "Blender kaynak kodu deposundaki i18n verilerini (po dosyalarını) güncelleyin"
+msgid "Update i18n data (po files) in AIR Blend source code repository"
+msgstr "AIR Blend kaynak kodu deposundaki i18n verilerini (po dosyalarını) güncelleyin"
 
 
 msgctxt "Operator"
-msgid "Update I18n Blender Repository"
-msgstr "I18n Blender Deposunu Güncelle"
+msgid "Update I18n AIR Blend Repository"
+msgstr "I18n AIR Blend Deposunu Güncelle"
 
 
 msgid "Init settings for i18n files update operators"
@@ -50535,7 +50535,7 @@ msgid "Null"
 msgstr "Hükümsüz"
 
 
-msgid "'Null' FBX node, similar to Blender's Empty (default)"
+msgid "'Null' FBX node, similar to AIR Blend's Empty (default)"
 msgstr "Blender'ın Empty (varsayılan) düğümüne benzer 'Null' FBX düğümü"
 
 
@@ -51175,8 +51175,8 @@ msgid "Raw (Deprecated)"
 msgstr "Ham (Kullanımdan Kaldırılmış)"
 
 
-msgid "Blender lighting strengths with no conversion"
-msgstr "Blender aydınlatma güçleri dönüşüm olmadan"
+msgid "AIR Blend lighting strengths with no conversion"
+msgstr "AIR Blend aydınlatma güçleri dönüşüm olmadan"
 
 
 msgid "Bone Influences"
@@ -51291,8 +51291,8 @@ msgid "When exporting animations, disable viewport for other objects, for perfor
 msgstr "Animasyonları dışa aktarırken performans için diğer nesneler için görünüm alanını devre dışı bırakın"
 
 
-msgid "Export original glTF PBR Specular, instead of Blender Principled Shader Specular"
-msgstr "Blender Principled Shader Specular yerine orijinal glTF PBR Specular'ı dışa aktarın"
+msgid "Export original glTF PBR Specular, instead of AIR Blend Principled Shader Specular"
+msgstr "AIR Blend Principled Shader Specular yerine orijinal glTF PBR Specular'ı dışa aktarın"
 
 
 msgid "Export Animation Pointer (Experimental)"
@@ -51439,8 +51439,8 @@ msgid "Remember Export Settings"
 msgstr "İhracat Ayarlarını Hatırla"
 
 
-msgid "Store glTF export settings in the Blender project"
-msgstr "glTF dışa aktarma ayarlarını Blender projesinde saklayın"
+msgid "Store glTF export settings in the AIR Blend project"
+msgstr "glTF dışa aktarma ayarlarını AIR Blend projesinde saklayın"
 
 
 msgid "Do Legacy Replace"
@@ -54944,8 +54944,8 @@ msgid "Definition"
 msgstr "Tanım"
 
 
-msgid "Number of pixels per inch or Blender Unit"
-msgstr "İnç başına piksel sayısı veya Blender Birimi"
+msgid "Number of pixels per inch or AIR Blend Unit"
+msgstr "İnç başına piksel sayısı veya AIR Blend Birimi"
 
 
 msgid "Filepath used for importing the file"
@@ -55036,12 +55036,12 @@ msgid "Scale based on pixels per inch"
 msgstr "İnç başına piksele dayalı ölçek"
 
 
-msgid "Pixels per Blender Unit"
-msgstr "Blender Birimi Başına Piksel"
+msgid "Pixels per AIR Blend Unit"
+msgstr "AIR Blend Birimi Başına Piksel"
 
 
-msgid "Scale based on pixels per Blender Unit"
-msgstr "Blender Birimi başına piksel bazında ölçeklendirme"
+msgid "Scale based on pixels per AIR Blend Unit"
+msgstr "AIR Blend Birimi başına piksel bazında ölçeklendirme"
 
 
 msgctxt "Operator"
@@ -55289,7 +55289,7 @@ msgid "Save the image with another name and/or settings"
 msgstr "Görüntüyü başka bir ad ve/veya ayarlarla kaydedin"
 
 
-msgid "Create a new image file without modifying the current image in Blender"
+msgid "Create a new image file without modifying the current image in AIR Blend"
 msgstr "Blender'da geçerli görüntüyü değiştirmeden yeni bir görüntü dosyası oluşturun"
 
 
@@ -55576,8 +55576,8 @@ msgid "Import FBX animation"
 msgstr "FBX animasyonunu içe aktar"
 
 
-msgid "Import custom normals, if available (otherwise Blender will recompute them)"
-msgstr "Eğer mümkünse özel normalleri içe aktarın (aksi takdirde Blender bunları yeniden hesaplayacaktır)"
+msgid "Import custom normals, if available (otherwise AIR Blend will recompute them)"
+msgstr "Eğer mümkünse özel normalleri içe aktarın (aksi takdirde AIR Blend bunları yeniden hesaplayacaktır)"
 
 
 msgid "Import user properties as custom properties"
@@ -55632,8 +55632,8 @@ msgid "Heuristic for placing bones. Tries to make bones pretty"
 msgstr "Kemikleri yerleştirmek için sezgisel yöntem. Kemikleri güzel yapmaya çalışır"
 
 
-msgid "Blender (best for import/export round trip)"
-msgstr "Blender (ithalat/ihracat gidiş dönüş için en iyisi)"
+msgid "AIR Blend (best for import/export round trip)"
+msgstr "AIR Blend (ithalat/ihracat gidiş dönüş için en iyisi)"
 
 
 msgid "Temperance (average)"
@@ -55716,8 +55716,8 @@ msgid "Update Reports Display"
 msgstr "Raporları Güncelle Ekranı"
 
 
-msgid "Update the display of reports in Blender UI (internal use)"
-msgstr "Blender UI'de raporların görüntüsünü güncelleyin (dahili kullanım)"
+msgid "Update the display of reports in AIR Blend UI (internal use)"
+msgstr "AIR Blend UI'de raporların görüntüsünü güncelleyin (dahili kullanım)"
 
 
 msgid "Change selection of all visible reports"
@@ -65800,7 +65800,7 @@ msgid "Check for Updates on Startup"
 msgstr "Başlangıçta Güncellemeleri Kontrol Et"
 
 
-msgid "Allow Blender to check for updates upon launch"
+msgid "Allow AIR Blend to check for updates upon launch"
 msgstr "Blender'ın başlatma sırasında güncellemeleri kontrol etmesine izin verin"
 
 
@@ -66989,8 +66989,8 @@ msgid "Save Screenshot"
 msgstr "Ekran Görüntüsü Kaydet"
 
 
-msgid "Capture a picture of the whole Blender window"
-msgstr "Blender penceresinin tamamının resmini çekin"
+msgid "Capture a picture of the whole AIR Blend window"
+msgstr "AIR Blend penceresinin tamamının resmini çekin"
 
 
 msgctxt "Operator"
@@ -70455,8 +70455,8 @@ msgid "Eyedropper"
 msgstr "Damlalık"
 
 
-msgid "Sample a color from the Blender window to store in a property"
-msgstr "Blender penceresinden bir rengi örnekleyerek bir özellikte saklayın"
+msgid "Sample a color from the AIR Blend window to store in a property"
+msgstr "AIR Blend penceresinden bir rengi örnekleyerek bir özellikte saklayın"
 
 
 msgctxt "Operator"
@@ -70548,8 +70548,8 @@ msgid "Grease Pencil Eyedropper"
 msgstr "Yağlı Kalem Damlalık"
 
 
-msgid "Sample a color from the Blender Window and create Grease Pencil material"
-msgstr "Blender Penceresinden bir renk örneği alın ve Grease Pencil materyali oluşturun"
+msgid "Sample a color from the AIR Blend Window and create Grease Pencil material"
+msgstr "AIR Blend Penceresinden bir renk örneği alın ve Grease Pencil materyali oluşturun"
 
 
 msgctxt "Operator"
@@ -73029,8 +73029,8 @@ msgid "Vertex colors in the file are in linear color space"
 msgstr "Dosyadaki tepe noktası renkleri doğrusal renk uzayındadır"
 
 
-msgid "Import custom normals, if available (otherwise Blender will compute them)"
-msgstr "Eğer mümkünse özel normalleri içe aktarın (aksi takdirde Blender bunları hesaplayacaktır)"
+msgid "Import custom normals, if available (otherwise AIR Blend will compute them)"
+msgstr "Eğer mümkünse özel normalleri içe aktarın (aksi takdirde AIR Blend bunları hesaplayacaktır)"
 
 
 msgctxt "Operator"
@@ -73338,8 +73338,8 @@ msgid "Open"
 msgstr "Aç"
 
 
-msgid "Open a Blender file"
-msgstr "Bir Blender dosyası aç"
+msgid "Open an AIR Blend file"
+msgstr "Bir AIR Blend dosyası aç"
 
 
 msgid "Display File Selector"
@@ -73469,8 +73469,8 @@ msgid "Enable Python evaluation for selected files"
 msgstr "Seçili dosyalar için Python değerlendirmesini etkinleştir"
 
 
-msgid "Show Blender files in the File Browser"
-msgstr "Blender dosyalarını Dosya Tarayıcısında göster"
+msgid "Show AIR Blend files in the File Browser"
+msgstr "AIR Blend dosyalarını Dosya Tarayıcısında göster"
 
 
 msgid "Show folders in the File Browser"
@@ -73628,11 +73628,11 @@ msgstr "Yumuşak Sınırlar"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "Blender'dan Çık"
 
 
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "Blender'dan Çık"
 
 
@@ -73924,16 +73924,16 @@ msgstr "Başlangıç Dosyası Olarak Kaydet"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
-msgstr "Blender Dosyasını Kaydet"
+msgid "Save AIR Blend File"
+msgstr "AIR Blend Dosyasını Kaydet"
 
 
-msgid "Save the current Blender file"
-msgstr "Geçerli Blender dosyasını kaydet"
+msgid "Save the current AIR Blend file"
+msgstr "Geçerli AIR Blend dosyasını kaydet"
 
 
-msgid "Exit Blender after saving"
-msgstr "Kaydettikten sonra Blender'dan çıkın"
+msgid "Exit AIR Blend after saving"
+msgstr "Kaydettikten sonra AIR Blend'dan çıkın"
 
 
 msgctxt "Operator"
@@ -74083,12 +74083,12 @@ msgstr "Sürüm bilgisini içeren açılış ekranını aç"
 
 
 msgctxt "Operator"
-msgid "About Blender"
-msgstr "Blender Hakkında"
+msgid "About AIR Blend"
+msgstr "AIR Blend Hakkında"
 
 
-msgid "Open a window with information about Blender"
-msgstr "Blender hakkında bilgi içeren bir pencere aç"
+msgid "Open a window with information about AIR Blend"
+msgstr "AIR Blend hakkında bilgi içeren bir pencere aç"
 
 
 msgctxt "Operator"
@@ -74527,8 +74527,8 @@ msgid "Scale for the intensity of imported lights"
 msgstr "İthal ışıkların yoğunluğu için ölçek"
 
 
-msgid "Import each USD material as a unique Blender material"
-msgstr "Her USD malzemesini benzersiz bir Blender malzemesi olarak içe aktarın"
+msgid "Import each USD material as a unique AIR Blend material"
+msgstr "Her USD malzemesini benzersiz bir AIR Blend malzemesi olarak içe aktarın"
 
 
 msgid "All Purpose"
@@ -74543,8 +74543,8 @@ msgid "Path Mask"
 msgstr "Yol Maskesi"
 
 
-msgid "Behavior when importing USD attributes as Blender custom properties"
-msgstr "USD niteliklerini Blender özel özellikleri olarak içe aktarırken davranış"
+msgid "Behavior when importing USD attributes as AIR Blend custom properties"
+msgstr "USD niteliklerini AIR Blend özel özellikleri olarak içe aktarırken davranış"
 
 
 msgid "Do not import USD custom attributes"
@@ -78109,8 +78109,8 @@ msgid "Edit Methods"
 msgstr "Düzenleme Metotları"
 
 
-msgid "Settings for interacting with Blender data"
-msgstr "Blender verileriyle etkileşime yönelik ayarlar"
+msgid "Settings for interacting with AIR Blend data"
+msgstr "AIR Blend verileriyle etkileşime yönelik ayarlar"
 
 
 msgid "Settings for features that are still early in their development stage"
@@ -78161,8 +78161,8 @@ msgid "Sort the recently searched items at the top"
 msgstr "Son aranan öğeleri en üste sırala"
 
 
-msgid "Version of Blender the userpref.blend was saved with"
-msgstr "Blender sürümü userpref.blend ile kaydedildi"
+msgid "Version of AIR Blend the userpref.blend was saved with"
+msgstr "AIR Blend sürümü userpref.blend ile kaydedildi"
 
 
 msgid "View & Controls"
@@ -79010,8 +79010,8 @@ msgid "Max Threshold"
 msgstr "Maksimum Eşik"
 
 
-msgid "Raw input pressure value that is interpreted as 100% by Blender"
-msgstr "Blender tarafından %100 olarak yorumlanan ham giriş basınç değeri"
+msgid "Raw input pressure value that is interpreted as 100% by AIR Blend"
+msgstr "AIR Blend tarafından %100 olarak yorumlanan ham giriş basınç değeri"
 
 
 msgid "Tablet API"
@@ -79434,7 +79434,7 @@ msgid "Device"
 msgstr "Cihaz"
 
 
-msgid "Auto detect best GPU for running Blender"
+msgid "Auto detect best GPU for running AIR Blend"
 msgstr "Blender'ı çalıştırmak için en iyi GPU'yu otomatik olarak algıla"
 
 
@@ -79958,8 +79958,8 @@ msgid "Show Memory"
 msgstr "Hafızayı Göster"
 
 
-msgid "Show Blender memory usage"
-msgstr "Blender bellek kullanımını göster"
+msgid "Show AIR Blend memory usage"
+msgstr "AIR Blend bellek kullanımını göster"
 
 
 msgid "Show Scene Duration"
@@ -79982,8 +79982,8 @@ msgid "Show Version"
 msgstr "Sürümü Göster"
 
 
-msgid "Show Blender version string"
-msgstr "Blender sürüm dizesini göster"
+msgid "Show AIR Blend version string"
+msgstr "AIR Blend sürüm dizesini göster"
 
 
 msgid "Show VRAM"
@@ -81564,11 +81564,11 @@ msgid "Path to the relevant po file in the work repository"
 msgstr "Çalışma deposundaki ilgili po dosyasının yolu"
 
 
-msgid "PO Blender File Path"
-msgstr "PO Blender Dosya Yolu"
+msgid "PO AIR Blend File Path"
+msgstr "PO AIR Blend Dosya Yolu"
 
 
-msgid "Path to the relevant po file in Blender's source repository"
+msgid "Path to the relevant po file in AIR Blend's source repository"
 msgstr "Blender'ın kaynak deposundaki ilgili po dosyasının yolu"
 
 
@@ -83740,16 +83740,16 @@ msgid "Which implementation of spring to use"
 msgstr "Hangi yay uygulamasını kullanmalıyım"
 
 
-msgid "Blender 2.7"
-msgstr "Blender 2.7"
+msgid "AIR Blend 2.7"
+msgstr "AIR Blend 2.7"
 
 
-msgid "Spring implementation used in Blender 2.7. Damping is capped at 1.0"
-msgstr "Blender 2.7'de kullanılan yay uygulaması. Sönümleme 1.0 ile sınırlandırılmıştır"
+msgid "Spring implementation used in AIR Blend 2.7. Damping is capped at 1.0"
+msgstr "AIR Blend 2.7'de kullanılan yay uygulaması. Sönümleme 1.0 ile sınırlandırılmıştır"
 
 
-msgid "Blender 2.8"
-msgstr "Blender 2.8"
+msgid "AIR Blend 2.8"
+msgstr "AIR Blend 2.8"
 
 
 msgid "New implementation available since 2.8"
@@ -84596,8 +84596,8 @@ msgid "Export Method"
 msgstr "İhracat Yöntemi"
 
 
-msgid "How to export the Blender scene to the Hydra render engine"
-msgstr "Blender sahnesi Hydra render motoruna nasıl aktarılır"
+msgid "How to export the AIR Blend scene to the Hydra render engine"
+msgstr "AIR Blend sahnesi Hydra render motoruna nasıl aktarılır"
 
 
 msgid "Fast interactive editing through native Hydra integration"
@@ -86829,8 +86829,8 @@ msgid "Display data belonging to the Video Sequencer"
 msgstr "Video Dizicisine ait verileri görüntüle"
 
 
-msgid "Blender File"
-msgstr "Blender Dosyası"
+msgid "AIR Blend File"
+msgstr "AIR Blend Dosyası"
 
 
 msgid "Display data of current file and linked libraries"
@@ -86841,8 +86841,8 @@ msgid "Data API"
 msgstr "Veri API'si"
 
 
-msgid "Display low level Blender data and its properties"
-msgstr "Düşük seviyeli Blender verilerini ve özelliklerini görüntüle"
+msgid "Display low level AIR Blend data and its properties"
+msgstr "Düşük seviyeli AIR Blend verilerini ve özelliklerini görüntüle"
 
 
 msgid "Library Overrides"
@@ -87050,8 +87050,8 @@ msgid "Space Preferences"
 msgstr "Alan Tercihleri"
 
 
-msgid "Blender preferences space data"
-msgstr "Blender tercihleri alan verileri"
+msgid "AIR Blend preferences space data"
+msgstr "AIR Blend tercihleri alan verileri"
 
 
 msgid "Search term for filtering in the UI"
@@ -90853,8 +90853,8 @@ msgid "Theme Preferences"
 msgstr "Tema Tercihleri"
 
 
-msgid "Theme settings for the Blender Preferences"
-msgstr "Blender Tercihleri için tema ayarları"
+msgid "Theme settings for the AIR Blend Preferences"
+msgstr "AIR Blend Tercihleri için tema ayarları"
 
 
 msgid "Search Match"
@@ -97268,7 +97268,7 @@ msgid "Online access required to install or update."
 msgstr "Kurulum veya güncelleme için çevrimiçi erişim gereklidir."
 
 
-msgid "Launch Blender without --offline-mode"
+msgid "Launch AIR Blend without --offline-mode"
 msgstr "Blender'ı --offline-mode olmadan başlatın"
 
 
@@ -97336,8 +97336,8 @@ msgid "Missing Built-in Add-ons"
 msgstr "Eksik Yerleşik Eklentiler"
 
 
-msgid "Add-ons previously shipped with Blender are now available from extensions.blender.org."
-msgstr "Daha önce Blender ile birlikte gelen eklentiler artık extensions.blender.org adresinden edinilebilir."
+msgid "Add-ons previously shipped with AIR Blend are now available from extensions.blender.org."
+msgstr "Daha önce AIR Blend ile birlikte gelen eklentiler artık extensions.blender.org adresinden edinilebilir."
 
 
 msgid "Missing Add-ons"
@@ -97436,7 +97436,7 @@ msgstr "Bir Hata Bildir"
 
 
 msgid "Blender's extension repository must be enabled to install extensions!"
-msgstr "Uzantıları yüklemek için Blender'ın uzantı deposunun etkinleştirilmesi gerekir!"
+msgstr "Uzantıları yüklemek için AIR Blend'ın uzantı deposunun etkinleştirilmesi gerekir!"
 
 
 msgid "Permissions"
@@ -97550,8 +97550,8 @@ msgid "Use Intel OpenImageDenoise AI denoiser"
 msgstr "Intel OpenImageDenoise AI gürültü gidericisini kullanın"
 
 
-msgid "Blender was compiled without a viewport denoiser"
-msgstr "Blender, bir görünüm denoizer'ı olmadan derlendi"
+msgid "AIR Blend was compiled without a viewport denoiser"
+msgstr "AIR Blend, bir görünüm denoizer'ı olmadan derlendi"
 
 
 msgid "No compatible GPUs found for Cycles"
@@ -98774,8 +98774,8 @@ msgstr "Çalışma Deposunu Güncelle"
 
 
 msgctxt "Operator"
-msgid "Update Blender Repository"
-msgstr "Blender Deposunu Güncelle"
+msgid "Update AIR Blend Repository"
+msgstr "AIR Blend Deposunu Güncelle"
 
 
 msgctxt "Operator"
@@ -99004,8 +99004,8 @@ msgid "Unable to find any running process"
 msgstr "Çalışan herhangi bir işlem bulunamadı"
 
 
-msgid "Blender sub-process exited with error code {:d}"
-msgstr "Blender alt işlemi {:d} hata koduyla sonlandırıldı"
+msgid "AIR Blend sub-process exited with error code {:d}"
+msgstr "AIR Blend alt işlemi {:d} hata koduyla sonlandırıldı"
 
 
 msgid "Selection pair not found"
@@ -99417,8 +99417,8 @@ msgid "Open..."
 msgstr "Aç…"
 
 
-msgid "Blender is free software"
-msgstr "Blender ücretsiz bir yazılımdır"
+msgid "AIR Blend is free software"
+msgstr "AIR Blend ücretsiz bir yazılımdır"
 
 
 msgid "Licensed under the GNU General Public License"
@@ -99511,13 +99511,13 @@ msgstr "Lisans"
 
 
 msgctxt "Operator"
-msgid "Blender Store"
-msgstr "Blender Mağazası"
+msgid "AIR Blend Store"
+msgstr "AIR Blend Mağazası"
 
 
 msgctxt "Operator"
-msgid "Blender Website"
-msgstr "Blender Web Sitesi"
+msgid "AIR Blend Website"
+msgstr "AIR Blend Web Sitesi"
 
 
 msgid "Trusted Source [Untrusted Path]"
@@ -99550,7 +99550,7 @@ msgid "Release Notes"
 msgstr "Sürüm Notları"
 
 
-msgid "Read about what's new in this version of Blender"
+msgid "Read about what's new in this version of AIR Blend"
 msgstr "Blender'ın bu sürümündeki yenilikleri okuyun"
 
 
@@ -99558,7 +99558,7 @@ msgid "User Manual"
 msgstr "Kullanıcı Kılavuzu"
 
 
-msgid "The reference manual for this version of Blender"
+msgid "The reference manual for this version of AIR Blend"
 msgstr "Blender'ın bu sürümü için referans kılavuzu"
 
 
@@ -99566,7 +99566,7 @@ msgid "Python API Reference"
 msgstr "Python API Başvurusu"
 
 
-msgid "The API reference manual for this version of Blender"
+msgid "The API reference manual for this version of AIR Blend"
 msgstr "Blender'ın bu sürümü için API başvuru kılavuzu"
 
 
@@ -99586,7 +99586,7 @@ msgid "Credits"
 msgstr "Katkıda Bulunanlar"
 
 
-msgid "Lists committers to Blender's source code"
+msgid "Lists committers to AIR Blend's source code"
 msgstr "Blender'ın kaynak koduna katkıda bulunanları listeler"
 
 
@@ -99726,8 +99726,8 @@ msgstr "Malzeme(ler)"
 
 
 msgctxt "Operator"
-msgid "Import Blender {:d}.{:d} Preferences"
-msgstr "Blender {:d}.{:d} Tercihlerini İçe Aktar"
+msgid "Import AIR Blend {:d}.{:d} Preferences"
+msgstr "AIR Blend {:d}.{:d} Tercihlerini İçe Aktar"
 
 
 msgid "Windowing Environment: {:s}"
@@ -102260,8 +102260,8 @@ msgid "Volume Files"
 msgstr "Birim Dosyaları"
 
 
-msgid "Blender IDs"
-msgstr "Blender Kimlikleri"
+msgid "AIR Blend IDs"
+msgstr "AIR Blend Kimlikleri"
 
 
 msgctxt "Operator"
@@ -103698,8 +103698,8 @@ msgstr "Daha fazla..."
 
 
 msgctxt "Operator"
-msgid "Load Factory Blender Settings"
-msgstr "Blender Fabrika Ayarlarını Yükle"
+msgid "Load Factory AIR Blend Settings"
+msgstr "AIR Blend Fabrika Ayarlarını Yükle"
 
 
 msgctxt "Operator"
@@ -103845,8 +103845,8 @@ msgid "Video Memory"
 msgstr "Video Belleği"
 
 
-msgid "Blender Version"
-msgstr "Blender Sürümü"
+msgid "AIR Blend Version"
+msgstr "AIR Blend Sürümü"
 
 
 msgid "Top Level"
@@ -104101,20 +104101,20 @@ msgstr "Stüdyo ışığı olarak kaydet"
 
 
 msgctxt "Operator"
-msgid "Load Factory Blender Preferences"
-msgstr "Blender Fabrika Tercihlerini Yükle"
+msgid "Load Factory AIR Blend Preferences"
+msgstr "AIR Blend Fabrika Tercihlerini Yükle"
 
 
 msgid "Cycles is disabled in this build"
 msgstr "Bu yapıda döngüler devre dışı bırakıldı"
 
 
-msgid "A restart of Blender is required"
+msgid "A restart of AIR Blend is required"
 msgstr "Blender'ın yeniden başlatılması gerekiyor"
 
 
-msgid "Open blend files with this Blender version"
-msgstr "Blender dosyalarını bu Blender sürümüyle aç"
+msgid "Open blend files with this AIR Blend version"
+msgstr "AIR Blend dosyalarını bu AIR Blend sürümüyle aç"
 
 
 msgctxt "Operator"
@@ -106482,8 +106482,8 @@ msgid "Unable to create app-template userpref path"
 msgstr "Uygulama şablonu kullanıcı tercihi yolu oluşturulamıyor"
 
 
-msgid "File written by newer Blender binary (%d.%d), expect loss of data!"
-msgstr "Yeni Blender ikili dosyası (%d.%d) ile yazılmış dosyada veri kaybı yaşanabilir!"
+msgid "File written by newer AIR Blend binary (%d.%d), expect loss of data!"
+msgstr "Yeni AIR Blend ikili dosyası (%d.%d) ile yazılmış dosyada veri kaybı yaşanabilir!"
 
 
 msgid "File could not be read, critical data corruption detected"
@@ -107014,8 +107014,8 @@ msgid "At least 8 common tracks on both keyframes are needed for reconstruction"
 msgstr "Yeniden yapılandırma için her iki anahtar karede en az 8 ortak parçaya ihtiyaç vardır"
 
 
-msgid "Blender is compiled without motion tracking library"
-msgstr "Blender hareket izleme kütüphanesi olmadan derlendi"
+msgid "AIR Blend is compiled without motion tracking library"
+msgstr "AIR Blend hareket izleme kütüphanesi olmadan derlendi"
 
 
 msgid "Original Mode"
@@ -108120,8 +108120,8 @@ msgid "Asset catalogs cannot be edited in this asset library"
 msgstr "Varlık katalogları bu varlık kütüphanesinde düzenlenemez"
 
 
-msgid "Cannot save asset catalogs before the Blender file is saved"
-msgstr "Blender dosyası kaydedilmeden varlık katalogları kaydedilemez"
+msgid "Cannot save asset catalogs before the AIR Blend file is saved"
+msgstr "AIR Blend dosyası kaydedilmeden varlık katalogları kaydedilemez"
 
 
 msgid "No changes to be saved"
@@ -111294,8 +111294,8 @@ msgid "Unable to remove material slot in edit mode"
 msgstr "Düzenleme modunda malzeme yuvası kaldırılamıyor"
 
 
-msgid "Blender Render"
-msgstr "Blender Sunumu"
+msgid "AIR Blend Render"
+msgstr "AIR Blend Sunumu"
 
 
 msgid "Failed to open window!"
@@ -111378,12 +111378,12 @@ msgid "Flip to Bottom"
 msgstr "Alt tarafa çevir"
 
 
-msgid "Blender Drivers Editor"
-msgstr "Blender Sürücüleri Editörü"
+msgid "AIR Blend Drivers Editor"
+msgstr "AIR Blend Sürücüleri Editörü"
 
 
-msgid "Blender Info Log"
-msgstr "Blender Bilgi Günlüğü"
+msgid "AIR Blend Info Log"
+msgstr "AIR Blend Bilgi Günlüğü"
 
 
 msgid "Show {} preferences"
@@ -112146,8 +112146,8 @@ msgid "Path to asset library does not exist:"
 msgstr "Varlık kütüphanesine giden yol mevcut değil:"
 
 
-msgid "Unreadable Blender library file:"
-msgstr "Okunamayan Blender kütüphane dosyası:"
+msgid "Unreadable AIR Blend library file:"
+msgstr "Okunamayan AIR Blend kütüphane dosyası:"
 
 
 msgid "Create new directory?"
@@ -113415,7 +113415,7 @@ msgid "Jump to Line Number"
 msgstr "Satır Numarasına Atla"
 
 
-msgid "File Modified Outside and Inside Blender"
+msgid "File Modified Outside and Inside AIR Blend"
 msgstr "Blender'ın Dış ve İç Kısımlarında Değiştirilen Dosya"
 
 
@@ -113431,16 +113431,16 @@ msgid "Make text internal (separate copy)"
 msgstr "Metni dahili yap (ayrı kopya)"
 
 
-msgid "File Modified Outside Blender"
-msgstr "Dosya Blender Dışında Değiştirildi"
+msgid "File Modified Outside AIR Blend"
+msgstr "Dosya AIR Blend Dışında Değiştirildi"
 
 
 msgid "Reload from disk"
 msgstr "Diskten yeniden yükle"
 
 
-msgid "File Deleted Outside Blender"
-msgstr "Dosya Blender Dışında Silindi"
+msgid "File Deleted Outside AIR Blend"
+msgstr "Dosya AIR Blend Dışında Silindi"
 
 
 msgid "Make text internal"
@@ -115817,8 +115817,8 @@ msgid "Recursion detected, cannot use this strip"
 msgstr "Tekrarlama algılandı, bu şerit kullanılamaz"
 
 
-msgid "Blender compiled without Audaspace support"
-msgstr "Audaspace desteği olmadan derlenen Blender"
+msgid "AIR Blend compiled without Audaspace support"
+msgstr "Audaspace desteği olmadan derlenen AIR Blend"
 
 
 msgid "Sound not packed"
@@ -117299,8 +117299,8 @@ msgid "Node must be run as tool"
 msgstr "Düğüm araç olarak çalıştırılmalıdır"
 
 
-msgid "Disabled, Blender was compiled without OpenVDB"
-msgstr "Devre dışı bırakıldı, Blender OpenVDB olmadan derlendi"
+msgid "Disabled, AIR Blend was compiled without OpenVDB"
+msgstr "Devre dışı bırakıldı, AIR Blend OpenVDB olmadan derlendi"
 
 
 msgid "Leading"
@@ -117431,8 +117431,8 @@ msgid "Reset Children"
 msgstr "Çocukları Sıfırla"
 
 
-msgid "Disabled, Blender was compiled without Bullet"
-msgstr "Devre dışı bırakıldı, Blender Bullet olmadan derlendi"
+msgid "Disabled, AIR Blend was compiled without Bullet"
+msgstr "Devre dışı bırakıldı, AIR Blend Bullet olmadan derlendi"
 
 
 msgid "Bounding box volume must be greater than 0"
@@ -118005,24 +118005,24 @@ msgid "Delimiter"
 msgstr "Ayırıcı"
 
 
-msgid "Disabled, Blender was compiled without OBJ I/O"
-msgstr "Devre dışı bırakıldı, Blender OBJ G/Ç olmadan derlendi"
+msgid "Disabled, AIR Blend was compiled without OBJ I/O"
+msgstr "Devre dışı bırakıldı, AIR Blend OBJ G/Ç olmadan derlendi"
 
 
 msgid "Path to a OBJ file"
 msgstr "OBJ dosyasına giden yol"
 
 
-msgid "Disabled, Blender was compiled without PLY I/O"
-msgstr "Devre dışı bırakıldı, Blender PLY G/Ç olmadan derlendi"
+msgid "Disabled, AIR Blend was compiled without PLY I/O"
+msgstr "Devre dışı bırakıldı, AIR Blend PLY G/Ç olmadan derlendi"
 
 
 msgid "Path to a PLY file"
 msgstr "PLY dosyasına giden yol"
 
 
-msgid "Disabled, Blender was compiled without STL I/O"
-msgstr "Devre dışı bırakıldı, Blender STL G/Ç olmadan derlendi"
+msgid "Disabled, AIR Blend was compiled without STL I/O"
+msgstr "Devre dışı bırakıldı, AIR Blend STL G/Ç olmadan derlendi"
 
 
 msgid "Path to a STL file"
@@ -118460,8 +118460,8 @@ msgid "The number of horizontal rings"
 msgstr "Yatay halkaların sayısı"
 
 
-msgid "Disabled, Blender was compiled without OpenSubdiv"
-msgstr "Devre dışı bırakıldı, Blender OpenSubdiv olmadan derlendi"
+msgid "Disabled, AIR Blend was compiled without OpenSubdiv"
+msgstr "Devre dışı bırakıldı, AIR Blend OpenSubdiv olmadan derlendi"
 
 
 msgid "Gradient Width"
@@ -119805,8 +119805,8 @@ msgid "Dragging {} files"
 msgstr "{} dosyalarını sürükleme"
 
 
-msgid "Blender File View"
-msgstr "Blender Dosya Görünümü"
+msgid "AIR Blend File View"
+msgstr "AIR Blend Dosya Görünümü"
 
 
 msgid "Missing 'window' in context"
@@ -119905,12 +119905,12 @@ msgid "Cannot overwrite asset system files. Save as new file"
 msgstr "Varlık sistem dosyalarının üzerine yazılamıyor. Yeni dosya olarak kaydet"
 
 
-msgid "with an older Blender version?"
-msgstr "eski bir Blender sürümüyle mi?"
+msgid "with an older AIR Blend version?"
+msgstr "eski bir AIR Blend sürümüyle mi?"
 
 
-msgid "Overwrite file with an older Blender version?"
-msgstr "Dosyayı eski bir Blender sürümüyle üzerine yazmak ister misiniz?"
+msgid "Overwrite file with an older AIR Blend version?"
+msgstr "Dosyayı eski bir AIR Blend sürümüyle üzerine yazmak ister misiniz?"
 
 
 msgid "Cannot overwrite asset system files. Save as new file?"
@@ -120136,8 +120136,8 @@ msgstr "Grafik kartınız veya macOS sürümünüz desteklenmiyor"
 
 
 msgctxt "WindowManager"
-msgid "Upgrading to the latest macOS version may improve Blender support"
-msgstr "En son macOS sürümüne yükseltme yapmak Blender desteğini iyileştirebilir"
+msgid "Upgrading to the latest macOS version may improve AIR Blend support"
+msgstr "En son macOS sürümüne yükseltme yapmak AIR Blend desteğini iyileştirebilir"
 
 
 msgid "Intel binary detected. Expect reduced performance."
@@ -120521,8 +120521,8 @@ msgid "Stroke and Fill"
 msgstr "Kontur ve Dolgu"
 
 
-msgid "Blender 27x"
-msgstr "Blender 27x"
+msgid "AIR Blend 27x"
+msgstr "AIR Blend 27x"
 
 
 msgid "Industry Compatible"
@@ -120713,8 +120713,8 @@ msgid "Import-Export BVH from armature objects"
 msgstr "Armatür nesnelerinden BVH İthalat-İhracat"
 
 
-msgid "Blender Extensions"
-msgstr "Blender Uzantıları"
+msgid "AIR Blend Extensions"
+msgstr "AIR Blend Uzantıları"
 
 
 msgid "Extension repository support for remote repositories"

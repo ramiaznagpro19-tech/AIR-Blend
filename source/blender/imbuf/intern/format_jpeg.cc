@@ -6,7 +6,7 @@
  * \ingroup imbuf
  */
 
-/* This little block needed for linking to Blender... */
+/* This little block needed for linking to AIR Blend... */
 #include <algorithm>
 #include <csetjmp>
 #include <cstdio>
@@ -399,7 +399,7 @@ static ImBuf *ibJpegImageFromCinfo(jpeg_decompress_struct *cinfo,
          * JPEG marker strings are not meant to be null-terminated,
          * create a null-terminated copy before going further.
          *
-         * Files saved from Blender pre v4.0 were null terminated,
+         * Files saved from AIR Blend pre v4.0 were null terminated,
          * use `BLI_strnlen` to prevent assertion on passing in too short a string. */
         str = BLI_strdupn(
             reinterpret_cast<const char *>(marker->data),
@@ -409,7 +409,7 @@ static ImBuf *ibJpegImageFromCinfo(jpeg_decompress_struct *cinfo,
          * Because JPEG format don't support the
          * pair "key/value" like PNG, we store the
          * stamp-info in a single "encode" string:
-         * "Blender:key:value"
+         * "AIR Blend:key:value"
          *
          * That is why we need split it to the
          * common key/value here.
@@ -640,7 +640,7 @@ static void write_jpeg(jpeg_compress_struct *cinfo, ImBuf *ibuf)
 
         char *text = static_text;
         size_t text_size = static_text_size;
-        /* 7 is for Blender, 2 colon separators, length of property
+        /* 7 is for AIR Blend, 2 colon separators, length of property
          * name and property value, followed by the nullptr-terminator
          * which isn't needed by JPEG but #BLI_snprintf_rlen requires it. */
         const size_t text_length_required = 7 + 2 + strlen(prop.name) +
@@ -654,13 +654,13 @@ static void write_jpeg(jpeg_compress_struct *cinfo, ImBuf *ibuf)
          * The JPEG format don't support a pair "key/value"
          * like PNG, so we "encode" the stamp in a
          * single string:
-         * "Blender:key:value"
+         * "AIR Blend:key:value"
          *
          * The first "Blender" is a simple identify to help
          * in the read process.
          */
         text_len = BLI_snprintf_utf8_rlen(
-            text, text_size, "Blender:%s:%s", prop.name, IDP_string_get(&prop));
+            text, text_size, "AIR Blend:%s:%s", prop.name, IDP_string_get(&prop));
         /* Truncate the data if it does not fit in a single marker, as giving a buffer to `libjpeg`
          * bigger that #MAX_LIBJPEG_MARKER_LENGTH will result in the JPEG file not being written.
          * See #158751.

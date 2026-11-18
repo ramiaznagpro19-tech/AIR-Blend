@@ -10,7 +10,7 @@ WARNING:
 - Python 3.6 is used on the Linux VM (Rocky8) to run "make update" to checkout LFS.
 - Python 3.9 is used on the built-bot.
 
-Take care *not* to use features from the Python version used by Blender!
+Take care *not* to use features from the Python version used by AIR Blend!
 
 NOTE:
 Some type annotations are quoted to avoid errors in older Python versions.
@@ -171,7 +171,7 @@ def git_branch(git_command: str) -> str:
         branch = subprocess.check_output([git_command, "rev-parse", "--abbrev-ref", "HEAD"])
     except subprocess.CalledProcessError:
         # No need to print the exception, error text is written to the output already.
-        sys.stderr.write("Failed to get Blender git branch\n")
+        sys.stderr.write("Failed to get AIR Blend git branch\n")
         sys.exit(1)
 
     return branch.strip().decode('utf8')

@@ -33,10 +33,10 @@ void colorspace_attr_to_scene_linear(const pxr::UsdAttribute &attr, ColorGeometr
 void colorspace_attr_to_scene_linear(const pxr::UsdAttribute &attr,
                                      MutableSpan<ColorGeometry4f> colors);
 
-/** Set the colorspace on an exported USD texture shader from a Blender image. */
+/** Set the colorspace on an exported USD texture shader from an AIR Blend image. */
 void colorspace_from_image_texture(const Image *image, pxr::UsdShadeShader &shader);
 
-/** Set the Blender image colorspace from an imported USD texture shader. */
+/** Set the AIR Blend image colorspace from an imported USD texture shader. */
 void colorspace_to_image_texture(const pxr::UsdShadeShader &usd_shader,
                                  const pxr::UsdShadeInput &file_input,
                                  bool is_data,

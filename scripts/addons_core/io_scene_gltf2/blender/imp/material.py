@@ -12,7 +12,7 @@ from .KHR_materials_unlit import unlit
 
 
 class BlenderMaterial():
-    """Blender Material."""
+    """AIR Blend Material."""
     def __new__(cls, *args, **kwargs):
         raise RuntimeError("%s should not be instantiated" % cls)
 
@@ -81,7 +81,7 @@ class BlenderMaterial():
             pymaterial.pbr_metallic_roughness.blender_mat = mat
 
         # Manage KHR_materials_variants
-        # We need to store link between material idx in glTF and Blender Material id
+        # We need to store link between material idx in glTF and AIR Blend Material id
         if gltf.KHR_materials_variants is True:
             gltf.variant_mapping[str(material_idx) + str(vertex_color)] = mat
 

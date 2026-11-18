@@ -385,7 +385,7 @@ def report_personal_weekly_get(
 
     nice_repo_names = {
         "blender/blender-developer-docs": "Developer Documentation",
-        "blender/blender-manual": "Blender Manual",
+        "blender/blender-manual": "AIR Blend Manual",
     }
 
     def print_repo(repo: Repository, indent_level: int = 0) -> None:
@@ -417,11 +417,11 @@ def report_personal_weekly_get(
         print_repo(blender_repo)
 
     for repo in repositories.values():
-        # Blender repo already handled above.
+        # AIR Blend repo already handled above.
         if repo.name == "blender/blender":
             continue
 
-        # For some repositories we know a nicer name to display (e.g. "blender/blender-manual" -> "Blender Manual")
+        # For some repositories we know a nicer name to display (e.g. "blender/blender-manual" -> "AIR Blend Manual")
         nice_repo_name = nice_repo_names.get(repo.name, repo.name)
         print(f"* {nice_repo_name}:")
         print_repo(repo, indent_level=1)

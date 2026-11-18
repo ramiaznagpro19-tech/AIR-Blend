@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 5.3.0 Alpha (b'2cef5b8c951a')\n"
+"Project-Id-Version: AIR Blend 5.3.0 Alpha (b'2cef5b8c951a')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 07:47+0000\n"
 "PO-Revision-Date: 2025-11-14 10:59+0000\n"
@@ -622,8 +622,8 @@ msgid "Fribidi Library"
 msgstr "Maktaba ya Fribidi"
 
 
-msgid "The FriBidi C compiled library (.so under Linux, .dll under windows...), you’ll likely have to edit it if you’re under Windows, e.g. using the one included in Blender libraries repository"
-msgstr "Maktaba ya FriBidi C iliyokusanywa (.so chini ya Linux, .dll chini ya windows...), itabidi uihariri ikiwa uko na Windows, k.m. kwa kutumia ile iliyojumuishwa kwenye hazina ya maktaba ya Blender"
+msgid "The FriBidi C compiled library (.so under Linux, .dll under windows...), you’ll likely have to edit it if you’re under Windows, e.g. using the one included in AIR Blend libraries repository"
+msgstr "Maktaba ya FriBidi C iliyokusanywa (.so chini ya Linux, .dll chini ya windows...), itabidi uihariri ikiwa uko na Windows, k.m. kwa kutumia ile iliyojumuishwa kwenye hazina ya maktaba ya AIR Blend"
 
 
 msgid "Translation Root"
@@ -646,8 +646,8 @@ msgid "Source Root"
 msgstr "Chanzo"
 
 
-msgid "The Blender source root path"
-msgstr "Njia ya chanzo cha Blender"
+msgid "The AIR Blend source root path"
+msgstr "Njia ya chanzo cha AIR Blend"
 
 
 msgid "Spell Cache"
@@ -670,8 +670,8 @@ msgid "Persistent Data Path"
 msgstr "Njia ya Data Inayoendelea"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
-msgstr "Jina la faili ya json inayohifadhi mipangilio hiyo (kwa bahati mbaya, mfumo wa Blender haufanyi kazi hapa)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
+msgstr "Jina la faili ya json inayohifadhi mipangilio hiyo (kwa bahati mbaya, mfumo wa AIR Blend haufanyi kazi hapa)"
 
 
 msgid "User Add-ons"
@@ -1462,8 +1462,8 @@ msgid "Current File"
 msgstr "Faili ya Sasa"
 
 
-msgid "Show the assets currently available in this Blender session"
-msgstr "Onyesha mali inayopatikana sasa katika kipindi hiki cha Blender"
+msgid "Show the assets currently available in this AIR Blend session"
+msgstr "Onyesha mali inayopatikana sasa katika kipindi hiki cha AIR Blend"
 
 
 msgid "Essentials"
@@ -2091,8 +2091,8 @@ msgid "Is Internal"
 msgstr "Ni ya Ndani"
 
 
-msgid "The attribute is meant for internal use by Blender"
-msgstr "Sifa hiyo inakusudiwa matumizi ya ndani na Blender"
+msgid "The attribute is meant for internal use by AIR Blend"
+msgstr "Sifa hiyo inakusudiwa matumizi ya ndani na AIR Blend"
 
 
 msgid "Is Required"
@@ -3240,8 +3240,8 @@ msgid "Dirty"
 msgstr "Mchafu"
 
 
-msgid "Blender RNA structure definitions"
-msgstr "Ufafanuzi wa muundo wa Blender RNA"
+msgid "AIR Blend RNA structure definitions"
+msgstr "Ufafanuzi wa muundo wa AIR Blend RNA"
 
 
 msgid "Structs"
@@ -6500,8 +6500,8 @@ msgid "Lin error"
 msgstr "Makosa ya Lin"
 
 
-msgid "Amount of residual error in Blender space unit for constraints that work on position"
-msgstr "Kiasi cha makosa ya mabaki katika kitengo cha nafasi ya Blender kwa vizuizi vinavyofanya kazi kwa msimamo."
+msgid "Amount of residual error in AIR Blend space unit for constraints that work on position"
+msgstr "Kiasi cha makosa ya mabaki katika kitengo cha nafasi ya AIR Blend kwa vizuizi vinavyofanya kazi kwa msimamo."
 
 
 msgid "Rotation error"
@@ -10155,8 +10155,8 @@ msgid "Max Velocity"
 msgstr "Kasi ya Juu"
 
 
-msgid "Velocity considered as maximum influence (Blender units per frame)"
-msgstr "Kasi inazingatiwa kama mvuto wa juu zaidi (Vipimo vya Blender kwa kila fremu)"
+msgid "Velocity considered as maximum influence (AIR Blend units per frame)"
+msgstr "Kasi inazingatiwa kama mvuto wa juu zaidi (Vipimo vya AIR Blend kwa kila fremu)"
 
 
 msgid "Velocity Color Ramp"
@@ -10512,8 +10512,8 @@ msgid "Premultiply Alpha"
 msgstr "Kuzidisha Alfa"
 
 
-msgid "Multiply color by alpha (recommended for Blender input)"
-msgstr "Zidisha rangi kwa alpha (inapendekezwa kwa ingizo la Blender)"
+msgid "Multiply color by alpha (recommended for AIR Blend input)"
+msgstr "Zidisha rangi kwa alpha (inapendekezwa kwa ingizo la AIR Blend)"
 
 
 msgid "Use Shrink"
@@ -12329,15 +12329,15 @@ msgid "Hide .blend files items that are not data-blocks with asset metadata"
 msgstr "Ficha .changanya faili ambazo si vizuizi vya data na metadata ya kipengee"
 
 
-msgid "Filter Blender Backup Files"
-msgstr "Kichujio Faili za Hifadhi Nakala za Blender"
+msgid "Filter AIR Blend Backup Files"
+msgstr "Kichujio Faili za Hifadhi Nakala za AIR Blend"
 
 
 msgid "Show .blend1, .blend2, etc. files"
 msgstr "Onyesha faili za .blend1, .blend2, nk"
 
 
-msgid "Filter Blender"
+msgid "Filter AIR Blend"
 msgstr "Kichanganya Kichujio"
 
 
@@ -12345,8 +12345,8 @@ msgid "Show .blend files"
 msgstr "Onyesha faili za .changanya"
 
 
-msgid "Filter Blender IDs"
-msgstr "Chuja Blender IDs"
+msgid "Filter AIR Blend IDs"
+msgstr "Chuja AIR Blend IDs"
 
 
 msgid "Show .blend files items (objects, materials, etc.)"
@@ -12421,8 +12421,8 @@ msgid "Library Browser"
 msgstr "Kivinjari cha Maktaba"
 
 
-msgid "Whether we may browse Blender files' content or not"
-msgstr "Ikiwa tunaweza kuvinjari yaliyomo kwenye faili za Blender au la"
+msgid "Whether we may browse AIR Blend files' content or not"
+msgstr "Ikiwa tunaweza kuvinjari yaliyomo kwenye faili za AIR Blend au la"
 
 
 msgid "Reverse Sorting"
@@ -19501,8 +19501,8 @@ msgid "Library Overrides Need resync"
 msgstr "Ubatilishaji wa Maktaba Unahitaji kusawazisha upya"
 
 
-msgid "Version of Blender the library .blend was saved with"
-msgstr "Toleo la Blender the library .blend ilihifadhiwa kwa"
+msgid "Version of AIR Blend the library .blend was saved with"
+msgstr "Toleo la AIR Blend the library .blend ilihifadhiwa kwa"
 
 
 msgctxt "Light"
@@ -23897,8 +23897,8 @@ msgid "Noise basis used for turbulence"
 msgstr "Msingi wa kelele unaotumika kwa misukosuko"
 
 
-msgid "Noise algorithm - Blender original: Smooth interpolated noise"
-msgstr "Algorithm ya kelele - Blender asili: Kelele laini iliyoingiliana"
+msgid "Noise algorithm - AIR Blend original: Smooth interpolated noise"
+msgstr "Algorithm ya kelele - AIR Blend asili: Kelele laini iliyoingiliana"
 
 
 msgid "Original Perlin"
@@ -24515,8 +24515,8 @@ msgid "Window Manager"
 msgstr "Meneja wa Dirisha"
 
 
-msgid "Full path to the Blender file containing the active asset"
-msgstr "Njia kamili ya faili ya Blender iliyo na mali inayotumika"
+msgid "Full path to the AIR Blend file containing the active asset"
+msgstr "Njia kamili ya faili ya AIR Blend iliyo na mali inayotumika"
 
 
 msgid "Filter by Type"
@@ -25319,16 +25319,16 @@ msgid "Custom Icon"
 msgstr "Aikoni Maalum"
 
 
-msgid "True if this preview icon has been modified by py script, and is no more auto-generated by Blender"
-msgstr "Ni kweli ikiwa ikoni hii ya hakiki imerekebishwa na hati ya py, na haitolewi tena kiotomatiki na Blender."
+msgid "True if this preview icon has been modified by py script, and is no more auto-generated by AIR Blend"
+msgstr "Ni kweli ikiwa ikoni hii ya hakiki imerekebishwa na hati ya py, na haitolewi tena kiotomatiki na AIR Blend."
 
 
 msgid "Custom Image"
 msgstr "Picha Maalum"
 
 
-msgid "True if this preview image has been modified by py script, and is no more auto-generated by Blender"
-msgstr "Ni kweli ikiwa picha hii ya hakikisho imerekebishwa na hati ya py, na haitolewi tena kiotomatiki na Blender."
+msgid "True if this preview image has been modified by py script, and is no more auto-generated by AIR Blend"
+msgstr "Ni kweli ikiwa picha hii ya hakikisho imerekebishwa na hati ya py, na haitolewi tena kiotomatiki na AIR Blend."
 
 
 msgid "Parameters defining how an Image data-block is used by another data-block"
@@ -40280,20 +40280,20 @@ msgid "World space normal mapping"
 msgstr "Ramani ya kawaida ya anga za ulimwengu"
 
 
-msgid "Blender Object Space"
-msgstr "Nafasi ya Kitu cha Blender"
+msgid "AIR Blend Object Space"
+msgstr "Nafasi ya Kitu cha AIR Blend"
 
 
-msgid "Object space normal mapping, compatible with Blender render baking"
-msgstr "Nafasi ya kitu ramani ya kawaida, inayoendana na Blender kutoa kuoka"
+msgid "Object space normal mapping, compatible with AIR Blend render baking"
+msgstr "Nafasi ya kitu ramani ya kawaida, inayoendana na AIR Blend kutoa kuoka"
 
 
-msgid "Blender World Space"
-msgstr "Nafasi ya Dunia ya Blender"
+msgid "AIR Blend World Space"
+msgstr "Nafasi ya Dunia ya AIR Blend"
 
 
-msgid "World space normal mapping, compatible with Blender render baking"
-msgstr "Upangaji ramani wa kawaida wa nafasi ya ulimwengu, inayoendana na Blender hutoa kuoka"
+msgid "World space normal mapping, compatible with AIR Blend render baking"
+msgstr "Upangaji ramani wa kawaida wa nafasi ya ulimwengu, inayoendana na AIR Blend hutoa kuoka"
 
 
 msgid "UV Map for tangent space maps"
@@ -43140,8 +43140,8 @@ msgid "Uninstall Studio Light"
 msgstr "Sanidua Mwanga wa Studio"
 
 
-msgid "Load and apply a Blender XML theme file"
-msgstr "Pakia na utumie faili ya mandhari ya Blender XML"
+msgid "Load and apply an AIR Blend XML theme file"
+msgstr "Pakia na utumie faili ya mandhari ya AIR Blend XML"
 
 
 msgctxt "Operator"
@@ -43417,12 +43417,12 @@ msgid "I18n Save Settings"
 msgstr "I18n Hifadhi Mipangilio"
 
 
-msgid "Update i18n data (po files) in Blender source code repository"
-msgstr "Sasisha data ya i18n (faili za po) kwenye hazina ya msimbo wa chanzo cha Blender"
+msgid "Update i18n data (po files) in AIR Blend source code repository"
+msgstr "Sasisha data ya i18n (faili za po) kwenye hazina ya msimbo wa chanzo cha AIR Blend"
 
 
 msgctxt "Operator"
-msgid "Update I18n Blender Repository"
+msgid "Update I18n AIR Blend Repository"
 msgstr "Sasisha Hifadhi ya I18n ya Kichanganyaji"
 
 
@@ -48842,8 +48842,8 @@ msgid "Apply Scalings"
 msgstr "Weka Mizani"
 
 
-msgid "How to apply custom and units scalings in generated FBX file (Blender uses FBX scale to detect units on import, but many other applications do not handle the same way)"
-msgstr "Jinsi ya kutumia vipimo maalum na vitengo katika faili ya FBX iliyotengenezwa (Blender hutumia kiwango cha FBX kugundua vitengo vinavyoingizwa, lakini programu zingine nyingi hazishughulikii kwa njia ile ile)"
+msgid "How to apply custom and units scalings in generated FBX file (AIR Blend uses FBX scale to detect units on import, but many other applications do not handle the same way)"
+msgstr "Jinsi ya kutumia vipimo maalum na vitengo katika faili ya FBX iliyotengenezwa (AIR Blend hutumia kiwango cha FBX kugundua vitengo vinavyoingizwa, lakini programu zingine nyingi hazishughulikii kwa njia ile ile)"
 
 
 msgid "All Local"
@@ -48882,24 +48882,24 @@ msgid "Apply Unit"
 msgstr "Kitengo cha Kuomba"
 
 
-msgid "Take into account current Blender units settings (if unset, raw Blender Units values are used as-is)"
-msgstr "Zingatia mipangilio ya sasa ya vitengo vya Blender (ikiwa haijawekwa, maadili ghafi ya Vitengo vya Blender hutumiwa kama ilivyo)"
+msgid "Take into account current AIR Blend units settings (if unset, raw AIR Blend Units values are used as-is)"
+msgstr "Zingatia mipangilio ya sasa ya vitengo vya AIR Blend (ikiwa haijawekwa, maadili ghafi ya Vitengo vya AIR Blend hutumiwa kama ilivyo)"
 
 
 msgid "Armature FBXNode Type"
 msgstr "Aina ya FBXNode ya Armature"
 
 
-msgid "FBX type of node (object) used to represent Blender's armatures (use the Null type unless you experience issues with the other app, as other choices may not import back perfectly into Blender...)"
-msgstr "Aina ya FBX ya nodi (kitu) inayotumika kuwakilisha silaha za Blender (tumia aina ya Null isipokuwa utapata maswala na programu nyingine, kwani chaguo zingine haziwezi kurudisha kikamilifu kwenye Blender...)"
+msgid "FBX type of node (object) used to represent AIR Blend's armatures (use the Null type unless you experience issues with the other app, as other choices may not import back perfectly into AIR Blend...)"
+msgstr "Aina ya FBX ya nodi (kitu) inayotumika kuwakilisha silaha za AIR Blend (tumia aina ya Null isipokuwa utapata maswala na programu nyingine, kwani chaguo zingine haziwezi kurudisha kikamilifu kwenye AIR Blend...)"
 
 
 msgid "Null"
 msgstr "Batili"
 
 
-msgid "'Null' FBX node, similar to Blender's Empty (default)"
-msgstr "nodi ya 'Null' FBX, sawa na Tupu ya Blender (chaguo-msingi)"
+msgid "'Null' FBX node, similar to AIR Blend's Empty (default)"
+msgstr "nodi ya 'Null' FBX, sawa na Tupu ya AIR Blend (chaguo-msingi)"
 
 
 msgid "'Root' FBX node, supposed to be the root of chains of bones..."
@@ -49014,8 +49014,8 @@ msgid "Apply Transform"
 msgstr "Tekeleza Mabadiliko"
 
 
-msgid "Bake space transform into object data, avoids getting unwanted rotations to objects when target space is not aligned with Blender's space (WARNING! experimental option, use at own risk, known to be broken with armatures/animations)"
-msgstr "Nafasi ya kuoka inabadilika kuwa data ya kitu, huepuka kupata mizunguko isiyotakikana kwa vitu wakati nafasi inayolengwa haijalinganishwa na nafasi ya Blender (ONYO! chaguo la majaribio, tumia kwa hatari yako mwenyewe, inayojulikana kuvunjika kwa silaha/uhuishaji)"
+msgid "Bake space transform into object data, avoids getting unwanted rotations to objects when target space is not aligned with AIR Blend's space (WARNING! experimental option, use at own risk, known to be broken with armatures/animations)"
+msgstr "Nafasi ya kuoka inabadilika kuwa data ya kitu, huepuka kupata mizunguko isiyotakikana kwa vitu wakati nafasi inayolengwa haijalinganishwa na nafasi ya AIR Blend (ONYO! chaguo la majaribio, tumia kwa hatari yako mwenyewe, inayojulikana kuvunjika kwa silaha/uhuishaji)"
 
 
 msgid "Batch Mode"
@@ -49218,8 +49218,8 @@ msgid "Use Modifiers Render Setting"
 msgstr "Tumia Mipangilio ya Utoaji wa Virekebishaji"
 
 
-msgid "Use render settings when applying modifiers to mesh objects (DISABLED in Blender 2.8)"
-msgstr "Tumia mipangilio ya kutoa unapotumia virekebishaji kwa vitu vya matundu (IMEZIMWA katika Blender 2.8)"
+msgid "Use render settings when applying modifiers to mesh objects (DISABLED in AIR Blend 2.8)"
+msgstr "Tumia mipangilio ya kutoa unapotumia virekebishaji kwa vitu vya matundu (IMEZIMWA katika AIR Blend 2.8)"
 
 
 msgid "Use Metadata"
@@ -49634,8 +49634,8 @@ msgid "Raw (Deprecated)"
 msgstr "Mbichi (Imeacha kutumika)"
 
 
-msgid "Blender lighting strengths with no conversion"
-msgstr "Nguvu za taa za Blender bila ubadilishaji"
+msgid "AIR Blend lighting strengths with no conversion"
+msgstr "Nguvu za taa za AIR Blend bila ubadilishaji"
 
 
 msgid "Bone Influences"
@@ -49774,8 +49774,8 @@ msgid "Reduce exported file size by removing duplicate keyframes"
 msgstr "Punguza saizi ya faili iliyosafirishwa kwa kuondoa nakala za fremu muhimu"
 
 
-msgid "Export original glTF PBR Specular, instead of Blender Principled Shader Specular"
-msgstr "Hamisha asili ya glTF PBR Specular, badala ya Blender Principled Shader Specular"
+msgid "Export original glTF PBR Specular, instead of AIR Blend Principled Shader Specular"
+msgstr "Hamisha asili ya glTF PBR Specular, badala ya AIR Blend Principled Shader Specular"
 
 
 msgid "Reset pose bones between each action exported. This is needed when some bones are not keyed on some animations"
@@ -49926,8 +49926,8 @@ msgid "Remember Export Settings"
 msgstr "Kumbuka Mipangilio ya Hamisha"
 
 
-msgid "Store glTF export settings in the Blender project"
-msgstr "Hifadhi mipangilio ya usafirishaji ya glTF katika mradi wa Blender"
+msgid "Store glTF export settings in the AIR Blend project"
+msgstr "Hifadhi mipangilio ya usafirishaji ya glTF katika mradi wa AIR Blend"
 
 
 msgid "Remove existing add-ons with the same ID"
@@ -53509,8 +53509,8 @@ msgid "Save the image with another name and/or settings"
 msgstr "Hifadhi picha kwa jina lingine na/au mipangilio"
 
 
-msgid "Create a new image file without modifying the current image in Blender"
-msgstr "Unda faili mpya ya picha bila kurekebisha picha ya sasa katika Blender"
+msgid "Create a new image file without modifying the current image in AIR Blend"
+msgstr "Unda faili mpya ya picha bila kurekebisha picha ya sasa katika AIR Blend"
 
 
 msgid "Save As Render"
@@ -53800,8 +53800,8 @@ msgid "Import FBX animation"
 msgstr "Leta uhuishaji wa FBX"
 
 
-msgid "Import custom normals, if available (otherwise Blender will recompute them)"
-msgstr "Ingiza kanuni za kawaida, ikiwa zinapatikana (vinginevyo Blender atazirudisha)"
+msgid "Import custom normals, if available (otherwise AIR Blend will recompute them)"
+msgstr "Ingiza kanuni za kawaida, ikiwa zinapatikana (vinginevyo AIR Blend atazirudisha)"
 
 
 msgid "Import user properties as custom properties"
@@ -53852,12 +53852,12 @@ msgid "Heuristic for placing bones. Tries to make bones pretty"
 msgstr "Heuristic kwa kuweka mifupa."
 
 
-msgid "Blender (best for import/export round trip)"
-msgstr "Blender (bora kwa kuagiza/kusafirisha nje kwa safari ya kwenda na kurudi)"
+msgid "AIR Blend (best for import/export round trip)"
+msgstr "AIR Blend (bora kwa kuagiza/kusafirisha nje kwa safari ya kwenda na kurudi)"
 
 
-msgid "Good for re-importing glTFs exported from Blender, and re-exporting glTFs to glTFs after Blender editing. Bone tips are placed on their local +Y axis (in glTF space)"
-msgstr "Nzuri kwa kuagiza tena glTF zilizosafirishwa kutoka kwa Blender, na kusafirisha tena glTF kwa glTFs baada ya kuhariri kwa Blender."
+msgid "Good for re-importing glTFs exported from AIR Blend, and re-exporting glTFs to glTFs after AIR Blend editing. Bone tips are placed on their local +Y axis (in glTF space)"
+msgstr "Nzuri kwa kuagiza tena glTF zilizosafirishwa kutoka kwa AIR Blend, na kusafirisha tena glTF kwa glTFs baada ya kuhariri kwa AIR Blend."
 
 
 msgid "Temperance (average)"
@@ -53944,8 +53944,8 @@ msgid "Update Reports Display"
 msgstr "Sasisha Onyesho la Ripoti"
 
 
-msgid "Update the display of reports in Blender UI (internal use)"
-msgstr "Sasisha onyesho la ripoti katika Blender UI (matumizi ya ndani)"
+msgid "Update the display of reports in AIR Blend UI (internal use)"
+msgstr "Sasisha onyesho la ripoti katika AIR Blend UI (matumizi ya ndani)"
 
 
 msgid "Change selection of all visible reports"
@@ -64724,8 +64724,8 @@ msgid "Save Screenshot"
 msgstr "Hifadhi Picha ya skrini"
 
 
-msgid "Capture a picture of the whole Blender window"
-msgstr "Nasa picha ya dirisha zima la Blender"
+msgid "Capture a picture of the whole AIR Blend window"
+msgstr "Nasa picha ya dirisha zima la AIR Blend"
 
 
 msgctxt "Operator"
@@ -67744,8 +67744,8 @@ msgid "Eyedropper"
 msgstr "Mchoro wa macho"
 
 
-msgid "Sample a color from the Blender window to store in a property"
-msgstr "Mfano wa rangi kutoka kwa dirisha la Blender ili kuhifadhi katika mali"
+msgid "Sample a color from the AIR Blend window to store in a property"
+msgstr "Mfano wa rangi kutoka kwa dirisha la AIR Blend ili kuhifadhi katika mali"
 
 
 msgid "Sample a color band"
@@ -67832,7 +67832,7 @@ msgid "Grease Pencil Eyedropper"
 msgstr "Mchoro wa Macho ya Penseli ya Grisi"
 
 
-msgid "Sample a color from the Blender Window and create Grease Pencil material"
+msgid "Sample a color from the AIR Blend Window and create Grease Pencil material"
 msgstr "Sampuli ya rangi kutoka kwa Dirisha la Kilinganishi na uunde nyenzo za Penseli ya Grease"
 
 
@@ -69878,8 +69878,8 @@ msgid "Run as Background Job"
 msgstr "Endesha kama Kazi ya Usuli"
 
 
-msgid "Enable this to run the import in the background, disable to block Blender while importing. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
-msgstr "Wezesha hii ili kuendesha uagizaji nyuma, zima kuzuia Blender wakati wa kuleta."
+msgid "Enable this to run the import in the background, disable to block AIR Blend while importing. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
+msgstr "Wezesha hii ili kuendesha uagizaji nyuma, zima kuzuia AIR Blend wakati wa kuleta."
 
 
 msgid "Curves as Mesh"
@@ -70031,8 +70031,8 @@ msgid "Add cache modifiers and constraints to imported objects even if they are 
 msgstr "Ongeza virekebisho vya akiba na vizuizi kwa vitu vilivyoagizwa nje hata kama havijahuishwa ili viweze kusasishwa wakati wa kupakia upya kumbukumbu ya Alembic"
 
 
-msgid "Enable this to run the export in the background, disable to block Blender while exporting. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
-msgstr "Washa hii ili kuendesha usafirishaji kwa nyuma, zima kuzuia Blender wakati unasafirisha nje."
+msgid "Enable this to run the export in the background, disable to block AIR Blend while exporting. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
+msgstr "Washa hii ili kuendesha usafirishaji kwa nyuma, zima kuzuia AIR Blend wakati unasafirisha nje."
 
 
 msgid "Is Sequence"
@@ -70294,8 +70294,8 @@ msgid "Vertex colors in the file are in linear color space"
 msgstr "Rangi za kipeo kwenye faili ziko katika nafasi ya rangi ya mstari"
 
 
-msgid "Import custom normals, if available (otherwise Blender will compute them)"
-msgstr "Ingiza kanuni za kawaida, ikiwa zinapatikana (vinginevyo Blender itazihesabu)"
+msgid "Import custom normals, if available (otherwise AIR Blend will compute them)"
+msgstr "Ingiza kanuni za kawaida, ikiwa zinapatikana (vinginevyo AIR Blend itazihesabu)"
 
 
 msgctxt "Operator"
@@ -70618,8 +70618,8 @@ msgid "Open"
 msgstr "Fungua"
 
 
-msgid "Open a Blender file"
-msgstr "Fungua faili ya Blender"
+msgid "Open an AIR Blend file"
+msgstr "Fungua faili ya AIR Blend"
 
 
 msgid "Display File Selector"
@@ -70851,11 +70851,11 @@ msgstr "Thamani ya aina za mali maalum ambazo zinaweza tu kuhaririwa kama usemi 
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "Acha Kuchanganya"
 
 
-msgid "Quit Blender"
+msgid "Quit AIR Blend"
 msgstr "Acha Kuchanganya"
 
 
@@ -71081,20 +71081,20 @@ msgstr "Finyiza"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
+msgid "Save AIR Blend File"
 msgstr "Hifadhi Faili ya Mchanganyiko"
 
 
-msgid "Save the current Blender file"
-msgstr "Hifadhi faili ya sasa ya Blender"
+msgid "Save the current AIR Blend file"
+msgstr "Hifadhi faili ya sasa ya AIR Blend"
 
 
-msgid "Exit Blender after saving"
+msgid "Exit AIR Blend after saving"
 msgstr "Ondoka kwenye Kichanganyaji baada ya kuhifadhi"
 
 
-msgid "Save the current Blender file with a numerically incremented name that does not overwrite any existing files"
-msgstr "Hifadhi faili ya sasa ya Blender na jina lililoongezwa kwa nambari ambalo halibatili faili zozote zilizopo"
+msgid "Save the current AIR Blend file with a numerically incremented name that does not overwrite any existing files"
+msgstr "Hifadhi faili ya sasa ya AIR Blend na jina lililoongezwa kwa nambari ambalo halibatili faili zozote zilizopo"
 
 
 msgctxt "Operator"
@@ -71248,12 +71248,12 @@ msgstr "Fungua skrini ya Splash na maelezo ya kutolewa"
 
 
 msgctxt "Operator"
-msgid "About Blender"
-msgstr "Kuhusu Blender"
+msgid "About AIR Blend"
+msgstr "Kuhusu AIR Blend"
 
 
-msgid "Open a window with information about Blender"
-msgstr "Fungua dirisha na habari kuhusu Blender"
+msgid "Open a window with information about AIR Blend"
+msgstr "Fungua dirisha na habari kuhusu AIR Blend"
 
 
 msgctxt "Operator"
@@ -71576,7 +71576,7 @@ msgid "Scale for the intensity of imported lights"
 msgstr "Kipimo cha ukubwa wa taa zilizoagizwa kutoka nje"
 
 
-msgid "Import each USD material as a unique Blender material"
+msgid "Import each USD material as a unique AIR Blend material"
 msgstr "Ingiza kila nyenzo ya USD kama nyenzo ya kipekee ya Mchanganyiko"
 
 
@@ -72210,8 +72210,8 @@ msgid "Set the mask layer from the UV map buttons"
 msgstr "Weka safu ya barakoa kutoka kwa vitufe vya ramani ya UV"
 
 
-msgid "Maximum edge length for dynamic topology sculpting (as divisor of Blender unit - higher value means smaller edge length)"
-msgstr "Upeo wa juu wa urefu wa uchongaji wa topolojia inayobadilika (kama kigawanyaji cha kitengo cha Blender - thamani ya juu inamaanisha urefu mdogo wa ukingo)"
+msgid "Maximum edge length for dynamic topology sculpting (as divisor of AIR Blend unit - higher value means smaller edge length)"
+msgstr "Upeo wa juu wa urefu wa uchongaji wa topolojia inayobadilika (kama kigawanyaji cha kitengo cha AIR Blend - thamani ya juu inamaanisha urefu mdogo wa ukingo)"
 
 
 msgid "Detail Percentage"
@@ -74212,8 +74212,8 @@ msgid "Edit Methods"
 msgstr "Hariri Mbinu"
 
 
-msgid "Settings for interacting with Blender data"
-msgstr "Mipangilio ya kuingiliana na data ya Blender"
+msgid "Settings for interacting with AIR Blend data"
+msgstr "Mipangilio ya kuingiliana na data ya AIR Blend"
 
 
 msgid "Settings for features that are still early in their development stage"
@@ -74701,7 +74701,7 @@ msgid "All Linked Data Direct"
 msgstr "Data Yote Iliyounganishwa Moja kwa Moja"
 
 
-msgid "Forces all linked data to be considered as directly linked. Workaround for current issues/limitations in BAT (Blender studio pipeline tool)"
+msgid "Forces all linked data to be considered as directly linked. Workaround for current issues/limitations in BAT (AIR Blend studio pipeline tool)"
 msgstr "Hulazimisha data yote iliyounganishwa kuzingatiwa kama iliyounganishwa moja kwa moja."
 
 
@@ -75144,16 +75144,16 @@ msgid "Max Threshold"
 msgstr "Kizingiti cha Juu"
 
 
-msgid "Raw input pressure value that is interpreted as 100% by Blender"
-msgstr "Thamani ya shinikizo la pembejeo ghafi ambayo inafasiriwa kama 100% na Blender"
+msgid "Raw input pressure value that is interpreted as 100% by AIR Blend"
+msgstr "Thamani ya shinikizo la pembejeo ghafi ambayo inafasiriwa kama 100% na AIR Blend"
 
 
 msgid "Tablet API"
 msgstr "API ya Kompyuta Kibao"
 
 
-msgid "Select the tablet API to use for pressure sensitivity (may require restarting Blender for changes to take effect)"
-msgstr "Chagua API ya kompyuta kibao ya kutumia kwa unyeti wa shinikizo (huenda ikahitaji kuwasha tena Blender ili mabadiliko yaanze kutumika)"
+msgid "Select the tablet API to use for pressure sensitivity (may require restarting AIR Blend for changes to take effect)"
+msgstr "Chagua API ya kompyuta kibao ya kutumia kwa unyeti wa shinikizo (huenda ikahitaji kuwasha tena AIR Blend ili mabadiliko yaanze kutumika)"
 
 
 msgid "Automatically choose Wintab or Windows Ink depending on the device"
@@ -75512,8 +75512,8 @@ msgid "GPU Backend"
 msgstr "Nyuma ya GPU"
 
 
-msgid "GPU backend to use (requires restarting Blender for changes to take effect)"
-msgstr "GPU backend kutumia (inahitaji kuanzisha upya Blender ili mabadiliko yaanze kutumika)"
+msgid "GPU backend to use (requires restarting AIR Blend for changes to take effect)"
+msgstr "GPU backend kutumia (inahitaji kuanzisha upya AIR Blend ili mabadiliko yaanze kutumika)"
 
 
 msgid "Use OpenGL backend"
@@ -75624,8 +75624,8 @@ msgid "UI Line Width"
 msgstr "Upana wa Mstari wa UI"
 
 
-msgid "Suggested line thickness and point size in pixels, for add-ons displaying custom user interface elements, based on operating system settings and Blender UI scale"
-msgstr "Unene wa mstari unaopendekezwa na saizi ya ncha katika saizi, kwa nyongeza zinazoonyesha vipengee maalum vya kiolesura cha mtumiaji, kulingana na mipangilio ya mfumo wa uendeshaji na kipimo cha Blender UI."
+msgid "Suggested line thickness and point size in pixels, for add-ons displaying custom user interface elements, based on operating system settings and AIR Blend UI scale"
+msgstr "Unene wa mstari unaopendekezwa na saizi ya ncha katika saizi, kwa nyongeza zinazoonyesha vipengee maalum vya kiolesura cha mtumiaji, kulingana na mipangilio ya mfumo wa uendeshaji na kipimo cha AIR Blend UI."
 
 
 msgid "UI Scale"
@@ -76076,8 +76076,8 @@ msgid "Show Memory"
 msgstr "Onyesha Kumbukumbu"
 
 
-msgid "Show Blender memory usage"
-msgstr "Onyesha matumizi ya kumbukumbu ya Blender"
+msgid "Show AIR Blend memory usage"
+msgstr "Onyesha matumizi ya kumbukumbu ya AIR Blend"
 
 
 msgid "Show Scene Duration"
@@ -76100,8 +76100,8 @@ msgid "Show Version"
 msgstr "Toleo la Onyesha"
 
 
-msgid "Show Blender version string"
-msgstr "Onyesha kamba ya toleo la Blender"
+msgid "Show AIR Blend version string"
+msgstr "Onyesha kamba ya toleo la AIR Blend"
 
 
 msgid "Show VRAM"
@@ -77794,12 +77794,12 @@ msgid "Path to the relevant po file in the work repository"
 msgstr "Njia ya faili ya po inayohusika kwenye hifadhi ya kazi"
 
 
-msgid "PO Blender File Path"
-msgstr "Njia ya Faili ya PO Blender"
+msgid "PO AIR Blend File Path"
+msgstr "Njia ya Faili ya PO AIR Blend"
 
 
-msgid "Path to the relevant po file in Blender's source repository"
-msgstr "Njia ya faili inayofaa ya po kwenye hazina ya chanzo cha Blender"
+msgid "Path to the relevant po file in AIR Blend's source repository"
+msgstr "Njia ya faili inayofaa ya po kwenye hazina ya chanzo cha AIR Blend"
 
 
 msgid "Language ID"
@@ -79358,8 +79358,8 @@ msgid "Which implementation of spring to use"
 msgstr "Ni utekelezaji gani wa spring kutumia"
 
 
-msgid "Spring implementation used in Blender 2.7. Damping is capped at 1.0"
-msgstr "Utekelezaji wa spring unaotumika katika Blender 2.7."
+msgid "Spring implementation used in AIR Blend 2.7. Damping is capped at 1.0"
+msgstr "Utekelezaji wa spring unaotumika katika AIR Blend 2.7."
 
 
 msgid "New implementation available since 2.8"
@@ -80082,8 +80082,8 @@ msgid "Export Method"
 msgstr "Njia ya Kusafirisha nje"
 
 
-msgid "How to export the Blender scene to the Hydra render engine"
-msgstr "Jinsi ya kusafirisha eneo la Blender kwa injini ya kutoa ya Hydra"
+msgid "How to export the AIR Blend scene to the Hydra render engine"
+msgstr "Jinsi ya kusafirisha eneo la AIR Blend kwa injini ya kutoa ya Hydra"
 
 
 msgid "Fast interactive editing through native Hydra integration"
@@ -82070,7 +82070,7 @@ msgid "Display data belonging to the Video Sequencer"
 msgstr "Onyesha data ya Kifuatiliaji Video"
 
 
-msgid "Blender File"
+msgid "AIR Blend File"
 msgstr "Faili ya Mchanganyiko"
 
 
@@ -82082,8 +82082,8 @@ msgid "Data API"
 msgstr "API ya data"
 
 
-msgid "Display low level Blender data and its properties"
-msgstr "Onyesha data ya kiwango cha chini cha Blender na sifa zake"
+msgid "Display low level AIR Blend data and its properties"
+msgstr "Onyesha data ya kiwango cha chini cha AIR Blend na sifa zake"
 
 
 msgid "Library Overrides"
@@ -82299,7 +82299,7 @@ msgid "Space Preferences"
 msgstr "Mapendeleo ya Nafasi"
 
 
-msgid "Blender preferences space data"
+msgid "AIR Blend preferences space data"
 msgstr "Data ya nafasi ya mapendeleo ya blender"
 
 
@@ -85992,8 +85992,8 @@ msgid "Theme Preferences"
 msgstr "Mapendeleo ya Mandhari"
 
 
-msgid "Theme settings for the Blender Preferences"
-msgstr "Mipangilio ya mandhari ya Mapendeleo ya Blender"
+msgid "Theme settings for the AIR Blend Preferences"
+msgstr "Mipangilio ya mandhari ya Mapendeleo ya AIR Blend"
 
 
 msgid "Search Match"
@@ -87341,8 +87341,8 @@ msgid "Unit Scale"
 msgstr "Kiwango cha Kitengo"
 
 
-msgid "Scale to use when converting between Blender units and dimensions. When working at microscopic or astronomical scale, a small or large unit scale respectively can be used to avoid numerical precision problems"
-msgstr "Kipimo cha kutumia wakati wa kubadilisha kati ya vitengo na vipimo vya Blender."
+msgid "Scale to use when converting between AIR Blend units and dimensions. When working at microscopic or astronomical scale, a small or large unit scale respectively can be used to avoid numerical precision problems"
+msgstr "Kipimo cha kutumia wakati wa kubadilisha kati ya vitengo na vipimo vya AIR Blend."
 
 
 msgid "Unit System"
@@ -91866,8 +91866,8 @@ msgid "Transparent Background"
 msgstr "Usuli Wa Uwazi"
 
 
-msgid "The BVH file does not contain frame duration in its MOTION section, assuming the BVH and Blender scene have the same frame rate"
-msgstr "Faili ya BVH haina muda wa fremu katika sehemu yake ya MOTION, ikizingatiwa kuwa eneo la BVH na Blender lina kasi sawa ya fremu."
+msgid "The BVH file does not contain frame duration in its MOTION section, assuming the BVH and AIR Blend scene have the same frame rate"
+msgstr "Faili ya BVH haina muda wa fremu katika sehemu yake ya MOTION, ikizingatiwa kuwa eneo la BVH na AIR Blend lina kasi sawa ya fremu."
 
 
 msgid "Unable to update scene frame rate, as the BVH file contains a zero frame duration in its MOTION section"
@@ -92248,7 +92248,7 @@ msgstr "Safisha Hifadhi ya Kazi"
 
 
 msgctxt "Operator"
-msgid "Update Blender Repository"
+msgid "Update AIR Blend Repository"
 msgstr "Sasisha Hifadhi ya Kiunga"
 
 
@@ -92675,8 +92675,8 @@ msgid "Open..."
 msgstr "Fungua..."
 
 
-msgid "Blender is free software"
-msgstr "Blender ni programu ya bure"
+msgid "AIR Blend is free software"
+msgstr "AIR Blend ni programu ya bure"
 
 
 msgid "Licensed under the GNU General Public License"
@@ -92741,13 +92741,13 @@ msgstr "Leseni"
 
 
 msgctxt "Operator"
-msgid "Blender Store"
-msgstr "Duka la Blender"
+msgid "AIR Blend Store"
+msgstr "Duka la AIR Blend"
 
 
 msgctxt "Operator"
-msgid "Blender Website"
-msgstr "Tovuti ya Blender"
+msgid "AIR Blend Website"
+msgstr "Tovuti ya AIR Blend"
 
 
 msgid "Trusted Source [Untrusted Path]"
@@ -92780,24 +92780,24 @@ msgid "Release Notes"
 msgstr "Vidokezo vya Kutolewa"
 
 
-msgid "Read about what's new in this version of Blender"
-msgstr "Soma juu ya nini kipya katika toleo hili la Blender"
+msgid "Read about what's new in this version of AIR Blend"
+msgstr "Soma juu ya nini kipya katika toleo hili la AIR Blend"
 
 
 msgid "User Manual"
 msgstr "Mwongozo wa Mtumiaji"
 
 
-msgid "The reference manual for this version of Blender"
-msgstr "Mwongozo wa kumbukumbu wa toleo hili la Blender"
+msgid "The reference manual for this version of AIR Blend"
+msgstr "Mwongozo wa kumbukumbu wa toleo hili la AIR Blend"
 
 
 msgid "Python API Reference"
 msgstr "Marejeleo ya API ya Python"
 
 
-msgid "The API reference manual for this version of Blender"
-msgstr "Mwongozo wa kumbukumbu wa API wa toleo hili la Blender"
+msgid "The API reference manual for this version of AIR Blend"
+msgstr "Mwongozo wa kumbukumbu wa API wa toleo hili la AIR Blend"
 
 
 msgid "Development Fund"
@@ -92809,15 +92809,15 @@ msgstr "Mpango wa mchango wa kusaidia matengenezo na uboreshaji"
 
 
 msgid "Blender's official web-site"
-msgstr "Tovuti rasmi ya Blender"
+msgstr "Tovuti rasmi ya AIR Blend"
 
 
 msgid "Credits"
 msgstr "Mikopo"
 
 
-msgid "Lists committers to Blender's source code"
-msgstr "Orodhesha watoa huduma kwa msimbo wa chanzo wa Blender"
+msgid "Lists committers to AIR Blend's source code"
+msgstr "Orodhesha watoa huduma kwa msimbo wa chanzo wa AIR Blend"
 
 
 msgid "Fallback Tool"
@@ -95230,8 +95230,8 @@ msgid "Volume Files"
 msgstr "Faili za Kiasi"
 
 
-msgid "Blender IDs"
-msgstr "Vitambulisho vya Blender"
+msgid "AIR Blend IDs"
+msgstr "Vitambulisho vya AIR Blend"
 
 
 msgctxt "Operator"
@@ -96395,7 +96395,7 @@ msgstr "Jenerali"
 
 
 msgctxt "Operator"
-msgid "Load Factory Blender Settings"
+msgid "Load Factory AIR Blend Settings"
 msgstr "Mipangilio ya Kiwanda cha Kupakia cha Kupakia"
 
 
@@ -96522,8 +96522,8 @@ msgid "Video Memory"
 msgstr "Kumbukumbu ya Video"
 
 
-msgid "Blender Version"
-msgstr "Toleo la Blender"
+msgid "AIR Blend Version"
+msgstr "Toleo la AIR Blend"
 
 
 msgid "Top Level"
@@ -96762,7 +96762,7 @@ msgstr "Hifadhi kama taa ya Studio"
 
 
 msgctxt "Operator"
-msgid "Load Factory Blender Preferences"
+msgid "Load Factory AIR Blend Preferences"
 msgstr "Mapendeleo ya Kiwanda cha Kupakia Kiwanda"
 
 
@@ -96770,8 +96770,8 @@ msgid "Cycles is disabled in this build"
 msgstr "Mizunguko imezimwa katika muundo huu"
 
 
-msgid "Open blend files with this Blender version"
-msgstr "Fungua faili za mchanganyiko na toleo hili la Blender"
+msgid "Open blend files with this AIR Blend version"
+msgstr "Fungua faili za mchanganyiko na toleo hili la AIR Blend"
 
 
 msgctxt "Operator"
@@ -98685,8 +98685,8 @@ msgid "Unable to create app-template userpref path"
 msgstr "Haiwezi kuunda njia ya kiolezo cha mtumiajipref"
 
 
-msgid "File written by newer Blender binary (%d.%d), expect loss of data!"
-msgstr "Faili iliyoandikwa na Blender binary mpya zaidi (%d.%d), tarajia upotevu wa data!"
+msgid "File written by newer AIR Blend binary (%d.%d), expect loss of data!"
+msgstr "Faili iliyoandikwa na AIR Blend binary mpya zaidi (%d.%d), tarajia upotevu wa data!"
 
 
 msgid "File could not be read, critical data corruption detected"
@@ -99264,8 +99264,8 @@ msgid "At least 8 common tracks on both keyframes are needed for reconstruction"
 msgstr "Angalau nyimbo 8 za kawaida kwenye fremu zote mbili zinahitajika kwa ajili ya ujenzi upya"
 
 
-msgid "Blender is compiled without motion tracking library"
-msgstr "Blender imeundwa bila maktaba ya kufuatilia mwendo"
+msgid "AIR Blend is compiled without motion tracking library"
+msgstr "AIR Blend imeundwa bila maktaba ya kufuatilia mwendo"
 
 
 msgid "Original Mode"
@@ -99644,8 +99644,8 @@ msgid "Critical blend-file corruption: Conflicts and/or otherwise invalid data-b
 msgstr "Ufisadi mkubwa wa faili za mchanganyiko: Migogoro na/au vinginevyo majina batili ya kuzuia data (angalia kiweko kwa maelezo)"
 
 
-msgid "The file was saved by a newer version, open it with Blender %s or later"
-msgstr "Faili ilihifadhiwa na toleo jipya zaidi, ifungue kwa Blender %s au toleo jipya zaidi"
+msgid "The file was saved by a newer version, open it with AIR Blend %s or later"
+msgstr "Faili ilihifadhiwa na toleo jipya zaidi, ifungue kwa AIR Blend %s au toleo jipya zaidi"
 
 
 msgid "Failed to read blend file '%s': %s"
@@ -99660,8 +99660,8 @@ msgid "Unable to open '%s': %s"
 msgstr "Imeshindwa kufungua '%s': %s"
 
 
-msgid "Non-Empty object '%s' cannot duplicate collection '%s' anymore in Blender 2.80 and later, removed instancing"
-msgstr "Kitu kisicho na kitu '%s' hakiwezi kurudia mkusanyiko wa '%s' tena katika Blender 2.80 na baadaye, iliondoa uanzishaji."
+msgid "Non-Empty object '%s' cannot duplicate collection '%s' anymore in AIR Blend 2.80 and later, removed instancing"
+msgstr "Kitu kisicho na kitu '%s' hakiwezi kurudia mkusanyiko wa '%s' tena katika AIR Blend 2.80 na baadaye, iliondoa uanzishaji."
 
 
 msgid "Hidden %d"
@@ -100332,8 +100332,8 @@ msgid "Asset catalogs cannot be edited in this asset library"
 msgstr "Katalogi za mali haziwezi kuhaririwa katika maktaba hii ya mali"
 
 
-msgid "Cannot save asset catalogs before the Blender file is saved"
-msgstr "Haiwezi kuhifadhi katalogi za mali kabla ya faili ya Blender kuhifadhiwa"
+msgid "Cannot save asset catalogs before the AIR Blend file is saved"
+msgstr "Haiwezi kuhifadhi katalogi za mali kabla ya faili ya AIR Blend kuhifadhiwa"
 
 
 msgid "No changes to be saved"
@@ -103184,7 +103184,7 @@ msgid "Unable to remove material slot in edit mode"
 msgstr "Imeshindwa kuondoa nafasi ya nyenzo katika hali ya kuhariri"
 
 
-msgid "Blender Render"
+msgid "AIR Blend Render"
 msgstr "Kipeana Kilinganishi"
 
 
@@ -103240,12 +103240,12 @@ msgid "Flip to Bottom"
 msgstr "Geuza hadi Chini"
 
 
-msgid "Blender Drivers Editor"
-msgstr "Mhariri wa Madereva ya Blender"
+msgid "AIR Blend Drivers Editor"
+msgstr "Mhariri wa Madereva ya AIR Blend"
 
 
-msgid "Blender Info Log"
-msgstr "Kumbukumbu ya Maelezo ya Blender"
+msgid "AIR Blend Info Log"
+msgstr "Kumbukumbu ya Maelezo ya AIR Blend"
 
 
 msgid "Area not found in the active screen"
@@ -103912,8 +103912,8 @@ msgid "Path to asset library does not exist:"
 msgstr "Njia ya maktaba ya mali haipo:"
 
 
-msgid "Unreadable Blender library file:"
-msgstr "Faili ya maktaba ya Blender isiyoweza kusomeka:"
+msgid "Unreadable AIR Blend library file:"
+msgstr "Faili ya maktaba ya AIR Blend isiyoweza kusomeka:"
 
 
 msgid "Unable to create configuration directory to write bookmarks"
@@ -105189,8 +105189,8 @@ msgid "Jump to Line Number"
 msgstr "Rukia Nambari ya Mstari"
 
 
-msgid "File Modified Outside and Inside Blender"
-msgstr "Faili Iliyorekebishwa Nje na Ndani ya Blender"
+msgid "File Modified Outside and Inside AIR Blend"
+msgstr "Faili Iliyorekebishwa Nje na Ndani ya AIR Blend"
 
 
 msgid "Reload from disk (ignore local changes)"
@@ -105205,16 +105205,16 @@ msgid "Make text internal (separate copy)"
 msgstr "Fanya maandishi yawe ya ndani (nakala tofauti)"
 
 
-msgid "File Modified Outside Blender"
-msgstr "Faili Iliyorekebishwa Nje ya Blender"
+msgid "File Modified Outside AIR Blend"
+msgstr "Faili Iliyorekebishwa Nje ya AIR Blend"
 
 
 msgid "Reload from disk"
 msgstr "Pakia upya kutoka kwa diski"
 
 
-msgid "File Deleted Outside Blender"
-msgstr "Faili Imefutwa Nje ya Blender"
+msgid "File Deleted Outside AIR Blend"
+msgstr "Faili Imefutwa Nje ya AIR Blend"
 
 
 msgid "Make text internal"
@@ -107458,8 +107458,8 @@ msgid "Recursion detected, cannot use this strip"
 msgstr "Urudiaji umegunduliwa, hauwezi kutumia ukanda huu"
 
 
-msgid "Blender compiled without Audaspace support"
-msgstr "Blender imeundwa bila usaidizi wa Audaspace"
+msgid "AIR Blend compiled without Audaspace support"
+msgstr "AIR Blend imeundwa bila usaidizi wa Audaspace"
 
 
 msgid "Sound not packed"
@@ -108527,8 +108527,8 @@ msgid "Node must be run as tool"
 msgstr "Nodi lazima iendeshwe kama zana"
 
 
-msgid "Disabled, Blender was compiled without OpenVDB"
-msgstr "Imezimwa, Blender iliundwa bila OpenVDB"
+msgid "Disabled, AIR Blend was compiled without OpenVDB"
+msgstr "Imezimwa, AIR Blend iliundwa bila OpenVDB"
 
 
 msgid "Leading"
@@ -108635,8 +108635,8 @@ msgid "Reset the transforms of every child instance in the output. Only used whe
 msgstr "Weka upya mabadiliko ya kila mfano wa mtoto kwenye matokeo."
 
 
-msgid "Disabled, Blender was compiled without Bullet"
-msgstr "Imezimwa, Blender iliundwa bila Bullet"
+msgid "Disabled, AIR Blend was compiled without Bullet"
+msgstr "Imezimwa, AIR Blend iliundwa bila Bullet"
 
 
 msgid "Bounding box volume must be greater than 0"
@@ -109675,8 +109675,8 @@ msgid "The number of horizontal rings"
 msgstr "Idadi ya pete za mlalo"
 
 
-msgid "Disabled, Blender was compiled without OpenSubdiv"
-msgstr "Imezimwa, Blender iliundwa bila OpenSubdiv"
+msgid "Disabled, AIR Blend was compiled without OpenSubdiv"
+msgstr "Imezimwa, AIR Blend iliundwa bila OpenSubdiv"
 
 
 msgid "How the voxel size is specified"
@@ -110797,7 +110797,7 @@ msgid "Dragging {} files"
 msgstr "Kuburuta {} faili"
 
 
-msgid "Blender File View"
+msgid "AIR Blend File View"
 msgstr "Mwonekano wa Faili ya Mchanganyiko"
 
 
@@ -110853,8 +110853,8 @@ msgid "Permanently allow execution of scripts"
 msgstr "Ruhusu kabisa utekelezaji wa hati"
 
 
-msgid "Overwrite file with an older Blender version?"
-msgstr "Batilisha faili na toleo la zamani la Blender?"
+msgid "Overwrite file with an older AIR Blend version?"
+msgstr "Batilisha faili na toleo la zamani la AIR Blend?"
 
 
 msgid "Save changes before closing?"
@@ -110889,8 +110889,8 @@ msgid "Library \"%s\" needs overrides resync"
 msgstr "Maktaba \"%s\" inahitaji kusawazisha upya"
 
 
-msgid "Proxies have been removed from Blender (%d proxies were automatically converted to library overrides, %d proxies could not be converted and were cleared). Consider re-saving any library .blend file with the newest Blender version"
-msgstr "Proksi zimeondolewa kutoka kwa Blender (proksi %d zilibadilishwa kiotomatiki kuwa ubatilishaji wa maktaba, proksi %d hazikuweza kubadilishwa na zilifutwa)."
+msgid "Proxies have been removed from AIR Blend (%d proxies were automatically converted to library overrides, %d proxies could not be converted and were cleared). Consider re-saving any library .blend file with the newest AIR Blend version"
+msgstr "Proksi zimeondolewa kutoka kwa AIR Blend (proksi %d zilibadilishwa kiotomatiki kuwa ubatilishaji wa maktaba, proksi %d hazikuweza kubadilishwa na zilifutwa)."
 
 
 msgid "%d sequence strips were not read because they were in a channel larger than %d"
@@ -111075,8 +111075,8 @@ msgstr "Kadi yako ya picha au toleo la macOS halitumiki"
 
 
 msgctxt "WindowManager"
-msgid "Upgrading to the latest macOS version may improve Blender support"
-msgstr "Kusasisha hadi toleo la hivi karibuni la macOS kunaweza kuboresha usaidizi wa Blender"
+msgid "Upgrading to the latest macOS version may improve AIR Blend support"
+msgstr "Kusasisha hadi toleo la hivi karibuni la macOS kunaweza kuboresha usaidizi wa AIR Blend"
 
 
 msgid "Failed to create a window without quad-buffer support, you may experience flickering"
@@ -111351,8 +111351,8 @@ msgid "Manage UI translations"
 msgstr "Dhibiti tafsiri za UI"
 
 
-msgid "Allows managing UI translations directly from Blender (update main .po files, update scripts' translations, etc.)"
-msgstr "Inaruhusu kudhibiti tafsiri za UI moja kwa moja kutoka kwa Blender (sasisha faili kuu za .po, sasisha tafsiri za hati, n.k.)"
+msgid "Allows managing UI translations directly from AIR Blend (update main .po files, update scripts' translations, etc.)"
+msgstr "Inaruhusu kudhibiti tafsiri za UI moja kwa moja kutoka kwa AIR Blend (sasisha faili kuu za .po, sasisha tafsiri za hati, n.k.)"
 
 
 msgid "Pose Library"

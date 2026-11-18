@@ -100,7 +100,7 @@ template<> struct TypeTraitConverter<float3> {
 };
 
 template<> struct TypeTraitConverter<float4x4> {
-  /* Although matrices are stored as floats in Blender, we convert to double as this is what most
+  /* Although matrices are stored as floats in AIR Blend, we convert to double as this is what most
    * other software use. */
   using AbcTraitType = Alembic::Abc::M44dTPTraits;
 
@@ -281,7 +281,7 @@ void create_geom_param_for_attribute(const Alembic::Abc::OCompoundProperty &prop
   const GeometryScope scope = get_scope_for_attribute_domain(attr.domain);
   if (scope == kUnknownScope) {
     CLOG_WARN(&LOG,
-              "On object '%s', attribute '%s' (Blender domain %d, type %d) cannot be converted "
+              "On object '%s', attribute '%s' (AIR Blend domain %d, type %d) cannot be converted "
               "to Alembic",
               object_name.c_str(),
               attr.name.c_str(),

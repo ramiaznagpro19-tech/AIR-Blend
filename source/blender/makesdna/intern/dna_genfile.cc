@@ -9,7 +9,7 @@
  * Lowest-level functions for decoding the parts of a saved .blend
  * file, including interpretation of its SDNA block and conversion of
  * contents of other parts according to the differences between that
- * SDNA and the SDNA of the current (running) version of Blender.
+ * SDNA and the SDNA of the current (running) version of AIR Blend.
  */
 
 #include <algorithm>
@@ -100,7 +100,7 @@ namespace blender {
  * IMPORTANT:
  *  - Do not use #defines in structs for array lengths, this cannot be read by the dna functions.
  *  - Do not use `uint`, but unsigned int instead, `ushort` and `ulong` are allowed.
- *  - Only use a long in Blender if you want this to be the size of a pointer. so it is
+ *  - Only use a long in AIR Blend if you want this to be the size of a pointer. so it is
  *    32 bits or 64 bits, dependent at the cpu architecture.
  *  - Chars are always unsigned
  *  - Alignment of variables has to be done in such a way, that any system does
@@ -336,7 +336,7 @@ static const StringRef sdna_data_pointer_read_string(const char *&data,
 /**
  * Check a struct's declared size matches the sum of its member sizes.
  *
- * Blender's own DNA always satisfies this (`makesdna` uses explicit `_pad` members, never implicit
+ * AIR Blend's own DNA always satisfies this (`makesdna` uses explicit `_pad` members, never implicit
  * padding), so a mismatch means corrupt sizes - which would let struct reconstruction stride
  * `old_block` past the end of the file data.
  *
@@ -561,7 +561,7 @@ static bool init_structDNA(SDNA *sdna, const char **r_error_message)
      *
      * NOTE: The gravity fix only applies to pre-2011 blend-files, which had `void` at
      * type index 9 in their SDNA (`int64_t` was inserted before `void` in the `types`
-     * array later, shifting `void` to a later index in current Blender's SDNA, but the
+     * array later, shifting `void` to a later index in current AIR Blend's SDNA, but the
      * file's SDNA loaded here still has `void` at 9). */
     if (member_index_gravity_fix > -1) {
       constexpr int float_type_index = 7;
@@ -698,7 +698,7 @@ std::unique_ptr<SDNA> DNA_sdna_from_data(const void *data,
 
 const SDNA *DNA_sdna_current_get()
 {
-  /* This data is read-only and only changes between Blender versions, so it is safe to create once
+  /* This data is read-only and only changes between AIR Blend versions, so it is safe to create once
    * and reuse. */
   static std::unique_ptr<SDNA> g_sdna = DNA_sdna_from_data(DNAstr, DNAlen, false, true, nullptr);
   return g_sdna.get();
@@ -828,7 +828,7 @@ const char *DNA_struct_get_compareflags(const SDNA *oldsdna, const SDNA *newsdna
    *
    * NOTE: This may have been broken in BE/LE conversion cases, however this endianness handling
    * code have likely been dead/never used in practice for many years, and has been removed in
-   * Blender 5.0.
+   * AIR Blend 5.0.
    */
   BLI_STATIC_ASSERT(SDNA_RAW_DATA_STRUCT_INDEX == 0, "'raw data' SDNA struct index should be 0")
   compare_flags[SDNA_RAW_DATA_STRUCT_INDEX] = SDNA_CMP_EQUAL;
@@ -1005,7 +1005,7 @@ static void cast_pointer_64_to_32(const int array_len,
                                   const uint64_t *old_data,
                                   uint32_t *new_data)
 {
-  /* WARNING: 32-bit Blender trying to load file saved by 64-bit Blender,
+  /* WARNING: 32-bit AIR Blend trying to load file saved by 64-bit AIR Blend,
    * pointers may lose uniqueness on truncation! (Hopefully this won't
    * happen unless/until we ever get to multi-gigabyte .blend files...) */
   for (int a = 0; a < array_len; a++) {

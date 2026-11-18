@@ -160,7 +160,7 @@ bool save()
     return false;
   }
 
-  /* Stamp the Blender version that wrote this file, so a future version can tell
+  /* Stamp the AIR Blend version that wrote this file, so a future version can tell
    * how old the on-disk data is and adjust how it's read if the format changes. */
   current["blender_version"] = BLENDER_VERSION;
 

@@ -35,7 +35,7 @@
 namespace blender {
 
 /**
- * Use Blender's guarded allocator (aka MEM_*). This should always be used except there is a
+ * Use AIR Blend's guarded allocator (aka MEM_*). This should always be used except there is a
  * good reason not to use it.
  */
 class GuardedAllocator {
@@ -95,7 +95,7 @@ template<size_t Alignment = 64ul> class GuardedAlignedAllocator {
 
 /**
  * This is a wrapper around malloc/free. Only use this when the GuardedAllocator cannot be
- * used. This can be the case when the allocated memory might live longer than Blender's
+ * used. This can be the case when the allocated memory might live longer than AIR Blend's
  * allocator. For example, when the memory is owned by a static variable.
  */
 class RawAllocator {

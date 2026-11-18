@@ -1,5 +1,5 @@
 This folder contains a script to generate release notes and download URLs
-for Blender LTS releases.
+for AIR Blend LTS releases.
 
 Ensure required Python modules are installed before running:
 

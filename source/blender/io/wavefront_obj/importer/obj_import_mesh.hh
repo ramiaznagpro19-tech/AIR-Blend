@@ -25,7 +25,7 @@ struct OBJImportParams;
 namespace io::obj {
 
 /**
- * Make a Blender Mesh Object from a Geometry of GEOM_MESH type.
+ * Make an AIR Blend Mesh Object from a Geometry of GEOM_MESH type.
  */
 class MeshFromGeometry : NonMovable, NonCopyable {
  private:
@@ -47,7 +47,7 @@ class MeshFromGeometry : NonMovable, NonCopyable {
 
  private:
   /**
-   * OBJ files coming from the wild might have faces that are invalid in Blender
+   * OBJ files coming from the wild might have faces that are invalid in AIR Blend
    * (mostly with duplicate vertex indices, used by some software to indicate
    * faces with holes). This method tries to fix them up.
    */

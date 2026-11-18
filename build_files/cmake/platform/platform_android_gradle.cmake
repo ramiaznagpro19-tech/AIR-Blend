@@ -2,10 +2,10 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-# Targets to build, package and run Blender as an Android APK via a staged Gradle project.
+# Targets to build, package and run AIR Blend as an Android APK via a staged Gradle project.
 
 # Build flow:
-# - The regular Blender `install` target produces a portable install tree layout in ${CMAKE_INSTALL_PREFIX}
+# - The regular AIR Blend `install` target produces a portable install tree layout in ${CMAKE_INSTALL_PREFIX}
 #   containing the Android libblender.so, bundled shared library, runtime files and assets, etc...
 # - `gradle_stage` ensures `install` is ran, then copies the skeleton Gradle project from release/android
 #   into ${CMAKE_BINARY_DIR}/gradle (e.g. ../build_android_release/gradle) and stages/copies the
@@ -13,17 +13,17 @@
 # - From there the Gradle project is built using the `gradle_assemble` / `android_upload` targets below.
 
 # Main build targets (in dependent order):
-# - `gradle_stage`:    Installs Blender, with the main `blender` project target freshly rebuilt,
+# - `gradle_stage`:    Installs AIR Blend, with the main `blender` project target freshly rebuilt,
 #                      then stages the Gradle project, see platform_android_stage.cmake.
 # - `gradle_assemble`: Calls Gradle in the staged Gradle project directory to assemble
-#                      and sign the Blender APK.
+#                      and sign the AIR Blend APK.
 
 # Utility targets:
 # - `android_upload`:  Upload the resulting APK to an attached Android device via ADB. Depends on
 #                      `gradle_assemble` for easy re-building and testing during development.
-# - `android_run`:     Launch the Blender application main activity via ADB.
-# - `android_kill`:    Force-stop the running Blender application via ADB.
-# - `android_clean`:   Clear all Blender app data, wiping config and forcing re-extraction via ADB.
+# - `android_run`:     Launch the AIR Blend application main activity via ADB.
+# - `android_kill`:    Force-stop the running AIR Blend application via ADB.
+# - `android_clean`:   Clear all AIR Blend app data, wiping config and forcing re-extraction via ADB.
 
 # -----------------------------------------------------------------------------
 # APK version and paths
@@ -35,9 +35,9 @@ set(_apk_version_name "${BLENDER_VERSION}.${BLENDER_VERSION_PATCH}-${BLENDER_VER
 # the highest number must be assigned to the other ABIs.
 # Current Layout:
 # - ABI identifier (arm64-v8a=1, x86_64=4)
-# - Blender major version (00-99)
-# - Blender minor version (00-99)
-# - Blender patch version (00-99)
+# - AIR Blend major version (00-99)
+# - AIR Blend minor version (00-99)
+# - AIR Blend patch version (00-99)
 # - Build increment (reserved - currently 00)
 #
 # Examples:
@@ -102,10 +102,10 @@ endif()
 # -----------------------------------------------------------------------------
 # Main Android APK building targets
 
-# Ensure Blender is freshly built and installed before staging.
+# Ensure AIR Blend is freshly built and installed before staging.
 add_custom_target(gradle_ensure_install
   COMMAND ${CMAKE_COMMAND} --build "${CMAKE_BINARY_DIR}" --target install
-  COMMENT "Installing and building Blender for Gradle staging"
+  COMMENT "Installing and building AIR Blend for Gradle staging"
   USES_TERMINAL VERBATIM
 )
 
@@ -132,7 +132,7 @@ add_custom_target(gradle_assemble
           "-PblenderMinSdk=${ANDROID_PLATFORM_LEVEL}"
           "-PblenderAbi=${ANDROID_ABI}"
   COMMAND ${CMAKE_COMMAND} -E echo "APK built: ${_apk_output}"
-  COMMENT "Assembling Blender APK via Gradle"
+  COMMENT "Assembling AIR Blend APK via Gradle"
   USES_TERMINAL VERBATIM
 )
 add_dependencies(gradle_assemble gradle_stage)
@@ -161,17 +161,17 @@ add_custom_target(android_upload
 add_dependencies(android_upload gradle_assemble)
 
 add_custom_target(android_run
-  COMMAND "${ADB_EXECUTABLE}" shell am start -n org.blender.blender/.BlenderActivity
+  COMMAND "${ADB_EXECUTABLE}" shell am start -n com.airblend.app/org.blender.blender.BlenderActivity
   USES_TERMINAL VERBATIM
 )
 
 add_custom_target(android_kill
-  COMMAND "${ADB_EXECUTABLE}" shell am force-stop org.blender.blender
+  COMMAND "${ADB_EXECUTABLE}" shell am force-stop com.airblend.app
   USES_TERMINAL VERBATIM
 )
 
 add_custom_target(android_clean
-  COMMAND "${ADB_EXECUTABLE}" shell pm clear org.blender.blender
+  COMMAND "${ADB_EXECUTABLE}" shell pm clear com.airblend.app
   USES_TERMINAL VERBATIM
 )
 

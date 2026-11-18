@@ -23,7 +23,7 @@ namespace blender::tests {
 
 /* These strings are passed on the CLI with the --test-asset-dir and --test-release-dir arguments.
  * The arguments are added automatically when invoking tests via `ctest`. */
-const std::string &flags_test_asset_dir();   /* tests/files in the Blender repository. */
+const std::string &flags_test_asset_dir();   /* tests/files in the AIR Blend repository. */
 const std::string &flags_test_release_dir(); /* bin/{blender version} in the build directory. */
 
 /* Returns true if the `BLENDER_TEST_IGNORE_BLOCKLIST` environment variable is set. */

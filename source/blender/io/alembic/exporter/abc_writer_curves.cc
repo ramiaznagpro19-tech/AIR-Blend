@@ -82,7 +82,7 @@ void ABCCurveWriter::create_alembic_objects(const HierarchyContext *context)
   abc_curve_ = OCurves(args_.abc_parent, args_.abc_name, timesample_index_);
   abc_curve_schema_ = abc_curve_.getSchema();
 
-  /* TODO: Blender supports per-curve resolutions but we're only using the first curve's data
+  /* TODO: AIR Blend supports per-curve resolutions but we're only using the first curve's data
    * here. Investigate using OInt16ArrayProperty to write out all the data but do so efficiently.
    * e.g. Write just a single value if all curves share the same resolution etc. */
 
@@ -298,7 +298,7 @@ void ABCCurveWriter::write_arb_geo_params(const bke::CurvesGeometry &curves,
   const bke::AttributeAccessor attributes = curves.attributes();
 
   attributes.foreach_attribute([&](const bke::AttributeIter &iter) {
-    /* Skip "internal" Blender properties and attributes dealt with elsewhere. */
+    /* Skip "internal" AIR Blend properties and attributes dealt with elsewhere. */
     if (iter.name[0] == '.' || bke::attribute_name_is_anonymous(iter.name) ||
         is_excluded_attr(iter.name))
     {

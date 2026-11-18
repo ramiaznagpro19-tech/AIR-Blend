@@ -128,9 +128,9 @@ class ProjectVariable : IDProperty {
 };
 
 /**
- * A Blender project.
+ * An AIR Blend project.
  *
- * There is at most one active project at a time in Blender.
+ * There is at most one active project at a time in AIR Blend.
  */
 class BlenderProject {
   /** The project name. Should never be empty. */
@@ -278,7 +278,7 @@ std::string ensure_is_valid_project_variable_name(StringRef name);
 }  // namespace bke
 
 /**
- * Fetch the current active Blender Project, if any.
+ * Fetch the current active AIR Blend Project, if any.
  *
  * WARNING: this fetches the project without any synchronization for
  * multi-threading, so it is your responsibility to ensure thread safety. Prefer
@@ -300,7 +300,7 @@ std::string ensure_is_valid_project_variable_name(StringRef name);
 bke::BlenderProject *BKE_blender_project_get(const Main *bmain);
 
 /**
- * Run the given lambda with read-only access to the active Blender Project, if
+ * Run the given lambda with read-only access to the active AIR Blend Project, if
  * any.
  *
  * This follows the same project-fetching semantics as
@@ -340,7 +340,7 @@ inline auto BKE_blender_project_read_callback(const Main *bmain, Fn lambda)
 }
 
 /**
- * Run the given lambda with write access to the active Blender Project, if any.
+ * Run the given lambda with write access to the active AIR Blend Project, if any.
  *
  * Same as `BKE_blender_project_read_callback()`, except that it takes an
  * exclusive mutex lock to provide write access to the project, and the lambda
@@ -375,7 +375,7 @@ inline auto BKE_blender_project_write_callback(const Main *bmain, Fn lambda)
 }
 
 /**
- * Initialize a new active Blender Project.
+ * Initialize a new active AIR Blend Project.
  *
  * If either `name` or `root_path` are empty (which is invalid), the current
  * project (if any) will remain as-is and false is returned.  Otherwise the

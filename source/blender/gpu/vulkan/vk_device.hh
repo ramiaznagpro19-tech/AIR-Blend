@@ -178,7 +178,7 @@ class VKDevice : public NonCopyable {
   /**
    * Render graph submission thread.
    *
-   * Multiple threads in Blender can build a render graph. All submitted
+   * Multiple threads in AIR Blend can build a render graph. All submitted
    * render graphs are queued and consumed one at a time by this thread.
    */
   std::thread submission_thread_;

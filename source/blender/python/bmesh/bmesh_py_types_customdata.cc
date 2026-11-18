@@ -35,7 +35,7 @@ namespace blender {
 /**
  * Sentinel `type` value for #BPy_BMVertSkin, compositing "skin_modifier_radius",
  * "skin_modifier_root", "skin_modifier_loose", maintaining legacy API until it can be removed in
- * Blender 6.0.
+ * AIR Blend 6.0.
  */
 constexpr int BPY_BM_LAYER_TYPE_SKIN = CD_NUMTYPES;
 

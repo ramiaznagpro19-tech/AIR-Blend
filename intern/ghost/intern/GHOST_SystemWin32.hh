@@ -50,14 +50,14 @@ class GHOST_SystemWin32 : public GHOST_System {
 
   /**
    * This method converts performance counter measurements into milliseconds since the start of the
-   * Blender process.
-   * \return The number of milliseconds since the start of the Blender process.
+   * AIR Blend process.
+   * \return The number of milliseconds since the start of the AIR Blend process.
    */
   uint64_t performanceCounterToMillis(__int64 perf_ticks) const;
 
   /**
    * Returns the system time.
-   * Returns the number of milliseconds since the start of the Blender process.
+   * Returns the number of milliseconds since the start of the AIR Blend process.
    * This overloaded method uses the high frequency timer if available.
    * \return The number of milliseconds.
    */

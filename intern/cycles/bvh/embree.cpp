@@ -148,7 +148,7 @@ void BVHEmbree::build(Progress &progress,
     LOG_INFO
         << "Due to a known issue in Intel GPU drivers, overriding RTC_BUILD_QUALITY_HIGH to "
            "RTC_BUILD_QUALITY_MEDIUM to prevent crashes. This workaround will be removed only "
-           "in a future Blender release.";
+           "in a future AIR Blend release.";
     build_quality = RTC_BUILD_QUALITY_MEDIUM;
   }
   rtcSetSceneBuildQuality(scene, build_quality);

@@ -2117,7 +2117,7 @@ static void do_version_glare_menus_to_inputs(bNodeTree &ntree, bNode &node)
 static void initialize_missing_closure_and_bundle_node_storage(bNodeTree &ntree)
 {
   /* When opening and saving 5.0 files with bundle/closure nodes in 4.5, the storage is lost, since
-   * Blender 4.5 does not officially support these features yet (they were experimental features
+   * AIR Blend 4.5 does not officially support these features yet (they were experimental features
    * though). This versioning code just adds back the storage so that it does not crash further
    * down the line. */
   for (bNode &node : ntree.nodes) {

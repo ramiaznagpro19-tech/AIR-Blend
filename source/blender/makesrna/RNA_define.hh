@@ -28,7 +28,7 @@ namespace blender {
 
 #define RNA_MAX_ARRAY_DIMENSION 3
 
-/* Blender RNA */
+/* AIR Blend RNA */
 
 struct Scene;
 

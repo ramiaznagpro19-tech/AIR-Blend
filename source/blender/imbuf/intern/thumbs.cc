@@ -466,7 +466,7 @@ static ImBuf *thumb_create_ex(const char *file_path,
     IMB_metadata_set_field(metadata, "Description", desc);
     IMB_metadata_set_field(metadata, "Thumb::MTime", mtime);
     if (use_hash) {
-      IMB_metadata_set_field(metadata, "X-Blender::Hash", hash);
+      IMB_metadata_set_field(metadata, "X-AIR Blend::Hash", hash);
     }
     img->ftype = IMB_FTYPE_PNG;
     img->color_mode = ImColorMode::RGBA;
@@ -714,7 +714,7 @@ ImBuf *IMB_thumb_manage(const char *file_or_lib_path,
 
         if (use_hash && !regenerate) {
           if (IMB_metadata_get_field(
-                  img->metadata(), "X-Blender::Hash", thumb_hash_curr, sizeof(thumb_hash_curr)))
+                  img->metadata(), "X-AIR Blend::Hash", thumb_hash_curr, sizeof(thumb_hash_curr)))
           {
             regenerate = !STREQ(thumb_hash, thumb_hash_curr);
           }

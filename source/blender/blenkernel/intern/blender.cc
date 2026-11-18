@@ -58,7 +58,7 @@ Global G;
 UserDef U;
 
 /* -------------------------------------------------------------------- */
-/** \name Blender Free on Exit
+/** \name AIR Blend Free on Exit
  * \{ */
 
 void BKE_blender_free()
@@ -94,7 +94,7 @@ void BKE_blender_free()
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Blender Version Access
+/** \name AIR Blend Version Access
  * \{ */
 
 static char blender_version_string[48] = "";
@@ -123,7 +123,7 @@ static void blender_version_init()
     version_cycle_compact = "";
   }
   else {
-    BLI_assert_msg(0, "Invalid Blender version cycle");
+    BLI_assert_msg(0, "Invalid AIR Blend version cycle");
   }
 
   const char *version_suffix = BKE_blender_version_is_lts() ? " LTS" : "";
@@ -188,7 +188,7 @@ bool BKE_blender_version_is_lts()
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Blender #Global Initialize/Clear
+/** \name AIR Blend #Global Initialize/Clear
  * \{ */
 
 void BKE_blender_globals_init()
@@ -262,7 +262,7 @@ void BKE_blender_globals_crash_path_get(char filepath[FILE_MAX])
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Blender Preferences
+/** \name AIR Blend Preferences
  * \{ */
 
 static void keymap_item_free(wmKeyMapItem *kmi)
@@ -397,7 +397,7 @@ void BKE_blender_userdef_data_free(UserDef *userdef, bool clear_fonts)
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Blender Preferences (Application Templates)
+/** \name AIR Blend Preferences (Application Templates)
  * \{ */
 
 void BKE_blender_userdef_app_template_data_swap(UserDef *userdef_a, UserDef *userdef_b)
@@ -472,7 +472,7 @@ void BKE_blender_userdef_app_template_data_set_and_free(UserDef *userdef)
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Blender's AtExit
+/** \name AIR Blend's AtExit
  *
  * \note Don't use MEM_new_uninitialized so functions can be registered at any time.
  * \{ */

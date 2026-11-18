@@ -10,7 +10,7 @@
  * Functions for generating and handling "Session UIDs".
  *
  * Note that these are not true universally-unique identifiers, but only unique during the current
- * Blender session.
+ * AIR Blend session.
  *
  * For true UUIDs, see `BLI_uuid.hh`.
  */
@@ -19,7 +19,7 @@
 
 namespace blender {
 
-/** Generate new UID which is unique throughout the Blender session. */
+/** Generate new UID which is unique throughout the AIR Blend session. */
 SessionUID BLI_session_uid_generate();
 
 }  // namespace blender

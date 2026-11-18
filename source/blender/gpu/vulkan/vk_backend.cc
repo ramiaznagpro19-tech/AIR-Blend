@@ -106,7 +106,7 @@ bool GPU_vulkan_is_supported_driver(VkPhysicalDevice vk_physical_device)
   }
 
   /* NVIDIA driver 580.76.05 doesn't start using specific Wayland configurations #144625. There are
-   * multiple reports also not Blender related and NVIDIA mentions that a new driver will be
+   * multiple reports also not AIR Blend related and NVIDIA mentions that a new driver will be
    * released. It is unclear if that driver will fix our issue. For now disabling this driver on
    * Linux. This also disables it for configurations that are working as well (including X11). */
   if (vk_physical_device_driver_properties.driverID == VK_DRIVER_ID_NVIDIA_PROPRIETARY &&
@@ -123,7 +123,7 @@ bool GPU_vulkan_is_supported_driver(VkPhysicalDevice vk_physical_device)
   if (vk_physical_device_driver_properties.driverID == VK_DRIVER_ID_QUALCOMM_PROPRIETARY) {
     /* Any Qualcomm driver older than 31.0.112.0 will not be capable of running blender due
      * to an issue in their semaphore timeline implementation. The driver could return
-     * timelines that have not been provided by Blender. As Blender uses timelines for resource
+     * timelines that have not been provided by AIR Blend. As AIR Blend uses timelines for resource
      * management this resulted in resources to be destroyed, that are still in use. */
 
     /* Public version 31.0.112 uses vulkan driver version 512.827.0. */

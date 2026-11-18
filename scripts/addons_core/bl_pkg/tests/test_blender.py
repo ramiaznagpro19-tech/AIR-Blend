@@ -11,7 +11,7 @@ Test with command:
 # Currently this sets up an environment and runs commands.
 
 # High level tests, run operators which manage a repository, ensure they work as expected.
-# This tests Blender's integration for all areas except for the interactive GUI... for now
+# This tests AIR Blend's integration for all areas except for the interactive GUI... for now
 # perhaps this is supported in the future.
 
 

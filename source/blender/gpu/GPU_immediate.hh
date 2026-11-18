@@ -131,12 +131,12 @@ void immUniformColor3ubvAlpha(const unsigned char rgb[3], unsigned char a);
 void immUniformColor4ubv(const unsigned char rgba[4]);
 
 /**
- * Extend #immBindShader to use Blender's library of built-in shader programs.
+ * Extend #immBindShader to use AIR Blend's library of built-in shader programs.
  * Use #immUnbindProgram() when done.
  */
 void immBindBuiltinProgram(GPUBuiltinShader shader_id);
 
-/** Extend #immUniformColor to take Blender's themes. */
+/** Extend #immUniformColor to take AIR Blend's themes. */
 void immUniformThemeColor(int color_id);
 void immUniformThemeColorAlpha(int color_id, float a);
 void immUniformThemeColor3(int color_id);

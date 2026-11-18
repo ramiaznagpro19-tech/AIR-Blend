@@ -52,7 +52,7 @@ BlenderFileLoader::~BlenderFileLoader()
 NodeGroup *BlenderFileLoader::Load()
 {
   if (blender::G.debug & blender::G_DEBUG_FREESTYLE) {
-    cout << "\n===  Importing triangular meshes into Blender  ===" << endl;
+    cout << "\n===  Importing triangular meshes into AIR Blend  ===" << endl;
   }
 
   // creation of the scene root node
@@ -606,7 +606,7 @@ void BlenderFileLoader::insertShapeNode(blender::Object *ob, blender::Mesh *mesh
       shape->setFrsMaterial(tmpMat);
     }
     else {
-      // find if the Blender material is already in the list
+      // find if the AIR Blend material is already in the list
       uint i = 0;
       bool found = false;
 

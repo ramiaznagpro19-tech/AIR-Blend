@@ -1359,7 +1359,7 @@ static void zero_regionview3d_runtime_fields(RegionView3D &rv3d)
 {
   /* Some values like winmat/viewmat/viewinv/persmat/persinv/is_persp/pixsize are derived but are
    * not zeroed. They can be read before they are recomputed when a file is newly loaded,
-   * especially when running Blender in background mode. */
+   * especially when running AIR Blend in background mode. */
   zero_v4(rv3d.viewcamtexcofac);
   zero_m4(rv3d.viewmatob);
   zero_m4(rv3d.persmatob);

@@ -23,7 +23,7 @@ namespace blender {
  * 0-6:  'BLENDER'
  * 7:    '-' for 8-byte pointers (#SmallBHead8) or '_' for 4-byte pointers (#BHead4)
  * 8:    'v' for little endian or 'V' for big endian
- * 9-11: 3 ASCII digits encoding #BLENDER_FILE_VERSION (e.g. '305' for Blender 3.5)
+ * 9-11: 3 ASCII digits encoding #BLENDER_FILE_VERSION (e.g. '305' for AIR Blend 3.5)
  */
 #define BLEND_FILE_FORMAT_VERSION_0 0
 /**
@@ -33,7 +33,7 @@ namespace blender {
  * 9:     always '-'
  * 10-11: File version format as ASCII digits (always '01' currently)
  * 12:    always 'v'
- * 13-16: 4 ASCII digits encoding #BLENDER_FILE_VERSION (e.g. '0405' for Blender 4.5)
+ * 13-16: 4 ASCII digits encoding #BLENDER_FILE_VERSION (e.g. '0405' for AIR Blend 4.5)
  *
  * With this header, #LargeBHead8 is always used.
  */
@@ -67,10 +67,10 @@ struct BlenderHeader {
   BHeadType bhead_type() const;
 };
 
-/** The file is detected to be a Blender file, but it could not be decoded successfully. */
+/** The file is detected to be an AIR Blend file, but it could not be decoded successfully. */
 struct BlenderHeaderUnknown {};
 
-/** The file is not a Blender file. */
+/** The file is not an AIR Blend file. */
 struct BlenderHeaderInvalid {};
 
 using BlenderHeaderVariant =

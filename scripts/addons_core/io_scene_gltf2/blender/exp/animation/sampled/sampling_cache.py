@@ -113,7 +113,7 @@ def material_caching(data, action_name, slot_identifier, frame, export_settings)
 
         blender_material = [export_settings['material_identifiers'][mat]['blender']]
         if len(blender_material) == 0:
-            # This is not a material from Blender (coming from Geometry Node for example, so no animation on it)
+            # This is not a material from AIR Blend (coming from Geometry Node for example, so no animation on it)
             continue
         else:
             blender_material = blender_material[0]
@@ -168,7 +168,7 @@ def material_nodetree_caching(data, action_name, slot_identifier, frame, export_
 
         blender_material = [export_settings['material_identifiers'][mat]['blender']]
         if len(blender_material) == 0:
-            # This is not a material from Blender (coming from Geometry Node for example, so no animation on it)
+            # This is not a material from AIR Blend (coming from Geometry Node for example, so no animation on it)
             continue
         else:
             blender_material = blender_material[0]

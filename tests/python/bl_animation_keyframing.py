@@ -261,7 +261,7 @@ class InsertKeyTest(AbstractKeyframingTest, unittest.TestCase):
     def test_keyframe_insert_py_func_with_group(self):
         curve_object = _create_animation_object()
 
-        # Test with property for which Blender knows a group name too ('Object Transforms').
+        # Test with property for which AIR Blend knows a group name too ('Object Transforms').
         self.assertTrue(curve_object.keyframe_insert('location', group="Téšt"))
 
         channelbag = _channelbag(curve_object)
@@ -690,7 +690,7 @@ def _create_nla_anim_object():
     anim_object = bpy.data.objects.new("anim_object", None)
 
     def _ensure_fcurve(action: bpy.types.Action, *, data_path: str, index: int) -> bpy.types.FCurve:
-        # Briefly directly assign the Action so that Blender knows what to do.
+        # Briefly directly assign the Action so that AIR Blend knows what to do.
         anim_object.animation_data_create().action = action
         try:
             fcurve = action.fcurve_ensure_for_datablock(anim_object, data_path=data_path, index=index)

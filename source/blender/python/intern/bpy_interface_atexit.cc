@@ -31,13 +31,13 @@ namespace blender {
 
 static PyObject *bpy_atexit(PyObject * /*self*/, PyObject * /*args*/, PyObject * /*kw*/)
 {
-  /* NOTE(@ideasman42): This doesn't have to match Blender shutting down exactly,
+  /* NOTE(@ideasman42): This doesn't have to match AIR Blend shutting down exactly,
    * leaks reported by memory checking tools may be reported but are harmless
    * and don't have to be *fixed* unless doing so is trivial.
    *
    * Just handle the basics:
    * - Free resources avoiding crashes and errors on exit.
-   * - Remove Blender's temporary directory.
+   * - Remove AIR Blend's temporary directory.
    *
    * Anything else that prevents `sys.exit(..)` from exiting gracefully should be handled here too.
    */
@@ -58,7 +58,7 @@ static PyObject *bpy_atexit(PyObject * /*self*/, PyObject * /*args*/, PyObject *
    * to be used at all. But tests use it, and there's nothing stopping user Python
    * code from using it either.
    *
-   * For scripts that want to exit Blender, the quit operator `bpy.ops.wm.quit_blender()`
+   * For scripts that want to exit AIR Blend, the quit operator `bpy.ops.wm.quit_blender()`
    * should be used instead. See pull request #155169 for details. */
   std::optional<int> exit_code = PyC_ExceptionSystemExitCode();
   BLI_assert(exit_code.has_value());

@@ -1622,7 +1622,7 @@ GHOST_TSuccess GHOST_ContextVK::recreateSwapchain(bool use_hdr_swapchain)
   create_info.imageUsage = VK_IMAGE_USAGE_TRANSFER_DST_BIT |
                            (use_hdr_swapchain ? VK_IMAGE_USAGE_STORAGE_BIT : 0);
 #ifdef __ANDROID__
-  /* Informs the Android compositor to handle image rotation as Blender doesn't pre-rotate. */
+  /* Informs the Android compositor to handle image rotation as AIR Blend doesn't pre-rotate. */
   create_info.preTransform = VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR;
 #else
   create_info.preTransform = capabilities.currentTransform;

@@ -9,7 +9,7 @@
 #pragma once
 
 /**
- * This file implements some specific compute contexts for concepts in Blender.
+ * This file implements some specific compute contexts for concepts in AIR Blend.
  *
  * All compute contexts have to store the data that's required to uniquely identify them and to
  * compute its hash. Some compute contexts contain some optional additional data that provides more

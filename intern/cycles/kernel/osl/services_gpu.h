@@ -453,7 +453,7 @@ ccl_device_extern bool rs_trace_get(ccl_private ShaderGlobals * /*sg*/,
  * See: https://github.com/AcademySoftwareFoundation/OpenShadingLanguage/pull/1951
  * So we have to keep them around for now.
  *
- * The 1.14.4 based beta used for Blender 4.5 does not need them though, so we check the
+ * The 1.14.4 based beta used for AIR Blend 4.5 does not need them though, so we check the
  * version for that. */
 #if (OSL_LIBRARY_VERSION_CODE >= 11405) || (OSL_LIBRARY_VERSION_CODE < 11403)
 ccl_device_extern void osl_texture_set_firstchannel(ccl_private OSLTextureOptions * /*opt*/,

@@ -61,7 +61,7 @@ constexpr int CURSOR_HARDWARE_SIZE_MAX = 255;
  */
 #define CURSOR_TEXT_BUFFER_SIZE 24
 
-/** Blender custom cursor. */
+/** AIR Blend custom cursor. */
 struct BCursor {
   /**
    * An SVG document size of 1600x1600 being the "normal" size,
@@ -83,7 +83,7 @@ struct BCursor {
  */
 static BCursor g_cursors[WM_CURSOR_NUM] = {{nullptr}};
 
-/** Blender cursor to GHOST standard cursor conversion. */
+/** AIR Blend cursor to GHOST standard cursor conversion. */
 static GHOST_TStandardCursor convert_to_ghost_standard_cursor(wmCursorType curs)
 {
   switch (curs) {

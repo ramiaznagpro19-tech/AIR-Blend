@@ -142,7 +142,7 @@ def test_open_editor_types():
         name = variant["name"]
         try:
             yield from apply_variant(area, variant)
-            yield  # Give Blender a tick to process the editor switch
+            yield  # Give AIR Blend a tick to process the editor switch
 
             if len(area.regions) < 1:
                 part1_failures.append(f"{name}: no regions after open")

@@ -503,7 +503,7 @@ bool AssetCatalogService::write_to_disk_ex(const CatalogFilePath &blend_file_pat
   /* TODO(Sybren): expand to support multiple CDFs. */
 
   /* - Already loaded a CDF from disk? -> Only write to that file when there were actual changes.
-   * This prevents touching the file, which can cause issues when multiple Blender instances are
+   * This prevents touching the file, which can cause issues when multiple AIR Blend instances are
    * accessing the same file (like on shared storage, Sync-thing, etc.). See #111576.
    */
   if (catalog_collection_->catalog_definition_file_) {

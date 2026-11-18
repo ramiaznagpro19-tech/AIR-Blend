@@ -32,7 +32,7 @@ struct USDImportDomeLightData {
 };
 
 /**
- * If the Blender scene has an environment texture,
+ * If the AIR Blend scene has an environment texture,
  * export it as a USD dome light.
  */
 void world_material_to_dome_light(const USDExportParams &params,

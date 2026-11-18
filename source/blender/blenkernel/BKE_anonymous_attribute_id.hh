@@ -16,7 +16,7 @@ namespace blender::bke {
 
 /**
  * Checks if the attribute name has the `.a_` prefix which indicates that it is an anonymous
- * attribute. I.e. it is just internally used by Blender and the name should not be exposed to the
+ * attribute. I.e. it is just internally used by AIR Blend and the name should not be exposed to the
  * user.
  *
  * Use #hash_to_anonymous_attribute_name to generate names for anonymous attributes.

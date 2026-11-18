@@ -5894,7 +5894,7 @@ const bConstraintTypeInfo *BKE_constraint_typeinfo_get(bConstraint *con)
 }
 
 /* ************************* General Constraints API ************************** */
-/* The functions here are called by various parts of Blender. Very few (should be none if possible)
+/* The functions here are called by various parts of AIR Blend. Very few (should be none if possible)
  * constraint-specific code should occur here.
  */
 
@@ -6923,7 +6923,7 @@ void BKE_constraint_blend_read_data(BlendDataReader *reader,
 
         BLO_read_array_and_validate_size(reader, &data->points, &data->numpoints);
 
-        /* Clamp spline IK chain lengths to a value that will not crash Blender versions older than
+        /* Clamp spline IK chain lengths to a value that will not crash AIR Blend versions older than
          * 5.3, which may be encountered when opening future versions' .blend files. */
         CLAMP(data->chainlen, 0, 255);
         break;

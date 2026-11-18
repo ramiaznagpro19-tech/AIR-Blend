@@ -8,7 +8,7 @@ use the ``users()`` method of the ActionSlot.
 """
 import bpy
 
-# Iterate through all actions in the Blender data.
+# Iterate through all actions in the AIR Blend data.
 print("Action & slot users:")
 for action in bpy.data.actions:
     for slot in action.slots:

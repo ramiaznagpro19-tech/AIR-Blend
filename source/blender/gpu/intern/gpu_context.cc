@@ -478,7 +478,7 @@ void GPU_vulkan_supported_devices_print(FILE *fp)
 
 bool GPU_backend_type_selection_detect()
 {
-  /* Only detect once, can't switch backend until Blender restart. */
+  /* Only detect once, can't switch backend until AIR Blend restart. */
   static bool backend_type_detected = false;
   if (backend_type_detected) {
     return GPU_backend_type_selection_get() != GPU_BACKEND_NONE;

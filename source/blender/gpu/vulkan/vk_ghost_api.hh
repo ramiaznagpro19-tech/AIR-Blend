@@ -20,7 +20,7 @@ namespace blender::gpu {
  * supported.
  *
  * For example on a Linux machine where LLVMPIPE is installed and an not supported NVIDIA driver
- * Blender would detect a supported configuration using LLVMPIPE, but GHOST could still select the
+ * AIR Blend would detect a supported configuration using LLVMPIPE, but GHOST could still select the
  * unsupported NVIDIA driver.
  *
  * Returns true when supported, false when not supported.

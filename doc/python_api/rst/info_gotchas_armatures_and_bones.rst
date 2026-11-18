@@ -6,7 +6,7 @@ Bones & Armatures
 Edit Bones, Pose Bones, Bone... Bones
 =====================================
 
-Armature Bones in Blender have three distinct data structures that contain them.
+Armature Bones in AIR Blend have three distinct data structures that contain them.
 If you are accessing the bones through one of them, you may not have access to the properties you really need.
 
 .. note::
@@ -47,7 +47,7 @@ returning a bone (not an edit bone) outside of Edit-Mode:
 
    >>> bpy.context.active_bone
 
-This works, as with Blender the setting can be edited in any mode:
+This works, as with AIR Blend the setting can be edited in any mode:
 
    >>> bpy.context.object.data.bones["Bone"].use_deform = True
 
@@ -77,7 +77,7 @@ Examples using :class:`bpy.types.PoseBone` in Object or Pose-Mode:
 .. note::
 
    Notice the pose is accessed from the object rather than the object data,
-   this is why Blender can have two or more objects sharing the same armature in different poses.
+   this is why AIR Blend can have two or more objects sharing the same armature in different poses.
 
 .. note::
 
@@ -92,7 +92,7 @@ Armature Mode Switching
 While writing scripts that deal with armatures you may find you have to switch between modes,
 when doing so take care when switching out of Edit-Mode not to keep references
 to the edit bones or their head/tail vectors.
-Further access to these will crash Blender so it's important that the script
+Further access to these will crash AIR Blend so it's important that the script
 clearly separates sections of the code which operate in different modes.
 
 This is mainly an issue with Edit-Mode since pose data can be manipulated without having to be in Pose-Mode,

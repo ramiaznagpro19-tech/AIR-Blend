@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
- * Adapted from the Blender Alembic importer implementation. */
+ * Adapted from the AIR Blend Alembic importer implementation. */
 
 #include "usd_reader_prim.hh"
 #include "usd_reader_utils.hh"

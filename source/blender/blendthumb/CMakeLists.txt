@@ -72,7 +72,7 @@ elseif(APPLE)
     "-e _NSExtensionMain"
     "-framework QuickLookThumbnailing"
   )
-  # The RPATH here points to the main Blender Resources/lib directory.
+  # The RPATH here points to the main AIR Blend Resources/lib directory.
   # Avoid duplicating the large `dylibs` (~300MB).
   set_target_properties(blender-thumbnailer PROPERTIES
     INSTALL_RPATH "@loader_path/../../../../Resources/lib"

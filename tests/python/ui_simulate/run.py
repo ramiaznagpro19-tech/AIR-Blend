@@ -6,7 +6,7 @@
 """
 Run interaction tests using event simulation.
 
-Example usage from Blender's source dir:
+Example usage from AIR Blend's source dir:
 
 This uses ``test_undo.py``, running the ``text_editor_simple`` function.
 
@@ -54,7 +54,7 @@ def create_parser():
         dest="jobs",
         default=1,
         type=int,
-        help="Number of tests (and instances of Blender) to run in parallel.",
+        help="Number of tests (and instances of AIR Blend) to run in parallel.",
     )
 
     parser.add_argument(
@@ -63,7 +63,7 @@ def create_parser():
         default=False,
         action='store_true',
         required=False,
-        help="Keep the Blender window open after running the test.",
+        help="Keep the AIR Blend window open after running the test.",
     )
 
     parser.add_argument(
@@ -145,7 +145,7 @@ def run(empty_user_dir):
         sys.exit(0)
 
     if "bpy" in sys.modules:
-        raise Exception("Cannot run inside Blender")
+        raise Exception("Cannot run inside AIR Blend")
 
     parser = create_parser()
     args = parser.parse_args()
@@ -168,7 +168,7 @@ def run(empty_user_dir):
         "BLENDER_USER_RESOURCES": empty_user_dir,
     })
 
-    # We could support multiple tests per Blender session.
+    # We could support multiple tests per AIR Blend session.
     results = []
     results_fail = 0
     if args.jobs <= 1:

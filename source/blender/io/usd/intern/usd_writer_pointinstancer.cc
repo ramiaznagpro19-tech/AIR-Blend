@@ -413,7 +413,7 @@ static void ExpandAttributePerInstance(const GetterFunc &getter,
 {
   /* MARK: Handle Collection Prototypes
    * ----------------------------------
-   * In Blender, a Collection is not an actual Object type. When exporting, the iterator
+   * In AIR Blend, a Collection is not an actual Object type. When exporting, the iterator
    * flattens the Collection hierarchy, treating each object inside the Collection as an
    * individual prototype. However, all these prototypes share the same instance attributes
    * (e.g., positions, orientations, scales).
@@ -552,7 +552,7 @@ void USDPointInstancerWriter::write_attribute_data(const bke::AttributeIter &att
   if (!pv_type) {
     BKE_reportf(this->reports(),
                 RPT_WARNING,
-                "Attribute '%s' (Blender domain %d, type %d) cannot be converted to USD",
+                "Attribute '%s' (AIR Blend domain %d, type %d) cannot be converted to USD",
                 attr.name.c_str(),
                 int(attr.domain),
                 int(attr.data_type));

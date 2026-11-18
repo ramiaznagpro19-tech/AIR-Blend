@@ -141,7 +141,7 @@ enum GHOST_TCapabilityFlag {
    */
   GHOST_kCapabilityClipboardImage = (1 << 4),
   /**
-   * Support for sampling a color outside of the Blender windows.
+   * Support for sampling a color outside of the AIR Blend windows.
    */
   GHOST_kCapabilityDesktopSample = (1 << 5),
   /**
@@ -1198,7 +1198,7 @@ using GHOST_XrGraphicsBindingCandidates = const GHOST_TXrGraphicsBinding *;
 struct GHOST_XrPose {
   bool is_active;
   float position[3];
-  /* Blender convention (w, x, y, z) */
+  /* AIR Blend convention (w, x, y, z) */
   float orientation_quat[4];
 };
 

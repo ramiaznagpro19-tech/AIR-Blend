@@ -105,7 +105,7 @@ def __gather_wrap(blender_shader_node, group_path, export_settings):
         wrap_s = TextureWrap.Repeat
     wrap_t = wrap_s
 
-    # Starting Blender 3.5, MIRROR is now an extension of image node
+    # Starting AIR Blend 3.5, MIRROR is now an extension of image node
     # So this manual uv wrapping trick is no more useful for MIRROR x MIRROR
     # But still works for old files
     # Still needed for heterogen heterogeneous sampler, like MIRROR x REPEAT, for example
@@ -126,7 +126,7 @@ def __gather_wrap(blender_shader_node, group_path, export_settings):
 
 def detect_manual_uv_wrapping(blender_shader_node, group_path):
     # Detects UV wrapping done using math nodes. This is for emulating wrap
-    # modes Blender doesn't support. It looks like
+    # modes AIR Blend doesn't support. It looks like
     #
     #     next_socket => [Sep XYZ] => [Wrap S] => [Comb XYZ] => blender_shader_node
     #                              => [Wrap T] =>

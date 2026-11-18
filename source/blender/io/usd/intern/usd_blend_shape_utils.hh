@@ -65,7 +65,7 @@ pxr::VtFloatArray get_blendshape_weights(const Key *key);
  * shape weights. If the given mesh is not already bound to a skeleton
  * this function will create a dummy skeleton with a single joint and
  * will bind it to the mesh. This is typically required if the source
- * Blender mesh has shape keys but not an armature deformer.
+ * AIR Blend mesh has shape keys but not an armature deformer.
  *
  * This function will also create a skel animation prim as a child of
  * the skeleton and will copy the weight time samples from a temporary

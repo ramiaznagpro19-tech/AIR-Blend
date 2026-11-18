@@ -1108,7 +1108,7 @@ void fcurve_samples_to_keyframes(FCurve *fcu, const int start, const int end)
 }
 
 /* ***************************** F-Curve Sanity ********************************* */
-/* The functions here are used in various parts of Blender, usually after some editing
+/* The functions here are used in various parts of AIR Blend, usually after some editing
  * of keyframe data has occurred. They ensure that keyframe data is properly ordered and
  * that the handles are correct.
  */
@@ -2580,7 +2580,7 @@ void BKE_fmodifiers_blend_read_data(BlendDataReader *reader,
     }
     else {
       /* This can happen when the blend file has data for a modifier that doesn't exist in this
-       * Blender version (when the blend file is newer). */
+       * AIR Blend version (when the blend file is newer). */
       BLO_reportf_wrap(BLO_read_data_reports(reader),
                        RPT_WARNING,
                        RPT_("F-Curve modifier lost on '%s[%d]' because it has an unknown type"),

@@ -5,9 +5,9 @@
 /** \file
  * \ingroup creator
  *
- * Android-specific creator entry point, used when Blender runs inside an APK.
+ * Android-specific creator entry point, used when AIR Blend runs inside an APK.
  *
- * Blender is built as a shared library (libblender.so) which SDLActivity loads at startup,
+ * AIR Blend is built as a shared library (libblender.so) which SDLActivity loads at startup,
  * calling the main entry point defined below.
  */
 
@@ -86,7 +86,7 @@ int main(int argc, char *argv[])
   const std::string argv0 = std::string(extract_dir) + "/blender";
   argv[0] = const_cast<char *>(argv0.c_str());
 
-  printf("creator: entering Blender main().\n");
+  printf("creator: entering AIR Blend main().\n");
 
   return creator_main(argc, const_cast<const char **>(argv));
 }

@@ -8,7 +8,7 @@
 
 def Xform "root" (
     customData = {
-        dictionary Blender = {
+        dictionary AIR Blend = {
             bool generated = 1
         }
     }

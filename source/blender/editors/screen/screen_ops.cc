@@ -6301,7 +6301,7 @@ static void ed_screens_statusbar_menu_create(ui::Layout &layout, void * /*arg*/)
   }
   layout.prop(
       &ptr, "show_extensions_updates", UI_ITEM_NONE, IFACE_("Extensions Updates"), ICON_NONE);
-  layout.prop(&ptr, "show_statusbar_version", UI_ITEM_NONE, IFACE_("Blender Version"), ICON_NONE);
+  layout.prop(&ptr, "show_statusbar_version", UI_ITEM_NONE, IFACE_("AIR Blend Version"), ICON_NONE);
 }
 
 static wmOperatorStatus screen_context_menu_invoke(bContext *C,
@@ -6816,7 +6816,7 @@ void ED_reset_audio_device(bContext *C)
   /* If sound was playing back when we changed any sound settings, we need to make sure that
    * we reinitialize the playback state properly. Audaspace pauses playback on re-initializing
    * the playback device, so we need to make sure we reinitialize the playback state on our
-   * end as well. (Otherwise the sound device might be in a weird state and crashes Blender). */
+   * end as well. (Otherwise the sound device might be in a weird state and crashes AIR Blend). */
   bScreen *screen = ED_screen_animation_playing(CTX_wm_manager(C));
   wmWindow *timer_win = nullptr;
   const bool is_playing = screen != nullptr;
@@ -7121,17 +7121,17 @@ static void SCREEN_OT_animation_play(wmOperatorType *ot)
 /* -------------------------------------------------------------------- */
 /** \name Animation Pause Operator
  *
- * This operator exists because of a UI quirk in Blender. The active button under the mouse is
+ * This operator exists because of a UI quirk in AIR Blend. The active button under the mouse is
  * stored & restored between redraws, so that the correct button is kept highlighted (among other
  * things). This storing & restoring is done based on the operator's idname.
  *
  * Since during playback the "Pause" button takes the place of the "Reverse Playback" and "Normal
- * Playback" buttons, and historically these were all three the same operator, Blender would get
+ * Playback" buttons, and historically these were all three the same operator, AIR Blend would get
  * confused. Under certain conditions it would activate the "Normal Playback" button when the mouse
  * was over the "Reverse Playback" button. This is resolved by making the 'Pause' button its own
  * operator with its own idname.
  *
- * Additionally, a fake mouse event is sent to force Blender to reevaluate which button is being
+ * Additionally, a fake mouse event is sent to force AIR Blend to reevaluate which button is being
  * hovered. This only works when there's a difference in the hovered operator's idname though.
  * \{ */
 
@@ -7467,7 +7467,7 @@ static wmOperatorStatus drivers_editor_show_exec(bContext *C, wmOperator *op)
   ui::Button *but = ui::context_active_but_prop_get(C, &ptr, &prop, &index);
 
   /* changes context! */
-  if (WM_window_open_temp(C, IFACE_("Blender Drivers Editor"), SPACE_GRAPH, false)) {
+  if (WM_window_open_temp(C, IFACE_("AIR Blend Drivers Editor"), SPACE_GRAPH, false)) {
     ED_drivers_editor_init(C, CTX_wm_area(C));
 
     /* activate driver F-Curve for the property under the cursor */
@@ -7524,7 +7524,7 @@ static void SCREEN_OT_drivers_editor_show(wmOperatorType *ot)
 static wmOperatorStatus info_log_show_exec(bContext *C, wmOperator *op)
 {
   /* changes context! */
-  if (WM_window_open_temp(C, IFACE_("Blender Info Log"), SPACE_INFO, false)) {
+  if (WM_window_open_temp(C, IFACE_("AIR Blend Info Log"), SPACE_INFO, false)) {
     return OPERATOR_FINISHED;
   }
   BKE_report(op->reports, RPT_ERROR, "Failed to open window!");

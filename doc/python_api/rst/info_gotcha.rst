@@ -3,7 +3,7 @@
 Gotchas
 *******
 
-This document attempts to help you work with the Blender API in areas
+This document attempts to help you work with the AIR Blend API in areas
 that can be troublesome and avoid practices that are known to cause instability.
 
 

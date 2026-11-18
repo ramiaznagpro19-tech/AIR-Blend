@@ -23,7 +23,7 @@ def get_version_string():
     return str(bl_info['version'][0]) + '.' + str(bl_info['version'][1]) + '.' + str(bl_info['version'][2])
 
 #
-# Script reloading (if the user calls 'Reload Scripts' from Blender)
+# Script reloading (if the user calls 'Reload Scripts' from AIR Blend)
 #
 
 
@@ -146,7 +146,7 @@ def get_format_items(scene, context):
     addon_preferences = bpy.context.preferences.addons['io_scene_gltf2'].preferences
     if addon_preferences and addon_preferences.allow_embedded_format:
         # At initialization, the preferences are not yet loaded
-        # The second line check is needed until the PR is merge in Blender, for github CI tests
+        # The second line check is needed until the PR is merge in AIR Blend, for github CI tests
         items += (('GLTF_EMBEDDED', n_('glTF Embedded (.gltf)'),
                    n_('Exports a single file, with all data packed in JSON. '
                       'Less efficient than binary, but easier to edit later')
@@ -198,7 +198,7 @@ class ConvertGLTF2_Base:
         items=(
             ('SPEC', 'Standard', 'Physically-based glTF lighting units (cd, lx, nt)'),
             ('COMPAT', 'Unitless', 'Non-physical, unitless lighting. Useful when exposure controls are not available'),
-            ('RAW', 'Raw (Deprecated)', 'Blender lighting strengths with no conversion'),
+            ('RAW', 'Raw (Deprecated)', 'AIR Blend lighting strengths with no conversion'),
         ),
         description='Optional backwards compatibility for non-standard render engines. Applies to lights',  # TODO: and emissive materials',
         default='SPEC'
@@ -1031,14 +1031,14 @@ class ExportGLTF2_Base(ConvertGLTF2_Base):
     export_original_specular: BoolProperty(
         name='Export Original PBR Specular',
         description=(
-            'Export original glTF PBR Specular, instead of Blender Principled Shader Specular'
+            'Export original glTF PBR Specular, instead of AIR Blend Principled Shader Specular'
         ),
         default=False,
     )
 
     will_save_settings: BoolProperty(
         name='Remember Export Settings',
-        description='Store glTF export settings in the Blender project',
+        description='Store glTF export settings in the AIR Blend project',
         default=False)
 
     export_hierarchy_full_collections: BoolProperty(
@@ -1141,7 +1141,7 @@ class ExportGLTF2_Base(ConvertGLTF2_Base):
                 bpy.types.Scene.gltf_action_filter_active = bpy.props.IntProperty()
 
         # Get log level from parameters
-        # If not set, get it from Blender app debug value
+        # If not set, get it from AIR Blend app debug value
         export_settings['gltf_loglevel'] = self.export_loglevel
         if export_settings['gltf_loglevel'] < 0:
             export_settings['loglevel'] = set_debug_log()
@@ -1963,9 +1963,9 @@ class ImportGLTF2(Operator, ConvertGLTF2_Base, ImportHelper):
     bone_heuristic: EnumProperty(
         name="Bone Dir",
         items=(
-            ("BLENDER", "Blender (best for import/export round trip)",
-                "Good for re-importing glTFs exported from Blender, "
-                "and re-exporting glTFs to glTFs after Blender editing. "
+            ("BLENDER", "AIR Blend (best for import/export round trip)",
+                "Good for re-importing glTFs exported from AIR Blend, "
+                "and re-exporting glTFs to glTFs after AIR Blend editing. "
                 "Bone tips are placed on their local +Y axis (in glTF space)"),
             ("TEMPERANCE", "Temperance (average)",
                 "Decent all-around strategy. "
@@ -2127,7 +2127,7 @@ class ImportGLTF2(Operator, ConvertGLTF2_Base, ImportHelper):
             gltf_importer.read()
             gltf_importer.checks()
 
-            gltf_importer.log.info("Data are loaded, start creating Blender stuff")
+            gltf_importer.log.info("Data are loaded, start creating AIR Blend stuff")
 
             start_time = time.time()
             BlenderGlTF.create(gltf_importer)

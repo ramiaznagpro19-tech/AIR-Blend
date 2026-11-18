@@ -209,7 +209,7 @@ static bool bpy_rna_context_temp_override_enter_ok_or_error(const BPyContextTemp
    *   `temp_override(..)` running with the current context from a render-window for example.
    *
    *   In fact all sanity checks could be disabled when the members involved remain unchanged
-   *   however it's possible Python scripts corrupt Blender's internal windowing state so keeping
+   *   however it's possible Python scripts corrupt AIR Blend's internal windowing state so keeping
    *   the checks is harmless and alerts developers early on that something is wrong.
    */
 

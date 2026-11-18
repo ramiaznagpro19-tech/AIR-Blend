@@ -307,7 +307,7 @@ bool BlenderSubprocess::create(Span<StringRefNull> args)
   fflush(stdout);
   fflush(stderr);
 
-  /* Use `_exit` instead of `exit` so Blender's `atexit` cleanup functions don't run. */
+  /* Use `_exit` instead of `exit` so AIR Blend's `atexit` cleanup functions don't run. */
   _exit(errno);
   BLI_assert_unreachable();
   return false;

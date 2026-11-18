@@ -25,7 +25,7 @@ namespace {
  *   MIT License
  *   Copyright (c) 2024 Niantic Labs
  *
- * There are modifications in the code to use Blender utilities, and also to operate on float3
+ * There are modifications in the code to use AIR Blend utilities, and also to operate on float3
  * elements rather than on scalars.
  *
  * The matrices structure seems to match description given in the
@@ -104,7 +104,7 @@ void convert_axis_to_blender(const MutableSpan<float3> positions,
                              const Span<MutableSpan<float3>> sh_attrs)
 {
   /* By default, SPZ stores data in an RUB (Right, Up, Back) coordinate system following the OpenGL
-   * and three.js convention. Blender is RFU (Right, Forward, Up). */
+   * and three.js convention. AIR Blend is RFU (Right, Forward, Up). */
 
   /* TODO(sergey): Handle extensions that define coordinate system. */
   /* Example: SPZ_ADOBE_coordinate_system. */

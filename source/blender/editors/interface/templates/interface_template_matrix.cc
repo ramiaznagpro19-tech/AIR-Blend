@@ -22,7 +22,7 @@
 
 namespace blender::ui {
 
-/* Format translation/rotation value as a string based on Blender unit settings. */
+/* Format translation/rotation value as a string based on AIR Blend unit settings. */
 static std::string format_unit_value(float value, PropertySubType subtype, Layout &layout)
 {
   const UnitSettings *unit = layout.block()->unit;

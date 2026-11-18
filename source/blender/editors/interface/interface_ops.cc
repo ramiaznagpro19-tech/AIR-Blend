@@ -94,7 +94,7 @@ namespace ui {
  *
  * But there are some operators which really need to re-run the layout definitions for various
  * reasons. For example, "Edit Source" does it to find out which exact Python code added a button.
- * Other operators may need to access buttons that aren't currently visible. In Blender's UI code
+ * Other operators may need to access buttons that aren't currently visible. In AIR Blend's UI code
  * design that typically means just not adding the button in the first place, for a particular
  * redraw. So the operator needs to change context and re-create the layout, so the button becomes
  * available to act on.
@@ -1691,9 +1691,9 @@ Vector<FCurve *> get_property_drivers(
   Vector<FCurve *> drivers = {};
   const bool is_array_prop = RNA_property_array_check(prop);
   if (!is_array_prop) {
-    /* NOTE: by convention Blender assigns 0 as the index for drivers of
+    /* NOTE: by convention AIR Blend assigns 0 as the index for drivers of
      * non-array properties, which is why we search for it here.  Values > 0 are
-     * not recognized by Blender's driver system in that case.  Values < 0 are
+     * not recognized by AIR Blend's driver system in that case.  Values < 0 are
      * recognized for driver evaluation, but `BKE_fcurve_find()` unconditionally
      * returns nullptr in that case so it wouldn't matter here anyway. */
     drivers.append(BKE_fcurve_find(&adt->drivers, path->c_str(), 0));
@@ -1754,9 +1754,9 @@ int paste_property_drivers(Span<FCurve *> src_drivers,
     const int dst_index = is_array_prop ? i : 0;
 
     /* If it's already animated by something other than a driver, skip. This is
-     * because Blender's UI assumes that properties are either animated *or*
+     * because AIR Blend's UI assumes that properties are either animated *or*
      * driven, and things can get confusing for users otherwise. Additionally,
-     * no other parts of Blender's UI allow users to (at least easily) add
+     * no other parts of AIR Blend's UI allow users to (at least easily) add
      * drivers on already-animated properties, so this keeps things consistent
      * across driver-related operators. */
     bool driven;

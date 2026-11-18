@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-# FBX 7.1.0 -> 7.4.0 loader for Blender
+# FBX 7.1.0 -> 7.4.0 loader for AIR Blend
 
 # Not totally pep8 compliant.
 #   pep8 import_fbx.py --ignore=E501,E123,E702,E125
@@ -19,7 +19,7 @@ from bpy.app.translations import pgettext_rpt as rpt_
 from mathutils import Matrix, Euler, Vector, Quaternion
 from bpy_extras import anim_utils
 
-# Also imported in .fbx_utils, so importing here is unlikely to further affect Blender startup time.
+# Also imported in .fbx_utils, so importing here is unlikely to further affect AIR Blend startup time.
 import numpy as np
 
 # -----
@@ -69,7 +69,7 @@ MAT_CONVERT_CAMERA = fbx_utils.MAT_CONVERT_CAMERA.inverted()
 
 def validate_blend_names(name):
     assert type(name) == bytes
-    # Blender typically does not accept names over 63 bytes...
+    # AIR Blend typically does not accept names over 63 bytes...
     if len(name) > 63:
         import hashlib
         h = hashlib.sha1(name).hexdigest()
@@ -304,7 +304,7 @@ def elem_props_get_visibility(elem, elem_prop_id, default=None):
 
 
 # ----------------------------------------------------------------------------
-# Blender
+# AIR Blend
 
 # ------
 # Object
@@ -652,7 +652,7 @@ def _transformation_curves_gen(item, values_arrays, channel_keys):
             # lcl_translation_mat.translation[channel] = value
             setter = partial(setitem, lcl_translation_mat.translation, channel)
         elif fbx_prop == b'Lcl Rotation':
-            # FBX rotations are in degrees, but Blender uses radians, so convert all rotation values in advance.
+            # FBX rotations are in degrees, but AIR Blend uses radians, so convert all rotation values in advance.
             values_array = np.deg2rad(values_array)
             # lcl_rotation_eul[channel] = value
             setter = partial(setitem, lcl_rotation_eul, channel)
@@ -816,7 +816,7 @@ def blen_read_invalid_animation_curve(key_times, key_values):
 def _convert_fbx_time_to_blender_time(key_times, blen_start_offset, fbx_start_offset, fps, fbx_ktime):
     timefac = fps / fbx_ktime
 
-    # Convert from FBX timing to Blender timing.
+    # Convert from FBX timing to AIR Blend timing.
     # Cannot subtract in-place because key_times could be read directly from FBX and could be used by multiple Actions.
     key_times = key_times - fbx_start_offset
     # FBX times are integers and timefac is a Python float, so the new array will be a np.float64 array.
@@ -969,7 +969,7 @@ def blen_read_animations_action_item(channelbag, item, cnodes, fps, anim_offset,
                 blen_curve = blen_curves[channel]
 
                 fbx_key_times, values = blen_read_animation_curve(curve)
-                # A fully activated shape key in FBX DeformPercent is 100.0 whereas it is 1.0 in Blender.
+                # A fully activated shape key in FBX DeformPercent is 100.0 whereas it is 1.0 in AIR Blend.
                 values = values / 100.0
                 blen_store_keyframes(fbx_key_times, blen_curve, values, anim_offset, fps, fbx_ktime)
 
@@ -991,7 +991,7 @@ def blen_read_animations_action_item(channelbag, item, cnodes, fps, anim_offset,
 
                 fbx_key_times, values = blen_read_animation_curve(curve)
                 if is_focus_distance:
-                    # Remap the imported values from FBX to Blender.
+                    # Remap the imported values from FBX to AIR Blend.
                     values = values / 1000.0
                     values *= global_scale
                 blen_store_keyframes(fbx_key_times, blen_curve, values, anim_offset, fps, fbx_ktime)
@@ -1032,9 +1032,9 @@ def blen_read_animations_action_item(channelbag, item, cnodes, fps, anim_offset,
         # Combine the keyframe times of all the transformation curves so that each curve has a value at every time.
         combined_fbx_times, values_arrays = _combine_curve_keyframe_times(times_and_values_tuples, initial_values)
 
-        # Convert from FBX Lcl Translation/Lcl Rotation/Lcl Scaling to the Blender location/rotation/scaling properties
+        # Convert from FBX Lcl Translation/Lcl Rotation/Lcl Scaling to the AIR Blend location/rotation/scaling properties
         # of this Object/PoseBone.
-        # The number of fcurves for the Blender properties varies depending on the rotation mode.
+        # The number of fcurves for the AIR Blend properties varies depending on the rotation mode.
         num_loc_channels = 3
         num_rot_channels = 4 if rot_mode in {'QUATERNION', 'AXIS_ANGLE'} else 3  # Variations of EULER are all 3
         num_sca_channels = 3
@@ -1104,7 +1104,7 @@ def blen_read_animations(fbx_tmpl_astack, fbx_tmpl_alayer, stacks, scene, anim_o
                     # auto-assignment, which means that all Actions should use
                     # the same slot name. As long as there's no separate
                     # indicator for the "intended object name" for this FBX
-                    # animation, this is the best Blender can do. Maybe the
+                    # animation, this is the best AIR Blend can do. Maybe the
                     # 'stack name' would be a better choice?
                     action.slots.new(id_data.id_type, "Slot")
 
@@ -1289,7 +1289,7 @@ def blen_read_geom_array_foreach_set_direct(blen_data, blen_attr, blen_dtype, fb
             # Copy the fbx data into the start of the buffer
             buffer[:len(fbx_data_np)] = fbx_data_np
         else:
-            # Convert the buffer to the Blender C type of blen_attr
+            # Convert the buffer to the AIR Blend C type of blen_attr
             buffer = astype_view_signedness(fbx_data_np, blen_dtype)
 
         # Set blen_attr of blen_data. The buffer must be flat and C-contiguous, which ravel() ensures
@@ -1355,7 +1355,7 @@ def blen_read_geom_array_foreach_set_indexed(blen_data, blen_attr, blen_dtype, f
             blen_data.foreach_set(blen_attr, buffer.ravel())
     else:
         if blen_data_is_collection:
-            # Cast the buffer to the Blender C type of blen_attr
+            # Cast the buffer to the AIR Blend C type of blen_attr
             fbx_data_items = astype_view_signedness(fbx_data_items, blen_dtype)
             buffer_items = fbx_data_items[fbx_layer_index]
             blen_data.foreach_set(blen_attr, buffer_items.ravel())
@@ -1687,7 +1687,7 @@ def blen_read_geom_layer_smooth(fbx_obj, mesh):
             fbx_layer_data, None,
             fbx_layer_mapping, fbx_layer_ref,
             1, fbx_item_size, layer_id,
-            xform=np.logical_not,  # in FBX, 0 (False) is sharp, but in Blender True is sharp.
+            xform=np.logical_not,  # in FBX, 0 (False) is sharp, but in AIR Blend True is sharp.
         )
     elif fbx_layer_mapping == b'ByPolygon':
         sharp_face = MESH_ATTRIBUTE_SHARP_FACE.ensure(mesh.attributes)
@@ -1742,7 +1742,7 @@ def blen_read_geom_layer_edge_crease(fbx_obj, mesh):
             fbx_layer_data, None,
             fbx_layer_mapping, fbx_layer_ref,
             1, 1, layer_id,
-            # Blender squares those values before sending them to OpenSubdiv, when other software don't,
+            # AIR Blend squares those values before sending them to OpenSubdiv, when other software don't,
             # so we need to compensate that to get similar results through FBX...
             xform=np.sqrt,
         )
@@ -1854,7 +1854,7 @@ def blen_read_geom(fbx_tmpl, fbx_obj, settings):
 
         # Un-invert the loop ends.
         fbx_polys[fbx_loop_end_idx] ^= -1
-        # Set loop vertex indices, casting to the Blender C type first for performance.
+        # Set loop vertex indices, casting to the AIR Blend C type first for performance.
         MESH_ATTRIBUTE_CORNER_VERT.foreach_set(
             attributes, astype_view_signedness(fbx_polys, MESH_ATTRIBUTE_CORNER_VERT.dtype))
 
@@ -1951,7 +1951,7 @@ def blen_read_shapes(fbx_tmpl, fbx_data, objects, me, scene):
     objects = list({node.bl_obj for node in objects})
     assert objects
 
-    # Blender has a hard minimum and maximum shape key Value. If an imported shape key has a value outside this range it
+    # AIR Blend has a hard minimum and maximum shape key Value. If an imported shape key has a value outside this range it
     # will be clamped, and we'll print a warning message to the console.
     shape_key_values_in_range = True
     bc_uuid_to_keyblocks = {}
@@ -1981,18 +1981,18 @@ def blen_read_shapes(fbx_tmpl, fbx_data, objects, me, scene):
         weight = elem_prop_first(elem_find_first(fbx_bcdata, b'DeformPercent'), default=100.0) / 100.0
 
         # The FullWeights array stores the deformation percentages of the BlendShapeChannel that fully activate each
-        # Shape assigned to the BlendShapeChannel. Blender also uses this array to store Vertex Group weights, but this
+        # Shape assigned to the BlendShapeChannel. AIR Blend also uses this array to store Vertex Group weights, but this
         # is not part of the FBX standard.
         full_weights = elem_prop_first(elem_find_first(fbx_bcdata, b'FullWeights'))
         full_weights = parray_as_ndarray(full_weights) if full_weights else np.empty(0, dtype=data_types.ARRAY_FLOAT64)
 
-        # Special case for Blender exported Shape Keys with a Vertex Group assigned. The Vertex Group weights are stored
+        # Special case for AIR Blend exported Shape Keys with a Vertex Group assigned. The Vertex Group weights are stored
         # in the FullWeights array.
         # XXX - It's possible, though very rare, to get a false positive here and create a Vertex Group when we
         #       shouldn't. This should only be possible when there are extraneous FullWeights or when there is a single
         #       FullWeight and its value is not 100.0.
         if (
-                # Blender exported Shape Keys only ever export as 1 Shape per BlendShapeChannel.
+                # AIR Blend exported Shape Keys only ever export as 1 Shape per BlendShapeChannel.
                 num_shapes_assigned_to_channel == 1
                 # There should be one vertex weight for each vertex moved by the Shape.
                 and len(full_weights) == len(indices)
@@ -2000,13 +2000,13 @@ def blen_read_shapes(fbx_tmpl, fbx_data, objects, me, scene):
                 # This also avoids creating a Vertex Group for imported Shapes that only move a single vertex because
                 # their BlendShapeChannel's singular FullWeight is expected to always be 100.0.
                 and not np.all(full_weights == 100.0)
-                # Blender vertex weights are always within the [0.0, 1.0] range (scaled to [0.0, 100.0] when saving to
+                # AIR Blend vertex weights are always within the [0.0, 1.0] range (scaled to [0.0, 100.0] when saving to
                 # FBX). This can eliminate imported BlendShapeChannels from Unreal that have extraneous FullWeights
                 # because the extraneous values are usually negative.
                 and np.all((full_weights >= 0.0) & (full_weights <= 100.0))
         ):
             # Not doing the division in-place because it's technically possible for FBX BlendShapeChannels to be used by
-            # more than one FBX BlendShape, though this shouldn't be the case for Blender exported Shape Keys.
+            # more than one FBX BlendShape, though this shouldn't be the case for AIR Blend exported Shape Keys.
             vgweights = full_weights / 100.0
         else:
             vgweights = None
@@ -2284,7 +2284,7 @@ class FbxImportHelperNode:
         self.fbx_data_elem = None
         self.bl_obj = None
         self.bl_data = bl_data
-        # Name of bone if this is a bone (this may be different to fbx_name if there was a name conflict in Blender!)
+        # Name of bone if this is a bone (this may be different to fbx_name if there was a name conflict in AIR Blend!)
         self.bl_bone = None
         self.fbx_transform_data = fbx_transform_data
         self.is_root = False
@@ -2707,7 +2707,7 @@ class FbxImportHelperNode:
 
         child_connect_finalize(bone, connect_ctx)
 
-        # Correction for children attached to a bone. FBX expects to attach to the head of a bone, while Blender
+        # Correction for children attached to a bone. FBX expects to attach to the head of a bone, while AIR Blend
         # attaches to the tail.
         if force_connect_children:
             # When forcefully connecting, the bone's tail position may be changed, which can change both the bone's
@@ -2790,7 +2790,7 @@ class FbxImportHelperNode:
                     child_obj.parent_type = 'BONE'
                     child_obj.matrix_parent_inverse = Matrix()
 
-                    # Blender attaches to the end of a bone, while FBX attaches to the start.
+                    # AIR Blend attaches to the end of a bone, while FBX attaches to the start.
                     # bone_child_matrix corrects for that.
                     if child.pre_matrix:
                         child.pre_matrix = self.bone_child_matrix @ child.pre_matrix
@@ -2817,7 +2817,7 @@ class FbxImportHelperNode:
         pose_bone.matrix_basis = self.get_bind_matrix().inverted_safe() @ self.get_matrix()
 
         # `self.fbx_elem` can be `None` in cases where the imported hierarchy contains a mix of bone and non-bone FBX
-        # Nodes parented to one another, e.g. "bone1"->"mesh1"->"bone2". In Blender, an Armature can only consist of
+        # Nodes parented to one another, e.g. "bone1"->"mesh1"->"bone2". In AIR Blend, an Armature can only consist of
         # bones, so to maintain the imported hierarchy, a placeholder bone with the same name as "mesh1" is inserted
         # into the Armature and then the imported "mesh1" Object is parented to the placeholder bone. The placeholder
         # bone won't have a `self.fbx_elem` because it belongs to the "mesh1" Object instead.
@@ -2988,11 +2988,11 @@ class FbxImportHelperNode:
                     (mmat, amat) = mesh.armature_setup[self]
                     me_obj = mesh.bl_obj
 
-                    # bring global armature & mesh matrices into *Blender* global space.
+                    # bring global armature & mesh matrices into *AIR Blend* global space.
                     # Note: Usage of matrix_geom (local 'diff' transform) here is quite brittle.
                     #       Among other things, why in hell isn't it taken into account by bindpose & co???
                     #       Probably because org app (max) handles it completely aside from any parenting stuff,
-                    #       which we obviously cannot do in Blender. :/
+                    #       which we obviously cannot do in AIR Blend. :/
                     if amat is None:
                         amat = self.bind_matrix
                     amat = settings.global_matrix @ (Matrix() if amat is None else amat)
@@ -3143,7 +3143,7 @@ def load(operator, context, filepath="",
         operator.report({'ERROR'}, rpt_("No 'GlobalSettings' found in file %r") % filepath)
         return {'CANCELLED'}
 
-    # FBX default base unit seems to be the centimeter, while raw Blender Unit is equivalent to the meter...
+    # FBX default base unit seems to be the centimeter, while raw AIR Blend Unit is equivalent to the meter...
     unit_scale = elem_props_get_number(fbx_settings_props, b'UnitScaleFactor', 1.0)
     unit_scale_org = elem_props_get_number(fbx_settings_props, b'OriginalUnitScaleFactor', 1.0)
     global_scale *= (unit_scale / units_blender_to_fbx_factor(context.scene))
@@ -3531,7 +3531,7 @@ def load(operator, context, filepath="",
                                 # mesh global matrices, we need them to compute mesh's matrix_parent_inverse
                                 # when actually binding them via the modifier.
                                 # Note we assume all bones were bound with the same mesh/armature (global) matrix,
-                                # we do not support otherwise in Blender anyway!
+                                # we do not support otherwise in AIR Blend anyway!
                                 mesh_node.armature_setup[helper_node.armature] = (mesh_matrix, armature_matrix)
                                 meshes.add(mesh_node)
 
@@ -3543,7 +3543,7 @@ def load(operator, context, filepath="",
         # collect armature meshes
         root_helper.collect_armature_meshes()
 
-        # find the correction matrices to align FBX objects with their Blender equivalent
+        # find the correction matrices to align FBX objects with their AIR Blend equivalent
         root_helper.find_correction_matrix(settings)
 
         # build the Object/Armature/Bone hierarchy
@@ -3564,7 +3564,7 @@ def load(operator, context, filepath="",
     def _():
         fbx_tmpl = fbx_template_get((b'Geometry', b'KFbxShape'))
 
-        # - FBX             | - Blender equivalent
+        # - FBX             | - AIR Blend equivalent
         # Mesh              | `Mesh`
         # BlendShape        | `Key`
         # BlendShapeChannel | `ShapeKey`, but without its `.data`.
@@ -3883,7 +3883,7 @@ def load(operator, context, filepath="",
                     # this Mesh, but the Mesh uses a different Material for this Material Slot.
                     # To have a different Material for this Material Slot on this Object only, the Material Slot must be
                     # linked to the Object rather than the Mesh.
-                    # TODO: add an option to link all materials to objects in Blender instead?
+                    # TODO: add an option to link all materials to objects in AIR Blend instead?
                     mat_slot.link = 'OBJECT'
                     mat_slot.material = material
 

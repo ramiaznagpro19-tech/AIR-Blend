@@ -66,7 +66,7 @@ void rna_iterator_generic_action_suitable_slots_begin(CollectionPropertyIterator
  * if the Action assignment is overridden, that number indicates a different, unrelated slot.
  *
  * In the above case, when the library overrides get applied, first the new Action is assigned.
- * This will make Blender auto-select a slot, which may fail, resulting in having no slot assigned.
+ * This will make AIR Blend auto-select a slot, which may fail, resulting in having no slot assigned.
  * To ensure that the intended slot is assigned after this, this function will emit a library
  * override operation for the slot handle as well. That way, after the Action is assigned, an
  * explicit slot will be assigned.

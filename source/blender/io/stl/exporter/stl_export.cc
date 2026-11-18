@@ -133,7 +133,7 @@ void export_frame(Depsgraph *depsgraph,
     float axes_transform[3][3];
     unit_m3(axes_transform);
     float xform[4][4];
-    /* +Y-forward and +Z-up are the default Blender axis settings. */
+    /* +Y-forward and +Z-up are the default AIR Blend axis settings. */
     mat3_from_axis_conversion(
         export_params.forward_axis, export_params.up_axis, IO_AXIS_Y, IO_AXIS_Z, axes_transform);
     mul_m4_m3m4(xform, axes_transform, obj_eval->object_to_world().ptr());

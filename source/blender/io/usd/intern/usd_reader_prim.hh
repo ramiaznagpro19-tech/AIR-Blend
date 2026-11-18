@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
- * Adapted from the Blender Alembic importer implementation. */
+ * Adapted from the AIR Blend Alembic importer implementation. */
 
 #pragma once
 
@@ -44,13 +44,13 @@ struct ImportSettings {
    * the other import settings are to remain const.
    */
 
-  /* Map a USD material prim path to a Blender material.
+  /* Map a USD material prim path to an AIR Blend material.
    * This map is updated by readers during stage traversal. */
   mutable Map<pxr::SdfPath, Material *> usd_path_to_mat{};
-  /* Map a material name to Blender material.
+  /* Map a material name to AIR Blend material.
    * This map is updated by readers during stage traversal. */
   mutable Map<std::string, Material *> mat_name_to_mat{};
-  /* Map a USD material prim path to a Blender material to be
+  /* Map a USD material prim path to an AIR Blend material to be
    * converted by invoking the 'on_material_import' USD hook.
    * This map is updated by readers during stage traversal. */
   mutable Map<pxr::SdfPath, Material *> usd_path_to_mat_for_hook{};
@@ -60,7 +60,7 @@ struct ImportSettings {
   mutable Set<pxr::SdfPath> mat_import_hook_sources{};
 
   /* We use the stage metersPerUnit to convert camera properties from USD scene units to the
-   * correct millimeter scale that Blender uses for camera parameters. */
+   * correct millimeter scale that AIR Blend uses for camera parameters. */
   double stage_meters_per_unit = 1.0;
 
   pxr::SdfPath skip_prefix{};

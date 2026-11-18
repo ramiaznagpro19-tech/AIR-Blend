@@ -100,7 +100,7 @@ LibOCIOConfig::LibOCIOConfig(const OCIO_NAMESPACE::ConstConfigRcPtr &ocio_config
 {
   BLI_assert(ocio_config);
 
-  /* Set the global OpenColorIO configuration so that other parts of Blender can access it. For
+  /* Set the global OpenColorIO configuration so that other parts of AIR Blend can access it. For
    * example, Cycles uses for own color management of textures.
    *
    * Acquire a pointer to the configuration and pass it around explicitly to avoid unneeded shared
@@ -329,7 +329,7 @@ float3 LibOCIOConfig::get_default_luma_coefs() const
     report_exception(exception);
   }
 
-  /* Fallback to the older Blender assumed primaries of ITU-BT.709 / sRGB, matching the
+  /* Fallback to the older AIR Blend assumed primaries of ITU-BT.709 / sRGB, matching the
    * coefficients used in the fallback configuration. */
   return float3(0.2126f, 0.7152f, 0.0722f);
 }
@@ -418,7 +418,7 @@ const ColorSpace *LibOCIOConfig::get_color_space(const StringRefNull name) const
     return nullptr;
   }
 
-  /* TODO(sergey): Is there faster way to lookup Blender-side color space?
+  /* TODO(sergey): Is there faster way to lookup AIR Blend-side color space?
    * It does not seem that pointer in ConstColorSpaceRcPtr is unique enough to use for
    * comparison. */
   for (const std::unique_ptr<LibOCIOColorSpace> &color_space : color_spaces_) {
@@ -437,7 +437,7 @@ const ColorSpace *LibOCIOConfig::get_color_space(const StringRefNull name) const
 
   if (!ocio_config_->isInactiveColorSpace(ocio_color_space->getName())) {
     report_error(
-        fmt::format("Invalid OpenColorIO configuration: color space {} not found on Blender side",
+        fmt::format("Invalid OpenColorIO configuration: color space {} not found on AIR Blend side",
                     ocio_color_space->getName()));
   }
 
@@ -609,7 +609,7 @@ const Display *LibOCIOConfig::get_default_display() const
 
 const Display *LibOCIOConfig::get_display_by_name(const StringRefNull name) const
 {
-  /* TODO(@sergey): Is there faster way to lookup Blender-side display? */
+  /* TODO(@sergey): Is there faster way to lookup AIR Blend-side display? */
   for (const LibOCIODisplay &display : displays_) {
     if (display.name() == name) {
       return &display;
@@ -666,7 +666,7 @@ const ColorSpace *LibOCIOConfig::get_display_view_color_space(const StringRefNul
 
 const Look *LibOCIOConfig::get_look_by_name(const StringRefNull name) const
 {
-  /* TODO(sergey): Is there faster way to lookup Blender-side look? */
+  /* TODO(sergey): Is there faster way to lookup AIR Blend-side look? */
   for (const LibOCIOLook &look : looks_) {
     if (look.name() == name) {
       return &look;

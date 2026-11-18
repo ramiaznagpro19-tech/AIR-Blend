@@ -93,10 +93,10 @@ class DeviceInfo {
   bool has_gpu_queue = false;           /* Device supports GPU queue. */
   bool use_hardware_raytracing = false; /* Use hardware instructions to accelerate ray tracing. */
   bool use_metalrt_by_default = false;  /* Use MetalRT by default. */
-  /* Indicate that device execution has been optimized by Blender or vendor developers.
+  /* Indicate that device execution has been optimized by AIR Blend or vendor developers.
    * For LTS versions, this helps communicate that newer versions may have better performance. */
   bool has_execution_optimization = true;
-  /* True if device's driver is above the minimal Blender required version, false otherwise.
+  /* True if device's driver is above the minimal AIR Blend required version, false otherwise.
    * Needed for properly communicating this fact back to the user, who then can choose to upgrade
    * the driver or do nothing.
    *

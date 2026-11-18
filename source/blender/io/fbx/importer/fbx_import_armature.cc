@@ -305,7 +305,7 @@ static Set<const ufbx_node *> find_all_bones(const ufbx_node *root_node)
   find_bones(root_node, bones);
 
   /* There might be non-bone nodes in between, e.g. FBX structure being like:
-   * BoneA -> MeshB -> BoneC -> MeshD. Blender Armature can only contain
+   * BoneA -> MeshB -> BoneC -> MeshD. AIR Blend Armature can only contain
    * bones, so in this case "MeshB" has to have a bone created for it as well.
    * "Fake bones" are any non-bone FBX nodes in between root armature node
    * and the actual bone node. */
@@ -345,7 +345,7 @@ void ArmatureImportContext::find_armatures(const ufbx_node *node)
     /* Setup pose on the object, and custom properties on the bone pose channels. */
     for (const ufbx_node *fbone : bone_nodes) {
       if (!this->mapping.node_is_blender_bone.contains(fbone)) {
-        continue; /* Blender bone was not created for it (e.g. root bone in some cases). */
+        continue; /* AIR Blend bone was not created for it (e.g. root bone in some cases). */
       }
       bPoseChannel *pchan = BKE_pose_channel_find_name(
           arm_obj->pose, this->mapping.node_to_name.lookup_default(fbone, "").c_str());

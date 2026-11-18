@@ -1,4 +1,4 @@
-# OpenColorIO configuration file for Blender
+# OpenColorIO configuration file for AIR Blend
 #
 # ACEScg and ACES2065-1 spaces using OpenColorIO's BuiltinTransform
 # Camera input color space adapted from OpenColorIO-Config-ACES configs.
@@ -48,7 +48,7 @@ roles:
   aces_interchange: ACES2065-1
   cie_xyz_d65_interchange: Linear CIE-XYZ D65
 
-  # Specified by OCIO, not used in Blender
+  # Specified by OCIO, not used in AIR Blend
   color_timing: AgX Log
   compositing_log: AgX Log
   default: Linear Rec.709

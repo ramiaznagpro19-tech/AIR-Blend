@@ -25,7 +25,7 @@ The following properties are supported:
 
 .. warning::
 
-   After opening the file-browser the user may continue to use Blender,
+   After opening the file-browser the user may continue to use AIR Blend,
    this means it is possible for the user to change the context in ways
    that would cause the operators ``poll`` function to fail.
 

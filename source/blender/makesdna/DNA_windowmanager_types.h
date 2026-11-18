@@ -74,7 +74,7 @@ struct ReportTimerInfo {
 
 // #ifdef WITH_XR_OPENXR
 struct wmXrData {
-  /** Runtime information for managing Blender specific behaviors. */
+  /** Runtime information for managing AIR Blend specific behaviors. */
   struct wmXrRuntimeData *runtime = nullptr;
   /** Permanent session settings (draw mode, feature toggles, etc). Stored in files and accessible
    * even before the session runs. */

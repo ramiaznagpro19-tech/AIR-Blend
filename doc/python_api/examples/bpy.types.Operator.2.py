@@ -21,7 +21,7 @@ execute a function and that this operator can be invoked or executed from
 the Python API.
 
 Also notice this operator defines its own properties, these are different
-to typical class properties because Blender registers them with the
+to typical class properties because AIR Blend registers them with the
 operator, to use as arguments when called, saved for operator undo/redo and
 automatically added into the user interface.
 """

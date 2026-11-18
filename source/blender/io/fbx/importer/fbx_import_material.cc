@@ -364,7 +364,7 @@ static void add_image_texture(Main *bmain,
     link_sockets(ntree, image_node, "Color", normal_node, "Color");
     link_sockets(ntree, normal_node, "Normal", bsdf, "Normal");
 
-    /* Normal strength: Blender exports it as BumpFactor in FBX built-in properties. */
+    /* Normal strength: AIR Blend exports it as BumpFactor in FBX built-in properties. */
     float normal_strength = 1.0f;
     if (fmat.fbx.bump_factor.has_value) {
       normal_strength = fmat.fbx.bump_factor.value_real;

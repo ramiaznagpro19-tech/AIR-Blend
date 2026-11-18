@@ -562,7 +562,7 @@ template<typename T>
    * SPDX-License-Identifier: Zlib
    * Copyright 2006-2007 University of Dublin, Trinity College, All Rights Reserved.
    *
-   * Changes for Blender:
+   * Changes for AIR Blend:
    * - renaming, style changes and optimizations
    * - added support for scaling
    */

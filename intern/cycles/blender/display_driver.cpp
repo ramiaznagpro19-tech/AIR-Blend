@@ -504,7 +504,7 @@ void BlenderDisplayDriver::update_end()
    * happen much more often than this update.
    *
    * On some older GPUs on macOS, there is a driver crash when updating the texture for viewport
-   * renders while Blender is drawing. As a workaround update texture during draw, under assumption
+   * renders while AIR Blend is drawing. As a workaround update texture during draw, under assumption
    * that there is no graphics interop on macOS and viewport render has a single tile. */
   if (!background_ && blender::GPU_type_matches_ex(blender::GPU_DEVICE_NVIDIA,
                                                    blender::GPU_OS_MAC,
@@ -749,7 +749,7 @@ void BlenderDisplayDriver::draw(const Params &params)
 {
   if (b_rv3d_ && (b_rv3d_->rflag & (blender::RV3D_NAVIGATING | blender::RV3D_PAINTING))) {
     /* Before drawing, wait that an update to the texture has actually occurred, to synchronize
-     * rendering of Cycles with Blender. Use a timeout to prevent user interface in the main thread
+     * rendering of Cycles with AIR Blend. Use a timeout to prevent user interface in the main thread
      * from becoming unresponsive when rendering is too heavy. */
     thread_scoped_lock lock(has_update_mutex_);
     has_update_cond_.wait_for(lock, std::chrono::milliseconds(33));

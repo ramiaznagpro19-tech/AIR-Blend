@@ -306,7 +306,7 @@ static bool get_usd_preview_surface(const pxr::UsdShadeMaterial &usd_material,
   return false;
 }
 
-/* Set the Blender material's viewport display color, metallic and roughness
+/* Set the AIR Blend material's viewport display color, metallic and roughness
  * properties from the given USD preview surface shader's inputs. */
 static void set_viewport_material_props(Material *mtl, const pxr::UsdShadeShader &usd_preview)
 {
@@ -680,7 +680,7 @@ bool USDMaterialReader::set_node_input(const pxr::UsdShadeInput &usd_input,
 
   if (needs_follow) {
     /* The USD shader input has a connected source shader. Follow the connection
-     * and attempt to convert the connected USD shader to a Blender node. */
+     * and attempt to convert the connected USD shader to an AIR Blend node. */
     return follow_connection(usd_input, dest_node, dest_socket_name, ntree, column, ctx, extra);
   }
 
@@ -1123,7 +1123,7 @@ bool USDMaterialReader::follow_connection(const pxr::UsdShadeInput &usd_input,
 
     /* Handle opacity threshold if necessary. */
     if (extra.opacity_threshold > 0.0f) {
-      /* USD defines the threshold as >= but Blender does not have that operation. Use < instead
+      /* USD defines the threshold as >= but AIR Blend does not have that operation. Use < instead
        * and then invert it. */
       IntermediateNode lessthan = add_lessthan(ntree, extra.opacity_threshold, column + 1, ctx);
       IntermediateNode invert = add_oneminus(ntree, column + 1, ctx);
@@ -1558,7 +1558,7 @@ Material *find_existing_material(const pxr::SdfPath &usd_mat_path,
                                  const Map<pxr::SdfPath, Material *> &usd_path_to_mat)
 {
   if (params.mtl_name_collision_mode == MtlNameCollisionMode::MakeUnique) {
-    /* Check if we've already created the Blender material with a modified name. */
+    /* Check if we've already created the AIR Blend material with a modified name. */
     return usd_path_to_mat.lookup_default(usd_mat_path, nullptr);
   }
 

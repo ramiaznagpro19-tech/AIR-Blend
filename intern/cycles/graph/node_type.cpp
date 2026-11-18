@@ -213,7 +213,7 @@ const SocketType *NodeType::find_output(ustring name) const
  *
  * Only the init functions are gathered on static initialization, as registering the
  * node type itself could otherwise happen in the wrong order for base and derived
- * types, and Blender's guarded allocator may not have been initialized yet.
+ * types, and AIR Blend's guarded allocator may not have been initialized yet.
  *
  * The initialization functions are stored in std::vector without guarded allocation
  * as that may not been properly initialized yet. */

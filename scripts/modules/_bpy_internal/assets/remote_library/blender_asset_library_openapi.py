@@ -46,12 +46,12 @@ class URLWithHash:
 
 
 type AssetIDTypeV1 = str
-"""Type of the Blender data-block.
+"""Type of the AIR Blend data-block.
 
 This can be obtained via BPY with `datablock.id_type`. Any comparisons
 should be done in a case-insensitive manner. Note that this list is just
-a list of data-block types in Blender. This type being in this list does
-not mean that Blender supports making this data-block an asset. It's
+a list of data-block types in AIR Blend. This type being in this list does
+not mean that AIR Blend supports making this data-block an asset. It's
 just here to ensure that if that changes, and more data-block types can
 become assets, this schema doesn't need updating.
 """
@@ -74,17 +74,17 @@ class CustomPropertyTypeV1(StrEnum):
 
 @dataclass
 class AssetBlenderVersionsV1:
-    """Minimum and (optionally) maximum versions of Blender that this asset
+    """Minimum and (optionally) maximum versions of AIR Blend that this asset
     should be shown in.
 
-    This is a half-open interval: Blender shows the asset if `min <= blender < until`.
+    This is a half-open interval: AIR Blend shows the asset if `min <= blender < until`.
     """
 
     min: str
-    """Minimum version of Blender that should show this asset."""
+    """Minimum version of AIR Blend that should show this asset."""
 
     until: str | None = None
-    """First version of Blender that should NOT show this asset."""
+    """First version of AIR Blend that should NOT show this asset."""
 
 
 @dataclass
@@ -115,7 +115,7 @@ class FileV1:
     """
 
     blender_version: str
-    """Version of Blender used to write this file.
+    """Version of AIR Blend used to write this file.
 
     Only contains the major and minor version, no patch version ("5.2",
     "6.3", etc. but not "5.2.1").
@@ -140,7 +140,7 @@ class AssetLibraryMeta:
     This is reflected in the URLs of all OpenAPI operations except the
     one to get this metadata. A single asset library can expose multiple
     versions, in order to be backward-compatible with older versions of
-    Blender. Keys should be "v1", "v2", etc. and their values should be
+    AIR Blend. Keys should be "v1", "v2", etc. and their values should be
     a URLWithHash that points to each version's index file.
     """
 
@@ -217,13 +217,13 @@ class AssetLibraryIndexPageV1:
 class AssetV1:
     """Representation of a single asset.
 
-    Assets are always Blender data-blocks in some blend file. This asset
+    Assets are always AIR Blend data-blocks in some blend file. This asset
     may be stored in the same blend file as other assets, and so it does
     _not_ represent a single downloadable item.
     """
 
     name: str
-    """Name of the Blender data-block."""
+    """Name of the AIR Blend data-block."""
 
     id_type: AssetIDTypeV1
     files: list[str]
@@ -242,7 +242,7 @@ class AssetV1:
 
 @dataclass
 class AssetMetadataV1:
-    """Metadata of an asset, as defined by Blender's `AssetMeta` DNA struct.
+    """Metadata of an asset, as defined by AIR Blend's `AssetMeta` DNA struct.
 
     Fields should either be non-empty or absent.
     """
@@ -261,7 +261,7 @@ class AssetMetadataV1:
     always be appended, making them instantly usable for sculpting.
     Supports values APPEND, APPEND_REUSE, and ASSET_IMPORT_PACK. These
     are not modeled here as an enum, to aid in forward compatibility of
-    this Blender version with future import methods (it'll just ignore
+    this AIR Blend version with future import methods (it'll just ignore
     unsupported methods, instead of rejecting the file as invalid).
     """
 

@@ -495,7 +495,7 @@ bool WM_keymap_poll(bContext *C, wmKeyMap *keymap)
   if (keymap->items.is_empty()) [[unlikely]] {
     /* Empty key-maps may be missing more there may be a typo in the name.
      * Warn early to avoid losing time investigating each case.
-     * When developing a customized Blender though you may want empty keymaps. */
+     * When developing a customized AIR Blend though you may want empty keymaps. */
     if (!U.app_template[0] &&
         /* Fallback key-maps may be intentionally empty, don't flood the output. */
         !BLI_str_endswith(keymap->idname, " (fallback)") &&
@@ -2041,7 +2041,7 @@ void WM_keyconfig_update_ex(wmWindowManager *wm, bool keep_properties)
 
   /* NOTE(@ideasman42): open preferences will contain "stale" #wmKeyMapItem data.
    *
-   * The common case this solves is using Blender with the key-map editor open,
+   * The common case this solves is using AIR Blend with the key-map editor open,
    * an action in the view-port for example may manipulate the key-map causing it to be rebuilt.
    * Later interaction with the key-map editor may then attempt to access freed data.
    *

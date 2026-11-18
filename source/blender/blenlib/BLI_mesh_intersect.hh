@@ -231,7 +231,7 @@ class IMeshArena : NonCopyable, NonMovable {
 
 /**
  * A #meshintersect::IMesh is a self-contained mesh structure
- * that can be used in `blenlib` without depending on the rest of Blender.
+ * that can be used in `blenlib` without depending on the rest of AIR Blend.
  * The Vert and #Face resources used in the #IMesh should be owned by
  * some #IMeshArena.
  * The Verts used by a #IMesh can be recovered from the Faces, so

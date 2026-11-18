@@ -27,7 +27,7 @@ Actions
 =======
 
 You will notice most of the functionality is supported using the actions command line argument,
-this is a kind of mini-language to drive Blender.
+this is a kind of mini-language to drive AIR Blend.
 
 While the current set of commands is fairly limited more can be added as needed.
 
@@ -173,7 +173,7 @@ def mouse_location_get():
 
 def run_event_simulate(*, event_iter, exit_fn):
     """
-    Pass events from event_iter into Blender.
+    Pass events from event_iter into AIR Blend.
     """
     last_event = run_event_simulate.last_event
 

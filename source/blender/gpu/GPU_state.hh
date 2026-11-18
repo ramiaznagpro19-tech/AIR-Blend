@@ -161,7 +161,7 @@ enum GPUFaceCullTest {
 
 enum GPUProvokingVertex {
   GPU_VERTEX_LAST = 0,  /* Default. */
-  GPU_VERTEX_FIRST = 1, /* Follow Blender loop order. */
+  GPU_VERTEX_FIRST = 1, /* Follow AIR Blend loop order. */
 };
 
 void GPU_blend(GPUBlend blend);

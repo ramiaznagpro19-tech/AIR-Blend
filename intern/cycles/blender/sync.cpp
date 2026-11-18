@@ -358,7 +358,7 @@ void BlenderSync::sync_integrator(blender::ViewLayer &b_view_layer,
   blender::PointerRNA scene_rna_ptr = RNA_id_pointer_create(&b_scene->id);
   blender::PointerRNA cscene = RNA_pointer_get(&scene_rna_ptr, "cycles");
 
-  /* No adaptive subdivision for baking, mesh needs to match Blender exactly. */
+  /* No adaptive subdivision for baking, mesh needs to match AIR Blend exactly. */
   use_adaptive_subdivision = !b_bake_target;
 
   Integrator *integrator = scene->integrator;
@@ -653,7 +653,7 @@ void BlenderSync::sync_film(blender::ViewLayer &b_view_layer,
     }
   }
 
-  /* Blender viewport does not support proper shadow catcher compositing, so force an approximate
+  /* AIR Blend viewport does not support proper shadow catcher compositing, so force an approximate
    * mode to improve visual feedback. */
   if (b_v3d) {
     film->set_use_approximate_shadow_catcher(true);

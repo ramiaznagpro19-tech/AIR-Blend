@@ -17,7 +17,7 @@ struct PointCloud;
 namespace io::usd {
 
 /*
- * Read UsdGeomPoints primitives as Blender point clouds.
+ * Read UsdGeomPoints primitives as AIR Blend point clouds.
  */
 class USDPointsReader : public USDGeomReader {
  private:

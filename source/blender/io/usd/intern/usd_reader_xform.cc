@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
- * Adapted from the Blender Alembic importer implementation. */
+ * Adapted from the AIR Blend Alembic importer implementation. */
 
 #include "usd_reader_xform.hh"
 
@@ -167,7 +167,7 @@ std::optional<XformResult> USDXformReader::get_local_usd_xform(const pxr::UsdTim
   }
 
   /* The USD bind transform is a matrix of doubles,
-   * but we cast it to GfMatrix4f because Blender expects
+   * but we cast it to GfMatrix4f because AIR Blend expects
    * a matrix of floats. */
   return XformResult(pxr::GfMatrix4f(xform), is_constant);
 }

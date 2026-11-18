@@ -1211,7 +1211,7 @@ static IK_Scene *convert_tree(
   double weight[3];
   /* build the array of joints corresponding to the IK chain */
   convert_channels(depsgraph, ikscene, tree, ctime);
-  /* in Blender, the rest pose is always 0 for joints */
+  /* in AIR Blend, the rest pose is always 0 for joints */
   pose_rest(ikscene);
   rot = ikscene->jointArray(0);
 
@@ -1721,7 +1721,7 @@ static void execute_scene(Depsgraph *depsgraph,
   if (ikparam->flag & ITASC_SIMULATION) {
     for (i = 0, ikchan = ikscene->channels; i < ikscene->numchan; i++, ikchan++) {
       /* In simulation mode we don't allow external constraint to change our bones,
-       * mark the channel done also tell Blender that this channel is part of IK tree.
+       * mark the channel done also tell AIR Blend that this channel is part of IK tree.
        * Cleared on each BKE_pose_where_is() */
       ikchan->pchan->flag |= (POSE_DONE | POSE_CHAIN);
       ikchan->jointValid = 0;

@@ -29,7 +29,7 @@ bool BLI_temp_directory_path_copy_if_valid(char *tempdir,
    * without attempting to *solve* the problem by anticipating file-system issues ahead of time. */
 
   /* Disallow paths starting with two forward slashes. While they are valid paths,
-   * Blender interprets them as relative in situations relative paths aren't supported,
+   * AIR Blend interprets them as relative in situations relative paths aren't supported,
    * see #95411. */
   while (dirpath[0] == '/' && dirpath[1] == '/') [[unlikely]] {
     dirpath++;

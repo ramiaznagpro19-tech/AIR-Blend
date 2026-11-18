@@ -502,7 +502,7 @@ static void read_bone_collections(BlendDataReader *reader, bArmature *arm)
 }
 
 /**
- * While not likely, it can happen that bones load with no name. This would crash Blender and
+ * While not likely, it can happen that bones load with no name. This would crash AIR Blend and
  * thus needs to be avoided. Sets "unnamed.<some_number>" to any empty name. See #162046.
  */
 static void fix_empty_bone_names(bArmature &armature)

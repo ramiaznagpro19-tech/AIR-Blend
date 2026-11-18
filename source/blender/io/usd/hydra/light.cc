@@ -24,7 +24,7 @@
 
 namespace blender::io::hydra {
 
-/* Hydra prim type for a Blender light's type/shape. */
+/* Hydra prim type for an AIR Blend light's type/shape. */
 static pxr::TfToken light_prim_type(const Light *light)
 {
   switch (light->type) {

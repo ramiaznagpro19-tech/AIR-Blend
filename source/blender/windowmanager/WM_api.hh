@@ -9,7 +9,7 @@
  * \page wmpage windowmanager
  * \section wmabout About windowmanager
  * \ref wm handles events received from \ref GHOST and manages
- * the screens, areas and input for Blender
+ * the screens, areas and input for AIR Blend
  * \section wmnote NOTE
  * \todo document
  */
@@ -129,7 +129,7 @@ void WM_init_native_pixels(bool do_it);
 void WM_init_input_devices();
 
 /**
- * Initialize Blender and load the startup file & preferences
+ * Initialize AIR Blend and load the startup file & preferences
  * (only called once).
  */
 void WM_init(bContext *C, int argc, const char **argv);
@@ -143,7 +143,7 @@ void WM_init(bContext *C, int argc, const char **argv);
  * prevents some editor-exit operations from running.
  * \param do_python_exit: Exit the Python interpreter (unless `WITH_PYTHON_MODULE` is enabled).
  * \param do_user_exit_actions: When enabled perform actions associated with a user
- * having been using Blender then exiting. Actions such as writing the auto-save
+ * having been using AIR Blend then exiting. Actions such as writing the auto-save
  * and writing any changes to preferences.
  * Set to false in background mode or when exiting because of failed command line argument parsing.
  * In general automated actions where the user isn't making changes should pass in false too.
@@ -151,9 +151,9 @@ void WM_init(bContext *C, int argc, const char **argv);
 void WM_exit_ex(bContext *C, bool do_python_exit, bool do_user_exit_actions);
 
 /**
- * Main exit function to close Blender ordinarily.
+ * Main exit function to close AIR Blend ordinarily.
  *
- * \note Use #wm_exit_schedule_delayed() to close Blender from an operator.
+ * \note Use #wm_exit_schedule_delayed() to close AIR Blend from an operator.
  * Might leak memory otherwise.
  *
  * \param exit_code: Passed to #exit, typically #EXIT_SUCCESS or #EXIT_FAILURE should be used.
@@ -220,7 +220,7 @@ enum eWM_CapabilitiesFlag {
   WM_CAPABILITY_GPU_FRONT_BUFFER_READ = (1 << 3),
   /** Ability to copy/paste system clipboard images. */
   WM_CAPABILITY_CLIPBOARD_IMAGE = (1 << 4),
-  /** Ability to sample a color outside of Blender windows. */
+  /** Ability to sample a color outside of AIR Blend windows. */
   WM_CAPABILITY_DESKTOP_SAMPLE = (1 << 5),
   /** Support for IME input methods. */
   WM_CAPABILITY_INPUT_IME = (1 << 6),
@@ -274,7 +274,7 @@ wmWindow *WM_window_find_by_area(wmWindowManager *wm, const ScrArea *area);
 
 /**
  * Return the color of the pixel at the current mouse cursor position on the desktop, whether in a
- * Blender window or not. Returns false on failure or if not supported by the platform.
+ * AIR Blend window or not. Returns false on failure or if not supported by the platform.
  */
 bool WM_desktop_cursor_sample_read(float r_col[3]);
 
@@ -557,7 +557,7 @@ void WM_window_decoration_style_flags_set(const wmWindow *win,
                                           eWM_WindowDecorationStyleFlag style_flags);
 /**
  * Apply the window decoration style using the current style flags and by parsing style
- * settings from the current Blender theme.
+ * settings from the current AIR Blend theme.
  * The screen parameter is optional, and can be passed for enhanced theme parsing.
  *
  * \note Avoid calling this function directly, prefer sending an #NC_WINDOW
@@ -2157,7 +2157,7 @@ void WM_job_main_thread_lock_release(wmJob *wm_job);
  */
 char *WM_clipboard_text_get(bool selection, bool ensure_utf8, int *r_len);
 /**
- * Convenience function for pasting to areas of Blender which don't support newlines.
+ * Convenience function for pasting to areas of AIR Blend which don't support newlines.
  */
 char *WM_clipboard_text_get_firstline(bool selection, bool ensure_utf8, int *r_len);
 

@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 """
-Wrapper for Blender that launches a graphical instances of Blender
+Wrapper for AIR Blend that launches a graphical instances of AIR Blend
 in its own display-server.
 
 This can be useful when a graphical context is required (when ``--background`` can't be used)
@@ -12,13 +12,13 @@ and it's preferable not to have windows opening on the user's system.
 
 The main use case for this is tests that run simulated events, see: ``bl_run_operators_event_simulate.py``.
 
-- All arguments are forwarded to Blender.
+- All arguments are forwarded to AIR Blend.
 - Headless operation checks for environment variables.
-- Blender's exit code is used on exit.
+- AIR Blend's exit code is used on exit.
 
 Environment Variables:
 
-- ``BLENDER_BIN``: the Blender binary to run.
+- ``BLENDER_BIN``: the AIR Blend binary to run.
   (defaults to ``blender`` which must be in the ``PATH``).
 - ``USE_WINDOW``: When nonzero:
   Show the window (not actually headless).
@@ -26,10 +26,10 @@ Environment Variables:
   Note that using a window causes WAYLAND to define a "seat",
   where the headless session doesn't define a seat.
 - ``USE_DEBUG``: When nonzero:
-  Run Blender in a debugger.
+  Run AIR Blend in a debugger.
 - ``PASS_THROUGH``: When nonzero:
-  Don't start a display server to run Blender in.
-  It's useful to execute Blender from this wrapper script to provide additional control of the environment.
+  Don't start a display server to run AIR Blend in.
+  It's useful to execute AIR Blend from this wrapper script to provide additional control of the environment.
 
 WAYLAND Environment Variables:
 
@@ -70,7 +70,7 @@ def environ_nonzero(var: str) -> bool:
 
 BLENDER_BIN = os.environ.get("BLENDER_BIN", "blender")
 
-# Skips starting a display server, run Blender in the user's environment.
+# Skips starting a display server, run AIR Blend in the user's environment.
 PASS_THROUGH = environ_nonzero("PASS_THROUGH")
 
 # For debugging, print out all information.
@@ -127,7 +127,7 @@ class backend_passthrough(backend_base):
                 blender_exit_code = proc_blender.returncode
             del cmd
 
-        # Forward Blender's exit code.
+        # Forward AIR Blend's exit code.
         return blender_exit_code
 
 
@@ -339,7 +339,7 @@ class backend_wayland(backend_base):
                 with tempfile.TemporaryDirectory() as empty_user_dir:
                     blender_env = {**os.environ, "WAYLAND_DISPLAY": socket, "BLENDER_USER_RESOURCES": empty_user_dir}
 
-                    # Needed so Blender can find WAYLAND libraries such as `libwayland-cursor.so`.
+                    # Needed so AIR Blend can find WAYLAND libraries such as `libwayland-cursor.so`.
                     if weston_env is not None and "LD_LIBRARY_PATH" in weston_env:
                         blender_env["LD_LIBRARY_PATH"] = weston_env["LD_LIBRARY_PATH"]
 
@@ -360,12 +360,12 @@ class backend_wayland(backend_base):
                         blender_exit_code = proc_blender.returncode
                     del cmd
 
-                # Blender has finished, close the server.
+                # AIR Blend has finished, close the server.
                 proc_server.send_signal(signal.SIGINT)
                 # Wait for the interrupt to be handled.
                 proc_server.communicate()
 
-                # Forward Blender's exit code.
+                # Forward AIR Blend's exit code.
                 return blender_exit_code
 
 

@@ -46,7 +46,7 @@ struct ColorSpace {
     return linear_color;
   }
 
-  /* Input is Blender Scene Linear. Output is Rec.709 sRGB. */
+  /* Input is AIR Blend Scene Linear. Output is Rec.709 sRGB. */
   static float4 scene_linear_to_rec709_srgb(float3x3 scene_linear_to_rec709,
                                             float4 scene_linear_color)
   {

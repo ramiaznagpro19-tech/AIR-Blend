@@ -580,7 +580,7 @@ static std::optional<ARegionIMECursorState> view3d_main_region_cursor_ime(
 
   const Curve *cu = id_cast<Curve *>(ob->data);
   const EditFont *ef = cu->editfont;
-  /* `cu->editfont` can be nullptr on Blender startup. */
+  /* `cu->editfont` can be nullptr on AIR Blend startup. */
   if (!ef) {
     return std::nullopt;
   }

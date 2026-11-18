@@ -16,7 +16,7 @@
 
 /**
  * The global volume grid file cache makes it easy to load volumes only once from disk and to then
- * reuse the loaded volume across Blender. Additionally, this also supports caching simplify
+ * reuse the loaded volume across AIR Blend. Additionally, this also supports caching simplify
  * levels which are used when the "volume resolution" simplify scene setting is reduced. Working
  * with reduced resolution can improve performance and uses less memory.
  */

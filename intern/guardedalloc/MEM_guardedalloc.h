@@ -7,7 +7,7 @@
  *
  * \brief Read \ref MEMPage
  *
- * \page MEMPage Blender memory allocation and freeing
+ * \page MEMPage AIR Blend memory allocation and freeing
  *
  * \section aboutmem About the MEM allocator module
  *

@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
- * Adapted from the Blender Alembic importer implementation. */
+ * Adapted from the AIR Blend Alembic importer implementation. */
 
 #include "usd_reader_camera.hh"
 #include "usd_armature_utils.hh"
@@ -325,7 +325,7 @@ void USDCameraReader::read_object_data(Main *bmain, const pxr::UsdTimeCode time)
                      channelbag);
 
   /* USD Orthographic cameras have very limited support. Support a basic, non-animated, translation
-   * between USD and Blender. */
+   * between USD and AIR Blend. */
   pxr::TfToken projection;
   cam_prim_.GetProjectionAttr().Get(&projection, time);
   camera->type = (projection.GetString() == "perspective") ? CAM_PERSP : CAM_ORTHO;

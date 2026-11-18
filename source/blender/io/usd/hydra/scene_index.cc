@@ -167,7 +167,7 @@ void HydraSceneIndex::populate(Depsgraph *depsgraph, View3D *view3d)
               Object *,
               object)
   {
-    /* TODO: backface culling is on material in Blender but on geometry in USD.
+    /* TODO: backface culling is on material in AIR Blend but on geometry in USD.
      * Currently we are not correctly updating geometry for changes to that. */
     const bool updated_geometry = (object->id.recalc & ID_RECALC_GEOMETRY) != 0 ||
                                   (object->data && object->data->recalc != 0);

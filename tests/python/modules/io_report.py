@@ -442,7 +442,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
     def generate_generic_data_desc(self) -> str:
         """Generates textual description of the current state of the
-        Blender main data."""
+        AIR Blend main data."""
 
         desc = StringIO()
 
@@ -951,7 +951,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
         # Generate (import, export or round-trip)
         try:
             if not output_filepath:
-                # Import (check Blender data, so no output file)
+                # Import (check AIR Blend data, so no output file)
                 generate_func(str(input_file), params)
                 got_desc = self.generate_data_desc()
             else:

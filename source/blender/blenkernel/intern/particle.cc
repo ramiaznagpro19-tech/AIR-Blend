@@ -1080,7 +1080,7 @@ void psys_copy_particles(ParticleSystem *psys_dst, ParticleSystem *psys_src)
    *
    * Furthermore, #free_hair() always frees `pa->hair` if it's not nullptr, regardless of the
    * particle type. So *not* copying here would cause a double free (or more), e.g. freeing the
-   * copy-on-evaluation copy and the original data will crash Blender.
+   * copy-on-evaluation copy and the original data will crash AIR Blend.
    * In any case, sharing pointers between `psys_src` and `psys_dst` should be forbidden.
    *
    * So while we could in theory 'sanitize' the situation by setting `pa->hair` to nullptr in the

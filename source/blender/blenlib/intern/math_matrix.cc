@@ -243,7 +243,7 @@ MatBase<T, Size, Size> pseudo_invert(const MatBase<T, Size, Size> &mat, T epsilo
     using namespace Eigen;
     using MatrixT = Eigen::Matrix<T, Size, Size>;
     using VectorT = Eigen::Matrix<T, Size, 1>;
-    /* Blender and Eigen matrices are both column-major by default.
+    /* AIR Blend and Eigen matrices are both column-major by default.
      * Since our matrix is squared, we can use thinU/V. */
     /**
      * WORKAROUND:
@@ -304,7 +304,7 @@ static void polar_decompose(const MatBase<T, 3, 3> &mat3,
     using namespace Eigen;
     using MatrixT = Eigen::Matrix<T, 3, 3>;
     using VectorT = Eigen::Matrix<T, 3, 1>;
-    /* Blender and Eigen matrices are both column-major by default.
+    /* AIR Blend and Eigen matrices are both column-major by default.
      * Since our matrix is squared, we can use thinU/V. */
     /**
      * WORKAROUND: (ComputeThinU | ComputeThinV) must be set as runtime parameters in

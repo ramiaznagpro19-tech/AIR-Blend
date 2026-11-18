@@ -9,7 +9,7 @@
 #pragma once
 
 extern "C" {
-/* Datafiles embedded in Blender */
+/* Datafiles embedded in AIR Blend */
 
 extern int datatoc_startup_blend_size;
 extern const char datatoc_startup_blend[];

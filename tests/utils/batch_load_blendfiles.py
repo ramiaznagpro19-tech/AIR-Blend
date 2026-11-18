@@ -97,7 +97,7 @@ def argparse_create() -> argparse.ArgumentParser:
     sort_by_choices = tuple(sorted(SORT_BY_FN.keys()))
 
     # When `--help` or no arguments are given, print this help.
-    epilog = "Use to automate loading many blend files in a single Blender instance."
+    epilog = "Use to automate loading many blend files in a single AIR Blend instance."
 
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawTextHelpFormatter,

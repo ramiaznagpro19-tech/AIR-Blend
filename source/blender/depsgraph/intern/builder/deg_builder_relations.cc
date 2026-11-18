@@ -3194,7 +3194,7 @@ void DepsgraphRelationBuilder::build_nodetree(bNodeTree *ntree)
     }
     else {
       /* Ignore this case. It can happen when the node type is not known currently. Either because
-       * it belongs to an add-on or because it comes from a different Blender version that does
+       * it belongs to an add-on or because it comes from a different AIR Blend version that does
        * support the ID type here already. */
     }
   }

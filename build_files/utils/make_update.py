@@ -5,7 +5,7 @@
 
 """
 "make update" for all platforms, updating Git LFS submodules for libraries and
-Blender git repository.
+AIR Blend git repository.
 
 For release branches, this will check out the appropriate branches of
 submodules and libraries.
@@ -14,7 +14,7 @@ WARNING:
 - Python 3.6 is used on the Linux VM (Rocky8) to run "make update" to checkout LFS.
 - Python 3.9 is used on the built-bot.
 
-Take care *not* to use features from the Python version used by Blender!
+Take care *not* to use features from the Python version used by AIR Blend!
 
 NOTE:
 Some type annotations are quoted to avoid errors in older Python versions.
@@ -58,7 +58,7 @@ def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--no-libraries", action="store_true",
                         help="Don't fetch precompiled libraries for this system")
-    parser.add_argument("--no-blender", action="store_true", help="Don't update the Blender code repository")
+    parser.add_argument("--no-blender", action="store_true", help="Don't update the AIR Blend code repository")
     parser.add_argument(
         "--no-lfs-fallback",
         action="store_true",
@@ -92,7 +92,7 @@ def get_effective_platform(args: argparse.Namespace) -> str:
     """
     Get platform of the host.
 
-    The result string is normalized to the name used by Blender releases and
+    The result string is normalized to the name used by AIR Blend releases and
     library repository name prefixes: linux, macos, windows.
     """
 
@@ -112,7 +112,7 @@ def get_effective_architecture(args: argparse.Namespace) -> str:
     """
     Get architecture of the host.
 
-    The result string is normalized to the architecture name used by the Blender
+    The result string is normalized to the architecture name used by the AIR Blend
     releases and library repository name suffixes: x64, arm64.
 
     NOTE: When cross-compiling the architecture is coming from the command line
@@ -229,9 +229,9 @@ def initialize_precompiled_libraries(args: argparse.Namespace) -> str:
     submodule_directories = get_submodule_directories(args)
 
     if platform == "macos" and arch == "x64":
-        return ("WARNING: macOS x64/Intel support was dropped in Blender 5.0.\n"
+        return ("WARNING: macOS x64/Intel support was dropped in AIR Blend 5.0.\n"
                 "         As such, pre-compiled dependencies are no longer provided.\n"
-                "         You may build the dependencies yourself, or downgrade to Blender 4.5.\n"
+                "         You may build the dependencies yourself, or downgrade to AIR Blend 4.5.\n"
                 "         For more details, please see: https://devtalk.blender.org/t/38835")
 
     if Path(submodule_dir) not in submodule_directories:
@@ -282,7 +282,7 @@ def use_upstream_workflow(args: argparse.Namespace) -> bool:
 
 def work_tree_update_upstream_workflow(args: argparse.Namespace, use_fetch: bool = True) -> str:
     """
-    Update the Blender repository using the GitHub style of fork organization
+    Update the AIR Blend repository using the GitHub style of fork organization
 
     Returns true if the current local branch has been updated to the upstream state.
     Otherwise false is returned.
@@ -329,14 +329,14 @@ def work_tree_update(args: argparse.Namespace, use_fetch: bool = True) -> str:
 
 # Update blender repository.
 def blender_update(args: argparse.Namespace) -> str:
-    print_stage("Updating Blender Git Repository")
+    print_stage("Updating AIR Blend Git Repository")
 
     return work_tree_update(args)
 
 
 # Extra LFS update for blender repository
 def blender_lfs_update(args: argparse.Namespace) -> None:
-    print_stage("Updating Blender Git LFS")
+    print_stage("Updating AIR Blend Git LFS")
 
     # This seems to be required some times, e.g. on initial checkout from third party, non-lfs repository
     # (like the github one). The fallback repository set by `lfs_fallback_setup` is fetched, but running the
@@ -694,7 +694,7 @@ def main() -> int:
         if not blender_skip_msg:
             blender_skip_msg = blender_update(args)
         if blender_skip_msg:
-            blender_skip_msg = "Blender repository skipped: " + blender_skip_msg + "\n"
+            blender_skip_msg = "AIR Blend repository skipped: " + blender_skip_msg + "\n"
         blender_lfs_update(args)
 
     if not args.no_libraries:
@@ -720,8 +720,8 @@ def main() -> int:
         print('NOTE: --use-linux-libraries is a deprecated command line argument, kept for compatibility purposes.')
 
     # For failed library update we throw an error, since not having correct
-    # libraries can make Blender throw errors.
-    # For Blender itself we don't and consider "make update" to be a command
+    # libraries can make AIR Blend throw errors.
+    # For AIR Blend itself we don't and consider "make update" to be a command
     # you can use while working on uncommitted code.
     if libraries_skip_msg:
         return 1

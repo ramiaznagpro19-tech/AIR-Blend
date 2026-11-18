@@ -21,7 +21,7 @@ namespace blender {
 BPy_ThreadStatePtr BPY_thread_save()
 {
   /* Use `_PyThreadState_UncheckedGet()` instead of `PyThreadState_Get()`, to avoid a fatal error
-   * issued when a thread state is nullptr (the thread state can be nullptr when quitting Blender).
+   * issued when a thread state is nullptr (the thread state can be nullptr when quitting AIR Blend).
    *
    * `PyEval_SaveThread()` will release the GIL, so this thread has to have the GIL to begin with
    * or badness will ensue. */

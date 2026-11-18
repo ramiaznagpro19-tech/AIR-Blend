@@ -101,7 +101,7 @@ def __encode_primitive(primitive, dll, export_settings, encoded_primitives_cache
     indices = primitive.indices
 
     # Check if this primitive has already been encoded.
-    # This usually happens when nodes are duplicated in Blender, thus their indices/attributes are shared data.
+    # This usually happens when nodes are duplicated in AIR Blend, thus their indices/attributes are shared data.
     if primitive in encoded_primitives_cache:
         if primitive.extensions is None:
             primitive.extensions = {}
@@ -118,7 +118,7 @@ def __encode_primitive(primitive, dll, export_settings, encoded_primitives_cache
 
     positions = attributes['POSITION']
 
-    # Skip nodes without a position buffer, e.g. a primitive from a Blender shared instance.
+    # Skip nodes without a position buffer, e.g. a primitive from an AIR Blend shared instance.
     if attributes['POSITION'].buffer_view is None:
         return
 

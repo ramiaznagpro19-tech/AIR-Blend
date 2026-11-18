@@ -106,7 +106,7 @@ timeScale_s$ID$    = $TIME_SCALE$\n\
 timeTotal_s$ID$    = $TIME_TOTAL$\n\
 timePerFrame_s$ID$ = $TIME_PER_FRAME$\n\
 \n\
-# In Blender fluid.c: frame_length = DT_DEFAULT * (25.0 / fps) * time_scale\n\
+# In AIR Blend fluid.c: frame_length = DT_DEFAULT * (25.0 / fps) * time_scale\n\
 # with DT_DEFAULT = 0.1\n\
 frameLength_s$ID$ = $FRAME_LENGTH$\n\
 frameLengthUnscaled_s$ID$ = frameLength_s$ID$ / timeScale_s$ID$\n\
@@ -126,15 +126,15 @@ end_frame_s$ID$     = $END_FRAME$\n\
 domainSize_s$ID$ = $FLUID_DOMAIN_SIZE$ # longest domain side in meters\n\
 kinViscosity_s$ID$ = $FLUID_VISCOSITY$ / (domainSize_s$ID$*domainSize_s$ID$) # kinematic viscosity in m^2/s\n\
 \n\
-# Factors to convert Blender units to Manta units\n\
+# Factors to convert AIR Blend units to Manta units\n\
 ratioMetersToRes_s$ID$ = float(domainSize_s$ID$) / float(res_s$ID$) # [meters / cells]\n\
-mantaMsg('1 Mantaflow cell is ' + str(ratioMetersToRes_s$ID$) + ' Blender length units long.')\n\
+mantaMsg('1 Mantaflow cell is ' + str(ratioMetersToRes_s$ID$) + ' AIR Blend length units long.')\n\
 \n\
 ratioResToBLength_s$ID$ = float(res_s$ID$) / float(domainSize_s$ID$) # [cells / blength] (blength: cm, m, or km, ... )\n\
-mantaMsg('1 Blender length unit is ' + str(ratioResToBLength_s$ID$) + ' Mantaflow cells long.')\n\
+mantaMsg('1 AIR Blend length unit is ' + str(ratioResToBLength_s$ID$) + ' Mantaflow cells long.')\n\
 \n\
 ratioBTimeToTimestep_s$ID$ = float(1) / float(frameLengthRaw_s$ID$) # the time within 1 blender time unit, see also fluid.c\n\
-mantaMsg('1 Blender time unit is ' + str(ratioBTimeToTimestep_s$ID$) + ' Mantaflow time units long.')\n\
+mantaMsg('1 AIR Blend time unit is ' + str(ratioBTimeToTimestep_s$ID$) + ' Mantaflow time units long.')\n\
 \n\
 ratioFrameToFramelength_s$ID$ = float(1) / float(frameLengthUnscaled_s$ID$ ) # the time within 1 frame\n\
 mantaMsg('frame / frameLength is ' + str(ratioFrameToFramelength_s$ID$) + ' Mantaflow time units long.')\n\
@@ -397,7 +397,7 @@ const std::string fluid_post_step =
 def fluid_post_step_$ID$():\n\
     mantaMsg('Fluid post step')\n\
     \n\
-    # Copy vel grid to reals grids (which Blender internal will in turn use for vel access)\n\
+    # Copy vel grid to reals grids (which AIR Blend internal will in turn use for vel access)\n\
     copyVec3ToReal(source=vel_s$ID$, targetX=x_vel_s$ID$, targetY=y_vel_s$ID$, targetZ=z_vel_s$ID$)\n\
     if using_guiding_s$ID$:\n\
         copyVec3ToReal(source=guidevel_sg$ID$, targetX=x_guidevel_s$ID$, targetY=y_guidevel_s$ID$, targetZ=z_guidevel_s$ID$)\n";

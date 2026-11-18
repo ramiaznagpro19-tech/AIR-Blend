@@ -203,7 +203,7 @@ unset(GENSRC_CXXFLAGS)
 
 # NOTE: Disable clang-tidy because generated files are stored outside of the source,
 # so the clang-tidy can not find our .clang-tidy and fall-backs to its own set of rules
-# which are too noisy for Blender.
+# which are too noisy for AIR Blend.
 #
 # In the future clang-tidy would either need to be inlined checks and passed via the
 # command line (instead of using .clang-tidy file). Or, maybe, there is a way to

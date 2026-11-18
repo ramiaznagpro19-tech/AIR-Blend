@@ -9,7 +9,7 @@
  * `GeometrySet` type.
  *
  * It's not implemented as RNA type because a `GeometrySet` is standalone (i.e. is not necessarily
- * owned by anything else in Blender like an ID), is wrapping a DNA type and is itself a
+ * owned by anything else in AIR Blend like an ID), is wrapping a DNA type and is itself a
  * non-trivial owner of other data (like sub-geometries).
  */
 
@@ -63,7 +63,7 @@ static BPy_GeometrySet *python_object_from_geometry_set(GeometrySet geometry = {
   self->instances_pointcloud = nullptr;
   /* We can't safely give access to shared geometries via the Python API currently, because
    * constness can't be enforced. Therefore, ensure that this Python object has its own copy of
-   * each data-block. Note that attributes may still be shared with other data in Blender. */
+   * each data-block. Note that attributes may still be shared with other data in AIR Blend. */
   self->geometry.ensure_no_shared_components();
   return self;
 }

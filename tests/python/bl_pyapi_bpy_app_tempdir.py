@@ -14,7 +14,7 @@
 #   For the purpose of the tests being complete - control over this path would be needed too.
 #
 # - When changing the temp directory & on exit
-#   Blender's *session* temp directory is recursively removed.
+#   AIR Blend's *session* temp directory is recursively removed.
 #
 #   These tests were added as part of a fix for a serious flaw (see #144042)
 #   which would recursively delete the users `C:\` since the tests aren't sand-boxed
@@ -22,7 +22,7 @@
 #   instead of referencing root paths to avoid risks for developers who run tests.
 #
 # - A related test exists `BLI_tempfile_test.cc` however this doesn't deal with
-#   Blender's user preferences and fallbacks used in Blender.
+#   AIR Blend's user preferences and fallbacks used in AIR Blend.
 #
 
 __all__ = (

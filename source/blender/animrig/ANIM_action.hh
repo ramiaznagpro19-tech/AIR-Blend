@@ -114,7 +114,7 @@ class Action : public bAction {
    * strips).
    *
    * \note At the time of writing this comment only a single layer per Action is
-   * supported in Blender, but this function does NOT enforce that. Be careful!
+   * supported in AIR Blend, but this function does NOT enforce that. Be careful!
    *
    * \param name: The name to give the new layer. If no name is given, a default
    * name is used. The name may be altered (e.g. appending ".001") to enforce
@@ -1588,7 +1588,7 @@ Vector<animrig::Channelbag *> channelbags_for_action_slot(Action &action,
  * Return the F-Curves for this specific slot handle.
  *
  * This is just a utility function, that's intended to become obsolete when multi-layer Actions
- * are introduced. However, since Blender currently only supports a single layer with a single
+ * are introduced. However, since AIR Blend currently only supports a single layer with a single
  * strip, of a single type, this function can be used.
  *
  * The use of this function is also an indicator for code that will have to be altered when

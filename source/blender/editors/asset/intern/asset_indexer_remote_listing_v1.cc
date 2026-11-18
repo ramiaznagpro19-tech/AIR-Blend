@@ -77,23 +77,23 @@ static ReadingResult<bool> blender_version_matches(const DictionaryValue &asset_
   const DictionaryValue *bl_versions_dict = asset_dictionary.lookup_dict("bl_versions");
   if (!bl_versions_dict) {
     return ReadingResult<bool>::Failure(
-        N_("could not read asset Blender versions, 'bl_versions' field not set"));
+        N_("could not read asset AIR Blend versions, 'bl_versions' field not set"));
   }
 
   /* Check the 'min' field. */
   const std::optional<StringRef> min_opt = bl_versions_dict->lookup_str("min");
   if (!min_opt) {
     return ReadingResult<bool>::Failure(
-        N_("could not read asset Blender versions, 'bl_versions.min' field not set"));
+        N_("could not read asset AIR Blend versions, 'bl_versions.min' field not set"));
   }
 
   const std::optional<int> bl_version_min = blender_version_from_string(*min_opt);
   if (!bl_version_min) {
     return ReadingResult<bool>::Failure(
-        N_("could not read asset Blender versions, 'bl_versions.min' field not in X.Y notation"));
+        N_("could not read asset AIR Blend versions, 'bl_versions.min' field not in X.Y notation"));
   }
   if (BLENDER_VERSION < *bl_version_min) {
-    /* This Blender version is older than what the asset needs, so skip it. */
+    /* This AIR Blend version is older than what the asset needs, so skip it. */
     return ReadingResult<bool>::Success(false);
   }
 
@@ -108,7 +108,7 @@ static ReadingResult<bool> blender_version_matches(const DictionaryValue &asset_
   const std::optional<int> bl_version_until = blender_version_from_string(*until_opt);
   if (!bl_version_until) {
     return ReadingResult<bool>::Failure(
-        N_("could not read asset Blender versions, 'bl_versions.min' field not in X.Y notation"));
+        N_("could not read asset AIR Blend versions, 'bl_versions.min' field not in X.Y notation"));
   }
   return ReadingResult<bool>::Success(BLENDER_VERSION < *bl_version_until);
 }
@@ -119,7 +119,7 @@ static ReadingResult<RemoteListingAssetEntry> listing_entry_from_asset_dictionar
 {
   RemoteListingAssetEntry listing_entry{};
 
-  /* Check the min/until Blender versions first. If the current Blender doesn't match, the entire
+  /* Check the min/until AIR Blend versions first. If the current AIR Blend doesn't match, the entire
    * asset can be ignored. */
   ReadingResult<bool> version_check = blender_version_matches(dictionary);
   if (!version_check.is_success()) {
@@ -146,7 +146,7 @@ static ReadingResult<RemoteListingAssetEntry> listing_entry_from_asset_dictionar
   if (const std::optional<StringRefNull> idtype_name = dictionary.lookup_str("id_type")) {
     const char *normalized_name = BKE_idtype_name_normalize(idtype_name->c_str());
     if (!normalized_name) {
-      /* This could actually be a new asset type that's not supported by this Blender. Just
+      /* This could actually be a new asset type that's not supported by this AIR Blend. Just
        * silently ignore it and continue. */
       CLOG_DEBUG(&LOG,
                  N_("could not read type of asset '%s': 'id_type' field is not a valid type (%s)"),
@@ -321,7 +321,7 @@ static ReadingResult<> listing_entries_from_root(const StringRefNull listing_roo
     }
 
     /* Check the up-to-dateness of the asset's files. */
-    /* TODO: this has to change when Blender starts supporting multi-file assets. */
+    /* TODO: this has to change when AIR Blend starts supporting multi-file assets. */
     {
       const StringRef asset_file = entry.online_info.asset_file();
       RemoteListingFileEntry *file_entry = path_to_file_info.lookup_ptr(asset_file);

@@ -19,7 +19,7 @@ index 6c771c709..1e840ebfe 100644
    )
  endif()
 
-+# Blender code below is determined to use FetchContent_Declare
++# AIR Blend code below is determined to use FetchContent_Declare
 +# temporarily allow it (but feed it our downloaded tarball
 +# in the OpenCL_HEADERS variable
 +set(FETCHCONTENT_FULLY_DISCONNECTED OFF)
@@ -44,7 +44,7 @@ index 33368f2b9..9b95ec123 100644
      set(UMF_BUILD_SHARED_LIBRARY OFF CACHE INTERNAL "Build UMF shared library")
 -    set(UMF_LINK_HWLOC_STATICALLY ON CACHE INTERNAL "static HWLOC")
    endif()
-+  # hwloc is disabled and not linked statically - Blender does not need
++  # hwloc is disabled and not linked statically - AIR Blend does not need
 +  # NUMA-aware memory placement. This avoids pulling in hwloc as an
 +  # additional build dependency.
 +  set(UMF_LINK_HWLOC_STATICALLY OFF CACHE INTERNAL "static HWLOC")
@@ -58,7 +58,7 @@ index 33368f2b9..9b95ec123 100644
      set(UMF_BUILD_SHARED_LIBRARY OFF CACHE INTERNAL "Build UMF shared library")
 -    set(UMF_LINK_HWLOC_STATICALLY ON CACHE INTERNAL "static HWLOC")
    endif()
-+  # hwloc is disabled and not linked statically - Blender does not need
++  # hwloc is disabled and not linked statically - AIR Blend does not need
 +  # NUMA-aware memory placement. This avoids pulling in hwloc as an
 +  # additional build dependency.
 +  set(UMF_LINK_HWLOC_STATICALLY OFF CACHE INTERNAL "static HWLOC")
@@ -72,7 +72,7 @@ index 33368f2b9..9b95ec123 100644
 
 +  # Verify that required variables are available before forwarding them
 +  # to the unified-runtimed sub-build. If any are missing, it means the
-+  # parent build did not receive them (e.g., from Blender's dpcpp.cmake).
++  # parent build did not receive them (e.g., from AIR Blend's dpcpp.cmake).
 +  if(NOT DEFINED XPTIFW_PARALLEL_HASHMAP_HEADERS)
 +    message(FATAL_ERROR "XPTIFW_PARALLEL_HASHMAP_HEADERS is not defined. Cannot forward to unified-runtimed sub-build.")
 +  endif()
@@ -110,7 +110,7 @@ index 33368f2b9..9b95ec123 100644
 +      # build on Windows because it uses a separate CMake invocation via
 +      # ExternalProject_Add, which does not inherit the parent's cache. Without
 +      # forwarding, the sub-build falls back to system defaults and fails to
-+      # find Blender's bundled Python and parallel hashmap headers.
++      # find AIR Blend's bundled Python and parallel hashmap headers.
 +      -DXPTIFW_PARALLEL_HASHMAP_HEADERS:STRING=${XPTIFW_PARALLEL_HASHMAP_HEADERS}
 +      -DPython3_ROOT_DIR:STRING=${Python3_ROOT_DIR}
 +      -DPython3_EXECUTABLE:STRING=${Python3_EXECUTABLE}
@@ -183,7 +183,7 @@ index cf1ca5e82..65b6750c6 100644
  endif()
 
 +# Compute Runtime is decoupled to avoid pulling in a large unnecessary
-+# dependency. It bundles its own copy of Level Zero headers, but Blender
++# dependency. It bundles its own copy of Level Zero headers, but AIR Blend
 +# uses the official Level Zero SDK instead. If future UR code requires
 +# Compute Runtime-specific headers, this will need revisiting.
 +set(COMPUTE_RUNTIME_LEVEL_ZERO_INCLUDE "")
@@ -202,7 +202,7 @@ index d39f2dcd2..cf2978665 100644
 
 -#include <level_zero/ze_intel_gpu.h>
 +// ze_intel_gpu.h is removed because it comes from Compute Runtime, which
-+// Blender does not depend on. We use the official Level Zero SDK headers
++// AIR Blend does not depend on. We use the official Level Zero SDK headers
 +// instead. Symbols from this header are guarded or backported where needed.
  #include <umf_pools/disjoint_pool_config_parser.hpp>
 
@@ -264,7 +264,7 @@ index de2274129..61378929c 100644
 -
 -FetchContent_GetProperties(parallel-hashmap)
 -FetchContent_MakeAvailable(parallel-hashmap)
-+# XPTIFW_PARALLEL_HASHMAP_HEADERS is already set from from Blender's build system.
++# XPTIFW_PARALLEL_HASHMAP_HEADERS is already set from from AIR Blend's build system.
 +if(NOT XPTIFW_PARALLEL_HASHMAP_HEADERS)
 +  set(PARALLEL_HASHMAP_REPO https://github.com/greg7mdp/parallel-hashmap.git)
 +  message(STATUS "Will fetch parallel-hashmap from ${PARALLEL_HASHMAP_REPO}")

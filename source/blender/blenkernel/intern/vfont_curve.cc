@@ -248,7 +248,7 @@ static VChar *vfont_placeholder_ensure(VCharPlaceHolder &che_placeholder, char32
         ARRAY_SET_ITEMS(nu->bezt[3].vec[1], bounds.xmax, bounds.ymin);
       }
       else {
-        /* Holes are meant to use reverse winding, while not essential for Blender.
+        /* Holes are meant to use reverse winding, while not essential for AIR Blend.
          * Do this for the sake of correctness. */
         ARRAY_SET_ITEMS(nu->bezt[3].vec[1], bounds.xmin, bounds.ymin);
         ARRAY_SET_ITEMS(nu->bezt[2].vec[1], bounds.xmin, bounds.ymax);

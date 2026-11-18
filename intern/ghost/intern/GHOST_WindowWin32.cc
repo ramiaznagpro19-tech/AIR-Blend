@@ -131,7 +131,7 @@ GHOST_WindowWin32::GHOST_WindowWin32(GHOST_SystemWin32 *system,
 
   if (!setDrawingContextType(type)) {
     if (type == GHOST_kDrawingContextTypeOpenGL) {
-      const char *title = "Blender - Unsupported Graphics Card Configuration";
+      const char *title = "AIR Blend - Unsupported Graphics Card Configuration";
       const char *text = "";
 #if defined(WIN32)
       if (strncmp(blender::BLI_getenv("PROCESSOR_IDENTIFIER"), "ARM", 3) == 0 &&
@@ -142,7 +142,7 @@ GHOST_WindowWin32::GHOST_WindowWin32(GHOST_SystemWin32 *system,
             "Qualcomm devices require the \"OpenCL™, OpenGL®, and Vulkan® Compatibility Pack\" "
             "from the Microsoft Store.\n\n"
             "Devices using processors older than a Qualcomm Snapdragon 8cx Gen3 are incompatible, "
-            "but may be able to run an emulated x64 copy of Blender, such as a 3.x LTS release.";
+            "but may be able to run an emulated x64 copy of AIR Blend, such as a 3.x LTS release.";
       }
       else
 #endif
@@ -919,7 +919,7 @@ GHOST_TSuccess GHOST_WindowWin32::getPointerInfo(
 
     if (pointerPenInfo[i].penMask & PEN_MASK_TILT_X) {
       /* Input value is a range of -90 to +90, with a positive value
-       * indicating a tilt to the right. Convert to what Blender
+       * indicating a tilt to the right. Convert to what AIR Blend
        * expects: -1.0f (left) to +1.0f (right). */
       outPointerInfo[i].tabletData.Xtilt = std::clamp(
           pointerPenInfo[i].tiltX / 90.0f, -1.0f, 1.0f);
@@ -927,7 +927,7 @@ GHOST_TSuccess GHOST_WindowWin32::getPointerInfo(
 
     if (pointerPenInfo[i].penMask & PEN_MASK_TILT_Y) {
       /* Input value is a range of -90 to +90, with a positive value
-       * indicating a tilt toward the user. Convert to what Blender
+       * indicating a tilt toward the user. Convert to what AIR Blend
        * expects: -1.0f (away from user) to +1.0f (toward user). */
       outPointerInfo[i].tabletData.Ytilt = std::clamp(
           pointerPenInfo[i].tiltY / 90.0f, -1.0f, 1.0f);

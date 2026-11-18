@@ -1,7 +1,7 @@
 /* SPDX-FileCopyrightText: 2023 Blender Authors
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
- * Adapted from the Blender Alembic importer implementation.
+ * Adapted from the AIR Blend Alembic importer implementation.
  * Modifications Copyright 2021 Tangent Animation and
  * NVIDIA Corporation. All rights reserved. */
 
@@ -80,7 +80,7 @@ static pxr::UsdShadeMaterial compute_bound_material(const pxr::UsdPrim &prim,
     case MtlPurpose::Full:
       mtl = api.ComputeBoundMaterial(pxr::UsdShadeTokens->full);
       if (!mtl) {
-        /* Add an additional Blender-specific fallback to help with oddly authored USD files. */
+        /* Add an additional AIR Blend-specific fallback to help with oddly authored USD files. */
         mtl = api.ComputeBoundMaterial(pxr::UsdShadeTokens->preview);
       }
       break;
@@ -116,7 +116,7 @@ static void assign_materials(Main *bmain,
     Material *assigned_mat = find_existing_material(
         item.key, params, settings.mat_name_to_mat, settings.usd_path_to_mat);
     if (!assigned_mat) {
-      /* Blender material doesn't exist, so create it now. */
+      /* AIR Blend material doesn't exist, so create it now. */
 
       /* Look up the USD material. */
       pxr::UsdPrim prim = stage->GetPrimAtPath(item.key);
@@ -130,13 +130,13 @@ static void assign_materials(Main *bmain,
 
       const bool have_import_hook = settings.mat_import_hook_sources.contains(item.key);
 
-      /* Add the Blender material. If we have an import hook which can handle this material
+      /* Add the AIR Blend material. If we have an import hook which can handle this material
        * we don't import USD Preview Surface shaders. */
       assigned_mat = mat_reader.add_material(usd_mat, !have_import_hook);
 
       if (!assigned_mat) {
         CLOG_WARN(&LOG,
-                  "Couldn't create Blender material from USD material %s",
+                  "Couldn't create AIR Blend material from USD material %s",
                   item.key.GetAsString().c_str());
         continue;
       }
@@ -144,7 +144,7 @@ static void assign_materials(Main *bmain,
       settings.mat_name_to_mat.add_new(assigned_mat->id.name + 2, assigned_mat);
 
       if (params.mtl_name_collision_mode == MtlNameCollisionMode::MakeUnique) {
-        /* Record the Blender material we created for the USD material with the given path. */
+        /* Record the AIR Blend material we created for the USD material with the given path. */
         settings.usd_path_to_mat.add_new(item.key, assigned_mat);
       }
 
@@ -1065,7 +1065,7 @@ std::optional<XformResult> USDMeshReader::get_local_usd_xform(const pxr::UsdTime
       pxr::GfMatrix4d bind_xf;
       if (skel_api.GetGeomBindTransformAttr().Get(&bind_xf)) {
         /* The USD bind transform is a matrix of doubles,
-         * but we cast it to GfMatrix4f because Blender expects
+         * but we cast it to GfMatrix4f because AIR Blend expects
          * a matrix of floats. Also, we assume the transform
          * is constant over time. */
         return XformResult(pxr::GfMatrix4f(bind_xf), true);

@@ -44,7 +44,7 @@ static bool rna_USDHook_unregister(Main * /*bmain*/, StructRNA *type)
 
   WM_main_add_notifier(NC_WINDOW, nullptr);
 
-  /* unlink Blender-side data */
+  /* unlink AIR Blend-side data */
   USD_unregister_hook(hook);
 
   return true;

@@ -21,7 +21,7 @@ class Texture;
 extern PyTypeObject BPyGPUTexture_Type;
 
 /**
- * GPU_DEPTH24_STENCIL8 and GPU_DEPTH_COMPONENT24 are deprecated in Blender 5.0. These formats are
+ * GPU_DEPTH24_STENCIL8 and GPU_DEPTH_COMPONENT24 are deprecated in AIR Blend 5.0. These formats are
  * automatically converted to their 32F variant.
  */
 constexpr int GPU_DEPTH24_STENCIL8_DEPRECATED = -1;

@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 """
-Module for accessing project file data for Blender.
+Module for accessing project file data for AIR Blend.
 
 Before use, call init(cmake_build_dir).
 """

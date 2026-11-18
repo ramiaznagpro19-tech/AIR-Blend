@@ -39,7 +39,7 @@ def register_keymaps():
     if kc is None:
         return  # Can be None in background mode.
 
-    # Target the 3D View; name must match Blender's built-in keymap exactly.
+    # Target the 3D View; name must match AIR Blend's built-in keymap exactly.
     km = kc.keymaps.new(name="3D View", space_type='VIEW_3D')
 
     # Bind Shift+Alt+K to frame selected objects.

@@ -24,7 +24,7 @@ class USDVolumeWriter : public USDAbstractWriter {
   void do_write(HierarchyContext &context) override;
 
  private:
-  /* Try to ensure that external `.vdb` file is available for USD to be referenced. Blender can
+  /* Try to ensure that external `.vdb` file is available for USD to be referenced. AIR Blend can
    * either reference external OpenVDB data or generate such data internally. Latter option will
    * mean that `resolve_vdb_file` method will try to export volume data to a new `.vdb` file.
    * If successful, this method returns absolute file path to the resolved `.vdb` file, if not,

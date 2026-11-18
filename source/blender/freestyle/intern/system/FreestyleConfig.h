@@ -25,7 +25,7 @@ namespace Config {
 
 /* Directory separators. */
 
-/* TODO: Use Blender's stuff for such things! */
+/* TODO: Use AIR Blend's stuff for such things! */
 #ifdef WIN32
 static const string DIR_SEP("\\");
 static const string PATH_SEP(";");

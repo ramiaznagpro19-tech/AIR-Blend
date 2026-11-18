@@ -328,7 +328,7 @@ void BKE_add_template_variables_for_project(bke::path_templates::VariableMap &va
  * pass nullptr when that is actually true, not just out of convenience, because
  * it alters the produced variables.
  *
- * \param project: a Blender project, if any, to provide project variables. Can
+ * \param project: an AIR Blend project, if any, to provide project variables. Can
  * be null, in which case no project-related variables will be added.
  *
  * \see #BKE_path_apply_template()

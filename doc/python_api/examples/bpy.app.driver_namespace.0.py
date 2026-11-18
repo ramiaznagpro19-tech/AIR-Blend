@@ -5,11 +5,11 @@ File Loading & Order of Initialization
 
    This can be done by registering text data-blocks to execute on startup,
    which executes the scripts before drivers are evaluated.
-   See *Text -> Register* from Blender's text editor.
+   See *Text -> Register* from AIR Blend's text editor.
 
    .. hint::
 
-      You may prefer to use external files instead of Blender's text-blocks.
+      You may prefer to use external files instead of AIR Blend's text-blocks.
       This can be done using a text-block which executes an external file.
 
       This example runs ``driver_namespace.py`` located in the same directory as the text-blocks blend-file:

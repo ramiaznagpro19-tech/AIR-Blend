@@ -26,7 +26,7 @@ TEST(BLI_build_config, Endian)
 #if defined(__BIG_ENDIAN__)
   static_assert(ARCH_CPU_BIG_ENDIAN);
   static_assert(!ARCH_CPU_LITTLE_ENDIAN);
-  /* Blender does not build on big endian systems. */
+  /* AIR Blend does not build on big endian systems. */
   static_assert(0);
 #endif
 #if defined(__LITTLE_ENDIAN__)

@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 5.3.0 Alpha (b'2cef5b8c951a')\n"
+"Project-Id-Version: AIR Blend 5.3.0 Alpha (b'2cef5b8c951a')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 07:47+0000\n"
 "PO-Revision-Date: 2026-09-13 09:09+0000\n"
@@ -1238,11 +1238,11 @@ msgstr "Spremi kopiju"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
-msgstr "Spremi Blender datoteku"
+msgid "Save AIR Blend File"
+msgstr "Spremi AIR Blend datoteku"
 
 
-msgid "Save the current Blender file"
+msgid "Save the current AIR Blend file"
 msgstr "Spremi otvorenu datoteku"
 
 
@@ -1542,8 +1542,8 @@ msgid "Open..."
 msgstr "Otvori..."
 
 
-msgid "Blender is free software"
-msgstr "Blender softver je besplatan"
+msgid "AIR Blend is free software"
+msgstr "AIR Blend softver je besplatan"
 
 
 msgid "Licensed under the GNU General Public License"
@@ -1566,7 +1566,7 @@ msgstr "Više..."
 
 
 msgctxt "Operator"
-msgid "Donate to Blender"
+msgid "Donate to AIR Blend"
 msgstr "Doniraj Blenderu"
 
 
@@ -1585,8 +1585,8 @@ msgstr "Licenca"
 
 
 msgctxt "Operator"
-msgid "Blender Website"
-msgstr "Blender web stranica"
+msgid "AIR Blend Website"
+msgstr "AIR Blend web stranica"
 
 
 msgid "Assign"
@@ -1597,7 +1597,7 @@ msgid "Bug"
 msgstr "Greška"
 
 
-msgid "Read about what's new in this version of Blender"
+msgid "Read about what's new in this version of AIR Blend"
 msgstr "Pročitaj što je sve novo u ovoj verziji Blendera"
 
 
@@ -1605,7 +1605,7 @@ msgid "User Manual"
 msgstr "Korisnički priručnik"
 
 
-msgid "The reference manual for this version of Blender"
+msgid "The reference manual for this version of AIR Blend"
 msgstr "Korisnički priručnik za ovu verziju Blendera"
 
 
@@ -1726,8 +1726,8 @@ msgstr "Više..."
 
 
 msgctxt "Operator"
-msgid "Load Factory Blender Settings"
-msgstr "Vrati Blender na tvorničke postavke"
+msgid "Load Factory AIR Blend Settings"
+msgstr "Vrati AIR Blend na tvorničke postavke"
 
 
 msgctxt "Operator"

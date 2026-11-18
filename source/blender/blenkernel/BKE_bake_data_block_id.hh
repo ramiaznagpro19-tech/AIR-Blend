@@ -25,7 +25,7 @@ namespace bke::bake {
 /**
  * Unique weak reference to a data block within a #Main. It's used when caching/baking data-block
  * references. Data-block pointers can't be used directly, because they are not stable over time
- * and between Blender sessions.
+ * and between AIR Blend sessions.
  */
 struct BakeDataBlockID {
   ID_Type type;

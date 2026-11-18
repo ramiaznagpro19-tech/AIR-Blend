@@ -1812,7 +1812,7 @@ class USDExportTest(AbstractUSDTest):
         prim_list = [
             ("/root/Text", True),
             ("/root/SurfPatch", True),
-            ("/root/Mball", False),  # Metaballs are not instanced in Blender at the moment
+            ("/root/Mball", False),  # Metaballs are not instanced in AIR Blend at the moment
         ]
         for prim_path, expected in prim_list:
             prim = stage.GetPrimAtPath(prim_path)
@@ -2302,7 +2302,7 @@ class USDExportTest(AbstractUSDTest):
 
     def test_export_mesh_normals(self):
         """Test that each exported USD normal interpolation and number matches
-        Blender mesh normal domain"""
+        AIR Blend mesh normal domain"""
         bpy.ops.wm.open_mainfile(filepath=str(self.testdir / "usd_mesh_normals.blend"))
         export_path = self.tempdir / "usd_mesh_normals.usda"
 

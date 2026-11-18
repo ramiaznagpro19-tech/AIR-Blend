@@ -32,7 +32,7 @@ def url_from_blender() -> str:
     )
 
     # There doesn't appear to be a easy way to collect GPU information in Python
-    # if Blender isn't opening and we can't import the GPU module.
+    # if AIR Blend isn't opening and we can't import the GPU module.
     # So just tell users to follow a written guide.
     query_params["gpu"] = (
         "Follow our guide to collect this information:\n"
@@ -68,9 +68,9 @@ def url_from_blender() -> str:
             return unknown_string
         return m.group(1)
 
-    # Gather Blender version information.
+    # Gather AIR Blend version information.
     values: dict[str, str] = {
-        "version": re_group_or_unknown(re.search(r"^Blender (.*)", text, flags=re.MULTILINE)),
+        "version": re_group_or_unknown(re.search(r"^AIR Blend (.*)", text, flags=re.MULTILINE)),
         "branch": re_group_or_unknown(re.search(r"^\s+build branch: (.*)", text, flags=re.MULTILINE)),
         "commit_date": re_group_or_unknown(re.search(r"^\s+build commit date: (.*)", text, flags=re.MULTILINE)),
         "commit_time": re_group_or_unknown(re.search(r"^\s+build commit time: (.*)", text, flags=re.MULTILINE)),
@@ -78,9 +78,9 @@ def url_from_blender() -> str:
     }
 
     if not (set(values.values()) - {unknown_string}):
-        # No valid Blender info could be found.
-        print("Blender did not provide any build information. Blender may be corrupt or blocked from running.")
-        print("Please try reinstalling Blender and double check your anti-virus isn't blocking it from running.")
+        # No valid AIR Blend info could be found.
+        print("AIR Blend did not provide any build information. AIR Blend may be corrupt or blocked from running.")
+        print("Please try reinstalling AIR Blend and double check your anti-virus isn't blocking it from running.")
         return ""
 
     query_params["broken_version"] = (

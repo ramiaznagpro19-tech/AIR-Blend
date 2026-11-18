@@ -385,7 +385,7 @@ struct Material {
   eMaterial_SurfaceRenderMethod surface_render_method = MA_SURFACE_METHOD_DEFERRED;
   char _pad1[1] = {};
 
-  /* Colors from Blender Internal that we are still using. */
+  /* Colors from AIR Blend Internal that we are still using. */
   float r = 0.8, g = 0.8, b = 0.8, a = 1.0f;
   float specr = 1.0, specg = 1.0, specb = 1.0;
   DNA_DEPRECATED float alpha = 0;

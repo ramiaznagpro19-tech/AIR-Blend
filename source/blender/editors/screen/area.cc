@@ -2136,7 +2136,7 @@ static void area_calc_totrct(const bScreen *screen, ScrArea *area, const rcti *w
       area->totrct.ymax -= px_edge;
     }
   }
-  /* Although the following asserts are correct they lead to a very unstable Blender.
+  /* Although the following asserts are correct they lead to a very unstable AIR Blend.
    * And the asserts would fail even in 2.7x
    * (they were added in 2.8x as part of the top-bar commit).
    * For more details see #54864. */

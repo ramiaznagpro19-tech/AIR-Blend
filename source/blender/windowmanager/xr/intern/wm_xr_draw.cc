@@ -7,7 +7,7 @@
  *
  * \name Window-Manager XR Drawing
  *
- * Implements Blender specific drawing functionality for use with the Ghost-XR API.
+ * Implements AIR Blend specific drawing functionality for use with the Ghost-XR API.
  */
 
 #include <cstring>

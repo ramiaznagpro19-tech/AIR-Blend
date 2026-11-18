@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 """
-This test emulates running packaging commands with Blender via the command line.
+This test emulates running packaging commands with AIR Blend via the command line.
 
 This also happens to test:
 - Packages with ``*.whl``.
@@ -578,7 +578,7 @@ class TestSimple(TestWithTempBlenderUser_MixIn, unittest.TestCase):
             "STATUS Extensions list for \"MyTestRepo\" updated",
         )
 
-        # Install the package into Blender.
+        # Install the package into AIR Blend.
 
         stdout = run_blender_extensions_no_errors(("repo-list",))
         self.assertEqual(
@@ -606,7 +606,7 @@ class TestSimple(TestWithTempBlenderUser_MixIn, unittest.TestCase):
             "STATUS Installed \"my_test_pkg\""
         )
 
-        # TODO: validate the installation works - that the package does something non-trivial when Blender starts.
+        # TODO: validate the installation works - that the package does something non-trivial when AIR Blend starts.
 
         stdout = run_blender_extensions_no_errors(("remove", pkg_idname))
         self.assertEqual(
@@ -778,7 +778,7 @@ class TestPlatform(TestWithTempBlenderUser_MixIn, unittest.TestCase):
             del platforms_other[-1]
         assert len(platforms_other) == 2
 
-        # Create two packages with the same ID, and ensure the package seen by Blender is the one for our platform.
+        # Create two packages with the same ID, and ensure the package seen by AIR Blend is the one for our platform.
 
         repo_id = "test_repo_module_name"
         repo_name = "MyTestRepo"
@@ -786,7 +786,7 @@ class TestPlatform(TestWithTempBlenderUser_MixIn, unittest.TestCase):
         self.repo_add(repo_id=repo_id, repo_name=repo_name)
 
         # Create a range of versions, note that only minimum versions beginning
-        # with `version_c_this` and higher can be installed with this Blender session.
+        # with `version_c_this` and higher can be installed with this AIR Blend session.
         version_a = blender_version_relative((-2, 0, 0))
         version_b = blender_version_relative((-1, 0, 0))
         version_c_this = blender_version_relative((0, 0, 0))
@@ -1047,8 +1047,8 @@ class TestPythonVersions(TestWithTempBlenderUser_MixIn, unittest.TestCase):
 
         self.repo_add(repo_id=repo_id, repo_name=repo_name)
 
-        # Use Blender's embedded Python version (which may differ from the host Python running this test);
-        # wheel-compatibility filtering happens under Blender's Python.
+        # Use AIR Blend's embedded Python version (which may differ from the host Python running this test);
+        # wheel-compatibility filtering happens under AIR Blend's Python.
         this_python_version_major, this_python_version_minor = BLENDER_PYTHON_VERSION
         # TODO: this test doesn't make sense for the first Python major releases (4.0 for example).
         if this_python_version_minor == 0:
@@ -1185,7 +1185,7 @@ class TestModuleViolation(TestWithTempBlenderUser_MixIn, unittest.TestCase):
             "STATUS Extensions list for \"MyTestRepoViolation\" updated",
         )
 
-        # Install the package into Blender.
+        # Install the package into AIR Blend.
 
         stdout = run_blender_extensions_no_errors(("repo-list",))
         self.assertEqual(
@@ -1289,21 +1289,21 @@ class TestBlockList(TestWithTempBlenderUser_MixIn, unittest.TestCase):
                 repo_id,
             ))
 
-        # Install the package into Blender.
+        # Install the package into AIR Blend.
         stdout = run_blender_extensions_no_errors(("install", pkg_idnames[1], "--enable"))
         self.assertEqual(
             [line for line in stdout.split("\n") if line.startswith("STATUS ")][0],
             "STATUS Installed \"{:s}\"".format(pkg_idnames[1])
         )
 
-        # Ensure blocking works, fail to install the package into Blender.
+        # Ensure blocking works, fail to install the package into AIR Blend.
         stdout = run_blender_extensions_no_errors(("install", pkg_idnames[0], "--enable"))
         self.assertEqual(
             [line for line in stdout.split("\n") if line.startswith("FATAL_ERROR ")][0],
             "FATAL_ERROR Package \"{:s}\", is blocked: One example reason".format(pkg_idnames[0])
         )
 
-        # Install the package into Blender.
+        # Install the package into AIR Blend.
 
 
 class TestUnknownType(TestWithTempBlenderUser_MixIn, unittest.TestCase):
@@ -1311,7 +1311,7 @@ class TestUnknownType(TestWithTempBlenderUser_MixIn, unittest.TestCase):
     def test_unknown_type_skipped(self) -> None:
         """
         Check that packages with unknown types are silently skipped.
-        This allows repositories to contain extensions for future Blender versions
+        This allows repositories to contain extensions for future AIR Blend versions
         without causing errors in older versions.
         """
         import json
@@ -1421,7 +1421,7 @@ class TestTheme(TestWithTempBlenderUser_MixIn, unittest.TestCase):
 
 
 def blender_python_version_query() -> tuple[int, int]:
-    # Return the ``(major, minor)`` version of Blender's embedded Python.
+    # Return the ``(major, minor)`` version of AIR Blend's embedded Python.
     returncode, bl_stdout, bl_stderr = run_blender((
         "--background",
         "--factory-startup",

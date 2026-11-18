@@ -263,7 +263,7 @@ class Instance : public DrawEngine {
     /* The external engine can use the OpenGL rendering API directly, so make sure the state is
      * already applied.
      * We should only need this before view_draw, but we do it here for compatibility
-     * (matching previous Blender versions) */
+     * (matching previous AIR Blend versions) */
     GPU_apply_state();
 
     /* Create render engine. */

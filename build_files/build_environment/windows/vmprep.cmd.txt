@@ -115,7 +115,7 @@ mkdir C:\tools\rocm
 echo Installing Hip SDK 7.1.51803-d3a86bd04
 msiexec /i C:\install\Packages\Apps\ROCmSDKPackages\SDKCore\ROCm_SDK_Core.msi INSTALLDIR="C:\tools\rocm"
 
-echo Cloning Blender repository
+echo Cloning AIR Blend repository
 mkdir c:\blendergit
 cd c:\blendergit
 REM Git won't be in the path yet, use full path 

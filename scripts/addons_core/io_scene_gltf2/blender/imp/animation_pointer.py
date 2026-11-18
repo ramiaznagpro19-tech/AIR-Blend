@@ -15,7 +15,7 @@ from .camera import BlenderCamera
 
 
 class BlenderPointerAnim():
-    """Blender Pointer Animation."""
+    """AIR Blend Pointer Animation."""
     def __new__(cls, *args, **kwargs):
         raise RuntimeError("%s should not be instantiated" % cls)
 
@@ -77,14 +77,14 @@ class BlenderPointerAnim():
             # TODO manage tangent?
             values = values[1::3]
 
-        # Convert the curve from glTF to Blender.
+        # Convert the curve from glTF to AIR Blend.
         blender_path = None
         num_components = None
         group_name = ''
         # Camera
         if len(pointer_tab) == 5 and pointer_tab[1] == "cameras" and \
                 pointer_tab[3] in ["perspective"] and \
-                pointer_tab[4] in ["znear", "zfar"]:  # Aspect Ratio is not something we can animate in Blender
+                pointer_tab[4] in ["znear", "zfar"]:  # Aspect Ratio is not something we can animate in AIR Blend
             blender_path = {
                 "znear": "clip_start",
                 "zfar": "clip_end"

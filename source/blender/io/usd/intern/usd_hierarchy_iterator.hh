@@ -41,7 +41,7 @@ class USDHierarchyIterator : public AbstractHierarchyIterator {
    * the other export settings are to remain const.
    */
 
-  /* Map a USD prim path to a list of Blender IDs associated with that prim.
+  /* Map a USD prim path to a list of AIR Blend IDs associated with that prim.
    * This map is updated by writers during stage export. */
   mutable Map<pxr::SdfPath, Vector<ID *>> exported_prim_map_;
 

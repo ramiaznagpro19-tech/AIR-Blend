@@ -890,7 +890,7 @@ static void idprop_ui_data_to_dict_id(IDProperty *property, PyObject *dict)
   const char *id_type = nullptr;
   if (!RNA_enum_identifier(rna_enum_id_type_items, id_type_value, &id_type)) {
     /* Same fall-back as above, in case it is an unknown ID type (from a future version of
-     * Blender e.g.). */
+     * AIR Blend e.g.). */
     RNA_enum_identifier(rna_enum_id_type_items, ID_OB, &id_type);
   }
   PyObject *item = PyUnicode_FromString(id_type);

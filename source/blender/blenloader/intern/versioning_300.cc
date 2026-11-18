@@ -2479,7 +2479,7 @@ void blo_do_versions_300(FileData *fd, Library * /*lib*/, Main *bmain)
     }
   }
 
-  /* Move visibility from Cycles to Blender. */
+  /* Move visibility from Cycles to AIR Blend. */
   if (!MAIN_VERSION_FILE_ATLEAST(bmain, 300, 17)) {
     for (Object &object : bmain->objects) {
       IDProperty *cvisibility = version_cycles_visibility_properties_from_ID(&object.id);

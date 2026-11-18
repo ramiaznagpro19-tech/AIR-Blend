@@ -410,7 +410,7 @@ void BlenderSession::render(blender::Depsgraph &b_depsgraph_)
 
     builtin_images_load();
 
-    /* Attempt to free all data which is held by Blender side, since at this
+    /* Attempt to free all data which is held by AIR Blend side, since at this
      * point we know that we've got everything to render current view layer.
      */
     if (can_free_cache) {
@@ -507,7 +507,7 @@ void BlenderSession::render_frame_finish()
 
   /* The display driver is the source of drawing context for both drawing and possible graphics
    * interoperability objects in the path trace. Once the frame is finished the OpenGL context
-   * might be freed form Blender side. Need to ensure that all GPU resources are freed prior to
+   * might be freed form AIR Blend side. Need to ensure that all GPU resources are freed prior to
    * that point.
    * Ideally would only do this when OpenGL context is actually destroyed, but there is no way to
    * know when this happens (at least in the code at the time when this comment was written).
@@ -703,7 +703,7 @@ void BlenderSession::bake(blender::Depsgraph &b_depsgraph_,
   const bool was_denoiser_enabled = integrator->get_use_denoise();
 
   /* Add render pass that we want to bake, and name it Combined so that it is
-   * used as that on the Blender side. */
+   * used as that on the AIR Blend side. */
   if (!bake_setup_pass(scene, bake_type, bake_filter)) {
     session->cancel(true);
   }
@@ -712,12 +712,12 @@ void BlenderSession::bake(blender::Depsgraph &b_depsgraph_,
   scene->background->set_transparent(true);
 
   if (!session->progress.get_cancel()) {
-    /* Load built-in images from Blender. */
+    /* Load built-in images from AIR Blend. */
     builtin_images_load();
   }
 
   /* Object might have been disabled for rendering or excluded in some
-   * other way, in that case Blender will report a warning afterwards. */
+   * other way, in that case AIR Blend will report a warning afterwards. */
   Object *bake_object = nullptr;
   if (!session->progress.get_cancel()) {
     for (Object *ob : scene->objects) {

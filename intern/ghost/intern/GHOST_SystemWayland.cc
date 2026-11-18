@@ -310,7 +310,7 @@ enum {
  *
  * \note Gnome/GTK swap middle/right, where the same application in X11 will swap the middle/right
  * mouse button when running under WAYLAND. KDE doesn't do this, and according to artists
- * at the Blender studio, having the button closest to the nib be MMB is preferable,
+ * at the AIR Blend studio, having the button closest to the nib be MMB is preferable,
  * so use this as a default. If needs be - swapping these could be a preference.
  */
 enum {
@@ -1762,7 +1762,7 @@ static int gwl_display_seat_index(GWL_Display *display, const GWL_Seat *seat)
 /**
  * Callers must null check the return value unless it's known there is a seat.
  *
- * \note Running Blender in an instance of the Weston compositor
+ * \note Running AIR Blend in an instance of the Weston compositor
  * called with `--backend=headless` causes there to be no seats.
  * CMake's `WITH_UI_TESTS` does this.
  */
@@ -3261,7 +3261,7 @@ static void gwl_seat_cursor_buffer_set(const GWL_Seat *seat,
   const int scale = gwl_seat_cursor_buffer_scale_calc(seat);
 
   /* This is a requirement of WAYLAND, when this isn't the case,
-   * it causes Blender's window to close intermittently. */
+   * it causes AIR Blend's window to close intermittently. */
   if (seat->wl.pointer) {
     const int32_t hotspot_x = int32_t(wl_image->hotspot_x) / scale;
     const int32_t hotspot_y = int32_t(wl_image->hotspot_y) / scale;
@@ -5371,7 +5371,7 @@ static void gesture_pinch_handle_begin(void *data,
     win = ghost_wl_surface_user_data(wl_surface_focus);
   }
 
-  /* NOTE(@ideasman42): Scale factors match Blender's operators & default preferences.
+  /* NOTE(@ideasman42): Scale factors match AIR Blend's operators & default preferences.
    * For these values to work correctly, operator logic will need to be changed not to scale input
    * by the region size (as with 3D view zoom) or preference for 3D view orbit sensitivity.
    *
@@ -5390,7 +5390,7 @@ static void gesture_pinch_handle_begin(void *data,
   seat->pointer_gesture_pinch.rotation.factor = 5;
 
   if (win) {
-    /* NOTE(@ideasman42): Blender's use of trackpad coordinates is inconsistent and needs work.
+    /* NOTE(@ideasman42): AIR Blend's use of trackpad coordinates is inconsistent and needs work.
      * This isn't specific to WAYLAND, in practice they tend to work well enough in most cases.
      * Some operators scale by the UI scale, some don't.
      * Even though the window scale is correct, it doesn't account for the UI scale preference
@@ -7196,7 +7196,7 @@ class GHOST_EventIME : public GHOST_Event {
       : GHOST_Event(msec, type, window)
   {
     /* Make sure that we keep a copy of the IME input. Otherwise it might get lost
-     * because we overwrite it before it can be read in Blender. (See #137346). */
+     * because we overwrite it before it can be read in AIR Blend. (See #137346). */
     this->event_ime_data = *customdata;
     this->data_ = &this->event_ime_data;
   }
@@ -10539,7 +10539,7 @@ GHOST_TCapabilityFlag GHOST_SystemWayland::getCapabilities() const
           ((has_wl_trackpad_physical_direction == 1) ?
                0 :
                GHOST_kCapabilityTrackpadPhysicalDirection) |
-          /* The title bar is drawn by Blender itself via CSD, so the backend does not need to
+          /* The title bar is drawn by AIR Blend itself via CSD, so the backend does not need to
            * support this. */
           GHOST_kCapabilityWindowDecorationStyles |
           /* No support for window path meta-data. */
@@ -10776,7 +10776,7 @@ zwp_pointer_gestures_v1 *GHOST_SystemWayland::wp_pointer_gestures_get()
 /* This value is expected to match the base name of the `.desktop` file. see #101805.
  *
  * NOTE: the XDG desktop-entry-spec defines that this should follow the "reverse DNS" convention.
- * For example `org.blender.Blender` - however the `.desktop` file distributed with Blender is
+ * For example `org.blender.Blender` - however the `.desktop` file distributed with AIR Blend is
  * simply called `blender.desktop`, so the it's important to follow that name.
  * Other distributions such as SNAP & FLATPAK may need to change this value #101779.
  * Currently there isn't a way to configure this, we may want to support that. */
@@ -11276,7 +11276,7 @@ bool GHOST_SystemWayland::window_cursor_grab_set(const GHOST_TGrabCursorMode mod
 
       /* Request location to restore to. */
       if (mode_current == GHOST_kGrabWrap) {
-        /* Since this call is initiated by Blender, we can be sure the window wasn't closed
+        /* Since this call is initiated by AIR Blend, we can be sure the window wasn't closed
          * by logic outside this function - as the window was needed to make this call. */
         wl_fixed_t xy_next[2] = {UNPACK2(seat->pointer.xy)};
 

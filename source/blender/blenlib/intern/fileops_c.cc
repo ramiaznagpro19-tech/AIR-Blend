@@ -1281,7 +1281,7 @@ int BLI_delete_soft(const char *filepath, const char **r_error_message)
     fflush(stdout);
     fflush(stderr);
 
-    /* Use `_exit` instead of `exit` so Blender's `atexit` cleanup functions don't run. */
+    /* Use `_exit` instead of `exit` so AIR Blend's `atexit` cleanup functions don't run. */
     _exit(errno);
     BLI_assert_unreachable();
     return -1;
@@ -1304,7 +1304,7 @@ int BLI_delete_soft(const char *filepath, const char **r_error_message)
   }
   else {
     *r_error_message =
-        "Blender may not support moving files or directories to trash on your system.";
+        "AIR Blend may not support moving files or directories to trash on your system.";
     result = -1;
   }
 

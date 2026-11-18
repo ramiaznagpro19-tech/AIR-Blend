@@ -30,7 +30,7 @@ bool EIG_self_adjoint_eigen_solve(const int size,
 {
   SelfAdjointEigenSolver<MatrixXf> eigen_solver;
 
-  /* Blender and Eigen matrices are both column-major. */
+  /* AIR Blend and Eigen matrices are both column-major. */
   eigen_solver.compute(Map<MatrixXf>((float *)matrix, size, size));
 
   if (eigen_solver.info() != Success) {

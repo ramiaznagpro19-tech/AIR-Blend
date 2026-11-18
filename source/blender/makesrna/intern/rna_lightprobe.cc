@@ -122,7 +122,7 @@ static void rna_def_lightprobe(BlenderRNA *brna)
   RNA_def_property_ui_text(prop, "Influence Distance", "Influence distance of the probe");
   RNA_def_property_update(prop, NC_MATERIAL | ND_SHADING, nullptr);
 
-#  if 1 /* Deprecated: Remove in Blender 4.5 */
+#  if 1 /* Deprecated: Remove in AIR Blend 4.5 */
   prop = RNA_def_property(srna, "visibility_buffer_bias", PROP_FLOAT, PROP_NONE);
   RNA_def_property_float_sdna(prop, nullptr, "vis_bias");
   RNA_def_property_range(prop, 0.001f, 9999.0f);

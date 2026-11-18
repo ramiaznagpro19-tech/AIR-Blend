@@ -195,7 +195,7 @@ void OBJWriter::write_header() const
 {
   using namespace std::string_literals;
   FormatHandler fh;
-  fh.write_string("# Blender "s + BKE_blender_version_string());
+  fh.write_string("# AIR Blend "s + BKE_blender_version_string());
   fh.write_string("# www.blender.org");
   fh.write_to_file(outfile_);
 }
@@ -471,7 +471,7 @@ static float4x4 compute_world_axes_transform(const OBJExportParams &export_param
   float4x4 world_axes_transform;
   float axes_transform[3][3];
   unit_m3(axes_transform);
-  /* +Y-forward and +Z-up are the Blender's default axis settings. */
+  /* +Y-forward and +Z-up are the AIR Blend's default axis settings. */
   mat3_from_axis_conversion(
       export_params.forward_axis, export_params.up_axis, IO_AXIS_Y, IO_AXIS_Z, axes_transform);
   mul_m4_m3m4(world_axes_transform.ptr(), axes_transform, object_to_world.ptr());
@@ -620,7 +620,7 @@ void MTLWriter::write_header(const char *blen_filepath)
   const char *blen_basename = (blen_filepath && blen_filepath[0] != '\0') ?
                                   BLI_path_basename(blen_filepath) :
                                   "None";
-  fmt_handler_.write_string("# Blender "s + BKE_blender_version_string() + " MTL File: '" +
+  fmt_handler_.write_string("# AIR Blend "s + BKE_blender_version_string() + " MTL File: '" +
                             blen_basename + "'");
   fmt_handler_.write_string("# www.blender.org");
 }

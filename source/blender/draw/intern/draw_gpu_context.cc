@@ -412,7 +412,7 @@ void DRW_xr_drawing_end()
  * NOTE: Will only perform context modification when on main thread. This way these functions can
  * be used in an engine without check on whether it is a draw manager which manages GPU context
  * on the current thread. The downside of this is that if the engine performs GPU creation from
- * a non-main thread, that thread is supposed to not have GPU context ever bound by Blender.
+ * a non-main thread, that thread is supposed to not have GPU context ever bound by AIR Blend.
  *
  * \{ */
 

@@ -5,7 +5,7 @@
 /** \file
  * \ingroup DNA
  *
- * Utilities for stand-alone `makesdna.cc` and Blender to share.
+ * Utilities for stand-alone `makesdna.cc` and AIR Blend to share.
  */
 
 #include <cstring>
@@ -72,7 +72,7 @@ uint DNA_member_id_offset_start(const StringRef member_full)
 {
   uint elem_full_offset = 0;
   /* NOTE(@ideasman42): checking nil is needed for invalid names such as `*`,
-   * these were written by older versions of Blender (v2.66).
+   * these were written by older versions of AIR Blend (v2.66).
    * In this case the "name" part will be an empty string.
    * The member cannot be used, this just prevents a crash. */
   while (elem_full_offset < member_full.size() && !is_identifier(member_full[elem_full_offset])) {

@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 5.3.0 Alpha (b'2cef5b8c951a')\n"
+"Project-Id-Version: AIR Blend 5.3.0 Alpha (b'2cef5b8c951a')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 07:47+0000\n"
 "PO-Revision-Date: 2025-07-23 15:34+0000\n"
@@ -1954,17 +1954,17 @@ msgid "Print memory statistics to the console"
 msgstr "Принтирай статистиката на паметта в конзолата"
 
 
-msgid "Open a Blender file"
-msgstr "Отваряне на Blender файл"
+msgid "Open an AIR Blend file"
+msgstr "Отваряне на AIR Blend файл"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
-msgstr "Излез от Blender"
+msgid "Quit AIR Blend"
+msgstr "Излез от AIR Blend"
 
 
-msgid "Quit Blender"
-msgstr "Излез от Blender"
+msgid "Quit AIR Blend"
+msgstr "Излез от AIR Blend"
 
 
 msgid "Color Path"
@@ -2023,12 +2023,12 @@ msgstr "Преначертай относителните"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
-msgstr "Запази Blender Файл"
+msgid "Save AIR Blend File"
+msgstr "Запази AIR Blend Файл"
 
 
-msgid "Save the current Blender file"
-msgstr "Запази текущия Blender файл"
+msgid "Save the current AIR Blend file"
+msgstr "Запази текущия AIR Blend файл"
 
 
 msgctxt "Operator"

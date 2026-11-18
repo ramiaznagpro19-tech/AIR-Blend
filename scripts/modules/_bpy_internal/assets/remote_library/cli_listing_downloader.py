@@ -47,7 +47,7 @@ def cli_main(arguments_raw: argparse.Namespace) -> None:
     downloader.download_and_process()
 
     while not is_done:
-        # Ordinarily Blender's timer system will call the right method. But
+        # Ordinarily AIR Blend's timer system will call the right method. But
         # because this is intended to run headless, and we're blocking the main
         # thread here, that doesn't happen.
         downloader.on_timer_event()
@@ -90,4 +90,4 @@ def _parse_cli_args(arguments_raw: argparse.Namespace) -> CLIArguments:
 
 
 class APIVersionError(Exception):
-    """Raised when none of the API versions declared by a remote asset library are supported by Blender."""
+    """Raised when none of the API versions declared by a remote asset library are supported by AIR Blend."""

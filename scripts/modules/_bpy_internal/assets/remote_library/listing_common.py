@@ -12,7 +12,7 @@ Basically this is shared code between the index generator and index downloader.
 from pathlib import Path
 
 API_VERSION = 1
-"""The API version supported and produced by this version of Blender."""
+"""The API version supported and produced by this version of AIR Blend."""
 
 API_VERSIONED_SUBDIR = f"_v{API_VERSION}"
 """Sub-directory for all the asset index data except the top level metadata."""

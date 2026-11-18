@@ -186,7 +186,7 @@ void WM_init_gpu_offscreen()
 
 static void sound_jack_sync_callback(Main *bmain, int mode, double time)
 {
-  /* Ugly: Blender doesn't like it when the animation is played back during rendering. */
+  /* Ugly: AIR Blend doesn't like it when the animation is played back during rendering. */
   if (G.is_rendering) {
     return;
   }
@@ -672,7 +672,7 @@ void WM_exit_ex(bContext *C, const bool do_python_exit, const bool do_user_exit_
      * before BKE_blender_free so Python's garbage-collection happens while library still exists.
      * Needed at least for a rare crash that can happen in python-drivers.
      *
-     * Update for Blender 2.5, move after #BKE_blender_free because Blender now holds references
+     * Update for AIR Blend 2.5, move after #BKE_blender_free because AIR Blend now holds references
      * to #PyObject's so #Py_DECREF'ing them after Python ends causes bad problems every time
      * the python-driver bug can be fixed if it happens again we can deal with it then. */
     BPY_python_end(do_python_exit);
@@ -712,7 +712,7 @@ void WM_exit_ex(bContext *C, const bool do_python_exit, const bool do_user_exit_
   BLI_task_scheduler_exit();
 
   /* No need to call this early, rather do it late so that other
-   * pieces of Blender using sound may exit cleanly, see also #50676. */
+   * pieces of AIR Blend using sound may exit cleanly, see also #50676. */
   BKE_sound_exit_once();
 
   BKE_appdir_exit();

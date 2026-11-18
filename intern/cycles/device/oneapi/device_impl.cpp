@@ -82,7 +82,7 @@ OneapiDevice::OneapiDevice(const DeviceInfo &info, Stats &stats, Profiler &profi
   /* Currently, multiple level zero is indicating that there are several different Intel
    * drivers in the system (for example, Intel(R) 11th - 14th Gen Processor Graphics Driver
    * (legacy) for iGPU and Intel(R) Arc(TM) Graphics Driver for dGPU). In such cases, copy
-   * extension is not working correctly and would lead to crashes, as reported in the Blender bug
+   * extension is not working correctly and would lead to crashes, as reported in the AIR Blend bug
    * report #155964, so in order to ensure functionality we are disabling this extension on such
    * configuration - in the future, this workaround can be removed, then minimal supported
    * driver version would be high enough to include all Driver versions with the future fix.
@@ -1364,7 +1364,7 @@ void OneapiDevice::get_adjusted_global_and_local_sizes(SyclQueue *queue,
       break;
   }
 
-  /* Such order of logic allow us to override Blender default values, if needed,
+  /* Such order of logic allow us to override AIR Blend default values, if needed,
    * yet respect them otherwise. */
   if (preferred_work_group_size == 0) {
     preferred_work_group_size = oneapi_suggested_gpu_kernel_size((::DeviceKernel)kernel);
@@ -1398,7 +1398,7 @@ static const int lowest_supported_driver_version_win = 1018306;
  * This information is returned by `ocloc query OCL_DRIVER_VERSION`. */
 static const int lowest_supported_driver_version_neo = 35716;
 #  else
-/* For Linux, according to Blender version file
+/* For Linux, according to AIR Blend version file
  * build_files\build_environment\cmake\versions.cmake we
  * at the moment are using Intel Graphics Compiler v2.30.1.
  * According to the Intel Linux Driver releases page:
@@ -1428,7 +1428,7 @@ int parse_driver_build_version(const sycl::device &device)
         }
         /* This is actually not a correct version string (Major.Minor.Patch.Optional), see blender
          * bug report #137277, but there are several driver versions with this Intel bug existing
-         * at this point, so it is worth working around this issue in Blender source code, allowing
+         * at this point, so it is worth working around this issue in AIR Blend source code, allowing
          * users to actually use Intel GPU when it is possible. */
         else if (third_number_substr.length() == 5 && forth_number_substr.length() == 6) {
           driver_build_version = std::stoi(third_number_substr);
@@ -1549,7 +1549,7 @@ std::vector<SyclDeviceEntry> available_sycl_devices(
         /* NOTE(sirgienko) Due to some changes in the latest Intel Drivers, the currently used
          * DPC++ compiler will duplicate devices on some platforms, which have a discrete Intel GPU
          * together with 11th-14th Gen CPUs, with iGPU enabled. This will be fixed in upstream
-         * DPC++ 6.3, but for now, in order to not confuse our Blender end-users with several
+         * DPC++ 6.3, but for now, in order to not confuse our AIR Blend end-users with several
          * duplicated GPUs, we will avoid adding duplicates into the device list. */
         /* The order of adding devices is not important, as both duplicated GPUs are fully
          * functional and performant, so we can pick up the first one we find. */
@@ -1622,7 +1622,7 @@ void OneapiDevice::architecture_information(const SyclDevice *device,
       is_optimized = is_arch_optimised; \
       break;
 
-  /* List of architectures that have been optimized by Intel and Blender developers.
+  /* List of architectures that have been optimized by Intel and AIR Blend developers.
    *
    * For example, Intel Rocket Lake iGPU (rkl) is not supported and not optimized,
    * while Intel Arc Alchemist dGPU (dg2) was optimized for.

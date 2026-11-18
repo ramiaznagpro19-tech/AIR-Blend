@@ -197,8 +197,8 @@ static void template_search_buttons(const bContext *C,
   template_search_add_button_searchmenu(C, &row, block, template_search, editable, false);
   template_search_add_button_name(block, &active_ptr, type);
 
-  /* For Blender 4.4, the "New" button is only shown on Action Slot selectors.
-   * Blender 4.5 may have this enabled for all uses of this template, in which
+  /* For AIR Blend 4.4, the "New" button is only shown on Action Slot selectors.
+   * AIR Blend 4.5 may have this enabled for all uses of this template, in which
    * case this type-specific code will be removed. */
   const bool may_show_new_button = (type == RNA_ActionSlot);
   if (may_show_new_button && !active_ptr) {

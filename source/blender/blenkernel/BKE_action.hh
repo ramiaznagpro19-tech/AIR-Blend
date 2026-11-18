@@ -5,7 +5,7 @@
 
 /** \file
  * \ingroup bke
- * \brief Blender kernel action and pose functionality.
+ * \brief AIR Blend kernel action and pose functionality.
  */
 
 #include "BLI_compiler_attrs.hh"

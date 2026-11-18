@@ -110,7 +110,7 @@ def create_qtc_project_main(name: str) -> None:
                 defines_final.extend(cmake_compiler_defines() or [])
             f.write("\n".join(defines_final))
 
-    print("Blender project file written to: %r" % qtc_prj)
+    print("AIR Blend project file written to: %r" % qtc_prj)
     # --- end
 
 
@@ -151,14 +151,14 @@ def create_qtc_project_python(name: str) -> None:
 def argparse_create() -> argparse.ArgumentParser:
 
     parser = argparse.ArgumentParser(
-        description="This script generates Qt Creator project files for Blender",
+        description="This script generates Qt Creator project files for AIR Blend",
     )
 
     parser.add_argument(
         "-n", "--name",
         dest="name",
         metavar='NAME', type=str,
-        help="Override default project name (\"Blender\")",
+        help="Override default project name (\"AIR Blend\")",
         required=False,
     )
 

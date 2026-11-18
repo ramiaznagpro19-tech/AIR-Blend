@@ -70,10 +70,10 @@ static struct {
   char program_dirname[FILE_MAX];
   /** Persistent temporary directory (defined by the preferences or OS). */
   char temp_dirname_base[FILE_MAX];
-  /** Volatile temporary directory (owned by Blender, removed on exit). */
+  /** Volatile temporary directory (owned by AIR Blend, removed on exit). */
   char temp_dirname_session[FILE_MAX];
   /**
-   * True when this is a sub-directory owned & created by Blender,
+   * True when this is a sub-directory owned & created by AIR Blend,
    * false when a session directory couldn't be created - in this case don't delete it.
    */
   bool temp_dirname_session_can_be_deleted;
@@ -348,7 +348,7 @@ static bool test_env_path(char *path, const char *envvar, const bool check_is_di
 
 /**
  * Constructs in \a targetpath the name of a directory relative to a version-specific
- * sub-directory in the parent directory of the Blender executable.
+ * sub-directory in the parent directory of the AIR Blend executable.
  *
  * \param targetpath: String to return path.
  * \param folder_name: Optional folder name within version-specific directory.
@@ -489,7 +489,7 @@ static Vector<std::string> get_path_environment_multiple(const char *subfolder_n
  * \param targetpath: String to return path.
  * \param folder_name: default name of folder within user area.
  * \param subfolder_name: optional name of sub-folder within folder.
- * \param version: Blender version, used to construct a sub-directory name.
+ * \param version: AIR Blend version, used to construct a sub-directory name.
  * \param check_is_dir: When false, return true even if the path doesn't exist.
  * \return true if it was able to construct such a path.
  */
@@ -506,7 +506,7 @@ static bool get_path_user_ex(char *targetpath,
   if (test_env_path(user_path, "BLENDER_USER_RESOURCES", check_is_dir)) {
     /* Pass. */
   }
-  /* Portable install, to store user files next to Blender executable. */
+  /* Portable install, to store user files next to AIR Blend executable. */
   else if (get_path_local_ex(user_path, sizeof(user_path), "portable", nullptr, 0, true)) {
     /* Pass. */
   }
@@ -547,12 +547,12 @@ static bool get_path_user(char *targetpath,
 }
 
 /**
- * Returns the path of a folder within the Blender installation directory.
+ * Returns the path of a folder within the AIR Blend installation directory.
  *
  * \param targetpath: String to return path.
  * \param folder_name: default name of folder within installation area.
  * \param subfolder_name: optional name of sub-folder within folder.
- * \param version: Blender version, used to construct a sub-directory name.
+ * \param version: AIR Blend version, used to construct a sub-directory name.
  * \param check_is_dir: When false, return true even if the path doesn't exist.
  * \return true if it was able to construct such a path.
  */
@@ -886,7 +886,7 @@ std::optional<std::string> BKE_appdir_resource_path_id(const int folder_id,
 /* -------------------------------------------------------------------- */
 /** \name Program Path Queries
  *
- * Access locations of Blender & Python.
+ * Access locations of AIR Blend & Python.
  * \{ */
 
 #ifndef WITH_PYTHON_MODULE
@@ -1141,7 +1141,7 @@ bool BKE_appdir_app_template_id_search(const char *app_template, char *path, siz
 bool BKE_appdir_app_template_has_userpref(const char *app_template)
 {
   /* Test if app template provides a `userpref.blend`.
-   * If not, we will share user preferences with the rest of Blender. */
+   * If not, we will share user preferences with the rest of AIR Blend. */
   if (app_template[0] == '\0') {
     return false;
   }

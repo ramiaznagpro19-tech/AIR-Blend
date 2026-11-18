@@ -1109,7 +1109,7 @@ class VectorSet {
 };
 
 /**
- * Same as a normal VectorSet, but does not use Blender's guarded allocator. This is useful when
+ * Same as a normal VectorSet, but does not use AIR Blend's guarded allocator. This is useful when
  * allocating memory with static storage duration.
  */
 template<typename Key,

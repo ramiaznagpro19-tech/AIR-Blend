@@ -4,7 +4,7 @@
 
 """
 GUI (WARNING) this is a hack!
-Written to allow a UI without modifying Blender.
+Written to allow a UI without modifying AIR Blend.
 """
 
 __all__ = (
@@ -151,7 +151,7 @@ def pkg_manifest_zip_all_items(pkg_manifest_local, pkg_manifest_remote):
 
 # Any add-on which is an extension.
 ADDON_TYPE_EXTENSION = 0
-# Any add-on bundled with Blender (in the `addons_core` directory).
+# Any add-on bundled with AIR Blend (in the `addons_core` directory).
 # These cannot be removed.
 ADDON_TYPE_LEGACY_CORE = 1
 # Any add-on from a user directory (add-ons from the users home directory or additional scripts directories).
@@ -338,7 +338,7 @@ def addons_panel_draw_missing_with_extension_impl(
             break
 
     box = layout_panel.box()
-    box.label(text="Add-ons previously shipped with Blender are now available from extensions.blender.org.")
+    box.label(text="Add-ons previously shipped with AIR Blend are now available from extensions.blender.org.")
 
     pkg_manifest_remote = {}
 

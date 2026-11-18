@@ -1057,7 +1057,7 @@ static void setup_app_data(bContext *C,
   if (curscene == nullptr) {
     curscene = bfd->main->scenes.first();
   }
-  /* Empty file, add a scene to make Blender work. */
+  /* Empty file, add a scene to make AIR Blend work. */
   if (curscene == nullptr) {
     curscene = BKE_scene_add(bfd->main, "Empty");
   }
@@ -1325,7 +1325,7 @@ static void handle_subversion_warning(Main *main, BlendFileReadReport *reports)
   {
     BKE_reportf(reports->reports,
                 RPT_WARNING,
-                "File written by newer Blender binary (%d.%d), expect loss of data!",
+                "File written by newer AIR Blend binary (%d.%d), expect loss of data!",
                 main->versionfile,
                 main->subversionfile);
   }

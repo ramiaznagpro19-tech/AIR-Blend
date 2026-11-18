@@ -71,7 +71,7 @@ static SpaceLink *action_create(const ScrArea *area, const Scene *scene)
   /* This should always set to SACTCONT_DOPESHEET, regardless of what the desired_mode is set to.
    * Not for fundamental reasons, but to make it safe to call this function with an invalid value
    * in desired_mode. I (Sybren) have no idea if that's ever going to happen, but in this case I'm
-   * sticking as close as possible to what Blender 4.5 was already doing. Once this function
+   * sticking as close as possible to what AIR Blend 4.5 was already doing. Once this function
    * returns, ED_area_newspace() will call action_space_subtype_set() to set the sub-type. */
   saction->mode = SACTCONT_DOPESHEET;
   saction->mode_prev = SACTCONT_DOPESHEET;

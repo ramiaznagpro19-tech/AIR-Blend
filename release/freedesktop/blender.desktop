@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Blender
+Name=AIR Blend
 GenericName=3D modeler
 GenericName[ar]=3D المنمذج ثلاثي الأبعاد
 GenericName[ca]=Modelador 3D
@@ -86,4 +86,4 @@ Type=Application
 PrefersNonDefaultGPU=true
 Categories=Graphics;3DGraphics;
 MimeType=application/x-blender;
-StartupWMClass=Blender
+StartupWMClass=AIR Blend

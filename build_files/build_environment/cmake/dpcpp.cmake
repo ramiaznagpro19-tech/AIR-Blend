@@ -37,7 +37,7 @@ set(DPCPP_EXTRA_ARGS
   # Pre-built dependency paths (project-specific, not from configure.py)
   # In addition to this, we are setting some additional parameters,
   # which are not covered by configure.py, but which we plan to use
-  # in order to meet some Blender needs, for example, disabling
+  # in order to meet some AIR Blend needs, for example, disabling
   # HWLOC dependency/library from being used. Some of these variables
   # are even connected to our dpcpp.patch changes and require them
   # to work properly.

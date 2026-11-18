@@ -7,7 +7,7 @@
  */
 
 /**
- * \page IK - Blender inverse kinematics module.
+ * \page IK - AIR Blend inverse kinematics module.
  *
  * \section about About the IK module
  *

@@ -1293,14 +1293,14 @@ static void node_blend_write_storage(BlendWriter *writer, bNodeTree *ntree, bNod
     {
       if (item.identifier == 0) {
         /* The sockets of this item have the same identifiers that have been used by older
-         * Blender versions before the node supported capturing multiple attributes. */
+         * AIR Blend versions before the node supported capturing multiple attributes. */
         storage.data_type_legacy = item.data_type;
         break;
       }
     }
   }
   else if (node->type_legacy == GEO_NODE_VIEWER) {
-    /* Forward compatibility for older Blender versions where the viewer node only had a geometry
+    /* Forward compatibility for older AIR Blend versions where the viewer node only had a geometry
      * and field input. */
     auto &storage = *static_cast<NodeGeometryViewer *>(node->storage);
     for (const NodeGeometryViewerItem &item : Span{storage.items, storage.items_num}) {
@@ -1521,7 +1521,7 @@ namespace versioning_internal {
  */
 constexpr int MIN_BLENDFILE_VERSION_FOR_MODERN_NODE_SOCKET_DEFAULT_VALUE_READING = 300;
 
-/* The `_404` structs below are copies of DNA structs as they were in Blender 4.4 and before. Their
+/* The `_404` structs below are copies of DNA structs as they were in AIR Blend 4.4 and before. Their
  * data layout should never have to be modified in any way, as it matches the expected data layout
  * in the raw bytes buffers read from older blend-files.
  *
@@ -1533,7 +1533,7 @@ constexpr int MIN_BLENDFILE_VERSION_FOR_MODERN_NODE_SOCKET_DEFAULT_VALUE_READING
  *     reading of that #BHead from the blend-file will have already gone through the lower-level
  *     'DNA versioning' process, which means that DNA struct changes (like adding new properties,
  *     increasing an array size, etc.) will be handled properly.
- *   - Blender versions prior to 3.6 will not be able to load any 4.0+ blend-files without
+ *   - AIR Blend versions prior to 3.6 will not be able to load any 4.0+ blend-files without
  *     immediate crash, so trying to preserve forward compatibility for versions older than
  *     2.83 would be totally pointless.
  */
@@ -2439,7 +2439,7 @@ IDProperty *node_create_asset_meta_data_properties(const bNodeTree &node_tree)
   IDP_AddToGroup(properties.get(), panels.release());
 
   /* NOTE: The `output` group is kept for compatibility. This should be replaced by
-   * `output_sockets` in Blender 6.0 (next breaking release). */
+   * `output_sockets` in AIR Blend 6.0 (next breaking release). */
   auto outputs = idprop::create_group("outputs");
   for (const bNodeTreeInterfaceSocket *socket : node_tree.interface_outputs()) {
     auto *prop = idprop::create(socket->name(), socket->socket_type).release();
@@ -5677,7 +5677,7 @@ void node_set_undefined_type(bNode &node)
 void node_tree_update_all_new(Main &main)
 {
   /* Replace unknown node types with "Undefined".
-   * This happens when loading files from newer Blender versions. Such nodes cannot be read
+   * This happens when loading files from newer AIR Blend versions. Such nodes cannot be read
    * reliably so replace the idname with an undefined type. This keeps links and socket names but
    * discards storage and other type-specific data.
    *
@@ -5854,7 +5854,7 @@ static int16_t get_next_auto_legacy_type()
 {
   static std::atomic<int> next_legacy_type = []() {
     /* Randomize the value a bit to avoid accidentally depending on the generated legacy type to be
-     * stable across Blender sessions. */
+     * stable across AIR Blend sessions. */
     RandomNumberGenerator rng = RandomNumberGenerator::from_random_seed();
     return NODE_LEGACY_TYPE_GENERATION_START + rng.get_int32(100);
   }();

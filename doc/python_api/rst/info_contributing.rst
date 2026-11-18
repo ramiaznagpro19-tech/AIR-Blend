@@ -4,7 +4,7 @@
 Contribute Documentation
 ************************
 
-This guide covers how to contribute to Blender's Python API documentation,
+This guide covers how to contribute to AIR Blend's Python API documentation,
 including writing examples, formatting documentation, and building the docs locally.
 
 
@@ -16,8 +16,8 @@ Prerequisites
 
 Before you can build the documentation, you need:
 
-Blender Source Code
-   Clone the Blender repository following the
+AIR Blend Source Code
+   Clone the AIR Blend repository following the
    `official build instructions <https://developer.blender.org/docs/handbook/building_blender/>`__.
 Python Environment *(optional)*
    Set up a Python `virtual environment <https://docs.python.org/3/library/venv.html>`__.
@@ -42,7 +42,7 @@ Once you have the requirements installed, you can build the documentation:
 
 .. code-block:: bash
 
-   # From the Blender source root
+   # From the AIR Blend source root
    make doc_py
 
 You can then open ``doc/python_api/sphinx-out/index.html`` in your browser.
@@ -51,13 +51,13 @@ You can then open ``doc/python_api/sphinx-out/index.html`` in your browser.
 Modifying API Documentation
 ===========================
 
-API documentation is automatically generated from Blender's source code, meaning that
+API documentation is automatically generated from AIR Blend's source code, meaning that
 class descriptions, method signatures, etc., are defined either within C/C++ files
 (via ``PyDoc_STRVAR``) or as standard doc-strings in Python files.
 
 **To modify API class or method descriptions:**
 
-#. Locate the relevant source file in the Blender repository.
+#. Locate the relevant source file in the AIR Blend repository.
 #. Find the relevant doc-string either inside ``PyDoc_STRVAR(...)`` for the Python C/API
    or as a standard doc-string in a Python file.
 #. Edit using **reStructuredText** formatting.
@@ -145,7 +145,7 @@ Writing Good Examples
 ---------------------
 
 - **Keep it simple**: Focus on demonstrating one concept at a time.
-- **Make it runnable**: Examples should work when pasted into Blender's Python console or text editor.
+- **Make it runnable**: Examples should work when pasted into AIR Blend's Python console or text editor.
 - **Use comments**: Comment thoroughly, assuming readers are new to the APIs and concepts being demonstrated.
 
 
@@ -173,5 +173,5 @@ Contributing Your Changes
 =========================
 
 Once you've added or improved documentation,
-follow Blender's `contribution guidelines <https://developer.blender.org/docs/handbook/contributing/>`__
+follow AIR Blend's `contribution guidelines <https://developer.blender.org/docs/handbook/contributing/>`__
 to create a pull request.

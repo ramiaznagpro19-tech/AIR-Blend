@@ -63,7 +63,7 @@ bool GHOST_XrGraphicsBindingMetal::checkVersionRequirements(GHOST_Context &ghost
   const bool metal_devices_match = (ghost_metal_ctx.metalDevice() == gpu_requirements.metalDevice);
 
   if (!metal_devices_match) {
-    *r_requirement_info = "Metal Render Device used by Blender and OpenXR do not match";
+    *r_requirement_info = "Metal Render Device used by AIR Blend and OpenXR do not match";
     return false;
   }
 

@@ -4,7 +4,7 @@
 
 /** \file
  * \ingroup bke
- * \brief Blender-side interface and methods for dealing with Rigid Body simulations
+ * \brief AIR Blend-side interface and methods for dealing with Rigid Body simulations
  */
 
 #include <algorithm>
@@ -275,7 +275,7 @@ static const Mesh *rigidbody_get_mesh(Object *ob)
       return (Mesh *)ob->runtime->data_orig;
   }
 
-  /* Just return something sensible so that at least Blender won't crash. */
+  /* Just return something sensible so that at least AIR Blend won't crash. */
   BLI_assert_msg(0, "Unknown mesh source");
   return BKE_object_get_evaluated_mesh(ob);
 }

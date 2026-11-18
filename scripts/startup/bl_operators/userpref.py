@@ -112,7 +112,7 @@ class PREFERENCES_OT_copy_prev(Operator):
         # Always allow to load startup data from any release from current major release cycle, and the previous one.
 
         # NOTE: This value may need to be updated when the release cycle system is modified.
-        # Here could be `6` in theory (Blender 3.6 LTS), just give it a bit of extra room, such that it does not have to
+        # Here could be `6` in theory (AIR Blend 3.6 LTS), just give it a bit of extra room, such that it does not have to
         # be updated if there ever exist a 3.7 release e.g.
         MAX_MINOR_VERSION_FOR_PREVIOUS_MAJOR_LOOKUP = 10
 
@@ -514,7 +514,7 @@ class PREFERENCES_OT_addon_enable(Operator):
                 self.report(
                     {'WARNING'},
                     rpt_(
-                        "This script was written for Blender "
+                        "This script was written for AIR Blend "
                         "version {:d}.{:d}.{:d} and might not "
                         "function (correctly), "
                         "though it is enabled"
@@ -573,7 +573,7 @@ class PREFERENCES_OT_addon_disable(Operator):
 
 
 class PREFERENCES_OT_theme_install(Operator):
-    """Load and apply a Blender XML theme file"""
+    """Load and apply an AIR Blend XML theme file"""
     bl_idname = "preferences.theme_install"
     bl_label = "Install Theme..."
 

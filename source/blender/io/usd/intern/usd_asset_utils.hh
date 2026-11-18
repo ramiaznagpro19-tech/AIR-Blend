@@ -80,7 +80,7 @@ std::string get_export_textures_dir(const pxr::UsdStageRefPtr stage);
  * Return true if the asset at the given path is a candidate for importing
  * with the USD asset resolver.  The following heuristics are currently
  * applied for this test:
- * - Returns false if it's a Blender relative path.
+ * - Returns false if it's an AIR Blend relative path.
  * - Returns true if the path is package-relative.
  * - Returns true is the path doesn't exist on the file system but can
  *   nonetheless be resolved by the USD asset resolver.

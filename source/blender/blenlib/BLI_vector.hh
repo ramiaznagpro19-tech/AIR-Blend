@@ -21,7 +21,7 @@
  * allocation is done. As a consequence, iterators are invalidated when a Vector is moved
  * (iterators of std::vector remain valid when the vector is moved).
  *
- * `Vector` should be your default choice for a vector data structure in Blender.
+ * `Vector` should be your default choice for a vector data structure in AIR Blend.
  */
 
 #include <algorithm>
@@ -1154,7 +1154,7 @@ class Vector {
 #undef UPDATE_VECTOR_SIZE
 
 /**
- * Same as a normal Vector, but does not use Blender's guarded allocator. This is useful when
+ * Same as a normal Vector, but does not use AIR Blend's guarded allocator. This is useful when
  * allocating memory with static storage duration.
  */
 template<typename T, int64_t InlineBufferCapacity = default_inline_buffer_capacity(sizeof(T))>

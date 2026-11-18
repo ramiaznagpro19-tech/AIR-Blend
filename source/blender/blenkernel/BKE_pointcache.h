@@ -271,7 +271,7 @@ void BKE_ptcache_id_from_softbody(PTCacheID *pid, struct Object *ob, struct Soft
 void BKE_ptcache_id_from_particles(PTCacheID *pid, struct Object *ob, struct ParticleSystem *psys);
 void BKE_ptcache_id_from_cloth(PTCacheID *pid, struct Object *ob, struct ClothModifierData *clmd);
 /**
- * The fluid modifier does not actually use this anymore, but some parts of Blender expect that it
+ * The fluid modifier does not actually use this anymore, but some parts of AIR Blend expect that it
  * still has a point cache currently. For example, the fluid modifier uses
  * #DEG_add_collision_relations, which internally creates relations with the point cache.
  */

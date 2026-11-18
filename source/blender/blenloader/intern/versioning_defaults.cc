@@ -77,7 +77,7 @@ namespace blender {
 
 static bool blo_is_builtin_template(const char *app_template)
 {
-  /* For all builtin templates shipped with Blender. */
+  /* For all builtin templates shipped with AIR Blend. */
   return (!app_template || STR_ELEM(app_template,
                                     N_("2D_Animation"),
                                     N_("Storyboarding"),

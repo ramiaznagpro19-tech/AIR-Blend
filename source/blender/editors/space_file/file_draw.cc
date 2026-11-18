@@ -218,11 +218,11 @@ static void file_draw_tooltip_custom_func(bContext & /*C*/,
       if (thumb) {
         /* Look for version in existing thumbnail if available. */
         IMB_metadata_get_field(
-            thumb->metadata(), "Thumb::Blender::Version", version_str, sizeof(version_str));
+            thumb->metadata(), "Thumb::AIR Blend::Version", version_str, sizeof(version_str));
       }
 
       if (!version_str[0] && !(file->attributes & FILE_ATTR_OFFLINE)) {
-        /* Load Blender version directly from the file. */
+        /* Load AIR Blend version directly from the file. */
         short version = BLO_version_from_file(full_path);
         if (version != 0) {
           SNPRINTF_UTF8(version_str, "%d.%01d", version / 100, version % 100);
@@ -231,7 +231,7 @@ static void file_draw_tooltip_custom_func(bContext & /*C*/,
 
       if (version_str[0]) {
         tooltip_text_field_add(tip,
-                               fmt::format("Blender {}", version_str),
+                               fmt::format("AIR Blend {}", version_str),
                                {},
                                ui::TIP_STYLE_NORMAL,
                                ui::TIP_LC_NORMAL);
@@ -2092,7 +2092,7 @@ static void file_draw_invalid_library_hint(const bContext * /*C*/,
   int sy = v2d->tot.ymax;
 
   {
-    const char *message = RPT_("Unreadable Blender library file:");
+    const char *message = RPT_("Unreadable AIR Blend library file:");
     file_draw_string_multiline(sx, sy, message, width, line_height, text_col, nullptr, &sy);
 
     sy -= line_height;

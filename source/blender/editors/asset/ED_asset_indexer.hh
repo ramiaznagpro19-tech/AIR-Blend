@@ -60,7 +60,7 @@ struct RemoteListingAssetEntry : NonCopyable {
   ~RemoteListingAssetEntry();
 
   /**
-   * Empty entries are used to skip assets when the Blender version doesn't match.
+   * Empty entries are used to skip assets when the AIR Blend version doesn't match.
    */
   bool is_empty() const
   {
@@ -72,7 +72,7 @@ struct RemoteListingAssetEntry : NonCopyable {
  * Representation of the FileV1 type in the OpenAPI definition.
  * See blender_asset_library_openapi.yaml.
  *
- * Not all fields are included here, just the ones that are used by Blender.
+ * Not all fields are included here, just the ones that are used by AIR Blend.
  */
 struct RemoteListingFileEntry : NonCopyable {
   std::string local_path;

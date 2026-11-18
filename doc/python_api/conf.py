@@ -56,7 +56,7 @@ if has_module("sphinx_copybutton"):
     copybutton_exclude = ".linenos, .gp, .go"
 
 
-project = "Blender {:s} Python API".format(BLENDER_VERSION_STRING)
+project = "AIR Blend {:s} Python API".format(BLENDER_VERSION_STRING)
 root_doc = "index"
 copyright = "Blender Authors"
 version = BLENDER_VERSION_DOTS
@@ -72,7 +72,7 @@ exclude_patterns = [
     "include__bmesh.rst",
 ]
 
-html_title = "Blender Python API"
+html_title = "AIR Blend Python API"
 
 # The fallback to a built-in theme when `furo` is not found.
 html_theme = "default"
@@ -124,7 +124,7 @@ latex_elements = {
 }
 
 latex_documents = [
-    ("contents", "contents.tex", "Blender Index", "Blender Foundation", "manual"),
+    ("contents", "contents.tex", "AIR Blend Index", "Blender Foundation", "manual"),
 ]
 
 # Workaround for useless links leading to compile errors

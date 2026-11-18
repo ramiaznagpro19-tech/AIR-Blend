@@ -80,7 +80,7 @@ class Package:
         # with stable enough API that the version does not matter (to some extent, it is expected to work with
         # any recent distribution version at least).
         "is_group",
-        # Whether Blender can build without this package or not.
+        # Whether AIR Blend can build without this package or not.
         # Note: In case of group packages, all sub-packages inherit from the value of the root group package.
         "is_mandatory",
         # Exact version currently used for pre-built libraries and build-bot builds.
@@ -127,7 +127,7 @@ class Package:
         )
 
 
-# Absolute minimal required tools to build Blender.
+# Absolute minimal required tools to build AIR Blend.
 BUILD_MANDATORY_SUBPACKAGES = (
     Package(name="Build Essentials", is_group=True,
             sub_packages=(
@@ -277,7 +277,7 @@ BUILD_MANDATORY_SUBPACKAGES = (
 )
 
 
-# Fairly common additional tools useful to build Blender.
+# Fairly common additional tools useful to build AIR Blend.
 BUILD_OPTIONAL_SUBPACKAGES = (
     Package(name="Ninja Builder",
             distro_package_names={DISTRO_ID_DEBIAN: "ninja-build",
@@ -307,7 +307,7 @@ BUILD_OPTIONAL_SUBPACKAGES = (
                                   DISTRO_ID_ARCH: "patch",
                                   },
             ),
-    # Basic optional set of common sound libraries to build Blender with. Not bundled as pre-compiled libraries.
+    # Basic optional set of common sound libraries to build AIR Blend with. Not bundled as pre-compiled libraries.
     Package(name="Jack2 Library",
             distro_package_names={DISTRO_ID_DEBIAN: "libjack-jackd2-dev",
                                   DISTRO_ID_FEDORA: "jack-audio-connection-kit-devel",
@@ -332,7 +332,7 @@ BUILD_OPTIONAL_SUBPACKAGES = (
 )
 
 
-# Packages required to build Blender, which are not included in the precompiled libraries.
+# Packages required to build AIR Blend, which are not included in the precompiled libraries.
 PACKAGES_BUILD = (
     Package(name="Mandatory Build", is_group=True, is_mandatory=True, sub_packages=BUILD_MANDATORY_SUBPACKAGES),
     Package(name="Optional Build", is_group=True, is_mandatory=False, sub_packages=BUILD_OPTIONAL_SUBPACKAGES),
@@ -665,7 +665,7 @@ class PackageInstaller:
                 if package.is_mandatory:
                     self.settings.logger.warning(
                         f"Mandatory package {info_name} is not defined for {distro_id} distribution, "
-                        "Blender will likely not build at all without it.\n")
+                        "AIR Blend will likely not build at all without it.\n")
                 else:
                     self.settings.logger.info(f"Package {info_name} is not defined for {distro_id} distribution.\n")
                 continue
@@ -1123,17 +1123,17 @@ def argparse_create():
 
     # When --help or no args are given, print this help
     usage_text = (
-        "Attempt to install dependencies to build Blender from current linux distribution's packages only.\n"
+        "Attempt to install dependencies to build AIR Blend from current linux distribution's packages only.\n"
         "\n"
-        "By default, only installs critical tools and dependencies to build Blender, excluding any library provided\n"
+        "By default, only installs critical tools and dependencies to build AIR Blend, excluding any library provided\n"
         "by the precompiled git-lfs repository.\n"
         "`make update` should then be ran after this script to download all precompiled libraries.\n"
         "\n"
         "When ran with the `--all` option, this tool will try to install all mandatory and optional dependencies\n"
         "from the distribution packages.\n"
         "\n"
-        "NOTE: Many distributions do not provide packages for all libraries used by Blender, or have no\n"
-        "version-compatible packages. In some cases, mandatory dependencies cannot be satisfied, and Blender\n"
+        "NOTE: Many distributions do not provide packages for all libraries used by AIR Blend, or have no\n"
+        "version-compatible packages. In some cases, mandatory dependencies cannot be satisfied, and AIR Blend\n"
         "won't be able to build at all.\n"
         "\n"
         "NOTE: To build with system package libraries instead of the precompiled ones when both are available,\n"
@@ -1149,7 +1149,7 @@ def argparse_create():
         "--show-deps",
         dest="show_deps",
         action='store_true',
-        help="Show main dependencies of Blender (including officially supported versions) and exit.",
+        help="Show main dependencies of AIR Blend (including officially supported versions) and exit.",
     )
     parser.add_argument(
         "--no-sudo",

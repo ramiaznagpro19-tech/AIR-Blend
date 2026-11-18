@@ -26,7 +26,7 @@
 
 namespace blender {
 
-BLI_STATIC_ASSERT(ENDIAN_ORDER == L_ENDIAN, "Blender only builds on little endian systems")
+BLI_STATIC_ASSERT(ENDIAN_ORDER == L_ENDIAN, "AIR Blend only builds on little endian systems")
 
 static void thumb_data_vertical_flip(Thumbnail *thumb)
 {

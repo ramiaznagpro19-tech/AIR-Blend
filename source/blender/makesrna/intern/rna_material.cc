@@ -725,14 +725,14 @@ static void rna_def_material_greasepencil(BlenderRNA *brna)
   RNA_def_property_ui_text(prop, "Show Stroke", "Show stroke lines of this material");
   RNA_def_property_update(prop, NC_GPENCIL | ND_SHADING, "rna_MaterialGpencil_update");
   RNA_def_property_deprecated(
-      prop, "Unused but kept for compatibility with older versions of Blender.", 501, 600);
+      prop, "Unused but kept for compatibility with older versions of AIR Blend.", 501, 600);
 
   prop = RNA_def_property(srna, "show_fill", PROP_BOOLEAN, PROP_NONE);
   RNA_def_property_boolean_sdna(prop, nullptr, "flag", GP_MATERIAL_FILL_SHOW);
   RNA_def_property_ui_text(prop, "Show Fill", "Show stroke fills of this material");
   RNA_def_property_update(prop, NC_GPENCIL | ND_SHADING, "rna_MaterialGpencil_update");
   RNA_def_property_deprecated(
-      prop, "Unused but kept for compatibility with older versions of Blender.", 501, 600);
+      prop, "Unused but kept for compatibility with older versions of AIR Blend.", 501, 600);
 
   /* Mode to align Dots and Boxes to drawing path and object rotation */
   prop = RNA_def_property(srna, "alignment_mode", PROP_ENUM, PROP_NONE);
@@ -1124,7 +1124,7 @@ void RNA_def_material(BlenderRNA *brna)
                            "Render multiple transparent layers "
                            "(may introduce transparency sorting problems)");
 
-#  if 1 /* This should be deleted in Blender 4.5 */
+#  if 1 /* This should be deleted in AIR Blend 4.5 */
   RNA_def_property_update(prop, 0, "rna_Material_draw_update");
   prop = RNA_def_property(srna, "show_transparent_back", PROP_BOOLEAN, PROP_NONE);
   RNA_def_property_boolean_negative_sdna(prop, nullptr, "blend_flag", MA_BL_HIDE_BACKFACE);
@@ -1178,7 +1178,7 @@ void RNA_def_material(BlenderRNA *brna)
       "setting.");
   RNA_def_property_update(prop, 0, "rna_Material_draw_update");
 
-#  if 1 /* This should be deleted in Blender 4.5 */
+#  if 1 /* This should be deleted in AIR Blend 4.5 */
   prop = RNA_def_property(srna, "use_screen_refraction", PROP_BOOLEAN, PROP_NONE);
   RNA_def_property_boolean_sdna(prop, nullptr, "blend_flag", MA_BL_SS_REFRACTION);
   RNA_def_property_ui_text(

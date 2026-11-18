@@ -13,7 +13,7 @@ Finally it prints the list of modules and the corresponding fix numbers
 to terminal.
 
 The steps to use it as as follows:
-- Change the terminal to the Blender repository and make sure it's on
+- Change the terminal to the AIR Blend repository and make sure it's on
 the branch you're interested in (E.g. main) and up to date.
 - Run the script with `python bug_fixes_per_module.py -s YYYY-MM-DD -e YYYY-MM-DD`
   - `-s` and `-e` are the start and end dates you want to checkout.

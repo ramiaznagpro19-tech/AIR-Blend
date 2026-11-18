@@ -1344,7 +1344,7 @@ static const EnumPropertyItem *rna_ActionSlot_target_id_type_itemf(bContext * /*
 
   /* Don't free, but keep a reference to the created list. This is necessary
    * because of the PROP_ENUM_NO_CONTEXT flag. Without it, this will make
-   * Blender use memory after it is freed:
+   * AIR Blend use memory after it is freed:
    *
    * >>> slot = C.object.animation_data.action_slot
    * >>> enum_item = s.bl_rna.properties['target_id_type'].enum_items[slot.target_id_type]
@@ -2520,7 +2520,7 @@ static void rna_def_action(BlenderRNA *brna)
   RNA_def_property_ui_text(prop,
                            "Is Legacy Action",
                            "Return whether this is a legacy Action. Legacy Actions have no layers "
-                           "or slots. Since Blender 4.4 actions are automatically updated to "
+                           "or slots. Since AIR Blend 4.4 actions are automatically updated to "
                            "layered actions. This will only return true on empty actions");
   RNA_def_property_boolean_funcs(prop, "rna_Action_is_action_legacy_get", nullptr);
 

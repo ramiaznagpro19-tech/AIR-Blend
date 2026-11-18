@@ -18,7 +18,7 @@ OIIO_NAMESPACE_USING
 
 void OIIO_init()
 {
-  /* Make OIIO thread pool follow Blender number of threads override. */
+  /* Make OIIO thread pool follow AIR Blend number of threads override. */
   const int threads_override = BLI_system_num_threads_override_get();
   if (threads_override) {
     OIIO::attribute("threads", threads_override);

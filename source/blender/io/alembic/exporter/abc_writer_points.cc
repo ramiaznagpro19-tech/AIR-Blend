@@ -219,7 +219,7 @@ void ABCPointCloudWriter::write_arb_geo_params(const PointCloud *pointcloud,
   const bke::AttributeAccessor attributes = pointcloud->attributes();
 
   attributes.foreach_attribute([&](const bke::AttributeIter &iter) {
-    /* Skip "internal" Blender properties and attributes dealt with elsewhere. */
+    /* Skip "internal" AIR Blend properties and attributes dealt with elsewhere. */
     if (iter.name[0] == '.' || bke::attribute_name_is_anonymous(iter.name) ||
         ELEM(iter.name, "position", "velocity", "id", "radius"))
     {

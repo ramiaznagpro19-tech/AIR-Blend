@@ -42,7 +42,7 @@ FILEPATH_LICENSE_GENERATED: Path = DIRPATH_LICENSES / "license.md"  # Generated 
 INTRODUCTION = r"""<!--
 
 This document is auto-generated with `make license`.
-To update it, edit (paths relative to Blender projects root):
+To update it, edit (paths relative to AIR Blend projects root):
 
  * Introduction and formatting: ./tools/utils_maintenance/make_license.py
  * External libraries: ./build_files/build_environment/cmake/versions.cmake
@@ -53,9 +53,9 @@ To update it, edit (paths relative to Blender projects root):
 Then run `make license` and commit `license.md`.
 
 -->
-# Blender Third-Party Licenses
+# AIR Blend Third-Party Licenses
 
-While Blender itself is released under [GPU-GPL 3.0 or later](https://spdx.org/licenses/GPL-3.0-or-later.html)
+While AIR Blend itself is released under [GPU-GPL 3.0 or later](https://spdx.org/licenses/GPL-3.0-or-later.html)
 `© 2011-<THIS-YEAR> Blender Foundation`,
 it contains dependencies which have different licenses.
 
@@ -66,7 +66,7 @@ it contains dependencies which have different licenses.
 INTRODUCTION += r"""
 ## Fonts
 
-Blender distributes a number of font files to support many different language and uses.
+AIR Blend distributes a number of font files to support many different language and uses.
 They work together as a stack.
 
 | Font     | License | Copyright |
@@ -230,7 +230,7 @@ class License:
         # Make sure we only throw the error if we actually need the file.
         # If there are no libraries using this license, there is no need to complain.
         # The json could even have all the licenses from SPDX and only include the ones
-        # Blender needs.
+        # AIR Blend needs.
         if not os.path.exists(self.filepath):
             if self.copyright_exemption:
                 return ""
@@ -407,7 +407,7 @@ def process_versions_cmake() -> Iterator[LibraryRaw]:
 
     # If there is no hash we assume it is not a real library but some other information on the file.
     # Also remove any library which is only used during build time and have no
-    # artifact included in the final Blender binary.
+    # artifact included in the final AIR Blend binary.
     for key, lib_info_args in libraries_raw.items():
         if not (lib_info_args["_hash"] and not lib_info_args["_build_time_only"]):
             continue
@@ -617,7 +617,7 @@ def generate_license_file(licenses: dict[str, License]) -> None:
         fh.write("\n")
 
     print(f"\nLicense file successfully generated: \"{filepath}\"")
-    print("Remember to commit the file to the Blender repository.\n")
+    print("Remember to commit the file to the AIR Blend repository.\n")
 
 
 # -----------------------------------------------------------------------------

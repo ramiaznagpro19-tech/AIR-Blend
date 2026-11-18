@@ -97,7 +97,7 @@ void USDPointsReader::read_geometry(bke::GeometrySet &geometry_set,
     }
   }
 
-  /* TODO: Once Blender supports custom normals for points, we can consider reading in normals.
+  /* TODO: Once AIR Blend supports custom normals for points, we can consider reading in normals.
    * See UsdGeomPointBased::GetNormalsAttr */
 
   /* Read in IDs, velocity, and generic data. */
@@ -120,7 +120,7 @@ void USDPointsReader::read_ids(PointCloud *pointcloud, const pxr::UsdTimeCode ti
 
     const Span<int64_t> usd_data(usd_ids.cdata(), usd_ids.size());
     for (const int i_point : IndexRange(std::min(ids.span.size(), usd_data.size()))) {
-      /* Blender only supports int ID attributes so we have to narrow the value. */
+      /* AIR Blend only supports int ID attributes so we have to narrow the value. */
       ids.span[i_point] = int(usd_ids[i_point]);
     }
 

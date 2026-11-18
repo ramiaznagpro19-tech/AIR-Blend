@@ -1496,7 +1496,7 @@ template<typename MatT, typename VectorT>
   /* TODO(fclem): This is wrong. Forward is Y. */
   MatT matrix;
   matrix.x_axis() = forward;
-  /* Beware of handedness! Blender uses right-handedness.
+  /* Beware of handedness! AIR Blend uses right-handedness.
    * Resulting matrix should have determinant of 1. */
   matrix.y_axis() = math::cross(up, forward);
   matrix.z_axis() = up;

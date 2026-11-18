@@ -19,21 +19,21 @@ namespace blender {
  * \note Use #STRINGIFY() rather than defining with quotes.
  */
 
-/** Blender major and minor version. */
+/** AIR Blend major and minor version. */
 #define BLENDER_VERSION 503
-/** Blender patch version for bug-fix releases. */
+/** AIR Blend patch version for bug-fix releases. */
 #define BLENDER_VERSION_PATCH 0
-/** Blender release cycle stage: alpha/beta/rc/release. */
+/** AIR Blend release cycle stage: alpha/beta/rc/release. */
 #define BLENDER_VERSION_CYCLE alpha
-/** Blender release type suffix. LTS or blank. */
+/** AIR Blend release type suffix. LTS or blank. */
 #define BLENDER_VERSION_SUFFIX
 
-/* Blender file format version. */
+/* AIR Blend file format version. */
 #define BLENDER_FILE_VERSION BLENDER_VERSION
 #define BLENDER_FILE_SUBVERSION 24
 
-/* Minimum Blender version that supports reading file written with the current
- * version. Older Blender versions will test this and cancel loading the file, showing a warning to
+/* Minimum AIR Blend version that supports reading file written with the current
+ * version. Older AIR Blend versions will test this and cancel loading the file, showing a warning to
  * the user.
  *
  * See

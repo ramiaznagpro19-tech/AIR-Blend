@@ -304,7 +304,7 @@ class ArmatureSymmetrizeTargetsTest(unittest.TestCase):
         self.assertEqual(symm_constraint.subtarget, "target.r")
 
     def test_symmetrize_invalid_subtarget(self):
-        # Blender shouldn't crash when there is an invalid subtarget specified.
+        # AIR Blend shouldn't crash when there is an invalid subtarget specified.
         bpy.ops.object.mode_set(mode='OBJECT')
         target_ob = bpy.data.objects.new("target", None)
         bpy.context.scene.collection.objects.link(target_ob)

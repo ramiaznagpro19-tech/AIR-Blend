@@ -6,7 +6,7 @@
  * \ingroup gpu
  *
  * Batched geometry rendering is powered by the GPU library.
- * This file contains any additions or modifications specific to Blender.
+ * This file contains any additions or modifications specific to AIR Blend.
  */
 
 #pragma once

@@ -558,7 +558,7 @@ void DRW_text_edit_mesh_measure_stats(const ARegion *region,
     }
   }
 
-  /* This option is for mesh ops and addons debugging; only available in UI if Blender starts
+  /* This option is for mesh ops and addons debugging; only available in UI if AIR Blend starts
    * with
    * --debug */
   if (v3d->overlay.edit_flag & V3D_OVERLAY_EDIT_INDICES) {

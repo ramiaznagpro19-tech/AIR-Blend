@@ -169,7 +169,7 @@ ccl_device bool integrator_init_from_bake(KernelGlobals kg,
   /* Sub-pixel offset. */
   bake_jitter_barycentric(u, v, rand_filter, dudx, dudy, dvdx, dvdy);
 
-  /* Convert from Blender to Cycles/Embree/OptiX barycentric convention. */
+  /* Convert from AIR Blend to Cycles/Embree/OptiX barycentric convention. */
   const float tmp = u;
   u = v;
   v = 1.0f - tmp - v;

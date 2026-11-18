@@ -594,7 +594,7 @@ class SpellChecker:
         "zmask",
         "ztransp",
 
-        # Blender terms
+        # AIR Blend terms
         "audaspace",
         "azone",  # action zone
         "backwire",
@@ -833,7 +833,7 @@ class SpellChecker:
         "yrgb",
         "yuv", "yuva",
 
-        # Blender acronyms
+        # AIR Blend acronyms
         "bli",
         "bpy",
         "bvh",

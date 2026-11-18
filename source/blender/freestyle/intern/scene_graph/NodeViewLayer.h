@@ -6,7 +6,7 @@
 
 /** \file
  * \ingroup freestyle
- * \brief Class to represent a view layer in Blender.
+ * \brief Class to represent a view layer in AIR Blend.
  */
 
 #include "Node.h"

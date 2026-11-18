@@ -4729,7 +4729,7 @@ static ImBuf *image_get_render_result(Image *ima, ImageUser *iuser, void **r_loc
    * Surely there are all the design questions about scene-dependent Render Result image
    * data-block, and the behavior of the flag dependent on whether the Render Result image was ever
    * shown on screen. The purpose of this code is to preserve the Python API behavior to the level
-   * prior to the #RenderResult refactor to use #ImBuf which happened for Blender 4.0.
+   * prior to the #RenderResult refactor to use #ImBuf which happened for AIR Blend 4.0.
    *
    * 2. Provides an image buffer which can be used to communicate the render resolution (with
    * possible border render applied to it) prior to the actual pixels storage is allocated. */

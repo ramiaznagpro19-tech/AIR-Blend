@@ -2,9 +2,9 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-# This is the OpenAPI specification for Blender's Remote Assets system.
+# This is the OpenAPI specification for AIR Blend's Remote Assets system.
 #
-# At this moment, the `paths` section is not used by the Blender code, and is
+# At this moment, the `paths` section is not used by the AIR Blend code, and is
 # here just for referencing by humans. It is also still being designed, so don't
 # take it as set in stone.
 #
@@ -20,10 +20,10 @@
 openapi: 3.0.0
 info:
   version: 1.0.0
-  title: Blender Asset Library API
-  description: Blender's API for describing and fetching assets from online libraries.
+  title: AIR Blend Asset Library API
+  description: AIR Blend's API for describing and fetching assets from online libraries.
   contact:
-    name: Blender
+    name: AIR Blend
     url: https://www.blender.org/
   license:
     name: GPLv3
@@ -105,7 +105,7 @@ components:
             all OpenAPI operations except the one to get this metadata.
 
             A single asset library can expose multiple versions, in order to be
-            backward-compatible with older versions of Blender.
+            backward-compatible with older versions of AIR Blend.
 
             Keys should be "v1", "v2", etc. and their values should be a
             URLWithHash that points to each version's index file.
@@ -120,9 +120,9 @@ components:
           v1:
             url: _v1/asset-index.json
             hash: "SHA256:22c9d2d5e9fe119b43fb8437df06c88e61d3bbad315690284b9eece66641c1e9"
-        name: Blender Essentials
+        name: AIR Blend Essentials
         contact:
-          name: Blender
+          name: AIR Blend
           url: https://www.blender.org/
 
     Contact:
@@ -226,7 +226,7 @@ components:
     AssetV1:
       type: object
       description: >
-        Representation of a single asset. Assets are always Blender data-blocks
+        Representation of a single asset. Assets are always AIR Blend data-blocks
         in some blend file.
 
         This asset may be stored in the same blend file as other assets, and so
@@ -234,7 +234,7 @@ components:
       properties:
         "name":
           type: string
-          description: Name of the Blender data-block.
+          description: Name of the AIR Blend data-block.
         "id_type": { $ref: "#/components/schemas/AssetIDTypeV1" }
         "files":
           type: array
@@ -259,13 +259,13 @@ components:
     AssetIDTypeV1:
       type: string
       description: >
-        Type of the Blender data-block.
+        Type of the AIR Blend data-block.
 
         This can be obtained via BPY with `datablock.id_type`. Any comparisons
         should be done in a case-insensitive manner.
 
-        Note that this list is just a list of data-block types in Blender. This
-        type being in this list does not mean that Blender supports making this
+        Note that this list is just a list of data-block types in AIR Blend. This
+        type being in this list does not mean that AIR Blend supports making this
         data-block an asset. It's just here to ensure that if that changes, and
         more data-block types can become assets, this schema doesn't need
         updating.
@@ -273,7 +273,7 @@ components:
     AssetMetadataV1:
       type: object
       description: >
-        Metadata of an asset, as defined by Blender's `AssetMeta` DNA struct.
+        Metadata of an asset, as defined by AIR Blend's `AssetMeta` DNA struct.
         Fields should either be non-empty or absent.
       properties:
         "catalog_id":
@@ -292,7 +292,7 @@ components:
             Supports values APPEND, APPEND_REUSE, and ASSET_IMPORT_PACK.
 
             These are not modeled here as an enum, to aid in forward compatibility
-            of this Blender version with future import methods (it'll just ignore
+            of this AIR Blend version with future import methods (it'll just ignore
             unsupported methods, instead of rejecting the file as invalid).
         "tags":
           type: array
@@ -352,15 +352,15 @@ components:
     AssetBlenderVersionsV1:
       type: object
       description: >
-        Minimum and (optionally) maximum versions of Blender that this asset should be shown in.
-        This is a half-open interval: Blender shows the asset if `min <= blender < until`.
+        Minimum and (optionally) maximum versions of AIR Blend that this asset should be shown in.
+        This is a half-open interval: AIR Blend shows the asset if `min <= blender < until`.
       properties:
         "min":
           type: string
-          description: Minimum version of Blender that should show this asset.
+          description: Minimum version of AIR Blend that should show this asset.
         "until":
           type: string
-          description: First version of Blender that should NOT show this asset.
+          description: First version of AIR Blend that should NOT show this asset.
       required:
         - "min"
 
@@ -403,7 +403,7 @@ components:
         "blender_version":
           type: string
           description: >
-            Version of Blender used to write this file. Only contains the major and
+            Version of AIR Blend used to write this file. Only contains the major and
             minor version, no patch version ("5.2", "6.3", etc. but not "5.2.1").
       required:
         - "path"

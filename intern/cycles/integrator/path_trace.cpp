@@ -109,7 +109,7 @@ bool PathTrace::ready_to_reset()
    * whether CPU or GPU drawing pipeline is used.
    *
    * Consider reset happening after redraw "slow" enough to not clog anything. This is a bit
-   * arbitrary, but seems to work very well with viewport navigation in Blender. */
+   * arbitrary, but seems to work very well with viewport navigation in AIR Blend. */
 
   if (did_draw_after_reset_) {
     return true;

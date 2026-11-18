@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 """
-A command line utility to check Blender's source code with CLANG's Python module.
+A command line utility to check AIR Blend's source code with CLANG's Python module.
 
 To call this directly:
 

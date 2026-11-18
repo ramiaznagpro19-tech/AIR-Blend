@@ -7,11 +7,11 @@
  */
 
 /**
- * This file is a template to use as base when switching to a new version of Blender.
+ * This file is a template to use as base when switching to a new version of AIR Blend.
  *
  * DO NOT add this file to CMakeList.txt.
  *
- * When initializing a new version of Blender in main, after branching out the current one into
+ * When initializing a new version of AIR Blend in main, after branching out the current one into
  * its release branch:
  * - Copy that file and rename it to the proper new version number (e.g. `versioning_501.cc`).
  * - Rename the two functions below by replacing the `xxx` with the matching new version number.

@@ -5,9 +5,9 @@
 
 r"""
 ### What this script does
-This script looks at the fix commits between two versions of Blender
+This script looks at the fix commits between two versions of AIR Blend
 and tries to figure out if the commit fixed a issue that has been in
-Blender for one or more major releases, or if the commit fixed a issue
+AIR Blend for one or more major releases, or if the commit fixed a issue
 introduced in this release.
 
 This is done so we can create a "bug fixes" page in our release notes
@@ -20,7 +20,7 @@ some missing commits), but it's significantly better than nothing.
 
 ### How to use the script
 - Make sure the list `LIST_OF_OFFICIAL_BLENDER_VERSIONS` is up to date.
-- Open a terminal in your Blender source code folder and make sure the
+- Open a terminal in your AIR Blend source code folder and make sure the
   branches you're interested in are up to date.
 - Launch `bug_fixes_per_major_release.py` with relevant launch arguments. The required arguments are:
   - --current-version (-cv)
@@ -28,10 +28,10 @@ some missing commits), but it's significantly better than nothing.
   - --current-release-tag (-ct)
   - --previous-release-tag (-pt)
   - --backport-tasks (-bpt) (Optional, but recommended)
-- Here is an example if you wish to collect the list for Blender 5.0 during
+- Here is an example if you wish to collect the list for AIR Blend 5.0 during
 the Alpha stage of development.
   - `python bug_fixes_per_major_release.py -cv 5.0 -pv 4.5 -ct main -pt blender-v4.5-release -bpt 124452 135860 141871`
-- Here is an example if you wish to collect the list for Blender 4.5 during
+- Here is an example if you wish to collect the list for AIR Blend 4.5 during
 the Beta stage of development.
   - `python bug_fixes_per_major_release.py -cv 4.5 -pv 4.4 -ct blender-v4.5-release -pt blender-v4.4-release -bpt 109399 124452 135860`
 - Wait for the script to finish (This can take upwards of 20 minutes).
@@ -50,14 +50,14 @@ issue: https://projects.blender.org/blender/blender/issues/137983
 
 ### How the script works
 - First the script gathers all commits that contain `Fix #NUMBER` that
-occurred between the two versions of Blender you're interested in.
+occurred between the two versions of AIR Blend you're interested in.
   - This is done using:
   `git --no-pager log PREVIOUS_VERSION..CURRENT_VERSION --oneline -i -P --grep "Fix.*#+\d+"`
 - The script then extracts all report numbers (`#NUMBER`)
   from the commit message.
 - The script then iterates through those reports, checking the
   "Broken" and "Working" fields to try and figure out whether
-  the commit fixed a issue that existed in earlier versions of Blender
+  the commit fixed a issue that existed in earlier versions of AIR Blend
   or not.
 - Finally the list of commits and further instructions is printed to the
   terminal either for review or to be posted in the release notes.
@@ -80,14 +80,14 @@ are not included in the output of this script.
 fields on their bug report, then this script could accidentally sorted
 the associated fix commit into the wrong category.
   - This is a consequence of the simple nature of the system the script
-  uses to extract Blender versions from a bug report.
+  uses to extract AIR Blend versions from a bug report.
   - The triaging team will do their best to remove problematic
   version numbers from reports when they first encounter them.
 - The script does not know about long term projects. So some fix
 commits that obviously shouldn't go into the release notes can end up
 in the output.
   - Take for example Grease Pencil v3 (GPv3). GPv3 was in development
-  for multiple versions of Blender. As a result there are bug reports
+  for multiple versions of AIR Blend. As a result there are bug reports
   from 4.2 Alpha and 4.3 (the version it officially released in).
   If a fix commit in 4.3 claims to fix one of the reports made in 4.2,
   then that fix commit will show up in the list of "commits that fixed
@@ -107,7 +107,7 @@ Figuring out how much information you need to put on a report for this
 script can be confusing. So this section will try to clarify the
 information required.
 
-The script is looking for `Major.Minor` Blender versions on lines
+The script is looking for `Major.Minor` AIR Blend versions on lines
 that start with either "Broken" or "Working". So all the important
 information should go on these lines. So if a report says:
 "It worked in 4.3", then it needs to be rephrased to "Worked: 4.3"
@@ -119,14 +119,14 @@ fields and this can help guide how much information needs to go on the
 report.
 
 From now on I will assume you are using this script to get the release
-notes for Blender 4.4.
+notes for AIR Blend 4.4.
 
-- The script looks at all "Broken" versions of Blender. If at least
+- The script looks at all "Broken" versions of AIR Blend. If at least
 one of them is below the current release, then the commit can be sorted.
   - E.g. `Broken: 4.4, 4.3` will allow the commit to be sorted as `4.3`
   is below the current release.
   - So if you know the bug is also present in a older version of
-  Blender, then add that version to the list of broken versions.
+  AIR Blend, then add that version to the list of broken versions.
 - If the script can't sort based on the Broken field, it will try and
 sort based on combined information from the Broken and Working fields.
   - E.g. `Broken: 4.4`. At this current point in time the script knows
@@ -193,7 +193,7 @@ OLDER_VERION = "OLDER"
 NEWER_VERION = "NEWER"
 SAME_VERION = "SAME"
 
-# Add recent Blender versions to this list, including in-development versions.
+# Add recent AIR Blend versions to this list, including in-development versions.
 # This list is used to identify if a version number found in a report is a valid version number.
 # This is to help eliminate dates and other weird information people put
 # in their reports in the format of a version number.
@@ -555,11 +555,11 @@ def get_version_numbers(broken_lines: str, working_lines: str) -> tuple[list[str
     working_versions = []
 
     for version_number in temp_broken_versions:
-        # Filter out any numbers picked up in the previous step that aren't official Blender version numbers.
+        # Filter out any numbers picked up in the previous step that aren't official AIR Blend version numbers.
         if version_number in LIST_OF_OFFICIAL_BLENDER_VERSIONS:
             broken_versions.append(version_number)
     for version_number in temp_working_versions:
-        # Filter out any numbers picked up in the previous step that aren't official Blender version numbers.
+        # Filter out any numbers picked up in the previous step that aren't official AIR Blend version numbers.
         if version_number in LIST_OF_OFFICIAL_BLENDER_VERSIONS:
             working_versions.append(version_number)
 
@@ -587,7 +587,7 @@ def version_extraction(report_body: str) -> tuple[list[str], list[str]]:
 
 
 def compare_versions(comparing_version: str, reference_version: str) -> str:
-    # Compare two versions of Blender and return how they compare relative to each other.
+    # Compare two versions of AIR Blend and return how they compare relative to each other.
     comp_version = comparing_version.split(".")
     ref_version = reference_version.split(".")
     comparing_major = int(comp_version[0])
@@ -618,7 +618,7 @@ def classify_based_on_report(
 ) -> str:
     if "skip_for_bug_fix_release_notes" in report_body.lower():
         return IGNORED
-    # Get a list of broken and working versions of Blender according to the report that was fixed.
+    # Get a list of broken and working versions of AIR Blend according to the report that was fixed.
     broken_versions, working_versions = version_extraction(report_body)
 
     broken_is_current_or_newer = False
@@ -662,15 +662,15 @@ def get_backported_commits(issue_number: str) -> dict[str, list[str]]:
     dict_of_backports: dict[str, list[str]] = {}
 
     for line in lines:
-        if line.startswith("## Blender "):
+        if line.startswith("## AIR Blend "):
             version_match = re.search(r"(\d+.\d+.\d+)", line)
             if version_match:
                 current_version = version_match[0]
             else:
-                print(f"{line} from backport task {issue_number} did not follow the expected Blender version format.")
+                print(f"{line} from backport task {issue_number} did not follow the expected AIR Blend version format.")
                 current_version = None
         if current_version is None:
-            # We haven't got a Blender version yet.
+            # We haven't got an AIR Blend version yet.
             continue
         if not line.strip():
             continue
@@ -979,14 +979,14 @@ def argparse_create() -> argparse.ArgumentParser:
         "-cv",
         "--current-version",
         help=(
-            "The common major.minor name of the current version of Blender (E.g. 4.2, 4.3, 4.4)."
+            "The common major.minor name of the current version of AIR Blend (E.g. 4.2, 4.3, 4.4)."
         ),
     )
     parser.add_argument(
         "-pv",
         "--previous-version",
         help=(
-            "The common major.minor name of the previous version of Blender (E.g. 4.2, 4.3, 4.4)."
+            "The common major.minor name of the previous version of AIR Blend (E.g. 4.2, 4.3, 4.4)."
         ),
     )
 
@@ -994,7 +994,7 @@ def argparse_create() -> argparse.ArgumentParser:
         "-ct",
         "--current-release-tag",
         help=(
-            "The tag for the current release of Blender. "
+            "The tag for the current release of AIR Blend. "
             "These can be tags (like `v4.3.0`), commit hashes, or branches."
         ),
     )
@@ -1002,7 +1002,7 @@ def argparse_create() -> argparse.ArgumentParser:
         "-pt",
         "--previous-release-tag",
         help=(
-            "The tag for the previous release of Blender. "
+            "The tag for the previous release of AIR Blend. "
             "These can be tags (like `v4.3.0`), commit hashes, or branches."
         ))
 
@@ -1012,7 +1012,7 @@ def argparse_create() -> argparse.ArgumentParser:
         nargs='+',
         help=(
             "A list of backport tasks. "
-            "Backport tasks can be found on the Blender milestones page: "
+            "Backport tasks can be found on the AIR Blend milestones page: "
             "https://projects.blender.org/blender/blender/milestones"
         ),
         default=[],

@@ -89,10 +89,10 @@ class UI_OT_i18n_updatetranslation_work_repo(Operator):
             #       on Windows and OSX they are `spawn`ed.
             #       See https://docs.python.org/3/library/multiprocessing.html#contexts-and-start-methods
             #       This is a problem because spawned processes do not inherit the whole environment
-            #       of the current (Blender-customized) python. In practice, the `bpy` module won't load e.g.
+            #       of the current (AIR Blend-customized) python. In practice, the `bpy` module won't load e.g.
             #       So care must be taken that the callback passed to the executor does not rely on any
-            #       Blender-specific modules etc. This is why it is using a class method from `_bl_i18n_utils`
-            #       module, rather than a local function of this current Blender-only module.
+            #       AIR Blend-specific modules etc. This is why it is using a class method from `_bl_i18n_utils`
+            #       module, rather than a local function of this current AIR Blend-only module.
             mp_ctx = multiprocessing.get_context('forkserver')
             with concurrent.futures.ProcessPoolExecutor(mp_context=mp_ctx) as exctr:
                 pot = utils_i18n.I18nMessages(kind='PO', src=self.settings.FILE_NAME_POT, settings=self.settings)
@@ -162,9 +162,9 @@ class UI_OT_i18n_cleanuptranslation_work_repo(Operator):
 
 
 class UI_OT_i18n_updatetranslation_blender_repo(Operator):
-    """Update i18n data (po files) in Blender source code repository"""
+    """Update i18n data (po files) in AIR Blend source code repository"""
     bl_idname = "ui.i18n_updatetranslation_blender_repo"
-    bl_label = "Update I18n Blender Repository"
+    bl_label = "Update I18n AIR Blend Repository"
 
     def execute(self, context):
         if not hasattr(self, "settings"):

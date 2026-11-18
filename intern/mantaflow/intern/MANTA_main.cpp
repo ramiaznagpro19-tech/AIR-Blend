@@ -591,7 +591,7 @@ MANTA::~MANTA()
 }
 
 /**
- * Copied from `PyC_DefaultNameSpace` in Blender.
+ * Copied from `PyC_DefaultNameSpace` in AIR Blend.
  * with some differences:
  * - Doesn't touch `sys.modules`, use #manta_python_main_module_activate instead.
  * - Returns the module instead of the modules `dict`.

@@ -29,7 +29,7 @@ def rgba_to_rgb(rgba):
     return Color((rgba[0], rgba[1], rgba[2]))
 
 
-# All clamping value shall follow Blender's defined min/max (check relevant node definition .c file).
+# All clamping value shall follow AIR Blend's defined min/max (check relevant node definition .c file).
 def values_clamp(val, minv, maxv):
     if hasattr(val, "__iter__"):
         return tuple(max(minv, min(maxv, v)) for v in val)

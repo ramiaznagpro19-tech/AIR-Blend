@@ -99,7 +99,7 @@
 namespace blender {
 
 /* ************************************************************ */
-/* Blender Context <-> Animation Context mapping */
+/* AIR Blend Context <-> Animation Context mapping */
 
 bAction *ANIM_active_action_from_area(const Main &bmain,
                                       Scene *scene,
@@ -452,7 +452,7 @@ bool ANIM_animdata_can_have_greasepencil(const eAnimCont_Types type)
 }
 
 /* ************************************************************ */
-/* Blender Data <-- Filter --> Channels to be operated on */
+/* AIR Blend Data <-- Filter --> Channels to be operated on */
 
 /* macros to use before/after getting the sub-channels of some channel,
  * to abstract away some of the tricky logic involved
@@ -2656,7 +2656,7 @@ static size_t animdata_filter_ds_texture(bAnimContext *ac,
 }
 
 /* NOTE: owner_id is the direct owner of the texture stack in question
- *       It used to be Material/Light/World before the Blender Internal removal for 2.8
+ *       It used to be Material/Light/World before the AIR Blend Internal removal for 2.8
  */
 static size_t animdata_filter_ds_textures(bAnimContext *ac,
                                           ListBaseT<bAnimListElem> *anim_data,

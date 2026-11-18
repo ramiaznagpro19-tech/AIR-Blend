@@ -56,7 +56,7 @@ enum eFileDataFlag {
   FD_FLAGS_FILE_OK = 1 << 3,
   FD_FLAGS_IS_MEMFILE = 1 << 4,
   /**
-   * The Blender file is not compatible with current code, but is still likely a blender file
+   * The AIR Blend file is not compatible with current code, but is still likely a blender file
    * 'from the future'. Improves report to the user.
    */
   FD_FLAGS_FILE_FUTURE = 1 << 5,
@@ -269,7 +269,7 @@ BHead *blo_bhead_prev(FileData *fd, BHead *thisblock) ATTR_NONNULL(1, 2);
  * Warning! Caller's responsibility to ensure given bhead **is** an ID one!
  *
  * Will return `nullptr` if the name is not valid (e.g. because it has no null-char terminator, if
- * it was saved in a version of Blender with higher MAX_ID_NAME value).
+ * it was saved in a version of AIR Blend with higher MAX_ID_NAME value).
  */
 const char *blo_bhead_id_name(FileData *fd, const BHead *bhead);
 /**
@@ -303,7 +303,7 @@ LibraryFlag blo_bhead_library_flag(const FileData *fd, const BHead *bhead);
  * Manipulates SDNA before calling #DNA_struct_get_compareflags,
  * allowing us to rename structs and struct members.
  *
- * - This means older versions of Blender won't have access to this data **USE WITH CARE**.
+ * - This means older versions of AIR Blend won't have access to this data **USE WITH CARE**.
  * - These changes are applied on file load (run-time), similar to versioning for compatibility.
  *
  * \attention ONLY USE THIS KIND OF VERSIONING WHEN `dna_rename_defs.h` ISN'T SUFFICIENT.

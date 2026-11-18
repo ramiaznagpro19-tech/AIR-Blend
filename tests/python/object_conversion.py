@@ -39,7 +39,7 @@ class ConversionTypeTestHelper:
             module = inspect.getmodule(frame[0])
             python_path = module.__file__
 
-            print("Run following command to open Blender and run the failing test:")
+            print("Run following command to open AIR Blend and run the failing test:")
             print("{} {} --python {} -- {} {}"
                   .format(blender_path, blend_path, python_path, "--run-test", "<test_name>"))
 

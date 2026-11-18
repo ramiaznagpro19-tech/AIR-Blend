@@ -4,7 +4,7 @@ BF_PROGRAM="blender"
 
 # Attempt to preload system TBB library if it is newer than the one we bundled.
 # This solves problems with the Intel ray-tracing library using this newer TBB
-# while Blender is already using an older one.
+# while AIR Blend is already using an older one.
 
 # Library name with major version that we needed.
 BF_TBB_LIB_NAME=$(readlink ${BF_DIST_BIN}/lib/libtbb.so)
@@ -41,7 +41,7 @@ if [ -n "$BF_TBB_LIB_PATH" ]; then
 fi
 
 # Add own lib folder first, because Steam or other environments may set an
-# $LD_LIBRARY_PATH that has priority over the run-path in the Blender executable,
+# $LD_LIBRARY_PATH that has priority over the run-path in the AIR Blend executable,
 # but contains incompatible libraries.
 LD_LIBRARY_PATH=${BF_DIST_BIN}/lib:${LD_LIBRARY_PATH}
 

@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 5.3.0 Alpha (b'2cef5b8c951a')\n"
+"Project-Id-Version: AIR Blend 5.3.0 Alpha (b'2cef5b8c951a')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 07:47+0000\n"
 "PO-Revision-Date: 2026-09-12 23:05+0000\n"
@@ -836,8 +836,8 @@ msgid "Fribidi Library"
 msgstr "Библиотека FriBidi"
 
 
-msgid "The FriBidi C compiled library (.so under Linux, .dll under windows...), you’ll likely have to edit it if you’re under Windows, e.g. using the one included in Blender libraries repository"
-msgstr "Скомпилированная библиотека FriBidi на языке Си (.so в Linux, .dll в windows…). Для работы в Windows необходимо вручную указать правильный путь, например, на файл из репозитория библиотек Blender'а"
+msgid "The FriBidi C compiled library (.so under Linux, .dll under windows...), you’ll likely have to edit it if you’re under Windows, e.g. using the one included in AIR Blend libraries repository"
+msgstr "Скомпилированная библиотека FriBidi на языке Си (.so в Linux, .dll в windows…). Для работы в Windows необходимо вручную указать правильный путь, например, на файл из репозитория библиотек AIR Blend'а"
 
 
 msgid "Translation Root"
@@ -860,8 +860,8 @@ msgid "Source Root"
 msgstr "Путь к коду"
 
 
-msgid "The Blender source root path"
-msgstr "Путь к исходному коду Blender"
+msgid "The AIR Blend source root path"
+msgstr "Путь к исходному коду AIR Blend"
 
 
 msgid "Spell Cache"
@@ -884,8 +884,8 @@ msgid "Persistent Data Path"
 msgstr "Путь постоянных данных"
 
 
-msgid "The name of a json file storing those settings (unfortunately, Blender's system does not work here)"
-msgstr "Имя файла json для хранения этих настроек (к сожалению, система Blender'а здесь не работает)"
+msgid "The name of a json file storing those settings (unfortunately, AIR Blend's system does not work here)"
+msgstr "Имя файла json для хранения этих настроек (к сожалению, система AIR Blend'а здесь не работает)"
 
 
 msgid "User Add-ons"
@@ -1768,8 +1768,8 @@ msgid "Project Setup"
 msgstr "Настройка проекта"
 
 
-msgid "Manage the current Blender project"
-msgstr "Управление текущим проектом Blender'а"
+msgid "Manage the current AIR Blend project"
+msgstr "Управление текущим проектом AIR Blend'а"
 
 
 msgid "Width"
@@ -1864,8 +1864,8 @@ msgid "Is Editable"
 msgstr "Можно редактировать"
 
 
-msgid "Assets and catalogs in this library can be edited from the current Blender instance"
-msgstr "Редактировать ассеты и каталоги в этой библиотеке можно из текущего экземпляра Blender'а"
+msgid "Assets and catalogs in this library can be edited from the current AIR Blend instance"
+msgstr "Редактировать ассеты и каталоги в этой библиотеке можно из текущего экземпляра AIR Blend'а"
 
 
 msgid "Library Type"
@@ -1884,16 +1884,16 @@ msgid "Current File"
 msgstr "Текущий файл"
 
 
-msgid "Show the assets currently available in this Blender session"
-msgstr "Показать ассеты, доступные в текущей сессии Blender'а"
+msgid "Show the assets currently available in this AIR Blend session"
+msgstr "Показать ассеты, доступные в текущей сессии AIR Blend'а"
 
 
 msgid "Essentials"
 msgstr "Основные"
 
 
-msgid "Show basic building blocks and utilities coming with Blender"
-msgstr "Показать базовые компоненты и утилиты, входящие в состав Blender'а"
+msgid "Show basic building blocks and utilities coming with AIR Blend"
+msgstr "Показать базовые компоненты и утилиты, входящие в состав AIR Blend'а"
 
 
 msgid "Online Essentials"
@@ -1956,8 +1956,8 @@ msgid "Catalog UUID"
 msgstr "UUID каталога"
 
 
-msgid "Identifier for the asset's catalog, used by Blender to look up the asset's catalog path. Must be a UUID according to RFC4122."
-msgstr "Идентификатор каталога ассета, используемый Blender'ом для поиска пути к каталогу ассета. Должен быть UUID в соответствии с RFC4122."
+msgid "Identifier for the asset's catalog, used by AIR Blend to look up the asset's catalog path. Must be a UUID according to RFC4122."
+msgstr "Идентификатор каталога ассета, используемый AIR Blend'ом для поиска пути к каталогу ассета. Должен быть UUID в соответствии с RFC4122."
 
 
 msgid "Catalog Simple Name"
@@ -2713,8 +2713,8 @@ msgid "Is Internal"
 msgstr "Является внутренним"
 
 
-msgid "The attribute is meant for internal use by Blender"
-msgstr "Атрибут предназначен для внутреннего использования в Blender'е"
+msgid "The attribute is meant for internal use by AIR Blend"
+msgstr "Атрибут предназначен для внутреннего использования в AIR Blend'е"
 
 
 msgid "Is Required"
@@ -3432,8 +3432,8 @@ msgid "All Data-Blocks"
 msgstr "Все блоки данных"
 
 
-msgid "Read-only list of all IDs listed in Blender data-base. Warning: Order is not guaranteed and should be considered an internal implementation detail"
-msgstr "Только для чтения: список всех идентификаторов из базы данных Blender'а. Внимание: порядок не гарантируется и может измениться из-за особенностей внутреннего устройства"
+msgid "Read-only list of all IDs listed in AIR Blend data-base. Warning: Order is not guaranteed and should be considered an internal implementation detail"
+msgstr "Только для чтения: список всех идентификаторов из базы данных AIR Blend'а. Внимание: порядок не гарантируется и может измениться из-за особенностей внутреннего устройства"
 
 
 msgid "Annotation"
@@ -3605,8 +3605,8 @@ msgid "Project"
 msgstr "Проект"
 
 
-msgid "The currently active Blender project, if any"
-msgstr "Текущий активный проект Blender'а, если есть"
+msgid "The currently active AIR Blend project, if any"
+msgstr "Текущий активный проект AIR Blend'а, если есть"
 
 
 msgid "Scene data-blocks"
@@ -3658,7 +3658,7 @@ msgstr "Версия"
 
 
 msgid "File format version the .blend file was saved with"
-msgstr "Версия Blender'а, в которой был сохранён .blend-файл"
+msgstr "Версия AIR Blend'а, в которой был сохранён .blend-файл"
 
 
 msgid "Volume data-blocks"
@@ -4246,8 +4246,8 @@ msgid "Library (blend-file) reference in a BlendImportContext data. Currently on
 msgstr "Ссылка на библиотеку (blend-файл) в данных контекста импорта BlendImportContext. В настоящее время предоставляется только как данные, доступные только для чтения для обработчиков до/после импорта blend-файла"
 
 
-msgid "Blender Project"
-msgstr "Проект Blender'а"
+msgid "AIR Blend Project"
+msgstr "Проект AIR Blend'а"
 
 
 msgid "Active Asset Library"
@@ -4298,12 +4298,12 @@ msgid "The variables in this project"
 msgstr "Переменные в этом проекте"
 
 
-msgid "Blender RNA"
-msgstr "Blender RNA"
+msgid "AIR Blend RNA"
+msgstr "AIR Blend RNA"
 
 
-msgid "Blender RNA structure definitions"
-msgstr "Определения структуры Blender RNA"
+msgid "AIR Blend RNA structure definitions"
+msgstr "Определения структуры AIR Blend RNA"
 
 
 msgid "Structs"
@@ -8892,8 +8892,8 @@ msgid "Lin error"
 msgstr "Лин. ошибка"
 
 
-msgid "Amount of residual error in Blender space unit for constraints that work on position"
-msgstr "Величина остаточной погрешности в единицах Blender'а для ограничителей, действующих на перемещение"
+msgid "Amount of residual error in AIR Blend space unit for constraints that work on position"
+msgstr "Величина остаточной погрешности в единицах AIR Blend'а для ограничителей, действующих на перемещение"
 
 
 msgid "Rotation error"
@@ -12876,8 +12876,8 @@ msgid "Max Velocity"
 msgstr "Макс. скорость"
 
 
-msgid "Velocity considered as maximum influence (Blender units per frame)"
-msgstr "Скорость, при которой воздействие будет максимальным (в единицах Blender'а на кадр)"
+msgid "Velocity considered as maximum influence (AIR Blend units per frame)"
+msgstr "Скорость, при которой воздействие будет максимальным (в единицах AIR Blend'а на кадр)"
 
 
 msgid "Velocity Color Ramp"
@@ -13254,8 +13254,8 @@ msgid "Premultiply Alpha"
 msgstr "Предумножение прозрачности"
 
 
-msgid "Multiply color by alpha (recommended for Blender input)"
-msgstr "Умножить цвет на прозрачность (рекомендуется для входных файлов для Blender'а)"
+msgid "Multiply color by alpha (recommended for AIR Blend input)"
+msgstr "Умножить цвет на прозрачность (рекомендуется для входных файлов для AIR Blend'а)"
 
 
 msgid "Use Shrink"
@@ -15658,24 +15658,24 @@ msgid "Hide .blend files items that are not data-blocks with asset metadata"
 msgstr "Скрыть фрагменты .blend-файла, не являющиеся датаблоками с метаданными ассета"
 
 
-msgid "Filter Blender Backup Files"
-msgstr "Фильтровать файлы резервных копий Blender'а"
+msgid "Filter AIR Blend Backup Files"
+msgstr "Фильтровать файлы резервных копий AIR Blend'а"
 
 
 msgid "Show .blend1, .blend2, etc. files"
 msgstr "Отображать файлы .blend1, .blend2 и последующие"
 
 
-msgid "Filter Blender"
-msgstr "Фильтровать файлы Blender'а"
+msgid "Filter AIR Blend"
+msgstr "Фильтровать файлы AIR Blend'а"
 
 
 msgid "Show .blend files"
 msgstr "Отображать файлы .blend"
 
 
-msgid "Filter Blender IDs"
-msgstr "Фильтровать идентификаторы Blender'а"
+msgid "Filter AIR Blend IDs"
+msgstr "Фильтровать идентификаторы AIR Blend'а"
 
 
 msgid "Show .blend files items (objects, materials, etc.)"
@@ -15750,8 +15750,8 @@ msgid "Library Browser"
 msgstr "Обозреватель библиотек"
 
 
-msgid "Whether we may browse Blender files' content or not"
-msgstr "Осуществлять ли обзор содержимого файлов Blender'а"
+msgid "Whether we may browse AIR Blend files' content or not"
+msgstr "Осуществлять ли обзор содержимого файлов AIR Blend'а"
 
 
 msgid "Reverse Sorting"
@@ -16210,8 +16210,8 @@ msgid "Export Mantaflow Script"
 msgstr "Экспортировать скрипт Mantaflow"
 
 
-msgid "Generate and export Mantaflow script from current domain settings during bake. This is only needed if you plan to analyze the cache (e.g. view grids, velocity vectors, particles) in Mantaflow directly (outside of Blender) after baking the simulation."
-msgstr "Сгенерировать и экспортировать скрипт Mantaflow с настройками выбранного домена во время запекания. Это необходимо только если вы собираетесь анализировать кэш (например, просматривать сетки, вектора скоростей, частицы) напрямую в Mantaflow (вне Blender'а) после запекания симуляции."
+msgid "Generate and export Mantaflow script from current domain settings during bake. This is only needed if you plan to analyze the cache (e.g. view grids, velocity vectors, particles) in Mantaflow directly (outside of AIR Blend) after baking the simulation."
+msgstr "Сгенерировать и экспортировать скрипт Mantaflow с настройками выбранного домена во время запекания. Это необходимо только если вы собираетесь анализировать кэш (например, просматривать сетки, вектора скоростей, частицы) напрямую в Mantaflow (вне AIR Blend'а) после запекания симуляции."
 
 
 msgid "Flame Grid"
@@ -19503,8 +19503,8 @@ msgid "Is Legacy Action"
 msgstr "Это устаревшее действие"
 
 
-msgid "Return whether this is a legacy Action. Legacy Actions have no layers or slots. Since Blender 4.4 actions are automatically updated to layered actions. This will only return true on empty actions"
-msgstr "Указывает, является ли это действие устаревшим. У устаревших действий нет ни слоёв, ни слотов. Начиная с Blender 4.4, действия автоматически обновляются до действий со слоями. \"Истинное\" значение будет возвращаться только для пустых действий"
+msgid "Return whether this is a legacy Action. Legacy Actions have no layers or slots. Since AIR Blend 4.4 actions are automatically updated to layered actions. This will only return true on empty actions"
+msgstr "Указывает, является ли это действие устаревшим. У устаревших действий нет ни слоёв, ни слотов. Начиная с AIR Blend 4.4, действия автоматически обновляются до действий со слоями. \"Истинное\" значение будет возвращаться только для пустых действий"
 
 
 msgid "Is Empty"
@@ -21503,8 +21503,8 @@ msgid "Unprojected Size"
 msgstr "Непроецируемый размер"
 
 
-msgid "Diameter of brush in Blender units"
-msgstr "Диаметр кисти в единицах Blender'а"
+msgid "Diameter of brush in AIR Blend units"
+msgstr "Диаметр кисти в единицах AIR Blend'а"
 
 
 msgid "Accumulate"
@@ -24863,8 +24863,8 @@ msgid "True if this library contains library overrides that are linked in curren
 msgstr "Истинно, если данная библиотека содержит переопределения из текущего blend-файла, которые были автоматически пересинхронизированы при загрузке (для предотвращения этого при следующих запусках рекомендуется открыть и пересохранить исходный blend-файл библиотеки)"
 
 
-msgid "Version of Blender the library .blend was saved with"
-msgstr "Версия Blender'а, с помощью которой была сохранена .blend-библиотека"
+msgid "Version of AIR Blend the library .blend was saved with"
+msgstr "Версия AIR Blend'а, с помощью которой была сохранена .blend-библиотека"
 
 
 msgctxt "Light"
@@ -30090,12 +30090,12 @@ msgid "Noise basis used for turbulence"
 msgstr "Формула шума, используемая для турбулентности"
 
 
-msgid "Blender Original"
-msgstr "Собственный метод Blender'а"
+msgid "AIR Blend Original"
+msgstr "Собственный метод AIR Blend'а"
 
 
-msgid "Noise algorithm - Blender original: Smooth interpolated noise"
-msgstr "Алгоритм шума — собственный метод Blender'а: сглаженный интерполированный шум"
+msgid "Noise algorithm - AIR Blend original: Smooth interpolated noise"
+msgstr "Алгоритм шума — собственный метод AIR Blend'а: сглаженный интерполированный шум"
 
 
 msgid "Original Perlin"
@@ -30964,8 +30964,8 @@ msgid "Asset Blend Path"
 msgstr "Путь-blend ассета"
 
 
-msgid "Full path to the Blender file containing the active asset"
-msgstr "Полный путь к файлу Blender'а, содержащему активный ассет"
+msgid "Full path to the AIR Blend file containing the active asset"
+msgstr "Полный путь к файлу AIR Blend'а, содержащему активный ассет"
 
 
 msgid "Filter by Repository"
@@ -32112,16 +32112,16 @@ msgid "Custom Icon"
 msgstr "Особый значок"
 
 
-msgid "True if this preview icon has been modified by py script, and is no more auto-generated by Blender"
-msgstr "Истинно, если этот значок предварительного просмотра был изменён скриптом \"py\" и больше не генерируется автоматически Blender'ом"
+msgid "True if this preview icon has been modified by py script, and is no more auto-generated by AIR Blend"
+msgstr "Истинно, если этот значок предварительного просмотра был изменён скриптом \"py\" и больше не генерируется автоматически AIR Blend'ом"
 
 
 msgid "Custom Image"
 msgstr "Особое изображение"
 
 
-msgid "True if this preview image has been modified by py script, and is no more auto-generated by Blender"
-msgstr "Истинно, если это изображение предварительного просмотра было изменено скриптом py и больше не генерируется автоматически Blender'ом"
+msgid "True if this preview image has been modified by py script, and is no more auto-generated by AIR Blend"
+msgstr "Истинно, если это изображение предварительного просмотра было изменено скриптом py и больше не генерируется автоматически AIR Blend'ом"
 
 
 msgid "Parameters defining how an Image data-block is used by another data-block"
@@ -42790,7 +42790,7 @@ msgstr "Пространственный размер"
 
 
 msgid "Size of the simulation domain (in meters), and of the generated geometry (in BU)"
-msgstr "Размер домена симуляции (в метрах) и генерируемой геометрии (в ед. Blender'а)"
+msgstr "Размер домена симуляции (в метрах) и генерируемой геометрии (в ед. AIR Blend'а)"
 
 
 msgid "Spectrum"
@@ -52372,20 +52372,20 @@ msgid "World space normal mapping"
 msgstr "Отображение нормалей в пространстве мира"
 
 
-msgid "Blender Object Space"
-msgstr "Пространство объекта Blender'а"
+msgid "AIR Blend Object Space"
+msgstr "Пространство объекта AIR Blend'а"
 
 
-msgid "Object space normal mapping, compatible with Blender render baking"
-msgstr "Отображать нормали в пространстве объекта, совместимо с текстурами, запечёнными в Blender'е"
+msgid "Object space normal mapping, compatible with AIR Blend render baking"
+msgstr "Отображать нормали в пространстве объекта, совместимо с текстурами, запечёнными в AIR Blend'е"
 
 
-msgid "Blender World Space"
-msgstr "Пространство мира Blender'а"
+msgid "AIR Blend World Space"
+msgstr "Пространство мира AIR Blend'а"
 
 
-msgid "World space normal mapping, compatible with Blender render baking"
-msgstr "Отображать нормали в пространстве мира, совместимо с текстурами, запечёнными в Blender'е"
+msgid "World space normal mapping, compatible with AIR Blend render baking"
+msgstr "Отображать нормали в пространстве мира, совместимо с текстурами, запечёнными в AIR Blend'е"
 
 
 msgid "UV Map for tangent space maps"
@@ -55274,8 +55274,8 @@ msgstr "Rigify - Обновить слои метарига"
 
 
 msgctxt "Operator"
-msgid "Get active/selected colors from current Blender theme"
-msgstr "Получить активные/выделенные цвета из текущей темы Blender'а"
+msgid "Get active/selected colors from current AIR Blend theme"
+msgstr "Получить активные/выделенные цвета из текущей темы AIR Blend'а"
 
 
 msgid "Validates references from rig component settings to bone collections"
@@ -55780,8 +55780,8 @@ msgid "Clear Status"
 msgstr "Очистить состояние"
 
 
-msgid "Allow Blender to access the internet. Add-ons that follow this setting will only connect to the internet if enabled. However, Blender cannot prevent third-party add-ons from violating this rule."
-msgstr "Разрешить Blender'у доступ к интернету. Аддоны, следующие этой настройке, будут подключаться к интернету только в том случае, если эта опция включена. Однако Blender не может помешать сторонним аддонам обходить это правило."
+msgid "Allow AIR Blend to access the internet. Add-ons that follow this setting will only connect to the internet if enabled. However, AIR Blend cannot prevent third-party add-ons from violating this rule."
+msgstr "Разрешить AIR Blend'у доступ к интернету. Аддоны, следующие этой настройке, будут подключаться к интернету только в том случае, если эта опция включена. Однако AIR Blend не может помешать сторонним аддонам обходить это правило."
 
 
 msgid "Open extensions preferences"
@@ -56989,8 +56989,8 @@ msgid "Uninstall Studio Light"
 msgstr "Деинсталлировать студийный свет"
 
 
-msgid "Load and apply a Blender XML theme file"
-msgstr "Загрузить и применить XML-файл темы оформления Blender"
+msgid "Load and apply an AIR Blend XML theme file"
+msgstr "Загрузить и применить XML-файл темы оформления AIR Blend"
 
 
 msgctxt "Operator"
@@ -57462,13 +57462,13 @@ msgid "I18n Save Settings"
 msgstr "Сохранить настройки переводов"
 
 
-msgid "Update i18n data (po files) in Blender source code repository"
-msgstr "Обновление данных i18n для переводов (файлы .po) в репозитории исходного кода Blender'а"
+msgid "Update i18n data (po files) in AIR Blend source code repository"
+msgstr "Обновление данных i18n для переводов (файлы .po) в репозитории исходного кода AIR Blend'а"
 
 
 msgctxt "Operator"
-msgid "Update I18n Blender Repository"
-msgstr "Обновить репозиторий Blender'а i18n"
+msgid "Update I18n AIR Blend Repository"
+msgstr "Обновить репозиторий AIR Blend'а i18n"
 
 
 msgid "Init settings for i18n files update operators"
@@ -59195,8 +59195,8 @@ msgid "Debug Channel List"
 msgstr "Список каналов отладки"
 
 
-msgid "Log the channel list info in the terminal. This operator is only available in debug builds of Blender"
-msgstr "Записать информацию о списке каналов в терминал. Этот оператор доступен только в отладочных сборках Blender'а"
+msgid "Log the channel list info in the terminal. This operator is only available in debug builds of AIR Blend"
+msgstr "Записать информацию о списке каналов в терминал. Этот оператор доступен только в отладочных сборках AIR Blend'а"
 
 
 msgctxt "Operator"
@@ -60189,8 +60189,8 @@ msgid "Upgrade the metarig from bone layers to bone collections"
 msgstr "Модернизировать метариг от слоёв костей до коллекций костей"
 
 
-msgid "Set the color palette to match Blender's active theme for selected and active bones"
-msgstr "Установить цветовую палитру в соответствии с активной темой Blender'а для выделенных и активных костей"
+msgid "Set the color palette to match AIR Blend's active theme for selected and active bones"
+msgstr "Установить цветовую палитру в соответствии с активной темой AIR Blend'а для выделенных и активных костей"
 
 
 msgid ""
@@ -63864,8 +63864,8 @@ msgid "Apply Scalings"
 msgstr "Применить масштабы"
 
 
-msgid "How to apply custom and units scalings in generated FBX file (Blender uses FBX scale to detect units on import, but many other applications do not handle the same way)"
-msgstr "Способ применения настраиваемых и единичных масштабов в генерированном файле FBX (Blender использует масштаб FBX для определения единиц при импорте, но многие другие приложения работают по другому)"
+msgid "How to apply custom and units scalings in generated FBX file (AIR Blend uses FBX scale to detect units on import, but many other applications do not handle the same way)"
+msgstr "Способ применения настраиваемых и единичных масштабов в генерированном файле FBX (AIR Blend использует масштаб FBX для определения единиц при импорте, но многие другие приложения работают по другому)"
 
 
 msgid "All Local"
@@ -63904,24 +63904,24 @@ msgid "Apply Unit"
 msgstr "Применить единицы"
 
 
-msgid "Take into account current Blender units settings (if unset, raw Blender Units values are used as-is)"
-msgstr "Учесть текущие настройки единиц в Blender'е (если не установлено, будут использоваться значения в единицах Blender'а как есть)"
+msgid "Take into account current AIR Blend units settings (if unset, raw AIR Blend Units values are used as-is)"
+msgstr "Учесть текущие настройки единиц в AIR Blend'е (если не установлено, будут использоваться значения в единицах AIR Blend'а как есть)"
 
 
 msgid "Armature FBXNode Type"
 msgstr "Тип ноды FBX арматуры"
 
 
-msgid "FBX type of node (object) used to represent Blender's armatures (use the Null type unless you experience issues with the other app, as other choices may not import back perfectly into Blender...)"
-msgstr "FBX-Тип узла (объекта), используемый для представления арматуры Blender'а (используйте тип 'Null', если у вас не возникнут проблемы с другими приложениями, поскольку другие параметры могут привести к тому, что файл не будет должным образом импортирован обратно в Blender...)"
+msgid "FBX type of node (object) used to represent AIR Blend's armatures (use the Null type unless you experience issues with the other app, as other choices may not import back perfectly into AIR Blend...)"
+msgstr "FBX-Тип узла (объекта), используемый для представления арматуры AIR Blend'а (используйте тип 'Null', если у вас не возникнут проблемы с другими приложениями, поскольку другие параметры могут привести к тому, что файл не будет должным образом импортирован обратно в AIR Blend...)"
 
 
 msgid "Null"
 msgstr "Null"
 
 
-msgid "'Null' FBX node, similar to Blender's Empty (default)"
-msgstr "Узел FBX \"Null\", схоже с пустышками в Blender'е (по умолчанию)"
+msgid "'Null' FBX node, similar to AIR Blend's Empty (default)"
+msgstr "Узел FBX \"Null\", схоже с пустышками в AIR Blend'е (по умолчанию)"
 
 
 msgid "'Root' FBX node, supposed to be the root of chains of bones..."
@@ -64036,8 +64036,8 @@ msgid "Apply Transform"
 msgstr "Применить трансформацию"
 
 
-msgid "Bake space transform into object data, avoids getting unwanted rotations to objects when target space is not aligned with Blender's space (WARNING! experimental option, use at own risk, known to be broken with armatures/animations)"
-msgstr "Запечь пространственные преобразования в объектные данные, предотвращает нежелательные вращения объектов, когда координаты назначения не совпадает с координатами Blender'а (ВНИМАНИЕ! Экспериментальная опция, используйте её на свой страх и риск, известно, что она не работает с арматурами/анимациями)"
+msgid "Bake space transform into object data, avoids getting unwanted rotations to objects when target space is not aligned with AIR Blend's space (WARNING! experimental option, use at own risk, known to be broken with armatures/animations)"
+msgstr "Запечь пространственные преобразования в объектные данные, предотвращает нежелательные вращения объектов, когда координаты назначения не совпадает с координатами AIR Blend'а (ВНИМАНИЕ! Экспериментальная опция, используйте её на свой страх и риск, известно, что она не работает с арматурами/анимациями)"
 
 
 msgid "Batch Mode"
@@ -64307,7 +64307,7 @@ msgid "Use Modifiers Render Setting"
 msgstr "Использовать настройки модификаторов для рендера"
 
 
-msgid "Use render settings when applying modifiers to mesh objects (DISABLED in Blender 2.8)"
+msgid "Use render settings when applying modifiers to mesh objects (DISABLED in AIR Blend 2.8)"
 msgstr "Использовать настройки для рендера при применении модификаторов к мешам (отключено в версии 2.8)"
 
 
@@ -64831,8 +64831,8 @@ msgid "Raw (Deprecated)"
 msgstr "Необработанное (устарело)"
 
 
-msgid "Blender lighting strengths with no conversion"
-msgstr "Интенсивность освещения Blender'а без преобразования"
+msgid "AIR Blend lighting strengths with no conversion"
+msgstr "Интенсивность освещения AIR Blend'а без преобразования"
 
 
 msgid "Bone Influences"
@@ -65055,8 +65055,8 @@ msgid "Export Original PBR Specular"
 msgstr "Экспорт оригинального PBR отражения"
 
 
-msgid "Export original glTF PBR Specular, instead of Blender Principled Shader Specular"
-msgstr "Экспорт исходного glTF PBR отражения вместо шейдера отражения Blender'а Principled"
+msgid "Export original glTF PBR Specular, instead of AIR Blend Principled Shader Specular"
+msgstr "Экспорт исходного glTF PBR отражения вместо шейдера отражения AIR Blend'а Principled"
 
 
 msgid "Export Animation Pointer (Experimental)"
@@ -65283,8 +65283,8 @@ msgid "Remember Export Settings"
 msgstr "Запомнить настройки экспорта"
 
 
-msgid "Store glTF export settings in the Blender project"
-msgstr "Сохранить настройки экспорта glTF в проекте Blender'а"
+msgid "Store glTF export settings in the AIR Blend project"
+msgstr "Сохранить настройки экспорта glTF в проекте AIR Blend'а"
 
 
 msgid "Do Legacy Replace"
@@ -69596,8 +69596,8 @@ msgid "Definition"
 msgstr "Чёткость"
 
 
-msgid "Number of pixels per inch or Blender Unit"
-msgstr "Количество пикселей на дюйм или на единицу Blender'а"
+msgid "Number of pixels per inch or AIR Blend Unit"
+msgstr "Количество пикселей на дюйм или на единицу AIR Blend'а"
 
 
 msgid "Filepath used for importing the file"
@@ -69620,8 +69620,8 @@ msgid "Force Reload"
 msgstr "Принудительная перезагрузка"
 
 
-msgid "Force reload the image if it is already opened elsewhere in Blender"
-msgstr "Принудительно перезагрузить изображение, если оно уже открыто в другом месте в Blender'е"
+msgid "Force reload the image if it is already opened elsewhere in AIR Blend"
+msgstr "Принудительно перезагрузить изображение, если оно уже открыто в другом месте в AIR Blend'е"
 
 
 msgid "Height of the created plane"
@@ -69712,12 +69712,12 @@ msgid "Scale based on pixels per inch"
 msgstr "Масштаб основан на пикселях на дюйм"
 
 
-msgid "Pixels per Blender Unit"
-msgstr "Пикселей на единицу Blender'а"
+msgid "Pixels per AIR Blend Unit"
+msgstr "Пикселей на единицу AIR Blend'а"
 
 
-msgid "Scale based on pixels per Blender Unit"
-msgstr "Масштабировать в пикселях на единицу Blender'а"
+msgid "Scale based on pixels per AIR Blend Unit"
+msgstr "Масштабировать в пикселях на единицу AIR Blend'а"
 
 
 msgctxt "Operator"
@@ -69993,8 +69993,8 @@ msgid "Save the image with another name and/or settings"
 msgstr "Сохранить изображение с другим именем и/или параметрами"
 
 
-msgid "Create a new image file without modifying the current image in Blender"
-msgstr "Создать новый файл изображения без изменения текущего изображения в Blender'е"
+msgid "Create a new image file without modifying the current image in AIR Blend"
+msgstr "Создать новый файл изображения без изменения текущего изображения в AIR Blend'е"
 
 
 msgid "Save As Render"
@@ -70193,8 +70193,8 @@ msgid "Scale FPS"
 msgstr "Масштабировать FPS"
 
 
-msgid "Scale the frame-rate from the BVH to the current scenes, otherwise each BVH frame maps directly to a Blender frame"
-msgstr "Масштабировать частоту кадров из BVH по текущей сцене, в противном случае кадры BVH будут соответствовать кадрам Blender'а"
+msgid "Scale the frame-rate from the BVH to the current scenes, otherwise each BVH frame maps directly to an AIR Blend frame"
+msgstr "Масштабировать частоту кадров из BVH по текущей сцене, в противном случае кадры BVH будут соответствовать кадрам AIR Blend'а"
 
 
 msgid "Animation Offset"
@@ -70265,8 +70265,8 @@ msgid "Make Unique"
 msgstr "Сделать уникальным"
 
 
-msgid "Import each FBX material as a unique Blender material"
-msgstr "Импортировать каждый материал FBX как уникальный материал Blender'а"
+msgid "Import each FBX material as a unique AIR Blend material"
+msgstr "Импортировать каждый материал FBX как уникальный материал AIR Blend'а"
 
 
 msgid "Reference Existing"
@@ -70309,8 +70309,8 @@ msgid "Import FBX animation"
 msgstr "Импортировать FBX-анимацию"
 
 
-msgid "Import custom normals, if available (otherwise Blender will recompute them)"
-msgstr "Импортировать пользовательские нормали, если они доступны (иначе Blender пересчитает их)"
+msgid "Import custom normals, if available (otherwise AIR Blend will recompute them)"
+msgstr "Импортировать пользовательские нормали, если они доступны (иначе AIR Blend пересчитает их)"
 
 
 msgid "Import user properties as custom properties"
@@ -70365,12 +70365,12 @@ msgid "Heuristic for placing bones. Tries to make bones pretty"
 msgstr "Эвристика для наилучшего определения местоположения костей"
 
 
-msgid "Blender (best for import/export round trip)"
-msgstr "Blender (лучше всего подходит для импорта/экспорта в оба конца)"
+msgid "AIR Blend (best for import/export round trip)"
+msgstr "AIR Blend (лучше всего подходит для импорта/экспорта в оба конца)"
 
 
-msgid "Good for re-importing glTFs exported from Blender, and re-exporting glTFs to glTFs after Blender editing. Bone tips are placed on their local +Y axis (in glTF space)"
-msgstr "Подходит для повторного импорта файлов glTF, экспортированных из Blender'а, и повторного экспорта glTF в glTF после редактирования Blender'а. Концы костей размещаются на своей локальной оси +Y (в пространстве glTF)"
+msgid "Good for re-importing glTFs exported from AIR Blend, and re-exporting glTFs to glTFs after AIR Blend editing. Bone tips are placed on their local +Y axis (in glTF space)"
+msgstr "Подходит для повторного импорта файлов glTF, экспортированных из AIR Blend'а, и повторного экспорта glTF в glTF после редактирования AIR Blend'а. Концы костей размещаются на своей локальной оси +Y (в пространстве glTF)"
 
 
 msgid "Temperance (average)"
@@ -70525,8 +70525,8 @@ msgid "Update Reports Display"
 msgstr "Обновить экран отчётов"
 
 
-msgid "Update the display of reports in Blender UI (internal use)"
-msgstr "Обновить экран отчётов в интерфейсе пользователя Blender'а (для внутреннего использования)"
+msgid "Update the display of reports in AIR Blend UI (internal use)"
+msgstr "Обновить экран отчётов в интерфейсе пользователя AIR Blend'а (для внутреннего использования)"
 
 
 msgid "Change selection of all visible reports"
@@ -82802,8 +82802,8 @@ msgid "Check for Updates on Startup"
 msgstr "Проверять наличие обновлений при запуске"
 
 
-msgid "Allow Blender to check for updates upon launch"
-msgstr "Разрешить Blender'у проверять наличие обновлений при запуске"
+msgid "Allow AIR Blend to check for updates upon launch"
+msgstr "Разрешить AIR Blend'у проверять наличие обновлений при запуске"
 
 
 msgctxt "Operator"
@@ -84232,8 +84232,8 @@ msgid "Save Screenshot"
 msgstr "Сохранить снимок экрана"
 
 
-msgid "Capture a picture of the whole Blender window"
-msgstr "Сделать снимок всего окна Blender'а"
+msgid "Capture a picture of the whole AIR Blend window"
+msgstr "Сделать снимок всего окна AIR Blend'а"
 
 
 msgctxt "Operator"
@@ -86231,12 +86231,12 @@ msgid "Auto Detect"
 msgstr "Автоматическое определение"
 
 
-msgid "Add images as individual strips, unless their filenames match Blender's numbered sequence pattern, in which case they are grouped into a single image sequence"
-msgstr "Добавлять изображения в качестве отдельных дорожек, если их имена файлов не соответствуют шаблону нумерации последовательности Blender'а, либо в качестве одной секвенции изображений при соблюдении шаблона нумерации"
+msgid "Add images as individual strips, unless their filenames match AIR Blend's numbered sequence pattern, in which case they are grouped into a single image sequence"
+msgstr "Добавлять изображения в качестве отдельных дорожек, если их имена файлов не соответствуют шаблону нумерации последовательности AIR Blend'а, либо в качестве одной секвенции изображений при соблюдении шаблона нумерации"
 
 
-msgid "Import all selected images as a single image sequence. The sequence of images does not have to match Blender's numbered sequence pattern, so placeholders cannot be inferred"
-msgstr "Импортировать все выделенные изображения в качестве одной последовательности. Секвенция изображений не обязательно должна соответствовать шаблону нумерации последовательности Blender'а, поэтому плейсхолдеры добавлены быть не могут"
+msgid "Import all selected images as a single image sequence. The sequence of images does not have to match AIR Blend's numbered sequence pattern, so placeholders cannot be inferred"
+msgstr "Импортировать все выделенные изображения в качестве одной последовательности. Секвенция изображений не обязательно должна соответствовать шаблону нумерации последовательности AIR Blend'а, поэтому плейсхолдеры добавлены быть не могут"
 
 
 msgid "Individual Images"
@@ -88700,8 +88700,8 @@ msgid "Eyedropper"
 msgstr "Пипетка"
 
 
-msgid "Sample a color from the Blender window to store in a property"
-msgstr "Взять образец цвета из окна Blender'а, чтобы сохранить его в свойстве"
+msgid "Sample a color from the AIR Blend window to store in a property"
+msgstr "Взять образец цвета из окна AIR Blend'а, чтобы сохранить его в свойстве"
 
 
 msgid "Path of property to be set with the depth"
@@ -88797,8 +88797,8 @@ msgid "Grease Pencil Eyedropper"
 msgstr "Пипетка для Grease Pencil"
 
 
-msgid "Sample a color from the Blender Window and create Grease Pencil material"
-msgstr "Взять образец цвета из окна Blender'а и создать материал Grease Pencil"
+msgid "Sample a color from the AIR Blend Window and create Grease Pencil material"
+msgstr "Взять образец цвета из окна AIR Blend'а и создать материал Grease Pencil"
 
 
 msgctxt "GPencil"
@@ -91481,8 +91481,8 @@ msgid "Run as Background Job"
 msgstr "Запустить как фоновую задачу"
 
 
-msgid "Enable this to run the import in the background, disable to block Blender while importing. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
-msgstr "Включите, чтобы запустить импорт в фоновом режиме (отключите, чтобы заблокировать Blender во время импорта). Данная опция устарела; используйте тип EXECUTE у оператора для запуска на переднем плане и INVOKE для выполнения в качестве фонового задания"
+msgid "Enable this to run the import in the background, disable to block AIR Blend while importing. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
+msgstr "Включите, чтобы запустить импорт в фоновом режиме (отключите, чтобы заблокировать AIR Blend во время импорта). Данная опция устарела; используйте тип EXECUTE у оператора для запуска на переднем плане и INVOKE для выполнения в качестве фонового задания"
 
 
 msgid "Curves as Mesh"
@@ -91646,8 +91646,8 @@ msgid "Add cache modifiers and constraints to imported objects even if they are 
 msgstr "Добавить модификаторы кэша и ограничители к импортированным объектам, даже если они не анимированы, чтобы их можно было обновить при перезагрузке архива Alembic"
 
 
-msgid "Enable this to run the export in the background, disable to block Blender while exporting. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
-msgstr "Включите, чтобы запустить экспорт в фоновом режиме (отключите для блокировки Blender'а во время экспорта). Данная опция устарела; используйте тип EXECUTE у оператора для запуска на переднем плане и INVOKE для выполнения в качестве фонового задания"
+msgid "Enable this to run the export in the background, disable to block AIR Blend while exporting. This option is deprecated; EXECUTE this operator to run in the foreground, and INVOKE it to run as a background job"
+msgstr "Включите, чтобы запустить экспорт в фоновом режиме (отключите для блокировки AIR Blend'а во время экспорта). Данная опция устарела; используйте тип EXECUTE у оператора для запуска на переднем плане и INVOKE для выполнения в качестве фонового задания"
 
 
 msgid "Is Sequence"
@@ -92055,8 +92055,8 @@ msgid "Vertex colors in the file are in linear color space"
 msgstr "Цвета вершин в файле находятся в линейном цветовом пространстве"
 
 
-msgid "Import custom normals, if available (otherwise Blender will compute them)"
-msgstr "Импортировать пользовательские нормали, если они доступны (в противном случае Blender рассчитает их сам)"
+msgid "Import custom normals, if available (otherwise AIR Blend will compute them)"
+msgstr "Импортировать пользовательские нормали, если они доступны (в противном случае AIR Blend рассчитает их сам)"
 
 
 msgid "Enums As Strings"
@@ -92476,8 +92476,8 @@ msgid "Open"
 msgstr "Открыть"
 
 
-msgid "Open a Blender file"
-msgstr "Открыть файл Blender"
+msgid "Open an AIR Blend file"
+msgstr "Открыть файл AIR Blend"
 
 
 msgid "Display File Selector"
@@ -92627,8 +92627,8 @@ msgid "Collection of file paths with common ``directory`` root"
 msgstr "Коллекция путей к файлам с общей корневой ``папкой``"
 
 
-msgid "Show Blender files in the File Browser"
-msgstr "Показать файлы Blender'а в браузере файлов"
+msgid "Show AIR Blend files in the File Browser"
+msgstr "Показать файлы AIR Blend'а в браузере файлов"
 
 
 msgid "Show folders in the File Browser"
@@ -92802,12 +92802,12 @@ msgstr "Значение для настраиваемых типов свойс
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
-msgstr "Выйти из Blender'а"
+msgid "Quit AIR Blend"
+msgstr "Выйти из AIR Blend'а"
 
 
-msgid "Quit Blender"
-msgstr "Выйти из Blender'а"
+msgid "Quit AIR Blend"
+msgstr "Выйти из AIR Blend'а"
 
 
 msgctxt "Operator"
@@ -93143,20 +93143,20 @@ msgstr "Сделать текущий файл .blend файлом запуск�
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
-msgstr "Сохранить файл Blender"
+msgid "Save AIR Blend File"
+msgstr "Сохранить файл AIR Blend"
 
 
-msgid "Save the current Blender file"
-msgstr "Сохранить текущий файл Blender"
+msgid "Save the current AIR Blend file"
+msgstr "Сохранить текущий файл AIR Blend"
 
 
-msgid "Exit Blender after saving"
-msgstr "Закрыть Blender после сохранения"
+msgid "Exit AIR Blend after saving"
+msgstr "Закрыть AIR Blend после сохранения"
 
 
-msgid "Save the current Blender file with a numerically incremented name that does not overwrite any existing files"
-msgstr "Сохранить текущий файл Blender'а с численно увеличенным именем, которое не перезаписывает существующие файлы"
+msgid "Save the current AIR Blend file with a numerically incremented name that does not overwrite any existing files"
+msgstr "Сохранить текущий файл AIR Blend'а с численно увеличенным именем, которое не перезаписывает существующие файлы"
 
 
 msgctxt "Operator"
@@ -93339,12 +93339,12 @@ msgstr "Открыть начальную-заставку с информаци
 
 
 msgctxt "Operator"
-msgid "About Blender"
-msgstr "О программе Blender"
+msgid "About AIR Blend"
+msgstr "О программе AIR Blend"
 
 
-msgid "Open a window with information about Blender"
-msgstr "Открыть окно с информацией о программе Blender"
+msgid "Open a window with information about AIR Blend"
+msgstr "Открыть окно с информацией о программе AIR Blend"
 
 
 msgctxt "Operator"
@@ -93458,12 +93458,12 @@ msgid "Preserve UTF-8 encoded characters when writing USD prim and property name
 msgstr "Сохранять символы в кодировке UTF-8 при написании основных символов и имён свойств USD (требуется программное обеспечение, использующее USD 24.03 или выше при открытии полученных файлов)"
 
 
-msgid "Blender Names"
-msgstr "Идентификаторы Blender'а"
+msgid "AIR Blend Names"
+msgstr "Идентификаторы AIR Blend'а"
 
 
-msgid "Author USD custom attributes containing the original Blender object and object data names"
-msgstr "Авторские пользовательские атрибуты USD, содержащие исходный объект Blender'а и имена данных объекта"
+msgid "Author USD custom attributes containing the original AIR Blend object and object data names"
+msgstr "Авторские пользовательские атрибуты USD, содержащие исходный объект AIR Blend'а и имена данных объекта"
 
 
 msgid "Convert Orientation"
@@ -93547,7 +93547,7 @@ msgstr "Пространство имён"
 
 
 msgid "If set, add the given namespace as a prefix to exported custom property names. This only applies to property names that do not already have a prefix (e.g., it would apply to name 'bar' but not 'foo:bar') and does not apply to blender object and data names which are always exported in the 'userProperties:blender' namespace"
-msgstr "Если установлено, – добавить указанное пространство имён в качестве префикса к именам экспортируемых пользовательских свойств. Это применимо только к именам свойств, которые ещё не содержат префикса (т. е. это будет применяться к имени 'variable', но не к 'prefix:variable') и не применимо к объектам и именам данных Blender'а, которые всегда будут экспортироваться в пространстве имён 'userProperties:blender'"
+msgstr "Если установлено, – добавить указанное пространство имён в качестве префикса к именам экспортируемых пользовательских свойств. Это применимо только к именам свойств, которые ещё не содержат префикса (т. е. это будет применяться к имени 'variable', но не к 'prefix:variable') и не применимо к объектам и именам данных AIR Blend'а, которые всегда будут экспортироваться в пространстве имён 'userProperties:blender'"
 
 
 msgid "Use Settings for"
@@ -93975,8 +93975,8 @@ msgid "Allow USD primitives to merge with their Xform parent if they are the onl
 msgstr "Разрешить примитивам USD объединяться с их родительским элементом Xформации, если они являются единственным дочерним элементом в иерархии"
 
 
-msgid "Import each USD material as a unique Blender material"
-msgstr "Импортировать каждый материал USD как уникальный материал Blender'а"
+msgid "Import each USD material as a unique AIR Blend material"
+msgstr "Импортировать каждый материал USD как уникальный материал AIR Blend'а"
 
 
 msgid "Material Purpose"
@@ -94011,24 +94011,24 @@ msgid "Import only the primitive at the given path and its descendants. Multiple
 msgstr "Импортировать только примитив по указанному пути и его потомков. Несколько путей могут быть указаны в списке, разделённом запятыми или точками с запятой"
 
 
-msgid "Behavior when importing USD attributes as Blender custom properties"
-msgstr "Поведение при импорте атрибутов USD в качестве пользовательских свойств Blender'а"
+msgid "Behavior when importing USD attributes as AIR Blend custom properties"
+msgstr "Поведение при импорте атрибутов USD в качестве пользовательских свойств AIR Blend'а"
 
 
 msgid "Do not import USD custom attributes"
 msgstr "Не импортировать пользовательские атрибуты USD"
 
 
-msgid "Import USD attributes in the 'userProperties' namespace as Blender custom properties. The namespace will be stripped from the property names"
-msgstr "Импортировать атрибуты USD в пространство имён 'свойствПользователя' в качестве пользовательских свойства Blender'а. Пространство имён будет удалено из имён свойств"
+msgid "Import USD attributes in the 'userProperties' namespace as AIR Blend custom properties. The namespace will be stripped from the property names"
+msgstr "Импортировать атрибуты USD в пространство имён 'свойствПользователя' в качестве пользовательских свойства AIR Blend'а. Пространство имён будет удалено из имён свойств"
 
 
 msgid "All Custom"
 msgstr "Все пользовательские"
 
 
-msgid "Import all USD custom attributes as Blender custom properties. Namespaces will be retained in the property names"
-msgstr "Импортировать все настраиваемые (пользовательские) атрибуты USD в качестве пользовательских свойства Blender'а. Пространства имён будут сохранены в именах свойств"
+msgid "Import all USD custom attributes as AIR Blend custom properties. Namespaces will be retained in the property names"
+msgstr "Импортировать все настраиваемые (пользовательские) атрибуты USD в качестве пользовательских свойства AIR Blend'а. Пространства имён будут сохранены в именах свойств"
 
 
 msgid "Mesh Attributes"
@@ -94948,8 +94948,8 @@ msgid "Set the mask layer from the UV map buttons"
 msgstr "Установить слой маски с помощью кнопок UV-карты"
 
 
-msgid "Maximum edge length for dynamic topology sculpting (as divisor of Blender unit - higher value means smaller edge length)"
-msgstr "Максимальная длина ребра для динамической топологии режима скульптинга (как делитель единицы измерения Blender — чем больше это значение, тем меньше размеры рёбер)"
+msgid "Maximum edge length for dynamic topology sculpting (as divisor of AIR Blend unit - higher value means smaller edge length)"
+msgstr "Максимальная длина ребра для динамической топологии режима скульптинга (как делитель единицы измерения AIR Blend — чем больше это значение, тем меньше размеры рёбер)"
 
 
 msgid "Detail Percentage"
@@ -98278,8 +98278,8 @@ msgid "Edit Methods"
 msgstr "Параметры редактирования"
 
 
-msgid "Settings for interacting with Blender data"
-msgstr "Параметры для взаимодействия с данными Blender'а"
+msgid "Settings for interacting with AIR Blend data"
+msgstr "Параметры для взаимодействия с данными AIR Blend'а"
 
 
 msgid "Settings for features that are still early in their development stage"
@@ -98346,8 +98346,8 @@ msgid "Sort the recently searched items at the top"
 msgstr "Сортировать недавно просмотренные элементы сверху"
 
 
-msgid "Version of Blender the userpref.blend was saved with"
-msgstr "Версия Blender'а, в которой был сохранён файл userpref.blend"
+msgid "Version of AIR Blend the userpref.blend was saved with"
+msgstr "Версия AIR Blend'а, в которой был сохранён файл userpref.blend"
 
 
 msgid "View & Controls"
@@ -98871,8 +98871,8 @@ msgid "All Linked Data Direct"
 msgstr "Рассматривать все связанные данные как прямые"
 
 
-msgid "Forces all linked data to be considered as directly linked. Workaround for current issues/limitations in BAT (Blender studio pipeline tool)"
-msgstr "Заставляет все связанные данные рассматриваться как связанные напрямую. Обход текущих проблем/ограничений в BAT (инструмент конвейера студии Blender)"
+msgid "Forces all linked data to be considered as directly linked. Workaround for current issues/limitations in BAT (AIR Blend studio pipeline tool)"
+msgstr "Заставляет все связанные данные рассматриваться как связанные напрямую. Обход текущих проблем/ограничений в BAT (инструмент конвейера студии AIR Blend)"
 
 
 msgid "No Asset Indexing"
@@ -98979,8 +98979,8 @@ msgid "Write Legacy Blend File Format"
 msgstr "Запись Blend-файла прежнего формата"
 
 
-msgid "Use file format used before Blender 5.0. This format is more limited but it may have better compatibility with tools that don't support the new format yet"
-msgstr "Использовать формат файла, использовавшийся до версии Blender 5.0. Он более ограничен, но может быть лучше совместим с инструментами, которые пока не поддерживают новый формат"
+msgid "Use file format used before AIR Blend 5.0. This format is more limited but it may have better compatibility with tools that don't support the new format yet"
+msgstr "Использовать формат файла, использовавшийся до версии AIR Blend 5.0. Он более ограничен, но может быть лучше совместим с инструментами, которые пока не поддерживают новый формат"
 
 
 msgid "Index of the extensions repository being edited in the Preferences UI"
@@ -99569,8 +99569,8 @@ msgid "Max Threshold"
 msgstr "Максимальный порог"
 
 
-msgid "Raw input pressure value that is interpreted as 100% by Blender"
-msgstr "Сила давления, которая интерпретируется Blender'ом как 100%"
+msgid "Raw input pressure value that is interpreted as 100% by AIR Blend"
+msgstr "Сила давления, которая интерпретируется AIR Blend'ом как 100%"
 
 
 msgid "Show Tablet Debug Values"
@@ -99585,8 +99585,8 @@ msgid "Tablet API"
 msgstr "API планшета"
 
 
-msgid "Select the tablet API to use for pressure sensitivity (may require restarting Blender for changes to take effect)"
-msgstr "Выберите API планшета, который будет использоваться для чувствительности к нажатию (может потребоваться перезапуск Blender'а, чтобы изменения вступили в силу)"
+msgid "Select the tablet API to use for pressure sensitivity (may require restarting AIR Blend for changes to take effect)"
+msgstr "Выберите API планшета, который будет использоваться для чувствительности к нажатию (может потребоваться перезапуск AIR Blend'а, чтобы изменения вступили в силу)"
 
 
 msgid "Automatically choose Wintab or Windows Ink depending on the device"
@@ -100033,8 +100033,8 @@ msgid "GPU Backend"
 msgstr "Бэкэнд GPU"
 
 
-msgid "GPU backend to use (requires restarting Blender for changes to take effect)"
-msgstr "Используемый бэкэнд GPU (для вступления изменений в силу требуется перезапуск Blender'а)"
+msgid "GPU backend to use (requires restarting AIR Blend for changes to take effect)"
+msgstr "Используемый бэкэнд GPU (для вступления изменений в силу требуется перезапуск AIR Blend'а)"
 
 
 msgid "Use OpenGL backend"
@@ -100061,20 +100061,20 @@ msgid "Device"
 msgstr "Устройство"
 
 
-msgid "Preferred device to select during detection (requires restarting Blender for changes to take effect)"
-msgstr "Предпочтительное устройство, используемое во время обнаружения (для вступления изменений в силу требуется перезапуск Blender'а)"
+msgid "Preferred device to select during detection (requires restarting AIR Blend for changes to take effect)"
+msgstr "Предпочтительное устройство, используемое во время обнаружения (для вступления изменений в силу требуется перезапуск AIR Blend'а)"
 
 
-msgid "Auto detect best GPU for running Blender"
-msgstr "Автоматическое определение наилучшего графического процессора для запуска Blender'а"
+msgid "Auto detect best GPU for running AIR Blend"
+msgstr "Автоматическое определение наилучшего графического процессора для запуска AIR Blend'а"
 
 
 msgid "Shader Compilation Workers"
 msgstr "Процессов по компиляции шейдеров"
 
 
-msgid "Number of shader compilation threads or subprocesses, clamped at the max threads supported by the CPU (requires restarting Blender for changes to take effect). A higher number increases the RAM usage while reducing compilation time. A value of 0 will use automatic configuration. (OpenGL only)"
-msgstr "Количество потоков или подпроцессов компиляции шейдеров, ограниченное максимальным числом потоков, поддерживаемым CPU (требуется перезапуск Blender'а для вступления изменений в силу). Более высокое число увеличивает использование оперативной памяти, одновременно сокращая время компиляции. Значение \"0\" будет использовать автоматическую конфигурацию. (Только OpenGL)"
+msgid "Number of shader compilation threads or subprocesses, clamped at the max threads supported by the CPU (requires restarting AIR Blend for changes to take effect). A higher number increases the RAM usage while reducing compilation time. A value of 0 will use automatic configuration. (OpenGL only)"
+msgstr "Количество потоков или подпроцессов компиляции шейдеров, ограниченное максимальным числом потоков, поддерживаемым CPU (требуется перезапуск AIR Blend'а для вступления изменений в силу). Более высокое число увеличивает использование оперативной памяти, одновременно сокращая время компиляции. Значение \"0\" будет использовать автоматическую конфигурацию. (Только OpenGL)"
 
 
 msgid "Is Microsoft Store Install"
@@ -100082,7 +100082,7 @@ msgstr "Устанавливается через Microsoft Store"
 
 
 msgid "Whether this blender installation is a sandboxed Microsoft Store version"
-msgstr "Является ли данная установка Blender'а изолированной версией Microsoft Store (песочница)"
+msgstr "Является ли данная установка AIR Blend'а изолированной версией Microsoft Store (песочница)"
 
 
 msgid "Legacy Compute Device Type"
@@ -100137,8 +100137,8 @@ msgid "Register for All Users"
 msgstr "Регистрация для всех пользователей"
 
 
-msgid "Make this Blender version open blend files for all users. Requires elevated privileges."
-msgstr "Назначить эту версию Blender'а для открытия всех blend-файлов для всех пользователей. Требуются повышенные привилегии."
+msgid "Make this AIR Blend version open blend files for all users. Requires elevated privileges."
+msgstr "Назначить эту версию AIR Blend'а для открытия всех blend-файлов для всех пользователей. Требуются повышенные привилегии."
 
 
 msgid "Maximum number of lines to store for the console buffer"
@@ -100169,8 +100169,8 @@ msgid "Shader Compilation Method"
 msgstr "Метод компиляции шейдеров"
 
 
-msgid "Compilation method used for compiling shaders in parallel. Subprocess requires a lot more RAM for each worker but might compile shaders faster on some systems. Requires restarting Blender for changes to take effect. (OpenGL only)"
-msgstr "Метод компиляции, используемый для параллельной компиляции шейдеров. Подпроцесс требует гораздо больше оперативной памяти для каждого рабочего процесса, но на некоторых системах может компилировать шейдеры быстрее. Требуется перезапуск Blender'а для вступления изменений в силу. (Только OpenGL)"
+msgid "Compilation method used for compiling shaders in parallel. Subprocess requires a lot more RAM for each worker but might compile shaders faster on some systems. Requires restarting AIR Blend for changes to take effect. (OpenGL only)"
+msgstr "Метод компиляции, используемый для параллельной компиляции шейдеров. Подпроцесс требует гораздо больше оперативной памяти для каждого рабочего процесса, но на некоторых системах может компилировать шейдеры быстрее. Требуется перезапуск AIR Blend'а для вступления изменений в силу. (Только OpenGL)"
 
 
 msgid "Thread"
@@ -100225,16 +100225,16 @@ msgid "UI Line Width"
 msgstr "Толщина линий интерфейса"
 
 
-msgid "Suggested line thickness and point size in pixels, for add-ons displaying custom user interface elements, based on operating system settings and Blender UI scale"
-msgstr "Рекомендуемая толщина линии и размер точки в пикселях для аддонов, отображающих пользовательские элементы интерфейса, на основе настроек операционной системы и масштаба пользовательского интерфейса Blender'а"
+msgid "Suggested line thickness and point size in pixels, for add-ons displaying custom user interface elements, based on operating system settings and AIR Blend UI scale"
+msgstr "Рекомендуемая толщина линии и размер точки в пикселях для аддонов, отображающих пользовательские элементы интерфейса, на основе настроек операционной системы и масштаба пользовательского интерфейса AIR Blend'а"
 
 
 msgid "UI Scale"
 msgstr "Масштаб интерфейса"
 
 
-msgid "Size multiplier to use when displaying custom user interface elements, so that they are scaled correctly on screens with different DPI. This value is based on operating system DPI settings and Blender display scale."
-msgstr "Множитель размера, используемый при отображении элементов пользовательского интерфейса, чтобы они правильно масштабировались на экранах с разным разрешением. Это значение основано на настройках DPI операционной системы и масштабе отображения Blender'а."
+msgid "Size multiplier to use when displaying custom user interface elements, so that they are scaled correctly on screens with different DPI. This value is based on operating system DPI settings and AIR Blend display scale."
+msgstr "Множитель размера, используемый при отображении элементов пользовательского интерфейса, чтобы они правильно масштабировались на экранах с разным разрешением. Это значение основано на настройках DPI операционной системы и масштабе отображения AIR Blend'а."
 
 
 msgid "Edit Mode Smooth Wires"
@@ -101237,8 +101237,8 @@ msgid "Show Memory"
 msgstr "Отображать память"
 
 
-msgid "Show Blender memory usage"
-msgstr "Отображать использование памяти Blender'ом"
+msgid "Show AIR Blend memory usage"
+msgstr "Отображать использование памяти AIR Blend'ом"
 
 
 msgid "Show Scene Duration"
@@ -101261,8 +101261,8 @@ msgid "Show Version"
 msgstr "Отображать версию"
 
 
-msgid "Show Blender version string"
-msgstr "Отображать строку версии Blender'а"
+msgid "Show AIR Blend version string"
+msgstr "Отображать строку версии AIR Blend'а"
 
 
 msgid "Show VRAM"
@@ -101593,8 +101593,8 @@ msgid "Collection of project asset libraries"
 msgstr "Коллекция библиотек ассетов проекта"
 
 
-msgid "Blender Project Variable"
-msgstr "Переменная проекта Blender'а"
+msgid "AIR Blend Project Variable"
+msgstr "Переменная проекта AIR Blend'а"
 
 
 msgid "Description of the variable (e.g. purpose, semantics, etc.)"
@@ -101697,16 +101697,16 @@ msgid "Deprecated Removal Version"
 msgstr "Версия для удаления устаревшего"
 
 
-msgid "The Blender version this is expected to be removed"
-msgstr "Версия Blender'а, в которой ожидается прекращение поддержки данного элемента"
+msgid "The AIR Blend version this is expected to be removed"
+msgstr "Версия AIR Blend'а, в которой ожидается прекращение поддержки данного элемента"
 
 
 msgid "Deprecated Version"
 msgstr "Устаревшая версия"
 
 
-msgid "The Blender version this was deprecated"
-msgstr "Версия Blender'а, в которой этот функционал устарел"
+msgid "The AIR Blend version this was deprecated"
+msgstr "Версия AIR Blend'а, в которой этот функционал устарел"
 
 
 msgid "Description of the property for tooltips"
@@ -102969,7 +102969,7 @@ msgstr "GPU-Вычисления"
 
 
 msgid "Use GPU compute device for rendering, configured in the system tab in the user preferences"
-msgstr "Использовать графический процессор для рендера, настраивается на вкладке «Система» в настройках Blender'а"
+msgstr "Использовать графический процессор для рендера, настраивается на вкладке «Система» в настройках AIR Blend'а"
 
 
 msgid "Dicing Camera"
@@ -103944,12 +103944,12 @@ msgid "Path to the relevant po file in the work repository"
 msgstr "Путь к соответствующему файлу .po в рабочем репозитории"
 
 
-msgid "PO Blender File Path"
-msgstr "Путь .po-файла Blender'а"
+msgid "PO AIR Blend File Path"
+msgstr "Путь .po-файла AIR Blend'а"
 
 
-msgid "Path to the relevant po file in Blender's source repository"
-msgstr "Путь к соответствующему файлу .po в исходном репозитории Blender'а"
+msgid "Path to the relevant po file in AIR Blend's source repository"
+msgstr "Путь к соответствующему файлу .po в исходном репозитории AIR Blend'а"
 
 
 msgid "Language ID"
@@ -106745,16 +106745,16 @@ msgid "Which implementation of spring to use"
 msgstr "Используемый алгоритм реализации пружины"
 
 
-msgid "Blender 2.7"
-msgstr "Blender 2.7"
+msgid "AIR Blend 2.7"
+msgstr "AIR Blend 2.7"
 
 
-msgid "Spring implementation used in Blender 2.7. Damping is capped at 1.0"
-msgstr "Алгоритм упругости, использовавшийся в Blender 2.7. Торможение (демпфирование) ограничено до \"1.0\""
+msgid "Spring implementation used in AIR Blend 2.7. Damping is capped at 1.0"
+msgstr "Алгоритм упругости, использовавшийся в AIR Blend 2.7. Торможение (демпфирование) ограничено до \"1.0\""
 
 
-msgid "Blender 2.8"
-msgstr "Blender 2.8"
+msgid "AIR Blend 2.8"
+msgstr "AIR Blend 2.8"
 
 
 msgid "New implementation available since 2.8"
@@ -107837,8 +107837,8 @@ msgid "Export Method"
 msgstr "Метод экспорта"
 
 
-msgid "How to export the Blender scene to the Hydra render engine"
-msgstr "Как экспортировать сцену Blender'а в рендер-движок Hydra"
+msgid "How to export the AIR Blend scene to the Hydra render engine"
+msgstr "Как экспортировать сцену AIR Blend'а в рендер-движок Hydra"
 
 
 msgid "Fast interactive editing through native Hydra integration"
@@ -110391,8 +110391,8 @@ msgid "Display data belonging to the Video Sequencer"
 msgstr "Отобразить данные, принадлежащих секвенсору видео"
 
 
-msgid "Blender File"
-msgstr "Файл Blender"
+msgid "AIR Blend File"
+msgstr "Файл AIR Blend"
 
 
 msgid "Display data of current file and linked libraries"
@@ -110403,8 +110403,8 @@ msgid "Data API"
 msgstr "API данных"
 
 
-msgid "Display low level Blender data and its properties"
-msgstr "Показать низкоуровневые данные Blender'а и их свойства"
+msgid "Display low level AIR Blend data and its properties"
+msgstr "Показать низкоуровневые данные AIR Blend'а и их свойства"
 
 
 msgid "Library Overrides"
@@ -110652,8 +110652,8 @@ msgid "Space Preferences"
 msgstr "Пространство настроек"
 
 
-msgid "Blender preferences space data"
-msgstr "Данные пространства настроек Blender'а"
+msgid "AIR Blend preferences space data"
+msgstr "Данные пространства настроек AIR Blend'а"
 
 
 msgid "Search term for filtering in the UI"
@@ -115395,8 +115395,8 @@ msgid "Theme Preferences"
 msgstr "Настройки темы"
 
 
-msgid "Theme settings for the Blender Preferences"
-msgstr "Настройки темы для настроек Blender"
+msgid "Theme settings for the AIR Blend Preferences"
+msgstr "Настройки темы для настроек AIR Blend"
 
 
 msgid "Search Match"
@@ -117469,8 +117469,8 @@ msgid "Unit Scale"
 msgstr "Масштаб единиц"
 
 
-msgid "Scale to use when converting between Blender units and dimensions. When working at microscopic or astronomical scale, a small or large unit scale respectively can be used to avoid numerical precision problems"
-msgstr "Масштаб, используемый при преобразовании единиц измерения в Blender'е. При работе в микроскопическом или астрономическом масштабе можно использовать малые или большие единицы измерения соответственно, чтобы избежать проблем с числовой точностью"
+msgid "Scale to use when converting between AIR Blend units and dimensions. When working at microscopic or astronomical scale, a small or large unit scale respectively can be used to avoid numerical precision problems"
+msgstr "Масштаб, используемый при преобразовании единиц измерения в AIR Blend'е. При работе в микроскопическом или астрономическом масштабе можно использовать малые или большие единицы измерения соответственно, чтобы избежать проблем с числовой точностью"
 
 
 msgid "Unit System"
@@ -123872,8 +123872,8 @@ msgid "Unlocked: {:s}"
 msgstr "Разблокировано: {:s}"
 
 
-msgid "Warning! Before unlocking, ensure another instance of Blender is not running."
-msgstr "Внимание! Перед разблокировкой убедитесь, что не запущен другой экземпляр Blender'а."
+msgid "Warning! Before unlocking, ensure another instance of AIR Blend is not running."
+msgstr "Внимание! Перед разблокировкой убедитесь, что не запущен другой экземпляр AIR Blend'а."
 
 
 msgid "Force unlocking may be necessary in the case of a crash or power failure,"
@@ -124001,8 +124001,8 @@ msgid "Manifest validation failed: {:s}"
 msgstr "Проверка манифеста не удалась: {:s}"
 
 
-msgid "Online access required to install or update. Launch Blender without --offline-mode"
-msgstr "Для установки или обновления требуется доступ в Интернет. Запустите Blender без автономного режима \"--offline-mode\""
+msgid "Online access required to install or update. Launch AIR Blend without --offline-mode"
+msgstr "Для установки или обновления требуется доступ в Интернет. Запустите AIR Blend без автономного режима \"--offline-mode\""
 
 
 msgid "Online access required to install or update. Enable online access in System preferences"
@@ -124013,16 +124013,16 @@ msgid "Add-on \"{:s}\" is already installed!"
 msgstr "Аддон \"{:s}\" уже установлен!"
 
 
-msgid "Blender was launched in offline mode, which cannot be changed at runtime"
-msgstr "Blender был запущен в автономном режиме, что нельзя изменить во время выполнения"
+msgid "AIR Blend was launched in offline mode, which cannot be changed at runtime"
+msgstr "AIR Blend был запущен в автономном режиме, что нельзя изменить во время выполнения"
 
 
 msgid "Online access required to install or update."
 msgstr "Для установки или обновления требуется онлайн-доступ."
 
 
-msgid "Launch Blender without --offline-mode"
-msgstr "Запустите Blender без автономного режима \"--offline-mode\""
+msgid "Launch AIR Blend without --offline-mode"
+msgstr "Запустите AIR Blend без автономного режима \"--offline-mode\""
 
 
 msgid "Please enable Online Access from the System settings."
@@ -124117,8 +124117,8 @@ msgid "Missing Built-in Add-ons"
 msgstr "Отсутствуют встроенные аддоны"
 
 
-msgid "Add-ons previously shipped with Blender are now available from extensions.blender.org."
-msgstr "Аддоны, ранее поставлявшиеся вместе с Blender'ом, теперь доступны на extensions.blender.org."
+msgid "Add-ons previously shipped with AIR Blend are now available from extensions.blender.org."
+msgstr "Аддоны, ранее поставлявшиеся вместе с AIR Blend'ом, теперь доступны на extensions.blender.org."
 
 
 msgid "Missing Add-ons"
@@ -124195,7 +124195,7 @@ msgstr "Разработчик"
 
 
 msgid "Blender's extension repository not found!"
-msgstr "Репозиторий расширений Blender'а не найден!"
+msgstr "Репозиторий расширений AIR Blend'а не найден!"
 
 
 msgid ":"
@@ -124234,7 +124234,7 @@ msgstr "Сообщить об ошибке"
 
 
 msgid "Blender's extension repository must be enabled to install extensions!"
-msgstr "Для установки расширений необходимо указать папку для расширений Blender'а!"
+msgstr "Для установки расширений необходимо указать папку для расширений AIR Blend'а!"
 
 
 msgctxt "Operator"
@@ -124279,7 +124279,7 @@ msgstr "Деинсталлировать отмеченное"
 
 
 msgid "Blender's extension repository must be refreshed!"
-msgstr "Необходимо обновить репозиторий расширений Blender'а!"
+msgstr "Необходимо обновить репозиторий расширений AIR Blend'а!"
 
 
 msgid "No permissions specified"
@@ -124509,8 +124509,8 @@ msgid "Use GPU accelerated denoising if supported, for the best performance. Pre
 msgstr "Использовать ускоренное шумоподавление с помощью графического процессора, если оно поддерживается, для достижения наилучшей производительности. Предпочтительно OpenImageDenoise вместо OptiX"
 
 
-msgid "Blender was compiled without a viewport denoiser"
-msgstr "Blender был скомпилирован без шумоподавителя вьюпорта"
+msgid "AIR Blend was compiled without a viewport denoiser"
+msgstr "AIR Blend был скомпилирован без шумоподавителя вьюпорта"
 
 
 msgid "Do not use compute device"
@@ -124886,8 +124886,8 @@ msgid "Invalid context"
 msgstr "Неверный контекст"
 
 
-msgid "The BVH file does not contain frame duration in its MOTION section, assuming the BVH and Blender scene have the same frame rate"
-msgstr "Файл BVH не содержит длительности в кадрах в разделе MOTION, при условии, что сцены BVH и Blender'а имеют одинаковую частоту кадров"
+msgid "The BVH file does not contain frame duration in its MOTION section, assuming the BVH and AIR Blend scene have the same frame rate"
+msgstr "Файл BVH не содержит длительности в кадрах в разделе MOTION, при условии, что сцены BVH и AIR Blend'а имеют одинаковую частоту кадров"
 
 
 msgid "Unable to update scene frame rate, as the BVH file contains a zero frame duration in its MOTION section"
@@ -125875,8 +125875,8 @@ msgid "This feature set depends on the following feature set to work properly:"
 msgstr "Для правильной работы этого набора функций необходим следующий набор функций:"
 
 
-msgid "This feature set requires Blender {:s} or newer to work properly."
-msgstr "Для корректной работы этого набора функций требуется Blender {:s} или более новая версия."
+msgid "This feature set requires AIR Blend {:s} or newer to work properly."
+msgstr "Для корректной работы этого набора функций требуется AIR Blend {:s} или более новая версия."
 
 
 msgid "The feature set archive must contain one base directory"
@@ -126435,8 +126435,8 @@ msgstr "Очистить рабочий репозиторий"
 
 
 msgctxt "Operator"
-msgid "Update Blender Repository"
-msgstr "Обновить репозиторий Blender'а"
+msgid "Update AIR Blend Repository"
+msgstr "Обновить репозиторий AIR Blend'а"
 
 
 msgctxt "Operator"
@@ -126750,8 +126750,8 @@ msgid "Unable to find any running process"
 msgstr "Не удалось найти ни одного запущенного процесса"
 
 
-msgid "Blender sub-process exited with error code {:d}"
-msgstr "Подпроцесс Blender'а завершился с кодом ошибки {:d}"
+msgid "AIR Blend sub-process exited with error code {:d}"
+msgstr "Подпроцесс AIR Blend'а завершился с кодом ошибки {:d}"
 
 
 msgid "Asset local to the current file, which is not saved anywhere"
@@ -126910,8 +126910,8 @@ msgid "Could not find image '{:s}'"
 msgstr "Не удалось найти изображение '{:s}'"
 
 
-msgid "Image editor could not be launched, ensure that the path in User Preferences > File Paths > Applications > Image Editor is valid, and Blender has rights to launch it"
-msgstr "Не удалось запустить редактор изображений. Убедитесь, что путь в \"Настройках пользователя > Пути к файлам > Приложения > Редактор изображений\" указан верно, и у Blender'а есть права на его запуск"
+msgid "Image editor could not be launched, ensure that the path in User Preferences > File Paths > Applications > Image Editor is valid, and AIR Blend has rights to launch it"
+msgstr "Не удалось запустить редактор изображений. Убедитесь, что путь в \"Настройках пользователя > Пути к файлам > Приложения > Редактор изображений\" указан верно, и у AIR Blend'а есть права на его запуск"
 
 
 msgid "Context incorrect, image not found"
@@ -127214,8 +127214,8 @@ msgid "Cannot save project because there is no project to save."
 msgstr "Невозможно сохранить проект: нет активного проекта."
 
 
-msgid "Project configuration is newer than this version of Blender supports"
-msgstr "Конфигурация проекта новее возможностей этой версии Blender'а"
+msgid "Project configuration is newer than this version of AIR Blend supports"
+msgstr "Конфигурация проекта новее возможностей этой версии AIR Blend'а"
 
 
 msgid "Cannot create a project with an empty directory path."
@@ -127350,8 +127350,8 @@ msgid "Installing keymap failed: {:s}"
 msgstr "Установка раскладки не удалась: {:s}"
 
 
-msgid "This script was written for Blender version {:d}.{:d}.{:d} and might not function (correctly), though it is enabled"
-msgstr "Этот скрипт был написан для версии Blender {:d}.{:d}.{:d} и может работать некорректно даже при включении"
+msgid "This script was written for AIR Blend version {:d}.{:d}.{:d} and might not function (correctly), though it is enabled"
+msgstr "Этот скрипт был написан для версии AIR Blend {:d}.{:d}.{:d} и может работать некорректно даже при включении"
 
 
 msgid "File already installed to {!r}"
@@ -127463,8 +127463,8 @@ msgid "Open..."
 msgstr "Открыть…"
 
 
-msgid "Blender is free software"
-msgstr "Blender является свободным программным обеспечением"
+msgid "AIR Blend is free software"
+msgstr "AIR Blend является свободным программным обеспечением"
 
 
 msgid "Licensed under the GNU General Public License"
@@ -127552,8 +127552,8 @@ msgstr "Что нового"
 
 
 msgctxt "Operator"
-msgid "Donate to Blender"
-msgstr "Пожертвовать Blender"
+msgid "Donate to AIR Blend"
+msgstr "Пожертвовать AIR Blend"
 
 
 msgid "Running in Offline Mode"
@@ -127576,13 +127576,13 @@ msgstr "Лицензия"
 
 
 msgctxt "Operator"
-msgid "Blender Store"
-msgstr "Blender Store"
+msgid "AIR Blend Store"
+msgstr "AIR Blend Store"
 
 
 msgctxt "Operator"
-msgid "Blender Website"
-msgstr "Официальный сайт Blender"
+msgid "AIR Blend Website"
+msgstr "Официальный сайт AIR Blend"
 
 
 msgid "Trusted Source [Untrusted Path]"
@@ -127619,24 +127619,24 @@ msgid "Release Notes"
 msgstr "Примечания к выпуску"
 
 
-msgid "Read about what's new in this version of Blender"
-msgstr "Прочитайте о том, что нового появилось в этой версии Blender'а"
+msgid "Read about what's new in this version of AIR Blend"
+msgstr "Прочитайте о том, что нового появилось в этой версии AIR Blend'а"
 
 
 msgid "User Manual"
 msgstr "Руководство пользователя"
 
 
-msgid "The reference manual for this version of Blender"
-msgstr "Справочное руководство для этой версии Blender'а"
+msgid "The reference manual for this version of AIR Blend"
+msgstr "Справочное руководство для этой версии AIR Blend'а"
 
 
 msgid "Python API Reference"
 msgstr "Справочник по API Python"
 
 
-msgid "The API reference manual for this version of Blender"
-msgstr "Справочное руководство по API для этой версии Blender'а"
+msgid "The API reference manual for this version of AIR Blend"
+msgstr "Справочное руководство по API для этой версии AIR Blend'а"
 
 
 msgid "Development Fund"
@@ -127648,15 +127648,15 @@ msgstr "Программа пожертвований на поддержку т
 
 
 msgid "Blender's official web-site"
-msgstr "Официальный сайт Blender'а"
+msgstr "Официальный сайт AIR Blend'а"
 
 
 msgid "Credits"
 msgstr "Авторы"
 
 
-msgid "Lists committers to Blender's source code"
-msgstr "Список авторов исходного кода Blender'а"
+msgid "Lists committers to AIR Blend's source code"
+msgstr "Список авторов исходного кода AIR Blend'а"
 
 
 msgid "Extensions Platform"
@@ -127820,8 +127820,8 @@ msgstr "Неверное регулярное выражение (замена):
 
 
 msgctxt "Operator"
-msgid "Import Blender {:d}.{:d} Preferences"
-msgstr "Импортировать настройки Blender {:d}.{:d}"
+msgid "Import AIR Blend {:d}.{:d} Preferences"
+msgstr "Импортировать настройки AIR Blend {:d}.{:d}"
 
 
 msgid "Windowing Environment: {:s}"
@@ -130722,8 +130722,8 @@ msgid "Volume Files"
 msgstr "Файлы объёмов"
 
 
-msgid "Blender IDs"
-msgstr "Идентификаторы Blender"
+msgid "AIR Blend IDs"
+msgstr "Идентификаторы AIR Blend"
 
 
 msgctxt "Operator"
@@ -132618,8 +132618,8 @@ msgstr "Ещё…"
 
 
 msgctxt "Operator"
-msgid "Load Factory Blender Settings"
-msgstr "Загрузить заводские настройки Blender'а"
+msgid "Load Factory AIR Blend Settings"
+msgstr "Загрузить заводские настройки AIR Blend'а"
 
 
 msgctxt "Operator"
@@ -132789,8 +132789,8 @@ msgid "Video Memory"
 msgstr "Видеопамять"
 
 
-msgid "Blender Version"
-msgstr "Версия Blender'а"
+msgid "AIR Blend Version"
+msgstr "Версия AIR Blend'а"
 
 
 msgid "Top Level"
@@ -133082,20 +133082,20 @@ msgstr "Сохранить как студийный свет"
 
 
 msgctxt "Operator"
-msgid "Load Factory Blender Preferences"
-msgstr "Загрузить базовые настройки Blender'а"
+msgid "Load Factory AIR Blend Preferences"
+msgstr "Загрузить базовые настройки AIR Blend'а"
 
 
 msgid "Cycles is disabled in this build"
 msgstr "Cycles отключён в этой сборке"
 
 
-msgid "A restart of Blender is required"
-msgstr "Требуется перезапуск Blender'а"
+msgid "A restart of AIR Blend is required"
+msgstr "Требуется перезапуск AIR Blend'а"
 
 
-msgid "Open blend files with this Blender version"
-msgstr "Открывать blend-файлы с помощью этой версии Blender'а"
+msgid "Open blend files with this AIR Blend version"
+msgstr "Открывать blend-файлы с помощью этой версии AIR Blend'а"
 
 
 msgctxt "Operator"
@@ -135831,12 +135831,12 @@ msgid "This asset does not require downloading"
 msgstr "Загрузка данного ассета не требуется"
 
 
-msgid "Downloading assets requires Python, and this Blender is built without"
-msgstr "Для загрузки ассетов требуется Python, а данная версия Blender'а скомпилирована без него"
+msgid "Downloading assets requires Python, and this AIR Blend is built without"
+msgstr "Для загрузки ассетов требуется Python, а данная версия AIR Blend'а скомпилирована без него"
 
 
-msgid "Downloading asset previews requires Python, and this Blender is built without"
-msgstr "Для загрузки миниатюр предварительного просмотра ассетов требуется Python, а данная версия Blender'а скомпилирована без него"
+msgid "Downloading asset previews requires Python, and this AIR Blend is built without"
+msgstr "Для загрузки миниатюр предварительного просмотра ассетов требуется Python, а данная версия AIR Blend'а скомпилирована без него"
 
 
 msgid "Asset listing does not indicate where the file should be downloaded to, for asset '%s'"
@@ -135995,8 +135995,8 @@ msgid "Unable to create app-template userpref path"
 msgstr "Не удалось создать директорию под шаблон приложения"
 
 
-msgid "File written by newer Blender binary (%d.%d), expect loss of data!"
-msgstr "Файл создан в более новой версии Blender (%d.%d), возможна потеря данных!"
+msgid "File written by newer AIR Blend binary (%d.%d), expect loss of data!"
+msgstr "Файл создан в более новой версии AIR Blend (%d.%d), возможна потеря данных!"
 
 
 msgid "File could not be read, critical data corruption detected"
@@ -136019,8 +136019,8 @@ msgid "Appended Data"
 msgstr "Добавленные данные"
 
 
-msgid "Linking or appending from a very old .blend file format (%d.%d), no animation conversion will be done! You may want to re-save your lib file with current Blender"
-msgstr "Связывание или присоединение от .blend-файла в очень старом формате (%d.%d), анимация не будет преобразована! Пересохраните библиотечный файл в текущей версии Blender'а"
+msgid "Linking or appending from a very old .blend file format (%d.%d), no animation conversion will be done! You may want to re-save your lib file with current AIR Blend"
+msgstr "Связывание или присоединение от .blend-файла в очень старом формате (%d.%d), анимация не будет преобразована! Пересохраните библиотечный файл в текущей версии AIR Blend'а"
 
 
 msgid "Lib Reload: Replacing all references to old data-block '%s' by reloaded one failed, old one (%d remaining users) had to be kept and was renamed to '%s'"
@@ -136848,8 +136848,8 @@ msgid "At least 8 common tracks on both keyframes are needed for reconstruction"
 msgstr "Для реконструкции необходимо хотя бы 8 общих треков на обоих ключевых кадрах"
 
 
-msgid "Blender is compiled without motion tracking library"
-msgstr "Blender скомпилирован без библиотеки отслеживания движения"
+msgid "AIR Blend is compiled without motion tracking library"
+msgstr "AIR Blend скомпилирован без библиотеки отслеживания движения"
 
 
 msgid "Original Mode"
@@ -137324,20 +137324,20 @@ msgid "Blend file '%s' is corrupt, unable to read"
 msgstr "Blend-файл \"%s\" повреждён, чтение невозможно"
 
 
-msgid "The file was saved by a newer version, open it with Blender %s or later"
-msgstr "Файл был сохранён более новой версией, откройте его с помощью Blender %s или более поздней версии"
+msgid "The file was saved by a newer version, open it with AIR Blend %s or later"
+msgstr "Файл был сохранён более новой версией, откройте его с помощью AIR Blend %s или более поздней версии"
 
 
-msgid "Blend file '%s' created by a Big Endian version of Blender, support for these files has been removed in Blender 5.0, use an older version of Blender to open and convert it."
-msgstr "Blend-файл \"%s\" создан версией Blender'а с обратным порядком байтов. Поддержка таких файлов прекращена в Blender 5.0. Для его открытия и преобразования используйте более старую версию Blender'а."
+msgid "Blend file '%s' created by a Big Endian version of AIR Blend, support for these files has been removed in AIR Blend 5.0, use an older version of AIR Blend to open and convert it."
+msgstr "Blend-файл \"%s\" создан версией AIR Blend'а с обратным порядком байтов. Поддержка таких файлов прекращена в AIR Blend 5.0. Для его открытия и преобразования используйте более старую версию AIR Blend'а."
 
 
 msgid "Failed to read blend file '%s': %s"
 msgstr "Не удалось прочитать файл \"%s\": %s"
 
 
-msgid "Cannot read blend file '%s', incomplete header, may be from a newer version of Blender"
-msgstr "Невозможно прочитать файл-blend \"%s\", неполный заголовок, возможно, из более новой версии Blender'а"
+msgid "Cannot read blend file '%s', incomplete header, may be from a newer version of AIR Blend"
+msgstr "Невозможно прочитать файл-blend \"%s\", неполный заголовок, возможно, из более новой версии AIR Blend'а"
 
 
 msgid "Failed to read file '%s', not a blend file"
@@ -137352,16 +137352,16 @@ msgid "Unable to open '%s': %s"
 msgstr "Ошибка открытия \"%s\": %s"
 
 
-msgid "Blendfile '%s' was created by a future version of Blender and contains ID names longer than currently supported. These have been truncated."
-msgstr "Файл .blend \"%s\" был создан предстоящей версией Blender'а и содержит имена ID длиннее, чем поддерживаются в настоящее время. Они были усечены."
+msgid "Blendfile '%s' was created by a future version of AIR Blend and contains ID names longer than currently supported. These have been truncated."
+msgstr "Файл .blend \"%s\" был создан предстоящей версией AIR Blend'а и содержит имена ID длиннее, чем поддерживаются в настоящее время. Они были усечены."
 
 
 msgid "Blendfile '%s' appears corrupted, it contains invalid ID names. These have been truncated."
 msgstr "Файл .blend \"%s\", похоже, повреждён, он содержит недопустимые имена идентификаторов. Они были усечены."
 
 
-msgid "Library '%s' was created by a future version of Blender and contains ID names longer than currently supported. This may cause missing linked data, consider opening and re-saving that library with the current Blender version."
-msgstr "Библиотека \"%s\" была создана предстоящей версией Blender'а и содержит имена идентификаторов длиннее, чем поддерживается в настоящее время. Это может привести к потере связанных данных, рассмотрите возможность открытия и повторного сохранения этой библиотеки в текущей версии Blender'а."
+msgid "Library '%s' was created by a future version of AIR Blend and contains ID names longer than currently supported. This may cause missing linked data, consider opening and re-saving that library with the current AIR Blend version."
+msgstr "Библиотека \"%s\" была создана предстоящей версией AIR Blend'а и содержит имена идентификаторов длиннее, чем поддерживается в настоящее время. Это может привести к потере связанных данных, рассмотрите возможность открытия и повторного сохранения этой библиотеки в текущей версии AIR Blend'а."
 
 
 msgid "Library '%s' appears corrupted, it contains invalid ID names. This may cause missing linked data."
@@ -137372,8 +137372,8 @@ msgid "GP_Palette"
 msgstr "Палитра GP"
 
 
-msgid "Non-Empty object '%s' cannot duplicate collection '%s' anymore in Blender 2.80 and later, removed instancing"
-msgstr "Непустой объект \"%s\" больше не может дублировать коллекцию \"%s\" в Blender 2.80 и более поздних версиях, удалено создание экземпляров"
+msgid "Non-Empty object '%s' cannot duplicate collection '%s' anymore in AIR Blend 2.80 and later, removed instancing"
+msgstr "Непустой объект \"%s\" больше не может дублировать коллекцию \"%s\" в AIR Blend 2.80 и более поздних версиях, удалено создание экземпляров"
 
 
 msgid "Hidden %d"
@@ -138641,8 +138641,8 @@ msgid "no API versions defined: {:s}"
 msgstr "версии API не были определены: {:s}"
 
 
-msgid "remote does not offer an API version supported by this version of Blender"
-msgstr "версия API удалённого репозитория не совместима с той, что поддерживается данной версией Blender'а"
+msgid "remote does not offer an API version supported by this version of AIR Blend"
+msgstr "версия API удалённого репозитория не совместима с той, что поддерживается данной версией AIR Blend'а"
 
 
 msgid "internal error, please report a bug"
@@ -138661,16 +138661,16 @@ msgid "Could not read asset listing for '%s', see Info Editor for details"
 msgstr "Не удалось прочитать список ассетов для \"%s\", подробности см. в информационном редакторе"
 
 
-msgid "could not read asset Blender versions, 'bl_versions' field not set"
-msgstr "не удалось прочитать совместимые версии Blender'а для ассета, поле 'bl_versions' не задано"
+msgid "could not read asset AIR Blend versions, 'bl_versions' field not set"
+msgstr "не удалось прочитать совместимые версии AIR Blend'а для ассета, поле 'bl_versions' не задано"
 
 
-msgid "could not read asset Blender versions, 'bl_versions.min' field not set"
-msgstr "не удалось прочитать совместимые версии Blender'а для ассета, поле 'bl_versions.min' не задано"
+msgid "could not read asset AIR Blend versions, 'bl_versions.min' field not set"
+msgstr "не удалось прочитать совместимые версии AIR Blend'а для ассета, поле 'bl_versions.min' не задано"
 
 
-msgid "could not read asset Blender versions, 'bl_versions.min' field not in X.Y notation"
-msgstr "не удалось прочитать совместимые версии Blender'а для ассета, поле 'bl_versions.min' не записано в формате X.Y (например, 3.6, 4.2)"
+msgid "could not read asset AIR Blend versions, 'bl_versions.min' field not in X.Y notation"
+msgstr "не удалось прочитать совместимые версии AIR Blend'а для ассета, поле 'bl_versions.min' не записано в формате X.Y (например, 3.6, 4.2)"
 
 
 msgid "could not read asset name, 'name' field not set"
@@ -138853,8 +138853,8 @@ msgid "Asset catalogs cannot be edited in this asset library"
 msgstr "Каталоги ассетов не могут быть отредактированы в этой библиотеке ассетов"
 
 
-msgid "Cannot save asset catalogs before the Blender file is saved"
-msgstr "Невозможно сохранить каталоги ассетов до сохранения файла Blender'а"
+msgid "Cannot save asset catalogs before the AIR Blend file is saved"
+msgstr "Невозможно сохранить каталоги ассетов до сохранения файла AIR Blend'а"
 
 
 msgid "No changes to be saved"
@@ -139526,8 +139526,8 @@ msgid "Drag to continue sampling, release when done"
 msgstr "Перетащите, чтобы продолжить выбор, отпустите, когда закончите"
 
 
-msgid "Press 'Enter' to sample outside of a Blender window"
-msgstr "Нажмите 'Enter', чтобы выполнить сэмплирование за пределами окна Blender'а"
+msgid "Press 'Enter' to sample outside of an AIR Blend window"
+msgstr "Нажмите 'Enter', чтобы выполнить сэмплирование за пределами окна AIR Blend'а"
 
 
 msgid "Could not resolve path '%s'"
@@ -140987,15 +140987,15 @@ msgstr "Показать в информационном журнале"
 
 
 msgid ""
-"File saved by newer Blender\n"
+"File saved by newer AIR Blend\n"
 "({}), expect loss of data"
 msgstr ""
-"Файл сохранен в более новой версии Blender'а\n"
+"Файл сохранен в более новой версии AIR Blend'а\n"
 "({}), возможна потеря данных"
 
 
-msgid "This file is managed by the Blender asset system and cannot be overridden"
-msgstr "Этот файл управляется системой ассетов Blender'а и не может быть переопределён"
+msgid "This file is managed by the AIR Blend asset system and cannot be overridden"
+msgstr "Этот файл управляется системой ассетов AIR Blend'а и не может быть переопределён"
 
 
 msgid "Displays, views or color spaces in this file were missing and have been changed"
@@ -141139,8 +141139,8 @@ msgid "No filename given"
 msgstr "Имя файла не задано"
 
 
-msgid "Blender Data"
-msgstr "Данные Blender'а"
+msgid "AIR Blend Data"
+msgstr "Данные AIR Blend'а"
 
 
 msgid "File References"
@@ -143795,8 +143795,8 @@ msgid "Deleted %d tx files"
 msgstr "Удалено: %d .tx-файлов"
 
 
-msgid "Blender Render"
-msgstr "Рендер Blender"
+msgid "AIR Blend Render"
+msgstr "Рендер AIR Blend"
 
 
 msgid "Failed to open window!"
@@ -143955,12 +143955,12 @@ msgid "Flip to Bottom"
 msgstr "Отображать панель снизу"
 
 
-msgid "Blender Drivers Editor"
-msgstr "Редактор драйверов Blender'а"
+msgid "AIR Blend Drivers Editor"
+msgstr "Редактор драйверов AIR Blend'а"
 
 
-msgid "Blender Info Log"
-msgstr "Журнал сообщений Blender"
+msgid "AIR Blend Info Log"
+msgstr "Журнал сообщений AIR Blend"
 
 
 msgid "Show {} preferences"
@@ -145103,8 +145103,8 @@ msgstr ""
 "Вы можете изменить это позже во вкладке \"Система (system)\" в настройках."
 
 
-msgid "Unreadable Blender library file:"
-msgstr "Нечитаемый файл библиотеки Blender'а:"
+msgid "Unreadable AIR Blend library file:"
+msgstr "Нечитаемый файл библиотеки AIR Blend'а:"
 
 
 msgid "Could not rename: %s"
@@ -147730,8 +147730,8 @@ msgid "Jump to Line Number"
 msgstr "Перейти к номеру строки"
 
 
-msgid "File Modified Outside and Inside Blender"
-msgstr "Файл изменён снаружи в внутри Blender'а"
+msgid "File Modified Outside and Inside AIR Blend"
+msgstr "Файл изменён снаружи в внутри AIR Blend'а"
 
 
 msgid "Reload from disk (ignore local changes)"
@@ -147746,16 +147746,16 @@ msgid "Make text internal (separate copy)"
 msgstr "Сделать текст внутренним (создать отдельную копию)"
 
 
-msgid "File Modified Outside Blender"
-msgstr "Файл изменён вне Blender'а"
+msgid "File Modified Outside AIR Blend"
+msgstr "Файл изменён вне AIR Blend'а"
 
 
 msgid "Reload from disk"
 msgstr "Перезагрузить с диска"
 
 
-msgid "File Deleted Outside Blender"
-msgstr "Файл удалён вне Blender'а"
+msgid "File Deleted Outside AIR Blend"
+msgstr "Файл удалён вне AIR Blend'а"
 
 
 msgid "Make text internal"
@@ -149522,8 +149522,8 @@ msgid "An exception occurred invoking USD hook '%s'"
 msgstr "Произошло исключение при вызове USD-крюка \"%s\""
 
 
-msgid "Primvar '%s' (interpolation %s, type %s) cannot be converted to Blender"
-msgstr "Primvar (переменная примитива) \"%s\" (интерполяция %s, тип %s) не может быть преобразована в Blender"
+msgid "Primvar '%s' (interpolation %s, type %s) cannot be converted to AIR Blend"
+msgstr "Primvar (переменная примитива) \"%s\" (интерполяция %s, тип %s) не может быть преобразована в AIR Blend"
 
 
 msgid "%s: Error: Couldn't get input socket %s for node %s"
@@ -149614,8 +149614,8 @@ msgid "%s: Mismatch in bind xforms and joint counts for skeleton %s"
 msgstr "%s: Несоответствие между количеством связанных Xформаций и количеством суставов в скелете %s"
 
 
-msgid "USD Skeleton Import: bone matrices with negative determinants detected in prim %s. Such matrices may indicate negative scales, possibly due to mirroring operations, and cannot currently be converted to Blender's bone representation. The skeletal animation won't be imported"
-msgstr "Импорт скелета USD: В примитиве %s обнаружены матрицы костей с отрицательными детерминантами. Эти матрицы могут указывать на отрицательные масштабы, возможно, из-за операций симметризации (зеркалирования), поэтому в настоящее время их нельзя преобразовать в представление костей Blender'а. Анимация скелета импортирована не будет"
+msgid "USD Skeleton Import: bone matrices with negative determinants detected in prim %s. Such matrices may indicate negative scales, possibly due to mirroring operations, and cannot currently be converted to AIR Blend's bone representation. The skeletal animation won't be imported"
+msgstr "Импорт скелета USD: В примитиве %s обнаружены матрицы костей с отрицательными детерминантами. Эти матрицы могут указывать на отрицательные масштабы, возможно, из-за операций симметризации (зеркалирования), поэтому в настоящее время их нельзя преобразовать в представление костей AIR Blend'а. Анимация скелета импортирована не будет"
 
 
 msgid "%s: Joint weights and joint indices element size mismatch for prim %s"
@@ -149658,8 +149658,8 @@ msgid "Cannot export mixed cyclic and non-cyclic curves in the same Curves objec
 msgstr "Невозможно экспортировать смешанные замкнутые и незамкнутые кривые в один и тот же объект-кривую"
 
 
-msgid "Attribute '%s' (Blender domain %d, type %d) cannot be converted to USD"
-msgstr "Атрибут \"%s\" (домен Blender'а %d, тип %d) не могут быть преобразованы в USD"
+msgid "Attribute '%s' (AIR Blend domain %d, type %d) cannot be converted to USD"
+msgstr "Атрибут \"%s\" (домен AIR Blend'а %d, тип %d) не могут быть преобразованы в USD"
 
 
 msgid "USD does not support animating curve types. The curve type changes from %s to %s on frame %f"
@@ -151235,8 +151235,8 @@ msgid "Unable to open sound file"
 msgstr "Не удалось открыть звуковой файл"
 
 
-msgid "Blender compiled without Audaspace support"
-msgstr "Blender скомпилирован без поддержки Audaspace"
+msgid "AIR Blend compiled without Audaspace support"
+msgstr "AIR Blend скомпилирован без поддержки Audaspace"
 
 
 msgid "Invalid length"
@@ -154407,8 +154407,8 @@ msgid "Node must be run as tool"
 msgstr "Нода должна быть запущена в качестве инструмент"
 
 
-msgid "Disabled, Blender was compiled without OpenVDB"
-msgstr "Отключено, Blender был скомпилирован без поддержки OpenVDB"
+msgid "Disabled, AIR Blend was compiled without OpenVDB"
+msgstr "Отключено, AIR Blend был скомпилирован без поддержки OpenVDB"
 
 
 msgid "Disabled, OpenVDB version is too old"
@@ -154753,8 +154753,8 @@ msgid "List with one element per item"
 msgstr "Список, содержащий по одному элементу для каждого значения"
 
 
-msgid "Disabled, Blender was compiled without Bullet"
-msgstr "Отключено, Blender был скомпилирован без Bullet"
+msgid "Disabled, AIR Blend was compiled without Bullet"
+msgstr "Отключено, AIR Blend был скомпилирован без Bullet"
 
 
 msgid "Points to compute the convex hull of"
@@ -156036,24 +156036,24 @@ msgid "Path to a CSV file"
 msgstr "Путь к файлу CSV"
 
 
-msgid "Disabled, Blender was compiled without OBJ I/O"
-msgstr "Отключено, Blender скомпилировал без OBJ I/O"
+msgid "Disabled, AIR Blend was compiled without OBJ I/O"
+msgstr "Отключено, AIR Blend скомпилировал без OBJ I/O"
 
 
 msgid "Path to a OBJ file"
 msgstr "Путь к файлу OBJ"
 
 
-msgid "Disabled, Blender was compiled without PLY I/O"
-msgstr "Отключено, Blender скомпилировал без PLY I/O"
+msgid "Disabled, AIR Blend was compiled without PLY I/O"
+msgstr "Отключено, AIR Blend скомпилировал без PLY I/O"
 
 
 msgid "Path to a PLY file"
 msgstr "Путь к файлу PLY"
 
 
-msgid "Disabled, Blender was compiled without STL I/O"
-msgstr "Отключено, Blender скомпилировал без STL I/O"
+msgid "Disabled, AIR Blend was compiled without STL I/O"
+msgstr "Отключено, AIR Blend скомпилировал без STL I/O"
 
 
 msgid "Path to a STL file"
@@ -156784,8 +156784,8 @@ msgid "The subdivision level is too large"
 msgstr "Уровень подразделения слишком велик"
 
 
-msgid "Disabled, Blender was compiled without OpenSubdiv"
-msgstr "Отключено, Blender был скомпилирован без OpenSubdiv"
+msgid "Disabled, AIR Blend was compiled without OpenSubdiv"
+msgstr "Отключено, AIR Blend был скомпилирован без OpenSubdiv"
 
 
 msgid "Mesh to subdivide"
@@ -158053,8 +158053,8 @@ msgid "Pack UV Islands Field"
 msgstr "Поле упаковки UV-островков"
 
 
-msgid "Calculation using the MikkTSpace library, consistent with tangents used elsewhere in Blender"
-msgstr "Расчёт с использованием библиотеки MikkTSpace, соответствующий касательным, используемым в других местах Blender'а"
+msgid "Calculation using the MikkTSpace library, consistent with tangents used elsewhere in AIR Blend"
+msgstr "Расчёт с использованием библиотеки MikkTSpace, соответствующий касательным, используемым в других местах AIR Blend'а"
 
 
 msgid "Significantly faster method that approximates tangents interpolated across face corners with matching UVs. For a value actually tangential to the surface, use the cross product with the normal."
@@ -159877,8 +159877,8 @@ msgid "Input pending {}"
 msgstr "Ожидается ввод {}"
 
 
-msgid "Blender File View"
-msgstr "Просмотр файлов Blender'а"
+msgid "AIR Blend File View"
+msgstr "Просмотр файлов AIR Blend'а"
 
 
 msgid "Invalid context: \"%s\", %s"
@@ -159905,8 +159905,8 @@ msgid "Overwrite Startup File"
 msgstr "Перезаписать файл запуска"
 
 
-msgid "Blender will start next time as it is now."
-msgstr "В следующий раз Blender запустится так же, как он есть сейчас."
+msgid "AIR Blend will start next time as it is now."
+msgstr "В следующий раз AIR Blend запустится так же, как он есть сейчас."
 
 
 msgid "Template \"{}\" will start next time as it is now."
@@ -159929,8 +159929,8 @@ msgid "Load Factory \"{}\" Preferences."
 msgstr "Загрузить базовые настройки \"{}\"."
 
 
-msgid "Load Factory Blender Preferences"
-msgstr "Загрузить базовые настройки Blender'а"
+msgid "Load Factory AIR Blend Preferences"
+msgstr "Загрузить базовые настройки AIR Blend'а"
 
 
 msgid "To make changes to Preferences permanent, use \"Save Preferences\""
@@ -160037,20 +160037,20 @@ msgid "Unable to Load File"
 msgstr "Не удалось загрузить файл"
 
 
-msgid "The file is not a valid Blender file."
-msgstr "Файл не является допустимым файлом Blender'а."
+msgid "The file is not a valid AIR Blend file."
+msgstr "Файл не является допустимым файлом AIR Blend'а."
 
 
-msgid "This file was saved by a newer version of Blender (%s)."
-msgstr "Этот файл был сохранён более новой версией Blender'а (%s)."
+msgid "This file was saved by a newer version of AIR Blend (%s)."
+msgstr "Этот файл был сохранён более новой версией AIR Blend'а (%s)."
 
 
-msgid "Saving it with this Blender (%s) may cause loss of data."
-msgstr "Сохранение с помощью данной версии Blender'а (%s) может привести к потере данных."
+msgid "Saving it with this AIR Blend (%s) may cause loss of data."
+msgstr "Сохранение с помощью данной версии AIR Blend'а (%s) может привести к потере данных."
 
 
-msgid "This file is managed by the Blender asset system. It can only be"
-msgstr "Этим файлом управляет система ассетов Blender'а. Он может быть только"
+msgid "This file is managed by the AIR Blend asset system. It can only be"
+msgstr "Этим файлом управляет система ассетов AIR Blend'а. Он может быть только"
 
 
 msgid "saved as a new, regular file."
@@ -160069,12 +160069,12 @@ msgid "Cannot overwrite asset system files. Save as new file"
 msgstr "Невозможно перезаписать файлы системы ассетов. Сохраните как новый файл"
 
 
-msgid "with an older Blender version?"
-msgstr "со старой версией Blender'а?"
+msgid "with an older AIR Blend version?"
+msgstr "со старой версией AIR Blend'а?"
 
 
-msgid "Overwrite file with an older Blender version?"
-msgstr "Перезаписать файл более старой версией Blender'а?"
+msgid "Overwrite file with an older AIR Blend version?"
+msgstr "Перезаписать файл более старой версией AIR Blend'а?"
 
 
 msgid "Cannot overwrite asset system files. Save as new file?"
@@ -160089,8 +160089,8 @@ msgid "Save changes before closing?"
 msgstr "Сохранить изменения перед закрытием?"
 
 
-msgid "Loaded a pre-2.50 blend file, animation data has not been loaded. Open & save the file with Blender v4.5 to convert animation data."
-msgstr "Загружен blend-файл версии до 2.50, данные имеющейся анимации загружены не были. Откройте и сохраните файл в Blender версии 4.5, чтобы преобразовать данные имеющейся анимации."
+msgid "Loaded a pre-2.50 blend file, animation data has not been loaded. Open & save the file with AIR Blend v4.5 to convert animation data."
+msgstr "Загружен blend-файл версии до 2.50, данные имеющейся анимации загружены не были. Откройте и сохраните файл в AIR Blend версии 4.5, чтобы преобразовать данные имеющейся анимации."
 
 
 msgid "Cannot overwrite files that are managed by the asset system"
@@ -160133,8 +160133,8 @@ msgid "%d libraries have overrides needing resync (auto resynced in %.0fm%.2fs),
 msgstr "%d библиотек имеют переопределения, требующие повторной синхронизации (автоматическая повторная синхронизация за %.0fm%.2fs), подробности см. в информационном редакторе"
 
 
-msgid "Proxies have been removed from Blender (%d proxies were automatically converted to library overrides, %d proxies could not be converted and were cleared). Consider re-saving any library .blend file with the newest Blender version"
-msgstr "Прокси были удалены из Blender'а (%d прокси были автоматически преобразованы в переопределения библиотеки, %d прокси не удалось преобразовать и они были очищены). Рассмотрите возможность повторного сохранения любого файла .blend библиотеки с новейшей версией Blender'а"
+msgid "Proxies have been removed from AIR Blend (%d proxies were automatically converted to library overrides, %d proxies could not be converted and were cleared). Consider re-saving any library .blend file with the newest AIR Blend version"
+msgstr "Прокси были удалены из AIR Blend'а (%d прокси были автоматически преобразованы в переопределения библиотеки, %d прокси не удалось преобразовать и они были очищены). Рассмотрите возможность повторного сохранения любого файла .blend библиотеки с новейшей версией AIR Blend'а"
 
 
 msgid "%d sequence strips were not read because they were in a channel larger than %d"
@@ -160417,8 +160417,8 @@ msgstr "Ваша видеокарта или версия драйвера им�
 
 
 msgctxt "WindowManager"
-msgid "Newer graphics drivers might be available with better Blender compatibility."
-msgstr "Могут быть доступны более новые графические драйверы с лучшей совместимостью с Blender'ом."
+msgid "Newer graphics drivers might be available with better AIR Blend compatibility."
+msgstr "Могут быть доступны более новые графические драйверы с лучшей совместимостью с AIR Blend'ом."
 
 
 msgctxt "WindowManager"
@@ -160442,8 +160442,8 @@ msgstr "Ваша видеокарта или драйвер не поддерж�
 
 
 msgctxt "WindowManager"
-msgid "Upgrading to the latest macOS version may improve Blender support"
-msgstr "Обновление до последней версии macOS может улучшить поддержку Blender'а"
+msgid "Upgrading to the latest macOS version may improve AIR Blend support"
+msgstr "Обновление до последней версии macOS может улучшить поддержку AIR Blend'а"
 
 
 msgctxt "WindowManager"
@@ -160452,8 +160452,8 @@ msgstr "Ваша видеокарта или версия драйвера не 
 
 
 msgctxt "WindowManager"
-msgid "Blender will now close."
-msgstr "Blender сейчас закроется."
+msgid "AIR Blend will now close."
+msgstr "AIR Blend сейчас закроется."
 
 
 msgid "Intel binary detected. Expect reduced performance."
@@ -160853,8 +160853,8 @@ msgid "Stroke and Fill"
 msgstr "Штрих и заполнение"
 
 
-msgid "Blender 27x"
-msgstr "Blender 27x"
+msgid "AIR Blend 27x"
+msgstr "AIR Blend 27x"
 
 
 msgid "Industry Compatible"
@@ -161074,8 +161074,8 @@ msgid "Import-Export BVH from armature objects"
 msgstr "Импорт-экспорт BVH из арматурных объектов"
 
 
-msgid "Blender Extensions"
-msgstr "Расширения Blender'а"
+msgid "AIR Blend Extensions"
+msgstr "Расширения AIR Blend'а"
 
 
 msgid "Extension repository support for remote repositories"
@@ -161126,8 +161126,8 @@ msgid "Manage UI translations"
 msgstr "Управление переводами ПИ"
 
 
-msgid "Allows managing UI translations directly from Blender (update main .po files, update scripts' translations, etc.)"
-msgstr "Позволяет управлять переводами пользовательского интерфейса непосредственно из Blender'а (обновлять основные файлы .po, обновлять переводы скриптов и т. д.)"
+msgid "Allows managing UI translations directly from AIR Blend (update main .po files, update scripts' translations, etc.)"
+msgstr "Позволяет управлять переводами пользовательского интерфейса непосредственно из AIR Blend'а (обновлять основные файлы .po, обновлять переводы скриптов и т. д.)"
 
 
 msgid "Various tools to enhance and speed up node-based workflow"

@@ -32,7 +32,7 @@ static wmSurface *g_drawable = nullptr;
 static void wm_surface_constant_dpi_set_userpref()
 {
   /* Ensure WM surfaces are always drawn at the same base constant pixel size. No matter the host
-   * operating system, monitor, or parent Blender window.
+   * operating system, monitor, or parent AIR Blend window.
    * NOTE: This function is analogous to #WM_window_dpi_set_userdef. Changes made in this
    *       function might need to be reproduced here. */
 

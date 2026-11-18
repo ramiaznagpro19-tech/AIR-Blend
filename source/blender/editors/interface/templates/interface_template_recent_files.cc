@@ -57,19 +57,19 @@ static void template_recent_files_tooltip_func(bContext & /*C*/,
     return;
   }
 
-  /* Blender version. */
+  /* AIR Blend version. */
   char version_str[128] = {0};
   /* Load the thumbnail from cache if existing, but don't create if not. */
   ImBuf *thumb = IMB_thumb_read(path, THB_LARGE);
   if (thumb) {
     /* Look for version in existing thumbnail if available. */
     IMB_metadata_get_field(
-        thumb->metadata(), "Thumb::Blender::Version", version_str, sizeof(version_str));
+        thumb->metadata(), "Thumb::AIR Blend::Version", version_str, sizeof(version_str));
   }
 
   eFileAttributes attributes = BLI_file_attributes(path);
   if (!version_str[0] && !(attributes & FILE_ATTR_OFFLINE)) {
-    /* Load Blender version directly from the file. */
+    /* Load AIR Blend version directly from the file. */
     short version = BLO_version_from_file(path);
     if (version != 0) {
       SNPRINTF_UTF8(version_str, "%d.%01d", version / 100, version % 100);
@@ -78,7 +78,7 @@ static void template_recent_files_tooltip_func(bContext & /*C*/,
 
   if (version_str[0]) {
     tooltip_text_field_add(
-        tip, fmt::format("Blender {}", version_str), {}, TIP_STYLE_NORMAL, TIP_LC_NORMAL);
+        tip, fmt::format("AIR Blend {}", version_str), {}, TIP_STYLE_NORMAL, TIP_LC_NORMAL);
     tooltip_text_field_add(tip, {}, {}, TIP_STYLE_SPACER, TIP_LC_NORMAL);
   }
 

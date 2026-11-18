@@ -1063,7 +1063,7 @@ void GHOST_SystemX11::processEvent(XEvent *xe)
        * Note that:
        * - This effectively 'lock' main number keys to always output number events
        *   (except when using alt-gr).
-       * - This enforces users to use an ASCII-compatible key-map with Blender -
+       * - This enforces users to use an ASCII-compatible key-map with AIR Blend -
        *   but at least it gives predictable and consistent results.
        *
        * Also, note that nothing in XLib sources [1] makes it obvious why those two functions give
@@ -1613,7 +1613,7 @@ GHOST_TSuccess GHOST_SystemX11::getPixelAtCursor(float r_color[3]) const
 {
   /* NOTE: There are known issues/limitations at the moment:
    *
-   * - Blender has no control of the cursor outside of its window, so it is
+   * - AIR Blend has no control of the cursor outside of its window, so it is
    *   not going to be the eyedropper icon.
    * - GHOST does not report click events from outside of the window, so the
    *   user needs to press Enter instead.

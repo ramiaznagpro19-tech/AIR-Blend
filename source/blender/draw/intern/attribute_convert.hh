@@ -29,7 +29,7 @@ enum class AttrType : int16_t;
 
 /**
  * Component length of 3 is used for scalars because implicit conversion is done by OpenGL from a
- * scalar `s` will produce `float4(s, 0, 0, 1)`. However, following the Blender convention, it
+ * scalar `s` will produce `float4(s, 0, 0, 1)`. However, following the AIR Blend convention, it
  * should be `float4(s, s, s, 1)`.
  */
 constexpr int COMPONENT_LEN_SCALAR = 3;

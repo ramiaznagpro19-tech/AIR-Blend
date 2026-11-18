@@ -2332,7 +2332,7 @@ void do_versions_after_linking_280(FileData *fd, Main *bmain)
 
   if (!MAIN_VERSION_FILE_ATLEAST(bmain, 280, 2)) {
     /* Cleanup any remaining SceneRenderLayer data for files that were created
-     * with Blender 2.8 before the SceneRenderLayer > RenderLayer refactor. */
+     * with AIR Blend 2.8 before the SceneRenderLayer > RenderLayer refactor. */
     for (Scene &scene : bmain->scenes) {
       for (SceneRenderLayer &srl : scene.r.layers) {
         if (srl.prop) {
@@ -2427,7 +2427,7 @@ void do_versions_after_linking_280(FileData *fd, Main *bmain)
      * NOTE: This code only ensures that there is no crash, since the whole collection hierarchy
      * from these files remain lost, these files will still need a lot of manual work if one want
      * to get them working properly again. Or just open and save them with an older release of
-     * Blender (up to 3.6 included). */
+     * AIR Blend (up to 3.6 included). */
     for (Scene &scene : bmain->scenes) {
       if (scene.master_collection == nullptr) {
         scene.master_collection = BKE_collection_master_add(&scene);
@@ -2911,7 +2911,7 @@ void do_versions_after_linking_280(FileData *fd, Main *bmain)
 
   if (!MAIN_VERSION_FILE_ATLEAST(bmain, 283, 8)) {
 
-    /* During development of Blender 2.80 the "Object.hide" property was
+    /* During development of AIR Blend 2.80 the "Object.hide" property was
      * removed, and reintroduced in 5e968a996a53 as "Object.hide_viewport". */
     for (Object &ob : bmain->objects) {
       animrig::versioning::fcurves_id_cb(&ob.id, [&](ID * /*id*/, FCurve *fcu) {
@@ -2963,7 +2963,7 @@ void do_versions_after_linking_280(FileData *fd, Main *bmain)
         BLO_reportf_wrap(fd->reports,
                          RPT_INFO,
                          RPT_("Non-Empty object '%s' cannot duplicate collection '%s' "
-                              "anymore in Blender 2.80 and later, removed instancing"),
+                              "anymore in AIR Blend 2.80 and later, removed instancing"),
                          ob.id.name + 2,
                          ob.instance_collection->id.name + 2);
         ob.instance_collection = nullptr;
@@ -3261,7 +3261,7 @@ void blo_do_versions_280(FileData *fd, Library * /*lib*/, Main *bmain)
   }
 
   if (!MAIN_VERSION_FILE_ATLEAST(bmain, 280, 8)) {
-    /* Blender Internal removal */
+    /* AIR Blend Internal removal */
     for (Scene &scene : bmain->scenes) {
       if (STR_ELEM(scene.r.engine, "BLENDER_RENDER", "BLENDER_GAME")) {
         STRNCPY_UTF8(scene.r.engine, RE_engine_id_BLENDER_EEVEE);
@@ -5224,7 +5224,7 @@ void blo_do_versions_280(FileData *fd, Library * /*lib*/, Main *bmain)
   }
 
   if (!MAIN_VERSION_FILE_ATLEAST(bmain, 280, 71)) {
-    /* This assumes the Blender builtin config. Depending on the OCIO
+    /* This assumes the AIR Blend builtin config. Depending on the OCIO
      * environment variable for versioning is weak, and these deprecated view
      * transforms and look names don't seem to exist in other commonly used
      * OCIO configs so .blend files created for those would be unaffected. */

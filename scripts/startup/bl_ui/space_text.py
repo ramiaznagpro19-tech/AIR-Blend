@@ -313,7 +313,7 @@ class TEXT_MT_templates(Menu):
         layout = self.layout
         layout.menu("TEXT_MT_templates_py")
         layout.menu("TEXT_MT_templates_osl")
-        # We only have one Blender Manifest template for now,
+        # We only have one AIR Blend Manifest template for now,
         # better to show it on the top level.
         layout.separator()
         self.path_menu(

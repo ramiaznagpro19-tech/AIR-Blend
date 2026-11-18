@@ -50,8 +50,8 @@ class VKBackend : public GPUBackend {
    * Does the running platform contain any device that meets the minimum requirements to start the
    * Vulkan backend.
    *
-   * Function is used to validate that a Blender UI can be started. It calls vulkan API commands
-   * directly to ensure no parts of Blender needs to be initialized.
+   * Function is used to validate that an AIR Blend UI can be started. It calls vulkan API commands
+   * directly to ensure no parts of AIR Blend needs to be initialized.
    */
   static bool is_supported();
 

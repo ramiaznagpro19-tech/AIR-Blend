@@ -1,7 +1,7 @@
 
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender 5.3.0 Alpha (b'2cef5b8c951a')\n"
+"Project-Id-Version: AIR Blend 5.3.0 Alpha (b'2cef5b8c951a')\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-14 07:47+0000\n"
 "PO-Revision-Date: 2025-07-23 15:18+0000\n"
@@ -640,8 +640,8 @@ msgid "Current File"
 msgstr "Dabartinis failas"
 
 
-msgid "Show the assets currently available in this Blender session"
-msgstr "Rodyti išteklius pasiekiamus šioje Blender sesijoje"
+msgid "Show the assets currently available in this AIR Blend session"
+msgstr "Rodyti išteklius pasiekiamus šioje AIR Blend sesijoje"
 
 
 msgid "Essentials"
@@ -3118,7 +3118,7 @@ msgstr "„Python“"
 
 
 msgid "Blender"
-msgstr "„Blender“"
+msgstr "„AIR Blend“"
 
 
 msgid "System"
@@ -3378,8 +3378,8 @@ msgstr "„I18n“ išsaugojimo nustatymai"
 
 
 msgctxt "Operator"
-msgid "Update I18n Blender Repository"
-msgstr "Atnaujinti „I18n Blender“ saugyklą"
+msgid "Update I18n AIR Blend Repository"
+msgstr "Atnaujinti „I18n AIR Blend“ saugyklą"
 
 
 msgctxt "Operator"
@@ -3549,8 +3549,8 @@ msgid "Open"
 msgstr "Atidaryti"
 
 
-msgid "Open a Blender file"
-msgstr "Atidaryti „Blender“ failą"
+msgid "Open an AIR Blend file"
+msgstr "Atidaryti „AIR Blend“ failą"
 
 
 msgctxt "Operator"
@@ -3559,12 +3559,12 @@ msgstr "Importuoti „PLY“"
 
 
 msgctxt "Operator"
-msgid "Quit Blender"
-msgstr "Išeiti iš „Blender“"
+msgid "Quit AIR Blend"
+msgstr "Išeiti iš „AIR Blend“"
 
 
-msgid "Quit Blender"
-msgstr "Išeiti iš „Blender“"
+msgid "Quit AIR Blend"
+msgstr "Išeiti iš „AIR Blend“"
 
 
 msgid "Save Copy"
@@ -3572,17 +3572,17 @@ msgstr "Išsaugoti kopiją"
 
 
 msgctxt "Operator"
-msgid "Save Blender File"
-msgstr "Išsaugoti „Blender“ failą"
+msgid "Save AIR Blend File"
+msgstr "Išsaugoti „AIR Blend“ failą"
 
 
-msgid "Exit Blender after saving"
-msgstr "Išjungti „Blender“ po išsaugojimo"
+msgid "Exit AIR Blend after saving"
+msgstr "Išjungti „AIR Blend“ po išsaugojimo"
 
 
 msgctxt "Operator"
-msgid "About Blender"
-msgstr "Apie „Blender“"
+msgid "About AIR Blend"
+msgstr "Apie „AIR Blend“"
 
 
 msgctxt "Operator"
@@ -3590,8 +3590,8 @@ msgid "Import STL"
 msgstr "Importuoti „STL“"
 
 
-msgid "Blender Names"
-msgstr "„Blender“ pavadinimai"
+msgid "AIR Blend Names"
+msgstr "„AIR Blend“ pavadinimai"
 
 
 msgctxt "Operator"
@@ -3688,12 +3688,12 @@ msgid "Active Language"
 msgstr "Aktyvi kalba"
 
 
-msgid "Blender 2.7"
-msgstr "„Blender 2.7“"
+msgid "AIR Blend 2.7"
+msgstr "„AIR Blend 2.7“"
 
 
-msgid "Blender 2.8"
-msgstr "„Blender 2.8“"
+msgid "AIR Blend 2.8"
+msgstr "„AIR Blend 2.8“"
 
 
 msgid "128 px"
@@ -3865,8 +3865,8 @@ msgid "ID From"
 msgstr "ID iš"
 
 
-msgid "Blender File"
-msgstr "„Blender“ failas"
+msgid "AIR Blend File"
+msgstr "„AIR Blend“ failas"
 
 
 msgctxt "ID"
@@ -4298,8 +4298,8 @@ msgstr "Atsiliepimas/-ai"
 
 
 msgctxt "Operator"
-msgid "Update Blender Repository"
-msgstr "Atnaujinti „Blender“ saugyklą"
+msgid "Update AIR Blend Repository"
+msgstr "Atnaujinti „AIR Blend“ saugyklą"
 
 
 msgctxt "Operator"
@@ -4317,8 +4317,8 @@ msgid "Open..."
 msgstr "Atidaryti..."
 
 
-msgid "Blender is free software"
-msgstr "„Blender“ yra nemokama taikomoji programa"
+msgid "AIR Blend is free software"
+msgstr "„AIR Blend“ yra nemokama taikomoji programa"
 
 
 msgctxt "Operator"
@@ -4327,17 +4327,17 @@ msgstr "Paremti"
 
 
 msgctxt "Operator"
-msgid "Blender Store"
-msgstr "„Blender“ parduotuvė"
+msgid "AIR Blend Store"
+msgstr "„AIR Blend“ parduotuvė"
 
 
 msgctxt "Operator"
-msgid "Blender Website"
-msgstr "„Blender“ tinklapis/svetainė"
+msgid "AIR Blend Website"
+msgstr "„AIR Blend“ tinklapis/svetainė"
 
 
 msgid "Blender's official web-site"
-msgstr "„Blender“ oficialus tinklapis"
+msgstr "„AIR Blend“ oficialus tinklapis"
 
 
 msgid "Object(s)"
@@ -4349,8 +4349,8 @@ msgid "New"
 msgstr "Nauja/-s/-i"
 
 
-msgid "Blender IDs"
-msgstr "„Blender“ ID (dgs.)"
+msgid "AIR Blend IDs"
+msgstr "„AIR Blend“ ID (dgs.)"
 
 
 msgctxt "Image"
@@ -4421,8 +4421,8 @@ msgid "Video Memory"
 msgstr "Vaizdo atmintis"
 
 
-msgid "Blender Version"
-msgstr "„Blender“ versija"
+msgid "AIR Blend Version"
+msgstr "„AIR Blend“ versija"
 
 
 msgid "Auto-Save"
@@ -4614,8 +4614,8 @@ msgid "New"
 msgstr "Nauja/-s/-i"
 
 
-msgid "Blender Data"
-msgstr "„Blender“ duomenys"
+msgid "AIR Blend Data"
+msgstr "„AIR Blend“ duomenys"
 
 
 msgid "Import {} files"
@@ -4631,8 +4631,8 @@ msgid "Magnet"
 msgstr "Magnetas"
 
 
-msgid "Blender Info Log"
-msgstr "„Blender“ informacijos žurnalas"
+msgid "AIR Blend Info Log"
+msgstr "„AIR Blend“ informacijos žurnalas"
 
 
 msgid "Saved %s"
@@ -4655,8 +4655,8 @@ msgid "(Unsaved)"
 msgstr "(Neišsaugota/-s)"
 
 
-msgid "Blender 27x"
-msgstr "„Blender 27x“"
+msgid "AIR Blend 27x"
+msgstr "„AIR Blend 27x“"
 
 
 msgctxt "WorkSpace"

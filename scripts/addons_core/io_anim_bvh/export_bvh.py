@@ -141,15 +141,15 @@ def write_armature(
             # Bone name, used as key in many places.
             "name",
             "parent",  # decorated bone parent, set in a later loop
-            # Blender armature bone.
+            # AIR Blend armature bone.
             "rest_bone",
-            # Blender pose bone.
+            # AIR Blend pose bone.
             "pose_bone",
-            # Blender pose matrix.
+            # AIR Blend pose matrix.
             "pose_mat",
-            # Blender rest matrix (armature space).
+            # AIR Blend rest matrix (armature space).
             "rest_arm_mat",
-            # Blender rest matrix (local space).
+            # AIR Blend rest matrix (local space).
             "rest_local_mat",
             # Pose_mat inverted.
             "pose_imat",

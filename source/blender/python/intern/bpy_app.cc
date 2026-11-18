@@ -84,20 +84,20 @@ static PyTypeObject BlenderAppType;
 
 static PyStructSequence_Field app_info_fields[] = {
     {"version",
-     "The Blender version as a tuple of 3 numbers (major, minor, micro). eg. (4, 3, 1)\n"
+     "The AIR Blend version as a tuple of 3 numbers (major, minor, micro). eg. (4, 3, 1)\n"
      "\n"
      ":type: tuple[int, int, int]\n"},
     {"version_file",
-     "The Blender File version, as a tuple of 3 numbers (major, minor, file sub-version), that "
+     "The AIR Blend File version, as a tuple of 3 numbers (major, minor, file sub-version), that "
      "will be used to save a .blend file. The last item in this tuple indicates the file "
      "sub-version, which is different from the release micro version (the last item of the "
      "``bpy.app.version`` tuple). The file sub-version can be incremented multiple times while a "
-     "Blender version is under development. This value is, and should be, used for handling "
-     "compatibility changes between Blender versions\n"
+     "AIR Blend version is under development. This value is, and should be, used for handling "
+     "compatibility changes between AIR Blend versions\n"
      "\n"
      ":type: tuple[int, int, int]\n"},
     {"version_string",
-     "The Blender version formatted as a string\n"
+     "The AIR Blend version formatted as a string\n"
      "\n"
      ":type: str\n"},
     {"version_cycle",
@@ -109,7 +109,7 @@ static PyStructSequence_Field app_info_fields[] = {
      "\n"
      ":type: bool\n"},
     {"module",
-     "Boolean, True when running Blender as a python module\n"
+     "Boolean, True when running AIR Blend as a python module\n"
      "\n"
      ":type: bool\n"},
     {"factory_startup",
@@ -123,27 +123,27 @@ static PyStructSequence_Field app_info_fields[] = {
 
     /* buildinfo */
     {"build_date",
-     "The date this Blender instance was built\n"
+     "The date this AIR Blend instance was built\n"
      "\n"
      ":type: bytes\n"},
     {"build_time",
-     "The time this Blender instance was built\n"
+     "The time this AIR Blend instance was built\n"
      "\n"
      ":type: bytes\n"},
     {"build_commit_timestamp",
-     "The unix timestamp of the commit this Blender instance was built from\n"
+     "The unix timestamp of the commit this AIR Blend instance was built from\n"
      "\n"
      ":type: int\n"},
     {"build_commit_date",
-     "The date of the commit this Blender instance was built from\n"
+     "The date of the commit this AIR Blend instance was built from\n"
      "\n"
      ":type: bytes\n"},
     {"build_commit_time",
-     "The time of the commit this Blender instance was built from\n"
+     "The time of the commit this AIR Blend instance was built from\n"
      "\n"
      ":type: bytes\n"},
     {"build_hash",
-     "The commit hash this Blender instance was built with\n"
+     "The commit hash this AIR Blend instance was built with\n"
      "\n"
      ":type: bytes\n"},
     {"build_branch",
@@ -339,7 +339,7 @@ static int bpy_app_debug_set(PyObject * /*self*/, PyObject *value, void *closure
 PyDoc_STRVAR(
     /* Wrap. */
     bpy_app_internet_offline_doc,
-    "Boolean, true when internet access is allowed by Blender & 3rd party scripts "
+    "Boolean, true when internet access is allowed by AIR Blend & 3rd party scripts "
     "(read-only).\n"
     "\n"
     ":type: bool\n");
@@ -539,7 +539,7 @@ PyDoc_STRVAR(
     /* Wrap. */
     bpy_app_python_args_doc,
     "Leading arguments to use when calling Python directly (via ``sys.executable``). "
-    "These arguments match settings Blender uses to "
+    "These arguments match settings AIR Blend uses to "
     "ensure Python runs with a compatible environment (read-only).\n"
     "\n"
     ":type: tuple[str, ...]\n");
@@ -557,9 +557,9 @@ static PyObject *bpy_app_python_args_get(PyObject * /*self*/, void * /*closure*/
 PyDoc_STRVAR(
     /* Wrap. */
     bpy_app_binary_path_doc,
-    "The location of Blender's executable, useful for utilities that open new instances. "
-    "Read-only unless Blender is built as a Python module - in this case the value is "
-    "an empty string which script authors may point to a Blender binary.\n"
+    "The location of AIR Blend's executable, useful for utilities that open new instances. "
+    "Read-only unless AIR Blend is built as a Python module - in this case the value is "
+    "an empty string which script authors may point to an AIR Blend binary.\n"
     "\n"
     ":type: str\n");
 static PyObject *bpy_app_binary_path_get(PyObject * /*self*/, void * /*closure*/)
@@ -729,7 +729,7 @@ static PyGetSetDef bpy_app_getsets[] = {
 
     {"python_args", bpy_app_python_args_get, nullptr, bpy_app_python_args_doc, nullptr},
 
-    /* Support script authors setting the Blender binary path to use, otherwise this value
+    /* Support script authors setting the AIR Blend binary path to use, otherwise this value
      * is not known when built as a Python module. */
     {"binary_path",
      bpy_app_binary_path_get,

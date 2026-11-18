@@ -11,7 +11,7 @@ Useful for checking changes intended for one configuration don't impact others a
 
 ./blender.bin -b --factory-startup \
     --python tools/utils/blender_keyconfig_export_permutations.py -- \
-    --preset=Blender \
+    --preset=AIR Blend \
     --output-dir=./output \
     --keymap-prefs=select_mouse:rmb_action
 
@@ -141,7 +141,7 @@ def main():
     try:
         import bpy
     except ImportError:
-        # Run outside of Blender, just show "--help".
+        # Run outside of AIR Blend, just show "--help".
         bpy = None
         args.insert(0, "--help")
 

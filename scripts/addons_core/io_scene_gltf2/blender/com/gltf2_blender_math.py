@@ -40,7 +40,7 @@ def mathutils_to_gltf(x: typing.Union[Vector, Quaternion]) -> typing.List[float]
     if isinstance(x, Vector):
         return list(x)
     if isinstance(x, Quaternion):
-        # Blender has w-first quaternion notation
+        # AIR Blend has w-first quaternion notation
         return [x[1], x[2], x[3], x[0]]
     else:
         return list(x)

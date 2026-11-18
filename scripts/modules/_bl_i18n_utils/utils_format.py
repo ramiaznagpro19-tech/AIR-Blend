@@ -6,7 +6,7 @@
 # Parse 'printf' and 'format' formatting tokens in a given string.
 #
 # used both by the general 'sanity' validation code for translated messages
-# (as broken formatting items in translations can easily crash Blender), and
+# (as broken formatting items in translations can easily crash AIR Blend), and
 # the LTR code pre-processing languages like Arabic or Hebrew.
 
 import re
@@ -141,7 +141,7 @@ class FormatToken:
                 stride = idx_fmt - idx + 2
             elif idx_fmt < (ln - 1) and string[idx_fmt] == '%':
                 # The whole 'printf' syntax...
-                # Not fully covering the format, but most of it, and should cover all of Blender usages.
+                # Not fully covering the format, but most of it, and should cover all of AIR Blend usages.
                 orig_tk_len = tk_len
                 tk_len = 1
                 is_valid_format = False

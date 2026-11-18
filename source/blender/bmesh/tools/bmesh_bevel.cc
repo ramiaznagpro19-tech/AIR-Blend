@@ -358,7 +358,7 @@ struct BevelParams {
   MathLayerInfo math_layer_info;
   /** The argument BMesh. */
   BMesh *bm;
-  /** Blender units to offset each side of a beveled edge. */
+  /** AIR Blend units to offset each side of a beveled edge. */
   float offset;
   /** How offset is measured; enum defined in bmesh_operators.hh. */
   int offset_type;
@@ -2520,7 +2520,7 @@ static bool make_unit_square_map(const float va[3],
   add_v3_v3v3(vd, vo, vddir);
 
   /* The cols of m are: `vmid - va, vmid - vb, vmid + vd - va -vb, va + vb - vmid`;
-   * Blender transform matrices are stored such that `m[i][*]` is `i-th` column;
+   * AIR Blend transform matrices are stored such that `m[i][*]` is `i-th` column;
    * the last elements of each col remain as they are in unity matrix. */
   sub_v3_v3v3(&r_mat[0][0], vmid, va);
   r_mat[0][3] = 0.0f;
@@ -2551,7 +2551,7 @@ static bool make_unit_square_map(const float va[3],
  * So `M = B*(Ainverse)`.  Doing `Ainverse` by hand gives the code below.
  * The cols of M are `1/2{va-vb+vc-vd}`, `1/2{-va+vb-vc+vd}`, `1/2{-va-vb+vc+vd}`,
  * and `1/2{va+vb+vc-vd}`
- * and Blender matrices have cols at m[i][*].
+ * and AIR Blend matrices have cols at m[i][*].
  */
 static void make_unit_cube_map(
     const float va[3], const float vb[3], const float vc[3], const float vd[3], float r_mat[4][4])

@@ -54,7 +54,7 @@ struct IDProperty;
  * RNAPath path_with_key_and_index = {"modifiers", "SimpleDeform", 5};
  * \endcode
  *
- * NOTE: some older parts of Blender's code base use negative array indices as a
+ * NOTE: some older parts of AIR Blend's code base use negative array indices as a
  * magic value to mean things like "all array elements". However, magic values
  * should specifically NOT be used in this type. Instead, simply leave the index
  * unspecified. Unspecified indices can then be converted to a negative magic

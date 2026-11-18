@@ -151,7 +151,7 @@ TEST(abc_matrix, CopyM44AxisSwap_YfromZ)
   float result[4][4];
 
   /* Construct an input matrix that performs a rotation like the tests
-   * above. This matrix was created by rotating a cube in Blender over
+   * above. This matrix was created by rotating a cube in AIR Blend over
    * (X=10, Y=20, Z=30 degrees in XYZ order) and translating over (1, 2, 3) */
   float input[4][4] = {
       {0.81379765272f, 0.4698463380336f, -0.342020124197f, 0.0f},
@@ -166,7 +166,7 @@ TEST(abc_matrix, CopyM44AxisSwap_YfromZ)
   const float trans[4] = {1.0f, 3.0f, -2.0f, 1.0f};
   EXPECT_V4_NEAR(trans, result[3], 1e-5f);
 
-  /* This matrix was created by rotating a cube in Blender over
+  /* This matrix was created by rotating a cube in AIR Blend over
    * (X=10, Y=30, Z=-20 degrees in XZY order) and translating over (1, 3, -2) */
   const float expect[4][4] = {
       {0.813797652721f, -0.342020124197f, -0.469846338033f, 0.0f},
@@ -182,7 +182,7 @@ TEST(abc_matrix, CopyM44AxisSwapWithScale_YfromZ)
   float result[4][4];
 
   /* Construct an input matrix that performs a rotation like the tests
-   * above. This matrix was created by rotating a cube in Blender over
+   * above. This matrix was created by rotating a cube in AIR Blend over
    * (X=10, Y=20, Z=30 degrees in XYZ order), translating over (1, 2, 3),
    * and scaling by (4, 5, 6). */
   float input[4][4] = {
@@ -194,7 +194,7 @@ TEST(abc_matrix, CopyM44AxisSwapWithScale_YfromZ)
 
   copy_m44_axis_swap(result, input, ABC_YUP_FROM_ZUP);
 
-  /* This matrix was created by rotating a cube in Blender over
+  /* This matrix was created by rotating a cube in AIR Blend over
    * (X=10, Y=30, Z=-20 degrees in XZY order), translating over (1, 3, -2)
    * and scaling over (4, 6, 5). */
   const float expect[4][4] = {
@@ -210,7 +210,7 @@ TEST(abc_matrix, CopyM44AxisSwap_ZfromY)
 {
   float result[4][4];
 
-  /* This matrix was created by rotating a cube in Blender over
+  /* This matrix was created by rotating a cube in AIR Blend over
    * (X=10, Y=30, Z=-20 degrees in XZY order) and translating over (1, 3, -2) */
   float input[4][4] = {
       {0.813797652721f, -0.342020124197f, -0.469846338033f, 0.0f},
@@ -221,7 +221,7 @@ TEST(abc_matrix, CopyM44AxisSwap_ZfromY)
 
   copy_m44_axis_swap(result, input, ABC_ZUP_FROM_YUP);
 
-  /* This matrix was created by rotating a cube in Blender over
+  /* This matrix was created by rotating a cube in AIR Blend over
    * (X=10, Y=20, Z=30 degrees in XYZ order) and translating over (1, 2, 3) */
   const float expect[4][4] = {
       {0.813797652721f, 0.469846338033f, -0.342020124197f, 0.0f},
@@ -237,7 +237,7 @@ TEST(abc_matrix, CopyM44AxisSwapWithScale_ZfromY)
 {
   float result[4][4];
 
-  /* This matrix was created by rotating a cube in Blender over
+  /* This matrix was created by rotating a cube in AIR Blend over
    * (X=10, Y=30, Z=-20 degrees in XZY order), translating over (1, 3, -2)
    * and scaling over (4, 6, 5). */
   float input[4][4] = {
@@ -249,7 +249,7 @@ TEST(abc_matrix, CopyM44AxisSwapWithScale_ZfromY)
 
   copy_m44_axis_swap(result, input, ABC_ZUP_FROM_YUP);
 
-  /* This matrix was created by rotating a cube in Blender over
+  /* This matrix was created by rotating a cube in AIR Blend over
    * (X=10, Y=20, Z=30 degrees in XYZ order), translating over (1, 2, 3),
    * and scaling by (4, 5, 6). */
   const float expect[4][4] = {

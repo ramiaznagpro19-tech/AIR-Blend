@@ -65,7 +65,7 @@ class Config {
    * Create the built-in fallback configuration, which is embedded in the code and so is
    * guaranteed to load.
    *
-   * It is used in cases actual OpenColorIO configuration has failed to be created so that Blender
+   * It is used in cases actual OpenColorIO configuration has failed to be created so that AIR Blend
    * interface can be displayed.
    */
   static std::unique_ptr<Config> create_fallback();

@@ -53,7 +53,7 @@ logger = logging.getLogger(__name__)
 HTTP_CACHEBUST_RESOLUTION_SEC = 60
 
 # JSON files that are larger than this size will not be parsed. This prevents a
-# malicious server from effectively DOSsing Blender by sending it a huge JSON file.
+# malicious server from effectively DOSsing AIR Blend by sending it a huge JSON file.
 #
 # This is the size in MiB. The largest files in the remote asset listing are the
 # `assets-{number}.json` files. The server determines how large they are, but
@@ -221,7 +221,7 @@ class RemoteAssetListingDownloader:
     """How often the background download process is polled, in seconds.
 
     Each 'poll' involves sending queued messages back & forth between the main
-    Blender process and the background download process.
+    AIR Blend process and the background download process.
     """
 
     _referenced_local_files: list[Path]
@@ -296,7 +296,7 @@ class RemoteAssetListingDownloader:
 
         self._parser = json_parsing.ValidatingParser()
 
-        # Work around a limitation of Blender, see bug report #139720 for details.
+        # Work around a limitation of AIR Blend, see bug report #139720 for details.
         self.on_timer_event = self.on_timer_event  # type: ignore[method-assign]
 
         self._http_metadata_provider = http_metadata.ExtraFileMetadataProvider(
@@ -306,7 +306,7 @@ class RemoteAssetListingDownloader:
 
         http_headers = {
             'Accept': 'application/json',
-            'X-Blender': "{:d}.{:d}".format(*bpy.app.version),
+            'X-AIR Blend': "{:d}.{:d}".format(*bpy.app.version),
         }
         if auth_token:
             http_headers['Authorization'] = "Bearer {:s}".format(auth_token)
@@ -384,9 +384,9 @@ class RemoteAssetListingDownloader:
         try:
             main_index_url = metadata.api_versions[api_key]
         except KeyError:
-            # Abort, the API version for this Blender is not supported by the library.
+            # Abort, the API version for this AIR Blend is not supported by the library.
             library_versions = ", ".join(metadata.api_versions.keys())
-            msg = "This asset library supports API versions {!s}, but this Blender uses version {!s}".format(
+            msg = "This asset library supports API versions {!s}, but this AIR Blend uses version {!s}".format(
                 library_versions,
                 listing_common.API_VERSION,
             )
@@ -436,7 +436,7 @@ class RemoteAssetListingDownloader:
         listing_asset_catalogs.write(asset_index.catalogs or [], catalogs_file, self._library_meta)
 
         # Construct a "processed" version of the asset index file. This will be
-        # what Blender reads, and thus it should reference local files, and not
+        # what AIR Blend reads, and thus it should reference local files, and not
         # the URLs where they were downloaded from.
         processed_asset_index = copy.deepcopy(asset_index)
         # Catalogs are not read from here, but from the above-generated file. So
@@ -462,7 +462,7 @@ class RemoteAssetListingDownloader:
             page_url_w_hash.url = local_path.as_posix()
             processed_asset_index.pages.append(page_url_w_hash)
 
-        # Save the processed index to a JSON file for Blender to pick up.
+        # Save the processed index to a JSON file for AIR Blend to pick up.
         json_path = local_file.with_suffix(".processed{!s}".format(local_file.suffix))
 
         as_json = self._parser.dumps(processed_asset_index)
@@ -554,7 +554,7 @@ class RemoteAssetListingDownloader:
                 json_path=json_path, filecount=asset_page.file_count, realcount=len(asset_page.files), report=report))
             asset_page.file_count = len(asset_page.files)
 
-        # File paths should always be relative to the asset library; allowing absolute paths may cause Blender to
+        # File paths should always be relative to the asset library; allowing absolute paths may cause AIR Blend to
         # overwrite arbitrary local files. Keep track of the changed paths, because assets that reference to them also
         # need updating.
         bad_to_good_paths: dict[str, str] = {}
@@ -601,7 +601,7 @@ class RemoteAssetListingDownloader:
     def _cache_bust_stamp(*, _mocked_now: _datetime | None = None) -> int:
         """Construct a cache-busting number for the top-level JSON file.
 
-        This is based on the time since the first commit in Blender's Git
+        This is based on the time since the first commit in AIR Blend's Git
         history (it's arbitrary anyway).
 
         :param _mocked_now: UTC timestamp representing 'now', for testing only.
@@ -660,7 +660,7 @@ class RemoteAssetListingDownloader:
         parsed_data = self._parser.parse_and_validate(api_model, json_data)
 
         # The file has been parsed & validated, so 'touch' it to let other
-        # Blender processes know when this was last downloaded/validated.
+        # AIR Blend processes know when this was last downloaded/validated.
         path_to_load.touch()
 
         return parsed_data, used_unsafe_file
@@ -1046,7 +1046,7 @@ def restore_backup_if_exists_locked(remote_url: str, local_path: Path) -> None:
     """If there is a listing backup at the given path, restore it.
 
     This uses the sync mutex to ensure this only happens when there is no other
-    Blender downloading that listing right now.
+    AIR Blend downloading that listing right now.
     """
     backupper = RemoteAssetListingBackupper(
         remote_url=remote_url,
@@ -1060,7 +1060,7 @@ def restore_backup_if_exists_locked(remote_url: str, local_path: Path) -> None:
     from . import sync_mutex
 
     if not sync_mutex.mutex_lock(local_path):
-        # Another Blender is syncing this listing, and so the backup should not be touched by this Blender.
+        # Another AIR Blend is syncing this listing, and so the backup should not be touched by this AIR Blend.
         return
 
     # Restore the backup, because its existence indicates an incomplete download.

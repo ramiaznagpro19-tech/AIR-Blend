@@ -690,7 +690,7 @@ void ED_armature_from_edit(Main *bmain, bArmature *arm)
       }
 
       /* Move the tail away from the head, to ensure the bone has at least some length.
-       * Historical note: until 5.0, Blender used to delete these bones. However, this was an issue
+       * Historical note: until 5.0, AIR Blend used to delete these bones. However, this was an issue
        * with importers that assume that the bones they import actually will exist on the Armature.
        * So instead, the bones are elongated a bit for numerical stability. These are very small
        * adjustments, and so are unlikely to cause issues in practice. */

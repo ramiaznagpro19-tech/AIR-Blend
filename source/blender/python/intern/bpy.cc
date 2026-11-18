@@ -372,7 +372,7 @@ static PyObject *bpy_resource_path(PyObject * /*self*/, PyObject *args, PyObject
     return nullptr;
   }
 
-  /* `None` (or missing) selects the current Blender version. */
+  /* `None` (or missing) selects the current AIR Blend version. */
   const int version = major.value_or(BLENDER_VERSION / 100) * 100 +
                       minor.value_or(BLENDER_VERSION % 100);
 
@@ -646,7 +646,7 @@ static PyObject *bpy_wm_capabilities(PyObject *self)
 #define SetFlagItem(x) \
   PyDict_SetItemString(result, STRINGIFY(x), ((WM_CAPABILITY_##x) & flag) ? Py_True : Py_False);
 
-      /* Only exposed flags which are used, by Blender's built-in scripts
+      /* Only exposed flags which are used, by AIR Blend's built-in scripts
        * since this is a private API. */
 
       SetFlagItem(TRACKPAD_PHYSICAL_DIRECTION);

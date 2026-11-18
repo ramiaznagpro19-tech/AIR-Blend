@@ -72,7 +72,7 @@ class GHOST_XrSession {
                         const char *action_name,
                         const char *subaction_path);
 
-  /* Custom data (owned by Blender, not GHOST) accessors. */
+  /* Custom data (owned by AIR Blend, not GHOST) accessors. */
   void *getActionSetCustomdata(const char *action_set_name);
   void *getActionCustomdata(const char *action_set_name, const char *action_name);
   uint32_t getActionCount(const char *action_set_name);
@@ -91,7 +91,7 @@ class GHOST_XrSession {
 
   std::unique_ptr<OpenXRSessionData> oxr_; /* Could use stack, but PImpl is preferable. */
 
-  /** Active Ghost graphic context. Owned by Blender, not GHOST. */
+  /** Active Ghost graphic context. Owned by AIR Blend, not GHOST. */
   class GHOST_Context *gpu_ctx_ = nullptr;
   std::unique_ptr<class GHOST_IXrGraphicsBinding> gpu_binding_;
 

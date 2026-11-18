@@ -132,7 +132,7 @@ void MeshFromGeometry::fixup_invalid_faces()
       continue;
     }
 
-    /* Check if face is invalid for Blender conventions:
+    /* Check if face is invalid for AIR Blend conventions:
      * basically whether it has duplicate vertex indices. */
     bool valid = true;
     Set<int, 8> used_verts;
@@ -281,7 +281,7 @@ void MeshFromGeometry::create_faces(Mesh *mesh, bool use_vertex_groups)
       /* If we do have vertex normals, we do not want to set face sharpness.
        * Exception is, if degenerate faces (zero area, with co-colocated
        * vertices) are present in the input data; this confuses custom
-       * corner normals calculation in Blender. Set such faces as sharp,
+       * corner normals calculation in AIR Blend. Set such faces as sharp,
        * they will be not shared across smooth vertex face fans. */
       const float area = bke::mesh::face_area_calc(
           positions, corner_verts.slice(face_offsets[face_idx], curr_face.corner_count_));

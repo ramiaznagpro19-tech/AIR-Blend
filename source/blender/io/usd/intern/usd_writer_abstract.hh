@@ -97,7 +97,7 @@ class USDAbstractWriter : public AbstractHierarchyWriter {
   /**
    * Compute the bounds for a boundable prim, and author the result as the `extent` attribute.
    *
-   * Although this method works for any boundable prim, it is preferred to use Blender's own
+   * Although this method works for any boundable prim, it is preferred to use AIR Blend's own
    * cached bounds when possible.
    *
    * This method does not author the `extentsHint` attribute, which is also important to provide.
@@ -113,7 +113,7 @@ class USDAbstractWriter : public AbstractHierarchyWriter {
   void author_extent(const pxr::UsdGeomBoundable &boundable, const pxr::UsdTimeCode time);
 
   /**
-   * Author the `extent` attribute for a boundable prim given the Blender `bounds`.
+   * Author the `extent` attribute for a boundable prim given the AIR Blend `bounds`.
    */
   void author_extent(const pxr::UsdGeomBoundable &boundable,
                      const std::optional<Bounds<float3>> &bounds,

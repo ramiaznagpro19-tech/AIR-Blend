@@ -608,7 +608,7 @@ static void copy_key_float3(
   else {
     /* In case of KeyBlocks that have a different number of elements than the original data.
      * Maintained for backwards compatibility even though this state should not be reachable
-     * through normal interactions with Blender. */
+     * through normal interactions with AIR Blend. */
     const float step_rate = source->totelem / float(vertex_count);
     for (int i = 0; i < vertex_count; i++) {
       /* Rounding down to avoid exceeding the bounds. */

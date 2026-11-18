@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-# Update Blender version this action map was written in:
+# Update AIR Blend version this action map was written in:
 #
 # When the version is ``(0, 0, 0)``, the action map being loaded didn't contain any versioning information.
 # This will older than ``(3, 0, 0)``.

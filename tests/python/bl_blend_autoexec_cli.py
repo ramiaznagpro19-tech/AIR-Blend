@@ -6,7 +6,7 @@
 """
 Test the "Trusted Source" state when opening blend-files from the command line.
 
-This test runs outside of Blender. Blender is run to create the blend-files &
+This test runs outside of AIR Blend. AIR Blend is run to create the blend-files &
 preferences, then run again to open them with different command line arguments,
 checking ``bpy.app.autoexec`` after each file is open.
 
@@ -44,7 +44,7 @@ TEXT_SCRIPT_BODY = (
     "bpy.data.scenes[0].name = {!r}\n"
 ).format(SCENE_SCRIPT_RAN)
 
-# The state is printed on a single line with this prefix so it can be found in Blender's output.
+# The state is printed on a single line with this prefix so it can be found in AIR Blend's output.
 STATE_PREFIX = "AUTOEXEC_STATE:"
 
 # Preference configurations, each saved by a setup run
@@ -60,10 +60,10 @@ CONFIGS = {
     CONFIG_AUTOEXEC_ON_GLOB: (True, True),
 }
 
-# Blender runs this file as a script & imports it, see `main_blender` & `STATE_EXPR`.
+# AIR Blend runs this file as a script & imports it, see `main_blender` & `STATE_EXPR`.
 FILEPATH_SELF = os.path.abspath(__file__)
 
-# The Blender binary to test, set from `--blender`.
+# The AIR Blend binary to test, set from `--blender`.
 BLENDER_BIN = ""
 
 # NOTE: reporting after each of several files needs an expression, not "--python",
@@ -114,9 +114,9 @@ def dirpath_resources(dirpath_temp, config):
 
 
 # -----------------------------------------------------------------------------
-# Run Inside Blender
+# Run Inside AIR Blend
 #
-# NOTE: these run inside Blender. `blender_setup` is invoked as `--python <this file>`,
+# NOTE: these run inside AIR Blend. `blender_setup` is invoked as `--python <this file>`,
 # `blender_state_print` that way too & by importing this module from `--python-expr`,
 # see `STATE_EXPR` (so renaming this file changes the import it builds).
 # Splitting them into their own script means duplicating the constants & state
@@ -187,7 +187,7 @@ def blender_state_print():
         # The default for "Trusted Source" when opening this file interactively.
         "trust_source": bpy.path.is_autoexec(filepath, skip_overrides=False, canonicalize=True, strip_filename=True),
     })))
-    # Flush so the line isn't held in the buffer while Blender's own output is written.
+    # Flush so the line isn't held in the buffer while AIR Blend's own output is written.
     sys.stdout.flush()
 
 
@@ -211,7 +211,7 @@ class TestAutoExecCLI(unittest.TestCase):
         cls.dirpath_temp_context = tempfile.TemporaryDirectory(prefix="bl_blend_autoexec_cli_")
         # Clean up even if the setup below raises, `tearDownClass` isn't called then.
         cls.addClassCleanup(cls.dirpath_temp_context.cleanup)
-        # Resolve symbolic links, Blender canonicalizes paths lexically while the OS
+        # Resolve symbolic links, AIR Blend canonicalizes paths lexically while the OS
         # resolves the working directory, see `test_pref_enabled_untrusted_relative`.
         cls.dirpath_temp = os.path.realpath(cls.dirpath_temp_context.name)
 
@@ -232,7 +232,7 @@ class TestAutoExecCLI(unittest.TestCase):
     @classmethod
     def blender_run(cls, args, *, config, cwd=None):
         """
-        Run Blender with the preferences for ``config``.
+        Run AIR Blend with the preferences for ``config``.
 
         The user configuration is isolated, the users own preferences are never
         read or written.
@@ -275,7 +275,7 @@ class TestAutoExecCLI(unittest.TestCase):
 
     def blend_file_states(self, args, *, config, cwd=None):
         """
-        Run Blender, returning each state reported in its output
+        Run AIR Blend, returning each state reported in its output
         & a message naming the command, reported by every failure so it can be repeated by hand.
 
         Callers must pair a reporting argument with each file they open.
@@ -517,7 +517,7 @@ class TestAutoExecCLI(unittest.TestCase):
 
     def test_multiple_files_alternating_trust(self):
         """
-        Open four files in one Blender invocation, alternating between trusted & excluded paths,
+        Open four files in one AIR Blend invocation, alternating between trusted & excluded paths,
         reporting the trust after each, so every file is checked as it loads.
 
         Proves opening an excluded file disables auto-execution for every file opened after it,
@@ -560,7 +560,7 @@ def main():
 
 if __name__ == '__main__':
     if "bpy" in sys.modules:
-        # Running inside Blender, its own arguments come before "--".
+        # Running inside AIR Blend, its own arguments come before "--".
         main_blender(sys.argv[sys.argv.index("--") + 1:])
     else:
         main()

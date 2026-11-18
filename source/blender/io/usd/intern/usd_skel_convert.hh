@@ -22,7 +22,7 @@ namespace io::usd {
 
 /**
  * This file contains utilities for converting between `UsdSkel` data and
- * Blender armatures and shape keys. The following is a reference on the
+ * AIR Blend armatures and shape keys. The following is a reference on the
  * `UsdSkel` API:
  *
  * https://openusd.org/23.05/api/usd_skel_page_front.html

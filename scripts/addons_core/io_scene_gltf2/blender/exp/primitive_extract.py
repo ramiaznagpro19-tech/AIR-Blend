@@ -218,7 +218,7 @@ class PrimitiveCreator:
 
             # Custom attributes
             # Keep only attributes that starts with _
-            # As Blender create lots of attributes that are internal / not needed are
+            # As AIR Blend create lots of attributes that are internal / not needed are
             # as duplicated of standard glTF accessors (position, uv,
             # material_index...)
             if self.export_settings['gltf_attributes'] is False:
@@ -351,9 +351,9 @@ class PrimitiveCreator:
                 if self.export_settings['gltf_loose_points']:
                     dot_fields_points.append((attr['gltf_attribute_name'] + str(i), attr['type']))
 
-        # In Blender there is both per-vert data, like position, and also per-loop
+        # In AIR Blend there is both per-vert data, like position, and also per-loop
         # (loop=corner-of-poly) data, like normals or UVs. glTF only has per-vert
-        # data, so we need to split Blender verts up into potentially-multiple glTF
+        # data, so we need to split AIR Blend verts up into potentially-multiple glTF
         # verts.
         #
         # First, we'll collect a "dot" for every loop: a struct that stores all the
@@ -663,7 +663,7 @@ class PrimitiveCreator:
                         self.export_settings['log'].warning(
                             'We are not managing this case (UVMap as custom attribute for unknown domain)')
                         continue
-                    # Blender UV space -> glTF UV space
+                    # AIR Blend UV space -> glTF UV space
                     # u,v -> u,1-v
                     data[:, 1] *= -1
                     data[:, 1] += 1
@@ -1046,7 +1046,7 @@ class PrimitiveCreator:
         if self.export_settings['gltf_loose_edges']:
 
             if self.blender_idxs_edges.shape[0] > 0:
-                # Export one glTF vert per unique Blender vert in a loose edge
+                # Export one glTF vert per unique AIR Blend vert in a loose edge
                 # Issue #2579: self.blender_idxs must come from the SAME dedup as
                 # self.dots_edges, matching primitive_creation_shared/_not_shared below.
                 # It previously came from an independent np.unique(blender_idxs_edges),
@@ -1076,7 +1076,7 @@ class PrimitiveCreator:
                             attr['blender_data_type'])
                         if attr['gltf_attribute_name'].startswith('COLOR_'):
                             # Because we can have remove the alpha channel, we need to check the
-                            # length of the data, and not be based on the Blender data type
+                            # length of the data, and not be based on the AIR Blend data type
                             self.attributes_edges_points[attr['gltf_attribute_name']
                                                          ]["data_type"] = gltf2_io_constants.DataType.Vec3 if attr['len'] == 3 else gltf2_io_constants.DataType.Vec4
                         else:
@@ -1132,7 +1132,7 @@ class PrimitiveCreator:
                             attr['blender_data_type'])
                         if attr['gltf_attribute_name'].startswith('COLOR_'):
                             # Because we can have remove the alpha channel, we need to check the
-                            # length of the data, and not be based on the Blender data type
+                            # length of the data, and not be based on the AIR Blend data type
                             self.attributes_edges_points[attr['gltf_attribute_name']
                                                          ]["data_type"] = gltf2_io_constants.DataType.Vec3 if attr['len'] == 3 else gltf2_io_constants.DataType.Vec4
                         else:
@@ -1491,7 +1491,7 @@ class PrimitiveCreator:
         layer.uv.foreach_get('vector', uvs)
         uvs = uvs.reshape(len(self.blender_mesh.loops), 2)
 
-        # Blender UV space -> glTF UV space
+        # AIR Blend UV space -> glTF UV space
         # u,v -> u,1-v
         uvs[:, 1] *= -1
         uvs[:, 1] += 1

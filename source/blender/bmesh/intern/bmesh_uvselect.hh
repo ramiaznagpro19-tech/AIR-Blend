@@ -549,7 +549,7 @@ struct UVSelectValidateInfo {
  * The primary check which should remain valid is: `check_sync`,
  * if there is ever a selected vertex without any selected UV's or a selected
  * UV without it's vertex being selected (and similar kinds of issues),
- * then the selection is out-of-sync, which Blender should *never* allow.
+ * then the selection is out-of-sync, which AIR Blend should *never* allow.
  *
  * While an invalid selection should not crash, tools that operate on selection
  * may behave unpredictably.

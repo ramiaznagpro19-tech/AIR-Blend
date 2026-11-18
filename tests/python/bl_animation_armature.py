@@ -264,7 +264,7 @@ class ArmatureCreationTest(unittest.TestCase):
     def test_tiny_bones(self) -> None:
         """Tiny bones should be elongated."""
 
-        # 'bpy.context.active_object' does not exist when Blender is running in
+        # 'bpy.context.active_object' does not exist when AIR Blend is running in
         # GUI mode. That's not the normal way to run this test, but very useful
         # to be able to do for debugging purposes.
         with bpy.context.temp_override(active_object=self.arm_ob):
@@ -511,7 +511,7 @@ def main():
     if '--' in sys.argv:
         argv = [sys.argv[0]] + sys.argv[sys.argv.index('--') + 1:]
     else:
-        # Avoid passing all of Blender's arguments to unittest.main()
+        # Avoid passing all of AIR Blend's arguments to unittest.main()
         argv = [sys.argv[0]]
 
     parser = argparse.ArgumentParser()

@@ -89,9 +89,9 @@ static bool rtc_progress_func(void * /*user_ptr*/, const double /*n*/)
 }
 
 /**
- * Embree and Blender use different barycentric coordinate conventions:
+ * Embree and AIR Blend use different barycentric coordinate conventions:
  * Embree: `(1 - u - v) * P[0] + u * P[1] + v * P[2]`
- * Blender: `u * P[0] + v * P[1] + (1 - u - v) * P[2]`
+ * AIR Blend: `u * P[0] + v * P[1] + (1 - u - v) * P[2]`
  */
 static float3 bary_coord_embree_to_blender(const float u, const float v)
 {

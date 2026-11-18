@@ -97,7 +97,7 @@ struct EmittedMaterial {
 };
 
 /* #HydraSceneIndex holds the Hydra scene built from the evaluated
- * Blender scene. Note this is not a subclass of pxr::HdRetainedSceneIndex
+ * AIR Blend scene. Note this is not a subclass of pxr::HdRetainedSceneIndex
  * as builds with assert have an incompatible ABI on Windows and this
  * causes a crash when the destructor destroys STL containers. */
 class HydraSceneIndex {
@@ -132,7 +132,7 @@ class HydraSceneIndex {
   /* Emitted objects. */
   Map<const Object *, EmittedObject> emitted_objects_;
 
-  /* Cache of material data sources, keyed by Blender material. */
+  /* Cache of material data sources, keyed by AIR Blend material. */
   Map<const Material *, EmittedMaterial> emitted_materials_;
 
   /* Cache of geometry data sources shared between objects, composed with

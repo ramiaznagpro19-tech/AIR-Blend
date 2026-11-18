@@ -6,7 +6,7 @@
  * \ingroup bli
  *
  * Based on Chromium's `build_config.h`, governed by a BSD-style license,
- * with tweaks and extensions needed for the Blender project.
+ * with tweaks and extensions needed for the AIR Blend project.
  */
 
 /**

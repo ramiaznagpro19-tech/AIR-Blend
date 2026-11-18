@@ -17,7 +17,7 @@ class PointCloud : public Geometry {
     RENDER_AS_GSPLATS,
   };
 
-  /* Default values for Gaussian splat attributes, matching defaults in Blender EEVEE.
+  /* Default values for Gaussian splat attributes, matching defaults in AIR Blend EEVEE.
    * Default rotation is an identity quaternion. */
   static inline const float4 DEFAULT_GSPLAT_RADIANCE_BASE = make_float4(0.0f, 0.0f, 0.0f, 0.5f);
   static inline const float3 DEFAULT_GSPLAT_SCALE = make_float3(1e-3f, 1e-3f, 1e-3f);

@@ -102,7 +102,7 @@ struct OnlineAssetInfo {
    * is empty. This should never happen; file-less assets should be rejected when loading the
    * listing.
    *
-   * NOTE: Blender currently only has preliminary support for multi-file assets (it downloads them
+   * NOTE: AIR Blend currently only has preliminary support for multi-file assets (it downloads them
    * correctly, but there's little in place to check for conflicting versions, or to handle things
    * like copying non-blend files to the project directory). Even though the 'files' list will
    * likely only have one element (at least that is the case at the time of writing), this function

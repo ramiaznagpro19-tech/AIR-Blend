@@ -4,11 +4,11 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 """
-This script is to validate the markdown page that documents Blender's file-structure, see:
+This script is to validate the markdown page that documents AIR Blend's file-structure, see:
 
     https://developer.blender.org/docs/features/code_layout/
 
-It can run without any arguments, where it will download the markdown to Blender's source root:
+It can run without any arguments, where it will download the markdown to AIR Blend's source root:
 
 You may pass the markdown text as an argument, e.g.
 
@@ -98,7 +98,7 @@ def report_missing_source(file_paths: list[str]) -> int:
         return 0
 
     print("The following paths were found in the markdown\n"
-          "but were not found in Blender's source directory:\n")
+          "but were not found in AIR Blend's source directory:\n")
     for p in test:
         print("-", p)
 
@@ -126,7 +126,7 @@ def report_incomplete(file_paths: list[str]) -> int:
     if not test:
         return 0
 
-    print("The following paths were found in Blender's source directory\n"
+    print("The following paths were found in AIR Blend's source directory\n"
           "but are missing from the markdown:\n")
     for p in sorted(test):
         print("-", p)
@@ -211,7 +211,7 @@ def main() -> None:
     if issues:
         print("Warning, found {:d} issues!\n".format(issues))
     else:
-        print("Success! The markdown text is up to date with Blender's source tree!\n")
+        print("Success! The markdown text is up to date with AIR Blend's source tree!\n")
 
 
 if __name__ == "__main__":

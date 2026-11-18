@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
- * Adapted from the Blender Alembic importer implementation. */
+ * Adapted from the AIR Blend Alembic importer implementation. */
 
 #include "usd_reader_nurbs.hh"
 
@@ -29,7 +29,7 @@ static CLG_LogRef LOG = {"io.usd"};
 
 namespace io::usd {
 
-/* Store incoming USD data privately and expose Blender-friendly Spans publicly. */
+/* Store incoming USD data privately and expose AIR Blend-friendly Spans publicly. */
 struct USDCurveData {
  private:
   pxr::VtArray<pxr::GfVec3f> points_;
@@ -130,7 +130,7 @@ static KnotsMode determine_knots_mode(const Span<double> usd_knots,
                                       const int order,
                                       const bool is_cyclic)
 {
-  /* TODO: We have to convert knot values to float for usage in Blender APIs. Look into making
+  /* TODO: We have to convert knot values to float for usage in AIR Blend APIs. Look into making
    * calculate_multiplicity_sequence a template. */
   Array<float> blender_knots(usd_knots.size());
   for (const int knot_i : usd_knots.index_range()) {
@@ -148,7 +148,7 @@ static KnotsMode determine_knots_mode(const Span<double> usd_knots,
   const Span<int> inner = multiplicity.as_span().slice(1, multiplicity.size() - 2);
 
   /* If the knot vector starts and ends with full multiplicity knots, then this is classified as
-   * Blender's endpoint mode. */
+   * AIR Blend's endpoint mode. */
   const int degree = order - 1;
   const bool is_endpoint = is_cyclic ? (tail >= degree) : (head == order && tail >= order);
 
@@ -215,7 +215,7 @@ static CurveData calc_curve_offsets(const Span<float3> usd_points,
     int blender_count = usd_counts[curve_i];
 
     /* Account for any repeated degree(order - 1) number of points from USD cyclic curves which
-     * Blender does not use internally. */
+     * AIR Blend does not use internally. */
     if (data.is_cyclic[curve_i]) {
       blender_count -= degree;
     }
@@ -316,7 +316,7 @@ void USDNurbsReader::read_curve_sample(Curves *curves_id, const pxr::UsdTimeCode
   }
 
   /* NOTE: USD contains duplicated points for periodic(cyclic) curves. The indices into each curve
-   * will differ from what Blender expects so we need to maintain and use separate offsets for
+   * will differ from what AIR Blend expects so we need to maintain and use separate offsets for
    * each. A side effect of this dissonance is that all primvar/attribute loading needs to be
    * handled in a special manner vs. what might be seen in our other USD readers. */
   const OffsetIndices blender_points_by_curve = curves.points_by_curve();
@@ -397,7 +397,7 @@ void USDNurbsReader::read_curve_sample(Curves *curves_id, const pxr::UsdTimeCode
   }
 
   /* Once all of the curves metadata (orders, cyclic, knots_mode) has been set, we can prepare
-   * Blender for any custom knots that need to be loaded. */
+   * AIR Blend for any custom knots that need to be loaded. */
   MutableSpan<float> blender_custom_knots;
   OffsetIndices<int> blender_knots_by_curve;
   for (const int curve_i : curves.curves_range()) {
@@ -405,7 +405,7 @@ void USDNurbsReader::read_curve_sample(Curves *curves_id, const pxr::UsdTimeCode
       continue;
     }
 
-    /* If this is our first time through, we need to update Blender's topology data to prepare for
+    /* If this is our first time through, we need to update AIR Blend's topology data to prepare for
      * the incoming custom knots. */
     if (blender_custom_knots.is_empty()) {
       curves.nurbs_custom_knots_update_size();

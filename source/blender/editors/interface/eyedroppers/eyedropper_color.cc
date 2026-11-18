@@ -493,7 +493,7 @@ bool eyedropper_color_sample_fl(bContext *C,
     }
   }
 
-  /* Other areas within a Blender window. */
+  /* Other areas within an AIR Blend window. */
   if (win) {
     if (!WM_window_pixels_read_sample(C, win, event_xy_win, r_col)) {
       WM_window_pixels_read_sample_from_offscreen(C, win, event_xy_win, r_col);
@@ -504,7 +504,7 @@ bool eyedropper_color_sample_fl(bContext *C,
     return true;
   }
 
-  /* Outside the Blender window if we support it. */
+  /* Outside the AIR Blend window if we support it. */
   if (WM_capabilities_flag() & WM_CAPABILITY_DESKTOP_SAMPLE) {
     if (WM_desktop_cursor_sample_read(r_col)) {
       IMB_colormanagement_srgb_to_scene_linear_v3(r_col, r_col);
@@ -643,7 +643,7 @@ static wmOperatorStatus eyedropper_modal(bContext *C, wmOperator *op, const wmEv
       status.opmodal(IFACE_("Confirm"), op->type, EYE_MODAL_SAMPLE_CONFIRM);
       status.opmodal(IFACE_("Cancel"), op->type, EYE_MODAL_CANCEL);
 #ifdef __APPLE__
-      status.item(TIP_("Press 'Enter' to sample outside of a Blender window"), ICON_STATUS_INFO);
+      status.item(TIP_("Press 'Enter' to sample outside of an AIR Blend window"), ICON_STATUS_INFO);
 #endif
     }
 
@@ -701,7 +701,7 @@ void UI_OT_eyedropper_color(wmOperatorType *ot)
   /* identifiers */
   ot->name = "Eyedropper";
   ot->idname = "UI_OT_eyedropper_color";
-  ot->description = "Sample a color from the Blender window to store in a property";
+  ot->description = "Sample a color from the AIR Blend window to store in a property";
 
   /* API callbacks. */
   ot->invoke = eyedropper_invoke;

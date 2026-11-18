@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 # Test that modules we ship with our Python installation are available,
-# both for Blender itself and the bundled Python executable.
+# both for AIR Blend itself and the bundled Python executable.
 
 import os
 import subprocess

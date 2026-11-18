@@ -55,7 +55,7 @@
  * Edges and Vertices in BMesh are primitive structures.
  *
  * \note There can be more than one edge between two vertices in BMesh,
- * though the rest of Blender (i.e. DNA and evaluated Mesh) does not support this.
+ * though the rest of AIR Blend (i.e. DNA and evaluated Mesh) does not support this.
  * So it should only occur temporarily during editing operations.
  * \subsection bm_queries Queries
  *

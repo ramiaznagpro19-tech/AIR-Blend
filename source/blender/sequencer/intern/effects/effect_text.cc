@@ -823,7 +823,7 @@ int text_effect_font_get(TextVars &text)
   }
 
   if (font < 0) {
-    /* Try to fallback to the default Blender monospaced font. */
+    /* Try to fallback to the default AIR Blend monospaced font. */
     std::lock_guard lock(g_font_map.mutex);
     if (g_fallback_font_id >= 0 && !BLF_is_loaded_id(g_fallback_font_id)) {
       g_fallback_font_id = -1;

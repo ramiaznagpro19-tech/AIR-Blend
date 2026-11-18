@@ -26,7 +26,7 @@
 #import <Metal/Metal.h>
 
 /* --------------------------------------------------------------------
- * Blender window delegate object.
+ * AIR Blend window delegate object.
  */
 
 @interface BlenderWindowDelegate : NSObject <NSWindowDelegate>
@@ -143,7 +143,7 @@
 
 - (BOOL)windowShouldClose:(id)sender;
 {
-  /* Let Blender close the window rather than closing immediately. */
+  /* Let AIR Blend close the window rather than closing immediately. */
   system_cocoa_->handleWindowEvent(GHOST_kEventWindowClose, window_cocoa_);
   return false;
 }
@@ -404,7 +404,7 @@ GHOST_WindowCocoa::GHOST_WindowCocoa(GHOST_SystemCocoa *systemCocoa,
         metal_layer_.colorspace = colorspace;
         CGColorSpaceRelease(colorspace);
 
-        /* For Blender to know if this window supports HDR. */
+        /* For AIR Blend to know if this window supports HDR. */
         hdr_info_.hdr_enabled = true;
         hdr_info_.wide_gamut_enabled = true;
         hdr_info_.sdr_white_level = 1.0f;

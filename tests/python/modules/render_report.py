@@ -596,7 +596,7 @@ class Report:
             return [TestResult(self, filepath, testname)]
 
     def _run_tests(self, filepaths, blender, arguments_cb, batch):
-        # Run multiple tests in a single Blender process since startup can be
+        # Run multiple tests in a single AIR Blend process since startup can be
         # a significant factor. In case of crashes, re-run the remaining tests.
         verbose = os.environ.get("BLENDER_VERBOSE") is not None
 
@@ -703,7 +703,7 @@ class Report:
 
         for test in test_results:
             if test.error == "CRASH":
-                print_message("Crash running Blender")
+                print_message("Crash running AIR Blend")
                 print_message(test.name, 'FAILURE', 'FAILED')
             elif test.error == "NO OUTPUT":
                 print_message("No render result file found")
@@ -721,7 +721,7 @@ class Report:
 
     def postprocess_test(self, blender, test):
         """
-        Post-process test result after the Blender has run.
+        Post-process test result after the AIR Blend has run.
         For example, this function is where conversion from video to a still image suitable for image diffing.
         """
 
@@ -729,7 +729,7 @@ class Report:
 
     def _run_all_tests(self, dirname, dirpath, blender, arguments_cb, batch, fail_silently):
         if self.filter:
-            print_message(f"Note: Blender Test filter = {self.filter}", type='WARNING', status="RAW")
+            print_message(f"Note: AIR Blend Test filter = {self.filter}", type='WARNING', status="RAW")
 
         passed_tests = []
         failed_tests = []

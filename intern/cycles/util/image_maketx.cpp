@@ -768,7 +768,7 @@ static bool make_tx(const string &filepath,
   spec.extra_attribs = in_spec.extra_attribs;
 
   /* Software info, version is used to detect if file format is known by old versions. */
-  spec.attribute("Software", string_printf("Blender maketx v%d", TX_FILE_FORMAT_VERSION));
+  spec.attribute("Software", string_printf("AIR Blend maketx v%d", TX_FILE_FORMAT_VERSION));
 
   /* Compression. */
   std::string in_compression = in_spec.get_string_attribute("compression", "none");

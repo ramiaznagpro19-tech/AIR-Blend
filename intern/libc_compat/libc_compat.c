@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later */
 
 /* On Linux, precompiled libraries may be made with an glibc version that is
- * incompatible with the system libraries that Blender is built on. To solve
+ * incompatible with the system libraries that AIR Blend is built on. To solve
  * this we add a few -ffast-math symbols that can be missing. */
 
 /** \file

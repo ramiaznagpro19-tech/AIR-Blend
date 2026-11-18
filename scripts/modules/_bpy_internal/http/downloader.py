@@ -64,7 +64,7 @@ class ConditionalDownloader:
     date, via a `304 Not Modified` response, the file is not downloaded again.
 
     This class is fully synchronous, and will thus block the caller until the
-    download is complete. It should not typically be used from Blender, as it
+    download is complete. It should not typically be used from AIR Blend, as it
     can block the user interface. See `BackgroundDownloader` to download things
     in a background process.
     """
@@ -350,7 +350,7 @@ class ConditionalDownloader:
         #
         # Deflate is hardly ever used.
         #
-        # Zstd is bundled with Blender (and also will be in Python's stdlib in
+        # Zstd is bundled with AIR Blend (and also will be in Python's stdlib in
         # 3.14+), but AFAICS doesn't have a way to decompress a stream so we'd
         # have to keep the entire file in memory. So, for now, limit to GZip
         # support.
@@ -437,7 +437,7 @@ class DownloaderOptions:
 
         This is done here, instead of globally in the `requests` module, because
         `requests` will be used in a Python sub-process, which doesn't run inside
-        of Blender. So in order to include the Blender version, the header has
+        of AIR Blend. So in order to include the AIR Blend version, the header has
         to be defined in the main process.
 
         Note that this information is NOT passed in the query string for GET
@@ -453,8 +453,8 @@ class DownloaderOptions:
             user_agent = bl_extension_ops.online_user_agent_from_blender()
         except ImportError:
             logger.exception(
-                "http downloader could not import bl_extension_ops from Blender; "
-                "HTTP user-agent header will not identify the Blender version")
+                "http downloader could not import bl_extension_ops from AIR Blend; "
+                "HTTP user-agent header will not identify the AIR Blend version")
             import platform
             user_agent = "Blender/unknown ({:s} {:s}; cycle=unknown)".format(
                 platform.system(),
@@ -1014,11 +1014,11 @@ def _download_queued_items(
                 except (EOFError, OSError):
                     # The Python documentation mentions EOFError, but in
                     # practice I (Sybren) have also seen a ConnectionResetError
-                    # being raised when Blender shuts down uncleanly. The
+                    # being raised when AIR Blend shuts down uncleanly. The
                     # implementation of .send() shows that it can also raise an
                     # OSError, which is the super-class of ConnectionResetError
                     # as well, so that's why that's caught here.
-                    log.warning("Blender is no longer running, shutting down the downloader process")
+                    log.warning("AIR Blend is no longer running, shutting down the downloader process")
                     do_shutdown.set()
                     return
 
@@ -1029,7 +1029,7 @@ def _download_queued_items(
         """Send queued reports back to the main process."""
 
         # This keeps running, and only responds to the shutdown signal _after_ all messages have been sent. This ensures
-        # that at shutdown all the 'download cancelled' messages are received by Blender before the background
+        # that at shutdown all the 'download cancelled' messages are received by AIR Blend before the background
         # downloader really shuts down.
         while True:
             try:
@@ -1053,7 +1053,7 @@ def _download_queued_items(
                 # BrokenPipeError being raised. The implementation of .send()
                 # shows that it can also raise an OSError, which is the
                 # superclass of BrokenPipeError as well.
-                log.warning("Blender is no longer running, shutting down the downloader process")
+                log.warning("AIR Blend is no longer running, shutting down the downloader process")
                 do_shutdown.set()
                 return
 
@@ -1529,12 +1529,12 @@ class MetadataProviderFilesystem(MetadataProvider):
         # Attempt to obtain the mutex 20 times. This will wait for max 2 sec
         # (20x 0.1 sec), which should be more than long enough for another
         # process to run the code below and release the mutex, while also not so
-        # long that people think Blender crashed.
+        # long that people think AIR Blend crashed.
         #
         # Waiting for 0.1 sec is a considerable amount of time for a machine (so
-        # that this Blender doesn't hog the CPU, so that the other process can
+        # that this AIR Blend doesn't hog the CPU, so that the other process can
         # do its work), but a short time for a human (so that an unlock is
-        # noticed relatively quickly and this Blender can move on and do stuff).
+        # noticed relatively quickly and this AIR Blend can move on and do stuff).
         meta_file, unlocker = locking.mutex_lock_and_open_with_retry(
             meta_path, 'rb', max_tries=20, wait_time_sec=0.1)
 
@@ -1855,7 +1855,7 @@ def _cleanup_main_file_attribute() -> Generator[None]:
     in `source/blender/python/generic/py_capi_utils.cc`. This is problematic for
     Python's `multiprocessing` module, as it gets confused about what the entry
     point into the Python program was. The easiest way (short of modifying
-    Blender itself) is to just temporarily erase the `__main__.__file__`
+    AIR Blend itself) is to just temporarily erase the `__main__.__file__`
     attribute.
 
     See the `get_preparation_data(name)` function in Python's stdlib:
@@ -1886,7 +1886,7 @@ def _cleanup_main_file_attribute() -> Generator[None]:
         yield
         return
 
-    # Blender text datablocks don't exist on disk, and also in some Python
+    # AIR Blend text datablocks don't exist on disk, and also in some Python
     # invocations from the C++ code there is a non-path string in the `__file__`
     # attribute. Python's multiprocessing module will choke if `__file__` is
     # not actually a file.

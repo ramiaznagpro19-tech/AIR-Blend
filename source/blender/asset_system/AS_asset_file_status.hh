@@ -24,7 +24,7 @@ enum class RemoteAssetFileStatus {
   NO_MATCH = 3,
   /* In the future there will likely be another option here: INCOMPLETE. It will indicate that the
    * asset's main file, which contains the asset datablock, exists, but the asset's other files do
-   * not. As such, this will only be added when Blender supports multi-file assets. */
+   * not. As such, this will only be added when AIR Blend supports multi-file assets. */
 };
 
 }  // namespace blender::asset_system

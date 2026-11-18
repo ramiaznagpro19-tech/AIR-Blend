@@ -4,7 +4,7 @@
 
 string(TIMESTAMP CURRENT_YEAR "%Y")
 
-set(PROJECT_DESCRIPTION  "Blender is the free and open source 3D creation suite software.")
+set(PROJECT_DESCRIPTION  "AIR Blend is the free and open source 3D creation suite software.")
 set(PROJECT_COPYRIGHT    "Copyright (C) 2001-${CURRENT_YEAR} Blender Authors")
 set(PROJECT_CONTACT      "foundation@blender.org")
 set(PROJECT_VENDOR       "Blender Foundation")
@@ -113,8 +113,8 @@ if(WIN32)
   set(CPACK_WIX_LIGHT_EXTRA_FLAGS -dcl:medium)
 endif()
 
-set(CPACK_PACKAGE_EXECUTABLES "blender-launcher" "Blender ${MAJOR_VERSION}.${MINOR_VERSION}")
-set(CPACK_CREATE_DESKTOP_LINKS "blender-launcher" "Blender ${MAJOR_VERSION}.${MINOR_VERSION}")
+set(CPACK_PACKAGE_EXECUTABLES "blender-launcher" "AIR Blend ${MAJOR_VERSION}.${MINOR_VERSION}")
+set(CPACK_CREATE_DESKTOP_LINKS "blender-launcher" "AIR Blend ${MAJOR_VERSION}.${MINOR_VERSION}")
 
 include(CPack)
 

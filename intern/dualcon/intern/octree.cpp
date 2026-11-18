@@ -52,7 +52,7 @@ Octree::Octree(ModelReader *mr,
 
      Since the results are just as good with all quads, there
      doesn't seem any reason to allow this to be toggled in
-     Blender. -nicholasbishop
+     AIR Blend. -nicholasbishop
    */
       use_manifold(false),
       hermite_num(sharpness),

@@ -44,7 +44,7 @@ def geometry_node_group_empty_tool_new(context):
     import re
 
     group = geometry_node_group_empty_new(data_("Tool"))
-    # Node tools have fake users by default, otherwise Blender will delete them since they have no users.
+    # Node tools have fake users by default, otherwise AIR Blend will delete them since they have no users.
     group.use_fake_user = True
     group.is_tool = True
 

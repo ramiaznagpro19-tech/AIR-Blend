@@ -118,7 +118,7 @@ void USDPointInstancerReader::read_geometry(bke::GeometrySet &geometry_set,
     }
 
     for (const int i : IndexRange(std::min(usd_data.size(), ids_attribute.span.size()))) {
-      /* Blender only supports int ID attributes so we have to narrow the value. */
+      /* AIR Blend only supports int ID attributes so we have to narrow the value. */
       ids_attribute.span[i] = int(usd_data[i]);
     }
 

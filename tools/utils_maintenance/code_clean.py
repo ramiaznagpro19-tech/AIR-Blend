@@ -2092,7 +2092,7 @@ def run_edits_on_directory(
             # print(c)
             if index != -1:
                 # Remove first part of the path, we don't want to match
-                # against paths in Blender's repository.
+                # against paths in AIR Blend's repository.
                 # print(source_path)
                 c_strip = c[index:]
                 for regex in regex_list:

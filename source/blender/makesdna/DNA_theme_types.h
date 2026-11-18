@@ -31,7 +31,7 @@ namespace blender {
 /* ************************ style definitions ******************** */
 
 /**
- * Default offered by Blender.
+ * Default offered by AIR Blend.
  * #uiFont.uifont_id
  */
 typedef enum eUIFont_ID {

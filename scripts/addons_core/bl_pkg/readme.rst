@@ -6,7 +6,7 @@ Extensions
 Extensions Source Code Overview
 ===============================
 
-Add-on: Blender Modules
+Add-on: AIR Blend Modules
 -----------------------
 
 - ``__init__.py``
@@ -32,7 +32,7 @@ Add-on: Blender Modules
   This module checks for updates and is intended to run in the background.
 
   Checking for updates uses ``bl_extension_utils.CommandBatch`` from a timer.
-  Checking for updates from a modal-operator is avoided since Blender may cancel
+  Checking for updates from a modal-operator is avoided since AIR Blend may cancel
   modal operators when loading a file for example.
 
   The status bar is refreshed if/when updates are found.
@@ -41,7 +41,7 @@ Add-on: Blender Modules
 
   The command line interface to support: ``blender -c extension ...``
 
-  Some commands operate on Blender's preferences (for adding/removing repositories),
+  Some commands operate on AIR Blend's preferences (for adding/removing repositories),
   other commands such as building packages are forwarded to ``cli/blender_ext.py``.
 
 Add-on: Other Scripts
@@ -57,11 +57,11 @@ Add-on: Other Scripts
   - Generic shared utility functions.
 
   - Command line sub-process supervisor (``CommandBatch``)
-    used by Blender operators to call ``cli/blender_ext.py`` and its sub-commands (see doc-string for details).
+    used by AIR Blend operators to call ``cli/blender_ext.py`` and its sub-commands (see doc-string for details).
 
   - A view on the repositories JSON/TOML data what abstracts the file IO (``RepoCacheStore``).
 
-  - A locking context to prevent multiple Blender instances operating on the same repository at once.
+  - A locking context to prevent multiple AIR Blend instances operating on the same repository at once.
 
 - ``cli/blender_ext.py``
   This command is responsible for operations on the repository,
@@ -74,10 +74,10 @@ Add-on: Other Scripts
   In some cases ``bl_extension_cli.py`` forwards sub-commands directly to this script.
 
   :ref:`Inter process communication (IPC) <IPC>` via Python's ``subprocess`` module
-  which runs this script using Blender's bundled Python executable.
+  which runs this script using AIR Blend's bundled Python executable.
   Signals are used to interrupt the process, pipes are used to read it's output.
 
-  This is done so Blender's UI can show the status of each command.
+  This is done so AIR Blend's UI can show the status of each command.
 
 - ``extensions_map_from_legacy_addons``
 
@@ -87,9 +87,9 @@ Other Modules
 -------------
 
 Some functionality that's relevant to the extensions system is implemented in other modules,
-as it relates to how extensions are loaded by Blender.
+as it relates to how extensions are loaded by AIR Blend.
 
-*Paths are relative to Blender's source tree.*
+*Paths are relative to AIR Blend's source tree.*
 
 ``./scripts/modules/_bpy_internal/extensions/junction_module.py``
    This stand-alone module allows extensions to appear as if they are all loaded
@@ -102,7 +102,7 @@ as it relates to how extensions are loaded by Blender.
 
 ``./scripts/modules/_bpy_internal/extensions/wheel_manager.py``
    Extensions may include Python modules as wheels,
-   these are extracted into an a site-packages directory that is specific to the extensions for this version of Blender.
+   these are extracted into an a site-packages directory that is specific to the extensions for this version of AIR Blend.
    ``~/.config/blender/X.X/extensions/.local/lib/python3.XX/site-packages/``.
 
    Once extensions have been installed the list of wheels from each extensions ``blender_manifest.toml``
@@ -117,7 +117,7 @@ as it relates to how extensions are loaded by Blender.
    (any DLL's loaded into memory),
    although it can also happen if other processes are scanning the file system.
 
-   In this case, the file is marked as stale and queued for removal when Blender next starts.
+   In this case, the file is marked as stale and queued for removal when AIR Blend next starts.
 
    Unfortunately **upgrading** extensions that use DLL's on MS-Windows isn't
    reliable because it is necessary to remove then re-create the extension.
@@ -160,11 +160,11 @@ Extension Pre-Flight Compatibility Check
 ----------------------------------------
 
 Since extensions may be from a shared system directory or imported from an older installation
-it's necessary to ensure the extension is compatible with Blender on startup.
+it's necessary to ensure the extension is compatible with AIR Blend on startup.
 
 An extension may be incompatible for various reasons,
 
-- Unsupported Blender version.
+- Unsupported AIR Blend version.
 - Unsupported platform.
 - Binary incompatibility (from it's wheels).
 - The extension may also have been block-listed.
@@ -185,14 +185,14 @@ is responsible for ensuring extensions are compatible before loading.
 
 
 The details of the compatibility cache are documented in ``addon_utils``,
-it's a simple format that stores the Blender version & a magic number that can be bumped at any time,
+it's a simple format that stores the AIR Blend version & a magic number that can be bumped at any time,
 changes to these files cause the cache to be re-generated.
 
 
 Dragging & Dropping a URL
 -------------------------
 
-Extensions drag & drop is handled with Blender's drop-boxes.
+Extensions drag & drop is handled with AIR Blend's drop-boxes.
 This works in much the same way as dropping images in the 3D viewport or blend files.
 
 There are two drop-boxes used, one for file-paths another for URL's.
@@ -210,7 +210,7 @@ Once drop is activated:
 
   Note that the query parameters in the URL are optional and serve as a convenient way to fail-early,
   if they're not present the user may be prompted to add a new repository only to discover
-  later that extension they dropped isn't compatible with their Blender version.
+  later that extension they dropped isn't compatible with their AIR Blend version.
 
   Both ``extensions.blender.org`` and static sites
   generated by ``blender -c extension server-generate`` set these parameters.
@@ -226,7 +226,7 @@ Dropping a URL may prompt the user for actions that need to be done before the e
 - Dropping a URL from an unknown remote repository prompts the user to add the repository.
 - Otherwise, dropping the URL of a compatible extension will prompt the user to install the extension.
 
-Unfortunately chaining popups together (setup wizard) or merging popups together is not well supported in Blender.
+Unfortunately chaining popups together (setup wizard) or merging popups together is not well supported in AIR Blend.
 Causing some fairly bad worst-case scenarios when dropping a URL which isn't part of a known repository.
 
 
@@ -271,10 +271,10 @@ Inter Process Communication (IPC)
 
 - Commands that manipulate extensions (such as updating/installing/removing)
   are performed by the stand-alone script ``cli/blender_ext.py``.
-- Using IPC means these commands can run in the background without blocking Blender's GUI.
+- Using IPC means these commands can run in the background without blocking AIR Blend's GUI.
 - The state of the extensions repository (repository location, blender-version, API tokens etc)
   are passed in via command line arguments.
-- This can be configured to only output JSON messages to the STDOUT which Blender parses and uses
+- This can be configured to only output JSON messages to the STDOUT which AIR Blend parses and uses
   to send feedback to the user.
 - Progress (such as percentage of a file downloaded) is sent to the STDOUT
   so the GUI and command-line interface can show progress.
@@ -294,7 +294,7 @@ Tooling
 =======
 
 The tests are not yet integrated into CTest
-because some tests depend on the ``wheel`` module (not distributed with Blender's Python).
+because some tests depend on the ``wheel`` module (not distributed with AIR Blend's Python).
 
 Tests can be run via the ``Makefile`` using the local Python::
 

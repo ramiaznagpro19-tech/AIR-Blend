@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  *
- * Original code by Pixar with modifications by the Blender foundation. */
+ * Original code by Pixar with modifications by the AIR Blend foundation. */
 
 #include "internal/evaluator/patch_map.h"
 #include <algorithm>

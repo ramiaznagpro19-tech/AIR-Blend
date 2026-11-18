@@ -42,7 +42,7 @@ void EIG_svd_square_matrix(const int size, const float *matrix, float *r_U, floa
   /* Since our matrix is squared, we can use thinU/V. */
   unsigned int flags = (r_U ? ComputeThinU : 0) | (r_V ? ComputeThinV : 0);
 
-  /* Blender and Eigen matrices are both column-major. */
+  /* AIR Blend and Eigen matrices are both column-major. */
   JacobiSVD<MatrixXf, NoQRPreconditioner> svd(Map<MatrixXf>((float *)matrix, size, size), flags);
 
   if (r_U) {

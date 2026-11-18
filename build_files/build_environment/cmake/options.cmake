@@ -229,7 +229,7 @@ else()
   if(APPLE)
     set(SHAREDLIBEXT ".dylib")
 
-    # Use same Xcode detection as Blender itself.
+    # Use same Xcode detection as AIR Blend itself.
     include(../cmake/platform/platform_apple_xcode.cmake)
 
     if("${CMAKE_OSX_ARCHITECTURES}" STREQUAL "arm64")
@@ -264,7 +264,7 @@ else()
 
     # Target ARMv8.2-A with dot product and half float.
     if(BLENDER_PLATFORM_ARM AND NOT ANDROID)
-      # NOTE: Could *perhaps* enable on Android, needs support investigation, also disabled for main Blender builds for now.
+      # NOTE: Could *perhaps* enable on Android, needs support investigation, also disabled for main AIR Blend builds for now.
       set(PLATFORM_CFLAGS "${PLATFORM_CFLAGS} -march=armv8.2-a+dotprod+fp16+lse")
       set(PLATFORM_CXXFLAGS "${PLATFORM_CXXFLAGS} -fPIC -march=armv8.2-a+dotprod+fp16+lse")
     endif()

@@ -220,7 +220,7 @@ EmittedMaterial build_emitted_material(const PopulateContext &ctx, const Materia
   }
 
   /* Publish the network under every render context plus the universal fallback.
-   * Blender does have solid viewport material parameters but Hydra is only used for
+   * AIR Blend does have solid viewport material parameters but Hydra is only used for
    * the rendered display mode. */
   pxr::HdContainerDataSourceHandle network_ds = build_material_network_data_source(network_map);
   HdContainerBuilder b;

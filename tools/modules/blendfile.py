@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 # -----------------------------------------------------------------------------
-# NOTICE: this module is expanded upon in Blender Asset Tracer.
+# NOTICE: this module is expanded upon in AIR Blend Asset Tracer.
 #
 # See https://projects.blender.org/blender/blender-asset-tracer
 # and https://pypi.org/project/blender-asset-tracer/

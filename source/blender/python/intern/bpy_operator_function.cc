@@ -6,7 +6,7 @@
  * \ingroup pythonintern
  *
  * This file implements the #BPyOpFunction type,
- * a Python C-API implementation of a callable Blender operator.
+ * a Python C-API implementation of a callable AIR Blend operator.
  */
 
 #include <Python.h>
@@ -53,7 +53,7 @@ namespace blender {
 /**
  * A callable operator.
  *
- * Exposed by `bpy.ops.{module}.{operator}()` to allow Blender operators to be called from Python.
+ * Exposed by `bpy.ops.{module}.{operator}()` to allow AIR Blend operators to be called from Python.
  */
 struct BPyOpFunction {
   PyObject_HEAD
@@ -65,7 +65,7 @@ struct BPyOpFunction {
 #define BPY_RELEASE_GIL
 
 /**
- * Convert a Blender-format operator name to Python-format, returning the buffer for inline use.
+ * Convert an AIR Blend-format operator name to Python-format, returning the buffer for inline use.
  */
 static const char *opname_as_py(const char *opname, char opname_buf[OP_MAX_TYPENAME])
 {
@@ -636,7 +636,7 @@ PyDoc_STRVAR(
     bpy_op_fn_idname_doc,
     ".. method:: idname()\n"
     "\n"
-    ":return: Return the Blender-format operator idname (e.g., 'OBJECT_OT_select_all').\n"
+    ":return: Return the AIR Blend-format operator idname (e.g., 'OBJECT_OT_select_all').\n"
     ":rtype: str\n");
 static PyObject *bpy_op_fn_idname(BPyOpFunction *self, PyObject * /*args*/)
 {
@@ -659,8 +659,8 @@ static PyObject *bpy_op_fn_idname_py(BPyOpFunction *self, PyObject * /*args*/)
 
 static PyObject *bpy_op_fn_get_doc_impl(BPyOpFunction *self)
 {
-  /* Get operator signature using Blender format idname:
-   * `_op_as_string(self.idname())` where `idname()` returns Blender format. */
+  /* Get operator signature using AIR Blend format idname:
+   * `_op_as_string(self.idname())` where `idname()` returns AIR Blend format. */
   PyObject *sig_result = bpy_op_fn_as_string(self);
 
   if (!sig_result) {
@@ -671,7 +671,7 @@ static PyObject *bpy_op_fn_get_doc_impl(BPyOpFunction *self)
     return PyUnicode_FromFormat("bpy.ops.%s(...)", idname_py);
   }
 
-  /* Get RNA type and description using Blender format idname. */
+  /* Get RNA type and description using AIR Blend format idname. */
   PyObject *rna_type = bpy_op_fn_get_rna_type(self, nullptr);
 
   if (!rna_type) {
@@ -851,7 +851,7 @@ PyObject *pyop_create_function(PyObject * /*self*/, PyObject *args)
     return nullptr;
   }
 
-  /* Construct the Blender `idname` (e.g., `OBJECT_OT_select_all`). */
+  /* Construct the AIR Blend `idname` (e.g., `OBJECT_OT_select_all`). */
   char op_mod_str_upper[OP_MAX_TYPENAME];
   STRNCPY(op_mod_str_upper, op_mod_str);
   BLI_str_toupper_ascii(op_mod_str_upper, sizeof(op_mod_str_upper));

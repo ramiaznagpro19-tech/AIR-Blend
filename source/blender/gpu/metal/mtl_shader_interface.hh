@@ -55,13 +55,13 @@ namespace blender::gpu {
  * by providing bind-less support.
  *
  * Argument Buffers are used for sampler bindings when the builtin
- * sampler limit of 16 is exceeded, as in all cases for Blender,
+ * sampler limit of 16 is exceeded, as in all cases for AIR Blend,
  * each individual texture is associated with a given sampler, and this
  * lower limit would otherwise reduce the total availability of textures
  * used in shaders.
  *
  * In future, argument buffers may be extended to support other resource
- * types, if overall bind limits are ever increased within Blender.
+ * types, if overall bind limits are ever increased within AIR Blend.
  *
  * The #ArgumentEncoder cache used to store the generated #ArgumentEncoders for a given
  * shader permutation. The #ArgumentEncoder is the resource used to write resource binding

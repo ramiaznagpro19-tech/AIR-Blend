@@ -39,7 +39,7 @@ class DiskFileHashService:
             return
 
         # Remove (potentially) outdated hashes. This is done on close, and not
-        # on open, to give Blender the time to query files it needs.
+        # on open, to give AIR Blend the time to query files it needs.
         #
         # TODO: as a future improvement, we could investigate (instead of
         # delete) hashes that are older than X days. If they reference files

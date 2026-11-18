@@ -6,7 +6,7 @@
  * \ingroup render
  *
  * \brief The API itself is simple.
- * Blender sends a populated array of BakePixels to the renderer,
+ * AIR Blend sends a populated array of BakePixels to the renderer,
  * and gets back an array of floats with the result.
  *
  * \section bake_api Development Notes for External Engines

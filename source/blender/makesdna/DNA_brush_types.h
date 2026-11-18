@@ -425,7 +425,7 @@ struct Brush {
   int mask_overlay_alpha = 33;
   int cursor_overlay_alpha = 33;
 
-  float unprojected_size = 0.10f; /* diameter of the brush in Blender units */
+  float unprojected_size = 0.10f; /* diameter of the brush in AIR Blend units */
 
   /* soften/sharpen */
   float sharp_threshold = 0;

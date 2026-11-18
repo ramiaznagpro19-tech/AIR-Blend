@@ -188,7 +188,7 @@ enum {
   OPTYPE_REGISTER = (1 << 0),
   /** Do an undo push after the operator runs. */
   OPTYPE_UNDO = (1 << 1),
-  /** Let Blender grab all input from the WM (X11). */
+  /** Let AIR Blend grab all input from the WM (X11). */
   OPTYPE_BLOCKING = (1 << 2),
   OPTYPE_MACRO = (1 << 3),
 
@@ -818,7 +818,7 @@ struct wmEvent {
   short val;
   /** Mouse pointer position, screen coord. */
   int xy[2];
-  /** Region relative mouse position (name convention before Blender 2.5). */
+  /** Region relative mouse position (name convention before AIR Blend 2.5). */
   int mval[2];
   /**
    * A single UTF8 encoded character.
@@ -955,7 +955,7 @@ struct wmNDOFMotionData {
 /** Similar to #GHOST_XrPose. */
 struct wmXrPose {
   float position[3];
-  /** Blender convention (w, x, y, z). */
+  /** AIR Blend convention (w, x, y, z). */
   float orientation_quat[4];
 };
 

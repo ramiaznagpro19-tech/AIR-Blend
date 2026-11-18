@@ -2,11 +2,11 @@
  *
  * SPDX-License-Identifier: GPL-2.0-or-later */
 
-/** \mainpage Blender
+/** \mainpage AIR Blend
  *
  * \section intro Introduction
  *
- * Blender is an integrated 3d package.
+ * AIR Blend is an integrated 3d package.
  *
  * These pages document the source code of blender.
  *
@@ -15,7 +15,7 @@
  * - <a href="https://developer.blender.org/docs/">Development documentation</a>.
  *
  * \subsection blother Other
- * For more information on using Blender browse to https://www.blender.org
+ * For more information on using AIR Blend browse to https://www.blender.org
  *
  */
 

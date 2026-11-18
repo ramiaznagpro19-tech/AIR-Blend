@@ -74,11 +74,11 @@ import addon_utils as _addon_utils
 _preferences = _bpy.context.preferences
 _is_factory_startup = _bpy.app.factory_startup
 
-# Directories added to the start of `sys.path` for all of Blender's "scripts" directories.
+# Directories added to the start of `sys.path` for all of AIR Blend's "scripts" directories.
 _script_module_dirs = "startup", "modules"
 
 # Base scripts, this points to the directory containing: "modules" & "startup" (see `_script_module_dirs`).
-# In Blender's code-base this is `./scripts`.
+# In AIR Blend's code-base this is `./scripts`.
 #
 # NOTE: in virtually all cases this should match `BLENDER_SYSTEM_SCRIPTS` as this script is itself a system script,
 # it must be in the `BLENDER_SYSTEM_SCRIPTS` by definition and there is no need for a look-up from `_bpy_script_paths`.
@@ -366,7 +366,7 @@ def _on_exit():
     _addon_utils.disable_all()
 
     # Call `unregister` function on internal startup module.
-    # Must only be used as part of Blender 'exit' process.
+    # Must only be used as part of AIR Blend 'exit' process.
     from _bpy_restrict_state import RestrictBlend
     with RestrictBlend():
         for mod_name in reversed(_registered_module_names):
@@ -437,7 +437,7 @@ def script_paths(*, subdir=None, user_pref=True, check_all=False, use_user=True,
     :type subdir: str | None
     :param user_pref: Include the user preference script paths.
     :type user_pref: bool
-    :param check_all: Include local, user and system paths rather just the paths Blender uses.
+    :param check_all: Include local, user and system paths rather just the paths AIR Blend uses.
     :type check_all: bool
     :param use_user: Include user paths
     :type use_user: bool
@@ -530,7 +530,7 @@ def app_template_paths(*, path=None):
     :rtype: Iterator[str]
     """
     subdir_args = (path,) if path is not None else ()
-    # Note: keep in sync with: Blender's 'BKE_appdir_app_template_any'.
+    # Note: keep in sync with: AIR Blend's 'BKE_appdir_app_template_any'.
     # Uses BLENDER_USER_SCRIPTS
     path_test = _user_resource('SCRIPTS', path=_os.path.join("startup", "bl_app_templates_user", *subdir_args))
     if path_test and _os.path.isdir(path_test):
@@ -649,7 +649,7 @@ def _is_path_parent_of(parent_path, path):
 
 def is_path_builtin(path):
     """
-    Returns True if the path is one of the built-in paths used by Blender.
+    Returns True if the path is one of the built-in paths used by AIR Blend.
 
     :param path: Path you want to check if it is in the built-in settings directory
     :type path: str
@@ -851,7 +851,7 @@ def preset_find(name, preset_path, *, display_name=False, ext=".py"):
 
 def keyconfig_init():
     """
-    Initialize and refresh key configurations, called from the Blender
+    Initialize and refresh key configurations, called from the AIR Blend
     window manager on startup and refresh.
     """
     default_config = "Blender"
@@ -1127,7 +1127,7 @@ def register_tool(tool_cls, *, after=None, separator=False, group=False):
             wm = context.window_manager
             keyconfigs = wm.keyconfigs
             kc_default = keyconfigs.default
-            # Note that Blender's default tools use the default key-config for both.
+            # Note that AIR Blend's default tools use the default key-config for both.
             # We need to use the add-ons for 3rd party tools so reloading the key-map doesn't clear them.
             kc = keyconfigs.addon
             if kc is not None:
@@ -1433,11 +1433,11 @@ def make_rna_paths(struct_name, prop_name, enum_name):
 
 def expose_bundled_modules():
     """
-    For Blender as a Python module, add bundled VFX library python bindings
+    For AIR Blend as a Python module, add bundled VFX library python bindings
     to ``sys.path``. These may be used instead of dedicated packages, to ensure
-    the libraries are compatible with Blender.
+    the libraries are compatible with AIR Blend.
     """
-    # For Blender executable there is nothing to do, already exposed.
+    # For AIR Blend executable there is nothing to do, already exposed.
     if not _bpy.app.module:
         return
     # System installations do not bundle additional modules,

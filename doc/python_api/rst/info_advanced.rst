@@ -6,7 +6,7 @@ Advanced
 
 This chapter covers advanced use (topics which may not be required for typical usage).
 
-.. NOTE(@campbellbarton): Blender-as-a-Python-module is too obscure a topic to list directly on the main-page,
+.. NOTE(@campbellbarton): AIR Blend-as-a-Python-module is too obscure a topic to list directly on the main-page,
    so opt for an "Advanced" page which can be expanded on as needed.
 
 .. toctree::

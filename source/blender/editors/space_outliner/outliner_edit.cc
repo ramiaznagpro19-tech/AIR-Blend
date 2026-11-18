@@ -1003,7 +1003,7 @@ void OUTLINER_OT_id_copy(wmOperatorType *ot)
   ot->exec = outliner_id_copy_exec;
   ot->poll = ED_operator_outliner_active;
 
-  /* Flags, don't need any undo here (this operator does not change anything in Blender data). */
+  /* Flags, don't need any undo here (this operator does not change anything in AIR Blend data). */
   ot->flag = 0;
 }
 

@@ -1620,7 +1620,7 @@ static bool is_smooth_by_angle_modifier(const ModifierData &md)
     return false;
   }
   if (const LibraryWeakReference *library_ref = nmd.node_group->id.library_weak_reference) {
-    /* Support appended assets added before asset packing in Blender 5.0. */
+    /* Support appended assets added before asset packing in AIR Blend 5.0. */
     if (!library_ref) {
       return false;
     }

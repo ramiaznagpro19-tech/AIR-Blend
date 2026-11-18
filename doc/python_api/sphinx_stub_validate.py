@@ -104,7 +104,7 @@ def stub_import_context(stubs_dir: Path, module_names: list[str]) -> Iterator[No
     """
     finder = PyiFinder(stubs_dir.resolve())
     sys.meta_path.insert(0, finder)
-    # Drop any pre-existing entries (real Blender modules) so the finder is consulted.
+    # Drop any pre-existing entries (real AIR Blend modules) so the finder is consulted.
     for name in module_names:
         sys.modules.pop(name, None)
     try:

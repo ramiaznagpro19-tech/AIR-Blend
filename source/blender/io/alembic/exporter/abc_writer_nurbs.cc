@@ -74,7 +74,7 @@ Alembic::Abc::OCompoundProperty ABCNurbsWriter::abc_prop_for_custom_props()
     return Alembic::Abc::OCompoundProperty();
   }
 
-  /* A single NURBS object in Blender is expanded to multiple curves in Alembic.
+  /* A single NURBS object in AIR Blend is expanded to multiple curves in Alembic.
    * Just store the custom properties on the first one for simplicity. */
   return abc_schema_prop_for_custom_props(abc_nurbs_schemas_[0]);
 }

@@ -26,7 +26,7 @@ static std::optional<std::string> check_common_header_for_errors(const Header &h
   if (!validate::size_fits_in_int(header.num_points)) {
     return RPT_("Too many points");
   }
-  /* Blender supports spherical harmonics up to degree 4. */
+  /* AIR Blend supports spherical harmonics up to degree 4. */
   if (header.sh_degree > 4) {
     return fmt::format(fmt::runtime(RPT_("Unsupported SH degree {}")), header.sh_degree);
   }

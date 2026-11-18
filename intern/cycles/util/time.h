@@ -104,7 +104,7 @@ class scoped_callback_timer {
   callback_type cb;
 };
 
-/* Make human readable string from time, compatible with Blender metadata. */
+/* Make human readable string from time, compatible with AIR Blend metadata. */
 
 string time_human_readable_from_seconds(const double seconds);
 double time_human_readable_to_seconds(const string &time_string);

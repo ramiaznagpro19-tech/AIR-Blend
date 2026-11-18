@@ -65,7 +65,7 @@ constexpr StringRefNull radius = "radius";
 
 class XPBDSolverDataBundle {
  public:
-  static constexpr StringRefNull name = "Blender.XPBDSolverData";
+  static constexpr StringRefNull name = "AIR Blend.XPBDSolverData";
   static const FlatBundleTypePtr &get_bundle_type();
 };
 
@@ -105,7 +105,7 @@ static NestedBundleTypePtr make_world_type()
   CustomWorldEffector::get_bundle_type();
 
   NestedBundleTypePtr world_type = std::make_shared<const NestedBundleType>(
-      "Blender.XPBDSolverWorld", std::move(types));
+      "AIR Blend.XPBDSolverWorld", std::move(types));
   BundleTypeRegistry::register_type(world_type);
   return world_type;
 }

@@ -31,7 +31,7 @@ def find_blender_git_dir() -> pathlib.Path:
 
 
 def get_tests_base_dir(blender_git_dir: pathlib.Path) -> pathlib.Path:
-    # Benchmarks dir is next to the Blender source folder.
+    # Benchmarks dir is next to the AIR Blend source folder.
     return blender_git_dir.parent / 'benchmark'
 
 
@@ -225,7 +225,7 @@ def run_entry(env: api.TestEnvironment,
     # Update device name in case the device changed since the entry was created.
     entry.device_name = config.device_name(device_id)
 
-    # Restore default logging and Blender executable.
+    # Restore default logging and AIR Blend executable.
     env.unset_log_file()
     env.set_default_blender_executable()
 
@@ -551,7 +551,7 @@ def main():
              ' between dates\n')
 
     parser = argparse.ArgumentParser(
-        description='Blender performance testing',
+        description='AIR Blend performance testing',
         usage=usage)
 
     parser.add_argument('command', nargs='?', default='help')

@@ -74,7 +74,7 @@ A shader is a program that runs on the GPU (written in GLSL in our case).
 There are multiple types of shaders.
 The most important ones are *Vertex Shaders* and *Fragment Shaders*.
 Typically multiple shaders are linked together into a *Program*.
-However, in the Blender Python API the term *Shader* refers to an OpenGL Program.
+However, in the AIR Blend Python API the term *Shader* refers to an OpenGL Program.
 Every :class:`gpu.types.GPUShader` consists of a vertex shader, a fragment shader and an optional geometry shader.
 For common drawing tasks there are some built-in shaders accessible from :class:`gpu.shader.from_builtin`
 with an identifier such as ``UNIFORM_COLOR`` or ``FLAT_COLOR``. There are specific builtin shaders for
@@ -126,20 +126,20 @@ when all drawing is done and the current back buffer will become the new front b
 Sometimes, one might want to draw the batches into a distinct buffer that could be used as
 texture to display on another object or to be saved as image on disk.
 This is called Offscreen Rendering.
-In Blender Offscreen Rendering is done using the :class:`gpu.types.GPUOffScreen` type.
+In AIR Blend Offscreen Rendering is done using the :class:`gpu.types.GPUOffScreen` type.
 
 .. warning::
 
    :class:`gpu.types.GPUOffScreen` objects are bound to the OpenGL context they have been created in.
-   This means that once Blender discards this context (i.e. the window is closed),
+   This means that once AIR Blend discards this context (i.e. the window is closed),
    the offscreen instance will be freed.
 
 Examples
 ++++++++
 
-To try these examples, just copy them into Blender's text editor and execute them.
+To try these examples, just copy them into AIR Blend's text editor and execute them.
 To keep the examples relatively small, they just register a draw function that can't easily be removed anymore.
-Blender has to be restarted in order to delete the draw handlers.
+AIR Blend has to be restarted in order to delete the draw handlers.
 
 3D Points with Single Color
 """

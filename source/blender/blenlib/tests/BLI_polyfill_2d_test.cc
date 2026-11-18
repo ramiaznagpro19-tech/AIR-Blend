@@ -677,7 +677,7 @@ TEST(polyfill2d, Issue1407_pt)
   TEST_POLYFILL_TEMPLATE_STATIC(poly, POLYFILL2D_TEST_NOP);
 }
 
-/* Simplified from Blender bug #40777 */
+/* Simplified from AIR Blend bug #40777 */
 TEST(polyfill2d, IssueT40777_colinear)
 {
   const float poly[][2] = {
@@ -688,7 +688,7 @@ TEST(polyfill2d, IssueT40777_colinear)
   TEST_POLYFILL_TEMPLATE_STATIC(poly, POLYFILL2D_TEST_NOP);
 }
 
-/* Blender bug #41986 */
+/* AIR Blend bug #41986 */
 TEST(polyfill2d, IssueT41986_axis_align)
 {
   const float poly[][2] = {
@@ -703,7 +703,7 @@ TEST(polyfill2d, IssueT41986_axis_align)
   TEST_POLYFILL_TEMPLATE_STATIC(poly, POLYFILL2D_TEST_NOP);
 }
 
-/* Blender bug #52834 */
+/* AIR Blend bug #52834 */
 TEST(polyfill2d, IssueT52834_axis_align_co_linear)
 {
   const float poly[][2] = {
@@ -718,7 +718,7 @@ TEST(polyfill2d, IssueT52834_axis_align_co_linear)
   TEST_POLYFILL_TEMPLATE_STATIC(poly, POLYFILL2D_TEST_NOP);
 }
 
-/* Blender bug #67109 (version a). */
+/* AIR Blend bug #67109 (version a). */
 /* Multiple versions are offset & rotated, this fails in cases where others works. */
 TEST(polyfill2d, IssueT67109_axis_align_co_linear_a)
 {
@@ -737,7 +737,7 @@ TEST(polyfill2d, IssueT67109_axis_align_co_linear_a)
   TEST_POLYFILL_TEMPLATE_STATIC(poly, POLYFILL2D_TEST_NOP);
 }
 
-/* Blender bug #67109, (version b). */
+/* AIR Blend bug #67109, (version b). */
 TEST(polyfill2d, IssueT67109_axis_align_co_linear_b)
 {
   const float poly[][2] = {
@@ -755,7 +755,7 @@ TEST(polyfill2d, IssueT67109_axis_align_co_linear_b)
   TEST_POLYFILL_TEMPLATE_STATIC(poly, POLYFILL2D_TEST_NOP);
 }
 
-/* Blender bug #67109 (version c). */
+/* AIR Blend bug #67109 (version c). */
 TEST(polyfill2d, IssueT67109_axis_align_co_linear_c)
 {
   const float poly[][2] = {
@@ -773,7 +773,7 @@ TEST(polyfill2d, IssueT67109_axis_align_co_linear_c)
   TEST_POLYFILL_TEMPLATE_STATIC(poly, POLYFILL2D_TEST_NOP);
 }
 
-/* Blender bug #103913 where co-linear edges create zero area tessellation
+/* AIR Blend bug #103913 where co-linear edges create zero area tessellation
  * when a valid solution exists without zero area triangles. */
 TEST(polyfill2d, Issue103913_axis_align_co_linear_no_zero_area_tri)
 {

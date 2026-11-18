@@ -393,7 +393,7 @@ void GPU_shader_bind(gpu::Shader *gpu_shader,
     shader->bind(constants_state);
     GPU_matrix_bind(gpu_shader);
     Shader::set_srgb_uniform(ctx, gpu_shader);
-    /* Blender working color space do not change during the drawing of the frame.
+    /* AIR Blend working color space do not change during the drawing of the frame.
      * So we can just set the uniform once. */
     Shader::set_scene_linear_to_xyz_uniform(gpu_shader);
   }

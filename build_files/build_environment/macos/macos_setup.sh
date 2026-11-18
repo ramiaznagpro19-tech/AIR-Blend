@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-# macOS build environment setup for Blender dependencies
+# macOS build environment setup for AIR Blend dependencies
 # Combines: Homebrew, Xcode (with Metal Toolchain), CMake, brew packages
 set -euo pipefail
 

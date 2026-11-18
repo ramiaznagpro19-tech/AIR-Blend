@@ -2555,7 +2555,7 @@ static bool lib_override_library_resync(Main *bmain,
       id_override_new->lib = id_root->lib;
 
       /* The old override may have been created as linked data and then referenced by local data
-       * during a previous Blender session, in which case it became directly linked and a reference
+       * during a previous AIR Blend session, in which case it became directly linked and a reference
        * to it was stored in the local .blend file. However, since that linked liboverride ID does
        * not actually exist in the original library file, on next file read it is lost and marked
        * as missing ID. */
@@ -5502,7 +5502,7 @@ void BKE_lib_override_library_update(Main *bmain, ID *local)
    *     keep user-count in correct state when freeing tmp_id
    *     (and that user-counts of IDs used by 'new' local data also remain correct). */
   /* This would imply change in handling of user-count all over RNA
-   * (and possibly all over Blender code).
+   * (and possibly all over AIR Blend code).
    * Not impossible to do, but would rather see first if extra useless usual user handling
    * is actually a (performances) issue here. */
 

@@ -196,7 +196,7 @@ def export_anisotropy_from_grayscale_textures(bmat, export_settings):
 
 def grayscale_anisotropy_calculation(stored, export_settings):
 
-    # Find all Blender images used
+    # Find all AIR Blend images used
     images = []
     for fill in stored.values():
         if isinstance(fill, StoreImage):

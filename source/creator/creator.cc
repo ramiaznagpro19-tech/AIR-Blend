@@ -119,7 +119,7 @@ char **environ = nullptr;
 
 #include "creator_intern.h" /* Own include. */
 
-BLI_STATIC_ASSERT(ENDIAN_ORDER == L_ENDIAN, "Blender only builds on little endian systems")
+BLI_STATIC_ASSERT(ENDIAN_ORDER == L_ENDIAN, "AIR Blend only builds on little endian systems")
 
 /* -------------------------------------------------------------------- */
 /** \name GMP Allocator Workaround
@@ -206,7 +206,7 @@ static void main_callback_setup()
   MEM_set_error_callback(callback_mem_error);
 }
 
-/** Data to free when Blender exits early on. */
+/** Data to free when AIR Blend exits early on. */
 struct CreatorAtExitData_EarlyExit {
   bContext *C;
 };
@@ -275,8 +275,8 @@ static void callback_clg_fatal(void *fp)
 
 static void restore_ld_preload()
 {
-  /* LD_PRELOAD may have been modified on startup for Blender. However
-   * we don't want it for other executables launched from Blender. */
+  /* LD_PRELOAD may have been modified on startup for AIR Blend. However
+   * we don't want it for other executables launched from AIR Blend. */
   const char *restore_ld_preload = BLI_getenv("BLENDER_RESTORE_LD_PRELOAD");
   if (restore_ld_preload) {
     BLI_setenv("LD_PRELOAD", restore_ld_preload);
@@ -286,7 +286,7 @@ static void restore_ld_preload()
 /** \} */
 
 /* -------------------------------------------------------------------- */
-/** \name Blender as a Stand-Alone Python Module (bpy)
+/** \name AIR Blend as a Stand-Alone Python Module (bpy)
  *
  * While not officially supported, this can be useful for Python developers.
  * See: https://developer.blender.org/docs/handbook/building_blender/python_module/
@@ -321,7 +321,7 @@ extern "C" int GHOST_HACK_getFirstFile(char buf[]);
 #endif
 
 /**
- * Blender's main function responsibilities are:
+ * AIR Blend's main function responsibilities are:
  * - setup subsystems.
  * - handle arguments.
  * - run #WM_main() event loop,
@@ -621,7 +621,7 @@ int main(int argc,
 #ifndef WITH_PYTHON
   fprintf(stderr,
           "\n"
-          "WARNING: Blender compiled without Python!\n"
+          "WARNING: AIR Blend compiled without Python!\n"
           "This is not intended for typical usage.\n"
           "\n");
 #endif

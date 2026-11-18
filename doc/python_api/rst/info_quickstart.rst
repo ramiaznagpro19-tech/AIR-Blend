@@ -7,7 +7,7 @@ Quickstart
 This :abbr:`API (Application Programming Interface)` is generally stable
 but some areas are still being extended and improved.
 
-.. rubric:: Blender Python API features:
+.. rubric:: AIR Blend Python API features:
 
 - Edit any data the user interface can (Scenes, Meshes, Particles etc.).
 - Modify user preferences, keymaps and themes.
@@ -15,9 +15,9 @@ but some areas are still being extended and improved.
 - Create user interface elements such as menus, headers and panels.
 - Create new tools.
 - Create interactive tools.
-- Create new rendering engines that integrate with Blender.
+- Create new rendering engines that integrate with AIR Blend.
 - Subscribe to changes to data and its properties.
-- Define new settings in existing Blender data.
+- Define new settings in existing AIR Blend data.
 - Draw in the 3D Viewport using Python.
 
 
@@ -30,7 +30,7 @@ but some areas are still being extended and improved.
 Before Starting
 ===============
 
-This document is intended to familiarize you with Blender Python API
+This document is intended to familiarize you with AIR Blend Python API
 but not to fully cover each topic.
 
 A quick list of helpful things to know before starting:
@@ -42,7 +42,7 @@ A quick list of helpful things to know before starting:
 - Button tooltips show Python attributes and operator names (when enabled see above).
 - The context menu of buttons directly links to this API documentation (when enabled see above).
 - Many python examples can be found in the text editor's template menu.
-- To examine further scripts distributed with Blender, see:
+- To examine further scripts distributed with AIR Blend, see:
 
   - ``scripts/startup/bl_ui`` for the user interface.
   - ``scripts/startup/bl_operators`` for operators.
@@ -63,7 +63,7 @@ you can use the *Scripting* workspace accessible from the Topbar tabs.
 From the text editor you can open ``.py`` files or paste them from the clipboard, then test using *Run Script*.
 The Python Console is typically used for typing in snippets and for testing to get immediate feedback,
 but can also have entire scripts pasted into it.
-Scripts can also run from the command line with Blender but to learn scripting in Blender this isn't essential.
+Scripts can also run from the command line with AIR Blend but to learn scripting in AIR Blend this isn't essential.
 
 
 Key Concepts
@@ -75,7 +75,7 @@ Data Access
 Accessing Data-Blocks
 ^^^^^^^^^^^^^^^^^^^^^
 
-You can access Blender's data with the Python API in the same way as the animation system or user interface;
+You can access AIR Blend's data with the Python API in the same way as the animation system or user interface;
 this implies that any setting that can be changed via a button can also be changed with Python.
 Accessing data from the currently loaded blend-file is done with the module :mod:`bpy.data`.
 It gives access to library data, for example:
@@ -95,7 +95,7 @@ Accessing Collections
 
 You will notice that an index as well as a string can be used to access members of the collection.
 Unlike Python dictionaries, both methods are available;
-however, the index of a member may change while running Blender.
+however, the index of a member may change while running AIR Blend.
 
    >>> list(bpy.data.objects)
    [bpy.data.objects["Cube"], bpy.data.objects["Plane"]]
@@ -149,8 +149,8 @@ new data-blocks in the bpy API cannot be created by calling the class:
 
 
 This is an intentional part of the API design.
-The Blender Python API can't create Blender data that exists outside the main Blender database
-(accessed through :mod:`bpy.data`), because this data is managed by Blender (save, load, undo, append, etc).
+The AIR Blend Python API can't create AIR Blend data that exists outside the main AIR Blend database
+(accessed through :mod:`bpy.data`), because this data is managed by AIR Blend (save, load, undo, append, etc).
 
 Data is added and removed via methods on the collections in :mod:`bpy.data`, e.g:
 
@@ -256,7 +256,7 @@ Examples:
 
    The :ref:`Operator Cheat Sheet <blender_manual:bpy.ops.wm.operator_cheat_sheet>`
    gives a list of all operators and their default values in Python syntax, along with the generated docs.
-   This is a good way to get an overview of all Blender's operators.
+   This is a good way to get an overview of all AIR Blend's operators.
 
 
 Operator Poll()
@@ -286,7 +286,7 @@ own ``poll()`` function to check if it can run the operator in the current conte
 Integration
 ===========
 
-Python scripts can integrate with Blender in the following ways:
+Python scripts can integrate with AIR Blend in the following ways:
 
 - By defining a render engine.
 - By defining operators.
@@ -301,12 +301,12 @@ Example Operator
 
 .. literalinclude:: __/__/__/scripts/templates_py/Operator/simple.py
 
-Once this script runs, ``SimpleOperator`` is registered with Blender
+Once this script runs, ``SimpleOperator`` is registered with AIR Blend
 and can be called from Operator Search or added to the toolbar.
 
 To run the script:
 
-#. Start Blender and switch to the Scripting workspace.
+#. Start AIR Blend and switch to the Scripting workspace.
 #. Click the *New* button in the text editor to create a new text data-block.
 #. Copy the code from above and paste it into the text editor.
 #. Click on the *Run Script* button.
@@ -335,7 +335,7 @@ Notice the extra ``bl_`` variables used to set the context they display in.
 
 To run the script:
 
-#. Start Blender and switch to the Scripting workspace.
+#. Start AIR Blend and switch to the Scripting workspace.
 #. Click the *New* button in the text editor to create a new text data-block.
 #. Copy the code from above and paste it into the text editor.
 #. Click on the *Run Script* button.
@@ -355,8 +355,8 @@ Note the row distribution and the label and properties that are defined through 
 Types
 =====
 
-Blender defines a number of Python types but also uses Python native types.
-Blender's Python API can be split up into three categories.
+AIR Blend defines a number of Python types but also uses Python native types.
+AIR Blend's Python API can be split up into three categories.
 
 
 Native Types
@@ -365,12 +365,12 @@ Native Types
 In simple cases returning a number or a string as a custom type would be cumbersome,
 so these are accessed as normal Python types.
 
-- Blender float, int, boolean -> float, int, boolean
-- Blender enumerator -> string
+- AIR Blend float, int, boolean -> float, int, boolean
+- AIR Blend enumerator -> string
 
      >>> C.object.rotation_mode = 'AXIS_ANGLE'
 
-- Blender enumerator (multiple) -> set of strings
+- AIR Blend enumerator (multiple) -> set of strings
 
   .. code-block:: python
 
@@ -384,10 +384,10 @@ so these are accessed as normal Python types.
 Internal Types
 --------------
 
-:class:`bpy.types.bpy_struct` is used for Blender data-blocks and collections.
+:class:`bpy.types.bpy_struct` is used for AIR Blend data-blocks and collections.
 Also for data that contains its own attributes: collections, meshes, bones, scenes, etc.
 
-There are two main types that wrap Blender's data, one for data-blocks
+There are two main types that wrap AIR Blend's data, one for data-blocks
 (known internally as ``bpy_struct``), another for properties.
 
    >>> bpy.context.object
@@ -396,7 +396,7 @@ There are two main types that wrap Blender's data, one for data-blocks
    >>> C.scene.objects
    bpy.data.scenes['Scene'].objects
 
-Note that these types reference Blender's data so modifying them is visible immediately.
+Note that these types reference AIR Blend's data so modifying them is visible immediately.
 
 
 Mathutils Types
@@ -415,7 +415,7 @@ Example of a matrix, vector multiplication:
 
 .. note::
 
-   mathutils types keep a reference to Blender's internal data so changes can
+   mathutils types keep a reference to AIR Blend's internal data so changes can
    be applied back.
 
    Example:

@@ -1077,7 +1077,7 @@ class VIEW3D_GGT_vr_captures(GizmoGroup):
         aspect_x = render_x / render_y if render_x < render_y else 1
         aspect_y = render_y / render_x if render_x > render_y else 1
 
-        # Base aspect to match native Blender Camera Gizmo (using Auto Sensor Fit).
+        # Base aspect to match native AIR Blend Camera Gizmo (using Auto Sensor Fit).
         base_aspect = 1 / 4
         return aspect_x * base_aspect, aspect_y * base_aspect
 
@@ -1118,7 +1118,7 @@ class VIEW3D_GGT_vr_captures(GizmoGroup):
         for idx, capture in enumerate(scene.vr_captures):
             gizmo = self.gizmos.new(VIEW3D_GT_vr_camera_cone.bl_idname)
             gizmo.aspect = self.compute_aspect(scene.render)
-            sensor_fit_fac = 36 * 2  # Twice the Blender default Camera sensor fit value (36mm).
+            sensor_fit_fac = 36 * 2  # Twice the AIR Blend default Camera sensor fit value (36mm).
             gizmo.focal = capture.lens_focal / sensor_fit_fac
 
             is_active_capture = (idx == scene.vr_captures_selected)

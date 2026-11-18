@@ -1,9 +1,9 @@
 
-Blender Dev Tools
+AIR Blend Dev Tools
 #################
 
 This repository is intended for miscellaneous tools, utilities, configurations and
-anything that helps with Blender development, but aren't directly related to building Blender.
+anything that helps with AIR Blend development, but aren't directly related to building AIR Blend.
 
 Some of the tools included may be used stand-alone, others expect Blenders source code to be available.
 
@@ -16,7 +16,7 @@ some of the scripts which access Blenders source code assume this repository wil
 ``tools`` within Blenders source code repository. At some point this may be included as a submodule.
 
 Some tools also rely on the ``blender`` binary, this is assumed to be located at: ``../../blender.bin``.
-*The root directory of Blender's git repository*
+*The root directory of AIR Blend's git repository*
 
 
 Categories

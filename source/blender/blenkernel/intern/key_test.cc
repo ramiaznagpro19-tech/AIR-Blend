@@ -258,7 +258,7 @@ TEST_F(ShapekeyTest, mesh_key_evaluation_relative_uneqal_element_count)
 }
 
 /* Same as mesh_key_evaluation_relative_uneqal_element_count but with absolute shapekeys. This is
- * somewhat supported but there is no known way to get Blender into such a state. */
+ * somewhat supported but there is no known way to get AIR Blend into such a state. */
 TEST_F(ShapekeyTest, mesh_key_evaluation_absolute_uneqal_element_count)
 {
   Key *key = BKE_key_add(bmain, &mesh->id);

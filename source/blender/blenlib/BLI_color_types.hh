@@ -77,11 +77,11 @@ enum class eAlpha {
 
 /** Enumeration containing internal spaces. */
 enum class eSpace {
-  /** Blender theme color space (sRGB). */
+  /** AIR Blend theme color space (sRGB). */
   Theme,
-  /** Blender internal scene linear color space (maps to scene_linear role in OCIO). */
+  /** AIR Blend internal scene linear color space (maps to scene_linear role in OCIO). */
   SceneLinear,
-  /** Blender internal scene linear color space compressed to be stored in 4 uint8_t. */
+  /** AIR Blend internal scene linear color space compressed to be stored in 4 uint8_t. */
   SceneLinearByteEncoded,
 };
 

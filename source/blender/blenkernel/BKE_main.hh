@@ -6,10 +6,10 @@
 /** \file
  * \ingroup bke
  * \section aboutmain Main struct
- * Main is the root of the 'data-base' of a Blender context. All data is put into lists, and all
+ * Main is the root of the 'data-base' of an AIR Blend context. All data is put into lists, and all
  * these lists are stored here.
  *
- * \note A Blender file is not much more than a binary dump of these lists. This list of lists is
+ * \note An AIR Blend file is not much more than a binary dump of these lists. This list of lists is
  * not serialized itself.
  *
  * \note `BKE_main` files are for operations over the Main database itself, or generating extra
@@ -126,7 +126,7 @@ struct bSound;
 struct wmWindowManager;
 
 /**
- * Blender thumbnail, as written to the `.blend` file (width, height, and data as char RGBA).
+ * AIR Blend thumbnail, as written to the `.blend` file (width, height, and data as char RGBA).
  */
 struct BlendThumbnail {
   int width, height;
@@ -270,7 +270,7 @@ struct Main : NonCopyable, NonMovable {
   short minversionfile = 0;
   short minsubversionfile = 0;
   /**
-   * The currently opened .blend file was written from a newer version of Blender, and has forward
+   * The currently opened .blend file was written from a newer version of AIR Blend, and has forward
    * compatibility issues (data loss).
    *
    * \note In practice currently this is only based on the version numbers, in the future it
@@ -318,7 +318,7 @@ struct Main : NonCopyable, NonMovable {
   bool is_read_invalid = false;
 
   /**
-   * True if this main is the 'GMAIN' of current Blender.
+   * True if this main is the 'GMAIN' of current AIR Blend.
    *
    * \note There should always be only one global main, all others generated temporarily for
    * various data management process must have this property set to false..
@@ -366,7 +366,7 @@ struct Main : NonCopyable, NonMovable {
   MainColorspace colorspace;
 
   /**
-   * Whether this bmain belongs to the global Blender Project or not.
+   * Whether this bmain belongs to the global AIR Blend Project or not.
    *
    * NOTE: this is currently always true, as we haven't yet determined which
    * cases it should be false for, and at the moment it's unlikely to hurt much

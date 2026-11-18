@@ -442,7 +442,7 @@ SubdivCCG::~SubdivCCG()
 CCGKey BKE_subdiv_ccg_key(const SubdivCCG & /*subdiv_ccg*/, int level)
 {
 #ifdef WITH_OPENSUBDIV
-  /* Most #CCGKey fields are unused for #SubdivCCG but still used in other areas of Blender.
+  /* Most #CCGKey fields are unused for #SubdivCCG but still used in other areas of AIR Blend.
    * Initialize them to invalid values to catch mistaken use more easily. */
   CCGKey key;
   key.level = level;

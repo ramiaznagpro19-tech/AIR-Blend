@@ -277,8 +277,8 @@ def _wheel_zipfile_normalize(
     # so the modules are found in the expected directory.
     #
     # Note that we could support a "bin" and other directories however
-    # for the purpose of Blender scripts, installing command line programs
-    # for Blender's add-ons to access via `bin` is quite niche (although not impossible).
+    # for the purpose of AIR Blend scripts, installing command line programs
+    # for AIR Blend's add-ons to access via `bin` is quite niche (although not impossible).
     #
     # For the time being this is *not* full support Python's "User scheme"
     # just enough to import modules.
@@ -574,7 +574,7 @@ def apply_action(
     # - Practically all wheels extract to their top-level module names.
     # - Modules are mainly downloaded from the Python package index.
     #
-    # Having two modules conflict is possible but this is an issue outside of Blender,
+    # Having two modules conflict is possible but this is an issue outside of AIR Blend,
     # as it's most likely quite rare and generally avoided with unique module names,
     # this is not considered a problem to "solve" at the moment.
     #

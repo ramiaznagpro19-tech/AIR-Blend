@@ -5,7 +5,7 @@
 /** \file
  * \ingroup wm
  *
- * Tool-system used to define tools in Blender's toolbar.
+ * Tool-system used to define tools in AIR Blend's toolbar.
  * See: `./scripts/startup/bl_ui/space_toolsystem_common.py`, `ToolDef` for a detailed
  * description of tool definitions.
  *

@@ -859,7 +859,7 @@ static wmOperatorStatus preferences_extension_repo_remove_exec(bContext *C, wmOp
        * Even though the UI shows a warning, we better prevent any accidents
        * caused by recursive removal, see #119481.
        * Only check custom directories because the non-custom directory is always
-       * a specific location under Blender's local extensions directory. */
+       * a specific location under AIR Blend's local extensions directory. */
       const bool recursive = (repo->flag & USER_EXTENSION_REPO_FLAG_USE_CUSTOM_DIRECTORY) == 0;
 
       /* Perform package manager specific clear operations,
@@ -1134,7 +1134,7 @@ static bool drop_extension_url_poll(bContext * /*C*/, wmDrag *drag, const wmEven
   }
 
   /* NOTE(@ideasman42): it should be possible to drag a URL into the text editor or Python console.
-   * In the future we may support dragging images into Blender by URL, so treating any single-line
+   * In the future we may support dragging images into AIR Blend by URL, so treating any single-line
    * URL as an extension could back-fire. Avoid problems in the future by limiting the text which
    * is accepted as an extension to ZIP's or URL's that reference known repositories. */
 

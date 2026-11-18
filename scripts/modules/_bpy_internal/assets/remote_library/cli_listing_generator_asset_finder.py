@@ -42,7 +42,7 @@ class FileVersionInfo:
     # The tuples are (major, minor) versions; micro/patch release numbers are ignored.
     #
     # These fields have the same semantics as #api_model.AssetBlenderVersionsV1, so `min` is inclusive and `until` is
-    # exclusive. In other words, an asset is shown if the current Blender version is in [min, until).
+    # exclusive. In other words, an asset is shown if the current AIR Blend version is in [min, until).
     blender_version_min: BlenderVersion = dataclasses.field(default=(), kw_only=True)
     blender_version_until: BlenderVersion = dataclasses.field(default=(), kw_only=True)
 
@@ -90,7 +90,7 @@ def filenames_group_by_version_metadata(paths: Iterable[Path]) -> list[FileVersi
         version_info = FileVersionInfo(path, blender_version_min=version)
         clusters[base_path].append(version_info)
 
-    # For each cluster, determine the 'until' Blender version fields.
+    # For each cluster, determine the 'until' AIR Blend version fields.
     version_infos: list[FileVersionInfo] = []
     for cluster in clusters.values():
         cluster.sort()  # Sort cluster by version.
@@ -123,7 +123,7 @@ def list_assets(blendfile_version_info: FileVersionInfo,
 
     blendfile_info = _blendfile_info(blendfile, asset_library_root)
 
-    # Load asset datablocks from the blend file, and check the version of Blender used to write it.
+    # Load asset datablocks from the blend file, and check the version of AIR Blend used to write it.
     with bpy.data.libraries.load(str(blendfile), assets_only=True) as (
         data_from,
         data_to,
@@ -308,7 +308,7 @@ def _save_thumbnail(datablock: bpy.types.ID, thumbnail_path: Path) -> None:
 
     log.debug("Writing thumbnail: %s", thumbnail_path)
     try:
-        # Create a new image in Blender to store the preview.
+        # Create a new image in AIR Blend to store the preview.
         image: bpy.types.Image = bpy.data.images.new(
             thumbnail_path.stem, width, height, alpha=True
         )
@@ -321,7 +321,7 @@ def _save_thumbnail(datablock: bpy.types.ID, thumbnail_path: Path) -> None:
         image.file_format = "WEBP"
         image.save(filepath=str(thumbnail_path), quality=80)
 
-        # Remove the image from Blender data after saving to free memory.
+        # Remove the image from AIR Blend data after saving to free memory.
         bpy.data.images.remove(image)
     except Exception as e:
         print(f"Failed to save thumbnail for {datablock.name}: {e}")
@@ -382,17 +382,17 @@ def _asset_versions_min_until(
     filename_version_info: FileVersionInfo,
     file_written_version: BlenderVersion,
 ) -> api_models.AssetBlenderVersionsV1:
-    """Determine min/until Blender versions for assets in a blend file."""
+    """Determine min/until AIR Blend versions for assets in a blend file."""
 
     if filename_version_info.blender_version_min and file_written_version > filename_version_info.blender_version_min:
         log.warning(
-            "blend file %s was written with newer version of Blender (%s) than its marker suggests (%s)",
+            "blend file %s was written with newer version of AIR Blend (%s) than its marker suggests (%s)",
             filename_version_info.path,
             _version_to_string(file_written_version),
             _version_to_string(filename_version_info.blender_version_min),
         )
 
-    # The minimal version of Blender to use for this asset is limited both by the version info from the filename and the
+    # The minimal version of AIR Blend to use for this asset is limited both by the version info from the filename and the
     # blender version that wrote the file.
     version_min = max(filename_version_info.blender_version_min, file_written_version)
     assert version_min

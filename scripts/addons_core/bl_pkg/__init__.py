@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 bl_info = {
-    "name": "Blender Extensions",
+    "name": "AIR Blend Extensions",
     # This is now displayed as the maintainer, so show the foundation.
     # "author": "Campbell Barton", # Original Author
     "author": "Blender Foundation",
@@ -459,11 +459,11 @@ def remote_asset_library_sync(
             asset_library_local_path, only_if_older_than_sec):
         return
 
-    # Only actually start downloading if no other Blender is already syncing
+    # Only actually start downloading if no other AIR Blend is already syncing
     # this asset library.
     from _bpy_internal.assets.remote_library import sync_mutex
     if not sync_mutex.mutex_lock(asset_library_local_path):
-        print("  skipping {!r}, another Blender is already syncing this asset library,".format(asset_library_url))
+        print("  skipping {!r}, another AIR Blend is already syncing this asset library,".format(asset_library_url))
         return
 
     # Communicate to the asset system that we started loading a library. It will let asset browsers
@@ -570,8 +570,8 @@ def _remote_asset_library_sync_all_periodic():
 def _remote_asset_library_restore_backups() -> None:
     """Restore any remote asset library listing backup.
 
-    If at startup there is an asset library listing backup, and no other Blender
-    is actively syncing that asset library, it means that Blender quit while
+    If at startup there is an asset library listing backup, and no other AIR Blend
+    is actively syncing that asset library, it means that AIR Blend quit while
     the listing was being downloaded, and it's probably incomplete. Better to
     restore the backup.
     """
@@ -893,7 +893,7 @@ def register():
         bl_extension_utils,
     )
 
-    # Override NOP with Blender function.
+    # Override NOP with AIR Blend function.
     bl_extension_utils.rpt_ = rpt_
 
     # Needed, otherwise the UI gets filtered out, see: #122754.

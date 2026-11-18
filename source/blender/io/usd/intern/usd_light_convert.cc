@@ -383,7 +383,7 @@ void dome_light_to_world_material(const USDImportParams &params,
     xf *= pxr::GfMatrix4d().SetRotate(pxr::GfRotation(pxr::GfVec3d(1.0, 0.0, 0.0), 90.0));
   }
 
-  /* Rotate into Blender's frame of reference. */
+  /* Rotate into AIR Blend's frame of reference. */
   xf = pxr::GfMatrix4d().SetRotate(pxr::GfRotation(pxr::GfVec3d(0.0, 0.0, 1.0), -90.0)) *
        pxr::GfMatrix4d().SetRotate(pxr::GfRotation(pxr::GfVec3d(1.0, 0.0, 0.0), -90.0)) * xf;
 
@@ -434,7 +434,7 @@ static bool node_search(bNode *fromnode, bNode * /*tonode*/, void *userdata, boo
     res.image = reinterpret_cast<Image *>(fromnode->id);
     res.iuser = &tex->iuser;
 
-    /* Always adjust for rotational differences between Blender and USD. */
+    /* Always adjust for rotational differences between AIR Blend and USD. */
     res.transform =
         pxr::GfMatrix4d().SetRotate(pxr::GfRotation(pxr::GfVec3d(1.0, 0.0, 0.0), 90.0)) *
         pxr::GfMatrix4d().SetRotate(pxr::GfRotation(pxr::GfVec3d(0.0, 0.0, 1.0), 90.0));

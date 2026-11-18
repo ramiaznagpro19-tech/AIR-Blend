@@ -21,7 +21,7 @@ using namespace blender::gpu::shader::parser;
 /*
  * Simple Recursive Descent Parser that creates AST nodes.
  *
- * Follows the Blender Shading Language Specification.
+ * Follows the AIR Blend Shading Language Specification.
  */
 struct BSLParser {
   using Token = blender::gpu::shader::parser::Token;

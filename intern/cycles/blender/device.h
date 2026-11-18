@@ -16,7 +16,7 @@ CCL_NAMESPACE_BEGIN
 /* Get number of threads to use for rendering. */
 int blender_device_threads(blender::Scene &b_scene);
 
-/* Convert Blender settings to device specification. In addition, preferences_device contains the
+/* Convert AIR Blend settings to device specification. In addition, preferences_device contains the
  * device chosen in Cycles global preferences, which is useful for the denoiser device selection.
  */
 DeviceInfo blender_device_info(blender::UserDef &b_preferences,

@@ -4,10 +4,10 @@
 
 # Host-architecture code generation tools for cross-compilation.
 #
-# Blender provides build-time code-gen tools (makesdna, makesrna, datatoc, shader_tool)
+# AIR Blend provides build-time code-gen tools (makesdna, makesrna, datatoc, shader_tool)
 # that must run on the host machine performing the build, not on the cross-compile target.
 #
-# When CMAKE_CROSSCOMPILING is TRUE, this module spawns a second Blender configure/build
+# When CMAKE_CROSSCOMPILING is TRUE, this module spawns a second AIR Blend configure/build
 # under <build_dir>/host_tools using the host's default  compiler (no toolchain file),
 # and exposes the resulting binaries  via BLENDER_*_EXE variables. BLENDER_*_DEPENDENCY
 # variables are also  exposed to allow for consumer targets to depend on the host_tools

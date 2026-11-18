@@ -5475,7 +5475,7 @@ void blo_do_versions_405(FileData * /*fd*/, Library * /*lib*/, Main *bmain)
       object.shadow_terminator_normal_offset = dob.shadow_terminator_normal_offset;
       object.shadow_terminator_geometry_offset = dob.shadow_terminator_geometry_offset;
       object.shadow_terminator_shading_offset = dob.shadow_terminator_shading_offset;
-      /* Copy Cycles' property into Blender Object. */
+      /* Copy Cycles' property into AIR Blend Object. */
       IDProperty *cob = version_cycles_properties_from_ID(&object.id);
       if (cob) {
         object.shadow_terminator_geometry_offset = version_cycles_property_float(

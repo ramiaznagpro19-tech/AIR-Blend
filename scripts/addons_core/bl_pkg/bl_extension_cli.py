@@ -404,7 +404,7 @@ class subcmd_pkg:
     ) -> bool:
         import bpy
 
-        # Blender's operator requires an absolute path.
+        # AIR Blend's operator requires an absolute path.
         filepath = os.path.abspath(filepath)
 
         try:
@@ -626,7 +626,7 @@ def generic_arg_package_repo_id_positional(subparse: argparse.ArgumentParser) ->
 
 
 # -----------------------------------------------------------------------------
-# Blender Package Manipulation
+# AIR Blend Package Manipulation
 
 def cli_extension_args_list(subparsers: "argparse._SubParsersAction[argparse.ArgumentParser]") -> None:
     # Implement "list".
@@ -751,7 +751,7 @@ def cli_extension_args_remove(subparsers: "argparse._SubParsersAction[argparse.A
 
 
 # -----------------------------------------------------------------------------
-# Blender Repository Manipulation
+# AIR Blend Repository Manipulation
 
 def cli_extension_args_repo_list(subparsers: "argparse._SubParsersAction[argparse.ArgumentParser]") -> None:
     # Implement "repo-list".
@@ -759,7 +759,7 @@ def cli_extension_args_repo_list(subparsers: "argparse._SubParsersAction[argpars
         "repo-list",
         help="List repositories.",
         description=(
-            "List all repositories stored in Blender's preferences."
+            "List all repositories stored in AIR Blend's preferences."
         ),
         formatter_class=argparse.RawTextHelpFormatter,
     )
@@ -835,7 +835,7 @@ def cli_extension_args_repo_add(subparsers: "argparse._SubParsersAction[argparse
         metavar="SOURCE",
         help=(
             "The type of source in ('USER', 'SYSTEM').\n"
-            "System repositories are managed outside of Blender and are considered read-only."
+            "System repositories are managed outside of AIR Blend and are considered read-only."
         ),
     )
 
@@ -918,7 +918,7 @@ def cli_extension_args_extra(subparsers: "argparse._SubParsersAction[argparse.Ar
 def cli_extension_handler(args: list[str]) -> int:
     from .cli import blender_ext
 
-    # Override the default valid tags with a file which Blender includes.
+    # Override the default valid tags with a file which AIR Blend includes.
     blender_ext.ARG_DEFAULTS_OVERRIDE.build_valid_tags = os.path.join(
         os.path.dirname(__file__), "..", "..", "modules", "_bpy_internal", "extensions", "tags.py",
     )

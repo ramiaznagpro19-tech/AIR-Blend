@@ -6,15 +6,15 @@ File Paths & String Encoding
 Relative File Paths
 ===================
 
-Blender's relative file paths are not compatible with standard Python modules such as ``sys`` and ``os``.
-Built-in Python functions don't understand Blender's ``//`` prefix which denotes the blend-file path.
+AIR Blend's relative file paths are not compatible with standard Python modules such as ``sys`` and ``os``.
+Built-in Python functions don't understand AIR Blend's ``//`` prefix which denotes the blend-file path.
 
 A common case where you would run into this problem is when exporting a material with associated image paths:
 
    >>> bpy.path.abspath(image.filepath)
 
 
-When using Blender data from linked libraries there is an unfortunate complication
+When using AIR Blend data from linked libraries there is an unfortunate complication
 since the path will be relative to the library rather than the open blend-file.
 When the data block may be from an external blend-file pass the library argument from the :class:`bpy.types.ID`.
 
@@ -31,7 +31,7 @@ Python supports many different encodings so there is nothing stopping you from
 writing a script in ``latin1`` or ``iso-8859-15``.
 See `PEP 263 <https://www.python.org/dev/peps/pep-0263/>`__.
 
-However, this complicates matters for Blender's Python API because ``.blend`` files don't have an explicit encoding.
+However, this complicates matters for AIR Blend's Python API because ``.blend`` files don't have an explicit encoding.
 To avoid the problem for Python integration and script authors we have decided that all strings in blend-files
 **must** be ``UTF-8``, ``ASCII`` compatible.
 This means assigning strings with different encodings to an object name, for instance, will raise an error.
@@ -71,5 +71,5 @@ to keep it short about encoding problems -- here are some suggestions:
 
    Sometimes it's preferable to avoid string encoding issues by using bytes instead of Python strings,
    when reading some input it's less trouble to read it as binary data
-   though you will still need to decide how to treat any strings you want to use with Blender,
+   though you will still need to decide how to treat any strings you want to use with AIR Blend,
    some importers do this.

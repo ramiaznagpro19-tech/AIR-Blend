@@ -31,7 +31,7 @@ struct EnumPropertyItem;
 namespace bke::preferences {
 
 /**
- * Return true if a preferences file exists for this Blender version.
+ * Return true if a preferences file exists for this AIR Blend version.
  */
 bool exists();
 

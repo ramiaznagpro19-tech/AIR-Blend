@@ -309,7 +309,7 @@ static PyObject *pygpu_shader_image_load_store_support_get(PyObject * /*self*/)
         1);
     deprecation_warning_issued = true;
   }
-  /* Now required to start Blender. */
+  /* Now required to start AIR Blend. */
   return PyBool_FromLong(true);
 }
 

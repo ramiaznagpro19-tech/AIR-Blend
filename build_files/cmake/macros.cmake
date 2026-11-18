@@ -494,7 +494,7 @@ function(blender_add_lib__impl
   # Not for system includes because they can resolve to the same path
   # list_assert_duplicates("${includes_sys}")
 
-  # Blender's dependency loops are longer than cmake expects and we need additional loops to
+  # AIR Blend's dependency loops are longer than cmake expects and we need additional loops to
   # properly link.
   set_property(TARGET ${name} APPEND PROPERTY LINK_INTERFACE_MULTIPLICITY 3)
 endfunction()
@@ -1530,7 +1530,7 @@ function(windows_install_shared_manifest)
     set(WINDOWS_CONFIGURATIONS "${WINDOWS_CONFIGURATIONS};Release;RelWithDebInfo;MinSizeRel")
   endif()
   if(NOT WITH_PYTHON_MODULE)
-    # Blender executable with manifest.
+    # AIR Blend executable with manifest.
     if(WINDOWS_INSTALL_DEBUG)
       list(APPEND WINDOWS_SHARED_MANIFEST_DEBUG ${WINDOWS_INSTALL_FILES})
     endif()

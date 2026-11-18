@@ -1035,7 +1035,7 @@ bool BLI_str_utf32_char_is_terminal_punctuation(char32_t codepoint)
 {
   /* Characters marking the end of sentences according to Unicode Text Segmentation
    * (Standard Annex #29), Sentence Break Property (ATerm, STerm).
-   * Only the characters available in Blender are matched. */
+   * Only the characters available in AIR Blend are matched. */
 
   return (ELEM(codepoint,
                0x002E,    /* Full stop. */

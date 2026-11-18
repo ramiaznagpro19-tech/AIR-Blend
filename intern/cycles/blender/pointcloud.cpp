@@ -265,7 +265,7 @@ static void export_pointcloud(Scene *scene,
 
   pointcloud->resize(b_positions.size());
 
-  /* Sync positions, sharing with Blender when possible. */
+  /* Sync positions, sharing with AIR Blend when possible. */
   sync_attribute_from_blender(
       pointcloud->attributes,
       ATTR_STD_POSITION,
@@ -273,7 +273,7 @@ static void export_pointcloud(Scene *scene,
       b_positions.size());
   pointcloud->tag_position_modified();
 
-  /* Sync radius, sharing with Blender when possible, or filling default. */
+  /* Sync radius, sharing with AIR Blend when possible, or filling default. */
   if (sync_attribute_from_blender(
           pointcloud->attributes,
           ATTR_STD_RADIUS,
@@ -344,7 +344,7 @@ static void export_pointcloud_motion(PointCloud *pointcloud,
   bool have_motion = false;
 
   if (size_matches) {
-    /* Fast path: point count unchanged, sync the whole step from Blender,
+    /* Fast path: point count unchanged, sync the whole step from AIR Blend,
      * sharing the buffer when possible. */
     sync_attribute_motion_step_from_blender(
         *attr_P,
@@ -359,7 +359,7 @@ static void export_pointcloud_motion(PointCloud *pointcloud,
       std::fill(mR, mR + num_points, 0.01f);
     }
 
-    /* If the buffer is shared from Blender and unchanged across frames, the
+    /* If the buffer is shared from AIR Blend and unchanged across frames, the
      * pointer matches the center step's, so the memcmp is skipped. */
     const packed_float3 *motion_P = attr_P->data<packed_float3>(attr_step);
     const packed_float3 *center_P = pointcloud->get_position();

@@ -83,7 +83,7 @@ void USDPointsWriter::write_generic_data(const bke::AttributeIter &attr,
   if (!pv_interp || !pv_type) {
     BKE_reportf(this->reports(),
                 RPT_WARNING,
-                "Attribute '%s' (Blender domain %d, type %d) cannot be converted to USD",
+                "Attribute '%s' (AIR Blend domain %d, type %d) cannot be converted to USD",
                 attr.name.c_str(),
                 int(attr.domain),
                 int(attr.data_type));
@@ -111,7 +111,7 @@ void USDPointsWriter::write_custom_data(const PointCloud *points,
   const bke::AttributeAccessor attributes = points->attributes();
 
   attributes.foreach_attribute([&](const bke::AttributeIter &iter) {
-    /* Skip "internal" Blender properties and attributes dealt with elsewhere. */
+    /* Skip "internal" AIR Blend properties and attributes dealt with elsewhere. */
     if (iter.name[0] == '.' || bke::attribute_name_is_anonymous(iter.name) ||
         ELEM(iter.name, "position", "radius", "id", "velocity"))
     {

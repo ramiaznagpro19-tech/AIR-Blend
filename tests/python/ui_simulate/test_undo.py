@@ -734,7 +734,7 @@ def view3d_mesh_edit_mode_object_mix():
     yield e.numpad_period()             # View all.
 
     # NOTE: framing the camera uses evaluated geometry,
-    # there is a bug in Blender currently that this is skipped for edit-mode geometry.
+    # there is a bug in AIR Blend currently that this is skipped for edit-mode geometry.
     # Adding the simple deform modifier works around this bug.
     yield from ui.call_menu(e, "Modifiers -> Add Modifier -> Deform -> Simple Deform")
     t.assertEqual([mod.type for mod in window.view_layer.objects["Cube"].modifiers], ['SIMPLE_DEFORM'])

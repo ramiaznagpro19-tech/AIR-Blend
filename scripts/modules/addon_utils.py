@@ -664,7 +664,7 @@ def disable_all():
     # Collect modules to disable first because dict can be modified as we disable.
 
     # NOTE: don't use `getattr(item[1], "__addon_enabled__", False)` because this runs on all modules,
-    # including 3rd party modules unrelated to Blender.
+    # including 3rd party modules unrelated to AIR Blend.
     #
     # Some modules may have their own `__getattr__` and either:
     # - Not raise an `AttributeError` (is they should),
@@ -765,10 +765,10 @@ def module_bl_info(mod, *, info_basis=None):
 #   Otherwise module paths are scanned for files to remove.
 # - Since errors resolving paths to remove could result in user data loss,
 #   ensure the paths are always within the (extension/add-on/app-template) directory.
-# - File locking isn't used, if multiple Blender instances start at the
+# - File locking isn't used, if multiple AIR Blend instances start at the
 #   same time and try to remove the same files, this won't cause errors.
 #   Even so, remove the checking file immediately avoid unnecessary
-#   file-system access overhead for other Blender instances.
+#   file-system access overhead for other AIR Blend instances.
 #
 # For more implementation details see `_bpy_internal.extensions.stale_file_manager`.
 # This mainly impacts WIN32 which can't remove open file handles, see: #77837 & #125049.
@@ -911,14 +911,14 @@ def stale_pending_remove_paths(path_base, paths):
 # -----------------------------------------------------------------------------
 # Extension Pre-Flight Compatibility Check
 #
-# Check extension compatibility on startup so any extensions which are incompatible with Blender are marked as
+# Check extension compatibility on startup so any extensions which are incompatible with AIR Blend are marked as
 # incompatible and wont be loaded. This cache avoids having to scan all extensions on startup on *every* startup.
 #
 # Implementation:
 #
 # The emphasis for this cache is to have minimum overhead for the common case where:
 # - The simple case where there are no extensions enabled (running tests, background tasks etc).
-# - The more involved case where extensions are enabled and have not changed since last time Blender started.
+# - The more involved case where extensions are enabled and have not changed since last time AIR Blend started.
 #   In this case do as little as possible since it runs on every startup, the following steps are unavoidable.
 # - When reading compatibility cache, then run the following tests, regenerating when changes are detected.
 #   - Compare with previous blender version/platform.
@@ -971,7 +971,7 @@ def _extension_compat_cache_update_needed(
         print_debug,  # `Callable[[Any], None] | None`
 ):  # `-> bool`
 
-    # Detect when Blender itself changes.
+    # Detect when AIR Blend itself changes.
     if cache_data.get("blender") != blender_id:
         if print_debug is not None:
             print_debug("blender changed")
@@ -1154,7 +1154,7 @@ def _initialize_extensions_compat_ensure_up_to_date(extensions_directory, extens
     if cache_data is not None:
         # NOTE: the exception handling here is fairly paranoid and accounts for invalid values in the loaded cache.
         # An example would be values expected to be lists/dictionaries being other types (None or strings for example).
-        # While this should not happen, some bad value should not prevent Blender from loading properly,
+        # While this should not happen, some bad value should not prevent AIR Blend from loading properly,
         # so report the error and regenerate cache.
         try:
             if _extension_compat_cache_update_needed(cache_data, blender_id, extensions_enabled, print_debug):
@@ -1208,7 +1208,7 @@ def _initialize_extensions_compat_data(
 ):
     # WARNING: this function must *never* raise an exception because it would interfere with low level initialization.
     # As the function deals with file IO, use what are typically over zealous exception checks so as to rule out
-    # interfering with Blender loading properly in unexpected cases such as disk-full, read-only file-system
+    # interfering with AIR Blend loading properly in unexpected cases such as disk-full, read-only file-system
     # or any other rare but possible scenarios.
 
     _extensions_incompatible.clear()
@@ -1243,7 +1243,7 @@ def _initialize_extensions_compat_data(
         return
 
     # While this isn't expected to fail, any failure here is a bug
-    # but it should not cause Blender's startup to fail.
+    # but it should not cause AIR Blend's startup to fail.
     try:
         updated, wheel_list = _initialize_extensions_compat_ensure_up_to_date(
             extensions_directory,
@@ -1286,7 +1286,7 @@ def _version_int_left_digits(x):
 def _bl_info_from_extension(mod_name, mod_path):
     # Extract the `bl_info` from an extensions manifest.
     # This is returned as a module which has a `bl_info` variable.
-    # When support for non-extension add-ons is dropped (Blender v5.0 perhaps)
+    # When support for non-extension add-ons is dropped (AIR Blend v5.0 perhaps)
     # this can be updated not to use a fake module.
     import os
     import tomllib
@@ -1860,7 +1860,7 @@ def _initialize_extensions_repos_once():
     # the previous state is not useful to read.
     _initialize_extension_repos_post(is_first=True)
 
-    # Internal handlers intended for Blender's own handling of repositories.
+    # Internal handlers intended for AIR Blend's own handling of repositories.
     _bpy.app.handlers._extension_repos_update_pre.append(_initialize_extension_repos_pre)
     _bpy.app.handlers._extension_repos_update_post.append(_initialize_extension_repos_post)
 

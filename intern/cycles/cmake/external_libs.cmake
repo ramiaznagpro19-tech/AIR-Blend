@@ -121,7 +121,7 @@ if(WITH_CYCLES_DEVICE_ONEAPI AND WITH_CYCLES_ONEAPI_BINARIES)
 
   # Resolve OCLOC_INSTALL_DIR if not set by user.
   # Without user-specified directory, we are expected to use precompiled
-  # (Linux) / bundled (Windows) version from Blender's dependencies at
+  # (Linux) / bundled (Windows) version from AIR Blend's dependencies at
   # the path:
   # <DPCPP_ROOT_DIRECTORY>/lib/ocloc/
   if(NOT OCLOC_INSTALL_DIR)
@@ -137,7 +137,7 @@ if(WITH_CYCLES_DEVICE_ONEAPI AND WITH_CYCLES_ONEAPI_BINARIES)
   #
   # On Windows, IGC_INSTALL_DIR is identical to OCLOC_INSTALL_DIR,
   # since all shared libraries of ocloc are bundled together.
-  # On Linux, we are expected to use a precompiled version from Blender's
+  # On Linux, we are expected to use a precompiled version from AIR Blend's
   # dependencies at the path:
   # <DPCPP_ROOT_DIRECTORY>/lib/igc/
   if(NOT IGC_INSTALL_DIR)

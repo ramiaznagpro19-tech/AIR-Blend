@@ -6,7 +6,7 @@
 
 /** \file
  * \ingroup bke
- * \brief Blender CLI Generic `--command` Support.
+ * \brief AIR Blend CLI Generic `--command` Support.
  *
  * \note all registered commands must print help to the STDOUT & exit with a zero exit-code
  * when `--help` is passed in as the first argument to a command.

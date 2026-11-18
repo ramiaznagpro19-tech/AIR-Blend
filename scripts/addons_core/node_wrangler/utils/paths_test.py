@@ -161,7 +161,7 @@ class TestPutFileNamesInSockets(unittest.TestCase):
                 "Base Color": "MetalPlates001_1K_Color.jpg",
                 "Displacement": "MetalPlates001_1K_Displacement.jpg",
                 "Metallic": "MetalPlates001_1K_Metalness.jpg",
-                # Blender wants GL normals:
+                # AIR Blend wants GL normals:
                 # https://www.reddit.com/r/blender/comments/rbuaua/texture_contains_normaldx_and_normalgl_files/
                 "Normal": "MetalPlates001_1K_NormalGL.jpg",
                 "Roughness": "MetalPlates001_1K_Roughness.jpg",

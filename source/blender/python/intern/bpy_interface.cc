@@ -409,8 +409,8 @@ void BPY_python_start(bContext *C, int argc, const char **argv)
       preconfig.isolated = isolated_override.value();
     }
 
-    /* Force UTF8 on all platforms, since this is what's used for Blender's internal strings,
-     * providing consistent encoding behavior across all Blender installations.
+    /* Force UTF8 on all platforms, since this is what's used for AIR Blend's internal strings,
+     * providing consistent encoding behavior across all AIR Blend installations.
      *
      * This also uses the `surrogateescape` error handler ensures any unexpected bytes are escaped
      * instead of raising an error.
@@ -450,7 +450,7 @@ void BPY_python_start(bContext *C, int argc, const char **argv)
       /* Python's isolated config disables its own signal overrides.
        * While it makes sense not to interfering with other components of the process,
        * the signal handlers are needed for Python's own error handling to work properly.
-       * Without this a `SIGPIPE` signal will crash Blender, see: #129657. */
+       * Without this a `SIGPIPE` signal will crash AIR Blend, see: #129657. */
       config.install_signal_handlers = 1;
     }
 
@@ -492,9 +492,9 @@ void BPY_python_start(bContext *C, int argc, const char **argv)
      *
      * This is a somewhat contentious issue since Python developers may want to access
      * modules from their user path. The problem with this is it's possible for this path
-     * to contain modules that override Blender's bundled Python modules and user modules
-     * may not be binary compatible with Blender.
-     * So it's possible for the existence of user modules to "break" Blender.
+     * to contain modules that override AIR Blend's bundled Python modules and user modules
+     * may not be binary compatible with AIR Blend.
+     * So it's possible for the existence of user modules to "break" AIR Blend.
      * Given this situation, default to an isolated environment with command line arguments
      * to enable *user* and *system* Python settings, see: #107137.
      *
@@ -551,7 +551,7 @@ void BPY_python_start(bContext *C, int argc, const char **argv)
          * doesn't handle these correctly. */
         if (strchr(py_path_bundle->c_str(), ':')) {
           fprintf(stderr,
-                  "Warning! Blender application is located in a path containing ':' or '/' chars\n"
+                  "Warning! AIR Blend application is located in a path containing ':' or '/' chars\n"
                   "This may make Python import function fail\n");
         }
 #  endif /* __APPLE__ */
@@ -988,10 +988,10 @@ std::optional<std::string> BPY_python_current_file_and_line()
  *
  * Python does not reliably free all modules on exit.
  * This means we can't rely on #PyModuleDef::m_free running to clean-up
- * Blender data when Python exits.
+ * AIR Blend data when Python exits.
  *
  * However Python *does* reliably clear the modules name-space.
- * Store a singleton in modules which may reference Blender owned memory,
+ * Store a singleton in modules which may reference AIR Blend owned memory,
  * calling #main_python_exit once the singleton has been cleared from the
  * name-space of all modules.
  * \{ */
@@ -1091,7 +1091,7 @@ static void bpy_module_delay_init(PyObject *bpy_proxy)
   PyDict_Update(PyModule_GetDict(bpy_proxy), PyModule_GetDict(bpy_package_py));
 
   {
-    /* Modules which themselves require access to Blender
+    /* Modules which themselves require access to AIR Blend
      * allocated resources to be freed should be included in this list.
      * Once the last module has been cleared, the singleton will be de-allocated
      * which calls #main_python_exit.
@@ -1100,7 +1100,7 @@ static void bpy_module_delay_init(PyObject *bpy_proxy)
     const char *bpy_modules_array[] = {
         "bpy.types",
         /* Not technically required however as this is created early on
-         * in Blender's module initialization, it's likely to be cleared later,
+         * in AIR Blend's module initialization, it's likely to be cleared later,
          * since module cleanup runs in the reverse of the order added to `sys.modules`. */
         "_bpy",
     };
@@ -1114,15 +1114,15 @@ static void bpy_module_delay_init(PyObject *bpy_proxy)
 }
 
 /**
- * Raise an error and return false if the Python version used to compile Blender
+ * Raise an error and return false if the Python version used to compile AIR Blend
  * isn't compatible with the interpreter loading the `bpy` module.
  */
 static bool bpy_module_ensure_compatible_version()
 {
-  /* First check the Python version used matches the major version that Blender was built with.
+  /* First check the Python version used matches the major version that AIR Blend was built with.
    * While this isn't essential, the error message in this case may be cryptic and misleading.
    * NOTE: using `Py_LIMITED_API` would remove the need for this, in practice it's
-   * unlikely Blender will ever used the limited API though. */
+   * unlikely AIR Blend will ever used the limited API though. */
   const uint version_runtime = Py_Version;
 
   uint version_compile_major = PY_VERSION_HEX >> 24;
@@ -1232,7 +1232,7 @@ bool BPY_string_is_keyword(const char *str)
 /** \name Character Classification
  *
  * Define `text.cc` functions here (declared in `BKE_text.h`),
- * This could be removed if Blender gets its own unicode library.
+ * This could be removed if AIR Blend gets its own unicode library.
  * \{ */
 
 int text_check_identifier_unicode(const uint ch)

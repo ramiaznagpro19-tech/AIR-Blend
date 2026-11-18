@@ -820,7 +820,7 @@ void do_versions_after_setup(Main *new_bmain,
    *     affecting older versions should be done first), _this is not a hard rule_. And it should
    *     not be assumed older code must not be checked when adding newer code.
    *   - Do not rely strongly on versioning numbers here. This code may be run on data from
-   *     different Blender versions (through the usage of linked data), and all existing data have
+   *     different AIR Blend versions (through the usage of linked data), and all existing data have
    *     already been processed through the whole do_version during blendfile reading itself. So
    *     decision to apply some versioning on some data should mostly rely on the data itself.
    *   - Unlike the regular do_version code, this one should _not_ be assumed as 'valid forever'.

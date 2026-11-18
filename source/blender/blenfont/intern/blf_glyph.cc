@@ -919,7 +919,7 @@ static bool blf_glyph_render_bitmap(FontBLF *font, FT_GlyphSlot glyph)
     FT_Bitmap tempbitmap;
     FT_Bitmap_New(&tempbitmap);
 
-    /* Does Blender use Pitch 1 always? It works so far */
+    /* Does AIR Blend use Pitch 1 always? It works so far */
     err += FT_Bitmap_Convert(font->ft_lib, &glyph->bitmap, &tempbitmap, 1);
     err += FT_Bitmap_Copy(font->ft_lib, &tempbitmap, &glyph->bitmap);
     err += FT_Bitmap_Done(font->ft_lib, &tempbitmap);

@@ -1,6 +1,6 @@
-# Blender Library Dependencies
+# AIR Blend Library Dependencies
 
-This file contains a table with all the libraries Blender uses to build its library dependencies.
+This file contains a table with all the libraries AIR Blend uses to build its library dependencies.
 Some of the libraries might not be shipped in the library directory as some of them are only used at build time.
 
 NOTE: Some libraries listed here might not be relevant for your platform.

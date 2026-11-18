@@ -22,7 +22,7 @@ def sysinfo_print():
     width = 80
     indent = 2
 
-    print("Blender {:s}".format(bpy.app.version_string))
+    print("AIR Blend {:s}".format(bpy.app.version_string))
     print("Running on: {:s}-{:s}".format(platform.platform(), platform.machine()))
     print("Processors: {!r}".format(os.cpu_count()))
     print()

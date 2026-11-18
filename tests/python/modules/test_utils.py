@@ -37,22 +37,22 @@ def with_tempdir(wrapped):
 
 
 class AbstractBlenderRunnerTest(unittest.TestCase):
-    """Base class for all test suites which needs to run Blender"""
+    """Base class for all test suites which needs to run AIR Blend"""
 
     # Set in a subclass
     blender: pathlib.Path = None
     testdir: pathlib.Path = None
 
     def run_blender(self, filepath: str, python_script: str, timeout: int = 300) -> str:
-        """Runs Blender by opening a blendfile and executing a script.
+        """Runs AIR Blend by opening a blendfile and executing a script.
 
-        Returns Blender's stdout + stderr combined into one string.
+        Returns AIR Blend's stdout + stderr combined into one string.
 
         :param filepath: taken relative to self.testdir.
         :param timeout: in seconds
         """
 
-        assert self.blender, "Path to Blender binary is to be set in setUpClass()"
+        assert self.blender, "Path to AIR Blend binary is to be set in setUpClass()"
         assert self.testdir, "Path to tests binary is to be set in setUpClass()"
 
         blendfile = self.testdir / filepath if filepath else ""
@@ -80,6 +80,6 @@ class AbstractBlenderRunnerTest(unittest.TestCase):
                               timeout=timeout)
         output = proc.stdout.decode('utf8')
         if proc.returncode:
-            self.fail('Error %d running Blender:\n%s' % (proc.returncode, output))
+            self.fail('Error %d running AIR Blend:\n%s' % (proc.returncode, output))
 
         return output

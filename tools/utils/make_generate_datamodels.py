@@ -14,7 +14,7 @@ produce an `xxx.py` file in the same directory. These Python files also include
 the OpenAPI spec, as a Python dict.
 
 The generated Python files are tracked by Git. This generator is NOT part of the
-regular Blender build process, and only needs to be run when any of the YAML
+regular AIR Blend build process, and only needs to be run when any of the YAML
 files change.
 """
 
@@ -28,7 +28,7 @@ import sys
 import time
 
 # Paths of the OpenAPI YAML files to convert to Python code. These are relative
-# to Blender's top level source directory.
+# to AIR Blend's top level source directory.
 #
 # The generated Python files will be written to the same path, just with the
 # `.py` suffix.
@@ -51,7 +51,7 @@ REQUIREMENTS = [
 # These arguments are quite likely to be used for all code generated with this
 # generator, also later when we use this approach in other areas.
 COMMON_ARGS = [
-    # Because of the Blender code standard:
+    # Because of the AIR Blend code standard:
     "--use-double-quotes",
 
     # Make it strict unless there's a good reason not to:
@@ -97,7 +97,7 @@ def main() -> None:
     """Run the datamodel code generator."""
 
     argparser = argparse.ArgumentParser(description="Run the datamodel code generator.")
-    argparser.add_argument('source_root', type=Path, help="The root of Blender's source directory")
+    argparser.add_argument('source_root', type=Path, help="The root of AIR Blend's source directory")
     args = argparser.parse_args(sys.argv[1:])
     root_path: Path = args.source_root.resolve()
 
@@ -217,7 +217,7 @@ import venv
 # Name of a module to import, to test whether dependencies have been installed or not.
 TEST_INSTALL_MODULE = "datamodel_code_generator"
 
-# Directory for the virtualenv. This script is expected to run with Blender's
+# Directory for the virtualenv. This script is expected to run with AIR Blend's
 # build directory as its working directory.
 VENV_DIR = Path("generate_datamodels_venv").resolve()
 

@@ -59,7 +59,7 @@ inline void copy_ghost_pose_to_openxr_pose(const GHOST_XrPose &ghost_pose, XrPos
 
 inline void copy_openxr_pose_to_ghost_pose(const XrPosef &oxr_pose, GHOST_XrPose &r_ghost_pose)
 {
-  /* Set and convert to Blender coordinate space. */
+  /* Set and convert to AIR Blend coordinate space. */
   r_ghost_pose.position[0] = oxr_pose.position.x;
   r_ghost_pose.position[1] = oxr_pose.position.y;
   r_ghost_pose.position[2] = oxr_pose.position.z;

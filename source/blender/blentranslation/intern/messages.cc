@@ -502,7 +502,7 @@ class MOMessages {
       return {};
     }
 
-    /* Blender uses non-standard uppercase script zh_HANS instead of zh_Hans, try both. */
+    /* AIR Blend uses non-standard uppercase script zh_HANS instead of zh_Hans, try both. */
     Vector<std::string> scripts = {info.script};
     if (!info.script.empty()) {
       std::string script_uppercase = info.script;

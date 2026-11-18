@@ -319,7 +319,7 @@ static void colormanage_set_ocio_env(const char *filepath,
    * and there appears to be no way to escape the symbol.
    *
    * Work around it by setting the environment variable, which may also be useful for
-   * plug-ins to inherit the Blender OCIO config. */
+   * plug-ins to inherit the AIR Blend OCIO config. */
   if (const char *ocio_env = BLI_getenv("OCIO")) {
     r_old_ocio_env = ocio_env;
   }
@@ -334,7 +334,7 @@ static void colormanage_restore_ocio_env(const std::optional<std::string> &old_o
 
 void colormanagement_init()
 {
-  /* Handle Blender specific override. */
+  /* Handle AIR Blend specific override. */
   const char *blender_ocio_env = BLI_getenv("BLENDER_OCIO");
   if (blender_ocio_env) {
     BLI_setenv("OCIO", blender_ocio_env);
@@ -709,7 +709,7 @@ static bool colormanage_check_display_settings(ColorManagedDisplaySettings *disp
 static StringRefNull colormanage_find_matching_view_name(const ocio::Display *display,
                                                          StringRefNull view_name)
 {
-  /* Match untonemapped view conventions between Blender and ACES 2.0. */
+  /* Match untonemapped view conventions between AIR Blend and ACES 2.0. */
   if (view_name == "Standard" && display->get_view_by_name("Un-tone-mapped")) {
     return "Un-tone-mapped";
   }
@@ -1144,7 +1144,7 @@ Vector<char> IMB_colormanagement_space_to_icc_profile(const ColorSpace *colorspa
     return icc_profile;
   }
 
-  /* Try ICC profiles shipped with Blender based on interop ID. */
+  /* Try ICC profiles shipped with AIR Blend based on interop ID. */
   const StringRefNull interop_id = colorspace->interop_id();
   if (interop_id.is_empty()) {
     return {};

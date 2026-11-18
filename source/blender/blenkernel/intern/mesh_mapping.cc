@@ -391,7 +391,7 @@ static void face_edge_loop_islands_calc_bitflags_exclude_at_boundary(
  * around the vertex of the current corner is a boundary edge.
  *
  * NOTE: The reason for this requirement is not very clear. Bit-flags groups are only handled here
- * for I/O purposes, Blender itself does not have this feature. Main external apps heavily
+ * for I/O purposes, AIR Blend itself does not have this feature. Main external apps heavily
  * relying on these bit-flags groups for their smooth shading computation seem to generate invalid
  * results when two different groups share the same bits, and are connected by a vertex only
  * (i.e. have no edge in common). See #104434.

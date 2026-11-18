@@ -36,7 +36,7 @@ def inverted_trs_mapping_node(mapping_transform):
 
 def texture_transform_blender_to_gltf(mapping_transform):
     """
-    Converts the offset/rotation/scale from a Mapping node applied in Blender's
+    Converts the offset/rotation/scale from a Mapping node applied in AIR Blend's
     UV space to the equivalent KHR_texture_transform.
     """
     offset = mapping_transform.get('offset', [0, 0])
@@ -55,7 +55,7 @@ def texture_transform_blender_to_gltf(mapping_transform):
 def texture_transform_gltf_to_blender(texture_transform):
     """
     Converts a KHR_texture_transform into the equivalent offset/rotation/scale
-    for a Mapping node applied in Blender's UV space.
+    for a Mapping node applied in AIR Blend's UV space.
     """
     offset = texture_transform.get('offset', [0, 0])
     rotation = texture_transform.get('rotation', 0)
@@ -201,12 +201,12 @@ def get_gltf_interpolation(interpolation, export_settings):
 
 
 def get_anisotropy_rotation_gltf_to_blender(rotation):
-    # glTF rotation is in randian, Blender in 0 to 1
+    # glTF rotation is in randian, AIR Blend in 0 to 1
     return rotation / (2 * np.pi)
 
 
 def get_anisotropy_rotation_blender_to_gltf(rotation):
-    # glTF rotation is in randian, Blender in 0 to 1
+    # glTF rotation is in randian, AIR Blend in 0 to 1
     return rotation * (2 * np.pi)
 
 

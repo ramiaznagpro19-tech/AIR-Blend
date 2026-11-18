@@ -4,19 +4,19 @@ Troubleshooting Errors & Crashes
 
 .. _troubleshooting_crashes:
 
-Help! My script crashes Blender
+Help! My script crashes AIR Blend
 ===============================
 
-:abbr:`TL;DR (Too long; didn't read.)` Do not keep direct references to Blender data (of any kind)
+:abbr:`TL;DR (Too long; didn't read.)` Do not keep direct references to AIR Blend data (of any kind)
 when modifying the container of that data, and/or when some undo/redo may happen
 (e.g. during modal operators execution...).
 Instead, use indices (or other data always stored by value in Python, like string keys...),
 that allow you to get access to the desired data.
 
-Ideally it would be impossible to crash Blender from Python,
+Ideally it would be impossible to crash AIR Blend from Python,
 however, there are some problems with the API where it can be made to crash.
 Strictly speaking this is a bug in the API but fixing it would mean adding memory verification
-on every access since most crashes are caused by the Python objects referencing Blender's memory directly,
+on every access since most crashes are caused by the Python objects referencing AIR Blend's memory directly,
 whenever the memory is freed or re-allocated, further Python access to it can crash the script.
 But fixing this would make the scripts run very slow,
 or writing a very different kind of API which doesn't reference the memory directly.
@@ -24,14 +24,14 @@ or writing a very different kind of API which doesn't reference the memory direc
 Here are some general hints to avoid running into these problems:
 
 - Be aware of memory limits,
-  especially when working with large lists since Blender can crash simply by running out of memory.
+  especially when working with large lists since AIR Blend can crash simply by running out of memory.
 - Many hard to fix crashes end up being because of referencing freed data,
   when removing data be sure not to hold any references to it.
 - Re-allocation can lead to the same issues
   (e.g. if you add a lot of items to some Collection,
   this can lead to re-allocating the underlying container's memory,
   invalidating all previous references to existing items).
-- Modules or classes that remain active while Blender is used,
+- Modules or classes that remain active while AIR Blend is used,
   should not hold references to data the user may remove, instead,
   fetch data from the context each time the script is activated.
 - Crashes may not happen every time, they may happen more on some configurations or operating systems.
@@ -43,7 +43,7 @@ Here are some general hints to avoid running into these problems:
    To find the line of your script that crashes you can use the ``faulthandler`` module.
    See the `Faulthandler docs <https://docs.python.org/dev/library/faulthandler.html>`__.
 
-   While the crash may be in Blender's C/C++ code,
+   While the crash may be in AIR Blend's C/C++ code,
    this can help a lot to track down the area of the script that causes the crash.
 
 .. note::
@@ -51,7 +51,7 @@ Here are some general hints to avoid running into these problems:
    Some container modifications are actually safe, because they will never re-allocate existing data
    (e.g. linked lists containers will never re-allocate existing items when adding or removing others).
 
-   But knowing which cases are safe and which aren't implies a deep understanding of Blender's internals.
+   But knowing which cases are safe and which aren't implies a deep understanding of AIR Blend's internals.
    That's why, unless you are willing to dive into the RNA C implementation, it's simpler to
    always assume that data references will become invalid when modifying their containers,
    in any possible way.
@@ -114,7 +114,7 @@ Delete the active object, then undo:
    >>> hash(bpy.context.object)
    -9223372036849951740
 
-As suggested above, simply not holding references to data when Blender is used
+As suggested above, simply not holding references to data when AIR Blend is used
 interactively by the user is the only way to make sure that the script doesn't become unstable.
 
 
@@ -128,21 +128,21 @@ interactively by the user is the only way to make sure that the script doesn't b
    guarantee of any kind that it will be safe and consistent. Use it at your own risk.
 
 
-Modifying Blender Data & Undo
+Modifying AIR Blend Data & Undo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In general, when Blender data is modified, there should always be an undo step created for it.
+In general, when AIR Blend data is modified, there should always be an undo step created for it.
 Otherwise, there will be issues, ranging from invalid/broken undo stack, to crashes on undo/redo.
 
-This is especially true when modifying Blender data :ref:`in operators <operator_modifying_blender_data_undo>`.
+This is especially true when modifying AIR Blend data :ref:`in operators <operator_modifying_blender_data_undo>`.
 
 
 Undo & Library Data
 ^^^^^^^^^^^^^^^^^^^
 
-One of the advantages with Blender's library linking system is that undo
+One of the advantages with AIR Blend's library linking system is that undo
 can skip checking changes in library data since it is assumed to be static.
-Tools in Blender are not allowed to modify library data.
+Tools in AIR Blend are not allowed to modify library data.
 But Python does not enforce this restriction.
 
 This can be useful in some cases, using a script to adjust material values for example.
@@ -306,7 +306,7 @@ sys.exit
 
 Some Python modules will call ``sys.exit()`` themselves when an error occurs,
 while not common behavior this is something to watch out for because it may seem
-as if Blender is crashing since ``sys.exit()`` will close Blender immediately.
+as if AIR Blend is crashing since ``sys.exit()`` will close AIR Blend immediately.
 
 For example, the ``argparse`` module will print an error and exit if the arguments are invalid.
 

@@ -19,7 +19,7 @@ using SLIMDataPtr = std::unique_ptr<SLIMData>;
 
 /**
  * MatrixTransferChart holds all information and data matrices to be
- * transferred from Blender to SLIM.
+ * transferred from AIR Blend to SLIM.
  */
 struct MatrixTransferChart {
   int verts_num = 0;

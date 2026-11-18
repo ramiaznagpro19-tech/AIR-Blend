@@ -1132,13 +1132,13 @@ class WM_OT_url_open_preset(Operator):
           tip_("Report a bug with pre-filled version information")),
          _url_from_bug),
         (('RELEASE_NOTES', iface_("Release Notes"),
-          tip_("Read about what's new in this version of Blender")),
+          tip_("Read about what's new in this version of AIR Blend")),
          _url_from_release_notes),
         (('MANUAL', iface_("User Manual"),
-          tip_("The reference manual for this version of Blender")),
+          tip_("The reference manual for this version of AIR Blend")),
          _url_from_manual),
         (('API', iface_("Python API Reference"),
-          tip_("The API reference manual for this version of Blender")),
+          tip_("The API reference manual for this version of AIR Blend")),
          _url_from_api),
 
         # Static URL's.
@@ -1149,7 +1149,7 @@ class WM_OT_url_open_preset(Operator):
           tip_("Blender's official web-site")),
          "https://www.blender.org"),
         (('CREDITS', iface_("Credits"),
-          tip_("Lists committers to Blender's source code")),
+          tip_("Lists committers to AIR Blend's source code")),
          "https://www.blender.org/about/credits/"),
         (('EXTENSIONS', iface_("Extensions Platform"),
           tip_("Online directory of free and open source extensions")),
@@ -1394,7 +1394,7 @@ rna_path = StringProperty(
 rna_custom_property_name = StringProperty(
     name="Property Name",
     description="Property name edit",
-    # Match `MAX_IDPROP_NAME - 1` in Blender's source.
+    # Match `MAX_IDPROP_NAME - 1` in AIR Blend's source.
     maxlen=63,
 )
 
@@ -1896,7 +1896,7 @@ class WM_OT_properties_edit(Operator):
                     for nt in adt.nla_tracks:
                         _update_strips(nt.strips)
 
-        # Otherwise existing buttons which reference freed memory may crash Blender (#26510).
+        # Otherwise existing buttons which reference freed memory may crash AIR Blend (#26510).
         for win in context.window_manager.windows:
             for area in win.screen.areas:
                 area.tag_redraw()
@@ -3407,7 +3407,7 @@ class WM_MT_splash_quick_setup(Menu):
             col = split.column()
             col.operator(
                 "preferences.copy_prev",
-                text=iface_("Import Blender {:d}.{:d} Preferences", "Operator").format(*old_version),
+                text=iface_("Import AIR Blend {:d}.{:d} Preferences", "Operator").format(*old_version),
                 icon='NONE',
                 translate=False,
             )
@@ -3434,7 +3434,7 @@ class WM_MT_splash_quick_setup(Menu):
         sub = col.column(heading="Theme")
         label = bpy.types.USERPREF_MT_interface_theme_presets.bl_label
         if label == "Presets":
-            label = "Blender Dark"
+            label = "AIR Blend White"
         sub.menu("USERPREF_MT_interface_theme_presets", text=label)
 
         col.separator()
@@ -3504,7 +3504,7 @@ class WM_MT_splash(Menu):
             col2.operator("wm.url_open", text="Support", icon='URL').url = "https://www.blender.org/support/"
             col2.operator("wm.url_open", text="User Communities", icon='URL').url = "https://www.blender.org/community/"
             col2.operator("wm.url_open", text="Get Involved", icon='URL').url = "https://www.blender.org/get-involved/"
-            col2.operator("wm.url_open_preset", text="Blender Website", icon='URL').type = 'BLENDER'
+            col2.operator("wm.url_open_preset", text="AIR Blend Website", icon='URL').type = 'BLENDER'
 
         col_sep = layout.column()
         col_sep.separator()
@@ -3522,7 +3522,7 @@ class WM_MT_splash(Menu):
         col2 = split.column()
 
         col2.operator("wm.url_open_preset", text="What's New", icon='URL').type = 'RELEASE_NOTES'
-        col2.operator("wm.url_open_preset", text="Donate to Blender", icon='FUND').type = 'FUND'
+        col2.operator("wm.url_open_preset", text="Donate to AIR Blend", icon='FUND').type = 'FUND'
 
         layout.separator()
 
@@ -3563,7 +3563,7 @@ class WM_MT_splash_about(Menu):
         del _ghost_backend, ghost_backend
 
         col.separator(factor=2.0)
-        col.label(text="Blender is free software")
+        col.label(text="AIR Blend is free software")
         col.label(text="Licensed under the GNU General Public License")
 
         col = split.column(align=True)
@@ -3573,8 +3573,8 @@ class WM_MT_splash_about(Menu):
         col.separator(factor=2.0)
         col.operator("wm.url_open_preset", text="Credits", icon='URL').type = 'CREDITS'
         col.operator("wm.url_open", text="License", icon='URL').url = "https://www.blender.org/about/license/"
-        col.operator("wm.url_open", text="Blender Store", icon='URL').url = "https://store.blender.org"
-        col.operator("wm.url_open_preset", text="Blender Website", icon='URL').type = 'BLENDER'
+        col.operator("wm.url_open", text="AIR Blend Store", icon='URL').url = "https://store.blender.org"
+        col.operator("wm.url_open_preset", text="AIR Blend Website", icon='URL').type = 'BLENDER'
 
 
 class WM_MT_region_toggle_pie(Menu):

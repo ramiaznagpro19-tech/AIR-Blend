@@ -307,11 +307,11 @@ def release_log_init(path, source_dir, blender_rev, start_sha1, end_sha1, rstate
     from git_log import GitRepo
 
     if rstate is not None:
-        header = "= Blender %s: Bug Fixes =\n\n" \
+        header = "= AIR Blend %s: Bug Fixes =\n\n" \
                  "[%s] Changes from revision {{GitCommit|rB%s}} to {{GitCommit|rB%s}}, inclusive.\n\n" \
                  % (blender_rev, rstate, start_sha1[:10], end_sha1[:10])
     else:
-        header = "= Blender %s: Bug Fixes =\n\n" \
+        header = "= AIR Blend %s: Bug Fixes =\n\n" \
                  "Changes from revision {{GitCommit|rB%s}} to {{GitCommit|rB%s}}, inclusive.\n\n" \
                  % (blender_rev, start_sha1[:10], end_sha1[:10])
 
@@ -544,16 +544,16 @@ def argparse_create():
     parser.add_argument(
         "--blender-rev", dest="blender_rev",
         default=None, required=False,
-        help=("Blender revision (only used to generate release notes page)"))
+        help=("AIR Blend revision (only used to generate release notes page)"))
     parser.add_argument(
         "--blender-rstate", dest="blender_rstate",
         default="alpha", required=False,
-        help=("Blender release state (like alpha, beta, rc1, final, corr_a, corr_b, etc.), "
+        help=("AIR Blend release state (like alpha, beta, rc1, final, corr_a, corr_b, etc.), "
               "each revision will be tagged by given one"))
     parser.add_argument(
         "--blender-rstate-list", dest="blender_rstate_list",
         default="", required=False, type=lambda s: s.split(","),
-        help=("Blender release state(s) to additionally list in their own sections "
+        help=("AIR Blend release state(s) to additionally list in their own sections "
               "(e.g. pass 'RC2' to list fixes between RC1 and RC2, ie tagged as RC2, etc.)"))
 
     return parser

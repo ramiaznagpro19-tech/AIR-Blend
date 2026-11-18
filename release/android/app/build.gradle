@@ -1,7 +1,7 @@
-// Packages Blender for Android.
+// Packages AIR Blend for Android.
 //
 // NOTE: This project only assembles and signs the APK. Actual build artifacts
-//       are built as part of regular CMake Blender CMake builds and then staged
+//       are built as part of regular CMake AIR Blend CMake builds and then staged
 //       into this base skeleton project via the `gradle_stage` target.
 //
 // See build_files/cmake/platform/platform_android_gradle.cmake for details.
@@ -15,7 +15,7 @@ android {
     compileSdkVersion = 36
 
     defaultConfig {
-        applicationId = 'org.blender.blender'
+        applicationId = 'com.airblend.app'
 
         // Passed by the `gradle_assemble` CMake target defined in platform_android_gradle.cmake.
         // TODO: Could also be baked in the gradle.properties file instead of being passed on invocation.

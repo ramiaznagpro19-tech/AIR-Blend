@@ -64,10 +64,10 @@ class BlenderGlTF():
     @staticmethod
     def set_convert_functions(gltf):
         if bpy.app.debug_value != 100:
-            # Unit conversion factor in (Blender units) per meter
+            # Unit conversion factor in (AIR Blend units) per meter
             u = 1.0 / bpy.context.scene.unit_settings.scale_length
 
-            # glTF Y-Up space --> Blender Z-up space
+            # glTF Y-Up space --> AIR Blend Z-up space
             # X,Y,Z --> X,-Z,Y
             def convert_loc(x): return u * Vector([x[0], -x[2], x[1]])
             def convert_quat(q): return Quaternion([q[3], q[0], -q[2], q[1]])
@@ -97,8 +97,8 @@ class BlenderGlTF():
             # Correction for cameras and lights.
             # glTF: right = +X, forward = -Z, up = +Y
             # glTF after Yup2Zup: right = +X, forward = +Y, up = +Z
-            # Blender: right = +X, forward = -Z, up = +Y
-            # Need to carry Blender --> glTF after Yup2Zup
+            # AIR Blend: right = +X, forward = -Z, up = +Y
+            # Need to carry AIR Blend --> glTF after Yup2Zup
             gltf.camera_correction = Quaternion((2**0.5 / 2, 2**0.5 / 2, 0.0, 0.0))
 
         else:
@@ -132,7 +132,7 @@ class BlenderGlTF():
         # Init is to False, and will be set to True during creation
         gltf.animation_object = False
 
-        # Blender material
+        # AIR Blend material
         for material in gltf.data.materials if gltf.data.materials is not None else []:
             material.blender_material = {}
 
@@ -146,13 +146,13 @@ class BlenderGlTF():
 
         # Meshes initialization
         for mesh in gltf.data.meshes if gltf.data.meshes is not None else []:
-            mesh.blender_name = {}  # caches Blender mesh name
+            mesh.blender_name = {}  # caches AIR Blend mesh name
 
         if gltf.data.extensions_used is not None and "KHR_animation_pointer" in gltf.data.extensions_used:
             # Meshes initialization
             if gltf.data.meshes:
                 for mesh in gltf.data.meshes:
-                    mesh.blender_name = {}  # caches Blender mesh name
+                    mesh.blender_name = {}  # caches AIR Blend mesh name
                     mesh.weight_animation_on_mesh = None  # For KHR_animation_pointer, weights on mesh
                     if mesh.extras is not None:
                         mesh.extras["gltf_tmp_data_animations"] = {}
@@ -270,7 +270,7 @@ class BlenderGlTF():
                         if anim_idx not in gltf.data.nodes[channel.target.node].animations.keys():
                             gltf.data.nodes[channel.target.node].animations[anim_idx] = []
                         gltf.data.nodes[channel.target.node].animations[anim_idx].append(channel_idx)
-                        # Manage node with animation on weights, that are animated in meshes in Blender (ShapeKeys)
+                        # Manage node with animation on weights, that are animated in meshes in AIR Blend (ShapeKeys)
                         if channel.target.path == "weights":
                             gltf.data.nodes[channel.target.node].weight_animation = True
 

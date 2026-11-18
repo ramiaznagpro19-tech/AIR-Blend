@@ -23,7 +23,7 @@
 # a declarative TestSpec.
 #
 # If tests fail and it is because of a known and OK change due to things that have
-# changed in Blender, we can use the 'update_expected' parameter of RunTest
+# changed in AIR Blend, we can use the 'update_expected' parameter of RunTest
 # to update the <expected object>.
 
 import bpy
@@ -127,7 +127,7 @@ def DoMeshSelect(select, verbose=False):
     Assume we are in Object mode on a mesh object.
     The selection spec string should start with V, E, or F (for vertex, edge, face) to choose
     the kind of element selected, and the is followed with a list of element indices
-    (use --debug to Blender to visualize these).
+    (use --debug to AIR Blend to visualize these).
 
     Args:
         select: string - see comment above for syntax

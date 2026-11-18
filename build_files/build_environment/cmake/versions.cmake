@@ -33,8 +33,8 @@ set(RELEASE_HIP_UNIX_VERSION 7.2)
 #  * COPYRIGHT: Single-line copyright holders, semi-colon separated.
 #      Some licenses may not require a copyright.
 #  * DEPSBUILDTIMEONLY: Indicate that the library is not included nor linked with
-#      Blender, thus can be excluded from the final license. Use to indicate the
-#      reason why this is not being included with Blender.
+#      AIR Blend, thus can be excluded from the final license. Use to indicate the
+#      reason why this is not being included with AIR Blend.
 #
 #  Note that multi-line strings *must* use [=[...]=] bounds.
 
@@ -454,7 +454,7 @@ set(URLLIB3_VERSION 2.4.0)
 set(URLLIB3_CPE "cpe:2.3:a:urllib3:urllib3:${URLLIB3_VERSION}:*:*:*:*:*:*:*")
 # Needed by: Python's `requests` module (so add-ons can authenticate against trusted certificates).
 set(CERTIFI_VERSION 2025.4.26)
-# Needed by: Some of Blender's add-ons (to support convenient interaction with online services).
+# Needed by: Some of AIR Blend's add-ons (to support convenient interaction with online services).
 set(REQUESTS_VERSION 2.32.3)
 # Needed by: Python's `numpy` module (used by some add-ons).
 set(CYTHON_VERSION 3.0.11)
@@ -475,13 +475,13 @@ set(ZSTANDARD_FILE zstandard-${ZSTANDARD_VERSION}.tar.gz)
 set(ZSTANDARD_HOMEPAGE https://github.com/indygreg/python-zstandard/)
 set(ZSTANDARD_LICENSE SPDX:BSD-3-Clause)
 set(ZSTANDARD_COPYRIGHT "Copyright (c) 2016, Gregory Szorc. All rights reserved.")
-# Auto-format Python source (developer tool, not used by Blender at run-time).
+# Auto-format Python source (developer tool, not used by AIR Blend at run-time).
 set(AUTOPEP8_VERSION 2.3.1)
 # Needed by: `autopep8` (so the version doesn't change on rebuild).
 set(PYCODESTYLE_VERSION 2.13)
-# DocUtils Python source (to validate generated docs, not used by Blender at run-time).
+# DocUtils Python source (to validate generated docs, not used by AIR Blend at run-time).
 set(DOCUTILS_VERSION 0.22.4)
-# Build system for other packages (not used by Blender at run-time).
+# Build system for other packages (not used by AIR Blend at run-time).
 set(MESON_VERSION 1.9.0)
 # Build time requirements for numpy and cython
 set(SETUPTOOLS_VERSION 80.9.0)
@@ -757,14 +757,14 @@ set(FLEXBISON_HASH 6b549d43e34ece0e8ed05af92daa31c4)
 set(FLEXBISON_HASH_TYPE MD5)
 set(FLEXBISON_FILE win_flex_bison-${FLEXBISON_VERSION}.zip)
 set(FLEXBISON_HOMEPAGE https://github.com/lexxmark/winflexbison)
-set(FLEXBISON_DEPSBUILDTIMEONLY "This utility is used at dependency build time, but isn't shipped nor used by Blender itself")
+set(FLEXBISON_DEPSBUILDTIMEONLY "This utility is used at dependency build time, but isn't shipped nor used by AIR Blend itself")
 
 set(FLEX_VERSION 2.6.4)
 set(FLEX_URI https://github.com/westes/flex/releases/download/v${FLEX_VERSION}/flex-${FLEX_VERSION}.tar.gz)
 set(FLEX_HASH 2882e3179748cc9f9c23ec593d6adc8d)
 set(FLEX_HASH_TYPE MD5)
 set(FLEX_FILE flex-${FLEX_VERSION}.tar.gz)
-set(FLEX_DEPSBUILDTIMEONLY "This utility is used at dependency build time, but isn't shipped nor used by Blender itself")
+set(FLEX_DEPSBUILDTIMEONLY "This utility is used at dependency build time, but isn't shipped nor used by AIR Blend itself")
 
 # Libraries to keep Python modules static on Linux.
 
@@ -884,7 +884,7 @@ set(NASM_HASH aded8b796c996a486a56e0515c83e414116decc3b184d88043480b32eb0a8589)
 set(NASM_HASH_TYPE SHA256)
 set(NASM_FILE nasm-${NASM_VERSION}.tar.gz)
 set(NASM_CPE "cpe:2.3:a:nasm:nasm:${NASM_VERSION}:*:*:*:*:*:*:*")
-set(NASM_DEPSBUILDTIMEONLY "This assembler is used at dependency build time, but isn't shipped nor used by Blender itself")
+set(NASM_DEPSBUILDTIMEONLY "This assembler is used at dependency build time, but isn't shipped nor used by AIR Blend itself")
 
 set(XR_OPENXR_SDK_VERSION 1.1.53)
 set(XR_OPENXR_SDK_URI https://github.com/KhronosGroup/OpenXR-SDK/archive/release-${XR_OPENXR_SDK_VERSION}.tar.gz)
@@ -970,7 +970,7 @@ set(ISPC_URI https://github.com/ispc/ispc/archive/${ISPC_VERSION}.tar.gz)
 set(ISPC_HASH 97efadfb848ef585b8f02cebd9da93e7)
 set(ISPC_HASH_TYPE MD5)
 set(ISPC_FILE ispc-${ISPC_VERSION}.tar.gz)
-set(ISPC_DEPSBUILDTIMEONLY "This compiler is used at dependency build time, but isn't shipped nor used by Blender itself")
+set(ISPC_DEPSBUILDTIMEONLY "This compiler is used at dependency build time, but isn't shipped nor used by AIR Blend itself")
 
 set(GMP_VERSION 6.3.0)
 set(GMP_URI https://gmplib.org/download/gmp/gmp-${GMP_VERSION}.tar.xz)

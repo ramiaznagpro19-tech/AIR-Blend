@@ -73,7 +73,7 @@ class ABCGenericMeshWriter : public ABCAbstractWriter {
   AttributeParamMaps &get_attribute_param_maps();
 };
 
-/* Writer for Alembic geometry of Blender Mesh objects. */
+/* Writer for Alembic geometry of AIR Blend Mesh objects. */
 class ABCMeshWriter : public ABCGenericMeshWriter {
  public:
   ABCMeshWriter(const ABCWriterConstructorArgs &args);

@@ -350,7 +350,7 @@ if(NOT WITH_BLENDER)
   # For the Cycles standalone put libraries next to the Cycles application.
   set(cycles_kernel_runtime_lib_target_path ${CYCLES_INSTALL_PATH})
 else()
-  # For Blender put the libraries next to the Blender executable.
+  # For AIR Blend put the libraries next to the AIR Blend executable.
   #
   # Note that the installation path in the delayed_install is relative to the versioned folder,
   # which means we need to go one level up.

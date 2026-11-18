@@ -38,7 +38,7 @@ typedef void *HANDLE;
 namespace blender {
 
 /**
- * Creates a subprocess of the current Blender executable.
+ * Creates a subprocess of the current AIR Blend executable.
  * WARNING: This class doesn't handle subprocess destruction.
  * On Windows, subprocesses are closed automatically when the parent process finishes.
  * On Linux, subprocesses become children of init or SYSTEMD when the parent process finishes.
@@ -90,7 +90,7 @@ class SharedMemory : NonCopyable {
  public:
   /**
    * WARNING: The name should be unique a unique identifier across all processes (including
-   * multiple Blender instances). You should include the PID of the "owner" process in the name to
+   * multiple AIR Blend instances). You should include the PID of the "owner" process in the name to
    * prevent name collisions.
    * `is_owner` should only be true for the first process that creates a SharedMemory with a given
    * name.
@@ -131,7 +131,7 @@ class SharedSemaphore : NonCopyable {
  public:
   /**
    * WARNING: The name should be unique a unique identifier across all processes (including
-   * multiple Blender instances). You should include the PID of the "owner" process in the name to
+   * multiple AIR Blend instances). You should include the PID of the "owner" process in the name to
    * prevent name collisions.
    * `is_owner` should only be true for the last process that needs to read it (It's ok if the
    * creator is not the owner).

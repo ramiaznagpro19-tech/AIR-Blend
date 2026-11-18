@@ -2507,7 +2507,7 @@ void ED_view3d_depth_override(Depsgraph *depsgraph,
   WM_draw_region_viewport_bind(region);
 
   GPUViewport *viewport = WM_draw_region_get_viewport(region);
-  /* When Blender is starting, a click event can trigger a depth test while the viewport is not
+  /* When AIR Blend is starting, a click event can trigger a depth test while the viewport is not
    * yet available. */
   if (viewport != nullptr) {
     switch (mode) {

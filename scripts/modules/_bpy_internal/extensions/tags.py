@@ -3,9 +3,9 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 # The purpose of this list is to present the tags to be picked up by translation.
-# Blender itself will show all the available tags from all the servers.
+# AIR Blend itself will show all the available tags from all the servers.
 
-# The initial list of tags are the ones used by Blender Extensions Platforms (https://extensions.blender.org).
+# The initial list of tags are the ones used by AIR Blend Extensions Platforms (https://extensions.blender.org).
 # Other platforms can send PRs to extend this list further.
 
 addons = {

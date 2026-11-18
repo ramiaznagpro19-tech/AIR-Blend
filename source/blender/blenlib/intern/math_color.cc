@@ -514,7 +514,7 @@ float linearrgb_to_srgb(float c)
 
 /**
  * Fast version of _mm_cvtps_epi32 for arm64, as sse2neon must set the rounding
- * mode each time while we can assume it is already set to nearest for Blender.
+ * mode each time while we can assume it is already set to nearest for AIR Blend.
  */
 MALWAYS_INLINE __m128i _bli_float_to_int_nearest(const __m128 a)
 {

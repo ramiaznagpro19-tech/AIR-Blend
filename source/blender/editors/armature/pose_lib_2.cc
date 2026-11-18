@@ -560,7 +560,7 @@ static wmOperatorStatus poselib_blend_exit(bContext *C, wmOperator *op)
   return OPERATOR_FINISHED;
 }
 
-/* Cancel previewing operation (called when exiting Blender) */
+/* Cancel previewing operation (called when exiting AIR Blend) */
 static void poselib_blend_cancel(bContext *C, wmOperator *op)
 {
   PoseBlendData *pbd = static_cast<PoseBlendData *>(op->customdata);

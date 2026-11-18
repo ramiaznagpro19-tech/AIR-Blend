@@ -1675,7 +1675,7 @@ class NodeTreeMainUpdater {
     const nodes::StructureType from_inferred_type =
         link.fromsock->runtime->inferred_structure_type;
     if (from_inferred_type == StructureType::Dynamic) {
-      /* Showing errors in this case results in many false positives in cases where Blender is not
+      /* Showing errors in this case results in many false positives in cases where AIR Blend is not
        * sure what the actual type is. */
       return nullptr;
     }

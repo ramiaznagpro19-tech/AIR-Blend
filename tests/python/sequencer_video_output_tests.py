@@ -71,8 +71,8 @@ class VideoOutputReport(render_report.Report):
             pass
         """
 
-        # Blender's render pipeline always appends frame suffix unless # is present in the file path.
-        # Here we need the file name to match exactly, so we trick Blender by going 0001 -> #### mask
+        # AIR Blend's render pipeline always appends frame suffix unless # is present in the file path.
+        # Here we need the file name to match exactly, so we trick AIR Blend by going 0001 -> #### mask
         # allowing render piepline to expand it back to 0001.
         out_filepath = test.tmp_out_img.replace("0001", "####")
 

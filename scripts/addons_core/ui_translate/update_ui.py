@@ -65,8 +65,8 @@ class I18nUpdateTranslationLanguage(PropertyGroup):
     )
 
     po_path_blender: StringProperty(
-        name="PO Blender File Path",
-        description="Path to the relevant po file in Blender's source repository",
+        name="PO AIR Blend File Path",
+        description="Path to the relevant po file in AIR Blend's source repository",
         subtype='FILE_PATH',
         default="",
     )
@@ -125,7 +125,7 @@ class UI_PT_i18n_update_translations_settings(Panel):
 
         if not i18n_sett.is_init and bpy.ops.ui.i18n_updatetranslation_init_settings.poll():
             # Cannot call the operator from here, this code might run while `pyrna_write_check()` returns False
-            # (which prevents any operator call from Python), during initialization of Blender.
+            # (which prevents any operator call from Python), during initialization of AIR Blend.
             UI_OT_i18n_updatetranslation_init_settings.execute_static(context, settings.settings)
 
         if not i18n_sett.is_init:
@@ -147,7 +147,7 @@ class UI_PT_i18n_update_translations_settings(Panel):
             col.operator("ui.i18n_updatetranslation_work_repo", text="Update Work Repository")
             col.operator("ui.i18n_cleanuptranslation_work_repo", text="Clean up Work Repository")
             col.separator()
-            col.operator("ui.i18n_updatetranslation_blender_repo", text="Update Blender Repository")
+            col.operator("ui.i18n_updatetranslation_blender_repo", text="Update AIR Blend Repository")
             col.separator()
             col.operator("ui.i18n_updatetranslation_statistics", text="Statistics")
 

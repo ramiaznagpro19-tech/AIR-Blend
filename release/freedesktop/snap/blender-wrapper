@@ -17,5 +17,5 @@ if [ -n "$XDG_RUNTIME_DIR" ]; then
     fi
 fi
 
-# Run Blender
+# Run AIR Blend
 exec $SNAP/blender-launcher "$@"

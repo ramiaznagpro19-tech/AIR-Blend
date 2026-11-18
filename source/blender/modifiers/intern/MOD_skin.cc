@@ -10,7 +10,7 @@
  * System for Base Meshes of 3D Articulated Shapes" (Zhongping Ji,
  * Ligang Liu, Yigang Wang)
  *
- * Note that to avoid confusion with Blender's BMesh data structure,
+ * Note that to avoid confusion with AIR Blend's BMesh data structure,
  * this tool is renamed as the Skin modifier.
  *
  * The B-Mesh paper is current available here:

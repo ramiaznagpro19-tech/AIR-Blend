@@ -28,7 +28,7 @@ class View;
 class LibOCIOConfig : public Config {
   OCIO_NAMESPACE::ConstConfigRcPtr ocio_config_;
 
-  /* Storage of for Blender-side representation of OpenColorIO configuration.
+  /* Storage of for AIR Blend-side representation of OpenColorIO configuration.
    * Note that the color spaces correspond to color spaces from OpenColorIO configuration: this
    * array does not contain aliases or roles. If role or alias is to be resolved OpenColorIO is to
    * be used first to provide color space name which then can be looked up in this array.

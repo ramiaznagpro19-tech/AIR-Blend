@@ -4,7 +4,7 @@
 
 from __future__ import annotations
 
-"""Blender Online Asset Repository Listing Generator."""
+"""AIR Blend Online Asset Repository Listing Generator."""
 
 __all__ = (
     'cli_main',

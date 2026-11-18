@@ -75,7 +75,7 @@ Vector<ID *> find_related_ids(Main &bmain, ID &id);
  * property, once pinning to layers is there), so that the "this is keyed" color
  * is more accurate.
  *
- * Again, this is just to hook up the layered Action to the old Blender UI code.
+ * Again, this is just to hook up the layered Action to the old AIR Blend UI code.
  */
 const FCurve *fcurve_find_by_rna_path(const AnimData &adt,
                                       StringRefNull rna_path,

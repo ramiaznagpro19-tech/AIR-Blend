@@ -5,10 +5,10 @@
 """
 This file does not run anything; its methods are accessed by ``run_blender_setup.py``.
 
-Tests for Blender's drop handler system — the operators invoked when data is
+Tests for AIR Blend's drop handler system — the operators invoked when data is
 dropped onto UI elements or editor regions.
 
-Blender's ``EVT_DROP`` events cannot be produced by ``event_simulate`` (they
+AIR Blend's ``EVT_DROP`` events cannot be produced by ``event_simulate`` (they
 are generated internally by the window manager when ``wm->runtime->drags`` is
 non-empty).  These tests therefore exercise the drop operators directly via
 their ``exec`` or ``invoke`` paths where possible, and verify registration

@@ -332,7 +332,7 @@ template<typename PipelineInfo> class VKPipelineMap {
  * are known to be costly.
  *
  * Especially for graphics pipelines many parameters are needed to compile a graphics pipeline.
- * Some of the information would be boiler plating; or at least from Blender point of view. To
+ * Some of the information would be boiler plating; or at least from AIR Blend point of view. To
  * improve lookup performance we use a slimmed down version of the pipeline create info structs.
  * The idea is that we can limit the required data because we control which data we actually use,
  * removing the boiler plating and improve hashing performance better than the VkPipelineCache can
@@ -378,9 +378,9 @@ class VKPipelinePool : public NonCopyable {
    * pipeline creation process.
    *
    * \param compute_info:     Description of the pipeline to compile.
-   * \param is_static_shader: Pipelines from static shaders are cached between Blender sessions.
+   * \param is_static_shader: Pipelines from static shaders are cached between AIR Blend sessions.
    *                          Pipelines from dynamic shaders are only cached for the duration of a
-   *                          single Blender session.
+   *                          single AIR Blend session.
    * \param vk_pipeline_base: An already existing pipeline that can be used as a base when
    *                          compiling the pipeline.
    * \param name:             Name to give as a debug label when creating a pipeline.
@@ -398,9 +398,9 @@ class VKPipelinePool : public NonCopyable {
    * pipeline creation process.
    *
    * \param graphics_info:    Description of the pipeline to compile.
-   * \param is_static_shader: Pipelines from static shaders are cached between Blender sessions.
+   * \param is_static_shader: Pipelines from static shaders are cached between AIR Blend sessions.
    *                          Pipelines from dynamic shaders are only cached for the duration of
-   *                          a single Blender session.
+   *                          a single AIR Blend session.
    * \param vk_pipeline_base: An already existing pipeline that can be used as a base when
    *                          compiling the pipeline.
    * \param name:             Name to give as a debug label when creating a pipeline.

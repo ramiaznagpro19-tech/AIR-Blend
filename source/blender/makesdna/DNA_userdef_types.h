@@ -1082,7 +1082,7 @@ struct UserDef {
   /**
    * Optional user locations for Python scripts.
    *
-   * This supports the same layout as Blender's scripts directory `scripts`.
+   * This supports the same layout as AIR Blend's scripts directory `scripts`.
    *
    * \note Unlike most paths, changing this is not fully supported at run-time,
    * requiring a restart to properly take effect. Supporting this would cause complications as
@@ -1091,7 +1091,7 @@ struct UserDef {
    *
    * Although this is partially supported as the `sys.path` is refreshed when loading preferences.
    * This is done to support #PREFERENCES_OT_copy_prev which is available to the user when they
-   * launch with a new version of Blender. In this case setting the script path on top of
+   * launch with a new version of AIR Blend. In this case setting the script path on top of
    * factory settings will work without problems.
    */
   ListBaseT<bUserScriptDirectory> script_directories = {nullptr, nullptr};

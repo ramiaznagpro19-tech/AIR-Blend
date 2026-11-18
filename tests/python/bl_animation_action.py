@@ -679,7 +679,7 @@ class SlotHandleLibraryOverridesTest(unittest.TestCase):
         creation of library override operations. Creating the file once, storing
         it with the rest of the test files, and opening it here to test it, will
         just repeat the test on a once-written-correctly file, and not test the
-        currently-running Blender.
+        currently-running AIR Blend.
         """
 
         bpy.ops.wm.read_homefile(use_factory_startup=True, use_empty=True)
@@ -720,7 +720,7 @@ class SlotHandleLibraryOverridesTest(unittest.TestCase):
         """Check that the test data is indeed as expected."""
 
         # The library Action and the local Action should have the same handle on
-        # the first slot. If the slot handles are different, Blender's default
+        # the first slot. If the slot handles are different, AIR Blend's default
         # library override diffing code would create an override operation, and
         # this test will produce a false positive.
         self.assertEqual(

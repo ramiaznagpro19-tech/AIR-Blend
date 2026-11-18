@@ -309,7 +309,7 @@ def enum_preview_denoiser(self, context):
                 "Prefer OpenImageDenoise over OptiX"),
              0)]
     else:
-        items = [('AUTO', "None", n_("Blender was compiled without a viewport denoiser"), 0)]
+        items = [('AUTO', "None", n_("AIR Blend was compiled without a viewport denoiser"), 0)]
 
     items += optix_items
     items += oidn_items
@@ -1754,7 +1754,7 @@ class CyclesPreferences(bpy.types.AddonPreferences):
     )
 
     # Be careful when deciding when to call this function,
-    # as Blender can crash with `_cycles.available_devices()` on some drivers.
+    # as AIR Blend can crash with `_cycles.available_devices()` on some drivers.
     def get_device_list(self, compute_device_type):
         import _cycles
         device_list = _cycles.available_devices(compute_device_type)
@@ -1810,7 +1810,7 @@ class CyclesPreferences(bpy.types.AddonPreferences):
             devices.extend(cpu_devices)
         return devices
 
-    # Refresh device list. This does not happen automatically on Blender
+    # Refresh device list. This does not happen automatically on AIR Blend
     # startup due to unstable drivers that can cause crashes.
     def refresh_devices(self):
         # Ensure `self.devices` is not re-allocated when the second call to

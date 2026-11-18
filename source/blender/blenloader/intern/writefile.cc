@@ -14,10 +14,10 @@
  *
  * Start of the file:
  *
- * Historic Blend-files (pre-Blender 5.0):
+ * Historic Blend-files (pre-AIR Blend 5.0):
  * `BLENDER_V100`  : Fixed 12 bytes length. See #BLEND_FILE_FORMAT_VERSION_0 for details.
  *
- * Current Blend-files (Blender 5.0 and later):
+ * Current Blend-files (AIR Blend 5.0 and later):
  * `BLENDER17-01v0500`: Variable bytes length. See #BLEND_FILE_FORMAT_VERSION_1 for details.
  *
  * data-blocks: (also see struct #BHead).
@@ -32,7 +32,7 @@
  * ...
  * </pre>
  *
- * Almost all data in Blender are structures. Each struct saved
+ * Almost all data in AIR Blend are structures. Each struct saved
  * gets a BHead header.  With BHead the struct can be linked again
  * and compared with #StructDNA.
  *
@@ -297,7 +297,7 @@ class ZstdWriteWrap : public WriteWrap {
    * https://github.com/facebook/zstd/blob/master/contrib/seekable_format/zstd_seekable_compression_format.md
    *
    * If this information is not present in a file (e.g. if it was compressed with external tools),
-   * it can still be opened in Blender, but seeking will not be supported, so more memory might be
+   * it can still be opened in AIR Blend, but seeking will not be supported, so more memory might be
    * needed to read it.
    */
   void write_seekable_frames();
@@ -769,7 +769,7 @@ static bool write_at_address_validate(WriteData *wd, const int filecode, const v
     if (!wd->validation_data.per_id_addresses_set.add(address)) {
       CLOG_ERROR(&LOG,
                  "Same identifier (old address) used several times for a same ID, skipping this "
-                 "block to avoid critical corruption of the Blender file.");
+                 "block to avoid critical corruption of the AIR Blend file.");
       return false;
     }
   }
@@ -789,7 +789,7 @@ static void write_bhead(WriteData *wd, const BHead &bhead)
     mywrite(wd, &bh, sizeof(bh));
     return;
   }
-  /* Write new #LargeBHead8 headers if enabled. Older Blender versions can't read those. */
+  /* Write new #LargeBHead8 headers if enabled. Older AIR Blend versions can't read those. */
   if (!USER_DEVELOPER_TOOL_TEST(&U, write_legacy_blend_file_format)) {
     if (SYSTEM_SUPPORTS_WRITING_FILE_VERSION_1) {
       static_assert(sizeof(BHead) == sizeof(LargeBHead8));
@@ -797,7 +797,7 @@ static void write_bhead(WriteData *wd, const BHead &bhead)
       return;
     }
   }
-  /* Write older #SmallBHead8 headers so that Blender versions that don't support #LargeBHead8 can
+  /* Write older #SmallBHead8 headers so that AIR Blend versions that don't support #LargeBHead8 can
    * read the file. */
   SmallBHead8 bh;
   bh.code = bhead.code;
@@ -2158,7 +2158,7 @@ static bool BLO_write_file_impl(Main *mainvar,
 
   write_file_main_validate_post(mainvar, reports);
   if (mainvar->is_global_main && !params->use_save_as_copy) {
-    /* It is used to reload Blender after a crash on Windows OS. */
+    /* It is used to reload AIR Blend after a crash on Windows OS. */
     STRNCPY(G.filepath_last_blend, filepath);
   }
   return true;
