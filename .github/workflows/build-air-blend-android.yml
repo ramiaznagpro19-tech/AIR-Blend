@@ -88,7 +88,7 @@ jobs:
       - name: Build tools
         run: |
           sudo apt-get update -q
-          sudo apt-get install -y -q ninja-build ccache
+          sudo apt-get install -y -q ninja-build ccache gcc-14 g++-14
           cmake --version | head -1
 
       - name: Compiler cache
@@ -101,6 +101,9 @@ jobs:
       - name: Configure and build AIR Blend for Android
         run: |
           export CCACHE_DIR="$HOME/.cache/ccache" CCACHE_MAXSIZE=4G
+          # Host tools (makesdna, makesrna...) are built for Linux and need GCC 14+.
+          # The Android target itself uses the NDK clang from the toolchain file.
+          export CC=gcc-14 CXX=g++-14
           make android lite ninja ccache BUILD_DIR="$BUILD_DIR" ANDROID_NDK_ROOT="$ANDROID_NDK_ROOT"
           ccache -s || true
           df -h / /mnt
