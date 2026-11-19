@@ -1,0 +1,92 @@
+name: Test AIR Blend Android APK
+
+# Installs the latest APK in an Android emulator, launches it, then collects a
+# screenshot and the system log (crash details) as artifacts and in the job log.
+#
+# The emulator runs x86_64 Android with ARM translation and a software GPU,
+# so it can differ from a real phone, but startup crashes usually show up.
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: [ "Build AIR Blend Android APK" ]
+    types: [ completed ]
+  push:
+    branches: [ air-blend-android ]
+    paths: [ .github/workflows/test-air-blend-android.yml ]
+
+permissions:
+  contents: write
+
+jobs:
+  emulator:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+
+    steps:
+      - name: Download latest APK
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download android-latest -R "$GITHUB_REPOSITORY" -p "AIR-Blend-arm64.apk" -D .
+          ls -lh AIR-Blend-arm64.apk
+
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Run in emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          ram-size: 6144M
+          disk-size: 8G
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
+          disable-animations: true
+          script: |
+            adb shell getprop ro.product.cpu.abilist
+            adb install -r -g AIR-Blend-arm64.apk && echo "INSTALL OK" || echo "INSTALL FAILED"
+            adb logcat -c
+            adb shell am start -W -n com.airblend.app/org.blender.blender.BlenderActivity || true
+            sleep 25
+            adb exec-out screencap -p > screen-25s.png || true
+            sleep 50
+            adb exec-out screencap -p > screen-75s.png || true
+            (adb shell pidof com.airblend.app && echo "APP RUNNING") || echo "APP NOT RUNNING"
+            adb shell input tap 960 540 || true
+            sleep 5
+            (adb shell pidof com.airblend.app && echo "APP RUNNING AFTER TAP") || echo "APP NOT RUNNING AFTER TAP"
+            adb logcat -d -v threadtime > logcat.txt || true
+            adb logcat -d -b crash > crash.txt || true
+
+      - name: Show crash details
+        if: always()
+        run: |
+          echo "===== crash buffer ====="
+          cat crash.txt 2>/dev/null | head -n 200 || true
+          echo "===== app log ====="
+          grep -iE "blender|airblend|SDL|vulkan|python|DEBUG  :|FATAL|AndroidRuntime|libc  " logcat.txt 2>/dev/null | head -n 400 || true
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-emulator-test
+          path: |
+            screen-*.png
+            logcat.txt
+            crash.txt
+
+      - name: Publish screenshots
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for f in screen-25s.png screen-75s.png; do
+            [ -s "$f" ] && gh release upload android-latest "$f" --clobber -R "$GITHUB_REPOSITORY" || true
+          done
