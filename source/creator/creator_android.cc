@@ -13,6 +13,7 @@
 
 #include <cstdio>
 #include <cstdlib>
+#include <fstream>
 #include <string>
 #include <thread>
 
@@ -62,6 +63,55 @@ static bool redirect_stdio_to_logcat()
 /** \} */
 
 /* -------------------------------------------------------------------- */
+/** \name App Directories Fallback (AIR Blend)
+ *
+ * `BlenderActivity` passes the app directories via environment variables. When they don't
+ * reach native code (seen with ARM binary translation in emulators), rebuild them from
+ * the package name, the process name of the app.
+ * \{ */
+
+static std::string android_package_name()
+{
+  std::ifstream cmdline("/proc/self/cmdline");
+  std::string name;
+  std::getline(cmdline, name, '\0');
+  /* Remove a ":process" suffix, if any. */
+  const size_t colon = name.find(':');
+  if (colon != std::string::npos) {
+    name.resize(colon);
+  }
+  return name;
+}
+
+static void android_env_fallbacks()
+{
+  if (getenv("BLENDER_ANDROID_EXTRACT_DIR") && getenv("HOME") && getenv("TMPDIR")) {
+    return;
+  }
+  const std::string package = android_package_name();
+  if (package.empty() || package.find('/') != std::string::npos) {
+    return;
+  }
+  const std::string data_dir = "/data/user/0/" + package;
+  const std::string extract_dir = data_dir + "/files/extract";
+  const std::string home_dir = data_dir + "/files/home";
+  const std::string tmp_dir = data_dir + "/cache";
+
+  if (!getenv("BLENDER_ANDROID_EXTRACT_DIR") && access(extract_dir.c_str(), R_OK) == 0) {
+    setenv("BLENDER_ANDROID_EXTRACT_DIR", extract_dir.c_str(), 1);
+    printf("creator: BLENDER_ANDROID_EXTRACT_DIR not passed, using %s\n", extract_dir.c_str());
+  }
+  if (!getenv("HOME") && access(home_dir.c_str(), W_OK) == 0) {
+    setenv("HOME", home_dir.c_str(), 1);
+  }
+  if (!getenv("TMPDIR") && access(tmp_dir.c_str(), W_OK) == 0) {
+    setenv("TMPDIR", tmp_dir.c_str(), 1);
+  }
+}
+
+/** \} */
+
+/* -------------------------------------------------------------------- */
 /** \name Entry Point
  * \{ */
 
@@ -73,6 +123,8 @@ int main(int argc, char *argv[])
                         BLENDER_LOG_TAG,
                         "creator: Failed to redirect stdio to Android system log.");
   }
+
+  android_env_fallbacks();
 
   /* Root of the extracted install tree, set by BlenderActivity. */
   const char *extract_dir = getenv("BLENDER_ANDROID_EXTRACT_DIR");

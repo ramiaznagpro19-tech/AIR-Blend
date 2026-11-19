@@ -216,3 +216,9 @@ jobs:
           df -h / /mnt || true
           tail -n 200 "$BUILD_DIR/CMakeFiles/CMakeError.log" 2>/dev/null || true
           tail -n 200 "$BUILD_DIR/CMakeFiles/CMakeConfigureLog.yaml" 2>/dev/null || true
+
+  test:
+    needs: apk
+    uses: ./.github/workflows/test-air-blend-android.yml
+    permissions:
+      contents: write
